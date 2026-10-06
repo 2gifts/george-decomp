@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_0029CF28",
+      "address": "0x0029CF28",
+      "file_offset": "0x0019DF28",
+      "size": 284,
+      "original_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+      "original_assembly": "build/functions/func_0029CF28.s",
+      "source": "src/game/curve_query.c",
+      "source_kind": "c",
+      "source_name": "func_0029CF28",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture endpoint deltas and point-relative XYZ before the optional fraction write. Strict0<dot gates squared length/division; strict dot<square selects interior fraction, otherwise1; left/degenerate path writes0. Final XYZ residual square sum occurs after the optional store but uses captured private residuals. No normalization/guard/clamp beyond the original comparisons.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 284,
+        "compiled_size": 224,
+        "different_bytes": 220,
+        "first_different_offsets": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+        "compiled_sha256": "ece2e17a2b95997d57a416494882b8e940b8d46cc22e3bb72864b661a3dacd5d"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029CF28",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": ".local/curve_query/gcc323.o",
+          "identical": false,
+          "expected_size": 284,
+          "compiled_size": 224,
+          "different_bytes": 220,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+          "compiled_sha256": "ece2e17a2b95997d57a416494882b8e940b8d46cc22e3bb72864b661a3dacd5d"
+        },
+        "gcc29": {
+          "name": "func_0029CF28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": ".local/curve_query/gcc29.o",
+          "identical": false,
+          "expected_size": 284,
+          "compiled_size": 216,
+          "different_bytes": 226,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+          "compiled_sha256": "c572d9664046fca11e9a0b6cdec4a5a096d63f0fc4a13e9490a3bc0ad877269d"
+        },
+        "gcc29_precision": {
+          "name": "func_0029CF28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": ".local/curve_query/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 284,
+          "compiled_size": 216,
+          "different_bytes": 226,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+          "compiled_sha256": "c572d9664046fca11e9a0b6cdec4a5a096d63f0fc4a13e9490a3bc0ad877269d"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x001C9238",
+          "word": "0x0C0A73CA",
+          "delay_word": "0xE7A20064",
+          "caller": {
+            "name": "func_001C8BE0",
+            "address": "0x001C8BE0",
+            "size": 4580,
+            "file_offset": "0x000C9BE0",
+            "original_sha256": "962e175c255b60a10140485be74dfd4b1d8d98e410f0c48cb74c28817949cc62",
+            "original_assembly": "build/functions/func_001C8BE0.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x001C9DBC",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01A0",
+            "following_entry": "0x001C9DC8"
+          }
+        },
+        {
+          "instruction": "0x0029666C",
+          "word": "0x0C0A73CA",
+          "delay_word": "0x27A70030",
+          "caller": {
+            "name": "func_00296560",
+            "address": "0x00296560",
+            "size": 396,
+            "file_offset": "0x00197560",
+            "original_sha256": "4a2024a9c6838cccdec9a80d26fa7b7e38167d602c3cbc962d794b7b0429716e",
+            "original_assembly": "build/functions/func_00296560.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x002966E4",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00E0",
+            "following_entry": "0x002966F0"
+          }
+        },
+        {
+          "instruction": "0x002C23FC",
+          "word": "0x0C0A73CA",
+          "delay_word": "0x0200382D",
+          "caller": {
+            "name": "func_002C23C8",
+            "address": "0x002C23C8",
+            "size": 120,
+            "file_offset": "0x001C33C8",
+            "original_sha256": "0fbf2e9a8d23c08de9d877620bf56410a9a7006aed061edea0bbd34d3fc71b83",
+            "original_assembly": "build/functions/func_002C23C8.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x002C2438",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0050",
+            "following_entry": "0x002C2440"
+          }
+        },
+        {
+          "instruction": "0x002C2474",
+          "word": "0x0C0A73CA",
+          "delay_word": "0x0200382D",
+          "caller": {
+            "name": "func_002C2440",
+            "address": "0x002C2440",
+            "size": 120,
+            "file_offset": "0x001C3440",
+            "original_sha256": "3a7aee02c6ce571555dfa9efa95a572d0670feedec8f806de77cbad523403e6a",
+            "original_assembly": "build/functions/func_002C2440.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x002C24B0",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0050",
+            "following_entry": "0x002C24B8"
+          }
+        }
+      ],
+      "entry_reachability": "six genuine encoded incoming JALs across both entries",
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "preceding_complete_body": {
+        "name": "func_0029CD50",
+        "address": "0x0029CD50",
+        "size": 468,
+        "file_offset": "0x0019DD50",
+        "original_sha256": "025d961bcd43b4c8599d90e712d4fb891459c6ed25d291471b660a5dcaf50ea5",
+        "original_assembly": "build/functions/func_0029CD50.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029CF1C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0050",
+        "following_entry": "0x0029CF28"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029D03C",
+      "terminal_delay_word": "0x27BD0020",
+      "following_entry": "0x0029D048",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029CF9C",
+          "word": "0x4500001C",
+          "target": "0x0029D010",
+          "delay_word": "0xE7A60018",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029CFC0",
+          "word": "0x4502000B",
+          "target": "0x0029CFF0",
+          "delay_word": "0x46074801",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029CFE8",
+          "word": "0x10000005",
+          "target": "0x0029D000",
+          "delay_word": "0x46023081",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029D008",
+          "word": "0x10000002",
+          "target": "0x0029D014",
+          "delay_word": "0xE7A20018",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029D014",
+          "word": "0x54E00001",
+          "target": "0x0029D01C",
+          "delay_word": "0xE4E40000",
+          "likely": true
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029CF64",
+          "word": "0xE7A70000",
+          "base_gpr": 29,
+          "source_fpr": 7,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CF6C",
+          "word": "0xE7A80004",
+          "base_gpr": 29,
+          "source_fpr": 8,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CF74",
+          "word": "0xE7A90010",
+          "base_gpr": 29,
+          "source_fpr": 9,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CF7C",
+          "word": "0xE7A50008",
+          "base_gpr": 29,
+          "source_fpr": 5,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CF84",
+          "word": "0xE7A30014",
+          "base_gpr": 29,
+          "source_fpr": 3,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CFA0",
+          "word": "0xE7A60018",
+          "base_gpr": 29,
+          "source_fpr": 6,
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D000",
+          "word": "0xE7A00010",
+          "base_gpr": 29,
+          "source_fpr": 0,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D004",
+          "word": "0xE7A10014",
+          "base_gpr": 29,
+          "source_fpr": 1,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D00C",
+          "word": "0xE7A20018",
+          "base_gpr": 29,
+          "source_fpr": 2,
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D018",
+          "word": "0xE4E40000",
+          "base_gpr": 7,
+          "source_fpr": 4,
+          "signed_offset": 0,
+          "size": 4
+        }
+      ],
+      "actual_direct_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x0029D03C",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0020"
+        }
+      ],
+      "hardware_primitives": [],
+      "implementation_limits": [
+        "Valid ordinary float inputs and aligned output/input pointers. No volatile/device memory contract. Finite test decoder/native host do not establish EE exceptional arithmetic, FCR, denormal or timing behavior. Query direction is not normalized by the recovered body."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/curve_query_scope_approval.json",
+        "evidence": ".local/curve_query_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029DD60",
+      "address": "0x0029DD60",
+      "file_offset": "0x0019ED60",
+      "size": 228,
+      "original_sha256": "3b9a08b7dc6c0d3d7d13b40c7f9d47131fb0d64f043babd388f87b05db59932d",
+      "original_assembly": "build/functions/func_0029DD60.s",
+      "source": "src/game/curve_query.c",
+      "source_kind": "c",
+      "source_name": "func_0029DD60",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture query-origin XYZ and squared query.w. Strict distance-square<radius-square returns1 before consulting direction or extent. Compute dot from supplied direction; negative dot or radius-square<perpendicular-square returns0. Capture ray extent before target SQRT.S and return strict(dot-root)<extent. Negative radius is squared, zero/nonunit directions remain unmodified.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 228,
+        "compiled_size": 204,
+        "different_bytes": 181,
+        "first_different_offsets": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          14,
+          16
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3b9a08b7dc6c0d3d7d13b40c7f9d47131fb0d64f043babd388f87b05db59932d",
+        "compiled_sha256": "bbcff8a575b3190c313482e48e8ca74c53154ff629c8851e7f6ae3f7ecacee93"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029DD60",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": ".local/curve_query/gcc323.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 204,
+          "different_bytes": 181,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3b9a08b7dc6c0d3d7d13b40c7f9d47131fb0d64f043babd388f87b05db59932d",
+          "compiled_sha256": "bbcff8a575b3190c313482e48e8ca74c53154ff629c8851e7f6ae3f7ecacee93"
+        },
+        "gcc29": {
+          "name": "func_0029DD60",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": ".local/curve_query/gcc29.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 212,
+          "different_bytes": 175,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3b9a08b7dc6c0d3d7d13b40c7f9d47131fb0d64f043babd388f87b05db59932d",
+          "compiled_sha256": "d9a39532b299b4cae71b39d9555c5e329c330f48e8a56f88b213790fc0f8503e"
+        },
+        "gcc29_precision": {
+          "name": "func_0029DD60",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": ".local/curve_query/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 212,
+          "different_bytes": 175,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3b9a08b7dc6c0d3d7d13b40c7f9d47131fb0d64f043babd388f87b05db59932d",
+          "compiled_sha256": "d9a39532b299b4cae71b39d9555c5e329c330f48e8a56f88b213790fc0f8503e"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x001CD818",
+          "word": "0x0C0A7758",
+          "delay_word": "0x0240282D",
+          "caller": {
+            "name": "func_001CD728",
+            "address": "0x001CD728",
+            "size": 440,
+            "file_offset": "0x000CE728",
+            "original_sha256": "41039297fdb04cf18c92d3eaebec5ad9531cf94c90b828321de309c72752294c",
+            "original_assembly": "build/functions/func_001CD728.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001CD8D8",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00B0",
+            "following_entry": "0x001CD8E0"
+          }
+        },
+        {
+          "instruction": "0x00296654",
+          "word": "0x0C0A7758",
+          "delay_word": "0x03A0282D",
+          "caller": {
+            "name": "func_00296560",
+            "address": "0x00296560",
+            "size": 396,
+            "file_offset": "0x00197560",
+            "original_sha256": "4a2024a9c6838cccdec9a80d26fa7b7e38167d602c3cbc962d794b7b0429716e",
+            "original_assembly": "build/functions/func_00296560.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x002966E4",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00E0",
+            "following_entry": "0x002966F0"
+          }
+        }
+      ],
+      "entry_reachability": "six genuine encoded incoming JALs across both entries",
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "preceding_complete_body": {
+        "name": "func_0029D5D0",
+        "address": "0x0029D5D0",
+        "size": 1932,
+        "file_offset": "0x0019E5D0",
+        "original_sha256": "f765424116914069aecf0d171f161838e754e579a1f2df25d09b59a2a21c7c32",
+        "original_assembly": "build/functions/func_0029D5D0.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029DD54",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00A0",
+        "following_entry": "0x0029DD60"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029DE3C",
+      "terminal_delay_word": "0x27BD0010",
+      "following_entry": "0x0029DE48",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029DDB8",
+          "word": "0x45010020",
+          "target": "0x0029DE3C",
+          "delay_word": "0x24020001",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029DDF0",
+          "word": "0x45010012",
+          "target": "0x0029DE3C",
+          "delay_word": "0x0000102D",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029DE08",
+          "word": "0x4501000C",
+          "target": "0x0029DE3C",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029DE30",
+          "word": "0x45010002",
+          "target": "0x0029DE3C",
+          "delay_word": "0x24020001",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029DD90",
+          "word": "0xE7A60000",
+          "base_gpr": 29,
+          "source_fpr": 6,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029DD98",
+          "word": "0xE7A50004",
+          "base_gpr": 29,
+          "source_fpr": 5,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029DDA4",
+          "word": "0xE7A40008",
+          "base_gpr": 29,
+          "source_fpr": 4,
+          "signed_offset": 8,
+          "size": 4
+        }
+      ],
+      "actual_direct_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x0029DE3C",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0010"
+        }
+      ],
+      "hardware_primitives": [
+        {
+          "instruction": "0x0029DE20",
+          "word": "0x46000004",
+          "operand_fpr": 0,
+          "evidence": "Actual R5900 SQRT.S uses ft; narrow reviewed existing ee_math.h hardware primitive."
+        }
+      ],
+      "implementation_limits": [
+        "Valid ordinary float inputs and aligned output/input pointers. No volatile/device memory contract. Finite test decoder/native host do not establish EE exceptional arithmetic, FCR, denormal or timing behavior. Query direction is not normalized by the recovered body."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/curve_query_scope_approval.json",
+        "evidence": ".local/curve_query_root/audit.json"
+      }
+    }
+  ],
+  "notes": [
+    "2 complete reviewed functions/512 original bytes. Author, independent peer and parent final reviews and natural whole-link/fixture/native reproductions passed.",
+    "All6 whole links across three published recipes have zero unresolved relocations and zero exact matches. Functions remain reconstructed; no partial-byte awards.",
+    "Central registration approved; canonical verification passed. Original assets/code/table arrays are excluded from production."
+  ],
+  "complete_branches": [
+    {
+      "instruction": "0x0029CF9C",
+      "word": "0x4500001C",
+      "target": "0x0029D010",
+      "delay_word": "0xE7A60018",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029CFC0",
+      "word": "0x4502000B",
+      "target": "0x0029CFF0",
+      "delay_word": "0x46074801",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029CFE8",
+      "word": "0x10000005",
+      "target": "0x0029D000",
+      "delay_word": "0x46023081",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029D008",
+      "word": "0x10000002",
+      "target": "0x0029D014",
+      "delay_word": "0xE7A20018",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029D014",
+      "word": "0x54E00001",
+      "target": "0x0029D01C",
+      "delay_word": "0xE4E40000",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029DDB8",
+      "word": "0x45010020",
+      "target": "0x0029DE3C",
+      "delay_word": "0x24020001",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029DDF0",
+      "word": "0x45010012",
+      "target": "0x0029DE3C",
+      "delay_word": "0x0000102D",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029DE08",
+      "word": "0x4501000C",
+      "target": "0x0029DE3C",
+      "delay_word": "0x00000000",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029DE30",
+      "word": "0x45010002",
+      "target": "0x0029DE3C",
+      "delay_word": "0x24020001",
+      "likely": false
+    }
+  ],
+  "complete_stores_including_stack_and_delays": [
+    {
+      "instruction": "0x0029CF64",
+      "word": "0xE7A70000",
+      "base_gpr": 29,
+      "source_fpr": 7,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CF6C",
+      "word": "0xE7A80004",
+      "base_gpr": 29,
+      "source_fpr": 8,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CF74",
+      "word": "0xE7A90010",
+      "base_gpr": 29,
+      "source_fpr": 9,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CF7C",
+      "word": "0xE7A50008",
+      "base_gpr": 29,
+      "source_fpr": 5,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CF84",
+      "word": "0xE7A30014",
+      "base_gpr": 29,
+      "source_fpr": 3,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CFA0",
+      "word": "0xE7A60018",
+      "base_gpr": 29,
+      "source_fpr": 6,
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D000",
+      "word": "0xE7A00010",
+      "base_gpr": 29,
+      "source_fpr": 0,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D004",
+      "word": "0xE7A10014",
+      "base_gpr": 29,
+      "source_fpr": 1,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D00C",
+      "word": "0xE7A20018",
+      "base_gpr": 29,
+      "source_fpr": 2,
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D018",
+      "word": "0xE4E40000",
+      "base_gpr": 7,
+      "source_fpr": 4,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029DD90",
+      "word": "0xE7A60000",
+      "base_gpr": 29,
+      "source_fpr": 6,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029DD98",
+      "word": "0xE7A50004",
+      "base_gpr": 29,
+      "source_fpr": 5,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029DDA4",
+      "word": "0xE7A40008",
+      "base_gpr": 29,
+      "source_fpr": 4,
+      "signed_offset": 8,
+      "size": 4
+    }
+  ],
+  "complete_actual_calls": [],
+  "complete_actual_returns": [
+    {
+      "instruction": "0x0029D03C",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0020"
+    },
+    {
+      "instruction": "0x0029DE3C",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0010"
+    }
+  ],
+  "binary32_constant_sites": [
+    {
+      "function": "func_0029CF28",
+      "high": "0x0029CFF0",
+      "high_word": "0x3C013F80",
+      "transfer": "0x0029CFF4",
+      "transfer_word": "0x44812000",
+      "bits": "0x3F800000",
+      "binary32_word_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+    }
+  ],
+  "incoming_abi_evidence": {
+    "0x001C9238": "Caller containing4580B interval completely byte/assembly/hash verified; manually reviewed bounded local context1C9148..1C9290 only. Endpoint pointers SP+40/SP+60, point retained+40, fraction SP+B4; live f0 captured into f20. No claim to full caller manual semantics.",
+    "0x00296654": "Full396B296560 original manually read. Query a0 retainedincominga1, ray a1 private SP+00; direction normalized through actual2A3538 by this caller and original length stored+18. Selected query itself does not require or add normalization. Actual v0 branch tested.",
+    "0x0029666C": "Full396B296560 original manually read. Endpoint rows+4, query XYZ pointer, fraction SP+30; f0 stored to distance, fraction used for independent row-time interpolation.",
+    "0x002C23FC": "Full120B2C23C8 original manually read. Endpoints retainedrows+1C, point initiala0, outputfraction originala4; f0 stored to actual distance output and fraction subsequently overwritten with row-time interpolation.",
+    "0x002C2474": "Full120B2C2440 original manually read. Same real four-pointer distance ABI with endpoints at+4; f0 distance and fraction readback interpolation preserved.",
+    "0x001CD818": "Full440B1CD728 original manually read. Query node+4, retained ray initiala0, v0 acceptance branch in original iteration."
+  },
+  "synthetic_fixture_evidence": {
+    "fixtures": 1083,
+    "executed_original_instructions": 57815,
+    "maximum_instructions": 65,
+    "input_sha256": "3e9f7a2880b4898b13a97fe3d311746f4ba9d1a76c2e929a7c84cc99022dc723",
+    "header_sha256_lf": "a505fae693a4d35c2a12b54cf1484fc5b08fe0074ee9adc2b7df126901bb3a95",
+    "header_sha256_on_disk": "fcd5c13c8df6c59231bddb63d43760835edbaa4286c24aba95d4707a30f947af",
+    "native_checks": 78724,
+    "strict_guards": 9,
+    "native_production_sources": [
+      "src/game/curve_query.c"
+    ],
+    "actual_trace_helpers": [],
+    "controlled_lower_calls": [],
+    "native_flags": [
+      "-m32",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-strict-aliasing",
+      "-ffloat-store"
+    ],
+    "limits": "Finite bounded host-IEEE scalar model. Actual source executes as a separate native TU; ordinary arithmetic is float-stored to avoid x87 excess precision. No controlled callee replaces either selected production body. Full64-word memory/result checks cover fraction aliases and shifted overlapping input vectors/ray/query. Analytic axis-distance/reversal and strict query boundary cases add an independent model."
+  },
+  "boundary_notes": "71 and57 whole instructions; both actual terminal JR31 plus stack-adjust delay and excluded4B zero alignment precede disjoint next entry. Scope checked unregistered top-level function records. No switch/jump tables or direct/indirect library calls occur."
+}

@@ -1657,3 +1657,9 @@ or credit. GNU notices and the exact libgcc2 exception remain unchanged.
 
 The exception checkpoint passed the retail-identical hybrid build and 331 tooling
 tests (one platform-specific symlink skip).
+
+## GNU C++ RTTI and exceptions
+
+[GNU C++ runtime evidence](cxx_runtime.md) covers twelve complete functions /2,612 bytes from unchanged historical tinfo, tinfo2 and exception sources plus four private headers. Eleven complete natural linked functions match all1,388 bytes in canonical verification. The larger type matcher remains reconstructed. Nine exact Git blobs, original copyright/license notices and the exact GNU source linking exception are retained. Target ABI objects, original callback publications and central-only reproduction support the recovery; generated data receives no new mapping or award.
+
+The C++ checkpoint passed canonical verification, the retail-identical hybrid build and364 tooling tests (one platform-specific symlink skip). C and C++ counts are separate in the report, with combined exact source progress; assembly remains separate.

@@ -1,4 +1,4 @@
-"""Compile recovered C and count only exact function matches after linking.
+"""Compile recovered C/C++ and count only exact function matches after linking.
 
 The retail compiler has not been identified. This candidate compiler is useful
 for individual byte matches; it does not establish a full matching game build.
@@ -352,6 +352,58 @@ def prepare_compiler(profile):
     return {"compiler": compiler, "sha256": digest, "version": version, "env": env, "profile": profile}
 
 
+def source_language(function):
+    """Classify reporting language without changing compilation or match gates."""
+    suffix = Path(function["source"]).suffix
+    inferred = ("C++" if suffix == ".C" or suffix.lower() in (".cc", ".cpp", ".cxx")
+                else "assembly" if suffix.lower() in (".s", ".asm")
+                else "C" if suffix == ".c" else None)
+    if "source_kind" in function:
+        kind = function["source_kind"]
+        kinds = {"c": "C", "cxx": "C++", "assembly": "assembly"}
+        if not isinstance(kind, str) or kind not in kinds:
+            raise ValueError(f"Unknown source kind: {kind!r}")
+        language = kinds[kind]
+        if inferred is not None and language != inferred:
+            raise ValueError(f"Source kind contradicts suffix: {function['source']}")
+        return language
+    # Preserve the historical C default for sources with an unknown suffix.
+    return inferred or "C"
+
+
+def source_progress(results, total):
+    """Count each validated function once; assembly is separate from source."""
+    if any(r["language"] not in ("C", "C++", "assembly") for r in results):
+        raise ValueError("Unknown report language")
+    source = [r for r in results if r["language"] in ("C", "C++")]
+    matched = [r for r in source if r["identical"]]
+    assembly = [r for r in results if r["language"] == "assembly" and r["identical"]]
+    matched_bytes = sum(r["expected_size"] for r in matched)
+    progress = {"reconstructed_source_functions": len(source),
+                "reconstructed_source_code_bytes": sum(r["expected_size"] for r in source),
+                "matched_functions": len(matched),
+                "matched_game_functions": sum(r["category"] == "game" for r in matched),
+                "matched_runtime_functions": sum(r["category"] == "runtime" for r in matched),
+                "reused_assembly_functions": len(assembly),
+                "reused_assembly_code_bytes": sum(r["expected_size"] for r in assembly),
+                "matched_code_bytes": matched_bytes,
+                "matched_code_percent": round(100 * matched_bytes / total, 6)}
+    for language, key in (("C", "c"), ("C++", "cpp")):
+        recovered = [r for r in source if r["language"] == language]
+        exact = [r for r in matched if r["language"] == language]
+        progress[f"reconstructed_{key}_functions"] = len(recovered)
+        progress[f"reconstructed_{key}_code_bytes"] = sum(r["expected_size"] for r in recovered)
+        progress[f"matched_{key}_functions"] = len(exact)
+        progress[f"matched_{key}_code_bytes"] = sum(r["expected_size"] for r in exact)
+    return progress
+
+
+def progress_summary(progress):
+    return [f'{progress["matched_functions"]}/{progress["reconstructed_source_functions"]} C/C++ functions match: {progress["matched_code_bytes"]:,}/{progress["total_code_bytes"]:,} code bytes ({progress["matched_code_percent"]:.6f}%).',
+            f'Game: {progress["matched_game_functions"]} matches. Reused runtime: {progress["matched_runtime_functions"]} matches.',
+            f'Reused original assembly: {progress["reused_assembly_functions"]} functions, {progress["reused_assembly_code_bytes"]} bytes (excluded from C/C++ progress).']
+
+
 def publish_readme_progress(progress):
     path = ROOT / "README.md"
     if not path.exists():
@@ -360,9 +412,9 @@ def publish_readme_progress(progress):
     start, end = "<!-- progress:start -->", "<!-- progress:end -->"
     if content.count(start) != 1 or content.count(end) != 1:
         raise ValueError("README progress markers are missing or ambiguous")
-    game = [f for f in progress["functions"] if f["category"] == "game" and f["language"] == "C"]
+    game = [f for f in progress["functions"] if f["category"] == "game" and f["language"] in ("C", "C++")]
     game_bytes = sum(f["expected_size"] for f in game if f["identical"])
-    runtime = [f for f in progress["functions"] if f["category"] == "runtime" and f["language"] == "C" and f["identical"]]
+    runtime = [f for f in progress["functions"] if f["category"] == "runtime" and f["language"] in ("C", "C++") and f["identical"]]
     runtime_bytes = sum(f["expected_size"] for f in runtime)
     runtime_names = ", ".join(f"`{f['name']}`" for f in runtime)
     block = f"""{start}
@@ -371,15 +423,17 @@ def publish_readme_progress(progress):
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C | {len(game)} functions reviewed; {progress['matched_game_functions']} match ({game_bytes:,} bytes) |
-| Reused upstream C | {progress['matched_runtime_functions']} match ({runtime_bytes:,} bytes: {runtime_names}) |
+| Recovered game C/C++ | {len(game)} functions reviewed; {progress['matched_game_functions']} match ({game_bytes:,} bytes) |
+| Reused upstream C/C++ | {progress['matched_runtime_functions']} match ({runtime_bytes:,} bytes: {runtime_names}) |
+| C source | {progress['reconstructed_c_functions']} functions reviewed; {progress['matched_c_functions']} match ({progress['matched_c_code_bytes']:,} bytes) |
+| C++ source | {progress['reconstructed_cpp_functions']} functions reviewed; {progress['matched_cpp_functions']} match ({progress['matched_cpp_code_bytes']:,} bytes) |
 | Reused upstream assembly | {progress['reused_assembly_functions']} functions match ({progress['reused_assembly_code_bytes']:,} bytes) |
 | Full source build | Incomplete |
 
-The C matching total is **{progress['matched_code_bytes']:,} / {progress['total_code_bytes']:,} code bytes ({progress['matched_code_percent']:.6f}%)**, including
+The C/C++ matching total is **{progress['matched_code_bytes']:,} / {progress['total_code_bytes']:,} code bytes ({progress['matched_code_percent']:.6f}%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
-and original data retained in the hybrid build do **not** count as C progress.
+and original data retained in the hybrid build do **not** count as C/C++ progress.
 {end}"""
     content = content.split(start)[0] + block + content.split(end)[1]
     path.write_text(content, encoding="utf-8")
@@ -409,6 +463,7 @@ def main():
                            for section in elf.iter_sections() if section["sh_type"] == "SHT_NOBITS"]
     for function in functions:
         validate_target_function(function, sections)
+        source_language(function)
     configuration = compiler_configuration(args)
     compiler_profiles = {}
     compiled = {}
@@ -499,7 +554,7 @@ def main():
             raise ValueError(f"Previously recorded match regressed: {function['name']}")
         results.append({"name": function["name"], "address": function["address"], "source": source,
                         "category": "runtime" if source.startswith("src/runtime/") else "game",
-                        "language": "assembly" if Path(source).suffix.lower() in (".s", ".asm") else "C",
+                        "language": source_language(function),
                         "object": compiled_paths[key], "compiled_symbol": symbol,
                         "linked_elf": linked_path,
                         "compiler_profile": profile_name, "compiler": setup["version"],
@@ -509,9 +564,7 @@ def main():
         elf = ELFFile(stream)
         code_sizes = {name: elf.get_section_by_name(name)["sh_size"] for name in (".text", ".rentext", ".vutext")}
     total = sum(code_sizes.values())
-    matched_c = [r for r in results if r["identical"] and r["language"] == "C"]
-    reused_assembly = [r for r in results if r["identical"] and r["language"] == "assembly"]
-    matched_bytes = sum(r["expected_size"] for r in matched_c)
+    counts = source_progress(results, total)
     default_setup = compiler_profiles.get(configuration["default_profile"], next(iter(compiler_profiles.values())))
     progress = {"schema_version": 1, "revision": spec["serial"], "original_sha256": spec["executable_sha256"],
                 "compiler": default_setup["version"], "compiler_identity": "candidate profiles; original compiler(s) unidentified",
@@ -520,14 +573,7 @@ def main():
                                       for name, setup in compiler_profiles.items()},
                 "method": "Exact function code bytes and size plus complete equality of any generated readonly tables after actual linking; no unresolved relocations. Padding excluded.",
                 "full_game_build": False, "code_section_bytes": code_sizes, "total_code_bytes": total,
-                "reconstructed_c_functions": sum(r["language"] == "C" for r in results),
-                "reconstructed_c_code_bytes": sum(r["expected_size"] for r in results if r["language"] == "C"),
-                "matched_functions": len(matched_c),
-                "matched_game_functions": sum(r["category"] == "game" for r in matched_c),
-                "matched_runtime_functions": sum(r["category"] == "runtime" for r in matched_c),
-                "reused_assembly_functions": len(reused_assembly),
-                "reused_assembly_code_bytes": sum(r["expected_size"] for r in reused_assembly),
-                "matched_code_bytes": matched_bytes, "matched_code_percent": round(100 * matched_bytes / total, 6),
+                **counts,
                 "functions": results}
     write_json(ROOT / "build/progress.json", progress)
     if args.publish_report:
@@ -536,9 +582,8 @@ def main():
         published["functions"] = [{k: v for k, v in r.items() if k not in ("object", "linked_elf")} for r in results]
         write_json(ROOT / "reports/progress.json", published)
         publish_readme_progress(progress)
-    print(f'{progress["matched_functions"]}/{progress["reconstructed_c_functions"]} C functions match: {matched_bytes:,}/{total:,} code bytes ({progress["matched_code_percent"]:.6f}%).')
-    print(f'Game: {progress["matched_game_functions"]} matches. Reused runtime: {progress["matched_runtime_functions"]} matches.')
-    print(f'Reused original assembly: {len(reused_assembly)} functions, {progress["reused_assembly_code_bytes"]} bytes (excluded from C progress).')
+    for line in progress_summary(progress):
+        print(line)
 
 
 if __name__ == "__main__":

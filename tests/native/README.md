@@ -423,3 +423,11 @@ slots before interpreting them, including untaken ordinary branches. Annulled
 likely delays are neither fetched nor executed. Four synthetic regression
 methods cover the classifier and five published decoder runners; refreshed
 original curve/path fixtures retain their earlier outputs and instruction counts.
+
+`run_path_callbacks.py` executes fifteen production callbacks and the actual published quaternion helper in separate translation units:210,928 warning-free checks across1,536 authored fixtures /133,933 original instructions and eight guards. Controlled projection/trig callbacks preserve explicit finite observation limits. See [callback evidence](../../docs/path_callbacks.md).
+
+`run_curve_query.py` passes78,724 warning-free checks across1,083 fixtures /57,815 original instructions and nine guards. Independent axis distances and strict query boundaries supplement original execution. See [query evidence](../../docs/curve_query.md).
+
+`run_plane_geometry.py` passes165,110 warning-free checks across1,123 fixtures /89,426 original instructions and six guards, using actual published normalization in a separate production translation unit. Independent line, winding and sphere/bounds invariants supplement instruction-derived results. See [plane evidence](../../docs/plane_geometry.md).
+
+The three runners model finite scalar binary32 operations with their documented compiler arithmetic options and host square root. They do not establish EE exceptional/FCR/timing behavior. The unchanged GNU C++ runtime has target object/ABI and complete-link equality evidence, without an authored native RTTI/EH execution claim.

@@ -1,0 +1,6332 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "7 complete reviewed functions/1788 original bytes. Author, independent peer and parent final reviews and natural whole-link/fixture/native reproductions passed.",
+    "All21 whole links across three published recipes have zero unresolved relocations and zero exact matches. Functions remain reconstructed; no partial-byte awards.",
+    "Central registration approved; canonical verification passed. Original assets/code/table arrays are excluded from production."
+  ],
+  "functions": [
+    {
+      "name": "func_0029C6C0",
+      "address": "0x0029C6C0",
+      "size": 236,
+      "file_offset": "0x0019D6C0",
+      "original_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+      "original_assembly": "build/functions/func_0029C6C0.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029C6C0",
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture middle-first and last-middle XYZ differences before output. Cross product stores Y/Z/X, then calls genuine published normalization2A3538. Fresh first/output XYZ reads after helper form left-associated dot, NEG.S, and outputW store; returns original output pointer. Source/input shifts and helper zero fallback remain original.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 236,
+        "compiled_size": 212,
+        "different_bytes": 175,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          12,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+        "compiled_sha256": "98a81f47515b2877e271bef4a3159c9c3ca0785196014b02caaf0aab1d008f52"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029C6C0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 236,
+          "compiled_size": 212,
+          "different_bytes": 183,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            12,
+            15,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+          "compiled_sha256": "2871a277edb14d09aa1c9b07148f396fed7267fbdf24083e8137f422cb0fe7e9"
+        },
+        "gcc29": {
+          "name": "func_0029C6C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 236,
+          "compiled_size": 212,
+          "different_bytes": 176,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+          "compiled_sha256": "edae2fba5ff13ed39adc7d7aae9813f792eeea9f0575200367ef3b7971d809e3"
+        },
+        "gcc29_precision": {
+          "name": "func_0029C6C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 236,
+          "compiled_size": 212,
+          "different_bytes": 175,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+          "compiled_sha256": "98a81f47515b2877e271bef4a3159c9c3ca0785196014b02caaf0aab1d008f52"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0011969C",
+          "word": "0x0C0A71B0",
+          "delay_word": "0x0260282D",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        },
+        {
+          "instruction": "0x00119794",
+          "word": "0x0C0A71B0",
+          "delay_word": "0x0260282D",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029C648",
+        "address": "0x0029C648",
+        "size": 120,
+        "file_offset": "0x0019D648",
+        "original_sha256": "e6e7aa851def2a9f9203e711f66f8c63d806d8f01c9404007284ac92e772fe30",
+        "original_assembly": "build/functions/func_0029C648.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0029C6B8",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0020",
+        "following_entry": "0x0029C6C0"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029C7A4",
+      "terminal_delay_word": "0x27BD0050",
+      "following_entry": "0x0029C7B0",
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029C6C8",
+          "word": "0x7FB00040",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "GPR",
+          "signed_offset": 64,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029C6CC",
+          "word": "0x7FB10030",
+          "base_gpr": 29,
+          "source_register": 17,
+          "register_file": "GPR",
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029C6D4",
+          "word": "0xFFBF0020",
+          "base_gpr": 29,
+          "source_register": 31,
+          "register_file": "GPR",
+          "signed_offset": 32,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029C710",
+          "word": "0xE7A00010",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C718",
+          "word": "0xE7A20004",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C720",
+          "word": "0xE7A30008",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C724",
+          "word": "0xE7A10000",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C730",
+          "word": "0xE7A40014",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C738",
+          "word": "0xE7A50018",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C750",
+          "word": "0xE6000004",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C754",
+          "word": "0xE6010008",
+          "base_gpr": 16,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C75C",
+          "word": "0xE6020000",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C79C",
+          "word": "0xE600000C",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 12,
+          "size": 4
+        }
+      ],
+      "actual_calls": [
+        {
+          "instruction": "0x0029C758",
+          "word": "0x0C0A8D4E",
+          "delay_word": "0xE6020000",
+          "link_written_gpr": 31,
+          "target": "0x002A3538"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029C7A4",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0050"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029C7B0",
+      "address": "0x0029C7B0",
+      "size": 172,
+      "file_offset": "0x0019D7B0",
+      "original_sha256": "8e60e891f13110732db07baecb889271db5b7b83e33cc2b8cb2f0bec56f2a1f5",
+      "original_assembly": "build/functions/func_0029C7B0.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029C7B0",
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Same complete captured cross-product/normalization source template, three-component output and original output pointer return. No W store. Genuine selected callee of triangle predicate; original source contains no input/output alias exclusion.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 172,
+        "compiled_size": 148,
+        "different_bytes": 131,
+        "first_different_offsets": [
+          0,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "8e60e891f13110732db07baecb889271db5b7b83e33cc2b8cb2f0bec56f2a1f5",
+        "compiled_sha256": "c943b4fd05e47a7800033f2daf5347e7031dcff746c28f87ca9a7ea55c40764b"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029C7B0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 172,
+          "compiled_size": 148,
+          "different_bytes": 150,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8e60e891f13110732db07baecb889271db5b7b83e33cc2b8cb2f0bec56f2a1f5",
+          "compiled_sha256": "3198d3d4b770065ecf4156e2b9aee7cd9760376ecf20f1c7656d7e74ba39e69a"
+        },
+        "gcc29": {
+          "name": "func_0029C7B0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 172,
+          "compiled_size": 148,
+          "different_bytes": 131,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8e60e891f13110732db07baecb889271db5b7b83e33cc2b8cb2f0bec56f2a1f5",
+          "compiled_sha256": "c943b4fd05e47a7800033f2daf5347e7031dcff746c28f87ca9a7ea55c40764b"
+        },
+        "gcc29_precision": {
+          "name": "func_0029C7B0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 172,
+          "compiled_size": 148,
+          "different_bytes": 131,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8e60e891f13110732db07baecb889271db5b7b83e33cc2b8cb2f0bec56f2a1f5",
+          "compiled_sha256": "c8828304dee3efc646166b04cb3cd4b76faca8fbbc63fea884a62d5ef79eaea1"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x00118DEC",
+          "word": "0x0C0A71EC",
+          "delay_word": "0x26670064",
+          "caller": {
+            "name": "func_00118D80",
+            "address": "0x00118D80",
+            "size": 2152,
+            "file_offset": "0x00019D80",
+            "original_sha256": "4f5e9274cd035c0065e7e10144a1232a010253331cdb7442f7f042f09234e53c",
+            "original_assembly": "build/functions/func_00118D80.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001195E0",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0170",
+            "following_entry": "0x001195E8"
+          }
+        },
+        {
+          "instruction": "0x00118E8C",
+          "word": "0x0C0A71EC",
+          "delay_word": "0xE4420004",
+          "caller": {
+            "name": "func_00118D80",
+            "address": "0x00118D80",
+            "size": 2152,
+            "file_offset": "0x00019D80",
+            "original_sha256": "4f5e9274cd035c0065e7e10144a1232a010253331cdb7442f7f042f09234e53c",
+            "original_assembly": "build/functions/func_00118D80.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001195E0",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0170",
+            "following_entry": "0x001195E8"
+          }
+        },
+        {
+          "instruction": "0x0029CB68",
+          "word": "0x0C0A71EC",
+          "delay_word": "0x0260382D",
+          "caller": {
+            "name": "func_0029CB20",
+            "address": "0x0029CB20",
+            "size": 560,
+            "file_offset": "0x0019DB20",
+            "original_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+            "original_assembly": "build/functions/func_0029CB20.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x0029CD48",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0100",
+            "following_entry": "0x0029CD50"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029C6C0",
+        "address": "0x0029C6C0",
+        "size": 236,
+        "file_offset": "0x0019D6C0",
+        "original_sha256": "90d658b0ff75b11c15ae655cbce16b65ff2a1bce508d2c804c2ee606d98a3410",
+        "original_assembly": "build/functions/func_0029C6C0.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029C7A4",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0050",
+        "following_entry": "0x0029C7B0"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029C854",
+      "terminal_delay_word": "0x27BD0040",
+      "following_entry": "0x0029C860",
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029C7B8",
+          "word": "0x7FB00030",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "GPR",
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029C7BC",
+          "word": "0xFFBF0020",
+          "base_gpr": 29,
+          "source_register": 31,
+          "register_file": "GPR",
+          "signed_offset": 32,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029C7F8",
+          "word": "0xE7A30008",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C800",
+          "word": "0xE7A10000",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C804",
+          "word": "0xE7A20004",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C80C",
+          "word": "0xE7A00010",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C818",
+          "word": "0xE7A40014",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C820",
+          "word": "0xE7A50018",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C838",
+          "word": "0xE6000004",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C83C",
+          "word": "0xE6010008",
+          "base_gpr": 16,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029C844",
+          "word": "0xE6020000",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        }
+      ],
+      "actual_calls": [
+        {
+          "instruction": "0x0029C840",
+          "word": "0x0C0A8D4E",
+          "delay_word": "0xE6020000",
+          "link_written_gpr": 31,
+          "target": "0x002A3538"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029C854",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0040"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029CA28",
+      "address": "0x0029CA28",
+      "size": 248,
+      "file_offset": "0x0019DA28",
+      "original_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+      "original_assembly": "build/functions/func_0029CA28.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029CA28",
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture second-first XYZ into local direction, normalize via actual2A3538, then freshly read query-first XYZ. Return C.LE.S(length(query-first)-incomingf12radius,dot(direction,query-first)). No inferred radius/endpoint clamp or zero-direction guard; original normalization fallback is retained.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 248,
+        "compiled_size": 228,
+        "different_bytes": 154,
+        "first_different_offsets": [
+          0,
+          8,
+          10,
+          12,
+          14,
+          17,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+        "compiled_sha256": "552361d36281765112de5e2d7a18a9b4a678dbe64ae3b2e64e56374505a04276"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029CA28",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 248,
+          "compiled_size": 228,
+          "different_bytes": 168,
+          "first_different_offsets": [
+            0,
+            6,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+          "compiled_sha256": "7685695892c9ae7b94dd587dc6866cee82d4ad5d6a10df4301941196d12a74e8"
+        },
+        "gcc29": {
+          "name": "func_0029CA28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 248,
+          "compiled_size": 228,
+          "different_bytes": 156,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+          "compiled_sha256": "9e5033491486b9dda9e6461550717b888ae74e52388c7f90c863085083228474"
+        },
+        "gcc29_precision": {
+          "name": "func_0029CA28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 248,
+          "compiled_size": 228,
+          "different_bytes": 154,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            12,
+            14,
+            17,
+            18,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+          "compiled_sha256": "552361d36281765112de5e2d7a18a9b4a678dbe64ae3b2e64e56374505a04276"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0011973C",
+          "word": "0x0C0A728A",
+          "delay_word": "0x00543021",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        },
+        {
+          "instruction": "0x00119834",
+          "word": "0x0C0A728A",
+          "delay_word": "0x00533021",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029C860",
+        "address": "0x0029C860",
+        "size": 452,
+        "file_offset": "0x0019D860",
+        "original_sha256": "bc27b294dec8071834bd3aecb75b9a048da96e2dcdf64056f0a7854cfcca6af2",
+        "original_assembly": "build/functions/func_0029C860.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029CA1C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0060",
+        "following_entry": "0x0029CA28"
+      },
+      "excluded_zero_alignment_bytes": 0,
+      "terminal_jr": "0x0029CB18",
+      "terminal_delay_word": "0x27BD0060",
+      "following_entry": "0x0029CB20",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029CAFC",
+          "word": "0x45010002",
+          "target": "0x0029CB08",
+          "delay_word": "0xE7A40010",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029CA30",
+          "word": "0x7FB00040",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "GPR",
+          "signed_offset": 64,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CA34",
+          "word": "0x7FB10030",
+          "base_gpr": 29,
+          "source_register": 17,
+          "register_file": "GPR",
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CA3C",
+          "word": "0xE7B40050",
+          "base_gpr": 29,
+          "source_register": 20,
+          "register_file": "FPR",
+          "signed_offset": 80,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CA44",
+          "word": "0xFFBF0020",
+          "base_gpr": 29,
+          "source_register": 31,
+          "register_file": "GPR",
+          "signed_offset": 32,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029CA6C",
+          "word": "0xE7A20000",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CA74",
+          "word": "0xE7A40008",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CA7C",
+          "word": "0xE7A00004",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CAB4",
+          "word": "0xE7A30014",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CAC4",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB00",
+          "word": "0xE7A40010",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        }
+      ],
+      "actual_calls": [
+        {
+          "instruction": "0x0029CA78",
+          "word": "0x0C0A8D4E",
+          "delay_word": "0xE7A00004",
+          "link_written_gpr": 31,
+          "target": "0x002A3538"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029CB18",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0060"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029CB20",
+      "address": "0x0029CB20",
+      "size": 560,
+      "file_offset": "0x0019DB20",
+      "original_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+      "original_assembly": "build/functions/func_0029CB20.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029CB20",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Three contiguous XYZ vertices, queryXYZ. Call actual selected29C7B0 into localnormal, then capture source point/edge differences. Preserve three cross-products and their left-associated normal dot calculations with strict positive gates. Triangle boundary and zero cross are excluded; no plane-distance or invented winding guard.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 560,
+        "compiled_size": 440,
+        "different_bytes": 469,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+        "compiled_sha256": "d9e866e40d5c3cc925292d8b832bdd7055efc0da53fc389898b2930a8e631bb8"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029CB20",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 560,
+          "compiled_size": 440,
+          "different_bytes": 469,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+          "compiled_sha256": "d9e866e40d5c3cc925292d8b832bdd7055efc0da53fc389898b2930a8e631bb8"
+        },
+        "gcc29": {
+          "name": "func_0029CB20",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 560,
+          "compiled_size": 448,
+          "different_bytes": 477,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+          "compiled_sha256": "a6c0a3dfab7e416dffec7bba9f14e4dcf3e48a39ffa01735d391ca077896530f"
+        },
+        "gcc29_precision": {
+          "name": "func_0029CB20",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 560,
+          "compiled_size": 448,
+          "different_bytes": 476,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+          "compiled_sha256": "49f304dc37825a9a3d6cd0629f896a559cbbb21aef031ae184025a67e35a28a4"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x001196E8",
+          "word": "0x0C0A72C8",
+          "delay_word": "0x02A0282D",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        },
+        {
+          "instruction": "0x001197E0",
+          "word": "0x0C0A72C8",
+          "delay_word": "0x02A0282D",
+          "caller": {
+            "name": "func_001195E8",
+            "address": "0x001195E8",
+            "size": 668,
+            "file_offset": "0x0001A5E8",
+            "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+            "original_assembly": "build/functions/func_001195E8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x0011987C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00F0",
+            "following_entry": "0x00119888"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029CA28",
+        "address": "0x0029CA28",
+        "size": 248,
+        "file_offset": "0x0019DA28",
+        "original_sha256": "db95a77e7633e59084970ac500ab4f0c9393706ad05bb059daab9c813aea3176",
+        "original_assembly": "build/functions/func_0029CA28.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0029CB18",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0060",
+        "following_entry": "0x0029CB20"
+      },
+      "excluded_zero_alignment_bytes": 0,
+      "terminal_jr": "0x0029CD48",
+      "terminal_delay_word": "0x27BD0100",
+      "following_entry": "0x0029CD50",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029CCCC",
+          "word": "0x45000013",
+          "target": "0x0029CD1C",
+          "delay_word": "0xE7A50020",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029CCF0",
+          "word": "0x4500000B",
+          "target": "0x0029CD20",
+          "delay_word": "0x0000102D",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029CD14",
+          "word": "0x45010002",
+          "target": "0x0029CD20",
+          "delay_word": "0x24020001",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029CB24",
+          "word": "0x7FB000C0",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "GPR",
+          "signed_offset": 192,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CB2C",
+          "word": "0x7FB100B0",
+          "base_gpr": 29,
+          "source_register": 17,
+          "register_file": "GPR",
+          "signed_offset": 176,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CB30",
+          "word": "0x7FB200A0",
+          "base_gpr": 29,
+          "source_register": 18,
+          "register_file": "GPR",
+          "signed_offset": 160,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CB38",
+          "word": "0x7FB30090",
+          "base_gpr": 29,
+          "source_register": 19,
+          "register_file": "GPR",
+          "signed_offset": 144,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029CB44",
+          "word": "0xE7B800F0",
+          "base_gpr": 29,
+          "source_register": 24,
+          "register_file": "FPR",
+          "signed_offset": 240,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB48",
+          "word": "0xE7B700E8",
+          "base_gpr": 29,
+          "source_register": 23,
+          "register_file": "FPR",
+          "signed_offset": 232,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB50",
+          "word": "0xE7B600E0",
+          "base_gpr": 29,
+          "source_register": 22,
+          "register_file": "FPR",
+          "signed_offset": 224,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB58",
+          "word": "0xE7B500D8",
+          "base_gpr": 29,
+          "source_register": 21,
+          "register_file": "FPR",
+          "signed_offset": 216,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB60",
+          "word": "0xE7B400D0",
+          "base_gpr": 29,
+          "source_register": 20,
+          "register_file": "FPR",
+          "signed_offset": 208,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CB64",
+          "word": "0xFFBF0080",
+          "base_gpr": 29,
+          "source_register": 31,
+          "register_file": "GPR",
+          "signed_offset": 128,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029CBC4",
+          "word": "0xE7A00048",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 72,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CBCC",
+          "word": "0xE7A40044",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 68,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CBE4",
+          "word": "0xE7AC0040",
+          "base_gpr": 29,
+          "source_register": 12,
+          "register_file": "FPR",
+          "signed_offset": 64,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CBF4",
+          "word": "0xE7A10004",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC00",
+          "word": "0xE7A00000",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC0C",
+          "word": "0xE7A50034",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 52,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC14",
+          "word": "0xE7A40030",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 48,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC24",
+          "word": "0xE7AE0054",
+          "base_gpr": 29,
+          "source_register": 14,
+          "register_file": "FPR",
+          "signed_offset": 84,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC30",
+          "word": "0xE7A60008",
+          "base_gpr": 29,
+          "source_register": 6,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC38",
+          "word": "0xE7A80050",
+          "base_gpr": 29,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 80,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC44",
+          "word": "0xE7AF0064",
+          "base_gpr": 29,
+          "source_register": 15,
+          "register_file": "FPR",
+          "signed_offset": 100,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC4C",
+          "word": "0xE7B00058",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "FPR",
+          "signed_offset": 88,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC54",
+          "word": "0xE7A90060",
+          "base_gpr": 29,
+          "source_register": 9,
+          "register_file": "FPR",
+          "signed_offset": 96,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC5C",
+          "word": "0xE7AB0038",
+          "base_gpr": 29,
+          "source_register": 11,
+          "register_file": "FPR",
+          "signed_offset": 56,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CC64",
+          "word": "0xE7AD0068",
+          "base_gpr": 29,
+          "source_register": 13,
+          "register_file": "FPR",
+          "signed_offset": 104,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCA4",
+          "word": "0xE7A30018",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCB0",
+          "word": "0xE7B10028",
+          "base_gpr": 29,
+          "source_register": 17,
+          "register_file": "FPR",
+          "signed_offset": 40,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCB8",
+          "word": "0xE7A80014",
+          "base_gpr": 29,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCC4",
+          "word": "0xE7A90024",
+          "base_gpr": 29,
+          "source_register": 9,
+          "register_file": "FPR",
+          "signed_offset": 36,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCC8",
+          "word": "0xE7AA0010",
+          "base_gpr": 29,
+          "source_register": 10,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029CCD0",
+          "word": "0xE7A50020",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 32,
+          "size": 4
+        }
+      ],
+      "actual_calls": [
+        {
+          "instruction": "0x0029CB68",
+          "word": "0x0C0A71EC",
+          "delay_word": "0x0260382D",
+          "link_written_gpr": 31,
+          "target": "0x0029C7B0"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029CD48",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0100"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029D048",
+      "address": "0x0029D048",
+      "size": 168,
+      "file_offset": "0x0019E048",
+      "original_sha256": "db6a3ef5e62ba916629d6eb1baed18ae9843d786edc787c971fa617a05a9f689",
+      "original_assembly": "build/functions/func_0029D048.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029D048",
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture all origin/direction/query XYZ before optional output. Use supplied direction verbatim, left-associated dot(query-origin,direction), projected point and residual; write parameter if nonnull and return squared residualf0. No normalization, parameter clamp or endpoint interpretation is introduced.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 168,
+        "compiled_size": 136,
+        "different_bytes": 120,
+        "first_different_offsets": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "db6a3ef5e62ba916629d6eb1baed18ae9843d786edc787c971fa617a05a9f689",
+        "compiled_sha256": "6670fb73ee4b565a35997ea428761cc88bbf1ddbab67dc0ac5f678c5fb08c301"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029D048",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 136,
+          "different_bytes": 125,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db6a3ef5e62ba916629d6eb1baed18ae9843d786edc787c971fa617a05a9f689",
+          "compiled_sha256": "4af4992886166f1b946f54ed2e8d6ea4c1e36d8a0ff5d39bf8f297cb4d493399"
+        },
+        "gcc29": {
+          "name": "func_0029D048",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 136,
+          "different_bytes": 120,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db6a3ef5e62ba916629d6eb1baed18ae9843d786edc787c971fa617a05a9f689",
+          "compiled_sha256": "6670fb73ee4b565a35997ea428761cc88bbf1ddbab67dc0ac5f678c5fb08c301"
+        },
+        "gcc29_precision": {
+          "name": "func_0029D048",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 136,
+          "different_bytes": 120,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "db6a3ef5e62ba916629d6eb1baed18ae9843d786edc787c971fa617a05a9f689",
+          "compiled_sha256": "6670fb73ee4b565a35997ea428761cc88bbf1ddbab67dc0ac5f678c5fb08c301"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x00197D50",
+          "word": "0x0C0A7412",
+          "delay_word": "0xE7A00014",
+          "caller": {
+            "name": "func_00197C18",
+            "address": "0x00197C18",
+            "size": 592,
+            "file_offset": "0x00098C18",
+            "original_sha256": "8c1b04a262fd7c492d461ee16a32f2d39593fce25dd15f70cc84a58f59460ff3",
+            "original_assembly": "build/functions/func_00197C18.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x00197E60",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0100",
+            "following_entry": "0x00197E68"
+          }
+        },
+        {
+          "instruction": "0x00197FF4",
+          "word": "0x0C0A7412",
+          "delay_word": "0xE7A00044",
+          "caller": {
+            "name": "func_00197E68",
+            "address": "0x00197E68",
+            "size": 792,
+            "file_offset": "0x00098E68",
+            "original_sha256": "b37a18ff6f4cfe30928cdebd922356fb709175decdcdcc143e39f241122bee5a",
+            "original_assembly": "build/functions/func_00197E68.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x00198178",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0120",
+            "following_entry": "0x00198180"
+          }
+        },
+        {
+          "instruction": "0x001BEA6C",
+          "word": "0x0C0A7412",
+          "delay_word": "0x27A701F0",
+          "caller": {
+            "name": "func_001BE7D8",
+            "address": "0x001BE7D8",
+            "size": 5948,
+            "file_offset": "0x000BF7D8",
+            "original_sha256": "a44caefceae0ad5c5b57c6196dd5248717a4dba82f915a9a73ef30e8d02399ab",
+            "original_assembly": "build/functions/func_001BE7D8.s",
+            "excluded_zero_alignment_bytes": 4,
+            "terminal_jr": "0x001BFF0C",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0330",
+            "following_entry": "0x001BFF18"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029CF28",
+        "address": "0x0029CF28",
+        "size": 284,
+        "file_offset": "0x0019DF28",
+        "original_sha256": "f267b600eb3c3214f9705f205c5f5bb6e85b627f8b2c1c700880bf38f6d84842",
+        "original_assembly": "build/functions/func_0029CF28.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029D03C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0020",
+        "following_entry": "0x0029D048"
+      },
+      "excluded_zero_alignment_bytes": 0,
+      "terminal_jr": "0x0029D0E8",
+      "terminal_delay_word": "0x27BD0010",
+      "following_entry": "0x0029D0F0",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029D0BC",
+          "word": "0x10E00002",
+          "target": "0x0029D0C8",
+          "delay_word": "0xE7A60008",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029D0B4",
+          "word": "0xE7A80000",
+          "base_gpr": 29,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D0B8",
+          "word": "0xE7A70004",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D0C0",
+          "word": "0xE7A60008",
+          "base_gpr": 29,
+          "source_register": 6,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029D0C4",
+          "word": "0xE4E10000",
+          "base_gpr": 7,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        }
+      ],
+      "actual_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x0029D0E8",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0010"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029E448",
+      "address": "0x0029E448",
+      "size": 200,
+      "file_offset": "0x0019F448",
+      "original_sha256": "6e0550ba42e702ad6392b0d205ce910f8876c6612e8e015834835024d09b98d3",
+      "original_assembly": "build/functions/func_0029E448.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029E448",
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Capture conditional lower XYZ before X/Y/Z stores. Fresh point and upper reads after those stores preserve shifted aliases; capture conditional upper choices then write upperX/Z/Y. Original scalar C.LT.S conditionals select point on equal or unordered comparisons; no MIN/MAX replacement. Original callers ignore inherited registers, modeled void.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 200,
+        "compiled_size": 196,
+        "different_bytes": 73,
+        "first_different_offsets": [
+          62,
+          65,
+          76,
+          80,
+          81,
+          88,
+          90,
+          91
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "6e0550ba42e702ad6392b0d205ce910f8876c6612e8e015834835024d09b98d3",
+        "compiled_sha256": "ed13e686e4a8bc7c8a48d6aa83868955fe37793ba8b7f3244e314b21501a4834"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029E448",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 200,
+          "compiled_size": 192,
+          "different_bytes": 135,
+          "first_different_offsets": [
+            2,
+            6,
+            16,
+            18,
+            20,
+            21,
+            24,
+            25
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e0550ba42e702ad6392b0d205ce910f8876c6612e8e015834835024d09b98d3",
+          "compiled_sha256": "e08b5a31260a6cf5f14dba6af84c283a3987c6de2db9a4d74001bee09a6fcc4a"
+        },
+        "gcc29": {
+          "name": "func_0029E448",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 200,
+          "compiled_size": 196,
+          "different_bytes": 73,
+          "first_different_offsets": [
+            62,
+            65,
+            76,
+            80,
+            81,
+            88,
+            90,
+            91
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e0550ba42e702ad6392b0d205ce910f8876c6612e8e015834835024d09b98d3",
+          "compiled_sha256": "ed13e686e4a8bc7c8a48d6aa83868955fe37793ba8b7f3244e314b21501a4834"
+        },
+        "gcc29_precision": {
+          "name": "func_0029E448",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 200,
+          "compiled_size": 196,
+          "different_bytes": 73,
+          "first_different_offsets": [
+            62,
+            65,
+            76,
+            80,
+            81,
+            88,
+            90,
+            91
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e0550ba42e702ad6392b0d205ce910f8876c6612e8e015834835024d09b98d3",
+          "compiled_sha256": "ed13e686e4a8bc7c8a48d6aa83868955fe37793ba8b7f3244e314b21501a4834"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0012ECF8",
+          "word": "0x0C0A7912",
+          "delay_word": "0x26050004",
+          "caller": {
+            "name": "func_0012EC50",
+            "address": "0x0012EC50",
+            "size": 272,
+            "file_offset": "0x0002FC50",
+            "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+            "original_assembly": "build/functions/func_0012EC50.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x0012ED58",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0060",
+            "following_entry": "0x0012ED60"
+          }
+        },
+        {
+          "instruction": "0x0012ED04",
+          "word": "0x0C0A7912",
+          "delay_word": "0x26050010",
+          "caller": {
+            "name": "func_0012EC50",
+            "address": "0x0012EC50",
+            "size": 272,
+            "file_offset": "0x0002FC50",
+            "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+            "original_assembly": "build/functions/func_0012EC50.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x0012ED58",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0060",
+            "following_entry": "0x0012ED60"
+          }
+        },
+        {
+          "instruction": "0x0012ED10",
+          "word": "0x0C0A7912",
+          "delay_word": "0x0260202D",
+          "caller": {
+            "name": "func_0012EC50",
+            "address": "0x0012EC50",
+            "size": 272,
+            "file_offset": "0x0002FC50",
+            "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+            "original_assembly": "build/functions/func_0012EC50.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x0012ED58",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0060",
+            "following_entry": "0x0012ED60"
+          }
+        },
+        {
+          "instruction": "0x001B0BA0",
+          "word": "0x0C0A7912",
+          "delay_word": "0x26050004",
+          "caller": {
+            "name": "func_001B0B00",
+            "address": "0x001B0B00",
+            "size": 304,
+            "file_offset": "0x000B1B00",
+            "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+            "original_assembly": "build/functions/func_001B0B00.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001B0C28",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0080",
+            "following_entry": "0x001B0C30"
+          }
+        },
+        {
+          "instruction": "0x001B0BAC",
+          "word": "0x0C0A7912",
+          "delay_word": "0x26050010",
+          "caller": {
+            "name": "func_001B0B00",
+            "address": "0x001B0B00",
+            "size": 304,
+            "file_offset": "0x000B1B00",
+            "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+            "original_assembly": "build/functions/func_001B0B00.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001B0C28",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0080",
+            "following_entry": "0x001B0C30"
+          }
+        },
+        {
+          "instruction": "0x001B0BB8",
+          "word": "0x0C0A7912",
+          "delay_word": "0x0260202D",
+          "caller": {
+            "name": "func_001B0B00",
+            "address": "0x001B0B00",
+            "size": 304,
+            "file_offset": "0x000B1B00",
+            "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+            "original_assembly": "build/functions/func_001B0B00.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x001B0C28",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0080",
+            "following_entry": "0x001B0C30"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029E2A8",
+        "address": "0x0029E2A8",
+        "size": 412,
+        "file_offset": "0x0019F2A8",
+        "original_sha256": "4a92400e8eafff95f5bf06f1962f6d172bdfafc058f5ab1a0d8b2c6438db8224",
+        "original_assembly": "build/functions/func_0029E2A8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0029E43C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0030",
+        "following_entry": "0x0029E448"
+      },
+      "excluded_zero_alignment_bytes": 0,
+      "terminal_jr": "0x0029E508",
+      "terminal_delay_word": "0xE4430004",
+      "following_entry": "0x0029E510",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029E458",
+          "word": "0x45000002",
+          "target": "0x0029E464",
+          "delay_word": "0x46000106",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029E474",
+          "word": "0x45000002",
+          "target": "0x0029E480",
+          "delay_word": "0x460000C6",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029E490",
+          "word": "0x45000002",
+          "target": "0x0029E49C",
+          "delay_word": "0x46000086",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029E4BC",
+          "word": "0x45000002",
+          "target": "0x0029E4C8",
+          "delay_word": "0x46000106",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029E4D8",
+          "word": "0x45000002",
+          "target": "0x0029E4E4",
+          "delay_word": "0x460000C6",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029E4F4",
+          "word": "0x45000002",
+          "target": "0x0029E500",
+          "delay_word": "0x46000086",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029E49C",
+          "word": "0xE4840000",
+          "base_gpr": 4,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029E4A4",
+          "word": "0xE4830004",
+          "base_gpr": 4,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029E4A8",
+          "word": "0xE4820008",
+          "base_gpr": 4,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029E500",
+          "word": "0xE484000C",
+          "base_gpr": 4,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 12,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029E504",
+          "word": "0xE4420008",
+          "base_gpr": 2,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029E50C",
+          "word": "0xE4430004",
+          "base_gpr": 2,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        }
+      ],
+      "actual_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x0029E508",
+          "word": "0x03E00008",
+          "delay_word": "0xE4430004"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    },
+    {
+      "name": "func_0029E720",
+      "address": "0x0029E720",
+      "size": 204,
+      "file_offset": "0x0019F720",
+      "original_sha256": "a9fd325b04d7498a10cc82e7c4ca202c2a6cf751051ce6c43bf70ec4bdaccafc",
+      "original_assembly": "build/functions/func_0029E720.s",
+      "source": "src/game/plane_geometry.c",
+      "source_name": "func_0029E720",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_independent_peer_and_parent_final_reproduction_passed_canonical_passed",
+      "evidence": "Sequential strict lower/upper per-axis gates accumulate squared distance only outside each interval. Compare squared radius to distance and return logical not of strict-less, preserving actual branch sense without invented radius-sign/normalization guard. Source retains unordered comparison shape; numerical fixtures cover finite normal/zero domain only.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 204,
+        "compiled_size": 204,
+        "different_bytes": 11,
+        "first_different_offsets": [
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "a9fd325b04d7498a10cc82e7c4ca202c2a6cf751051ce6c43bf70ec4bdaccafc",
+        "compiled_sha256": "5dbdbf6bf2b4e964aecad37ae4c0bb2635660f432d5cc597fc7c60d815ab8e7b"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029E720",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc323.o",
+          "identical": false,
+          "expected_size": 204,
+          "compiled_size": 204,
+          "different_bytes": 11,
+          "first_different_offsets": [
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a9fd325b04d7498a10cc82e7c4ca202c2a6cf751051ce6c43bf70ec4bdaccafc",
+          "compiled_sha256": "5dbdbf6bf2b4e964aecad37ae4c0bb2635660f432d5cc597fc7c60d815ab8e7b"
+        },
+        "gcc29": {
+          "name": "func_0029E720",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/plane_geometry/gcc29.o",
+          "identical": false,
+          "expected_size": 204,
+          "compiled_size": 204,
+          "different_bytes": 11,
+          "first_different_offsets": [
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a9fd325b04d7498a10cc82e7c4ca202c2a6cf751051ce6c43bf70ec4bdaccafc",
+          "compiled_sha256": "5dbdbf6bf2b4e964aecad37ae4c0bb2635660f432d5cc597fc7c60d815ab8e7b"
+        },
+        "gcc29_precision": {
+          "name": "func_0029E720",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/plane_geometry/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 204,
+          "compiled_size": 204,
+          "different_bytes": 11,
+          "first_different_offsets": [
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a9fd325b04d7498a10cc82e7c4ca202c2a6cf751051ce6c43bf70ec4bdaccafc",
+          "compiled_sha256": "5dbdbf6bf2b4e964aecad37ae4c0bb2635660f432d5cc597fc7c60d815ab8e7b"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x00123504",
+          "word": "0x0C0A79C8",
+          "delay_word": "0x0220282D",
+          "caller": {
+            "name": "func_00123488",
+            "address": "0x00123488",
+            "size": 200,
+            "file_offset": "0x00024488",
+            "original_sha256": "65cadc3b4244bf4848d440a0381e0fd87fce4e66010c115019ff1a05bdd0f71f",
+            "original_assembly": "build/functions/func_00123488.s",
+            "excluded_zero_alignment_bytes": 0,
+            "terminal_jr": "0x00123548",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00B0",
+            "following_entry": "0x00123550"
+          }
+        }
+      ],
+      "entry_reachability": "actual_original_encoded_J_or_JAL_with_complete_containing_body_identity",
+      "preceding_complete_body": {
+        "name": "func_0029E5E0",
+        "address": "0x0029E5E0",
+        "size": 320,
+        "file_offset": "0x0019F5E0",
+        "original_sha256": "e6b46890a0b87c240de950c3d4a13e0d6a4fa974e9f9b4bc90b5715926944b2d",
+        "original_assembly": "build/functions/func_0029E5E0.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0029E718",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0020",
+        "following_entry": "0x0029E720"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029E7E4",
+      "terminal_delay_word": "0x00000000",
+      "following_entry": "0x0029E7F0",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029E734",
+          "word": "0x45030007",
+          "target": "0x0029E754",
+          "delay_word": "0x46010001",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E748",
+          "word": "0x45020004",
+          "target": "0x0029E75C",
+          "delay_word": "0xC4A00004",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E768",
+          "word": "0x45030007",
+          "target": "0x0029E788",
+          "delay_word": "0x46010001",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E77C",
+          "word": "0x45020005",
+          "target": "0x0029E794",
+          "delay_word": "0xC4A00008",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E7A0",
+          "word": "0x45030007",
+          "target": "0x0029E7C0",
+          "delay_word": "0x46010001",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E7B4",
+          "word": "0x45020005",
+          "target": "0x0029E7CC",
+          "delay_word": "0xC4A0000C",
+          "likely": true
+        },
+        {
+          "instruction": "0x0029E7D8",
+          "word": "0x45010002",
+          "target": "0x0029E7E4",
+          "delay_word": "0x0000102D",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [],
+      "actual_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x0029E7E4",
+          "word": "0x03E00008",
+          "delay_word": "0x00000000"
+        }
+      ],
+      "implementation_limits": [
+        "Ordinary C scalar reconstruction and aligned valid pointer storage. Native scalar SSE binary32 arithmetic/SQRT and bounded original instruction decoder cover finite normal/zero values; no EE exceptional/subnormal/FCR/timing or identical stack-placement claim. Published normalization C executes separately and original helper executes in tracer; no external numerical or callback substitutions. Numeric routine names and observed types do not establish original class names, capacities or object ownership."
+      ],
+      "parent_audit": {
+        "passed": true,
+        "source_header_original_full_selected_read": true,
+        "whole_compiler_packets_reproduced": true,
+        "scope_approval": ".local/plane_geometry_scope_approval.json",
+        "evidence": ".local/plane_geometry_root/audit.json"
+      }
+    }
+  ],
+  "supporting_original_bodies": [
+    {
+      "name": "func_002A3538",
+      "address": "0x002A3538",
+      "size": 136,
+      "file_offset": "0x001A4538",
+      "original_sha256": "a0e83bf6cdaad7427f7421ae598cd2adad00350d1e6f7f92572667e5b85a71b0",
+      "original_assembly": "build/functions/func_002A3538.s",
+      "local_branches": [
+        {
+          "instruction": "0x002A3570",
+          "word": "0x4503000C",
+          "target": "0x002A35A4",
+          "delay_word": "0xE4870008",
+          "likely": true
+        },
+        {
+          "instruction": "0x002A359C",
+          "word": "0x10000006",
+          "target": "0x002A35B8",
+          "delay_word": "0xE4800004",
+          "likely": false
+        }
+      ],
+      "stores_including_stack_and_delays": [
+        {
+          "instruction": "0x002A3574",
+          "word": "0xE4870008",
+          "base_gpr": 4,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3594",
+          "word": "0xE4810008",
+          "base_gpr": 4,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3598",
+          "word": "0xE4820000",
+          "base_gpr": 4,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A35A0",
+          "word": "0xE4800004",
+          "base_gpr": 4,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A35B0",
+          "word": "0xE4800000",
+          "base_gpr": 4,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A35B4",
+          "word": "0xE4870004",
+          "base_gpr": 4,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        }
+      ],
+      "actual_calls": [],
+      "actual_returns": [
+        {
+          "instruction": "0x002A35B8",
+          "word": "0x03E00008",
+          "delay_word": "0x46003006"
+        }
+      ],
+      "binary32_immediate_sites": [
+        {
+          "function": "func_002A3538",
+          "instruction": "0x002A357C",
+          "word": "0x44810000",
+          "source_gpr": 1,
+          "destination_fpr": 0,
+          "bits": "0x3F800000",
+          "immediate_chain": [
+            {
+              "instruction": "0x002A3578",
+              "word": "0x3C013F80"
+            }
+          ]
+        },
+        {
+          "function": "func_002A3538",
+          "instruction": "0x002A35A8",
+          "word": "0x44810000",
+          "source_gpr": 1,
+          "destination_fpr": 0,
+          "bits": "0x3F800000",
+          "immediate_chain": [
+            {
+              "instruction": "0x002A35A4",
+              "word": "0x3C013F80"
+            }
+          ]
+        }
+      ],
+      "review_role": "author_complete_supporting_original_and_published_source_read",
+      "abi_evidence": "Full34 original instructions and published vector_math.c read. Actual GPR4 points to exactly three float fields, helper capturesXYZ, SQRT consumesft (raw46000184), exact zero fallbackX=1/Y=Z=0, otherwise reciprocal length, storesZ/X/Y and returnslengthf0. No fourth component store or original numerical guard. Real original helper executes recursively and native calls actual published separateTU. Supporting source receives no new award."
+    }
+  ],
+  "actual_caller_abi_windows": [
+    {
+      "selected_entry": "0x0029C6C0",
+      "call_instruction": "0x0011969C",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x0011964C",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "0899509c1643d3ea24a7a0ba68ed7edb3e6842636273f0e02ebb45e482f2a4ae",
+      "bounded_window_words": [
+        {
+          "instruction": "0x0011964C",
+          "word": "0x27B20034"
+        },
+        {
+          "instruction": "0x00119650",
+          "word": "0x6A040007"
+        },
+        {
+          "instruction": "0x00119654",
+          "word": "0x6E040000"
+        },
+        {
+          "instruction": "0x00119658",
+          "word": "0x8E050008"
+        },
+        {
+          "instruction": "0x0011965C",
+          "word": "0xB2A40007"
+        },
+        {
+          "instruction": "0x00119660",
+          "word": "0xB6A40000"
+        },
+        {
+          "instruction": "0x00119664",
+          "word": "0xAEA50008"
+        },
+        {
+          "instruction": "0x00119668",
+          "word": "0x24560010"
+        },
+        {
+          "instruction": "0x0011966C",
+          "word": "0x0260802D"
+        },
+        {
+          "instruction": "0x00119670",
+          "word": "0x0220282D"
+        },
+        {
+          "instruction": "0x00119674",
+          "word": "0x0200302D"
+        },
+        {
+          "instruction": "0x00119678",
+          "word": "0x02C0202D"
+        },
+        {
+          "instruction": "0x0011967C",
+          "word": "0x0C0A8718"
+        },
+        {
+          "instruction": "0x00119680",
+          "word": "0x2610000C"
+        },
+        {
+          "instruction": "0x00119684",
+          "word": "0x0212102A"
+        },
+        {
+          "instruction": "0x00119688",
+          "word": "0x1440FFF9"
+        },
+        {
+          "instruction": "0x0011968C",
+          "word": "0x2631000C"
+        },
+        {
+          "instruction": "0x00119690",
+          "word": "0x8FA60044"
+        },
+        {
+          "instruction": "0x00119694",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x00119698",
+          "word": "0x8FA70048"
+        },
+        {
+          "instruction": "0x0011969C",
+          "word": "0x0C0A71B0"
+        },
+        {
+          "instruction": "0x001196A0",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x001196A4",
+          "word": "0x8FA50040"
+        },
+        {
+          "instruction": "0x001196A8",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001196AC",
+          "word": "0x02A0302D"
+        },
+        {
+          "instruction": "0x001196B0",
+          "word": "0x0C0A7EE0"
+        },
+        {
+          "instruction": "0x001196B4",
+          "word": "0x03C0382D"
+        },
+        {
+          "instruction": "0x001196B8",
+          "word": "0xC7C10000"
+        },
+        {
+          "instruction": "0x001196BC",
+          "word": "0x44800000"
+        },
+        {
+          "instruction": "0x001196C0",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001196C4",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x001196C8",
+          "word": "0x00000000"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029C6C0",
+      "call_instruction": "0x00119794",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x00119744",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "bd4e401709ab3e98b8ec3f76aba2c40b1806667cc38915d4abda29e13c193c0d",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00119744",
+          "word": "0x1440002A"
+        },
+        {
+          "instruction": "0x00119748",
+          "word": "0x0200182D"
+        },
+        {
+          "instruction": "0x0011974C",
+          "word": "0x28620003"
+        },
+        {
+          "instruction": "0x00119750",
+          "word": "0x1440FFEF"
+        },
+        {
+          "instruction": "0x00119754",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x00119758",
+          "word": "0x0260802D"
+        },
+        {
+          "instruction": "0x0011975C",
+          "word": "0x26F10070"
+        },
+        {
+          "instruction": "0x00119760",
+          "word": "0x26720024"
+        },
+        {
+          "instruction": "0x00119764",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119768",
+          "word": "0x0220282D"
+        },
+        {
+          "instruction": "0x0011976C",
+          "word": "0x0200302D"
+        },
+        {
+          "instruction": "0x00119770",
+          "word": "0x02C0202D"
+        },
+        {
+          "instruction": "0x00119774",
+          "word": "0x0C0A8718"
+        },
+        {
+          "instruction": "0x00119778",
+          "word": "0x2610000C"
+        },
+        {
+          "instruction": "0x0011977C",
+          "word": "0x0212102A"
+        },
+        {
+          "instruction": "0x00119780",
+          "word": "0x1440FFF9"
+        },
+        {
+          "instruction": "0x00119784",
+          "word": "0x2631000C"
+        },
+        {
+          "instruction": "0x00119788",
+          "word": "0x8FA60044"
+        },
+        {
+          "instruction": "0x0011978C",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x00119790",
+          "word": "0x8FA70048"
+        },
+        {
+          "instruction": "0x00119794",
+          "word": "0x0C0A71B0"
+        },
+        {
+          "instruction": "0x00119798",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x0011979C",
+          "word": "0x8FA50040"
+        },
+        {
+          "instruction": "0x001197A0",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001197A4",
+          "word": "0x02A0302D"
+        },
+        {
+          "instruction": "0x001197A8",
+          "word": "0x0C0A7EE0"
+        },
+        {
+          "instruction": "0x001197AC",
+          "word": "0x03C0382D"
+        },
+        {
+          "instruction": "0x001197B0",
+          "word": "0xC7C10000"
+        },
+        {
+          "instruction": "0x001197B4",
+          "word": "0x44800000"
+        },
+        {
+          "instruction": "0x001197B8",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001197BC",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x001197C0",
+          "word": "0x00000000"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029C7B0",
+      "call_instruction": "0x00118DEC",
+      "whole_caller": {
+        "name": "func_00118D80",
+        "address": "0x00118D80",
+        "size": 2152,
+        "file_offset": "0x00019D80",
+        "original_sha256": "4f5e9274cd035c0065e7e10144a1232a010253331cdb7442f7f042f09234e53c",
+        "original_assembly": "build/functions/func_00118D80.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x001195E0",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0170",
+        "following_entry": "0x001195E8"
+      },
+      "bounded_window_start": "0x00118D9C",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "9774d6982d3d0db00703c84a6269b71a6e09be95fa363e2bfb8ecc0f42584454",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00118D9C",
+          "word": "0x7FB20140"
+        },
+        {
+          "instruction": "0x00118DA0",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x00118DA4",
+          "word": "0x7FB40120"
+        },
+        {
+          "instruction": "0x00118DA8",
+          "word": "0x267000B4"
+        },
+        {
+          "instruction": "0x00118DAC",
+          "word": "0x7FB50110"
+        },
+        {
+          "instruction": "0x00118DB0",
+          "word": "0x2671009C"
+        },
+        {
+          "instruction": "0x00118DB4",
+          "word": "0x7FB60100"
+        },
+        {
+          "instruction": "0x00118DB8",
+          "word": "0x267200D8"
+        },
+        {
+          "instruction": "0x00118DBC",
+          "word": "0xE7A00004"
+        },
+        {
+          "instruction": "0x00118DC0",
+          "word": "0x0220A02D"
+        },
+        {
+          "instruction": "0x00118DC4",
+          "word": "0x7FB700F0"
+        },
+        {
+          "instruction": "0x00118DC8",
+          "word": "0x24150002"
+        },
+        {
+          "instruction": "0x00118DCC",
+          "word": "0x7FBE00E0"
+        },
+        {
+          "instruction": "0x00118DD0",
+          "word": "0xFFBF00D0"
+        },
+        {
+          "instruction": "0x00118DD4",
+          "word": "0xAFA00000"
+        },
+        {
+          "instruction": "0x00118DD8",
+          "word": "0x0C06C30C"
+        },
+        {
+          "instruction": "0x00118DDC",
+          "word": "0xAFA00008"
+        },
+        {
+          "instruction": "0x00118DE0",
+          "word": "0x0200202D"
+        },
+        {
+          "instruction": "0x00118DE4",
+          "word": "0x2665004C"
+        },
+        {
+          "instruction": "0x00118DE8",
+          "word": "0x26660058"
+        },
+        {
+          "instruction": "0x00118DEC",
+          "word": "0x0C0A71EC"
+        },
+        {
+          "instruction": "0x00118DF0",
+          "word": "0x26670064"
+        },
+        {
+          "instruction": "0x00118DF4",
+          "word": "0xC6020004"
+        },
+        {
+          "instruction": "0x00118DF8",
+          "word": "0x266200A8"
+        },
+        {
+          "instruction": "0x00118DFC",
+          "word": "0xC7A10008"
+        },
+        {
+          "instruction": "0x00118E00",
+          "word": "0x0240202D"
+        },
+        {
+          "instruction": "0x00118E04",
+          "word": "0xC6070008"
+        },
+        {
+          "instruction": "0x00118E08",
+          "word": "0x26650070"
+        },
+        {
+          "instruction": "0x00118E0C",
+          "word": "0xC7A30004"
+        },
+        {
+          "instruction": "0x00118E10",
+          "word": "0x46020982"
+        },
+        {
+          "instruction": "0x00118E14",
+          "word": "0xC7A00000"
+        },
+        {
+          "instruction": "0x00118E18",
+          "word": "0x2666007C"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029C7B0",
+      "call_instruction": "0x00118E8C",
+      "whole_caller": {
+        "name": "func_00118D80",
+        "address": "0x00118D80",
+        "size": 2152,
+        "file_offset": "0x00019D80",
+        "original_sha256": "4f5e9274cd035c0065e7e10144a1232a010253331cdb7442f7f042f09234e53c",
+        "original_assembly": "build/functions/func_00118D80.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x001195E0",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0170",
+        "following_entry": "0x001195E8"
+      },
+      "bounded_window_start": "0x00118E3C",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "e76eee9b87e36fd72a3986714a654ff07202fc8d26af7f3c41e946d7a78cd417",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00118E3C",
+          "word": "0x46031081"
+        },
+        {
+          "instruction": "0x00118E40",
+          "word": "0x46000841"
+        },
+        {
+          "instruction": "0x00118E44",
+          "word": "0xE664009C"
+        },
+        {
+          "instruction": "0x00118E48",
+          "word": "0xE6220008"
+        },
+        {
+          "instruction": "0x00118E4C",
+          "word": "0xE6210004"
+        },
+        {
+          "instruction": "0x00118E50",
+          "word": "0xC6030004"
+        },
+        {
+          "instruction": "0x00118E54",
+          "word": "0xC6060008"
+        },
+        {
+          "instruction": "0x00118E58",
+          "word": "0xC660009C"
+        },
+        {
+          "instruction": "0x00118E5C",
+          "word": "0x460311C2"
+        },
+        {
+          "instruction": "0x00118E60",
+          "word": "0xC66500B4"
+        },
+        {
+          "instruction": "0x00118E64",
+          "word": "0x46060902"
+        },
+        {
+          "instruction": "0x00118E68",
+          "word": "0x460300C2"
+        },
+        {
+          "instruction": "0x00118E6C",
+          "word": "0x46050842"
+        },
+        {
+          "instruction": "0x00118E70",
+          "word": "0x46060002"
+        },
+        {
+          "instruction": "0x00118E74",
+          "word": "0x46051082"
+        },
+        {
+          "instruction": "0x00118E78",
+          "word": "0x46072101"
+        },
+        {
+          "instruction": "0x00118E7C",
+          "word": "0x460118C1"
+        },
+        {
+          "instruction": "0x00118E80",
+          "word": "0x46001081"
+        },
+        {
+          "instruction": "0x00118E84",
+          "word": "0xE66400A8"
+        },
+        {
+          "instruction": "0x00118E88",
+          "word": "0xE4430008"
+        },
+        {
+          "instruction": "0x00118E8C",
+          "word": "0x0C0A71EC"
+        },
+        {
+          "instruction": "0x00118E90",
+          "word": "0xE4420004"
+        },
+        {
+          "instruction": "0x00118E94",
+          "word": "0xC6420008"
+        },
+        {
+          "instruction": "0x00118E98",
+          "word": "0x266200C0"
+        },
+        {
+          "instruction": "0x00118E9C",
+          "word": "0xC7A00004"
+        },
+        {
+          "instruction": "0x00118EA0",
+          "word": "0x266300CC"
+        },
+        {
+          "instruction": "0x00118EA4",
+          "word": "0xC7A70008"
+        },
+        {
+          "instruction": "0x00118EA8",
+          "word": "0x27B60068"
+        },
+        {
+          "instruction": "0x00118EAC",
+          "word": "0xC6440004"
+        },
+        {
+          "instruction": "0x00118EB0",
+          "word": "0x46001182"
+        },
+        {
+          "instruction": "0x00118EB4",
+          "word": "0xC66100D8"
+        },
+        {
+          "instruction": "0x00118EB8",
+          "word": "0x27B10074"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029C7B0",
+      "call_instruction": "0x0029CB68",
+      "whole_caller": {
+        "name": "func_0029CB20",
+        "address": "0x0029CB20",
+        "size": 560,
+        "file_offset": "0x0019DB20",
+        "original_sha256": "442b2843b6ce4be5d8455902db47ff2ee36a5430ad275850c08b50b51e89ff77",
+        "original_assembly": "build/functions/func_0029CB20.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0029CD48",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0100",
+        "following_entry": "0x0029CD50"
+      },
+      "bounded_window_start": "0x0029CB20",
+      "bounded_window_size": 120,
+      "bounded_window_sha256": "d5b12ea247007679cf21a849489023cfe0db3c214d174c09f1329cae0446472a",
+      "bounded_window_words": [
+        {
+          "instruction": "0x0029CB20",
+          "word": "0x27BDFF00"
+        },
+        {
+          "instruction": "0x0029CB24",
+          "word": "0x7FB000C0"
+        },
+        {
+          "instruction": "0x0029CB28",
+          "word": "0x0080802D"
+        },
+        {
+          "instruction": "0x0029CB2C",
+          "word": "0x7FB100B0"
+        },
+        {
+          "instruction": "0x0029CB30",
+          "word": "0x7FB200A0"
+        },
+        {
+          "instruction": "0x0029CB34",
+          "word": "0x2611000C"
+        },
+        {
+          "instruction": "0x0029CB38",
+          "word": "0x7FB30090"
+        },
+        {
+          "instruction": "0x0029CB3C",
+          "word": "0x00A0902D"
+        },
+        {
+          "instruction": "0x0029CB40",
+          "word": "0x26130018"
+        },
+        {
+          "instruction": "0x0029CB44",
+          "word": "0xE7B800F0"
+        },
+        {
+          "instruction": "0x0029CB48",
+          "word": "0xE7B700E8"
+        },
+        {
+          "instruction": "0x0029CB4C",
+          "word": "0x27A40070"
+        },
+        {
+          "instruction": "0x0029CB50",
+          "word": "0xE7B600E0"
+        },
+        {
+          "instruction": "0x0029CB54",
+          "word": "0x0200282D"
+        },
+        {
+          "instruction": "0x0029CB58",
+          "word": "0xE7B500D8"
+        },
+        {
+          "instruction": "0x0029CB5C",
+          "word": "0x0220302D"
+        },
+        {
+          "instruction": "0x0029CB60",
+          "word": "0xE7B400D0"
+        },
+        {
+          "instruction": "0x0029CB64",
+          "word": "0xFFBF0080"
+        },
+        {
+          "instruction": "0x0029CB68",
+          "word": "0x0C0A71EC"
+        },
+        {
+          "instruction": "0x0029CB6C",
+          "word": "0x0260382D"
+        },
+        {
+          "instruction": "0x0029CB70",
+          "word": "0xC6300008"
+        },
+        {
+          "instruction": "0x0029CB74",
+          "word": "0xC64B0008"
+        },
+        {
+          "instruction": "0x0029CB78",
+          "word": "0xC608000C"
+        },
+        {
+          "instruction": "0x0029CB7C",
+          "word": "0xC6090000"
+        },
+        {
+          "instruction": "0x0029CB80",
+          "word": "0x460B8501"
+        },
+        {
+          "instruction": "0x0029CB84",
+          "word": "0xC60D0008"
+        },
+        {
+          "instruction": "0x0029CB88",
+          "word": "0xC6470000"
+        },
+        {
+          "instruction": "0x0029CB8C",
+          "word": "0x46094301"
+        },
+        {
+          "instruction": "0x0029CB90",
+          "word": "0xC62E0004"
+        },
+        {
+          "instruction": "0x0029CB94",
+          "word": "0x460D8001"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029CA28",
+      "call_instruction": "0x0011973C",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x001196EC",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "507c15fcf879b86effd76e754fe04a764a52b0ff93a9585fa8005b2881d83945",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001196EC",
+          "word": "0x02A0282D"
+        },
+        {
+          "instruction": "0x001196F0",
+          "word": "0x14400058"
+        },
+        {
+          "instruction": "0x001196F4",
+          "word": "0x24020001"
+        },
+        {
+          "instruction": "0x001196F8",
+          "word": "0x0000182D"
+        },
+        {
+          "instruction": "0x001196FC",
+          "word": "0x0260A02D"
+        },
+        {
+          "instruction": "0x00119700",
+          "word": "0x2412000C"
+        },
+        {
+          "instruction": "0x00119704",
+          "word": "0x24110003"
+        },
+        {
+          "instruction": "0x00119708",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x0011970C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119710",
+          "word": "0x24700001"
+        },
+        {
+          "instruction": "0x00119714",
+          "word": "0x0211001A"
+        },
+        {
+          "instruction": "0x00119718",
+          "word": "0x3C0138D1"
+        },
+        {
+          "instruction": "0x0011971C",
+          "word": "0x3421B717"
+        },
+        {
+          "instruction": "0x00119720",
+          "word": "0x44816000"
+        },
+        {
+          "instruction": "0x00119724",
+          "word": "0x52200001"
+        },
+        {
+          "instruction": "0x00119728",
+          "word": "0x000001CD"
+        },
+        {
+          "instruction": "0x0011972C",
+          "word": "0x02A0202D"
+        },
+        {
+          "instruction": "0x00119730",
+          "word": "0x00542821"
+        },
+        {
+          "instruction": "0x00119734",
+          "word": "0x00003010"
+        },
+        {
+          "instruction": "0x00119738",
+          "word": "0x00D21018"
+        },
+        {
+          "instruction": "0x0011973C",
+          "word": "0x0C0A728A"
+        },
+        {
+          "instruction": "0x00119740",
+          "word": "0x00543021"
+        },
+        {
+          "instruction": "0x00119744",
+          "word": "0x1440002A"
+        },
+        {
+          "instruction": "0x00119748",
+          "word": "0x0200182D"
+        },
+        {
+          "instruction": "0x0011974C",
+          "word": "0x28620003"
+        },
+        {
+          "instruction": "0x00119750",
+          "word": "0x1440FFEF"
+        },
+        {
+          "instruction": "0x00119754",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x00119758",
+          "word": "0x0260802D"
+        },
+        {
+          "instruction": "0x0011975C",
+          "word": "0x26F10070"
+        },
+        {
+          "instruction": "0x00119760",
+          "word": "0x26720024"
+        },
+        {
+          "instruction": "0x00119764",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119768",
+          "word": "0x0220282D"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029CA28",
+      "call_instruction": "0x00119834",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x001197E4",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "fb7b47653716cca35b08ff9cfcd60e878d09f01af38b9bce579d1d972700ad1c",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001197E4",
+          "word": "0x02A0282D"
+        },
+        {
+          "instruction": "0x001197E8",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x001197EC",
+          "word": "0x0000182D"
+        },
+        {
+          "instruction": "0x001197F0",
+          "word": "0x10000018"
+        },
+        {
+          "instruction": "0x001197F4",
+          "word": "0x24020001"
+        },
+        {
+          "instruction": "0x001197F8",
+          "word": "0x2412000C"
+        },
+        {
+          "instruction": "0x001197FC",
+          "word": "0x24110003"
+        },
+        {
+          "instruction": "0x00119800",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x00119804",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119808",
+          "word": "0x24700001"
+        },
+        {
+          "instruction": "0x0011980C",
+          "word": "0x0211001A"
+        },
+        {
+          "instruction": "0x00119810",
+          "word": "0x3C0138D1"
+        },
+        {
+          "instruction": "0x00119814",
+          "word": "0x3421B717"
+        },
+        {
+          "instruction": "0x00119818",
+          "word": "0x44816000"
+        },
+        {
+          "instruction": "0x0011981C",
+          "word": "0x52200001"
+        },
+        {
+          "instruction": "0x00119820",
+          "word": "0x000001CD"
+        },
+        {
+          "instruction": "0x00119824",
+          "word": "0x02A0202D"
+        },
+        {
+          "instruction": "0x00119828",
+          "word": "0x00532821"
+        },
+        {
+          "instruction": "0x0011982C",
+          "word": "0x00003010"
+        },
+        {
+          "instruction": "0x00119830",
+          "word": "0x00D21018"
+        },
+        {
+          "instruction": "0x00119834",
+          "word": "0x0C0A728A"
+        },
+        {
+          "instruction": "0x00119838",
+          "word": "0x00533021"
+        },
+        {
+          "instruction": "0x0011983C",
+          "word": "0x1440FFEC"
+        },
+        {
+          "instruction": "0x00119840",
+          "word": "0x0200182D"
+        },
+        {
+          "instruction": "0x00119844",
+          "word": "0x28620003"
+        },
+        {
+          "instruction": "0x00119848",
+          "word": "0x1440FFEF"
+        },
+        {
+          "instruction": "0x0011984C",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x00119850",
+          "word": "0x0000102D"
+        },
+        {
+          "instruction": "0x00119854",
+          "word": "0x7BB000E0"
+        },
+        {
+          "instruction": "0x00119858",
+          "word": "0x7BB100D0"
+        },
+        {
+          "instruction": "0x0011985C",
+          "word": "0x7BB200C0"
+        },
+        {
+          "instruction": "0x00119860",
+          "word": "0x7BB300B0"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029CB20",
+      "call_instruction": "0x001196E8",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x00119698",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "a2ebe2a02e18919728d62dfb9ed6dee8d344ae289e3da485f39af14efa7be9f6",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00119698",
+          "word": "0x8FA70048"
+        },
+        {
+          "instruction": "0x0011969C",
+          "word": "0x0C0A71B0"
+        },
+        {
+          "instruction": "0x001196A0",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x001196A4",
+          "word": "0x8FA50040"
+        },
+        {
+          "instruction": "0x001196A8",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001196AC",
+          "word": "0x02A0302D"
+        },
+        {
+          "instruction": "0x001196B0",
+          "word": "0x0C0A7EE0"
+        },
+        {
+          "instruction": "0x001196B4",
+          "word": "0x03C0382D"
+        },
+        {
+          "instruction": "0x001196B8",
+          "word": "0xC7C10000"
+        },
+        {
+          "instruction": "0x001196BC",
+          "word": "0x44800000"
+        },
+        {
+          "instruction": "0x001196C0",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001196C4",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x001196C8",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001196CC",
+          "word": "0x45020023"
+        },
+        {
+          "instruction": "0x001196D0",
+          "word": "0x0260802D"
+        },
+        {
+          "instruction": "0x001196D4",
+          "word": "0xC6E00098"
+        },
+        {
+          "instruction": "0x001196D8",
+          "word": "0x46000836"
+        },
+        {
+          "instruction": "0x001196DC",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001196E0",
+          "word": "0x4500001D"
+        },
+        {
+          "instruction": "0x001196E4",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001196E8",
+          "word": "0x0C0A72C8"
+        },
+        {
+          "instruction": "0x001196EC",
+          "word": "0x02A0282D"
+        },
+        {
+          "instruction": "0x001196F0",
+          "word": "0x14400058"
+        },
+        {
+          "instruction": "0x001196F4",
+          "word": "0x24020001"
+        },
+        {
+          "instruction": "0x001196F8",
+          "word": "0x0000182D"
+        },
+        {
+          "instruction": "0x001196FC",
+          "word": "0x0260A02D"
+        },
+        {
+          "instruction": "0x00119700",
+          "word": "0x2412000C"
+        },
+        {
+          "instruction": "0x00119704",
+          "word": "0x24110003"
+        },
+        {
+          "instruction": "0x00119708",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x0011970C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119710",
+          "word": "0x24700001"
+        },
+        {
+          "instruction": "0x00119714",
+          "word": "0x0211001A"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029CB20",
+      "call_instruction": "0x001197E0",
+      "whole_caller": {
+        "name": "func_001195E8",
+        "address": "0x001195E8",
+        "size": 668,
+        "file_offset": "0x0001A5E8",
+        "original_sha256": "a1689e4012f5f482133c88fc25279e9957312f6ed7e662c3df3780943e0048e7",
+        "original_assembly": "build/functions/func_001195E8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x0011987C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00F0",
+        "following_entry": "0x00119888"
+      },
+      "bounded_window_start": "0x00119790",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "975ad86570410d82da0b05b161d8584b67e5cb22516fcd85cbda2c0022418851",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00119790",
+          "word": "0x8FA70048"
+        },
+        {
+          "instruction": "0x00119794",
+          "word": "0x0C0A71B0"
+        },
+        {
+          "instruction": "0x00119798",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x0011979C",
+          "word": "0x8FA50040"
+        },
+        {
+          "instruction": "0x001197A0",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001197A4",
+          "word": "0x02A0302D"
+        },
+        {
+          "instruction": "0x001197A8",
+          "word": "0x0C0A7EE0"
+        },
+        {
+          "instruction": "0x001197AC",
+          "word": "0x03C0382D"
+        },
+        {
+          "instruction": "0x001197B0",
+          "word": "0xC7C10000"
+        },
+        {
+          "instruction": "0x001197B4",
+          "word": "0x44800000"
+        },
+        {
+          "instruction": "0x001197B8",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001197BC",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x001197C0",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001197C4",
+          "word": "0x45000023"
+        },
+        {
+          "instruction": "0x001197C8",
+          "word": "0x0000102D"
+        },
+        {
+          "instruction": "0x001197CC",
+          "word": "0xC6E00098"
+        },
+        {
+          "instruction": "0x001197D0",
+          "word": "0x46000836"
+        },
+        {
+          "instruction": "0x001197D4",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001197D8",
+          "word": "0x4500001E"
+        },
+        {
+          "instruction": "0x001197DC",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001197E0",
+          "word": "0x0C0A72C8"
+        },
+        {
+          "instruction": "0x001197E4",
+          "word": "0x02A0282D"
+        },
+        {
+          "instruction": "0x001197E8",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x001197EC",
+          "word": "0x0000182D"
+        },
+        {
+          "instruction": "0x001197F0",
+          "word": "0x10000018"
+        },
+        {
+          "instruction": "0x001197F4",
+          "word": "0x24020001"
+        },
+        {
+          "instruction": "0x001197F8",
+          "word": "0x2412000C"
+        },
+        {
+          "instruction": "0x001197FC",
+          "word": "0x24110003"
+        },
+        {
+          "instruction": "0x00119800",
+          "word": "0x00721018"
+        },
+        {
+          "instruction": "0x00119804",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00119808",
+          "word": "0x24700001"
+        },
+        {
+          "instruction": "0x0011980C",
+          "word": "0x0211001A"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029D048",
+      "call_instruction": "0x00197D50",
+      "whole_caller": {
+        "name": "func_00197C18",
+        "address": "0x00197C18",
+        "size": 592,
+        "file_offset": "0x00098C18",
+        "original_sha256": "8c1b04a262fd7c492d461ee16a32f2d39593fce25dd15f70cc84a58f59460ff3",
+        "original_assembly": "build/functions/func_00197C18.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x00197E60",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0100",
+        "following_entry": "0x00197E68"
+      },
+      "bounded_window_start": "0x00197D00",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "8d0497736dc9a8367b4acbe141ed00baf419c29a649ec87be54d820d861daf27",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00197D00",
+          "word": "0x3C014080"
+        },
+        {
+          "instruction": "0x00197D04",
+          "word": "0x4481A000"
+        },
+        {
+          "instruction": "0x00197D08",
+          "word": "0x8CA288E8"
+        },
+        {
+          "instruction": "0x00197D0C",
+          "word": "0x00441021"
+        },
+        {
+          "instruction": "0x00197D10",
+          "word": "0x8C430020"
+        },
+        {
+          "instruction": "0x00197D14",
+          "word": "0x02A32021"
+        },
+        {
+          "instruction": "0x00197D18",
+          "word": "0x8C820008"
+        },
+        {
+          "instruction": "0x00197D1C",
+          "word": "0x10400031"
+        },
+        {
+          "instruction": "0x00197D20",
+          "word": "0x03A0282D"
+        },
+        {
+          "instruction": "0x00197D24",
+          "word": "0x8C900000"
+        },
+        {
+          "instruction": "0x00197D28",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x00197D2C",
+          "word": "0x27A60010"
+        },
+        {
+          "instruction": "0x00197D30",
+          "word": "0x26020040"
+        },
+        {
+          "instruction": "0x00197D34",
+          "word": "0xC6020040"
+        },
+        {
+          "instruction": "0x00197D38",
+          "word": "0xC4400004"
+        },
+        {
+          "instruction": "0x00197D3C",
+          "word": "0x0000382D"
+        },
+        {
+          "instruction": "0x00197D40",
+          "word": "0xC4410008"
+        },
+        {
+          "instruction": "0x00197D44",
+          "word": "0x46150000"
+        },
+        {
+          "instruction": "0x00197D48",
+          "word": "0xE7A20010"
+        },
+        {
+          "instruction": "0x00197D4C",
+          "word": "0xE7A10018"
+        },
+        {
+          "instruction": "0x00197D50",
+          "word": "0x0C0A7412"
+        },
+        {
+          "instruction": "0x00197D54",
+          "word": "0xE7A00014"
+        },
+        {
+          "instruction": "0x00197D58",
+          "word": "0x46140034"
+        },
+        {
+          "instruction": "0x00197D5C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00197D60",
+          "word": "0x45000020"
+        },
+        {
+          "instruction": "0x00197D64",
+          "word": "0x8FA6003C"
+        },
+        {
+          "instruction": "0x00197D68",
+          "word": "0x0200202D"
+        },
+        {
+          "instruction": "0x00197D6C",
+          "word": "0x0260282D"
+        },
+        {
+          "instruction": "0x00197D70",
+          "word": "0x27A70034"
+        },
+        {
+          "instruction": "0x00197D74",
+          "word": "0x27A80038"
+        },
+        {
+          "instruction": "0x00197D78",
+          "word": "0x0C064A3C"
+        },
+        {
+          "instruction": "0x00197D7C",
+          "word": "0x27A90020"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029D048",
+      "call_instruction": "0x00197FF4",
+      "whole_caller": {
+        "name": "func_00197E68",
+        "address": "0x00197E68",
+        "size": 792,
+        "file_offset": "0x00098E68",
+        "original_sha256": "b37a18ff6f4cfe30928cdebd922356fb709175decdcdcc143e39f241122bee5a",
+        "original_assembly": "build/functions/func_00197E68.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x00198178",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0120",
+        "following_entry": "0x00198180"
+      },
+      "bounded_window_start": "0x00197FA4",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "cd43bcca51e9b7f5e0546108a17aa9ba5c36e68f498aba7afc376f219efcd508",
+      "bounded_window_words": [
+        {
+          "instruction": "0x00197FA4",
+          "word": "0x2404000C"
+        },
+        {
+          "instruction": "0x00197FA8",
+          "word": "0x00A42018"
+        },
+        {
+          "instruction": "0x00197FAC",
+          "word": "0x00661821"
+        },
+        {
+          "instruction": "0x00197FB0",
+          "word": "0x8C620020"
+        },
+        {
+          "instruction": "0x00197FB4",
+          "word": "0x00821021"
+        },
+        {
+          "instruction": "0x00197FB8",
+          "word": "0x8C430008"
+        },
+        {
+          "instruction": "0x00197FBC",
+          "word": "0x1060004D"
+        },
+        {
+          "instruction": "0x00197FC0",
+          "word": "0x24B40001"
+        },
+        {
+          "instruction": "0x00197FC4",
+          "word": "0x8C510000"
+        },
+        {
+          "instruction": "0x00197FC8",
+          "word": "0x0240202D"
+        },
+        {
+          "instruction": "0x00197FCC",
+          "word": "0x27A50030"
+        },
+        {
+          "instruction": "0x00197FD0",
+          "word": "0x27A60040"
+        },
+        {
+          "instruction": "0x00197FD4",
+          "word": "0x26220040"
+        },
+        {
+          "instruction": "0x00197FD8",
+          "word": "0xC6220040"
+        },
+        {
+          "instruction": "0x00197FDC",
+          "word": "0xC4400004"
+        },
+        {
+          "instruction": "0x00197FE0",
+          "word": "0x0000382D"
+        },
+        {
+          "instruction": "0x00197FE4",
+          "word": "0xC4410008"
+        },
+        {
+          "instruction": "0x00197FE8",
+          "word": "0x46140000"
+        },
+        {
+          "instruction": "0x00197FEC",
+          "word": "0xE7A20040"
+        },
+        {
+          "instruction": "0x00197FF0",
+          "word": "0xE7A10048"
+        },
+        {
+          "instruction": "0x00197FF4",
+          "word": "0x0C0A7412"
+        },
+        {
+          "instruction": "0x00197FF8",
+          "word": "0xE7A00044"
+        },
+        {
+          "instruction": "0x00197FFC",
+          "word": "0x3C014080"
+        },
+        {
+          "instruction": "0x00198000",
+          "word": "0x44810800"
+        },
+        {
+          "instruction": "0x00198004",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00198008",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x0019800C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x00198010",
+          "word": "0x45000038"
+        },
+        {
+          "instruction": "0x00198014",
+          "word": "0x0220202D"
+        },
+        {
+          "instruction": "0x00198018",
+          "word": "0x0240282D"
+        },
+        {
+          "instruction": "0x0019801C",
+          "word": "0x0260302D"
+        },
+        {
+          "instruction": "0x00198020",
+          "word": "0x27A70060"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029D048",
+      "call_instruction": "0x001BEA6C",
+      "whole_caller": {
+        "name": "func_001BE7D8",
+        "address": "0x001BE7D8",
+        "size": 5948,
+        "file_offset": "0x000BF7D8",
+        "original_sha256": "a44caefceae0ad5c5b57c6196dd5248717a4dba82f915a9a73ef30e8d02399ab",
+        "original_assembly": "build/functions/func_001BE7D8.s",
+        "excluded_zero_alignment_bytes": 4,
+        "terminal_jr": "0x001BFF0C",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0330",
+        "following_entry": "0x001BFF18"
+      },
+      "bounded_window_start": "0x001BEA1C",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "4a595f139ba8a629d1d2111d0dc1e0cf863fec22095fb50f2aa264bce23aeb12",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001BEA1C",
+          "word": "0x84440040"
+        },
+        {
+          "instruction": "0x001BEA20",
+          "word": "0x8C430044"
+        },
+        {
+          "instruction": "0x001BEA24",
+          "word": "0x0060F809"
+        },
+        {
+          "instruction": "0x001BEA28",
+          "word": "0x02042021"
+        },
+        {
+          "instruction": "0x001BEA2C",
+          "word": "0x8FC20004"
+        },
+        {
+          "instruction": "0x001BEA30",
+          "word": "0x46000506"
+        },
+        {
+          "instruction": "0x001BEA34",
+          "word": "0x84440040"
+        },
+        {
+          "instruction": "0x001BEA38",
+          "word": "0x8C430044"
+        },
+        {
+          "instruction": "0x001BEA3C",
+          "word": "0x0060F809"
+        },
+        {
+          "instruction": "0x001BEA40",
+          "word": "0x03C42021"
+        },
+        {
+          "instruction": "0x001BEA44",
+          "word": "0x8E050004"
+        },
+        {
+          "instruction": "0x001BEA48",
+          "word": "0x4600A500"
+        },
+        {
+          "instruction": "0x001BEA4C",
+          "word": "0x84A40028"
+        },
+        {
+          "instruction": "0x001BEA50",
+          "word": "0x8CA2002C"
+        },
+        {
+          "instruction": "0x001BEA54",
+          "word": "0x4616A500"
+        },
+        {
+          "instruction": "0x001BEA58",
+          "word": "0x0040F809"
+        },
+        {
+          "instruction": "0x001BEA5C",
+          "word": "0x02042021"
+        },
+        {
+          "instruction": "0x001BEA60",
+          "word": "0x8FA401FC"
+        },
+        {
+          "instruction": "0x001BEA64",
+          "word": "0x0040302D"
+        },
+        {
+          "instruction": "0x001BEA68",
+          "word": "0x03A0282D"
+        },
+        {
+          "instruction": "0x001BEA6C",
+          "word": "0x0C0A7412"
+        },
+        {
+          "instruction": "0x001BEA70",
+          "word": "0x27A701F0"
+        },
+        {
+          "instruction": "0x001BEA74",
+          "word": "0x4614A042"
+        },
+        {
+          "instruction": "0x001BEA78",
+          "word": "0x46010034"
+        },
+        {
+          "instruction": "0x001BEA7C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001BEA80",
+          "word": "0x45000017"
+        },
+        {
+          "instruction": "0x001BEA84",
+          "word": "0xC7A001F0"
+        },
+        {
+          "instruction": "0x001BEA88",
+          "word": "0x4600A834"
+        },
+        {
+          "instruction": "0x001BEA8C",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001BEA90",
+          "word": "0x45000014"
+        },
+        {
+          "instruction": "0x001BEA94",
+          "word": "0x8FA30200"
+        },
+        {
+          "instruction": "0x001BEA98",
+          "word": "0x0C06E984"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x0012ECF8",
+      "whole_caller": {
+        "name": "func_0012EC50",
+        "address": "0x0012EC50",
+        "size": 272,
+        "file_offset": "0x0002FC50",
+        "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+        "original_assembly": "build/functions/func_0012EC50.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0012ED58",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0060",
+        "following_entry": "0x0012ED60"
+      },
+      "bounded_window_start": "0x0012ECA8",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "e60f315d505b38056f173a4f33b96d6e9c3477bb735024669a6d6add6b6e4907",
+      "bounded_window_words": [
+        {
+          "instruction": "0x0012ECA8",
+          "word": "0x34212400"
+        },
+        {
+          "instruction": "0x0012ECAC",
+          "word": "0x44810000"
+        },
+        {
+          "instruction": "0x0012ECB0",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x0012ECB4",
+          "word": "0xE640003C"
+        },
+        {
+          "instruction": "0x0012ECB8",
+          "word": "0xE4400008"
+        },
+        {
+          "instruction": "0x0012ECBC",
+          "word": "0xE4400004"
+        },
+        {
+          "instruction": "0x0012ECC0",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ECC4",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x0012ECC8",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ECCC",
+          "word": "0x10400017"
+        },
+        {
+          "instruction": "0x0012ECD0",
+          "word": "0x0060A02D"
+        },
+        {
+          "instruction": "0x0012ECD4",
+          "word": "0x0280982D"
+        },
+        {
+          "instruction": "0x0012ECD8",
+          "word": "0x90B00001"
+        },
+        {
+          "instruction": "0x0012ECDC",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x0012ECE0",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ECE4",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x0012ECE8",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x0012ECEC",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x0012ECF0",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x0012ECF4",
+          "word": "0x00B08021"
+        },
+        {
+          "instruction": "0x0012ECF8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ECFC",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x0012ED00",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED04",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED08",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x0012ED0C",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x0012ED10",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED14",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED18",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ED1C",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ED20",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x0012ED24",
+          "word": "0x5440FFEE"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x0012ED04",
+      "whole_caller": {
+        "name": "func_0012EC50",
+        "address": "0x0012EC50",
+        "size": 272,
+        "file_offset": "0x0002FC50",
+        "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+        "original_assembly": "build/functions/func_0012EC50.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0012ED58",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0060",
+        "following_entry": "0x0012ED60"
+      },
+      "bounded_window_start": "0x0012ECB4",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "bc54ed7f4cc60d7120a162e96890dcfb0bcfde5adfb45fbdb4eaf414ebb3a563",
+      "bounded_window_words": [
+        {
+          "instruction": "0x0012ECB4",
+          "word": "0xE640003C"
+        },
+        {
+          "instruction": "0x0012ECB8",
+          "word": "0xE4400008"
+        },
+        {
+          "instruction": "0x0012ECBC",
+          "word": "0xE4400004"
+        },
+        {
+          "instruction": "0x0012ECC0",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ECC4",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x0012ECC8",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ECCC",
+          "word": "0x10400017"
+        },
+        {
+          "instruction": "0x0012ECD0",
+          "word": "0x0060A02D"
+        },
+        {
+          "instruction": "0x0012ECD4",
+          "word": "0x0280982D"
+        },
+        {
+          "instruction": "0x0012ECD8",
+          "word": "0x90B00001"
+        },
+        {
+          "instruction": "0x0012ECDC",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x0012ECE0",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ECE4",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x0012ECE8",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x0012ECEC",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x0012ECF0",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x0012ECF4",
+          "word": "0x00B08021"
+        },
+        {
+          "instruction": "0x0012ECF8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ECFC",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x0012ED00",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED04",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED08",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x0012ED0C",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x0012ED10",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED14",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED18",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ED1C",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ED20",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x0012ED24",
+          "word": "0x5440FFEE"
+        },
+        {
+          "instruction": "0x0012ED28",
+          "word": "0x90B00001"
+        },
+        {
+          "instruction": "0x0012ED2C",
+          "word": "0x3C020040"
+        },
+        {
+          "instruction": "0x0012ED30",
+          "word": "0x0280202D"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x0012ED10",
+      "whole_caller": {
+        "name": "func_0012EC50",
+        "address": "0x0012EC50",
+        "size": 272,
+        "file_offset": "0x0002FC50",
+        "original_sha256": "369a4108bbdbc46efdddf5a837c95842e28152bfcdfb78ce74415fceafc62664",
+        "original_assembly": "build/functions/func_0012EC50.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x0012ED58",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0060",
+        "following_entry": "0x0012ED60"
+      },
+      "bounded_window_start": "0x0012ECC0",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "f6550e3bb82c6fca5641db259313079f3955d9c15b6ca9a4e6ef25f85cea6e36",
+      "bounded_window_words": [
+        {
+          "instruction": "0x0012ECC0",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ECC4",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x0012ECC8",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ECCC",
+          "word": "0x10400017"
+        },
+        {
+          "instruction": "0x0012ECD0",
+          "word": "0x0060A02D"
+        },
+        {
+          "instruction": "0x0012ECD4",
+          "word": "0x0280982D"
+        },
+        {
+          "instruction": "0x0012ECD8",
+          "word": "0x90B00001"
+        },
+        {
+          "instruction": "0x0012ECDC",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x0012ECE0",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ECE4",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x0012ECE8",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x0012ECEC",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x0012ECF0",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x0012ECF4",
+          "word": "0x00B08021"
+        },
+        {
+          "instruction": "0x0012ECF8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ECFC",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x0012ED00",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED04",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED08",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x0012ED0C",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x0012ED10",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x0012ED14",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x0012ED18",
+          "word": "0x8E45001C"
+        },
+        {
+          "instruction": "0x0012ED1C",
+          "word": "0x94A20004"
+        },
+        {
+          "instruction": "0x0012ED20",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x0012ED24",
+          "word": "0x5440FFEE"
+        },
+        {
+          "instruction": "0x0012ED28",
+          "word": "0x90B00001"
+        },
+        {
+          "instruction": "0x0012ED2C",
+          "word": "0x3C020040"
+        },
+        {
+          "instruction": "0x0012ED30",
+          "word": "0x0280202D"
+        },
+        {
+          "instruction": "0x0012ED34",
+          "word": "0x8C438A00"
+        },
+        {
+          "instruction": "0x0012ED38",
+          "word": "0x0C0A8012"
+        },
+        {
+          "instruction": "0x0012ED3C",
+          "word": "0xC46C0008"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x001B0BA0",
+      "whole_caller": {
+        "name": "func_001B0B00",
+        "address": "0x001B0B00",
+        "size": 304,
+        "file_offset": "0x000B1B00",
+        "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+        "original_assembly": "build/functions/func_001B0B00.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x001B0C28",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0080",
+        "following_entry": "0x001B0C30"
+      },
+      "bounded_window_start": "0x001B0B50",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "c065521add52d2d519e710141d2f6936d7af6128f15e41f1660f1487845a6bd6",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001B0B50",
+          "word": "0x26420028"
+        },
+        {
+          "instruction": "0x001B0B54",
+          "word": "0x3C01C974"
+        },
+        {
+          "instruction": "0x001B0B58",
+          "word": "0x34212400"
+        },
+        {
+          "instruction": "0x001B0B5C",
+          "word": "0x44810000"
+        },
+        {
+          "instruction": "0x001B0B60",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001B0B64",
+          "word": "0xE6400028"
+        },
+        {
+          "instruction": "0x001B0B68",
+          "word": "0xE4400008"
+        },
+        {
+          "instruction": "0x001B0B6C",
+          "word": "0xE4400004"
+        },
+        {
+          "instruction": "0x001B0B70",
+          "word": "0x96840004"
+        },
+        {
+          "instruction": "0x001B0B74",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x001B0B78",
+          "word": "0x10800015"
+        },
+        {
+          "instruction": "0x001B0B7C",
+          "word": "0x0060A82D"
+        },
+        {
+          "instruction": "0x001B0B80",
+          "word": "0x02A0982D"
+        },
+        {
+          "instruction": "0x001B0B84",
+          "word": "0x92900001"
+        },
+        {
+          "instruction": "0x001B0B88",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0B8C",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x001B0B90",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x001B0B94",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x001B0B98",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x001B0B9C",
+          "word": "0x02908021"
+        },
+        {
+          "instruction": "0x001B0BA0",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BA4",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x001B0BA8",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BAC",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BB0",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x001B0BB4",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x001B0BB8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BBC",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BC0",
+          "word": "0x96820004"
+        },
+        {
+          "instruction": "0x001B0BC4",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x001B0BC8",
+          "word": "0x5440FFEF"
+        },
+        {
+          "instruction": "0x001B0BCC",
+          "word": "0x92900001"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x001B0BAC",
+      "whole_caller": {
+        "name": "func_001B0B00",
+        "address": "0x001B0B00",
+        "size": 304,
+        "file_offset": "0x000B1B00",
+        "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+        "original_assembly": "build/functions/func_001B0B00.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x001B0C28",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0080",
+        "following_entry": "0x001B0C30"
+      },
+      "bounded_window_start": "0x001B0B5C",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "1d0c106502612fe9c79cde87b68b78e60c0bdda2bd4359cbe0166517baaae5c0",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001B0B5C",
+          "word": "0x44810000"
+        },
+        {
+          "instruction": "0x001B0B60",
+          "word": "0x00000000"
+        },
+        {
+          "instruction": "0x001B0B64",
+          "word": "0xE6400028"
+        },
+        {
+          "instruction": "0x001B0B68",
+          "word": "0xE4400008"
+        },
+        {
+          "instruction": "0x001B0B6C",
+          "word": "0xE4400004"
+        },
+        {
+          "instruction": "0x001B0B70",
+          "word": "0x96840004"
+        },
+        {
+          "instruction": "0x001B0B74",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x001B0B78",
+          "word": "0x10800015"
+        },
+        {
+          "instruction": "0x001B0B7C",
+          "word": "0x0060A82D"
+        },
+        {
+          "instruction": "0x001B0B80",
+          "word": "0x02A0982D"
+        },
+        {
+          "instruction": "0x001B0B84",
+          "word": "0x92900001"
+        },
+        {
+          "instruction": "0x001B0B88",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0B8C",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x001B0B90",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x001B0B94",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x001B0B98",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x001B0B9C",
+          "word": "0x02908021"
+        },
+        {
+          "instruction": "0x001B0BA0",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BA4",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x001B0BA8",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BAC",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BB0",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x001B0BB4",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x001B0BB8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BBC",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BC0",
+          "word": "0x96820004"
+        },
+        {
+          "instruction": "0x001B0BC4",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x001B0BC8",
+          "word": "0x5440FFEF"
+        },
+        {
+          "instruction": "0x001B0BCC",
+          "word": "0x92900001"
+        },
+        {
+          "instruction": "0x001B0BD0",
+          "word": "0x3C020040"
+        },
+        {
+          "instruction": "0x001B0BD4",
+          "word": "0x02A0202D"
+        },
+        {
+          "instruction": "0x001B0BD8",
+          "word": "0x8C438A00"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E448",
+      "call_instruction": "0x001B0BB8",
+      "whole_caller": {
+        "name": "func_001B0B00",
+        "address": "0x001B0B00",
+        "size": 304,
+        "file_offset": "0x000B1B00",
+        "original_sha256": "43c71bb09fb40e1b7dd84a7f64231998b043f1c5e1c712c849903ca0ce4822dd",
+        "original_assembly": "build/functions/func_001B0B00.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x001B0C28",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0080",
+        "following_entry": "0x001B0C30"
+      },
+      "bounded_window_start": "0x001B0B68",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "2f1a1a56ce22b63be198e3ba22c2ec62870d7e51969431b81a254c0944ae93a6",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001B0B68",
+          "word": "0xE4400008"
+        },
+        {
+          "instruction": "0x001B0B6C",
+          "word": "0xE4400004"
+        },
+        {
+          "instruction": "0x001B0B70",
+          "word": "0x96840004"
+        },
+        {
+          "instruction": "0x001B0B74",
+          "word": "0x0000882D"
+        },
+        {
+          "instruction": "0x001B0B78",
+          "word": "0x10800015"
+        },
+        {
+          "instruction": "0x001B0B7C",
+          "word": "0x0060A82D"
+        },
+        {
+          "instruction": "0x001B0B80",
+          "word": "0x02A0982D"
+        },
+        {
+          "instruction": "0x001B0B84",
+          "word": "0x92900001"
+        },
+        {
+          "instruction": "0x001B0B88",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0B8C",
+          "word": "0x02308018"
+        },
+        {
+          "instruction": "0x001B0B90",
+          "word": "0x26310001"
+        },
+        {
+          "instruction": "0x001B0B94",
+          "word": "0x00108080"
+        },
+        {
+          "instruction": "0x001B0B98",
+          "word": "0x26100008"
+        },
+        {
+          "instruction": "0x001B0B9C",
+          "word": "0x02908021"
+        },
+        {
+          "instruction": "0x001B0BA0",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BA4",
+          "word": "0x26050004"
+        },
+        {
+          "instruction": "0x001B0BA8",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BAC",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BB0",
+          "word": "0x26050010"
+        },
+        {
+          "instruction": "0x001B0BB4",
+          "word": "0x2605001C"
+        },
+        {
+          "instruction": "0x001B0BB8",
+          "word": "0x0C0A7912"
+        },
+        {
+          "instruction": "0x001B0BBC",
+          "word": "0x0260202D"
+        },
+        {
+          "instruction": "0x001B0BC0",
+          "word": "0x96820004"
+        },
+        {
+          "instruction": "0x001B0BC4",
+          "word": "0x0222102B"
+        },
+        {
+          "instruction": "0x001B0BC8",
+          "word": "0x5440FFEF"
+        },
+        {
+          "instruction": "0x001B0BCC",
+          "word": "0x92900001"
+        },
+        {
+          "instruction": "0x001B0BD0",
+          "word": "0x3C020040"
+        },
+        {
+          "instruction": "0x001B0BD4",
+          "word": "0x02A0202D"
+        },
+        {
+          "instruction": "0x001B0BD8",
+          "word": "0x8C438A00"
+        },
+        {
+          "instruction": "0x001B0BDC",
+          "word": "0x0C0A8012"
+        },
+        {
+          "instruction": "0x001B0BE0",
+          "word": "0xC46C0008"
+        },
+        {
+          "instruction": "0x001B0BE4",
+          "word": "0x12C00004"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    },
+    {
+      "selected_entry": "0x0029E720",
+      "call_instruction": "0x00123504",
+      "whole_caller": {
+        "name": "func_00123488",
+        "address": "0x00123488",
+        "size": 200,
+        "file_offset": "0x00024488",
+        "original_sha256": "65cadc3b4244bf4848d440a0381e0fd87fce4e66010c115019ff1a05bdd0f71f",
+        "original_assembly": "build/functions/func_00123488.s",
+        "excluded_zero_alignment_bytes": 0,
+        "terminal_jr": "0x00123548",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD00B0",
+        "following_entry": "0x00123550"
+      },
+      "bounded_window_start": "0x001234B4",
+      "bounded_window_size": 128,
+      "bounded_window_sha256": "e12a04cfba459124db7f26fd0e3893ea62b575393a8607bab4d41965fea0d2ae",
+      "bounded_window_words": [
+        {
+          "instruction": "0x001234B4",
+          "word": "0x1040001E"
+        },
+        {
+          "instruction": "0x001234B8",
+          "word": "0x00E0982D"
+        },
+        {
+          "instruction": "0x001234BC",
+          "word": "0x8E05000C"
+        },
+        {
+          "instruction": "0x001234C0",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001234C4",
+          "word": "0x0C0A8426"
+        },
+        {
+          "instruction": "0x001234C8",
+          "word": "0x24A50050"
+        },
+        {
+          "instruction": "0x001234CC",
+          "word": "0x0220282D"
+        },
+        {
+          "instruction": "0x001234D0",
+          "word": "0x03A0202D"
+        },
+        {
+          "instruction": "0x001234D4",
+          "word": "0x0C0A8718"
+        },
+        {
+          "instruction": "0x001234D8",
+          "word": "0x27A60040"
+        },
+        {
+          "instruction": "0x001234DC",
+          "word": "0xC7A00040"
+        },
+        {
+          "instruction": "0x001234E0",
+          "word": "0xC7A10044"
+        },
+        {
+          "instruction": "0x001234E4",
+          "word": "0xC7A20048"
+        },
+        {
+          "instruction": "0x001234E8",
+          "word": "0xE7A00050"
+        },
+        {
+          "instruction": "0x001234EC",
+          "word": "0xE7A10054"
+        },
+        {
+          "instruction": "0x001234F0",
+          "word": "0xE7A20058"
+        },
+        {
+          "instruction": "0x001234F4",
+          "word": "0xC600004C"
+        },
+        {
+          "instruction": "0x001234F8",
+          "word": "0xE7A0005C"
+        },
+        {
+          "instruction": "0x001234FC",
+          "word": "0x27B10050"
+        },
+        {
+          "instruction": "0x00123500",
+          "word": "0x2604001C"
+        },
+        {
+          "instruction": "0x00123504",
+          "word": "0x0C0A79C8"
+        },
+        {
+          "instruction": "0x00123508",
+          "word": "0x0220282D"
+        },
+        {
+          "instruction": "0x0012350C",
+          "word": "0x10400008"
+        },
+        {
+          "instruction": "0x00123510",
+          "word": "0x0220282D"
+        },
+        {
+          "instruction": "0x00123514",
+          "word": "0x8E040054"
+        },
+        {
+          "instruction": "0x00123518",
+          "word": "0x0240302D"
+        },
+        {
+          "instruction": "0x0012351C",
+          "word": "0x0C0A5958"
+        },
+        {
+          "instruction": "0x00123520",
+          "word": "0x0260382D"
+        },
+        {
+          "instruction": "0x00123524",
+          "word": "0x0040182D"
+        },
+        {
+          "instruction": "0x00123528",
+          "word": "0x14600002"
+        },
+        {
+          "instruction": "0x0012352C",
+          "word": "0x24020001"
+        },
+        {
+          "instruction": "0x00123530",
+          "word": "0x0000102D"
+        }
+      ],
+      "manual_review_role": "author_selected_actual_argument_and_return_window_read; whole containing caller raw/assembly identity checked, no large caller reconstruction claim"
+    }
+  ],
+  "complete_branches": [
+    {
+      "instruction": "0x0029CAFC",
+      "word": "0x45010002",
+      "target": "0x0029CB08",
+      "delay_word": "0xE7A40010",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029CCCC",
+      "word": "0x45000013",
+      "target": "0x0029CD1C",
+      "delay_word": "0xE7A50020",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029CCF0",
+      "word": "0x4500000B",
+      "target": "0x0029CD20",
+      "delay_word": "0x0000102D",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029CD14",
+      "word": "0x45010002",
+      "target": "0x0029CD20",
+      "delay_word": "0x24020001",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029D0BC",
+      "word": "0x10E00002",
+      "target": "0x0029D0C8",
+      "delay_word": "0xE7A60008",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E458",
+      "word": "0x45000002",
+      "target": "0x0029E464",
+      "delay_word": "0x46000106",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E474",
+      "word": "0x45000002",
+      "target": "0x0029E480",
+      "delay_word": "0x460000C6",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E490",
+      "word": "0x45000002",
+      "target": "0x0029E49C",
+      "delay_word": "0x46000086",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E4BC",
+      "word": "0x45000002",
+      "target": "0x0029E4C8",
+      "delay_word": "0x46000106",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E4D8",
+      "word": "0x45000002",
+      "target": "0x0029E4E4",
+      "delay_word": "0x460000C6",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E4F4",
+      "word": "0x45000002",
+      "target": "0x0029E500",
+      "delay_word": "0x46000086",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029E734",
+      "word": "0x45030007",
+      "target": "0x0029E754",
+      "delay_word": "0x46010001",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E748",
+      "word": "0x45020004",
+      "target": "0x0029E75C",
+      "delay_word": "0xC4A00004",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E768",
+      "word": "0x45030007",
+      "target": "0x0029E788",
+      "delay_word": "0x46010001",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E77C",
+      "word": "0x45020005",
+      "target": "0x0029E794",
+      "delay_word": "0xC4A00008",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E7A0",
+      "word": "0x45030007",
+      "target": "0x0029E7C0",
+      "delay_word": "0x46010001",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E7B4",
+      "word": "0x45020005",
+      "target": "0x0029E7CC",
+      "delay_word": "0xC4A0000C",
+      "likely": true
+    },
+    {
+      "instruction": "0x0029E7D8",
+      "word": "0x45010002",
+      "target": "0x0029E7E4",
+      "delay_word": "0x0000102D",
+      "likely": false
+    }
+  ],
+  "complete_stores_including_stack_and_delays": [
+    {
+      "instruction": "0x0029C6C8",
+      "word": "0x7FB00040",
+      "base_gpr": 29,
+      "source_register": 16,
+      "register_file": "GPR",
+      "signed_offset": 64,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029C6CC",
+      "word": "0x7FB10030",
+      "base_gpr": 29,
+      "source_register": 17,
+      "register_file": "GPR",
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029C6D4",
+      "word": "0xFFBF0020",
+      "base_gpr": 29,
+      "source_register": 31,
+      "register_file": "GPR",
+      "signed_offset": 32,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029C710",
+      "word": "0xE7A00010",
+      "base_gpr": 29,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C718",
+      "word": "0xE7A20004",
+      "base_gpr": 29,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C720",
+      "word": "0xE7A30008",
+      "base_gpr": 29,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C724",
+      "word": "0xE7A10000",
+      "base_gpr": 29,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C730",
+      "word": "0xE7A40014",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C738",
+      "word": "0xE7A50018",
+      "base_gpr": 29,
+      "source_register": 5,
+      "register_file": "FPR",
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C750",
+      "word": "0xE6000004",
+      "base_gpr": 16,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C754",
+      "word": "0xE6010008",
+      "base_gpr": 16,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C75C",
+      "word": "0xE6020000",
+      "base_gpr": 16,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C79C",
+      "word": "0xE600000C",
+      "base_gpr": 16,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 12,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C7B8",
+      "word": "0x7FB00030",
+      "base_gpr": 29,
+      "source_register": 16,
+      "register_file": "GPR",
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029C7BC",
+      "word": "0xFFBF0020",
+      "base_gpr": 29,
+      "source_register": 31,
+      "register_file": "GPR",
+      "signed_offset": 32,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029C7F8",
+      "word": "0xE7A30008",
+      "base_gpr": 29,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C800",
+      "word": "0xE7A10000",
+      "base_gpr": 29,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C804",
+      "word": "0xE7A20004",
+      "base_gpr": 29,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C80C",
+      "word": "0xE7A00010",
+      "base_gpr": 29,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C818",
+      "word": "0xE7A40014",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C820",
+      "word": "0xE7A50018",
+      "base_gpr": 29,
+      "source_register": 5,
+      "register_file": "FPR",
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C838",
+      "word": "0xE6000004",
+      "base_gpr": 16,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C83C",
+      "word": "0xE6010008",
+      "base_gpr": 16,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029C844",
+      "word": "0xE6020000",
+      "base_gpr": 16,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CA30",
+      "word": "0x7FB00040",
+      "base_gpr": 29,
+      "source_register": 16,
+      "register_file": "GPR",
+      "signed_offset": 64,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CA34",
+      "word": "0x7FB10030",
+      "base_gpr": 29,
+      "source_register": 17,
+      "register_file": "GPR",
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CA3C",
+      "word": "0xE7B40050",
+      "base_gpr": 29,
+      "source_register": 20,
+      "register_file": "FPR",
+      "signed_offset": 80,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CA44",
+      "word": "0xFFBF0020",
+      "base_gpr": 29,
+      "source_register": 31,
+      "register_file": "GPR",
+      "signed_offset": 32,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029CA6C",
+      "word": "0xE7A20000",
+      "base_gpr": 29,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CA74",
+      "word": "0xE7A40008",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CA7C",
+      "word": "0xE7A00004",
+      "base_gpr": 29,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CAB4",
+      "word": "0xE7A30014",
+      "base_gpr": 29,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CAC4",
+      "word": "0xE7A10018",
+      "base_gpr": 29,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB00",
+      "word": "0xE7A40010",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB24",
+      "word": "0x7FB000C0",
+      "base_gpr": 29,
+      "source_register": 16,
+      "register_file": "GPR",
+      "signed_offset": 192,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CB2C",
+      "word": "0x7FB100B0",
+      "base_gpr": 29,
+      "source_register": 17,
+      "register_file": "GPR",
+      "signed_offset": 176,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CB30",
+      "word": "0x7FB200A0",
+      "base_gpr": 29,
+      "source_register": 18,
+      "register_file": "GPR",
+      "signed_offset": 160,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CB38",
+      "word": "0x7FB30090",
+      "base_gpr": 29,
+      "source_register": 19,
+      "register_file": "GPR",
+      "signed_offset": 144,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029CB44",
+      "word": "0xE7B800F0",
+      "base_gpr": 29,
+      "source_register": 24,
+      "register_file": "FPR",
+      "signed_offset": 240,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB48",
+      "word": "0xE7B700E8",
+      "base_gpr": 29,
+      "source_register": 23,
+      "register_file": "FPR",
+      "signed_offset": 232,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB50",
+      "word": "0xE7B600E0",
+      "base_gpr": 29,
+      "source_register": 22,
+      "register_file": "FPR",
+      "signed_offset": 224,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB58",
+      "word": "0xE7B500D8",
+      "base_gpr": 29,
+      "source_register": 21,
+      "register_file": "FPR",
+      "signed_offset": 216,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB60",
+      "word": "0xE7B400D0",
+      "base_gpr": 29,
+      "source_register": 20,
+      "register_file": "FPR",
+      "signed_offset": 208,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CB64",
+      "word": "0xFFBF0080",
+      "base_gpr": 29,
+      "source_register": 31,
+      "register_file": "GPR",
+      "signed_offset": 128,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029CBC4",
+      "word": "0xE7A00048",
+      "base_gpr": 29,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 72,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CBCC",
+      "word": "0xE7A40044",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 68,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CBE4",
+      "word": "0xE7AC0040",
+      "base_gpr": 29,
+      "source_register": 12,
+      "register_file": "FPR",
+      "signed_offset": 64,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CBF4",
+      "word": "0xE7A10004",
+      "base_gpr": 29,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC00",
+      "word": "0xE7A00000",
+      "base_gpr": 29,
+      "source_register": 0,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC0C",
+      "word": "0xE7A50034",
+      "base_gpr": 29,
+      "source_register": 5,
+      "register_file": "FPR",
+      "signed_offset": 52,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC14",
+      "word": "0xE7A40030",
+      "base_gpr": 29,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 48,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC24",
+      "word": "0xE7AE0054",
+      "base_gpr": 29,
+      "source_register": 14,
+      "register_file": "FPR",
+      "signed_offset": 84,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC30",
+      "word": "0xE7A60008",
+      "base_gpr": 29,
+      "source_register": 6,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC38",
+      "word": "0xE7A80050",
+      "base_gpr": 29,
+      "source_register": 8,
+      "register_file": "FPR",
+      "signed_offset": 80,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC44",
+      "word": "0xE7AF0064",
+      "base_gpr": 29,
+      "source_register": 15,
+      "register_file": "FPR",
+      "signed_offset": 100,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC4C",
+      "word": "0xE7B00058",
+      "base_gpr": 29,
+      "source_register": 16,
+      "register_file": "FPR",
+      "signed_offset": 88,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC54",
+      "word": "0xE7A90060",
+      "base_gpr": 29,
+      "source_register": 9,
+      "register_file": "FPR",
+      "signed_offset": 96,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC5C",
+      "word": "0xE7AB0038",
+      "base_gpr": 29,
+      "source_register": 11,
+      "register_file": "FPR",
+      "signed_offset": 56,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CC64",
+      "word": "0xE7AD0068",
+      "base_gpr": 29,
+      "source_register": 13,
+      "register_file": "FPR",
+      "signed_offset": 104,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCA4",
+      "word": "0xE7A30018",
+      "base_gpr": 29,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCB0",
+      "word": "0xE7B10028",
+      "base_gpr": 29,
+      "source_register": 17,
+      "register_file": "FPR",
+      "signed_offset": 40,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCB8",
+      "word": "0xE7A80014",
+      "base_gpr": 29,
+      "source_register": 8,
+      "register_file": "FPR",
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCC4",
+      "word": "0xE7A90024",
+      "base_gpr": 29,
+      "source_register": 9,
+      "register_file": "FPR",
+      "signed_offset": 36,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCC8",
+      "word": "0xE7AA0010",
+      "base_gpr": 29,
+      "source_register": 10,
+      "register_file": "FPR",
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029CCD0",
+      "word": "0xE7A50020",
+      "base_gpr": 29,
+      "source_register": 5,
+      "register_file": "FPR",
+      "signed_offset": 32,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D0B4",
+      "word": "0xE7A80000",
+      "base_gpr": 29,
+      "source_register": 8,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D0B8",
+      "word": "0xE7A70004",
+      "base_gpr": 29,
+      "source_register": 7,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D0C0",
+      "word": "0xE7A60008",
+      "base_gpr": 29,
+      "source_register": 6,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029D0C4",
+      "word": "0xE4E10000",
+      "base_gpr": 7,
+      "source_register": 1,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E49C",
+      "word": "0xE4840000",
+      "base_gpr": 4,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E4A4",
+      "word": "0xE4830004",
+      "base_gpr": 4,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E4A8",
+      "word": "0xE4820008",
+      "base_gpr": 4,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E500",
+      "word": "0xE484000C",
+      "base_gpr": 4,
+      "source_register": 4,
+      "register_file": "FPR",
+      "signed_offset": 12,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E504",
+      "word": "0xE4420008",
+      "base_gpr": 2,
+      "source_register": 2,
+      "register_file": "FPR",
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029E50C",
+      "word": "0xE4430004",
+      "base_gpr": 2,
+      "source_register": 3,
+      "register_file": "FPR",
+      "signed_offset": 4,
+      "size": 4
+    }
+  ],
+  "complete_actual_calls": [
+    {
+      "instruction": "0x0029C758",
+      "word": "0x0C0A8D4E",
+      "delay_word": "0xE6020000",
+      "link_written_gpr": 31,
+      "target": "0x002A3538"
+    },
+    {
+      "instruction": "0x0029C840",
+      "word": "0x0C0A8D4E",
+      "delay_word": "0xE6020000",
+      "link_written_gpr": 31,
+      "target": "0x002A3538"
+    },
+    {
+      "instruction": "0x0029CA78",
+      "word": "0x0C0A8D4E",
+      "delay_word": "0xE7A00004",
+      "link_written_gpr": 31,
+      "target": "0x002A3538"
+    },
+    {
+      "instruction": "0x0029CB68",
+      "word": "0x0C0A71EC",
+      "delay_word": "0x0260382D",
+      "link_written_gpr": 31,
+      "target": "0x0029C7B0"
+    }
+  ],
+  "complete_actual_returns": [
+    {
+      "instruction": "0x0029C7A4",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0050"
+    },
+    {
+      "instruction": "0x0029C854",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0040"
+    },
+    {
+      "instruction": "0x0029CB18",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0060"
+    },
+    {
+      "instruction": "0x0029CD48",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0100"
+    },
+    {
+      "instruction": "0x0029D0E8",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0010"
+    },
+    {
+      "instruction": "0x0029E508",
+      "word": "0x03E00008",
+      "delay_word": "0xE4430004"
+    },
+    {
+      "instruction": "0x0029E7E4",
+      "word": "0x03E00008",
+      "delay_word": "0x00000000"
+    }
+  ],
+  "binary32_constant_sites": [],
+  "actual_zero_mtc1_sites": [
+    {
+      "instruction": "0x0029CCA8",
+      "word": "0x4480C000",
+      "destination_fpr": 24,
+      "bits": "0x00000000"
+    },
+    {
+      "instruction": "0x0029E728",
+      "word": "0x44801000",
+      "destination_fpr": 2,
+      "bits": "0x00000000"
+    }
+  ],
+  "synthetic_fixture_evidence": {
+    "fixtures": 1123,
+    "executed_original_instructions": 89426,
+    "maximum_instructions": 211,
+    "input_sha256": "46a66aa34353cecae2eaf71c99ea0619123da744d7ab6c79b26863878895938a",
+    "header_sha256_lf": "900c6e5ce135cf361c3e8911ec0fde8c1747628b1547bcfebb124605b72359d1",
+    "header_sha256_on_disk": "6a68dddb8b34ff46089ef330cbac1130ea41210e8c11d1dba03f8a0b9034e0aa",
+    "native_checks": 165110,
+    "strict_guards": 6,
+    "native_production_sources": [
+      "src/game/plane_geometry.c",
+      "src/game/vector_math.c"
+    ],
+    "actual_trace_helpers": [
+      "0x0029C7B0",
+      "0x002A3538"
+    ],
+    "controlled_external_calls": [],
+    "limits": "Complete selected and normalization production C execute in separate translation units. No numerical substitution; unused trig hooks fail on unexpected calls. Scalar SSE binary32 rounding and host SQRT model finite normal/zero domain only. Closed-form axis line/strict triangle/sphere-bounds invariants supplement complete original trace and shifted alias fixtures. No EE exceptional/FCR/subnormal/timing, original stack placement or external whole engine semantics claim."
+  },
+  "wholebody_source_reuse": "Two complete triangle normal bodies share a normal C macro proven by all original captures/cross operations/Y-Z-X stores and genuine normalization call. Different output width and post-helper plane dot remain explicit. Reuse existing MathVec3/4 and Bounds storage types, EE SQRT primitive and published2A3538 source; no helper or original class award."
+}
