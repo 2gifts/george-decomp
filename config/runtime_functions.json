@@ -125,7 +125,17 @@
         "-fno-common",
         "-fno-reorder-blocks"
       ],
-      "evidence": "Identity corroborated by embedded fmodf exception name at0x4550e0, complete control flow of newlib non-IEEE wrapper, isnanf checks, _LIB_VERSION handling, matherr, errno33, and float/double conversion helpers. Unchanged upstream source compiles but is not byte matched. Local constant-pool relocations await independent mapping; no link symbols recorded for verification yet."
+      "evidence": "Identity corroborated by embedded fmodf exception name at 0x4550e0, complete newlib non-IEEE wrapper control flow, isnanf checks, _LIB_VERSION handling, matherr, errno 33, and float/double conversion helpers. Unchanged upstream source and its independently mapped constant pool link without unresolved relocations, but compiled code differs from retail and remains reconstructed.",
+      "link": true,
+      "link_data": {
+        ".rodata": {
+          "address": "0x4550e0",
+          "file_offset": "0x3560e0",
+          "size": 16,
+          "original_sha256": "c57a4dc367876649551604f3eb75eb494c2dc2ae0167f6f328a915ec4bdf5746",
+          "evidence": "Entire compiler .rodata section agrees byte-for-byte with retail fmodf exception name, alignment and double NaN at 0x4550e8; original HI16/LO16 accesses corroborate both addresses."
+        }
+      }
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately."

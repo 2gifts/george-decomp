@@ -21,12 +21,12 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C | 68 functions reviewed; 9 match (344 bytes) |
+| Recovered game C | 98 functions reviewed; 12 match (532 bytes) |
 | Reused upstream C | 2 match (68 bytes: `fabsf`, `atoi`) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C matching total is **412 / 3,083,712 code bytes (0.013361%)**, including
+The C matching total is **600 / 3,083,712 code bytes (0.019457%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C progress.
@@ -41,6 +41,7 @@ python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 .venv\Scripts\python.exe tools/bootstrap_toolchain.py
 .venv\Scripts\python.exe tools/bootstrap_toolchain.py --verify-only
+.venv\Scripts\python.exe tools/bootstrap_legacy_compiler.py
 .venv\Scripts\python.exe tools/probe_disc.py "PATH_TO_YOUR_USA_ISO" --expect-iso-sha256 659d323cdf461c320a1006281db0e9be7622c1ff96b99c09da0275ebc41027d6 --expect-boot-sha256 01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8
 .venv\Scripts\python.exe tools/analyze.py --disassemble
 .venv\Scripts\python.exe tools/build.py
@@ -71,9 +72,11 @@ Tool downloads, flags, and hashes are pinned in
 
 The retail executable is stripped. Its strings identify Papaya, Havok, and
 Deimos/`DScriptMgr`; they do not establish a reusable Lua or RenderWare engine.
-The original compiler version is still unidentified. The open homebrew GCC
-3.2.3 candidate can reproduce some functions, which does not establish that it
-compiled the game.
+The original compiler version is still unidentified. Two pinned candidate GNU
+compiler profiles reproduce individual functions. [Compiler setup and
+provenance](docs/compiler.md) document the public source, host repairs, and
+per-function selection. Exact matches do not establish the game's original
+translation-unit compiler or flags.
 
 [Runtime reuse notes](docs/reuse.md) document the exact upstream source,
 licenses, and independent byte comparisons. [Research notes](docs/research.md)

@@ -54,3 +54,11 @@ three keys equal the independently confirmed CRCs of `x`, `y`, and `z`.
 even when no destination register is requested, and continue after logging a
 type error if the logger returns. These callbacks add 596 reconstructed bytes;
 their exact matching is still pending.
+
+Four script-object routines in `src/game/script_object.c` add 300 recovered
+bytes. They install the object's vtable, create and reference its table lazily,
+invoke adjusted virtual methods, and release the table during cleanup. The
+24-byte constructor matches exactly. Other routines preserve table and vtable
+reloads after calls that can change the object. The cleanup key `0x66A3F26C`
+equals the confirmed CRC of the retained string `_deimosobject`; its assignment
+uses the original tag-6 zero value before releasing the table reference.

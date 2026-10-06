@@ -1,5 +1,6 @@
 """Relocation-aware linking tests contain only synthetic instructions and ELF."""
 
+import hashlib
 import struct
 import subprocess
 import sys
@@ -13,9 +14,10 @@ import link_match  # noqa: E402
 
 
 def synthetic_object(*, target_section=".text.fixture", target_value=0, target_size=8,
-                     extra_symbols=(), extra_sections=(), relocations=(), flags=0x20923001):
+                     extra_symbols=(), extra_sections=(), relocations=(), flags=0x20923001,
+                     code_words=(0x03E00008, 0)):
     """Extra symbols are (name, value, size, info, shndx), starting at index 2."""
-    code = struct.pack("<2I", 0x03E00008, 0)
+    code = struct.pack("<" + "I" * len(code_words), *code_words)
     section_names = ["", target_section, ".strtab", ".symtab", ".rel.text", ".shstrtab"]
     section_names.extend(name for name, _, _ in extra_sections)
     name_data = b"\x00"
@@ -52,12 +54,25 @@ def synthetic_object(*, target_section=".text.fixture", target_value=0, target_s
     return bytes(image)
 
 
+def data_mapping(data=b"\x00\x00\x80\x3F", address=0x348008):
+    return {"address": address, "expected_bytes": data,
+            "expected_sha256": hashlib.sha256(data).hexdigest()}
+
+
+def section_field(image, index, field, value):
+    result = bytearray(image)
+    table = struct.unpack_from("<I", image, 32)[0]
+    struct.pack_into("<I", result, table + 40 * index + 4 * field, value)
+    return bytes(result)
+
+
 class PlanningTests(unittest.TestCase):
-    def inspect(self, image=None, bindings=None, address=0x110000, symbol="fixture"):
+    def inspect(self, image=None, bindings=None, address=0x110000, symbol="fixture", mapped_sections=None):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "fixture.o"
             path.write_bytes(image if image is not None else synthetic_object())
-            return link_match.inspect_function(path, symbol, address, {} if bindings is None else bindings)
+            return link_match.inspect_function(path, symbol, address, {} if bindings is None else bindings,
+                                               mapped_sections=mapped_sections)
 
     def test_dedicated_target_plan(self):
         plan = self.inspect()
@@ -115,6 +130,85 @@ class PlanningTests(unittest.TestCase):
         with self.assertRaisesRegex(link_match.LinkError, "conflicts"):
             self.inspect(image, {"global": 0x210000})
 
+    def mapped_object(self, *, flags=2, sections=None, symbols=None, relocations=None):
+        return synthetic_object(
+            code_words=(0x3C020000, 0x24420000),
+            extra_symbols=symbols if symbols is not None else [(".LC0", 0, 4, 0x01, 6)],
+            extra_sections=sections if sections is not None else [(".rodata", b"\x00\x00\x80\x3F", flags)],
+            relocations=relocations if relocations is not None else [(0, 5, 2), (4, 6, 2)])
+
+    def test_proven_readonly_local_and_section_symbols_are_retained(self):
+        for symbol in ((".LC0", 0, 4, 0x01, 6), ("", 0, 0, 0x03, 6)):
+            plan = self.inspect(self.mapped_object(symbols=[symbol]), mapped_sections={".rodata": data_mapping()})
+            self.assertEqual(plan["symbol_patches"], {})
+            self.assertEqual(plan["mapped_sections"][0]["data"], b"\x00\x00\x80\x3F")
+            self.assertEqual(plan["mapped_sections"][0]["address"], 0x348008)
+
+    def test_complete_readonly_byte_and_hash_proofs_are_required(self):
+        valid = data_mapping()
+        for mapping in ({"address": valid["address"], "expected_sha256": valid["expected_sha256"]},
+                        {**valid, "expected_sha256": "0" * 64}, data_mapping(b"\x01\x00\x80\x3F"),
+                        {**valid, "expected_bytes": bytearray(valid["expected_bytes"])},
+                        {**valid, "unexpected": True}):
+            with self.subTest(mapping=mapping), self.assertRaises(link_match.LinkError):
+                self.inspect(self.mapped_object(), mapped_sections={".rodata": mapping})
+
+    def test_readonly_mapping_flags_alignment_and_address_space_are_strict(self):
+        for flags in (3, 6, 0, 0x402):
+            with self.subTest(flags=flags), self.assertRaisesRegex(link_match.LinkError, "read-only"):
+                self.inspect(self.mapped_object(flags=flags), mapped_sections={".rodata": data_mapping()})
+        for address in (0x348009, 0xFFFFFFFF, True):
+            with self.subTest(address=address), self.assertRaises(link_match.LinkError):
+                self.inspect(self.mapped_object(), mapped_sections={".rodata": data_mapping(address=address)})
+
+    def test_missing_ambiguous_and_unused_readonly_mappings_fail(self):
+        with self.assertRaisesRegex(link_match.LinkError, "Missing or ambiguous"):
+            self.inspect(self.mapped_object(), mapped_sections={".rodata.missing": data_mapping()})
+        sections = [(".rodata", b"\x00\x00\x80\x3F", 2)] * 2
+        with self.assertRaisesRegex(link_match.LinkError, "Missing or ambiguous"):
+            self.inspect(self.mapped_object(sections=sections), mapped_sections={".rodata": data_mapping()})
+        with self.assertRaisesRegex(link_match.LinkError, "Unused"):
+            self.inspect(self.mapped_object(relocations=[]), mapped_sections={".rodata": data_mapping()})
+
+    def test_code_data_and_data_data_overlaps_fail(self):
+        with self.assertRaisesRegex(link_match.LinkError, "overlap"):
+            self.inspect(self.mapped_object(), mapped_sections={".rodata": data_mapping(address=0x110000)})
+        image = self.mapped_object(sections=[(".rodata", b"\x00\x00\x80\x3F", 2),
+                                            (".rodata.other", b"\x00\x00\x80\x3F", 2)])
+        with self.assertRaisesRegex(link_match.LinkError, "overlap"):
+            self.inspect(image, mapped_sections={".rodata": data_mapping(), ".rodata.other": data_mapping()})
+
+    def test_readonly_symbol_bounds_and_conflicting_named_bindings_fail(self):
+        for symbol in ((".LC0", 4, 0, 0x01, 6), (".LC0", 0, 8, 0x01, 6),
+                       (".LC0", 0, 4, 0x02, 6), ("", 1, 0, 0x03, 6)):
+            with self.subTest(symbol=symbol), self.assertRaisesRegex(link_match.LinkError, "bounds/type"):
+                self.inspect(self.mapped_object(symbols=[symbol]), mapped_sections={".rodata": data_mapping()})
+        with self.assertRaisesRegex(link_match.LinkError, "conflicts"):
+            self.inspect(self.mapped_object(), bindings={".LC0": 0x34800C},
+                         mapped_sections={".rodata": data_mapping()})
+
+    def test_relocation_bearing_readonly_data_is_rejected_before_link(self):
+        image = section_field(self.mapped_object(), 4, 7, 6)  # .rel.text now relocates .rodata.
+        with self.assertRaisesRegex(link_match.LinkError, "Relocation-bearing"):
+            self.inspect(image, mapped_sections={".rodata": data_mapping()})
+
+    def test_merge_section_geometry_is_checked(self):
+        for image in (self.mapped_object(flags=0x22), self.mapped_object(flags=0x12),
+                      section_field(self.mapped_object(flags=0x12), 6, 9, 3)):
+            with self.subTest(image=image), self.assertRaises(link_match.LinkError):
+                self.inspect(image, mapped_sections={".rodata": data_mapping()})
+
+    def test_section_base_addends_cannot_escape_proven_readonly_data(self):
+        image = synthetic_object(code_words=(0x3C020000, 0x24420004),
+                                 extra_symbols=[("", 0, 0, 0x03, 6)],
+                                 extra_sections=[(".rodata", b"\x00\x00\x80\x3F", 2)],
+                                 relocations=[(0, 5, 2), (4, 6, 2)])
+        with self.assertRaisesRegex(link_match.LinkError, "outside proven"):
+            self.inspect(image, mapped_sections={".rodata": data_mapping()})
+        with self.assertRaisesRegex(link_match.LinkError, "Unpaired HI16"):
+            self.inspect(self.mapped_object(relocations=[(0, 5, 2)]),
+                         mapped_sections={".rodata": data_mapping()})
+
 
 class RealLinkTests(unittest.TestCase):
     @classmethod
@@ -127,7 +221,7 @@ class RealLinkTests(unittest.TestCase):
         except link_match.LinkError as error:
             raise unittest.SkipTest(str(error))
 
-    def link(self, body, bindings, extra=""):
+    def link(self, body, bindings, extra="", mapped_sections=None, return_result=False):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             source = root / "fixture.s"
@@ -140,11 +234,12 @@ class RealLinkTests(unittest.TestCase):
             process = subprocess.run(command, capture_output=True, text=True)
             self.assertEqual(process.returncode, 0, process.stderr)
             original = object_path.read_bytes()
-            result = link_match.link_function(object_path, "fixture", 0x110000, bindings, root / "linked")
+            result = link_match.link_function(object_path, "fixture", 0x110000, bindings, root / "linked",
+                                              mapped_sections=mapped_sections)
             self.assertEqual(object_path.read_bytes(), original)
             self.assertEqual(result["remaining_relocations"], [])
             self.assertTrue(result["linked_path"].is_file())
-            return result["code"]
+            return result if return_result else result["code"]
 
     def test_absolute_call_and_discarded_internal_callee(self):
         body = "jal callee\nnop\njr $ra\nnop"
@@ -177,6 +272,42 @@ class RealLinkTests(unittest.TestCase):
     def test_unbound_call_fails(self):
         with self.assertRaisesRegex(link_match.LinkError, "Unknown undefined"):
             self.link("jal unknown\nnop\njr $ra\nnop", {})
+
+    def test_fixed_readonly_constant_relocation_and_independent_output(self):
+        extra = '.section .rodata.literal,"a",@progbits\n.align 2\n.LC0:\n.word 0x3f800000\n'
+        result = self.link("lui $v0,%hi(.LC0)\nlw $v0,%lo(.LC0)($v0)\njr $ra\nnop", {}, extra,
+                           mapped_sections={".rodata.literal": data_mapping()}, return_result=True)
+        self.assertEqual(result["code"], struct.pack("<4I", 0x3C020035, 0x8C428008, 0x03E00008, 0))
+        mapping = result["mapped_sections"][0]
+        self.assertEqual((mapping["address"], mapping["size"], mapping["data"]),
+                         (0x348008, 4, b"\x00\x00\x80\x3F"))
+        self.assertEqual(mapping["sha256"], data_mapping()["expected_sha256"])
+
+    def test_readonly_section_symbol_keeps_nonzero_addend(self):
+        data = struct.pack("<2I", 0x3F800000, 0x40000000)
+        extra = '.section .rodata.literal,"a",@progbits\n.align 2\n.word 0x3f800000,0x40000000\n'
+        code = self.link("lui $v0,%hi(.rodata.literal+4)\nlw $v0,%lo(.rodata.literal+4)($v0)\njr $ra\nnop", {}, extra,
+                         mapped_sections={".rodata.literal": data_mapping(data)})
+        self.assertEqual(code, struct.pack("<4I", 0x3C020035, 0x8C42800C, 0x03E00008, 0))
+
+    def test_readonly_merge_string_bytes_must_survive_unchanged(self):
+        data = b"synthetic\0"
+        extra = '.section .rodata.str1.1,"aMS",@progbits,1\n.align 0\n.LC0:\n.asciz "synthetic"\n'
+        result = self.link("lui $v0,%hi(.LC0)\naddiu $v0,$v0,%lo(.LC0)\njr $ra\nnop", {}, extra,
+                           mapped_sections={".rodata.str1.1": data_mapping(data)}, return_result=True)
+        self.assertEqual(result["mapped_sections"][0]["data"], data)
+
+    def test_mapped_readonly_relocations_cannot_be_hidden(self):
+        extra = '.section .rodata.literal,"a",@progbits\n.align 2\n.LC0:\n.word unknown\n'
+        with self.assertRaisesRegex(link_match.LinkError, "Relocation-bearing"):
+            self.link("lui $v0,%hi(.LC0)\naddiu $v0,$v0,%lo(.LC0)\njr $ra\nnop", {}, extra,
+                      mapped_sections={".rodata.literal": data_mapping(bytes(4))})
+
+    def test_readonly_section_addend_cannot_escape_fixed_proof(self):
+        extra = '.section .rodata.literal,"a",@progbits\n.align 2\n.word 0x3f800000\n'
+        with self.assertRaisesRegex(link_match.LinkError, "outside proven"):
+            self.link("lui $v0,%hi(.rodata.literal+4)\nlw $v0,%lo(.rodata.literal+4)($v0)\njr $ra\nnop", {}, extra,
+                      mapped_sections={".rodata.literal": data_mapping()})
 
 
 if __name__ == "__main__":

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Partial observed C++ dispatch layout represented explicitly in C; original class name unknown.",
+    "Only accessed virtual slots modeled; not a complete vtable or class.",
+    "No upstream source copied."
+  ],
+  "functions": [
+    {
+      "name": "func_002D06E8",
+      "address": "0x002D06E8",
+      "file_offset": "0x001D16E8",
+      "size": 24,
+      "source": "src/game/script_object.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "byte_matched_and_reviewed",
+      "original_sha256": "893137482a2646a98eba2bc4a463e800836cf4ee2b5aef52eadad8b0805ffcec",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Initialize NULL local table and vtable pointer +4; return object. Complete compiled and original-address linked bytes and exact function size match retail.",
+      "boundary_evidence": "Start and final return delay slot reviewed; alignment padding excluded."
+    },
+    {
+      "name": "func_002D0700",
+      "address": "0x002D0700",
+      "file_offset": "0x001D1700",
+      "size": 80,
+      "source": "src/game/script_object.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "77006e85929d4457e4ae6eda19c2a2bb397e4fef81c63c5b25ca582eb2fab48b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Install base vtable, release local table, optionally delete object for flags bit0.",
+      "boundary_evidence": "Start and final return delay slot reviewed; alignment padding excluded."
+    },
+    {
+      "name": "func_002D0790",
+      "address": "0x002D0790",
+      "file_offset": "0x001D1790",
+      "size": 112,
+      "source": "src/game/script_object.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fd1000ec90c8f8334d14cd8a3c782cb72dbc67d241a1d5d6c8723f9854c9ad82",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Lazy table creation; virtual parent-table dispatch via signed adjustment at vtable+0x20, create/ref table, virtual initialize via +0x10, return reloaded object table.",
+      "boundary_evidence": "Start and final return delay slot reviewed; alignment padding excluded."
+    },
+    {
+      "name": "func_002D0800",
+      "address": "0x002D0800",
+      "file_offset": "0x001D1800",
+      "size": 84,
+      "source": "src/game/script_object.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "cb3b0fd50623ad1a6835bda95c10cae79a52d2268386d20cf73894831b705b36",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "If local table exists, assign tag6 zero at key0x66A3F26C before dropping its reference and clearing object pointer.",
+      "boundary_evidence": "Start and final return delay slot reviewed; alignment padding excluded."
+    }
+  ]
+}

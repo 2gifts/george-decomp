@@ -109,6 +109,61 @@ def validate_target_function(function, sections):
     raise ValueError(f"Function address/offset is not inside an original code section: {function['name']}")
 
 
+def mapped_data(function, original, sections):
+    mappings = {}
+    for name, proof in function.get("link_data", {}).items():
+        offset, size, address = (number(proof[key]) for key in ("file_offset", "size", "address"))
+        if (offset < 0 or size <= 0 or offset + size > len(original)
+                or not any(section["offset"] <= offset
+                           and offset + size <= section["offset"] + section["size"]
+                           and address == section["address"] + offset - section["offset"]
+                           for section in sections)):
+            raise ValueError(f"Mapped data is not inside original read-only data: {name}")
+        data = original[offset:offset + size]
+        if hashlib.sha256(data).hexdigest() != proof["original_sha256"]:
+            raise ValueError(f"Original mapped-data fingerprint mismatch: {name}")
+        mappings[name] = {"address": address, "expected_bytes": data,
+                          "expected_sha256": proof["original_sha256"]}
+    return mappings
+
+
+def compiler_configuration(args):
+    path = ROOT / "config/compiler_profiles.json"
+    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {
+        "default_profile": "gcc323", "profiles": {"gcc323": {
+            "compiler": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-gcc.exe",
+            "path_entries": ["tools/vendor/ps2dev-20181019/MinGW/bin"],
+            "command_prefix": [], "include_dirs": []}}}
+    default = data["default_profile"]
+    if args.compiler is not None:
+        data["profiles"][default] = {**data["profiles"][default], "compiler": str(args.compiler.resolve())}
+        data["profiles"][default].pop("compiler_sha256", None)
+    if args.dll_path is not None:
+        data["profiles"][default]["path_entries"] = [str(args.dll_path.resolve())]
+    return data
+
+
+def prepare_compiler(profile):
+    compiler = ROOT / profile["compiler"]
+    digest = hashlib.sha256(compiler.read_bytes()).hexdigest()
+    if profile.get("compiler_sha256") and digest != profile["compiler_sha256"]:
+        raise ValueError(f"Compiler profile fingerprint mismatch: {profile['compiler']}")
+    dependencies = list(profile.get("binaries", []))
+    if profile.get("assembler_provenance"):
+        dependencies.append(profile["assembler_provenance"])
+    for dependency in dependencies:
+        path = ROOT / dependency["path"]
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != dependency["sha256"]:
+            raise ValueError(f"Compiler dependency fingerprint mismatch: {dependency['path']}")
+    env = dict(os.environ)
+    paths = [str(ROOT / path) for path in profile.get("path_entries", [])]
+    paths.append(str(compiler.parent))
+    env["PATH"] = os.pathsep.join(paths + [env.get("PATH", "")])
+    version = subprocess.run([str(compiler), "--version"], env=env, cwd=ROOT,
+                             capture_output=True, text=True, check=True).stdout.splitlines()[0]
+    return {"compiler": compiler, "sha256": digest, "version": version, "env": env, "profile": profile}
+
+
 def publish_readme_progress(progress):
     path = ROOT / "README.md"
     if not path.exists():
@@ -144,8 +199,8 @@ and original data retained in the hybrid build do **not** count as C progress.
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--compiler", type=Path, default=ROOT / "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-gcc.exe")
-    parser.add_argument("--dll-path", type=Path, default=ROOT / "tools/vendor/ps2dev-20181019/MinGW/bin")
+    parser.add_argument("--compiler", type=Path, help="Override the default compiler profile only")
+    parser.add_argument("--dll-path", type=Path, help="Override the default profile DLL directory only")
     parser.add_argument("--publish-report", action="store_true", help="Update the tracked reports/progress.json")
     args = parser.parse_args()
     spec, original = validated_elf(ROOT / "orig/SLUS_216.68")
@@ -156,12 +211,14 @@ def main():
                      "address": elf.get_section_by_name(name)["sh_addr"],
                      "size": elf.get_section_by_name(name)["sh_size"]}
                     for name in (".text", ".rentext", ".vutext")]
+        readonly_sections = [{"offset": section["sh_offset"], "address": section["sh_addr"],
+                              "size": section["sh_size"]} for section in elf.iter_sections()
+                             if section["sh_type"] == "SHT_PROGBITS" and section["sh_flags"] & 2
+                             and not section["sh_flags"] & 5]
     for function in functions:
         validate_target_function(function, sections)
-    env = dict(os.environ)
-    env["PATH"] = str(args.dll_path) + os.pathsep + str(args.compiler.parent) + os.pathsep + env.get("PATH", "")
-    version = subprocess.run([str(args.compiler), "--version"], env=env, cwd=ROOT,
-                             capture_output=True, text=True, check=True).stdout.splitlines()[0]
+    configuration = compiler_configuration(args)
+    compiler_profiles = {}
     compiled = {}
     compiled_paths = {}
     results = []
@@ -169,16 +226,28 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     for function in functions:
         source = function["source"]
-        use_linker = bool(function.get("link", False) or function.get("link_symbols"))
+        profile_name = function.get("compiler_profile", configuration["default_profile"])
+        if profile_name not in configuration["profiles"]:
+            raise ValueError(f"Unknown compiler profile: {profile_name}")
+        if profile_name not in compiler_profiles:
+            compiler_profiles[profile_name] = prepare_compiler(configuration["profiles"][profile_name])
+        setup = compiler_profiles[profile_name]
+        profile = setup["profile"]
+        use_linker = bool(function.get("link", False) or function.get("link_symbols") or function.get("link_data"))
         chosen_flags = list(function.get("compile_flags", DEFAULT_FLAGS))
         if use_linker and "-ffunction-sections" not in chosen_flags:
             chosen_flags.append("-ffunction-sections")
         flags = tuple(chosen_flags)
-        key = (source, flags)
+        key = (profile_name, source, flags)
         if key not in compiled:
             destination = output_dir / f"{len(compiled):03d}_{Path(source).stem}.o"
-            command = [str(args.compiler), *flags, "-I", str(ROOT / "include"), "-c", str(ROOT / source), "-o", str(destination)]
-            process = subprocess.run(command, env=env, cwd=ROOT, capture_output=True, text=True)
+            command = [str(setup["compiler"]), *profile.get("command_prefix", []), *flags, "-I", str(ROOT / "include")]
+            for path in profile.get("include_dirs", []):
+                command.extend(["-I", str(ROOT / path)])
+            if profile.get("source_parent_include", False):
+                command.extend(["-I", str((ROOT / source).parent)])
+            command.extend(["-c", str(ROOT / source), "-o", str(destination)])
+            process = subprocess.run(command, env=setup["env"], cwd=ROOT, capture_output=True, text=True)
             if process.returncode:
                 raise RuntimeError(f"Compilation failed for {source}:\n{process.stdout}{process.stderr}")
             compiled[key] = object_functions(destination)
@@ -193,10 +262,20 @@ def main():
         symbol = function.get("compiled_symbol", function["name"])
         actual, relocations = compiled[key][symbol]
         linked_path = None
+        mapping_report = []
         if use_linker:
             from link_match import link_function
+            mappings = mapped_data(function, original, readonly_sections)
             linked = link_function(ROOT / compiled_paths[key], symbol, number(function["address"]),
-                                   symbol_bindings(function), ROOT / "build/linked" / function["name"])
+                                   symbol_bindings(function), ROOT / "build/linked" / function["name"],
+                                   mapped_sections=mappings)
+            for mapped in linked["mapped_sections"]:
+                expected_mapping = mappings[mapped["name"]]
+                if (mapped["data"] != expected_mapping["expected_bytes"]
+                        or mapped["address"] != expected_mapping["address"]
+                        or mapped["sha256"] != expected_mapping["expected_sha256"]):
+                    raise ValueError(f"Linked mapped data changed: {mapped['name']}")
+                mapping_report.append({k: mapped[k] for k in ("name", "address", "size", "sha256")})
             actual, relocations = linked["code"], linked["remaining_relocations"]
             linked_path = linked["linked_path"].relative_to(ROOT).as_posix()
         comparison = compare_function(expected, actual, relocations)
@@ -208,6 +287,8 @@ def main():
                         "language": "assembly" if Path(source).suffix.lower() in (".s", ".asm") else "C",
                         "object": compiled_paths[key], "compiled_symbol": symbol,
                         "linked_elf": linked_path,
+                        "compiler_profile": profile_name, "compiler": setup["version"],
+                        "compiler_sha256": setup["sha256"], "mapped_data": mapping_report,
                         "compile_flags": list(flags), **comparison})
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)
@@ -216,9 +297,12 @@ def main():
     matched_c = [r for r in results if r["identical"] and r["language"] == "C"]
     reused_assembly = [r for r in results if r["identical"] and r["language"] == "assembly"]
     matched_bytes = sum(r["expected_size"] for r in matched_c)
+    default_setup = compiler_profiles.get(configuration["default_profile"], next(iter(compiler_profiles.values())))
     progress = {"schema_version": 1, "revision": spec["serial"], "original_sha256": spec["executable_sha256"],
-                "compiler": version, "compiler_identity": "candidate; original compiler unidentified",
-                "compiler_sha256": hashlib.sha256(args.compiler.read_bytes()).hexdigest(),
+                "compiler": default_setup["version"], "compiler_identity": "candidate profiles; original compiler(s) unidentified",
+                "compiler_sha256": default_setup["sha256"],
+                "compiler_profiles": {name: {"version": setup["version"], "sha256": setup["sha256"]}
+                                      for name, setup in compiler_profiles.items()},
                 "method": "Exact function code bytes and size after explicit symbol-address linking where needed; no unresolved relocations. Padding excluded.",
                 "full_game_build": False, "code_section_bytes": code_sizes, "total_code_bytes": total,
                 "reconstructed_c_functions": sum(r["language"] == "C" for r in results),

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "default_profile": "gcc323",
+  "original_compiler_status": "unidentified",
+  "profiles": {
+    "gcc323": {
+      "compiler": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-gcc.exe",
+      "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+      "version": "3.2.3",
+      "path_entries": [
+        "tools/vendor/ps2dev-20181019/MinGW/bin",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin"
+      ],
+      "command_prefix": [],
+      "include_dirs": [],
+      "source_provenance": {
+        "manifest": "tools/toolchain_manifest.json",
+        "recipe": "tools/bootstrap_toolchain.py"
+      }
+    },
+    "gcc29": {
+      "compiler": "tools/vendor/gcc29-local/bin/ee-gcc.exe",
+      "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+      "version": "2.9-ee-991111",
+      "path_entries": [
+        "tools/vendor/ps2dev-20181019/MinGW/bin",
+        "tools/vendor/gcc29-local/bin"
+      ],
+      "command_prefix": [
+        "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+        "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+        "-mgas",
+        "-mno-mips-tfile"
+      ],
+      "include_dirs": [
+        "tools/vendor/gcc29-local/include",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include"
+      ],
+      "source_parent_include": true,
+      "source_provenance": {
+        "repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+        "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+        "host_patch": "tools/patches/gcc29-windows-host.patch",
+        "host_patch_sha256": "7cd986fdee749fd6eec1438b587fb9021e9cc5b5068029191342e390c2100ff3",
+        "recipe": "tools/bootstrap_legacy_compiler.py",
+        "backend_modified": false,
+        "licenses": [
+          "GPL-2.0-or-later",
+          "LGPL-2.0-or-later"
+        ]
+      },
+      "binaries": [
+        {
+          "path": "tools/vendor/gcc29-local/bin/ee-gcc.exe",
+          "sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/cc1.exe",
+          "sha256": "4ce3ca61b9a666216e20f0d7537a65bf9067a4f455139004ae5331d7e69ffbb9"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/cc1plus.exe",
+          "sha256": "ab6ac4d2b732f623cdd9994afc88dadcecbb8c02d08539ca6a6219e396e1f3e0"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/cpp.exe",
+          "sha256": "11a563fa14e685dbc4633063a950e677aa0b4247de1b69d758f2cb9e1dd7ac52"
+        }
+      ],
+      "archive": {
+        "url": "https://github.com/2gifts/george-decomp/releases/download/gcc29-windows-v1/gcc29-windows.zip",
+        "sha256": "2f3189e8d651a145ff5a74fdb30f0ea7e9258aa8ef22700eae160b916c20df84",
+        "source_url": "https://github.com/2gifts/george-decomp/releases/download/gcc29-windows-v1/gcc29-corresponding-source.zip",
+        "source_sha256": "f2e97bdb9940cd618b2dc4db6da58d538156434adb7fc59b79f066e4344a006b",
+        "status": "published_reviewed_gnu_release",
+        "binary_file": "gcc29-windows.zip",
+        "source_file": "gcc29-corresponding-source.zip"
+      },
+      "assembler_provenance": {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/as.exe",
+        "sha256": "d666aced8e6b3f7ccf09652d64fa8d988d3c8c10ce21c4e66c5bc1e6db2f3c0b",
+        "manifest": "tools/toolchain_manifest.json",
+        "redistributed_in_compiler_archive": false
+      }
+    }
+  }
+}

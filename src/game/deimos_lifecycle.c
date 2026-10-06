@@ -1,4 +1,5 @@
 #include "george/deimos.h"
+#include "george/string_algorithms.h"
 
 extern GeorgeDeimosPoolNode D_00474F50[];
 extern s16 D_0047EF50[];
@@ -14,7 +15,6 @@ extern void func_002AF100(void *pointer);
 extern void func_002AF120(void *pointer);
 extern void *func_002AD700(void *allocator, u32 size, s32 flag);
 extern void func_002AD748(void *allocator, void *pointer);
-extern u32 func_00295050(const char *text);
 extern char *func_00393B74(char *destination, const char *source);
 extern void *func_003934F8(void *destination, const void *source, u32 size);
 
@@ -103,7 +103,7 @@ GeorgeDeimosPoolNode *func_002CD630(const char *text)
     GeorgeDeimosPoolNode *node = pool_take();
     char *buffer;
     node->type = 0;
-    buffer = func_002AEF08(func_00295050(text) + 1);
+    buffer = func_002AEF08(func_00295050((const signed char *)text) + 1);
     node->payload = (u32)buffer;
     func_00393B74(buffer, text);
     return node;

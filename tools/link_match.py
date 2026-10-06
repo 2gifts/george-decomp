@@ -1,9 +1,9 @@
 """Resolve one dedicated function section at a proven retail address with GNU ld.
 
-This links code only. Explicit bindings refer to existing retail functions or
-globals; compiler-local constant pools are rejected until their bytes and
-addresses have a separate mapping. No instruction or relocation bytes are
-masked, and unresolved references are errors.
+Explicit bindings refer to existing retail functions or globals. Optional local
+read-only mappings require exact expected bytes, their SHA-256, and fixed retail
+addresses; the caller separately proves those against the original executable.
+No instruction or relocation bytes are masked, and unresolved references fail.
 """
 
 import hashlib
@@ -24,6 +24,9 @@ SYMBOL = re.compile(r"[A-Za-z_.$][A-Za-z0-9_.$]*\Z")
 RELOCATIONS = {0, 2, 4, 5, 6, 7, 10, 12}  # NONE, 32, 26, HI16, LO16, GPREL16, PC16, GPREL32.
 GP_SYMBOLS = {"_gp", "__gnu_local_gp"}
 ENTRY_SYMBOL = "__george_link_entry"
+SECTION = re.compile(r"\.[A-Za-z0-9_.$-]+\Z")
+SHA256 = re.compile(r"[0-9a-f]{64}\Z")
+READONLY_FLAGS = 2 | 0x10 | 0x20 | 0x10000000  # ALLOC, MERGE, STRINGS, MIPS_GPREL.
 
 
 class LinkError(ValueError):
@@ -69,7 +72,89 @@ def _format(elf, expected_type):
         raise LinkError(f"Unsupported R5900/EABI ELF flags: 0x{flags:08X}")
 
 
-def inspect_function(object_path, symbol, address, bindings):
+def _mapped_sections(values, elf, code_address, code_size):
+    if values is None:
+        values = {}
+    if not isinstance(values, dict):
+        raise LinkError("Mapped sections must be a dictionary keyed by exact input section name")
+    result = {}
+    ranges = [(code_address, code_address + code_size, "selected code section")]
+    for name, mapping in values.items():
+        if not isinstance(name, str) or not SECTION.fullmatch(name):
+            raise LinkError(f"Unsupported mapped section name: {name!r}")
+        if not isinstance(mapping, dict) or set(mapping) != {"address", "expected_bytes", "expected_sha256"}:
+            raise LinkError(f"Mapped section {name} requires address, expected_bytes and expected_sha256 only")
+        address = _address(mapping["address"], f"Mapped section {name} address")
+        expected, digest = mapping["expected_bytes"], mapping["expected_sha256"]
+        if (type(expected) is not bytes or not expected or not isinstance(digest, str)
+                or not SHA256.fullmatch(digest) or hashlib.sha256(expected).hexdigest() != digest):
+            raise LinkError(f"Invalid complete byte/hash proof for mapped section: {name}")
+        matches = [(index, section) for index, section in enumerate(elf.iter_sections()) if section.name == name]
+        if len(matches) != 1:
+            raise LinkError(f"Missing or ambiguous mapped input section: {name}")
+        index, section = matches[0]
+        flags, alignment = section["sh_flags"], section["sh_addralign"]
+        if (section["sh_type"] != "SHT_PROGBITS" or not flags & 2 or flags & ~READONLY_FLAGS
+                or section["sh_addr"] != 0):
+            raise LinkError(f"Mapped section must be supported allocated read-only data: {name}")
+        if alignment < 1 or alignment & (alignment - 1) or address % alignment:
+            raise LinkError(f"Mapped section address conflicts with alignment: {name}")
+        if flags & 0x20 and not flags & 0x10:
+            raise LinkError(f"String section lacks merge flag: {name}")
+        if flags & 0x10 and (not section["sh_entsize"] or section["sh_size"] % section["sh_entsize"]):
+            raise LinkError(f"Unsupported merge entry geometry: {name}")
+        data = section.data()
+        if data != expected or section["sh_size"] != len(expected):
+            raise LinkError(f"Mapped section bytes differ from complete original proof: {name}")
+        if address + len(data) > 0x100000000:
+            raise LinkError(f"Mapped section exceeds 32-bit address space: {name}")
+        for relocation_section in elf.iter_sections():
+            if isinstance(relocation_section, RelocationSection) and relocation_section["sh_info"] == index:
+                if relocation_section.num_relocations():
+                    raise LinkError(f"Relocation-bearing mapped data is unsupported: {name}")
+        ranges.append((address, address + len(data), name))
+        result[index] = {"name": name, "address": address, "size": len(data), "data": data,
+                         "sha256": digest, "output_section": f".george_rodata_{len(result)}"}
+    for previous, current in zip(sorted(ranges), sorted(ranges)[1:]):
+        if previous[1] > current[0]:
+            raise LinkError(f"Mapped section address overlap: {previous[2]} and {current[2]}")
+    return result
+
+
+def _mapped_addends(relocations, symbols, mapped, code):
+    """Require every local data relocation's full REL addend inside its proof."""
+    pending = {}
+
+    def check(index, addend):
+        item = symbols[index]
+        mapping = mapped[item["st_shndx"]]
+        relative = item["st_value"] + addend
+        if not 0 <= relative < mapping["size"]:
+            raise LinkError(f"Local relocation points outside proven mapped data: {mapping['name']}")
+
+    for relocation in relocations:
+        index, kind = relocation["symbol_index"], relocation["type"]
+        if not kind or symbols[index]["st_shndx"] not in mapped:
+            continue
+        word = struct.unpack_from("<I", code, relocation["offset"])[0]
+        low = (word & 0xFFFF) - (0x10000 if word & 0x8000 else 0)
+        if kind == 5:  # HI16 entries may share one matching LO16.
+            pending.setdefault(index, []).append((word & 0xFFFF) << 16)
+        elif kind == 6:
+            for upper in pending.pop(index, [0]):
+                value = (upper + low) & 0xFFFFFFFF
+                check(index, value - (0x100000000 if value & 0x80000000 else 0))
+        elif kind == 7:  # GPREL16; supported object-local GP must be zero.
+            check(index, low)
+        elif kind in (2, 12):  # 32 and GPREL32.
+            check(index, word - (0x100000000 if word & 0x80000000 else 0))
+        else:
+            raise LinkError("Read-only data referenced by unsupported control-flow relocation")
+    if pending:
+        raise LinkError("Unpaired HI16 relocation to mapped read-only data")
+
+
+def inspect_function(object_path, symbol, address, bindings, mapped_sections=None):
     """Validate a target and plan symbol-only normalization, without invoking ld.
 
     Defined functions in other dedicated sections are changed to SHN_ABS in a
@@ -116,6 +201,10 @@ def inspect_function(object_path, symbol, address, bindings):
         alignment = section["sh_addralign"]
         if alignment < 4 or alignment & (alignment - 1) or address % alignment:
             raise LinkError("Target address conflicts with function-section alignment")
+        if address + section["sh_size"] > 0x100000000:
+            raise LinkError("Selected code section exceeds 32-bit address space")
+        mapped = _mapped_sections(mapped_sections, elf, address, section["sh_size"])
+        used_mappings = set()
         if any(index != target_index and item["st_info"]["type"] == "STT_FUNC"
                and item["st_shndx"] == section_index for index, item in enumerate(symbols)):
             raise LinkError("Multiple function symbols share the selected section")
@@ -159,6 +248,25 @@ def inspect_function(object_path, symbol, address, bindings):
             if not isinstance(location, int) or not 0 < location < elf.num_sections():
                 raise LinkError(f"Unsupported symbol definition: {name!r}")
             definition = elf.get_section(location)
+            if location in mapped:
+                mapping = mapped[location]
+                if name:
+                    _symbol(name)
+                value = item["st_value"]
+                if (item["st_info"]["type"] not in ("STT_SECTION", "STT_OBJECT", "STT_NOTYPE")
+                        or value < 0 or value >= mapping["size"]
+                        or value + item["st_size"] > mapping["size"]
+                        or (item["st_info"]["type"] == "STT_SECTION" and value != 0)):
+                    raise LinkError(f"Invalid symbol bounds/type in mapped read-only section: {name!r}")
+                mapped_address = mapping["address"] + value
+                if name in bindings and bindings[name] != mapped_address:
+                    raise LinkError(f"Binding {name} conflicts with fixed mapped section address")
+                used_mappings.add(location)
+                if name:
+                    resolved[name] = mapped_address
+                # Retain this definition and section. GNU ld resolves relocation
+                # addends against the fixed mapped section without byte patching.
+                return
             key = name
             if item["st_info"]["type"] == "STT_SECTION":
                 if not definition.name.startswith(".text."):
@@ -194,11 +302,26 @@ def inspect_function(object_path, symbol, address, bindings):
                     raise LinkError("Relocation lies outside the selected function or has an invalid symbol")
                 if kind:
                     bind(index)
-                relocations.append({"offset": offset, "type": kind, "symbol": symbols[index].name})
+                relocations.append({"offset": offset, "type": kind, "symbol": symbols[index].name,
+                                    "symbol_index": index})
+        if any(item["type"] in (7, 12) and symbols[item["symbol_index"]]["st_shndx"] in mapped
+               for item in relocations):
+            if elf.get_section_by_name(".MIPS.options") is not None:
+                raise LinkError("Mapped GP-relative data with .MIPS.options is unsupported")
+            for info in elf.iter_sections():
+                if info["sh_type"] == "SHT_MIPS_REGINFO":
+                    raw = info.data()
+                    if len(raw) != 24 or struct.unpack_from("<I", raw, 20)[0] != 0:
+                        raise LinkError("Mapped GP-relative data requires a zero object-local GP")
+        _mapped_addends(relocations, symbols, mapped, section.data())
+        unused = set(mapped) - used_mappings
+        if unused:
+            raise LinkError("Unused mapped sections: " + ", ".join(mapped[index]["name"] for index in sorted(unused)))
         return {"symbol": symbol, "address": address, "size": size, "section": section.name,
                 "object_sha256": object_hash,
                 "symbol_table_offset": symtab["sh_offset"], "symbol_patches": patches,
-                "assignments": assignments, "resolved_bindings": resolved, "input_relocations": relocations}
+                "assignments": assignments, "resolved_bindings": resolved, "input_relocations": relocations,
+                "mapped_sections": list(mapped.values())}
 
 
 def _linker(binutils):
@@ -215,16 +338,21 @@ def _linker(binutils):
     return linker.resolve()
 
 
-def link_function(object_path, symbol, address, bindings, output_dir, binutils=DEFAULT_BINUTILS):
+def link_function(object_path, symbol, address, bindings, output_dir, binutils=DEFAULT_BINUTILS,
+                  mapped_sections=None):
     """Return exact linked bytes and audit artifacts, or raise LinkError.
 
     The return dict contains code, remaining_relocations, linked_path,
     script_path, object_path (normalized private copy), address, size,
     resolved_bindings and input_relocations. No expected/original bytes are
-    needed by this linker; the caller compares the complete returned code.
+    needed for code; the caller compares the complete returned code. Optional
+    mapped_sections requires {section_name: {address, expected_bytes,
+    expected_sha256}}; exact input data is checked before linking. Returned
+    mapped_sections includes actual linked data, address, size and SHA-256 for
+    the caller's independent comparison against the original read-only data.
     """
     object_path = Path(object_path).resolve()
-    plan = inspect_function(object_path, symbol, address, bindings)
+    plan = inspect_function(object_path, symbol, address, bindings, mapped_sections)
     linker = _linker(binutils)
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -243,8 +371,10 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     script = work / "function.ld"
     lines = [f"ENTRY({ENTRY_SYMBOL})", f"{ENTRY_SYMBOL} = 0x{address:08X};", f"_gp = 0x{GP:08X};"]
     lines.extend(f"{name} = 0x{value:08X};" for name, value in sorted(plan["assignments"].items()) if name != "_gp")
-    lines.extend(["SECTIONS {", f'  .text 0x{address:08X} : {{ KEEP(*("{plan["section"]}")) }}',
-                  "  /DISCARD/ : { *(*) }", "}"])
+    lines.extend(["SECTIONS {", f'  .text 0x{address:08X} : {{ KEEP(*("{plan["section"]}")) }}'])
+    for mapping in plan["mapped_sections"]:
+        lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
+    lines.extend(["  /DISCARD/ : { *(*) }", "}"])
     script.write_text("\n".join(lines) + "\n", encoding="ascii")
     linked = work / "function.elf"
     command = [str(linker), "-EL", "-G0", "--fatal-warnings", "--no-undefined", "--check-sections",
@@ -252,7 +382,7 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     process = subprocess.run(command, capture_output=True, text=True)
     if process.returncode:
         raise LinkError("GNU PS2 link failed:\n" + (process.stderr + process.stdout)[-6000:])
-    remaining = []
+    remaining, linked_mappings = [], []
     with linked.open("rb") as stream:
         elf = ELFFile(stream)
         _format(elf, "ET_EXEC")
@@ -267,6 +397,17 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
             raise LinkError("Linked code does not occupy the requested original address")
         if any(section["sh_flags"] & 4 and section.name != ".text" for section in elf.iter_sections()):
             raise LinkError("Unexpected additional executable output section")
+        for mapping in plan["mapped_sections"]:
+            section = elf.get_section_by_name(mapping["output_section"])
+            if (section is None or section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] & ~READONLY_FLAGS
+                    or not section["sh_flags"] & 2 or section["sh_addr"] != mapping["address"]
+                    or section["sh_size"] != mapping["size"] or section.data() != mapping["data"]):
+                raise LinkError(f"Linked mapped section differs from fixed original proof: {mapping['name']}")
+            actual = section.data()
+            linked_mappings.append({**mapping, "data": actual, "sha256": hashlib.sha256(actual).hexdigest()})
+        expected_allocated = {".text", *(mapping["output_section"] for mapping in plan["mapped_sections"])}
+        if any(section["sh_flags"] & 2 and section.name not in expected_allocated for section in elf.iter_sections()):
+            raise LinkError("Unexpected allocated output section")
         for section in elf.iter_sections():
             if isinstance(section, RelocationSection):
                 remaining.extend({"section": section.name, "offset": entry["r_offset"], "type": entry["r_info_type"]}
@@ -276,4 +417,5 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
         code = text.data()[:plan["size"]]
     return {"code": code, "remaining_relocations": remaining, "linked_path": linked, "script_path": script,
             "object_path": normalized, "address": address, "size": plan["size"],
-            "resolved_bindings": plan["resolved_bindings"], "input_relocations": plan["input_relocations"]}
+            "resolved_bindings": plan["resolved_bindings"], "input_relocations": plan["input_relocations"],
+            "mapped_sections": linked_mappings}

@@ -29,7 +29,7 @@ extern char *func_00393B74(char *destination, const char *source);
 extern char *func_003984D8(char *text);
 extern char *func_00398628(const char *text, const char *search);
 extern void func_00396788(void *base, u32 count, u32 width, GeorgeStartupCompare compare);
-extern GeorgeStartupVector2234 *func_002CDF90(void);
+extern void *func_002CDF90(void);
 extern void func_002CC938(const char *message);
 
 /* 0x00100C30: upper-bound search over 4-byte entries with an indirect comparator. */

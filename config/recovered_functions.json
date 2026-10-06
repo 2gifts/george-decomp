@@ -309,23 +309,35 @@
       "size": 60,
       "source": "src/game/leaf.c",
       "source_name": "func_0011C120",
-      "status": "reconstructed",
+      "status": "matched",
       "reviewed": true,
       "review_status": "reconstructed_from_disassembly",
       "original_sha256": "e6a227165fab41f4e205fabd620bb57e292f061e4af94d7dc0f9f0f7809b3337",
       "evidence": "Sets word+0x2C=1 and +0x30=0; compares current float+0x34 to zero; uses float+0x50 for zero case, otherwise +0x50-current.",
       "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
       "boundary_confidence": "reviewed_provisional",
-      "compiled_size": 56,
-      "compiled_sha256": "4b723764510d3223ce731942bd4671cf03ae2b29fbe29c4bfb5193777987c9dd",
+      "compiled_size": 60,
+      "compiled_sha256": "e6a227165fab41f4e205fabd620bb57e292f061e4af94d7dc0f9f0f7809b3337",
       "compile_flags": [
         "-O2",
         "-G0",
         "-mfp64",
         "-fno-builtin",
-        "-fno-strict-aliasing",
-        "-fno-reorder-blocks"
-      ]
+        "-fno-strict-aliasing"
+      ],
+      "compiler_profile": "gcc29",
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing"
+        ],
+        "comparison": "Complete function code bytes and size match the original; no masking, unresolved relocations, or padding counted.",
+        "profile_note": "Candidate GNU compiler profile; original compiler identity remains unproved."
+      }
     },
     {
       "name": "func_0011C160",

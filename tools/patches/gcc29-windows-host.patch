@@ -1,0 +1,92 @@
+diff --git a/ee/bison/files.c b/ee/bison/files.c
+index 825afbf8..61060458 100644
+--- a/ee/bison/files.c
++++ b/ee/bison/files.c
+@@ -122,7 +122,12 @@ openfiles()
+ #if defined (VMS) & !defined (__VMS_POSIX)
+   char *tmp_base = "sys$scratch:b_";
+ #else
+-  char *tmp_base = "/tmp/b.";
++  char *tmp_base =
++#ifdef _WIN32
++    "./b.";
++#else
++    "/tmp/b.";
++#endif
+ #endif
+   int tmp_len;
+ 
+diff --git a/ee/gcc/prefix.c b/ee/gcc/prefix.c
+index e5ca9239..a3d9b8db 100644
+--- a/ee/gcc/prefix.c
++++ b/ee/gcc/prefix.c
+@@ -305,11 +305,13 @@ update_path (path, key)
+     {
+       int i;
+       int len = strlen (path);
++      char *native_path;
+ 
+-      path = save_string (path, len);
++      native_path = save_string (path, len);
+       for (i = 0; i < len; i++)
+-	if (path[i] == '/')
+-	  path[i] = DIR_SEPARATOR;
++	if (native_path[i] == '/')
++	  native_path[i] = DIR_SEPARATOR;
++      path = native_path;
+     }
+ #endif
+ 
+diff --git a/ee/libiberty/pexecute.c b/ee/libiberty/pexecute.c
+index 0ead5669..f39ee23e 100644
+--- a/ee/libiberty/pexecute.c
++++ b/ee/libiberty/pexecute.c
+@@ -254,27 +254,36 @@ fix_argv (argvec)
+ 
+   for (i = 1; argvec[i] != 0; i++)
+     {
+-      int len, j;
++      int len, j, k;
+       char *temp, *newtemp;
+ 
+       temp = argvec[i];
+       len = strlen (temp);
+-      for (j = 0; j < len; j++)
++      newtemp = xmalloc (2 * len + 3);
++      k = 0;
++      newtemp[k++] = '"';
++      for (j = 0; j < len; )
+         {
+-          if (temp[j] == '"')
++          int slashes = 0;
++          while (j < len && temp[j] == '\\')
+             {
+-              newtemp = xmalloc (len + 2);
+-              strncpy (newtemp, temp, j);
+-              newtemp [j] = '\\';
+-              strncpy (&newtemp [j+1], &temp [j], len-j);
+-              newtemp [len+1] = 0;
+-              temp = newtemp;
+-              len++;
++              slashes++;
+               j++;
+             }
++          if (j == len || temp[j] == '"')
++            slashes *= 2;
++          while (slashes-- > 0)
++            newtemp[k++] = '\\';
++          if (j < len)
++            {
++              if (temp[j] == '"')
++                newtemp[k++] = '\\';
++              newtemp[k++] = temp[j++];
++            }
+         }
+-
+-        argvec[i] = temp;
++      newtemp[k++] = '"';
++      newtemp[k] = 0;
++      argvec[i] = newtemp;
+       }
+ 
+   return (const char * const *) argvec;

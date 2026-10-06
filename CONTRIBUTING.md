@@ -31,10 +31,27 @@ linker to resolve every supported relocation at the original function address.
 It rejects unknown references and compiler-local constant pools without a
 proven data mapping. Do not ignore relocation words to award a source match.
 
+For a compiler-local read-only section, a `link_data` entry must prove its
+original address, file offset, full size, and SHA-256. The input section and
+linked output must both equal those original bytes. Writable sections,
+relocation-bearing data, and pointers outside the proven range are rejected.
+These data bytes do not count as recovered executable code.
+
+Select a `compiler_profile` only with an explicit, supported flag recipe and
+full-byte evidence. The verifier checks the compiler and child executable
+fingerprints before compilation. Candidate versions and per-function matches
+do not prove the game's original translation-unit flags; see
+[compiler provenance](docs/compiler.md).
+
 `tools/function_index.py --rebuild` indexes the existing spimdisasm output.
 Use `--query DScriptMgr` or `--address 0x002CD990` to inspect direct callers,
 references, and nearby retained strings. These are navigation hints; confirm
 indirect calls and actual boundaries in assembly before reconstructing code.
+
+[Analysis tools](docs/analysis_tools.md) describe the pinned `m2c` draft workflow.
+Its output can omit ABI arguments or misinterpret instructions and unions.
+Review original words, call signatures, and structure access order before
+registering any draft as recovered source.
 
 The denominator includes all three executable code sections, including runtime
 and VU code. Preserve separate counts for game C, runtime C, and reused assembly.

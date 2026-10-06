@@ -6,6 +6,7 @@ import struct
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
 from pathlib import Path
 from unittest.mock import patch
 
@@ -228,6 +229,72 @@ class TargetRangeTests(unittest.TestCase):
             function = {"name": "fixture", "file_offset": offset, "size": size, "address": 0x100000}
             with self.subTest(offset=offset, size=size), self.assertRaisesRegex(ValueError, "Invalid function range"):
                 verify.validate_target_function(function, self.SECTIONS)
+
+
+class CompilerProfileTests(unittest.TestCase):
+    def test_default_override_preserves_other_profiles(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "config").mkdir()
+            data = {"default_profile": "default", "profiles": {
+                "default": {"compiler": "old.exe", "compiler_sha256": "old", "path_entries": ["old"]},
+                "other": {"compiler": "other.exe", "compiler_sha256": "other"}}}
+            (root / "config/compiler_profiles.json").write_text(json.dumps(data), encoding="utf-8")
+            args = SimpleNamespace(compiler=root / "custom.exe", dll_path=root / "dll")
+            with patch.object(verify, "ROOT", root):
+                result = verify.compiler_configuration(args)
+            self.assertEqual(result["profiles"]["other"], data["profiles"]["other"])
+            self.assertEqual(result["profiles"]["default"]["compiler"], str(args.compiler.resolve()))
+            self.assertNotIn("compiler_sha256", result["profiles"]["default"])
+            self.assertEqual(result["profiles"]["default"]["path_entries"], [str(args.dll_path.resolve())])
+
+    def test_dependencies_verified_before_running_compiler(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "compiler.exe").write_bytes(b"driver")
+            profile = {"compiler": "compiler.exe", "binaries": [
+                {"path": "frontend.exe", "sha256": hashlib.sha256(b"frontend").hexdigest()}]}
+            with patch.object(verify, "ROOT", root), patch.object(verify.subprocess, "run") as run:
+                with self.assertRaisesRegex(ValueError, "dependency fingerprint"):
+                    verify.prepare_compiler(profile)
+                (root / "frontend.exe").write_bytes(b"different")
+                with self.assertRaisesRegex(ValueError, "dependency fingerprint"):
+                    verify.prepare_compiler(profile)
+                run.assert_not_called()
+
+    def test_assembler_verified_before_running_compiler(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "compiler.exe").write_bytes(b"driver")
+            profile = {"compiler": "compiler.exe", "assembler_provenance": {
+                "path": "assembler.exe", "sha256": hashlib.sha256(b"assembler").hexdigest()}}
+            with patch.object(verify, "ROOT", root), patch.object(verify.subprocess, "run") as run:
+                with self.assertRaisesRegex(ValueError, "dependency fingerprint"):
+                    verify.prepare_compiler(profile)
+                run.assert_not_called()
+
+
+class MappedDataTests(unittest.TestCase):
+    ORIGINAL = b"prefix!!constanttail"
+    SECTIONS = [{"offset": 8, "address": 0x4000, "size": 8}]
+
+    def proof(self, **overrides):
+        return {"link_data": {".rodata": {"file_offset": 8, "size": 8,
+                "address": 0x4000, "original_sha256": hashlib.sha256(b"constant").hexdigest(), **overrides}}}
+
+    def test_mapping_requires_address_geometry_and_entire_fingerprint(self):
+        result = verify.mapped_data(self.proof(), self.ORIGINAL, self.SECTIONS)
+        self.assertEqual(result[".rodata"]["expected_bytes"], b"constant")
+        self.assertEqual(result[".rodata"]["address"], 0x4000)
+        for overrides in ({"address": 0x4004}, {"file_offset": 7}, {"size": 9}, {"size": 0}, {"file_offset": -1}):
+            with self.subTest(overrides=overrides), self.assertRaisesRegex(ValueError, "read-only data"):
+                verify.mapped_data(self.proof(**overrides), self.ORIGINAL, self.SECTIONS)
+        with self.assertRaisesRegex(ValueError, "fingerprint"):
+            verify.mapped_data(self.proof(original_sha256="0" * 64), self.ORIGINAL, self.SECTIONS)
+
+    def test_data_without_proven_original_section_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "read-only data"):
+            verify.mapped_data(self.proof(), self.ORIGINAL, [])
 
 
 if __name__ == "__main__":

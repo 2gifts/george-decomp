@@ -57,19 +57,18 @@
       "size": 104,
       "source": "src/game/string_algorithms.c",
       "source_name": "func_0029C588",
-      "status": "reconstructed",
+      "status": "matched",
       "reviewed": true,
       "review_status": "reconstructed_from_disassembly",
       "original_sha256": "a2bc8beee9d688810d17b5709e81f62caa40713a9991fe71a920feae9edfb070",
       "compiled_size": 104,
-      "compiled_sha256": "0bae115a87e262e0273864deb4de89b3c85a4daf166e855ae560567c8d4084c3",
+      "compiled_sha256": "a2bc8beee9d688810d17b5709e81f62caa40713a9991fe71a920feae9edfb070",
       "compile_flags": [
         "-O2",
         "-G0",
         "-mfp64",
         "-fno-builtin",
         "-fno-strict-aliasing",
-        "-fno-reorder-blocks",
         "-ffunction-sections"
       ],
       "link": true,
@@ -78,12 +77,24 @@
       "boundary_confidence": "reviewed_provisional",
       "verification": {
         "method": "GNU PS2 ld at original address, complete bytes and exact symbol size, all relocations resolved",
-        "identical": false,
-        "different_bytes": 1,
-        "first_different_offsets": [
-          87
-        ],
+        "identical": true,
+        "different_bytes": 0,
+        "first_different_offsets": [],
         "remaining_relocations": []
+      },
+      "compiler_profile": "gcc29",
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Complete function code bytes and size match the original; no masking, unresolved relocations, or padding counted.",
+        "profile_note": "Candidate GNU compiler profile; original compiler identity remains unproved."
       }
     },
     {
