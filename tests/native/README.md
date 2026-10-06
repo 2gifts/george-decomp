@@ -411,3 +411,15 @@ existing production matrix inverse: 225,346 warning-free assertions against
 Lower curve projection/evaluation and the VU transform use explicit finite
 contracts; this validates caller capture, aliases and ordering. See
 [the path sampling evidence](../../docs/path_sampling.md) for the numerical limits.
+
+`run_path_curves.py` executes the seven curve routines and real published vector
+helpers in separate production translation units:397158 warning-free checks.
+The strict original tracer covers755 authored fixtures /113140 instructions
+and six guards. [Curve evidence](../../docs/path_curves.md) describes controlled
+callback/query/trig/remainder contracts and finite low32 memory limits.
+
+The shared bounded decoder rejects control-transfer encodings in executed delay
+slots before interpreting them, including untaken ordinary branches. Annulled
+likely delays are neither fetched nor executed. Four synthetic regression
+methods cover the classifier and five published decoder runners; refreshed
+original curve/path fixtures retain their earlier outputs and instruction counts.

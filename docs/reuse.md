@@ -1642,3 +1642,18 @@ recipes, with no native unwinder or hardware claim.
 
 The frame checkpoint passed canonical verification, the retail-identical hybrid
 build and 321 tooling tests (one platform-specific symlink skip).
+
+## GNU exception handling
+
+[Exception runtime evidence](exception_runtime.md) covers fourteen complete
+functions /2852 bytes from the unchanged published L_eh source and pinned
+eh-common/frame/thread headers. Eight complete independently reproduced natural
+linked matches total 1,780 bytes, confirmed by canonical verification. Original
+callback/context roots and31-word ABI probes preserve the historical compiler
+primitives. Static context links through existing complete32-byte zero-storage
+proof rules and remains nonmatching. The full1528-byte original writable EH
+initializer differs from the complete1520-byte candidate and receives no mapping
+or credit. GNU notices and the exact libgcc2 exception remain unchanged.
+
+The exception checkpoint passed the retail-identical hybrid build and 331 tooling
+tests (one platform-specific symlink skip).

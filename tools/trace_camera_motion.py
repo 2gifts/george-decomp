@@ -12,7 +12,7 @@ from pathlib import Path
 import struct
 
 from analyze import validated_elf
-from trace_geometry import Trace, RETURN, rounded, scalar, word
+from trace_geometry import Trace, RETURN, rounded, scalar, word, is_control_transfer
 
 ROOT = Path(__file__).resolve().parents[1]
 RANGES = ((0x2B59F8,0x2B5D08),(0x2B5D08,0x2B5EA8),
@@ -140,13 +140,16 @@ class CameraTrace(Trace):
     def run(self, entry):
         pc = entry
         while pc != RETURN:
-            target,annul = self.execute(self.fetch(pc),pc)
-            if target is not None:
-                if self.execute(self.fetch(pc+4),pc+4) != (None,False):raise ValueError('control transfer in camera delay slot')
+            instruction = self.fetch(pc)
+            target,annul = self.execute(instruction,pc)
+            if target is not None or is_control_transfer(instruction) and not annul:
+                delay = self.fetch(pc+4)
+                if is_control_transfer(delay):raise ValueError('control transfer in camera delay slot')
+                if self.execute(delay,pc+4) != (None,False):raise ValueError('control transfer in camera delay slot')
                 if target in (0x29A308,0x2A3538):
                     self.library_call(target)
                     pc = self.r[31]
-                else:pc = target
+                else:pc = target if target is not None else pc + 8
             else:pc += 8 if annul else 4
 
 

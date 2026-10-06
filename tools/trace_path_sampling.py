@@ -10,7 +10,7 @@ from pathlib import Path
 from analyze import validated_elf
 from trace_resource_base import ResourceBaseTrace
 from trace_camera_motion import CameraTrace
-from trace_geometry import RETURN, rounded, scalar, word
+from trace_geometry import RETURN, rounded, scalar, word, is_control_transfer
 
 ROOT = Path(__file__).resolve().parents[1]
 RANGES = ((0x135D10,0x135D88),(0x135D88,0x135E88),
@@ -73,7 +73,9 @@ class PathTrace(ResourceBaseTrace):
                 raise ValueError('path invocation must return by actual JR31 to selected stop')
             if target is not None or branch and not annul:
                 if pc+4>=body[1]:raise ValueError('path delay outside complete body')
-                if self.execute(self.fetch(pc+4),pc+4)!=(None,False):raise ValueError('path transfer in delay')
+                delay=self.fetch(pc+4)
+                if is_control_transfer(delay):raise ValueError('path transfer in delay')
+                if self.execute(delay,pc+4)!=(None,False):raise ValueError('path transfer in delay')
                 if instruction==0x03E00008:return
                 if target is None:pc+=8
                 elif call:

@@ -37,6 +37,22 @@ def rounded(value):
     return result
 
 
+def is_control_transfer(instruction):
+    """Classify encoded MIPS/EE branches and jumps, independent of outcome.
+
+    This does not accept the instruction for execution. Unsupported operand
+    forms still fail in the bounded decoder; REGIMM traps are not branches.
+    """
+    op = instruction >> 26
+    if op in (2, 3, 4, 5, 6, 7, 20, 21, 22, 23):
+        return True
+    if op == 0:
+        return instruction & 63 in (8, 9)
+    if op == 1:
+        return (instruction >> 16) & 31 in (0, 1, 2, 3, 16, 17, 18, 19)
+    return op in (16, 17, 18) and (instruction >> 21) & 31 == 8
+
+
 class Trace:
     def __init__(self, original):
         self.original = original
@@ -152,15 +168,17 @@ class Trace:
     def run(self, entry=ENTRY):
         pc = entry
         while pc != RETURN:
-            target, annul = self.execute(self.fetch(pc), pc)
-            if target is not None:
-                nested = self.execute(self.fetch(pc + 4), pc + 4)
+            instruction = self.fetch(pc)
+            target, annul = self.execute(instruction, pc)
+            if target is not None or is_control_transfer(instruction) and not annul:
+                delay = self.fetch(pc + 4)
+                if is_control_transfer(delay):
+                    raise ValueError("control transfer in delay slot")
+                nested = self.execute(delay, pc + 4)
                 if nested != (None, False):
                     raise ValueError("control transfer in delay slot")
-                pc = target
+                pc = target if target is not None else pc + 8
             else:
-                # Untaken ordinary branches execute their delay on the next
-                # iteration; untaken likely branches skip it altogether.
                 pc += 8 if annul else 4
 
 

@@ -101,3 +101,9 @@ The checkpoint passed 321 tooling tests (one platform-specific symlink skip).
 Its hybrid executable retains retail SHA-256
 `01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8`;
 remaining original assembly contributes no additional C matching credit.
+
+A subsequent shared decoder review added encoding-based rejection of branches
+and jumps in executed delay slots, including untaken branches. The selected
+retail instruction fixtures and synthetic golden outputs remain unchanged.
+This tooling revision uses an explicitly refreshed evidence baseline; it does
+not change the recovered source or its whole-code comparisons.

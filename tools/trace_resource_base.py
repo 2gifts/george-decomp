@@ -13,7 +13,7 @@ from pathlib import Path
 import struct
 
 from analyze import validated_elf
-from trace_geometry import Trace, RETURN
+from trace_geometry import Trace, RETURN, is_control_transfer
 from trace_camera_motion import CameraTrace
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -137,7 +137,9 @@ class ResourceBaseTrace(CameraTrace):
             branch=op in (4,5,20,21);call=op==3 or op==0 and instruction&63==9
             if target is not None or branch and not annul:
                 if pc+4>=body[1]:raise ValueError('resource delay outside complete body')
-                if self.execute(self.fetch(pc+4),pc+4)!=(None,False):raise ValueError('resource transfer in delay')
+                delay=self.fetch(pc+4)
+                if is_control_transfer(delay):raise ValueError('resource transfer in delay')
+                if self.execute(delay,pc+4)!=(None,False):raise ValueError('resource transfer in delay')
                 if instruction==0x03E00008:return
                 if target is None:pc+=8
                 elif call:
