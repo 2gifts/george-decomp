@@ -94,3 +94,27 @@ Matches compare the complete compiled function bytes after proven relocations
 are linked. Instruction bytes are never masked or rewritten to award a match.
 The retail `fmodf` wrapper uses 64-bit callee saves; many game functions use
 128-bit saves. Neither compiler's version string alone proves either ABI.
+
+## Linking proven read-only data
+
+`tools/link_match.py` links one function at its original address. A function's
+optional `link_data` manifest maps exact compiler section names to their original
+`address`, `file_offset`, `size`, and `original_sha256`. The verifier checks the
+complete original bytes and read-only ELF geometry before supplying those bytes
+and their hash to the linker. Only sections directly referenced by the selected
+function can be retained; unused mappings are rejected.
+
+The default requires the complete input section to equal the original bytes and
+contain no data relocations. The explicit
+`"relocation_policy": "self_r_mips_32"` opt-in permits a nonempty table of
+`R_MIPS_32` pointers into that same complete read-only section. Each relocation,
+symbol, offset, and signed addend must be bounded and unambiguous. GNU `ld`
+resolves the original object without manual byte patches. The complete linked
+data must then equal the original proof, and the verifier independently compares
+the returned data again. Code matches still require every function byte and no
+remaining relocations; mapped data contributes no recovered function bytes.
+
+This policy supports the authentic `_localeconv_r` object's self-contained
+`.rodata` at `0x00456C30`. Writable data, mixed relocation types, external or
+cross-section data pointers, and unused mappings remain unsupported. A mapping
+cannot bypass differing literal bytes or differing resolved pointer values.

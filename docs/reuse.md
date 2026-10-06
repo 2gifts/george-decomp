@@ -15,7 +15,7 @@ and digit conversion behavior. Short generic wrappers can match uniquely by
 chance: a candidate named `_mallinfo_r` was rejected because its target has
 unrelated semantics. Scanner candidates alone do not establish function names.
 
-The seven verified sources checked into this repository were independently compiled or
+The eight verified functions checked into this repository were independently compiled or
 assembled, and their function bytes compared with the retail executable again:
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
@@ -27,10 +27,11 @@ assembled, and their function bytes compared with the retail executable again:
 | `atoi` | `0x00396320` | 40 | `src/runtime/atoi.c` | Upstream C | Exact after linking `strtol` |
 | `matherr` | `0x0037db30` | 36 | `src/runtime/matherr.c` | Upstream C | Exact under GCC 2.9 after linking `dpcmp` |
 | `__errno` | `0x00393368` | 12 | `src/runtime/errno.c` | Upstream C | Exact after linking `_impure_ptr` |
+| `_localeconv_r` | `0x0039cc68` | 12 | `src/runtime/locale.c` | Upstream C | Exact with all readonly self-pointer relocations linked |
 
 The 572 bytes of reused assembly must remain separate from high-level C
-decompilation progress. The 116 bytes of compiled `fabsf`, `atoi`, `matherr`, and
-`__errno` C are high-level source.
+decompilation progress. The 128 bytes of compiled `fabsf`, `atoi`, `matherr`,
+`__errno`, and `_localeconv_r` C are high-level source.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -107,6 +108,74 @@ helper before storing domain errno 33, independently confirming the role.
 The complete 12-byte function matches the `gcc323` source build when
 `_impure_ptr` is linked to its known retail global address `0x00405694`.
 
+## Integer conversion, character classification, and locale
+
+Ten further functions are reconstructed from unchanged files in the pinned
+public newlib 1.8.1 tree. Their complete original control flow and return
+boundaries were reviewed. `_localeconv_r` now matches exactly; the other nine
+retain reconstructed status.
+
+| Retail address | Functions | Upstream file |
+| --- | --- | --- |
+| `0x0039C7F0`, `0x0039CA20` | `_strtol_r`, `strtol` | `libc/stdlib/strtol.c` |
+| `0x0039CA58`, `0x0039CA78` | `tolower`, `toupper` | `libc/ctype/tolower.c`, `toupper.c` |
+| `0x0039CA98`, `0x0039CC68`, `0x0039CC78`, `0x0039CCA8` | `_setlocale_r`, `_localeconv_r`, `setlocale`, `localeconv` | `libc/locale/locale.c` |
+| `0x0039CCD0` | `floor` | `libm/math/s_floor.c` |
+| `0x0039CEC0` | `__ieee754_fmod` | `libm/math/e_fmod.c` |
+
+The parser skips whitespace, handles signs and inferred radix, converts digits,
+checks cutoff/remainder overflow, sets errno 34 and selects the end pointer.
+Retail cutoff arithmetic uses 64-bit `long` while pointers remain 32 bits.
+Its explicit `-mlong64` recipe uses that supported combination in the unmodified
+EE backend; a compilation assertion checks both widths and errno's offset.
+The argument-forwarding wrapper is also the call target established by the
+already matching `atoi` implementation. Central bindings retain the reviewed
+low-64 multiplication, unsigned division and unsigned remainder targets.
+
+`ctype_table.c` preserves the entire upstream character table. All 257 bytes
+match retail data at `0x00456118`, SHA-256
+`8b55a0d9c781d7001042c99e21523fef362440f572faef950e8e600fae5de813`.
+The parser and two case-conversion leaves access that table at `c+1`; the latter
+use its upper/lower bits and conditional ASCII offset. Data equality strengthens
+their identities and does not count as recovered function bytes.
+
+The locale implementation includes the `MB_CAPABLE` branch. Its redundant `C`
+comparison, accepted `C-JIS`/`C-EUCJP`/`C-SJIS` strings, previous/current locale
+copies, 8/2/1 multibyte limits and reentrancy field writes all agree with retail.
+The complete initialized 24-byte writable block matches at `0x00405E90`.
+The 96-byte readonly locale table/string block agrees at `0x00456C30` after
+independently resolving its ten actual pointer relocations. The unchanged
+`_localeconv_r` source links those ten self-section `R_MIPS_32` entries using
+GNU ld and matches all 12 code bytes and all 96 readonly data bytes. The two
+public wrappers also link fully, while their code differs. `_setlocale_r` retains
+visible unresolved object relocations because verification does not map writable
+local data; it remains reconstructed.
+
+Double `floor` independently maps its entire 16-byte pair of `1.0e300` constants
+at `0x00456C90`; its masks, carry, negative rounding and infinity/NaN paths agree
+with the source. Double remainder maps the entire 24-byte `one`/signed `Zero`
+pool at `0x00456CA0`. Its exceptional-value, normal/subnormal exponent,
+shift/subtract and signed-zero paths agree through the final return. These
+sources link to the original soft-double arithmetic helpers without unresolved
+references, while their generated instruction bytes still differ.
+
+The parser and locale recipes explicitly include unchanged GNU
+`ee/gcc/glimits.h` as `src/runtime/include/limits.h`, with provenance and the
+GNU license retained in `LICENSES/GPL-2.0.txt`. This supplies an authentic header
+omitted by the first optional local compiler package without changing that
+package or the backend. All source file hashes and candidate recipes are in
+the runtime manifest.
+
+The Berkeley notices in `strtol.c` and `ctype_table.c` are preserved verbatim:
+This product includes software developed by the University of California,
+Berkeley and its contributors.
+
+Run `python tools/check_runtime_data.py` to reproduce the three complete ctype
+and locale data identity checks. It validates the original executable hash,
+source hashes, non-executable allocated data geometry, and each actual pointer
+relocation's linked symbol table. It writes its local report under ignored
+`build/reuse/runtime_data` and awards no function progress.
+
 `finitef.c` and `isnanf.c` are unchanged Sun Microsystems implementations from
 the newlib 1.8.1 tree in the [public GNU EE source at commit
 `b595ded606227e93b8c4a447446c1d2ac093827d`](https://github.com/SSXModding/ps2-ee-toolchain/tree/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib).
@@ -156,7 +225,7 @@ Modern binutils v0.10 is useful for ELF inspection and later baseline assembly.
 
 ## Scope of the evidence
 
-These exact runtime matches establish reusable implementations of seven specific
+These exact runtime matches establish reusable implementations of eight specific
 functions. They do not identify the compiler used for Papaya's game code, prove
 that all newlib/SDK code is the same version, or establish a shared game engine
 with any other decompilation. The original compiler remains unidentified.
@@ -196,3 +265,17 @@ register and `sd`/`ld` for `ra`. Full linked comparisons of `func_001D9920` and
 `func_002CD990` confirm that corrected widths alone do not produce matches:
 stack-slot order, scheduling, or remaining source reconstruction still differ.
 This macro provides an explicit compiler capability, not automatic progress.
+
+## AROS list behavior adaptation
+
+`src/game/list_aros.c` adapts the public AROS `AddTail`, `AddHead`, `RemHead`,
+and `Remove` algorithms from commit
+[`e8e543e6ca866e26671c8f586d545f80609ef3dd`](https://github.com/aros-development-team/AROS/tree/e8e543e6ca866e26671c8f586d545f80609ef3dd/rom/exec).
+The source preserves the AROS notices, records the dated changes, and remains
+under [AROS Public License 1.1](../LICENSES/AROS-Public-License-1.1.txt).
+
+These are behavioral adaptations with George's structure layout, original store
+and reload order, explicit empty sentinel check, and cleared removed-node links.
+The empty check agrees for valid lists but can differ on corrupt inputs. This
+reuse establishes no original AROS source identity or byte match. The APL applies
+to this dedicated source file.

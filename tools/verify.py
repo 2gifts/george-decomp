@@ -111,9 +111,20 @@ def validate_target_function(function, sections):
 
 def mapped_data(function, original, sections):
     mappings = {}
-    for name, proof in function.get("link_data", {}).items():
+    proofs = function.get("link_data", {})
+    if not isinstance(proofs, dict):
+        raise ValueError("Mapped data proofs must be a dictionary")
+    for name, proof in proofs.items():
+        required = {"file_offset", "size", "address", "original_sha256"}
+        allowed = required | {"evidence", "relocation_policy"}
+        if not isinstance(proof, dict) or not required <= set(proof) or set(proof) - allowed:
+            raise ValueError(f"Mapped data requires complete original proof and supported metadata: {name}")
+        if "relocation_policy" in proof and proof["relocation_policy"] != "self_r_mips_32":
+            raise ValueError(f"Unsupported mapped-data relocation policy: {name}")
         offset, size, address = (number(proof[key]) for key in ("file_offset", "size", "address"))
-        if (offset < 0 or size <= 0 or offset + size > len(original)
+        if (any(type(value) is not int for value in (offset, size, address))
+                or offset < 0 or size <= 0 or offset + size > len(original)
+                or not 0 <= address <= 0xFFFFFFFF or address + size > 0x100000000
                 or not any(section["offset"] <= offset
                            and offset + size <= section["offset"] + section["size"]
                            and address == section["address"] + offset - section["offset"]
@@ -124,6 +135,8 @@ def mapped_data(function, original, sections):
             raise ValueError(f"Original mapped-data fingerprint mismatch: {name}")
         mappings[name] = {"address": address, "expected_bytes": data,
                           "expected_sha256": proof["original_sha256"]}
+        if "relocation_policy" in proof:
+            mappings[name]["relocation_policy"] = proof["relocation_policy"]
     return mappings
 
 

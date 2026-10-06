@@ -130,7 +130,8 @@ typedef struct GeorgeGoalDrive {
     u32 field14;
     u8 unknown18[0x28];
     void *field40;
-    u8 unknown44[2];
+    u8 field44;
+    u8 field45;
     u8 field46;
     u8 field47;
     u8 field48;
@@ -141,6 +142,8 @@ typedef struct GeorgeGoalDrive {
     u8 unknown58[8];
     u32 field60;
     u32 field64;
+    u8 unknown68[0x24];
+    u32 field8C;
 } GeorgeGoalDrive;
 
 /* Only these offsets of the two separate pointees are established here. */
@@ -179,7 +182,9 @@ typedef struct GeorgeGoalEntity {
     float field5C;
     u8 unknown60[0x70];
     GeorgeMathVec3 fieldD0;
-    u8 unknownDC[0x288];
+    u8 unknownDC[0x1FC];
+    u32 field2D8;
+    u8 unknown2DC[0x88];
     u32 field364;
     u32 field368;
     u8 unknown36C[0x394];
@@ -210,7 +215,9 @@ typedef struct GeorgeGoalOwner {
     float field34;
     u8 unknown38[4];
     GeorgeMathVec3 field3C;
-    u8 unknown48[0x34];
+    u8 unknown48[0x18];
+    float field60;
+    u8 unknown64[0x18];
     u32 field7C;
     GeorgeGoalZeroUnit field80;
     float field8C;
@@ -279,19 +286,23 @@ GOAL_OFFSET(GeorgeGoalEnterVehicle, field44, 0x44);
 GOAL_OFFSET(GeorgeGoalIdle, field90, 0x90);
 GOAL_OFFSET(GeorgeGoalIdle, field9F, 0x9F);
 GOAL_OFFSET(GeorgeGoalDrive, field40, 0x40);
+GOAL_OFFSET(GeorgeGoalDrive, field44, 0x44);
 GOAL_OFFSET(GeorgeGoalDrive, field46, 0x46);
 GOAL_OFFSET(GeorgeGoalDrive, field50, 0x50);
 GOAL_OFFSET(GeorgeGoalDrive, field64, 0x64);
+GOAL_OFFSET(GeorgeGoalDrive, field8C, 0x8C);
 GOAL_OFFSET(GeorgeGoalReferencedObject, field05, 5);
 GOAL_OFFSET(GeorgeGoalReferencedObject, field20, 0x20);
 GOAL_OFFSET(GeorgeGoalOwner, field08, 8);
 GOAL_OFFSET(GeorgeGoalOwner, field18, 0x18);
 GOAL_OFFSET(GeorgeGoalOwner, field24, 0x24);
 GOAL_OFFSET(GeorgeGoalOwner, field3C, 0x3C);
+GOAL_OFFSET(GeorgeGoalOwner, field60, 0x60);
 GOAL_OFFSET(GeorgeGoalOwner, field7C, 0x7C);
 GOAL_OFFSET(GeorgeGoalOwner, field8C, 0x8C);
 GOAL_OFFSET(GeorgeGoalEntity, field40, 0x40);
 GOAL_OFFSET(GeorgeGoalEntity, fieldD0, 0xD0);
+GOAL_OFFSET(GeorgeGoalEntity, field2D8, 0x2D8);
 GOAL_OFFSET(GeorgeGoalEntity, field364, 0x364);
 GOAL_OFFSET(GeorgeGoalEntity, field368, 0x368);
 GOAL_OFFSET(GeorgeGoalEntity, field700, 0x700);

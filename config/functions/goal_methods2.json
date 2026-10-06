@@ -1,0 +1,2604 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "22 primary dispatch state/completion/restore methods plus two movement-state helpers form24 reviewed C routines. No original class or function names asserted.",
+    "Four repeated two-phase timer bodies and five encoded member-call sites share source macros derived from original instructions. No external gameplay code copied.",
+    "Primary dispatch evidence stops at38 bytes; neighboring bad_alloc strings and exception/runtime tables are not treated as additional gameplay methods.",
+    "Old member-pointer encoding preserves zero/negative/positive selector paths, signed16 adjustments, captured versus reloaded indices, and32-bit address wrap. Draft m2c incorrectly narrowed the adjustment sum to16 bits.",
+    "Soft-double runtime values in the stop-vehicle update use full64 integer-register bits; float virtual argument is independent f12. Runtime roles corroborated by research agent.",
+    "Float constants are exact instruction-derived words3727C5AC,3C23D70A,40C90FDB,40A00000 and zeros/ones. Strict comparisons preserve unordered behavior.",
+    "Idle signed remainder follows original target division for valid goal counts; original has a division-by-zero break when an invalid count reaches a modulo operation. No extra stale call arguments or invented null checks.",
+    "Every registered function is reconstructed until a complete linked byte/length gate succeeds. Optional guarded SAVE128 annotation is declared only for routines originally using sq/lq saved registers.",
+    "Root independent full-instruction review passed all complex nonmatching paths, including full32 member adjustments and drive index reload, idle seven integer args plus f12, route word/byte alias ordering, stack vector output, XZ projection/reciprocal squared length, and full64 software-double stop logic.",
+    "Second independent exceptional-path review passed all nine requested member/idle/route/output/soft-double routines. Ignored native32 harness passed127 checks; these support semantics and never substitute for target byte comparison."
+  ],
+  "functions": [
+    {
+      "name": "func_001D99F8",
+      "address": "0x001D99F8",
+      "file_offset": "0x000DA9F8",
+      "size": 136,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001D99F8",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "d7ee13b42d0a0de3548e48b7e698e8b3f8666ca0f63e57052bedfc4da097f4f5",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Cached byte18 status; phase0 waits until entity word0C differs from12 before setting phase19=1. Phase1 subtracts owner float60 from scalar10 and stores it even when unordered/nonnegative; strict negative sets byte18 to captured phase1 and clears owner half24 bit8. No phase0-to-phase1 fallthrough.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436818",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 156,
+          "different_bytes": 111,
+          "compiled_sha256": "4e88971c9318ab9d6991e71260c0c15a01747e9f5c8b2fa304f5d8f1913d27b3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "d7ee13b42d0a0de3548e48b7e698e8b3f8666ca0f63e57052bedfc4da097f4f5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "d7ee13b42d0a0de3548e48b7e698e8b3f8666ca0f63e57052bedfc4da097f4f5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "d7ee13b42d0a0de3548e48b7e698e8b3f8666ca0f63e57052bedfc4da097f4f5",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001D9B78",
+      "address": "0x001D9B78",
+      "file_offset": "0x000DAB78",
+      "size": 136,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001D9B78",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "521c134c22a485228f71c6d3f3bb981b9ae2e03c3bbc47ba63a29aa3fcfb9321",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same reviewed two-phase action timer as1D99F8, waiting for entity word0C to differ from23.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004368A0",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 156,
+          "different_bytes": 111,
+          "compiled_sha256": "babe33159cc8a348a0f390d1227128b0229d17602ecb830724349f0fe0f09300",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "521c134c22a485228f71c6d3f3bb981b9ae2e03c3bbc47ba63a29aa3fcfb9321",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "521c134c22a485228f71c6d3f3bb981b9ae2e03c3bbc47ba63a29aa3fcfb9321",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "521c134c22a485228f71c6d3f3bb981b9ae2e03c3bbc47ba63a29aa3fcfb9321",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001D9D10",
+      "address": "0x001D9D10",
+      "file_offset": "0x000DAD10",
+      "size": 184,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001D9D10",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d4af002c21eb6bbf4f57fc1297864d1ae67da1940f7eb9cc096be4585af87aa4",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Zero word10 invokes the encoded member pointer selected by captured full32 word14 in mutable table3F8D50, then returns reloaded word10. Nonzero status skips all table access. Member-pointer zero/negative/positive selector paths, signed16 adjustments and full32 adjustment sum are reviewed.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436900",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 168,
+          "different_bytes": 147,
+          "compiled_sha256": "18be9e347dfbdeee00197f04db2acd52610533652e17cb1e4fdf4cb246dee318",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 168,
+          "different_bytes": 148,
+          "compiled_sha256": "7281376b5990d911c5a44a2c8ee8a06dbe30b6e728bc1f52dbd665947d216ce5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 168,
+          "different_bytes": 147,
+          "compiled_sha256": "8fa998a976d101e398a4c43e08ebe5985a4152ada8c39b81eeafbbcee1b16f4a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DB818",
+      "address": "0x001DB818",
+      "file_offset": "0x000DC818",
+      "size": 248,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DB818",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f8ade7577f3603a1b9eb1a0f5e89eb052574d0622987385f62c2d98777f0096b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Reads entity motion4C/54, tests squared horizontal length strictly above exact3C23D70A, excludes entity states3/4 using unsigned subtract/range test, then forms position40 plus motion4C in scalar x,z,y order. CallsDC178, reloads goal owner and writes owner angle34 and exact2pi30 only when word2C is zero; always returns0.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004369A0",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 204,
+          "different_bytes": 191,
+          "compiled_sha256": "b62d08807e60d33083a476ded6c8d8a264fdb979e067a13d814fb090b9752cc9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 212,
+          "different_bytes": 182,
+          "compiled_sha256": "5e4e39cb22c9adfe01710dad1d83acdf5767e4ad11418d3faa9f207c8b31b064",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 212,
+          "different_bytes": 180,
+          "compiled_sha256": "d39c20c8552b313b6ab80ddfc86fdeb468c6d54e099c46aef53254b46287c9d0",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [
+        {
+          "instruction_address": "0x001DB81C",
+          "bits": "0x3C23D70A",
+          "float_value": 0.009999999776482582
+        },
+        {
+          "instruction_address": "0x001DB8E8",
+          "bits": "0x40C90FDB",
+          "float_value": 6.2831854820251465
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DC178",
+      "address": "0x001DC178",
+      "file_offset": "0x000DD178",
+      "size": 136,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC178",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fe1e9145ca919605b7d7d973ed2e8981a9d716dcaf3b6bffc1354cdf07624302",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Computes target-origin horizontal x/z and squared length; only squared length strictly above exact3727C5AC scales both components by1/squared (not inverse square root). Passes z then x in f12/f13 to29B940 and returns its float. Unordered/zero/threshold inputs skip scaling.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 136,
+          "different_bytes": 43,
+          "compiled_sha256": "1177676431df70e4e33917e0d61183d5609fb2be432bd7fa1063e6e2b8387488",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 140,
+          "different_bytes": 65,
+          "compiled_sha256": "5b1074aebab3158dc8d400be053ba9098a3fb1b5fb840138ca0206907c0a3112",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 140,
+          "different_bytes": 65,
+          "compiled_sha256": "5b1074aebab3158dc8d400be053ba9098a3fb1b5fb840138ca0206907c0a3112",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [
+        {
+          "instruction_address": "0x001DC1A0",
+          "bits": "0x3727C5AC",
+          "float_value": 9.999999747378752e-06
+        },
+        {
+          "instruction_address": "0x001DC1C8",
+          "bits": "0x3F800000",
+          "float_value": 1.0
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DC468",
+      "address": "0x001DC468",
+      "file_offset": "0x000DD468",
+      "size": 204,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC468",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "698095f59e1f78c3e14724206b0d80aecceb801e50679adea46b25b98bbc1fc5",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Prefers existing word18 when notFFFFFFFF and CF588(context,word) succeeds, returning0. Otherwise tests word14 viaD1760 with only low byte of word20, returning1 on success. Falls back toCF340 and stores returned word40 into word18, orCE130(context,byte20) and stores returned word0 into word14; final failure returns2. Calls/loads/stores preserve original alias and mutation order.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 200,
+          "different_bytes": 161,
+          "compiled_sha256": "ccce8e81f9d5561230ff029727fdef74d4c934ec7d59f50a69f9c21f4d334012",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 204,
+          "different_bytes": 29,
+          "compiled_sha256": "b07b68e8d02495ce8f21ccda2b6132ba9948f1cb359624c0f998e79e8a6f1355",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 204,
+          "different_bytes": 23,
+          "compiled_sha256": "0fbf90789824f93bd068d3cf0e1758106eeffcc2a9bc188912aacffca97c1e60",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DC618",
+      "address": "0x001DC618",
+      "file_offset": "0x000DD618",
+      "size": 24,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC618",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fba79b5dd3366d542205696b53c40b8588839249d44b30857fc865d770488b0e",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Returns1 only for negative signed halfword10; all zero/positive values return5. Small completion method included for coherent restart-goal lifecycle, not counted as a substantive new subsystem.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436A70",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 24,
+          "different_bytes": 3,
+          "compiled_sha256": "ee88016983bbf9d618ca3baf8468fb31047c6cc86250b3f433775b02d463597f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 28,
+          "different_bytes": 20,
+          "compiled_sha256": "f2bb2f1ec4f127bce4dd7c68ff33760fe51513e4a30398d41012e049f684c5ae",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 28,
+          "different_bytes": 20,
+          "compiled_sha256": "f2bb2f1ec4f127bce4dd7c68ff33760fe51513e4a30398d41012e049f684c5ae",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DC6B8",
+      "address": "0x001DC6B8",
+      "file_offset": "0x000DD6B8",
+      "size": 20,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC6B8",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "0fdbdc7ceb1deb0e19951ee1ba713bb4d3b43fef824310a88a7342bd4f6815f6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots owner before saved goal word10, reloads entity through captured owner, and restores entity word368 from the goal. Complements the previously recovered mood exchange initializer.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436AF8",
+          "entry_offset": "0x24"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 20,
+          "different_bytes": 0,
+          "compiled_sha256": "0fdbdc7ceb1deb0e19951ee1ba713bb4d3b43fef824310a88a7342bd4f6815f6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 20,
+          "different_bytes": 0,
+          "compiled_sha256": "0fdbdc7ceb1deb0e19951ee1ba713bb4d3b43fef824310a88a7342bd4f6815f6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 20,
+          "different_bytes": 0,
+          "compiled_sha256": "0fdbdc7ceb1deb0e19951ee1ba713bb4d3b43fef824310a88a7342bd4f6815f6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compiled_sha256": "0fdbdc7ceb1deb0e19951ee1ba713bb4d3b43fef824310a88a7342bd4f6815f6",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc323",
+        "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DC750",
+      "address": "0x001DC750",
+      "file_offset": "0x000DD750",
+      "size": 52,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC750",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "71cfc60de443899dbe9328c11f13d3b4f5b0aadd37874e2dcd3ffcf9a205d6cd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Reads goal word14 as float; strict positive subtracts owner float60 and stores at14, returning0 even after overshoot. Zero/negative/unordered returns1 without owner read or float store. Preserves observed sw versus lwc1/swc1 view of the shared slot.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436B48",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 60,
+          "different_bytes": 50,
+          "compiled_sha256": "00d7dedc50cf9be6bc0dba1f63a371c99b91bf8c3548972fc88e6a9cfb9556dd",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 25,
+          "compiled_sha256": "b3b9e5d36863982107cff26720cf9b0faeabf8ded994ae3490337084422008a6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 25,
+          "compiled_sha256": "b3b9e5d36863982107cff26720cf9b0faeabf8ded994ae3490337084422008a6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DC988",
+      "address": "0x001DC988",
+      "file_offset": "0x000DD988",
+      "size": 288,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DC988",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3e8329d8aaf81808ea81d1617813cf53d4ea2f0a400f3dc427631465eb84aff4",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Calls adjusted-this virtual predicate at resource table138/13C, then sets goal word8C; first false-to-true increments mutable global3F8DD0 modulo32. Only zero status byte45 callsDDD70,DE6E0,DDBB8 in order, then encoded table3F8DD8 dispatch. Byte44 is reloaded before final member this-adjustment lookup. Returns reloaded byte45.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436BF8",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 284,
+          "different_bytes": 172,
+          "compiled_sha256": "1fb8b9e89b038d8e0bd6e05b2715601e1ff07c6a56155ec3753f1752a8a9e01e",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 276,
+          "different_bytes": 189,
+          "compiled_sha256": "0cfd5de2df453bbe5f3b0bcbc64aebebdec122660671dfa66ba659af55d0cb9b",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 276,
+          "different_bytes": 189,
+          "compiled_sha256": "412e0badda5cd570063bbd1b1c9072406986e9ad12a95dba0efd73bead116400",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DF630",
+      "address": "0x001DF630",
+      "file_offset": "0x000E0630",
+      "size": 244,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DF630",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "cfc891d3183f9d94b6165dc38370712751fbe86429c480202cea0b0b66100f05",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Only zero status byte11 dispatches captured state byte10 through encoded mutable table3F8E38, then computes angle from owner entity position40 to embedded vector28. Reloads owner after helper; zero owner word2C enables angle34 and exact2pi30 stores. Returns fresh byte11 even when state call changes it.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436C48",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 228,
+          "different_bytes": 195,
+          "compiled_sha256": "2cad38a3976037764af8481461a7709f41c7c1886a98d5605333889cb8219e70",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 224,
+          "different_bytes": 195,
+          "compiled_sha256": "e75adafd3ef7a1836bebe5593525690660fbb38e4b672f9edcc4ced14c1532ef",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 224,
+          "different_bytes": 194,
+          "compiled_sha256": "a2068b9e3352c4e6a62bde0906e3ed438e013c32be65ef1d09b9af8ade7a45df",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [
+        {
+          "instruction_address": "0x001DF6FC",
+          "bits": "0x40C90FDB",
+          "float_value": 6.2831854820251465
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DFDB8",
+      "address": "0x001DFDB8",
+      "file_offset": "0x000E0DB8",
+      "size": 244,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001DFDB8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7702bbe569a3fd7366434235bc4cc994b95689739b637aed0e9da4d2420c46b8",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same reviewed walk update asDF630 with table3F8E68 and embedded target vector20; state is captured before dispatch, owner reloaded after both calls, final byte11 reloaded.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436C98",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 228,
+          "different_bytes": 195,
+          "compiled_sha256": "191c31cc16ed65211371bd9677db594cecad87073e5440c21f444452659f6191",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 224,
+          "different_bytes": 195,
+          "compiled_sha256": "798d38b68887dac939c3bed59e0aeb446703fdacf5732ee2eb3ec6d6a6046ed3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 224,
+          "different_bytes": 194,
+          "compiled_sha256": "b74d6d8d5b66b85bd0063189a2bb52830069541bfe28b50a50ef4b1df32c6c43",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [
+        {
+          "instruction_address": "0x001DFE84",
+          "bits": "0x40C90FDB",
+          "float_value": 6.2831854820251465
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E07E0",
+      "address": "0x001E07E0",
+      "file_offset": "0x000E17E0",
+      "size": 532,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E07E0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "bd94a4a68cbc7b3a9e99bcc5e5aa59218262e83ee4bde6293f977d7f72d7a656",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Signed state byte9E selects idle paths0/1/2/3; unknown values leave state alone. States0 and1 invoke177C40 using four words in 16-byte inline record indexed by wrapping word98 shift, seven explicit integer args and independent float5. Failed calls set signed byte9F to2 or4; both advance state9E to3. State2 waits for entity0C !=B; state3 waits for !=C, then uses signed count/mode and signed remainder/random selection, decrements only positive word94 and sets9F=1 at zero, then resets9E. All callback-dependent loads retained; return sign-extends byte9F.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436CE8",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 508,
+          "different_bytes": 421,
+          "compiled_sha256": "40bdc32dc70b777a5e0a0faa8d68a345778c750fb83e2a96a953016dcddee69e",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 516,
+          "different_bytes": 412,
+          "compiled_sha256": "f7bdc79e1050e9ff6aedab89c59e8f2951bcb2c675a98e22f95cd1bfa9e84a94",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 516,
+          "different_bytes": 412,
+          "compiled_sha256": "5ad3aa4cb7b585bd61b1e783f4d4be3278b6453b768ce9d998d31bdbdd498793",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [
+        {
+          "instruction_address": "0x001E0864",
+          "bits": "0x40A00000",
+          "float_value": 5.0
+        },
+        {
+          "instruction_address": "0x001E08A8",
+          "bits": "0x40A00000",
+          "float_value": 5.0
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E0FA0",
+      "address": "0x001E0FA0",
+      "file_offset": "0x000E1FA0",
+      "size": 136,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E0FA0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "6a258e718185855452b700a53a6308be38ea7c194d33ac5064599f9b63623260",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same reviewed action timer, but phase0 reads entity word2D8 and waits for it to differ from1.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436DC0",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 156,
+          "different_bytes": 111,
+          "compiled_sha256": "d40fc6c0e48c2f758c457c5c271d12b099fb2c18d7bf039444a6820205f28b93",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "6a258e718185855452b700a53a6308be38ea7c194d33ac5064599f9b63623260",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "6a258e718185855452b700a53a6308be38ea7c194d33ac5064599f9b63623260",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "6a258e718185855452b700a53a6308be38ea7c194d33ac5064599f9b63623260",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1188",
+      "address": "0x001E1188",
+      "file_offset": "0x000E2188",
+      "size": 136,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E1188",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "4d1d3683b1f64ab61d18bdba330a2e250d5ac7f13e2ca721154e6777b6343496",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same reviewed action timer, waiting for entity word0C to differ from20.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436E48",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 156,
+          "different_bytes": 111,
+          "compiled_sha256": "1f84f357229c3fbc80813270a2bd36aac4ce2a58eadf5c248e874eb199d81df6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "4d1d3683b1f64ab61d18bdba330a2e250d5ac7f13e2ca721154e6777b6343496",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "compiled_sha256": "4d1d3683b1f64ab61d18bdba330a2e250d5ac7f13e2ca721154e6777b6343496",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "4d1d3683b1f64ab61d18bdba330a2e250d5ac7f13e2ca721154e6777b6343496",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1F20",
+      "address": "0x001E1F20",
+      "file_offset": "0x000E2F20",
+      "size": 40,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E1F20",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "afc7c9630c9446c338d120669de699c5dc2943ed9189aa13cb300f8ce3d12dc9",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Entity state0C other than6 stores goal word10=1; returns reloaded word10 in all cases, preserving status store aliases.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437168",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 44,
+          "different_bytes": 25,
+          "compiled_sha256": "41ed8866d9bd32164ff535982944cb53faf9247869499d2aec5a3be6231c099a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "compiled_sha256": "afc7c9630c9446c338d120669de699c5dc2943ed9189aa13cb300f8ce3d12dc9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "compiled_sha256": "afc7c9630c9446c338d120669de699c5dc2943ed9189aa13cb300f8ce3d12dc9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "afc7c9630c9446c338d120669de699c5dc2943ed9189aa13cb300f8ce3d12dc9",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E5A18",
+      "address": "0x001E5A18",
+      "file_offset": "0x000E6A18",
+      "size": 64,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E5A18",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "16cff989398f8eeccc4ba56d790e8b72b4e3fa2ad44f1e45a3a4b88e1d9c1a96",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Disabled word14 returns1; enabled word14 callsB69E8 with entity inline context40 and returns0 only for a nonzero result, otherwise1.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437340",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 56,
+          "different_bytes": 48,
+          "compiled_sha256": "dede0e3c4bb67902c39826306034b3d458e52b2c11170acb141783b9303fa804",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 64,
+          "different_bytes": 6,
+          "compiled_sha256": "da09e901abe7c607dff172f0d90e40f5d2e0d893dc33cc61f20ab2792c5b9c34",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 64,
+          "different_bytes": 4,
+          "compiled_sha256": "cbf70a9e62bf7b18afe72e96b66da32e0a704a8f6dc4b739acef8e787b9ae136",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E5B60",
+      "address": "0x001E5B60",
+      "file_offset": "0x000E6B60",
+      "size": 64,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E5B60",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d3e833a0a5a49eb90c43ca5350fd081fa6bc807a965d81d1c0fd2c57d4ad0507",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Null referenced object returns1. Nonnull reference is available if byte6 bit40 or word20 is nonzero, returning1; failed both checks returns4. Short-circuit order avoids word20 load when bit40 is set.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437390",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 64,
+          "different_bytes": 41,
+          "compiled_sha256": "b8d2b5ceb66c50af10cd60a22ccc6722b561e385d0b391efe33821e689355fd7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 64,
+          "different_bytes": 18,
+          "compiled_sha256": "57d1c808fce3d4b8577436bb346523b5cef11b198c370a6e587f71147e167a86",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 64,
+          "different_bytes": 18,
+          "compiled_sha256": "57d1c808fce3d4b8577436bb346523b5cef11b198c370a6e587f71147e167a86",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E6870",
+      "address": "0x001E6870",
+      "file_offset": "0x000E7870",
+      "size": 100,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E6870",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "27c4859d1d99e251d3ac71562c95e1caf4d0e205bdfe1a5a5859d2de84c78985",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Requires nonzero global query211BA8, resolves goal word14 by239FD8 and hash21F5A0EA by238BA0. Nonnull result calls21A80 with goal vector18 and a12-byte stack scratch output, returning1; either failed gate returns2. Callee21A80/2A1D78 prove scratch is a three-float vector.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004374C8",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 108,
+          "different_bytes": 46,
+          "compiled_sha256": "5c77f8e79d991ccb24f34601b1797672e9b2e7fe0c101a2d54bc3de98a507aef",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 6,
+          "compiled_sha256": "a42562baaeeeaf945124692087b787ca505aa40ef9ffd7e042beb5a366e3b1b1",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 6,
+          "compiled_sha256": "53350566ac0ed347f24db923656cf90305aa671209c24c705bc56931af75a11a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E82D8",
+      "address": "0x001E82D8",
+      "file_offset": "0x000E92D8",
+      "size": 184,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E82D8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c805ca602475f473fc9785136722b87a6452e8894acebe658a25139f2e74d21b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Only zero status byte3E dispatches captured state byte3D through encoded mutable table3F8EE0. Returns fresh byte3E. All old member-pointer paths preserve signed16 table/vtable adjustments with32-bit sum.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004375A0",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 168,
+          "different_bytes": 150,
+          "compiled_sha256": "6626e85217779f82e1b113c9657102e515c17c70644b10fd8416c6b7e27ed86b",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 164,
+          "different_bytes": 150,
+          "compiled_sha256": "2d7e9399a869ef9b94cb29d888199f9830bec1a497b23eae04d7d45e47dbe35d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 164,
+          "different_bytes": 149,
+          "compiled_sha256": "715e9c9e24bbd0f999c57fcff67144a11862ae3fc50f84ccefc24f42f2df0a1c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E8900",
+      "address": "0x001E8900",
+      "file_offset": "0x000E9900",
+      "size": 44,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E8900",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "fe16917b129d3855e611de66943e105aa22eeedac3c960e806e1fcfd597d6824",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Resolves stored resource word10 withBA610, reads returned owner entity8 state0C, returns boolean state!=E. Original has no null check.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437628",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 44,
+          "different_bytes": 6,
+          "compiled_sha256": "73bdbd471f5af01c5ab1c0049d38728c839301f9a60403f9732651cc2065fb38",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "compiled_sha256": "fe16917b129d3855e611de66943e105aa22eeedac3c960e806e1fcfd597d6824",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "compiled_sha256": "fe16917b129d3855e611de66943e105aa22eeedac3c960e806e1fcfd597d6824",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "fe16917b129d3855e611de66943e105aa22eeedac3c960e806e1fcfd597d6824",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E89E0",
+      "address": "0x001E89E0",
+      "file_offset": "0x000E99E0",
+      "size": 152,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E89E0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6843101a97c7e14ba5f4f81cdbf43c8da9935cdeffc70d5b8940d9ef435bbe66",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots vehicle through owner word0; converts vehicle float18 to full64 soft-double bits with374848, compares against0 with373250 and obtains absolute bits via372CC0 subtraction when negative. Full64 comparison against double1 bits3FF0000000000000 gates adjusted-this virtual20/24 with float0, then returns1; otherwise0. m2c erroneously narrowed soft-double operands/results to32 bits and inferred integer virtual arg0; corrected from original full64 instructions and mtc1 f12.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437678",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 148,
+          "different_bytes": 129,
+          "compiled_sha256": "9c6af12bc5169893d20a77796a08619bf536c70849438ef4565fa9eb2792b684",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 140,
+          "different_bytes": 124,
+          "compiled_sha256": "06b7b80399acd190d95bfa25cfa484b0748fed9f260dc7eb67d7f3e296c44ab5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 140,
+          "different_bytes": 121,
+          "compiled_sha256": "71272cc6672672ed210de9446ae58b0927bcebb20e212974739efb01a738bfd2",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "original_float_constants": [],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E8DE0",
+      "address": "0x001E8DE0",
+      "file_offset": "0x000E9DE0",
+      "size": 60,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E8DE0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "1ec510f3af21ba51f13d14ffd7a084bdd9326cd59744146b85a9a737debf0f23",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Reads stored vehicle10 then virtual object38. Nonnull object invokes adjusted-this table1E0/1E4 with no asserted stale integer arguments; null skips call. Always returns1.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437788",
+          "entry_offset": "0x2C"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 60,
+          "different_bytes": 0,
+          "compiled_sha256": "1ec510f3af21ba51f13d14ffd7a084bdd9326cd59744146b85a9a737debf0f23",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 60,
+          "different_bytes": 0,
+          "compiled_sha256": "1ec510f3af21ba51f13d14ffd7a084bdd9326cd59744146b85a9a737debf0f23",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 60,
+          "different_bytes": 0,
+          "compiled_sha256": "1ec510f3af21ba51f13d14ffd7a084bdd9326cd59744146b85a9a737debf0f23",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compiled_sha256": "1ec510f3af21ba51f13d14ffd7a084bdd9326cd59744146b85a9a737debf0f23",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc323",
+        "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E8EC0",
+      "address": "0x001E8EC0",
+      "file_offset": "0x000E9EC0",
+      "size": 44,
+      "source": "src/game/goal_methods2.c",
+      "source_name": "func_001E8EC0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "abec6adc3e6f57f5b3d3a310c0706254449f133023bcccfd9ede18ef93b09ae6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots saved word14, then owner; nonzero sets half24 bit40 and zero clears it. Complements the previously matched avoidance save/apply method.",
+      "boundary_evidence": "Every entry-to-return instruction and branch reviewed; return delay included and alignment NOP padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004377D8",
+          "entry_offset": "0x24"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 40,
+          "different_bytes": 26,
+          "compiled_sha256": "701c8db719d0134a1e7cb3ae194be1ae9a409966e14fd4ac0e6fb7a108eefcce",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "compiled_sha256": "abec6adc3e6f57f5b3d3a310c0706254449f133023bcccfd9ede18ef93b09ae6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "compiled_sha256": "abec6adc3e6f57f5b3d3a310c0706254449f133023bcccfd9ede18ef93b09ae6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "abec6adc3e6f57f5b3d3a310c0706254449f133023bcccfd9ede18ef93b09ae6",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": []
+    }
+  ],
+  "primary_dispatch_proofs": {
+    "D_00436818": {
+      "address": "0x00436818",
+      "file_offset": "0x00337818",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "0c6cbeb987f5d92050d1375d0a3812cb00c8c6011698baa4e939b0914d6d57b9",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001D9970",
+        "0x14": "0x001D99A8",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001D99F8",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004368A0": {
+      "address": "0x004368A0",
+      "file_offset": "0x003378A0",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "65ac36f74f7810cd4860bee88cf463acb291ab3d94d849f1b2e06ccf8d48b0de",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001D9AD0",
+        "0x14": "0x001D9B08",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001D9B78",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436900": {
+      "address": "0x00436900",
+      "file_offset": "0x00337900",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "c7a34b071ca85aecd430e263029f5dc364095fdc1fb06ffc2dee4d9efdb69de0",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DA5C8",
+        "0x14": "0x001DA650",
+        "0x1C": "0x001DA790",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001D9D10",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004369A0": {
+      "address": "0x004369A0",
+      "file_offset": "0x003379A0",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "a68df91cb96fb7af337ae76d386a3156cf8cae3c98b0c241a224976726b48903",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DB910",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DB818",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436A70": {
+      "address": "0x00436A70",
+      "file_offset": "0x00337A70",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "d6ecd48d71cd909c739e3f4ac861446809e2c9b41b46ac49a8c20bf691c74228",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DC580",
+        "0x14": "0x001DC5F8",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DC618",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436AF8": {
+      "address": "0x00436AF8",
+      "file_offset": "0x00337AF8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "e8079a3a947e0ed16f3c2d30f5b26ff6a79968c33231af65a5a7655d61315223",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DC630",
+        "0x14": "0x001DC698",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x001DC6B8",
+        "0x2C": "0x001DC6D0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436B48": {
+      "address": "0x00436B48",
+      "file_offset": "0x00337B48",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "1156a3d327652e19a1cf8cd51675d80cd363de804b25bb1428f609e0681cc56d",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DC6D8",
+        "0x14": "0x001DC740",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DC750",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436B98": {
+      "address": "0x00436B98",
+      "file_offset": "0x00337B98",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "4a9337c0505bd0fa081fbe434c93011ced423774c27e9b46f8f5b9992d700508",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DC788",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x001DC7E0",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DC818",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436BF8": {
+      "address": "0x00436BF8",
+      "file_offset": "0x00337BF8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "468eeba4c08a98c7efc910db3c27416c11b6fd031e05880e330a1eaa17ae5261",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DC820",
+        "0x14": "0x001DF168",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DC988",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436C48": {
+      "address": "0x00436C48",
+      "file_offset": "0x00337C48",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "56811f88de24330532bcf4cc453fdc8cc625b53852143d6953d218b3df0fc07e",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001DFD18",
+        "0x14": "0x001DF548",
+        "0x1C": "0x001DFDA8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DF630",
+        "0x34": "0x001DFDB0"
+      }
+    },
+    "D_00436C98": {
+      "address": "0x00436C98",
+      "file_offset": "0x00337C98",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "7189bf746b5048dab25cacbfe687461f2ddafaa38427f32a7d2ed3995547ea69",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E04A8",
+        "0x14": "0x001E0530",
+        "0x1C": "0x001E05C8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001DFDB8",
+        "0x34": "0x001E0628"
+      }
+    },
+    "D_00436CE8": {
+      "address": "0x00436CE8",
+      "file_offset": "0x00337CE8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "a2c4740bd9bc3ed005a5e7304b438e09a8a0dd3286264d3cd9cebe3133336a29",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E0CE0",
+        "0x14": "0x001E06D8",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E07E0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436DC0": {
+      "address": "0x00436DC0",
+      "file_offset": "0x00337DC0",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "71cd1ea7e07feeeb6b23704d9937bef1d6978246f2d9a2962e7144660537420b",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E0F18",
+        "0x14": "0x001E0F50",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E0FA0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00436E48": {
+      "address": "0x00436E48",
+      "file_offset": "0x00337E48",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "6f1aa76e84a3538895b4a583ac49d3f0baeaf92ccee1dd81cbc68b4b8c0fe41c",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E10C8",
+        "0x14": "0x001E1100",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E1188",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437118": {
+      "address": "0x00437118",
+      "file_offset": "0x00338118",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "0b8e5ee9ac19977df37d4514174ebf3c95476c1a063e209a84139debb787d921",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E1DD0",
+        "0x14": "0x001E1E38",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E1E50",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437168": {
+      "address": "0x00437168",
+      "file_offset": "0x00338168",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "98d150b5fd4f8ae6dfe0cdd8e06356eb5e3e901668ec11ca6f431a5587e994da",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E1E58",
+        "0x14": "0x001E1EC0",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E1F20",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004371B8": {
+      "address": "0x004371B8",
+      "file_offset": "0x003381B8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "05041b60b1a24a7ed64daef63177c568ad8ee650f83255f732268cd02f8f90e6",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E1F98",
+        "0x14": "0x001E1FE8",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E2010",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437340": {
+      "address": "0x00437340",
+      "file_offset": "0x00338340",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "281a024cdd29f2daa9398de0bb921638fdbcc237db015822ecba72312441eb2c",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E5968",
+        "0x14": "0x001E59E0",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E5A18",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437390": {
+      "address": "0x00437390",
+      "file_offset": "0x00338390",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "f96b7653ccb91af30e3d79f4e508c75355531937bbc7810a3909beb4029b914d",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E5B08",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x001E5BA0",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E5B60",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004374C8": {
+      "address": "0x004374C8",
+      "file_offset": "0x003384C8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "dd33063d881ad5bfe9a8a7300c40d8e590b9deb11bb8a7162db56935101b6467",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E6808",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x001E68D8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E6870",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004375A0": {
+      "address": "0x004375A0",
+      "file_offset": "0x003385A0",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "7ba7fc5b8b42910fe9208ce023064ffd65452b211a3e61ee42614dc641632291",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E8580",
+        "0x14": "0x001E7690",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E82D8",
+        "0x34": "0x001E8600"
+      }
+    },
+    "D_00437628": {
+      "address": "0x00437628",
+      "file_offset": "0x00338628",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "6aea88bdec00c0c47003ddf9908013b201ad5c6d2c79f2b8135d7ef83081e168",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E87A0",
+        "0x14": "0x001E8818",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E8900",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437678": {
+      "address": "0x00437678",
+      "file_offset": "0x00338678",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "cf4b91b775467166f3b24ef5ac8e57f4d45cf47328998c4834b59451f763a2ce",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E8930",
+        "0x14": "0x001E8988",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E89E0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_00437788": {
+      "address": "0x00437788",
+      "file_offset": "0x00338788",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "ebb83f906cdc5d5bba8ef8b3e7276faf399272232518c947146a7259e6aaac5a",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E8D78",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x001E8DE0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_004377D8": {
+      "address": "0x004377D8",
+      "file_offset": "0x003387D8",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "5a38d356aaec8a4531bcf60a437b9f3d42fb27c7e3571c9bc9d72a38247ee0da",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x001E8E20",
+        "0x14": "0x001E8E88",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x001E8EC0",
+        "0x2C": "0x001E8EF0",
+        "0x34": "0x0020D308"
+      }
+    },
+    "D_0043A2B0": {
+      "address": "0x0043A2B0",
+      "file_offset": "0x0033B2B0",
+      "original_section": ".rodata",
+      "reviewed_prefix_size": 56,
+      "reviewed_prefix_sha256": "bcb45e33a3ea0f78ef5a09a3f697d7aed27d0efb7ad57ece40590e0bff5b4d3e",
+      "evidence": "Constructor-proven primary dispatch prefix:8-byte header and six8-byte adjusted-this/function entries. No methods inferred beyond offset38; adjacent strings/exception tables excluded.",
+      "observed_method_entries": {
+        "0x0C": "0x0020D2C0",
+        "0x14": "0x0020D2F0",
+        "0x1C": "0x0020D2F8",
+        "0x24": "0x0020D300",
+        "0x2C": "0x00371D40",
+        "0x34": "0x0020D308"
+      }
+    }
+  },
+  "native_semantic_validation": {
+    "compiler": "MinGW GCC4.6.2,32-bit x86",
+    "flags": [
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-strict-aliasing"
+    ],
+    "harness": "build/goal_methods2/semantic_harness.c",
+    "harness_sha256": "ef35f63a43898a199b1e5df76d71d58af51166c1118c2987f0679414d4159248",
+    "checks": 127,
+    "failures": 0,
+    "scope": "Instruction-derived observable expectations and callback stubs for member selectors/large adjustment sum, timer boundaries and overlap, callback/owner reloads, route aliases, idle argument/sign/wrap paths, soft-double64 bits and stack output",
+    "match_proof": false
+  }
+}

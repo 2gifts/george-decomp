@@ -4,13 +4,13 @@
   "symbols": {
     "strtol": {
       "address": "0x39ca20",
-      "confidence": "confirmed",
-      "evidence": "R_MIPS_26 binding from verified upstream atoi; wrapper forwards to _strtol_r number parser."
+      "confidence": "corroborated",
+      "evidence": "Original reentrancy wrapper preserves input/endptr/base argument order, loads _impure_ptr and calls independently reviewed _strtol_r. It is also the proven verified atoi call target. Unchanged upstream source fully links but scheduling differs."
     },
     "_strtol_r": {
       "address": "0x39c7f0",
       "confidence": "corroborated",
-      "evidence": "strtol call target; character classification, sign handling, radix and digit conversion establish parser semantics. Source not yet byte matched."
+      "evidence": "Complete whitespace/sign/radix/digit parser matches unchanged upstream source, including 64-bit LONG_MIN/MAX cutoff arithmetic, overflow errno34 and endptr selection. Original uses the exact upstream ctype table and calls independently identified unsigned64 division/remainder and low64 multiplication helpers. Long64 with pointer32 is supported by the unmodified EE backend. Fully linked candidate differs."
     },
     "_impure_ptr": {
       "address": "0x405694",
@@ -71,6 +71,112 @@
       "address": "0x37dda0",
       "confidence": "corroborated",
       "evidence": "Complete bit-twiddling floorf algorithm, huge1e30 inexact check and special-value branches match unchanged public newlib1.8.1 source; byte match pending."
+    },
+    "tolower": {
+      "address": "0x39ca58",
+      "confidence": "corroborated",
+      "evidence": "Complete leaf uses _ctype_[c+1] uppercase bit1 and conditional ASCII+32; entire257-byte upstream ctype table exactly matches retail. Unchanged source fully links but instruction scheduling differs."
+    },
+    "toupper": {
+      "address": "0x39ca78",
+      "confidence": "corroborated",
+      "evidence": "Complete leaf uses _ctype_[c+1] lowercase bit2 and conditional ASCII-32; entire257-byte upstream ctype table exactly matches retail. Unchanged source fully links but instruction scheduling differs."
+    },
+    "_setlocale_r": {
+      "address": "0x39ca98",
+      "confidence": "corroborated",
+      "evidence": "Complete MB_CAPABLE implementation agrees: LC_CTYPE2/LC_ALL0, C/empty/C-JIS/C-EUCJP/C-SJIS comparisons (including redundant C check), previous/current locale strcpy, JIS8/multibyte2/default1, reentrancy fields0x30/0x34, and nullable query return. Source locale constants/table and initialized writable data independently agree with retail after actual data relocations. Compiler-local writable data and relocation-bearing readonly lconv mapping are unsupported by the verifier; source remains explicitly unresolved and reconstructed."
+    },
+    "_localeconv_r": {
+      "address": "0x39cc68",
+      "confidence": "matched",
+      "evidence": "Complete unchanged newlib locale leaf and its 96-byte readonly self-pointer section link exactly, including all ten actual R_MIPS_32 data relocations; full verifier independently passes."
+    },
+    "setlocale": {
+      "address": "0x39cc78",
+      "confidence": "corroborated",
+      "evidence": "Complete wrapper loads _impure_ptr and forwards category/locale to independently reviewed _setlocale_r. Unchanged upstream source fully links; instruction ordering differs."
+    },
+    "localeconv": {
+      "address": "0x39cca8",
+      "confidence": "corroborated",
+      "evidence": "Complete wrapper loads _impure_ptr and calls independently reviewed _localeconv_r. Unchanged upstream source fully links; instruction ordering differs."
+    },
+    "floor": {
+      "address": "0x39ccd0",
+      "confidence": "corroborated",
+      "evidence": "Complete double floor bit algorithm agrees: exponent1023 adjustment, low/high fractional masks, signed-zero/negative-one handling, huge1e300 inexact checks, carry into high word, integral returns and infinity/NaN x+x. Exact complete16-byte huge pool mapping at0x456c90 corroborates dpadd/dpcmp call roles. Unchanged source fully links but code differs."
+    },
+    "__ieee754_fmod": {
+      "address": "0x39cec0",
+      "confidence": "corroborated",
+      "evidence": "Complete double shift/subtract remainder matches source: signed high/unsigned low extraction, exceptional(x*y)/(x*y), magnitude comparison, normal/subnormal exponent loops and shifts, borrow subtraction, final normalization/sign and signed-zero indexed returns. Exact complete24-byte one/Zero pool at0x456ca0 plus arithmetic call roles are independently proven. Unchanged source fully links but code differs."
+    },
+    "_ctype_": {
+      "address": "0x456118",
+      "confidence": "corroborated",
+      "evidence": "Whole257-byte unchanged public newlib ctype_.c object equals retail data; parser/case-conversion instructions use this base+1.",
+      "source": "src/runtime/ctype_table.c",
+      "size": 257,
+      "section": ".rodata",
+      "file_offset": "0x357118",
+      "sha256": "8b55a0d9c781d7001042c99e21523fef362440f572faef950e8e600fae5de813",
+      "upstream_source_sha256": "abe4161ebc4a20df1e7dc050c4d741baad2cea2f7d1d3bb654cb252e923028bf"
+    },
+    "__muldi3": {
+      "address": "0x371ce0",
+      "confidence": "corroborated",
+      "evidence": "Original _strtol_r calls this for acc*base; complete helper forms low64 product from32-bit low multiplication and high-word cross products."
+    },
+    "__udivdi3": {
+      "address": "0x371d48",
+      "confidence": "corroborated",
+      "evidence": "Original _strtol_r calls this for unsigned64 cutoff/base; reviewed unsigned normalized high/low division flow corroborates role."
+    },
+    "__umoddi3": {
+      "address": "0x372318",
+      "confidence": "corroborated",
+      "evidence": "Original _strtol_r calls this before division for unsigned64 cutoff%base; returned low32 remainder becomes cutlim."
+    },
+    "strcmp": {
+      "address": "0x393a28",
+      "confidence": "corroborated",
+      "evidence": "Complete two-string unsigned-character difference flow matches public PS2DEV newlib R5900 assembly; used by independently reviewed locale routine."
+    },
+    "strcpy": {
+      "address": "0x393b74",
+      "confidence": "corroborated",
+      "evidence": "Complete aligned qword/dword and byte terminating-NUL copy returns original destination, matching public PS2DEV newlib assembly; called by locale routine."
+    },
+    "strlen": {
+      "address": "0x295050",
+      "confidence": "corroborated",
+      "evidence": "Root manually reviewed this byte-length loop; original newlib locale source calls the same target for multi-byte locale-name length."
+    },
+    "__mb_cur_max": {
+      "address": "0x405e90",
+      "confidence": "corroborated",
+      "evidence": "Original locale implementation writes8 for C-JIS,2 for longer locale names,1 for C/empty; initialized writable source data agrees exactly."
+    },
+    "dpadd": {
+      "address": "0x372c68",
+      "confidence": "corroborated",
+      "evidence": "Complete floor source identity associates huge+x and special-value x+x original calls with soft-double add."
+    },
+    "dpmul": {
+      "address": "0x372d28",
+      "confidence": "corroborated",
+      "evidence": "Complete double fmod exceptional source path calls same soft-double helper twice for x*y."
+    },
+    "dpdiv": {
+      "address": "0x372fd0",
+      "confidence": "corroborated",
+      "evidence": "Complete double fmod exceptional source path divides its two independently computed x*y results by this helper."
+    },
+    "dpsub": {
+      "address": "0x372cc0",
+      "confidence": "corroborated",
+      "evidence": "Complete retail goal-state method reviewed by recover_code uses this helper on two full64 soft-double operands; call role is double subtraction. No source or byte identity claimed."
     }
   }
 }
