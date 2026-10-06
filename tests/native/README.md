@@ -115,3 +115,24 @@ and callback-mutated delimiter pointers/source/counter. Run it with
 `--harness text_tokens`. Its 172 synthetic byte fixtures regenerate through
 `tools/trace_text_tokens.py`; controlled length/compare substitutes do not model
 the original vectorized library. See `docs/text_tokens.md` for buffer limits.
+
+The text-lookup harness passes 66,408 checks for sparse initialization, untouched
+context bytes, sentinel/code reloads and table aliases, valid signed ctype indices,
+ordered duplicate/fallback value scans, callback mutation and output aliases.
+Run it with `--harness text_lookup`. It links the already reviewed token helper
+and unchanged licensed newlib character table; compare/copy use controlled ABI
+substitutes. See `docs/text_lookup.md` for capacities and signed-index limits.
+
+The typed-text harness passes 454 checks for all lookup precedences, sequential
+truth comparisons and output mutations, vector scanner pointer ABI/ignored count,
+optional lowercase/copy order, initial output aliases, wrapped depth accumulation
+and fresh EOF/count gates. Run it with `--harness text_values`. The scanner
+substitute writes every lane; unwritten lanes from real partial conversion remain
+outside defined C semantics. See `docs/text_values.md` for limits and reuse proof.
+## Identical game algorithm bodies
+
+`run_utilities.py --harness algorithm_duplicates` compiles all 61 recovered
+entries using shared ordinary C definitions. It passes 2,375,547 checks against
+an independent sorted-range oracle, callback mutations, map lookup/visitor
+effects and gated action reload/overlap cases. The 58 search entries share one
+algorithm; repeated checks do not imply 58 distinct gameplay behaviors.

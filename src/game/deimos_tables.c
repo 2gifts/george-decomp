@@ -1,4 +1,5 @@
 #include "george/deimos_tables.h"
+#include "george/algorithm_templates.h"
 
 extern GeorgeGenericMap *D_00481760;
 extern void *D_00481768;
@@ -87,17 +88,7 @@ void func_002CDDB0(GeorgeDeimosVisitor callback, void *context)
     func_002A8130(D_00481760, func_002CDD88, &visitor);
 }
 
-void *func_002A7C08(GeorgeGenericMap *map, u32 key)
-{
-    GeorgeGenericMapNode *node = map->buckets[key % map->bucket_count];
-    while (node != 0) {
-        if (node->key == key) {
-            return node->value;
-        }
-        node = node->next;
-    }
-    return 0;
-}
+GEORGE_DEFINE_MAP_LOOKUP(func_002A7C08)
 
 /* Bit zero permits duplicate keys; otherwise replace the first matching value. */
 void func_002A7CD0(GeorgeGenericMap *map, u32 key, void *value)
@@ -126,20 +117,4 @@ void func_002A7CD0(GeorgeGenericMap *map, u32 key, void *value)
 }
 
 /* Save next before invoking a callback that may remove the current node. */
-void func_002A8130(GeorgeGenericMap *map, GeorgeGenericMapVisitor callback, void *context)
-{
-    u32 bucket = 0;
-    if (map->bucket_count != 0) {
-        do {
-            GeorgeGenericMapNode *node = map->buckets[bucket];
-            while (node != 0) {
-                void *value = node->value;
-                u32 key = node->key;
-                node = node->next;
-                callback(map, key, value, context);
-            }
-            ++bucket;
-            /* Count and bucket base are observed again after each callback chain. */
-        } while (bucket < map->bucket_count);
-    }
-}
+GEORGE_DEFINE_MAP_VISITOR(func_002A8130)

@@ -14,6 +14,7 @@ from pathlib import Path
 from elftools.elf.elffile import ELFFile
 from elftools.elf.relocation import RelocationSection
 from analyze import ROOT, validated_elf, write_json
+from source_provenance import validate_sources
 
 DEFAULT_FLAGS = ["-O2", "-G0", "-fno-builtin", "-fno-strict-aliasing"]
 
@@ -284,6 +285,7 @@ def main():
     args = parser.parse_args()
     spec, original = validated_elf(ROOT / "orig/SLUS_216.68")
     functions = manifests()
+    validate_sources(functions)
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)
         sections = [{"name": name, "offset": elf.get_section_by_name(name)["sh_offset"],

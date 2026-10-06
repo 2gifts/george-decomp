@@ -18,8 +18,8 @@ unrelated semantics. Scanner candidates alone do not establish function names.
 These ten earlier verified functions were independently compiled or assembled,
 and their complete function bytes compared with the retail executable again.
 The GNU floating-point runtime batch below adds twenty-four further verified C
-functions, and the GNU integer conversion batch adds five, all from unchanged
-upstream source.
+functions, the GNU integer conversion batch adds five, and the later cosine
+wrapper adds one, all from unchanged upstream source.
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
 | --- | --- | ---: | --- | --- | --- |
@@ -38,7 +38,8 @@ The 572 bytes of reused assembly remain separate from high-level C
 decompilation progress. The 504 bytes of compiled `fabsf`, `atoi`, `matherr`,
 `__errno`, `_localeconv_r`, `sinf`, and `tanf`, plus the 3,264 bytes of the GNU
 floating-point runtime batch and 820 bytes of the GNU integer conversion batch
-below, total 4,588 bytes from 36 verified C functions.
+below, plus 232 bytes from the cosine wrapper, total 4,820 bytes from 37 verified
+C functions.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -655,3 +656,121 @@ full function hashes and terminal delays. Every internal original JAL target
 agrees with the established runtime binding set, and all five actual linked
 comparison records are exact. The complete global verifier remains the
 checkpoint authority for reproducing these matches from the tracked layout.
+
+Four further complete functions reuse that same unchanged source and pinned
+header package. Their full original control flow and runtime ABI have been
+reviewed, and each full candidate compiles and genuinely links. All four remain
+reconstructed because complete code equality has not been achieved.
+
+| Symbol | Original address | Original / compiled bytes | Direct JAL references |
+| --- | --- | ---: | ---: |
+| `__floatdisf` | `0x00371598` | 224 / 220 | 2 |
+| `__moddi3` | `0x00371678` | 1640 / 1624 | 2 |
+| `__udivdi3` | `0x00371D48` | 1488 / 1472 | 12 |
+| `__umoddi3` | `0x00372318` | 1344 / 1328 | 7 |
+
+The signed integer-to-float source preserves a representative discarded bit
+before its intermediate double conversion, avoiding double rounding outside
+the open interval `(-2^53, 2^53)`. Its first 88 linked bytes are equal, but later
+scheduling and the complete length differ. The arithmetic routines use the
+authentic normalized two-half division implementation in `longlong.h`:
+one-word and two-word divisors, sixteen-bit partial quotients, trial corrections,
+the intentional zero-divisor trap, and the special paths that avoid a shift by
+32. Signed remainder preserves the numerator sign after magnitude conversion;
+unsigned quotient and remainder return their respective complete 64-bit result.
+All branches, carry/borrow operations and return-delay extents were checked
+against each entire original instruction interval.
+
+Each of the three division/remainder objects contains its own complete static
+256-byte `__clz_tab` read-only section. Those unchanged tables exactly equal
+retail sections at `0x00454348`, `0x00454448` and `0x00454548`, respectively,
+with SHA256 `14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac`.
+Three original `LUI`/`ADDIU` pointer pairs in each complete function establish
+the corresponding base. Per-function whole-section mappings preserve these
+distinct file-local copies; no single global `__clz_tab` alias replaces them.
+The actual GNU linker resolves the references and checks complete mapped data
+equality. Table identity alone earns no function matching credit.
+
+These four original bodies total 4,696 bytes. Their complete SHA256 hashes,
+twenty-three decoded original JAL entries, terminal return/delay instructions,
+independently established adjacent runtime boundaries and disjoint registered
+ranges are recorded. Fresh full linked comparisons have no unresolved
+references; their differing code remains explicitly reconstructed.
+
+## Case-insensitive string comparison
+
+The complete 124-byte function at `0x003983E8` agrees with unchanged public
+newlib 1.8.1
+[`strcasecmp.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strcasecmp.c).
+The imported source SHA256 is
+`59bfbc23edcc0ba86cd71d82f8fd90acd88922d02a5886ca5824c7eb9af11872`.
+It has no file-specific copyright notice, so the default Cygnus Solutions
+1994/1997 permissive notice in section 9 of `LICENSES/newlib-1.8.1.txt` applies.
+This software was developed at Cygnus Solutions.
+
+All 31 original instructions were checked: the loop first tests the left
+signed byte for zero, calls `tolower` on both signed bytes, and advances both
+pointers only when those results agree. The final difference calls `tolower`
+on unsigned bytes. The four original calls target the already reviewed
+`tolower` at `0x0039CA58`. Sixty-five decoded original direct calls establish
+the entry; the final return at `0x0039845C` and its delay at `0x00398460` exclude
+the following alignment word at `0x00398464`.
+
+`src/runtime/ctype_function_calls.h` is an explicit macro-only build adapter.
+It undefines the GNU header's `tolower` and `toupper` macros to retain those
+observed library calls; the imported upstream C stays byte-for-byte unchanged.
+This preserves the original signed-char loop behavior, including negative
+byte values, rather than substituting an ASCII-only comparison. The full
+genuine linked GCC 2.9 candidate is also 124 bytes, but differs in twenty bytes
+of register-save widths/slots and prologue/epilogue scheduling. GCC 3.2.3 emits
+140 bytes. The function therefore remains reconstructed, with both full
+comparison records retained and no match credit.
+
+## Declared source provenance checks
+
+`tools/source_provenance.py` validates every explicitly declared upstream source
+SHA256 and adapter dependency before the verifier starts compiling any function.
+The hybrid build performs the same complete preflight before invoking its
+subprocesses. The nine GNU `libgcc2.c` entries explicitly name their package
+manifest, so all eighteen source, header and genuine generated-configuration
+hashes are checked as well; the package must include the exact function source
+with the same declared hash. Missing files, corrupted headers, conflicting or
+malformed declarations and paths outside the workspace fail the preflight.
+The optional fields remain compatible with reconstructed project code that has
+no upstream provenance declaration. These checks establish byte preservation
+of the recorded inputs; they do not infer source identity or license eligibility.
+Fourteen focused tests cover corruption and missing dependencies, complete
+package binding, optional metadata, adapter changes and both entry points
+rejecting a later bad declaration before any compiler or build subprocess runs.
+
+## Cosine wrapper and rejected-character prefix
+
+The complete cosine wrapper at `0x0037AFD8` adds 232 exact high-level C bytes
+from unchanged public newlib 1.8.1
+[`sf_cos.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_cos.c).
+Its source SHA256 is
+`f8f2fed57fdf4fb434ec0f74af85a8c4b8d648ecd3d53a6b2733f8429b72759a`;
+the full Sun Microsystems 1993 permissive notice and Ian Lance Taylor
+conversion credit remain intact. The same GCC 2.9 flags used for the reviewed
+sine wrapper produce complete linked equality, with SHA256
+`7821faaad4076dacd4c14d5e0f228390c8c224be263f83268e6bdfe12c3eae71`.
+Every magnitude threshold, nonfinite `x-x` branch, reducer call and all four
+`n & 3` cosine/sine/sign selections agree with the original instructions.
+Ten original direct calls and the complete return/delay extent independently
+identify the entry. Its common `fdlibm.h` dependency is the already imported,
+unchanged official newlib 1.10.0 header described above, with its own explicit
+dependency hash; it is not claimed to come from the older source repository.
+
+The adjacent complete 108-byte string routine at `0x00398468` reuses unchanged
+newlib 1.8.1
+[`strcspn.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strcspn.c),
+SHA256 `042b87f217f959a6845b6dd5710a7f52179db07a1e403f14e4a2da96641d6085`.
+It has no file-specific notice; the default Cygnus Solutions 1994/1997
+permissive notice in section 9 of `LICENSES/newlib-1.8.1.txt` applies. This
+software was developed at Cygnus Solutions. All 27 original instructions agree
+with the outer source-prefix loop, inner reject-string search and final pointer
+difference. Seven original direct calls establish the entry; the following
+alignment word is excluded. Full genuine links have no unresolved references,
+but emit 104 bytes with GCC 3.2.3 and 92 with GCC 2.9. `strcspn` remains
+reconstructed. The runtime exact totals are now 37 C functions / 4,820 bytes
+and three separate upstream assembly functions / 572 bytes.

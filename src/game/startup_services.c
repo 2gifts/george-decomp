@@ -1,4 +1,5 @@
 #include "george/startup.h"
+#include "george/algorithm_templates.h"
 
 /*
  * Address names and observed offsets are preserved. These routines operate on
@@ -33,22 +34,7 @@ extern void *func_002CDF90(void);
 extern void func_002CC938(const char *message);
 
 /* 0x00100C30: upper-bound search over 4-byte entries with an indirect comparator. */
-void **func_00100C30(void **begin, void **end, void *const *key, GeorgeStartupCompare compare)
-{
-    s32 count = (s32)(end - begin);
-
-    while (count > 0) {
-        s32 half = count >> 1;
-        void **middle = begin + half;
-        if (compare(*key, *middle) != 0) {
-            count = half;
-        } else {
-            begin = middle + 1;
-            count = count - half - 1;
-        }
-    }
-    return begin;
-}
+GEORGE_DEFINE_UPPER_BOUND(func_00100C30)
 
 /* 0x00100CD0: base cleanup, global release, and optional deletion. */
 void func_00100CD0(GeorgeStartupBase *object, u32 flags)

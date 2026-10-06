@@ -1,5 +1,6 @@
 #include "george/goals.h"
 #include "george/deimos_calls.h"
+#include "george/algorithm_templates.h"
 
 extern u8 D_00436818[], D_004368A0[], D_00436DC0[], D_00436E48[];
 extern u8 D_00436CE8[], D_004371B8[], D_00437390[], D_004375A0[];
@@ -91,12 +92,7 @@ void func_001D9B08(GeorgeGoalTimedAction *goal)
     }
 }
 
-void func_001E0F50(GeorgeGoalTimedAction *goal)
-{
-    if (func_00174500(OWNER(goal)->field08) != 0) {
-        START_ACTION_BODY();
-    }
-}
+GEORGE_DEFINE_ACTION_RESTART(func_001E0F50)
 
 void func_001E1100(GeorgeGoalTimedAction *goal)
 {

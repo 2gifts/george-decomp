@@ -12,10 +12,12 @@ import sys
 
 from elftools.elf.elffile import ELFFile
 from analyze import ROOT, validated_elf, write_json
-from verify import object_functions, validate_target_function
+from verify import manifests, object_functions, validate_target_function
+from source_provenance import validate_sources
 
 
 def main():
+    validate_sources(manifests())
     subprocess.run([sys.executable, str(ROOT / "tools/bootstrap_toolchain.py"), "--verify-only"], cwd=ROOT, check=True)
     # Recompile and recheck on every build so stale artifacts cannot earn matches.
     for script in ("baseline.py", "verify.py"):

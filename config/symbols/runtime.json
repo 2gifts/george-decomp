@@ -129,14 +129,14 @@
       "evidence": "Complete low64 multiplication combines unsigned low32 product with both high-word cross-products using authentic GNU longlong.h multiplication. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (96 bytes); decoded original JAL instructions independently establish the entry."
     },
     "__udivdi3": {
-      "address": "0x371d48",
-      "confidence": "corroborated",
-      "evidence": "Original _strtol_r calls this for unsigned64 cutoff/base; reviewed unsigned normalized high/low division flow corroborates role."
+      "address": "0x00371D48",
+      "confidence": "identified",
+      "evidence": "Full unsigned64 quotient splits numerator/denominator into32-bit halves, normalizes one- or two-word divisors using exact local clz table, performs16-bit partial divisions with up to two correction steps, handles the zero-denominator intentional divide and quotient0/1 boundary cases, then returns full64 quotient. Original direct JAL entries, complete return extents and authentic unchanged GNU source establish identity; full linked bytes differ and remain reconstructed."
     },
     "__umoddi3": {
-      "address": "0x372318",
-      "confidence": "corroborated",
-      "evidence": "Original _strtol_r calls this before division for unsigned64 cutoff%base; returned low32 remainder becomes cutlim."
+      "address": "0x00372318",
+      "confidence": "identified",
+      "evidence": "Full unsigned64 remainder shares the complete normalized two-half division graph, exact local clz table, deliberate divide-by-zero path and carry/borrow correction branches; returns the denormalized full64 remainder rather than quotient. Original direct JAL entries, complete return extents and authentic unchanged GNU source establish identity; full linked bytes differ and remain reconstructed."
     },
     "strcmp": {
       "address": "0x393a28",
@@ -401,6 +401,31 @@
       "address": "0x00371500",
       "confidence": "matched",
       "evidence": "Complete signed64-to-double conversion scales the signed upper32 contribution by 2^16 twice and adds the unsigned lower32 contribution. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (152 bytes); decoded original JAL instructions independently establish the entry."
+    },
+    "__floatdisf": {
+      "address": "0x00371598",
+      "confidence": "identified",
+      "evidence": "Full signed64-to-float conversion protects against double rounding: outside open(-2^53,2^53), nonzero discarded low11bits set representative bit11; signed upper32 is scaled by2^16 twice, unsigned lower32 is added, then exact dptofp is called. Original direct JAL entries, complete return extents and authentic unchanged GNU source establish identity; full linked bytes differ and remain reconstructed."
+    },
+    "__moddi3": {
+      "address": "0x00371678",
+      "confidence": "identified",
+      "evidence": "Full signed64 remainder normalizes both input magnitudes with low/high borrow, retains only numerator sign, invokes the inlined normalized unsigned divide/remainder algorithm, reconstructs full64 remainder and negates it for a negative numerator. Original direct JAL entries, complete return extents and authentic unchanged GNU source establish identity; full linked bytes differ and remain reconstructed."
+    },
+    "strcasecmp": {
+      "address": "0x003983E8",
+      "confidence": "identified",
+      "evidence": "Complete unchanged pinned newlib1.8.1 algorithm with signed-byte loop and unsigned-byte final subtraction, four original tolower0039CA58 calls, decoded entry proof and full original return extent. Full candidate differs; reconstructed."
+    },
+    "cosf": {
+      "address": "0x0037AFD8",
+      "confidence": "matched",
+      "evidence": "Complete magnitude threshold0x3F490FD8, nonfinite x-x result, two-float pi/2 reducer output and all four n&3 cosine/sine/sign selections agree with every original instruction. Whole genuine linked gcc29 code exactly equals all232 retail bytes. Unchanged pinned public source, decoded originalJALentry and completeoriginalextent."
+    },
+    "strcspn": {
+      "address": "0x00398468",
+      "confidence": "identified",
+      "evidence": "Complete signed-byte outer source-prefix loop and inner reject-string search stop at the first matching reject character or source terminator, then return the32-bit pointer difference. Entire original27-instruction graph agrees with unchanged public source; candidate scheduling/length differ, so remains reconstructed. Unchanged pinned public source, decoded originalJALentry and completeoriginalextent."
     }
   }
 }

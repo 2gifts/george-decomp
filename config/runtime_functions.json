@@ -4039,7 +4039,8 @@
           "expected_sha256": "3c09d81263316d3174c3a87cc650fa8bcfaf1397d0f36beb4544d7814b34534b",
           "compiled_sha256": "3c09d81263316d3174c3a87cc650fa8bcfaf1397d0f36beb4544d7814b34534b"
         }
-      ]
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
     },
     {
       "name": "__fixunsdfdi",
@@ -4113,7 +4114,8 @@
           "expected_sha256": "8aaaea61d18f215037c03b46cbf33a324694f926f2ce15eaefc11dba2e2a51ed",
           "compiled_sha256": "8aaaea61d18f215037c03b46cbf33a324694f926f2ce15eaefc11dba2e2a51ed"
         }
-      ]
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
     },
     {
       "name": "__fixdfdi",
@@ -4185,7 +4187,8 @@
           "expected_sha256": "1b57d7d936d16c106faf2d2f13023f5734e9e7b60dde7d315471ee42336c2f44",
           "compiled_sha256": "1b57d7d936d16c106faf2d2f13023f5734e9e7b60dde7d315471ee42336c2f44"
         }
-      ]
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
     },
     {
       "name": "__fixunssfdi",
@@ -4266,7 +4269,8 @@
           "expected_sha256": "a8e5daab6c135bf3048a66907becb4e2614f6b18fc79c8736bb494621ba3327f",
           "compiled_sha256": "a8e5daab6c135bf3048a66907becb4e2614f6b18fc79c8736bb494621ba3327f"
         }
-      ]
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
     },
     {
       "name": "__floatdidf",
@@ -4343,6 +4347,811 @@
           "unresolved_relocations": [],
           "expected_sha256": "dd17780f6b7c5d86c254349db669d88628f10166030b5e46f7f97be266316e02",
           "compiled_sha256": "dd17780f6b7c5d86c254349db669d88628f10166030b5e46f7f97be266316e02"
+        }
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
+    },
+    {
+      "source": "src/runtime/gcc/libgcc2.c",
+      "source_kind": "c",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/libgcc2.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c",
+      "upstream_license": "GPL-2.0-or-later with original GCC linking exception, preserved in unchanged source and LICENSES/GCC-libgcc2-exception.txt; full GPL in LICENSES/GPL-2.0.txt. Unchanged public GNU source headers retain their notices and pinned hashes in src/runtime/gcc/provenance.json.",
+      "compiler_profile": "gcc29",
+      "link": true,
+      "name": "__floatdisf",
+      "address": "0x00371598",
+      "file_offset": "0x00272598",
+      "size": 224,
+      "status": "reconstructed",
+      "original_sha256": "d74c11006ace0786b524479a5a196ead3ae19dc9f4de4251ddb76a141793197b",
+      "upstream_symbol": "__floatdisf",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DIN_LIBGCC2",
+        "-D__GCC_FLOAT_NOT_NEEDED",
+        "-Dinhibit_libc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-DL_floatdisf"
+      ],
+      "evidence": "Full signed64-to-float conversion protects against double rounding: outside open(-2^53,2^53), nonzero discarded low11bits set representative bit11; signed upper32 is scaled by2^16 twice, unsigned lower32 is added, then exact dptofp is called. Complete original control flow and helper ABI independently agree with unchanged pinned GNU libgcc2.c and longlong.h. The genuine full linked candidate differs in scheduling and length, so no code-match credit is awarded. Complete source/header/configuration hashes remain pinned in src/runtime/gcc/provenance.json.",
+      "boundary_evidence": "Decoded original JAL entry references, complete original instruction interval and terminal JR/return-delay extent, full original SHA256, adjacent independently established source function boundaries and disjoint original ranges identify this complete body.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 2,
+        "reference_addresses": [
+          "0x0036E9C4",
+          "0x0036E9DC"
+        ],
+        "return_address": "0x00371670",
+        "delay_address": "0x00371674"
+      },
+      "candidate_comparisons": [
+        {
+          "identical": false,
+          "expected_size": 224,
+          "compiled_size": 220,
+          "different_bytes": 116,
+          "first_different_offsets": [
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d74c11006ace0786b524479a5a196ead3ae19dc9f4de4251ddb76a141793197b",
+          "compiled_sha256": "d4089e04323a550f660110639af815818c672441a21c43fcd1c70b758a0df286",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_floatdisf"
+          ]
+        }
+      ],
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
+    },
+    {
+      "source": "src/runtime/gcc/libgcc2.c",
+      "source_kind": "c",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/libgcc2.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c",
+      "upstream_license": "GPL-2.0-or-later with original GCC linking exception, preserved in unchanged source and LICENSES/GCC-libgcc2-exception.txt; full GPL in LICENSES/GPL-2.0.txt. Unchanged public GNU source headers retain their notices and pinned hashes in src/runtime/gcc/provenance.json.",
+      "compiler_profile": "gcc29",
+      "link": true,
+      "name": "__moddi3",
+      "address": "0x00371678",
+      "file_offset": "0x00272678",
+      "size": 1640,
+      "status": "reconstructed",
+      "original_sha256": "cc7adc787c1f32545c10fa1ad78503014fd31148faa44ab72681ba4770c13b4b",
+      "upstream_symbol": "__moddi3",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DIN_LIBGCC2",
+        "-D__GCC_FLOAT_NOT_NEEDED",
+        "-Dinhibit_libc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-DL_moddi3"
+      ],
+      "evidence": "Full signed64 remainder normalizes both input magnitudes with low/high borrow, retains only numerator sign, invokes the inlined normalized unsigned divide/remainder algorithm, reconstructs full64 remainder and negates it for a negative numerator. Complete original control flow and helper ABI independently agree with unchanged pinned GNU libgcc2.c and longlong.h. The genuine full linked candidate differs in scheduling and length, so no code-match credit is awarded. Complete source/header/configuration hashes remain pinned in src/runtime/gcc/provenance.json.",
+      "boundary_evidence": "Decoded original JAL entry references, complete original instruction interval and terminal JR/return-delay extent, full original SHA256, adjacent independently established source function boundaries and disjoint original ranges identify this complete body.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 2,
+        "reference_addresses": [
+          "0x00365840",
+          "0x003B3560"
+        ],
+        "return_address": "0x00371CD8",
+        "delay_address": "0x00371CDC"
+      },
+      "candidate_comparisons": [
+        {
+          "identical": false,
+          "expected_size": 1640,
+          "compiled_size": 1624,
+          "different_bytes": 1069,
+          "first_different_offsets": [
+            228,
+            240,
+            266,
+            273,
+            282,
+            297,
+            304,
+            305
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cc7adc787c1f32545c10fa1ad78503014fd31148faa44ab72681ba4770c13b4b",
+          "compiled_sha256": "2b3cf1d1805bfbbafdd42a2b4132a524231d88dcbec6679d840eb91aba400eae",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_moddi3"
+          ]
+        }
+      ],
+      "link_data": {
+        ".rodata": {
+          "address": "0x00454348",
+          "file_offset": "0x00355348",
+          "size": 256,
+          "original_sha256": "14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac",
+          "evidence": "Whole genuine256-byte compiled static __clz_tab readonly section exactly equals this original table. Three original LUI/ADDIU pointer materializations within the complete function independently establish its base; all bytes and original allocated readonly geometry are checked before genuine mapping/linking. No function match is awarded for table identity alone."
+        }
+      },
+      "original_data_pointer_proofs": {
+        ".rodata": [
+          {
+            "hi_offset": "0x130",
+            "lo_offset": "0x138",
+            "computed_address": "0x454348"
+          },
+          {
+            "hi_offset": "0x1d8",
+            "lo_offset": "0x1e0",
+            "computed_address": "0x454348"
+          },
+          {
+            "hi_offset": "0x410",
+            "lo_offset": "0x418",
+            "computed_address": "0x454348"
+          }
+        ]
+      },
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
+    },
+    {
+      "source": "src/runtime/gcc/libgcc2.c",
+      "source_kind": "c",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/libgcc2.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c",
+      "upstream_license": "GPL-2.0-or-later with original GCC linking exception, preserved in unchanged source and LICENSES/GCC-libgcc2-exception.txt; full GPL in LICENSES/GPL-2.0.txt. Unchanged public GNU source headers retain their notices and pinned hashes in src/runtime/gcc/provenance.json.",
+      "compiler_profile": "gcc29",
+      "link": true,
+      "name": "__udivdi3",
+      "address": "0x00371D48",
+      "file_offset": "0x00272D48",
+      "size": 1488,
+      "status": "reconstructed",
+      "original_sha256": "dd0b4f9412dbfd12169620e529f711586af8d28f35961ac0bd96ee83ac507213",
+      "upstream_symbol": "__udivdi3",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DIN_LIBGCC2",
+        "-D__GCC_FLOAT_NOT_NEEDED",
+        "-Dinhibit_libc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-DL_udivdi3"
+      ],
+      "evidence": "Full unsigned64 quotient splits numerator/denominator into32-bit halves, normalizes one- or two-word divisors using exact local clz table, performs16-bit partial divisions with up to two correction steps, handles the zero-denominator intentional divide and quotient0/1 boundary cases, then returns full64 quotient. Complete original control flow and helper ABI independently agree with unchanged pinned GNU libgcc2.c and longlong.h. The genuine full linked candidate differs in scheduling and length, so no code-match credit is awarded. Complete source/header/configuration hashes remain pinned in src/runtime/gcc/provenance.json.",
+      "boundary_evidence": "Decoded original JAL entry references, complete original instruction interval and terminal JR/return-delay extent, full original SHA256, adjacent independently established source function boundaries and disjoint original ranges identify this complete body.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 12,
+        "reference_addresses": [
+          "0x002E098C",
+          "0x002E099C",
+          "0x00357B5C",
+          "0x00365918",
+          "0x0036E8C0",
+          "0x0036E91C",
+          "0x0036E99C",
+          "0x0039824C",
+          "0x0039979C",
+          "0x0039A994",
+          "0x0039BF8C",
+          "0x0039C904"
+        ],
+        "return_address": "0x00372310",
+        "delay_address": "0x00372314"
+      },
+      "candidate_comparisons": [
+        {
+          "identical": false,
+          "expected_size": 1488,
+          "compiled_size": 1472,
+          "different_bytes": 1131,
+          "first_different_offsets": [
+            24,
+            36,
+            62,
+            69,
+            74,
+            89,
+            96,
+            97
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "dd0b4f9412dbfd12169620e529f711586af8d28f35961ac0bd96ee83ac507213",
+          "compiled_sha256": "05b70daf65c4fb52b87691593c3944ff04fc314fc7d8916b1507904c31f59299",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_udivdi3"
+          ]
+        }
+      ],
+      "link_data": {
+        ".rodata": {
+          "address": "0x00454448",
+          "file_offset": "0x00355448",
+          "size": 256,
+          "original_sha256": "14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac",
+          "evidence": "Whole genuine256-byte compiled static __clz_tab readonly section exactly equals this original table. Three original LUI/ADDIU pointer materializations within the complete function independently establish its base; all bytes and original allocated readonly geometry are checked before genuine mapping/linking. No function match is awarded for table identity alone."
+        }
+      },
+      "original_data_pointer_proofs": {
+        ".rodata": [
+          {
+            "hi_offset": "0x60",
+            "lo_offset": "0x68",
+            "computed_address": "0x454448"
+          },
+          {
+            "hi_offset": "0x1d0",
+            "lo_offset": "0x1d8",
+            "computed_address": "0x454448"
+          },
+          {
+            "hi_offset": "0x430",
+            "lo_offset": "0x438",
+            "computed_address": "0x454448"
+          }
+        ]
+      },
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
+    },
+    {
+      "source": "src/runtime/gcc/libgcc2.c",
+      "source_kind": "c",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/libgcc2.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c",
+      "upstream_license": "GPL-2.0-or-later with original GCC linking exception, preserved in unchanged source and LICENSES/GCC-libgcc2-exception.txt; full GPL in LICENSES/GPL-2.0.txt. Unchanged public GNU source headers retain their notices and pinned hashes in src/runtime/gcc/provenance.json.",
+      "compiler_profile": "gcc29",
+      "link": true,
+      "name": "__umoddi3",
+      "address": "0x00372318",
+      "file_offset": "0x00273318",
+      "size": 1344,
+      "status": "reconstructed",
+      "original_sha256": "2962f2c299bfcd3adbac2452465ac7f89a5fab5d50b1cb9d440f8ea99cc8011f",
+      "upstream_symbol": "__umoddi3",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DIN_LIBGCC2",
+        "-D__GCC_FLOAT_NOT_NEEDED",
+        "-Dinhibit_libc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-DL_umoddi3"
+      ],
+      "evidence": "Full unsigned64 remainder shares the complete normalized two-half division graph, exact local clz table, deliberate divide-by-zero path and carry/borrow correction branches; returns the denormalized full64 remainder rather than quotient. Complete original control flow and helper ABI independently agree with unchanged pinned GNU libgcc2.c and longlong.h. The genuine full linked candidate differs in scheduling and length, so no code-match credit is awarded. Complete source/header/configuration hashes remain pinned in src/runtime/gcc/provenance.json.",
+      "boundary_evidence": "Decoded original JAL entry references, complete original instruction interval and terminal JR/return-delay extent, full original SHA256, adjacent independently established source function boundaries and disjoint original ranges identify this complete body.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 7,
+        "reference_addresses": [
+          "0x00357B40",
+          "0x00365900",
+          "0x0039825C",
+          "0x00399780",
+          "0x0039A978",
+          "0x0039C6C8",
+          "0x0039C8EC"
+        ],
+        "return_address": "0x00372850",
+        "delay_address": "0x00372854"
+      },
+      "candidate_comparisons": [
+        {
+          "identical": false,
+          "expected_size": 1344,
+          "compiled_size": 1328,
+          "different_bytes": 986,
+          "first_different_offsets": [
+            28,
+            40,
+            66,
+            73,
+            82,
+            97,
+            104,
+            105
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2962f2c299bfcd3adbac2452465ac7f89a5fab5d50b1cb9d440f8ea99cc8011f",
+          "compiled_sha256": "91196a5c80c32f784e9c00d1b2f3af2ad0f4beee669bb597b15504bf74d722a0",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_umoddi3"
+          ]
+        }
+      ],
+      "link_data": {
+        ".rodata": {
+          "address": "0x00454548",
+          "file_offset": "0x00355548",
+          "size": 256,
+          "original_sha256": "14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac",
+          "evidence": "Whole genuine256-byte compiled static __clz_tab readonly section exactly equals this original table. Three original LUI/ADDIU pointer materializations within the complete function independently establish its base; all bytes and original allocated readonly geometry are checked before genuine mapping/linking. No function match is awarded for table identity alone."
+        }
+      },
+      "original_data_pointer_proofs": {
+        ".rodata": [
+          {
+            "hi_offset": "0x68",
+            "lo_offset": "0x70",
+            "computed_address": "0x454548"
+          },
+          {
+            "hi_offset": "0x110",
+            "lo_offset": "0x118",
+            "computed_address": "0x454548"
+          },
+          {
+            "hi_offset": "0x348",
+            "lo_offset": "0x350",
+            "computed_address": "0x454548"
+          }
+        ]
+      },
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json"
+    },
+    {
+      "name": "strcasecmp",
+      "address": "0x003983E8",
+      "file_offset": "0x002993E8",
+      "size": 124,
+      "source": "src/runtime/strcasecmp.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "1e6d62ab9837daf7899f9dd747b76f4da956f12b1da455f7645edd28220e9f71",
+      "upstream_symbol": "strcasecmp",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/string/strcasecmp.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "59bfbc23edcc0ba86cd71d82f8fd90acd88922d02a5886ca5824c7eb9af11872",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strcasecmp.c",
+      "upstream_license": "No file-specific copyright notice; newlib1.8.1 default Cygnus Solutions1994/1997 permissive notice in section9 of LICENSES/newlib-1.8.1.txt. This software was developed at Cygnus Solutions.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-include",
+        "src/runtime/ctype_function_calls.h"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/ctype_function_calls.h",
+          "sha256": "8214424bc709e032ed3cdf7b9e71e176e076326cecf83f7d6e120a762808658b",
+          "modified": true,
+          "evidence": "Explicit macro-only build adapter disables GNU tolower/toupper macros to preserve the observed original function-call contract; upstream C remains unchanged."
+        }
+      ],
+      "evidence": "Complete upstream algorithm identity: signed-char loop tests left terminator before calling tolower(left) and tolower(right), advances both on equality, then returns final unsigned-byte tolower difference. Every original LB/LBU, branch, call target and return-delay instruction reviewed. Forced-include adapter selects the observed external ctype calls instead of header macros. Authentic unchanged upstream source fully links with tolower0039CA58; complete124-byte gcc29 candidate differs in save widths/slots and prologue/epilogue scheduling, so remains reconstructed.",
+      "boundary_evidence": "Decoded original direct JAL entry reference, complete original31-instruction body and terminalJR39845C/delay398460, full original hash and independent compiled124-byte function extent; following398464padding excluded.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 65,
+        "reference_addresses": [
+          "0x0023B62C",
+          "0x002A906C",
+          "0x002B3D70",
+          "0x002B3E60",
+          "0x002B41E0",
+          "0x002B4208",
+          "0x002B4250",
+          "0x002B427C",
+          "0x002B4298",
+          "0x002B42B4",
+          "0x002B42D0",
+          "0x002B4370",
+          "0x002B4398",
+          "0x002B43D8",
+          "0x002B4500",
+          "0x002B4648",
+          "0x002B4674",
+          "0x002B46B8",
+          "0x002B4760",
+          "0x002B4788",
+          "0x002B47D0",
+          "0x002B4898",
+          "0x002B48C0",
+          "0x002B4900",
+          "0x002B49C0",
+          "0x002B49E8",
+          "0x002B4A28",
+          "0x002B4AF8",
+          "0x002B4B20",
+          "0x002B4B60",
+          "0x002B4C40",
+          "0x002B4C68",
+          "0x002B4CA8",
+          "0x002B4D78",
+          "0x002B4DA0",
+          "0x002B4DE0",
+          "0x002B4EA8",
+          "0x002B4ED0",
+          "0x002B4F10",
+          "0x002B4FE8",
+          "0x002B5010",
+          "0x002B5050",
+          "0x002B5140",
+          "0x002B5168",
+          "0x002B51A8",
+          "0x002B5278",
+          "0x002B52A0",
+          "0x002B52E0",
+          "0x002B53A8",
+          "0x002B53D0",
+          "0x002B5410",
+          "0x002B54E8",
+          "0x002B5510",
+          "0x002B5550",
+          "0x002B5640",
+          "0x002B5668",
+          "0x002B56A8",
+          "0x002B58CC",
+          "0x002B58E0",
+          "0x002B58F4",
+          "0x002B5908",
+          "0x002B5950",
+          "0x002B5964",
+          "0x002B5978",
+          "0x002B598C"
+        ],
+        "return_address": "0x0039845C",
+        "delay_address": "0x00398460",
+        "independent_compiled_symbol_size": 124
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-include",
+            "src/runtime/ctype_function_calls.h"
+          ],
+          "identical": false,
+          "expected_size": 124,
+          "compiled_size": 140,
+          "different_bytes": 95,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1e6d62ab9837daf7899f9dd747b76f4da956f12b1da455f7645edd28220e9f71",
+          "compiled_sha256": "7e40df0716818c412b1aaa3ad7f423ad959131238399182f45c21e0b4221e273"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-include",
+            "src/runtime/ctype_function_calls.h"
+          ],
+          "identical": false,
+          "expected_size": 124,
+          "compiled_size": 124,
+          "different_bytes": 20,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            11,
+            13,
+            14,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1e6d62ab9837daf7899f9dd747b76f4da956f12b1da455f7645edd28220e9f71",
+          "compiled_sha256": "85cd6fd032b719e76b96c021f97bb85b81cdcf0f8c2a7b547b08aeba02186b2c"
+        }
+      ]
+    },
+    {
+      "name": "cosf",
+      "address": "0x0037AFD8",
+      "file_offset": "0x0027BFD8",
+      "size": 232,
+      "source": "src/runtime/cosf.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "7821faaad4076dacd4c14d5e0f228390c8c224be263f83268e6bdfe12c3eae71",
+      "upstream_symbol": "cosf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/sf_cos.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "f8f2fed57fdf4fb434ec0f74af85a8c4b8d648ecd3d53a6b2733f8429b72759a",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_cos.c",
+      "upstream_license": "Sun Microsystems1993 permissive preserve-notice license, unchanged full source notice and Ian Lance Taylor conversion credit retained.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete magnitude threshold0x3F490FD8, nonfinite x-x result, two-float pi/2 reducer output and all four n&3 cosine/sine/sign selections agree with every original instruction. Whole genuine linked gcc29 code exactly equals all232 retail bytes. Original terminal return/delay, full body hash, decoded original direct calls, complete source algorithm and independently linked candidate establish the complete function. No instruction rewrites or masked comparisons.",
+      "boundary_evidence": "Whole original entry-to-terminalJR/return-delay interval reviewed, completeSHA256 and directJALentry references; following function/alignment excluded, ranges disjoint from registeredcode.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 10,
+        "reference_addresses": [
+          "0x002E8AA4",
+          "0x002E8D9C",
+          "0x00351FE8",
+          "0x003B2E04",
+          "0x003B2E28",
+          "0x003B2E4C",
+          "0x003B2E58",
+          "0x003B2E74",
+          "0x003B2EAC",
+          "0x003B2EE0"
+        ],
+        "return_address": "0x0037B0B8",
+        "delay_address": "0x0037B0BC"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 232,
+          "compiled_size": 232,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "7821faaad4076dacd4c14d5e0f228390c8c224be263f83268e6bdfe12c3eae71",
+          "compiled_sha256": "7821faaad4076dacd4c14d5e0f228390c8c224be263f83268e6bdfe12c3eae71"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 232,
+          "compiled_size": 208,
+          "different_bytes": 191,
+          "first_different_offsets": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7821faaad4076dacd4c14d5e0f228390c8c224be263f83268e6bdfe12c3eae71",
+          "compiled_sha256": "b83948ccc6907b47c6d3d29fa3804b7dfccc1d16503cfcca63c4abe7da007e45"
+        }
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/fdlibm.h",
+          "sha256": "2317db74a56fa9ea5a2dbde22f21e29e988bf4fdbe5fe095d26376d993bf2a0c",
+          "modified": false,
+          "upstream_path": "newlib/libm/common/fdlibm.h",
+          "upstream_revision": "newlib1.10.0 official source archive, independently retained public Sun notice",
+          "upstream_url": "https://sourceware.org/pub/newlib/newlib-1.10.0.tar.gz"
+        }
+      ]
+    },
+    {
+      "name": "strcspn",
+      "address": "0x00398468",
+      "file_offset": "0x00299468",
+      "size": 108,
+      "source": "src/runtime/strcspn.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "6e10e27e43d4d7706c7775bda43335ccb4194b984913573866dac6c5a58f8b03",
+      "upstream_symbol": "strcspn",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/string/strcspn.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "042b87f217f959a6845b6dd5710a7f52179db07a1e403f14e4a2da96641d6085",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strcspn.c",
+      "upstream_license": "No file-specific copyright notice; newlib1.8.1 default Cygnus Solutions1994/1997 permissive notice in section9 of LICENSES/newlib-1.8.1.txt. This software was developed at Cygnus Solutions.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete signed-byte outer source-prefix loop and inner reject-string search stop at the first matching reject character or source terminator, then return the32-bit pointer difference. Entire original27-instruction graph agrees with unchanged public source; candidate scheduling/length differ, so remains reconstructed. Original terminal return/delay, full body hash, decoded original direct calls, complete source algorithm and independently linked candidate establish the complete function. No instruction rewrites or masked comparisons.",
+      "boundary_evidence": "Whole original entry-to-terminalJR/return-delay interval reviewed, completeSHA256 and directJALentry references; following function/alignment excluded, ranges disjoint from registeredcode.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 7,
+        "reference_addresses": [
+          "0x001664F4",
+          "0x00166528",
+          "0x001D1C08",
+          "0x001D1E94",
+          "0x001D2558",
+          "0x001D2650",
+          "0x002A9010"
+        ],
+        "return_address": "0x003984CC",
+        "delay_address": "0x003984D0"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 104,
+          "different_bytes": 79,
+          "first_different_offsets": [
+            5,
+            8,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e10e27e43d4d7706c7775bda43335ccb4194b984913573866dac6c5a58f8b03",
+          "compiled_sha256": "f0017c6f8df7a22bd556c395529ad43f44f8d472f31ea34ae9bf65f58f2006dc"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 92,
+          "different_bytes": 89,
+          "first_different_offsets": [
+            0,
+            2,
+            3,
+            5,
+            8,
+            10,
+            11,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e10e27e43d4d7706c7775bda43335ccb4194b984913573866dac6c5a58f8b03",
+          "compiled_sha256": "7363afaca0188bf7487df2384071390f9abafbdec6f4c0cc0443ad981a253661"
         }
       ]
     }
