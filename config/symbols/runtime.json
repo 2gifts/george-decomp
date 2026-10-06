@@ -670,7 +670,7 @@
     "malloc_extend_top": {
       "address": "0x0039B2A0",
       "confidence": "corroborated",
-      "evidence": "Binding-only612B independently called complete helper manually reviewed: capturedoldtop/size/end; size=nb+top_pad+16 and4K-page rounding except sentinelbase-1, sbrk39DCA0 failure/foreignbrk gates, exact currentarena accounting,16alignment correction plus second4K correction, failureearlyreturn, newtop publish, two4-byte fenceposts and optional free39BC38, then long64 maximum tracking. No helper code progress proposed. Author full612B body review; root fullhash/calls/binding metadata review only. No helper progress registration."
+      "evidence": "Complete original captures oldtop/size/end, unsigned32 nb plus unsigned64 top_pad plus16 truncated to INTERNAL_SIZE_T32,4K rounding except base sentinel-1, genuine sbrk(reent,size), failure/foreignbreak early-return gates. Arena accounting retains32-bit stores; contiguous top resize, firstbase publish or foreigngap accounting,16-byte frontalignment and second4K correction, second-sbrk failure, top/head publish, undersized oldtop poison head1, two4-byte fenceposts after (oldsize-12)&~15 and nested free if>=16. Full unsigned64 comparisons/update of max_sbrked_mem/max_total_mem follow; captured values and authentic source assumptions retained. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
     },
     "memset": {
       "address": "0x003936A0",
@@ -704,6 +704,91 @@
     "__malloc_current_mallinfo": {
       "address": "0x00405E68",
       "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "__malloc_max_sbrked_mem": {
+      "address": "0x00405E58",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "__malloc_max_total_mem": {
+      "address": "0x00405E60",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "errno": {
+      "address": "0x00496158",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_close": {
+      "address": "0x00363F48",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_fstat": {
+      "address": "0x00364018",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_lseek": {
+      "address": "0x00363F58",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_open": {
+      "address": "0x00363F20",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_read": {
+      "address": "0x00363EA8",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_sbrk": {
+      "address": "0x00363F60",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_write": {
+      "address": "0x00363E28",
+      "confidence": "corroborated",
+      "evidence": "Actual original direct syscall/helper JAL or preserved global LUI/lower pairs from the independently reviewed unchanged remaining allocator/reent source graph establish this numeric binding. Custom original OS/lock routines remain binding-only; named global accessed extents/zero state are identity-only and are not mapped or counted as code/data progress."
+    },
+    "_memalign_r": {
+      "address": "0x0039C620",
+      "confidence": "corroborated",
+      "evidence": "Complete original alignment<=16 relays malloc before locking; minimumchunk16, request2size+19/min16/mask~15, unsigned32 worstcase allocation nb+alignment+16, null failure. Lock only after allocation; unsigned64 pointer modulo zeroextended32 alignment via __umoddi3, misalignment rounding/leader<16 correction, newhead/inuse writes then oldhead and nested free; full signed64 remainder from supported SIZE_T_SMALLER_THAN_LONG macro,>=16 trailing split/head writes then nested free, unlock and chunk+8 return. HAVE_MMAP0/DEBUG0 excludes alternate paths; no new power-of-two/overflow validation. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_close_r": {
+      "address": "0x0039DAC8",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_fstat_r": {
+      "address": "0x0039DB20",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_lseek_r": {
+      "address": "0x0039DB80",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_open_r": {
+      "address": "0x0039DBE0",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_read_r": {
+      "address": "0x0039DC40",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
+    },
+    "_write_r": {
+      "address": "0x0039DD00",
+      "confidence": "corroborated",
+      "evidence": "Complete original clears accessed global errno int32 before actual original syscall, captures return without replacing it, compares failure sentinel (-1, with pointer32 sentinel for sbrk), reads global errno only on failure, copies nonzero errno to retained reent->_errno at offset0, and returns actual syscall result. Source unchanged, no fabricated OS or generic locking implementation; actual lower-level calls remain numeric bindings only. Author and root independently read all433 approved complete original instructions, the complete active unchanged malloc_extend_top/memalign and7 syscall-wrapper sources/supporting macros. Root independently reproduced all18 genuine whole comparison dictionaries and actual dependency hashes, both26-word ABI probes,13 preserved global pairs,16 actual entry references/whole containing assembly-byte intervals and41 bounded branches. Genuine separate LOCAL STT_FUNC proves the full internal extend source symbol; all18 full linked bodies remain nonexact with zero unresolved relocations. No native OS/heap or exhaustive malformed-input/EE exception claim."
     }
   }
 }

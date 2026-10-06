@@ -1,0 +1,3484 @@
+{
+  "functions": [
+    {
+      "name": "func_001784D0",
+      "address": "0x001784D0",
+      "file_offset": "0x000794D0",
+      "size": 732,
+      "original_sha256": "f19e1ee52745ad615c822ddc49225e27426335e6ef493715faf92e7489d965e8",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_001784D0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete732B angle method: state2D8=6 or full64flag18 aborts before64store; initialangle64 publication beforeconfigclass/use_direction gates. Signed-adjusted control58 returnsvector, atan readsZ/X; exactsoft64 PI/TWOPI/HALFPI conversion/absolute/subtract/multiply call sequence. Finalstate freshafterallcalls; full36word table has three outcomes: state0previous58->504 afternew58, selectedstatesnew58, otherspreserve58; >=36new58. Float wrap retains strictpositivepi and unordered negpi<= gate.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_001784D0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 732,
+          "compiled_size": 776,
+          "different_bytes": 685,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f19e1ee52745ad615c822ddc49225e27426335e6ef493715faf92e7489d965e8",
+          "compiled_sha256": "78b1d79d552434c01367a8120d93882ec8e20cf23ddc538512af11b3391dfae9"
+        },
+        {
+          "name": "func_001784D0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 732,
+          "compiled_size": 768,
+          "different_bytes": 636,
+          "first_different_offsets": [
+            0,
+            8,
+            11,
+            12,
+            20,
+            22,
+            23,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f19e1ee52745ad615c822ddc49225e27426335e6ef493715faf92e7489d965e8",
+          "compiled_sha256": "98dcdae021808a46ecf09cfe0b586303ace8945698410e3362e957b6b35f1571"
+        },
+        {
+          "name": "func_001784D0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 732,
+          "compiled_size": 768,
+          "different_bytes": 634,
+          "first_different_offsets": [
+            0,
+            8,
+            12,
+            20,
+            22,
+            23,
+            24,
+            26
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f19e1ee52745ad615c822ddc49225e27426335e6ef493715faf92e7489d965e8",
+          "compiled_sha256": "4b246cfb385a5ffe966ad55d4aac028e32ef0913dd8d56a3c4840bf3f1d1b02a"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x001784F8",
+          "target": "0x0017878C",
+          "word": "0x106200A4"
+        },
+        {
+          "instruction_address": "0x00178518",
+          "target": "0x00178790",
+          "word": "0x1440009D"
+        },
+        {
+          "instruction_address": "0x00178534",
+          "target": "0x00178754",
+          "word": "0x54620087"
+        },
+        {
+          "instruction_address": "0x0017853C",
+          "target": "0x00178750",
+          "word": "0x10A00084"
+        },
+        {
+          "instruction_address": "0x00178588",
+          "target": "0x0017859C",
+          "word": "0x04410004"
+        },
+        {
+          "instruction_address": "0x001785BC",
+          "target": "0x001785D4",
+          "word": "0x1C400005"
+        },
+        {
+          "instruction_address": "0x001785CC",
+          "target": "0x0017864C",
+          "word": "0x1000001F"
+        },
+        {
+          "instruction_address": "0x001785EC",
+          "target": "0x00178600",
+          "word": "0x04410004"
+        },
+        {
+          "instruction_address": "0x00178630",
+          "target": "0x0017869C",
+          "word": "0x4500001A"
+        },
+        {
+          "instruction_address": "0x00178658",
+          "target": "0x0017866C",
+          "word": "0x04410004"
+        },
+        {
+          "instruction_address": "0x0017868C",
+          "target": "0x00178750",
+          "word": "0x04400030"
+        },
+        {
+          "instruction_address": "0x00178694",
+          "target": "0x001786E4",
+          "word": "0x10000013"
+        },
+        {
+          "instruction_address": "0x001786A8",
+          "target": "0x001786BC",
+          "word": "0x04410004"
+        },
+        {
+          "instruction_address": "0x001786DC",
+          "target": "0x00178750",
+          "word": "0x0440001C"
+        },
+        {
+          "instruction_address": "0x00178700",
+          "target": "0x0017871C",
+          "word": "0x45000006"
+        },
+        {
+          "instruction_address": "0x00178714",
+          "target": "0x00178750",
+          "word": "0x1000000E"
+        },
+        {
+          "instruction_address": "0x00178734",
+          "target": "0x00178754",
+          "word": "0x45030007"
+        },
+        {
+          "instruction_address": "0x00178758",
+          "target": "0x00178778",
+          "word": "0x10400007"
+        },
+        {
+          "instruction_address": "0x00178778",
+          "target": "0x0017878C",
+          "word": "0x10000004"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 14,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_001787B0",
+      "address": "0x001787B0",
+      "file_offset": "0x000797B0",
+      "size": 1376,
+      "original_sha256": "64ca219b3607ecd835648f498580a0d7078cca47674a08ba3d3f0157d3432309",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_001787B0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete1376B effect emitter: captured64flag21 and3BCkey choose FIVE actual registry blocks for config1C4/1C8/1B8/1BC/1C0. Initialconfigword gates, existing complete registrytemplate, then freshdata/key/global andXYZposition copy beforeemit. Initialcapturedflag/key notreread aftercallbacks; each configfield matches originalbranchfamily.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_001787B0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 1376,
+          "compiled_size": 1236,
+          "different_bytes": 1224,
+          "first_different_offsets": [
+            0,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "64ca219b3607ecd835648f498580a0d7078cca47674a08ba3d3f0157d3432309",
+          "compiled_sha256": "1cc38edd67e8ec2247f77212c3d69d2e03a65046c3ccc308ec5d4fac571df0ba"
+        },
+        {
+          "name": "func_001787B0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 1376,
+          "compiled_size": 1424,
+          "different_bytes": 1200,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            14,
+            15,
+            17,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "64ca219b3607ecd835648f498580a0d7078cca47674a08ba3d3f0157d3432309",
+          "compiled_sha256": "018a099f354a15d67b231f4fd4d5366765dd089ec380831e79aab6d31a0e55ce"
+        },
+        {
+          "name": "func_001787B0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 1376,
+          "compiled_size": 1424,
+          "different_bytes": 1197,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            14,
+            15,
+            17,
+            20,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "64ca219b3607ecd835648f498580a0d7078cca47674a08ba3d3f0157d3432309",
+          "compiled_sha256": "6a405527b7b4ea7fa408cef2a3a92d00967a1c18009af13cfb0df6a0afa48fe0"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x001787E4",
+          "target": "0x001789DC",
+          "word": "0x1040007D"
+        },
+        {
+          "instruction_address": "0x001787F4",
+          "target": "0x001788E8",
+          "word": "0x1482003C"
+        },
+        {
+          "instruction_address": "0x00178804",
+          "target": "0x001788E4",
+          "word": "0x10600037"
+        },
+        {
+          "instruction_address": "0x00178810",
+          "target": "0x001788C8",
+          "word": "0x1460002D"
+        },
+        {
+          "instruction_address": "0x00178888",
+          "target": "0x001788B4",
+          "word": "0x1062000A"
+        },
+        {
+          "instruction_address": "0x00178890",
+          "target": "0x001788B4",
+          "word": "0x14A30008"
+        },
+        {
+          "instruction_address": "0x00178898",
+          "target": "0x001788A4",
+          "word": "0x10A00002"
+        },
+        {
+          "instruction_address": "0x001788AC",
+          "target": "0x001788BC",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x001788DC",
+          "target": "0x00178BC8",
+          "word": "0x100000BA"
+        },
+        {
+          "instruction_address": "0x001788EC",
+          "target": "0x00178CF8",
+          "word": "0x54820102"
+        },
+        {
+          "instruction_address": "0x001788FC",
+          "target": "0x00178CF4",
+          "word": "0x106000FD"
+        },
+        {
+          "instruction_address": "0x00178908",
+          "target": "0x001789C0",
+          "word": "0x1460002D"
+        },
+        {
+          "instruction_address": "0x00178980",
+          "target": "0x001789AC",
+          "word": "0x1062000A"
+        },
+        {
+          "instruction_address": "0x00178988",
+          "target": "0x001789AC",
+          "word": "0x14A30008"
+        },
+        {
+          "instruction_address": "0x00178990",
+          "target": "0x0017899C",
+          "word": "0x10A00002"
+        },
+        {
+          "instruction_address": "0x001789A4",
+          "target": "0x001789B4",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x001789D4",
+          "target": "0x00178BC8",
+          "word": "0x1000007C"
+        },
+        {
+          "instruction_address": "0x001789E4",
+          "target": "0x00178AD8",
+          "word": "0x1482003C"
+        },
+        {
+          "instruction_address": "0x001789F4",
+          "target": "0x00178AD4",
+          "word": "0x10600037"
+        },
+        {
+          "instruction_address": "0x00178A00",
+          "target": "0x00178AB8",
+          "word": "0x1460002D"
+        },
+        {
+          "instruction_address": "0x00178A78",
+          "target": "0x00178AA4",
+          "word": "0x1062000A"
+        },
+        {
+          "instruction_address": "0x00178A80",
+          "target": "0x00178AA4",
+          "word": "0x14A30008"
+        },
+        {
+          "instruction_address": "0x00178A88",
+          "target": "0x00178A94",
+          "word": "0x10A00002"
+        },
+        {
+          "instruction_address": "0x00178A9C",
+          "target": "0x00178AAC",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x00178ACC",
+          "target": "0x00178BC8",
+          "word": "0x1000003E"
+        },
+        {
+          "instruction_address": "0x00178ADC",
+          "target": "0x00178BE8",
+          "word": "0x14820042"
+        },
+        {
+          "instruction_address": "0x00178AEC",
+          "target": "0x00178BE8",
+          "word": "0x1060003E"
+        },
+        {
+          "instruction_address": "0x00178AF8",
+          "target": "0x00178BB0",
+          "word": "0x1460002D"
+        },
+        {
+          "instruction_address": "0x00178B70",
+          "target": "0x00178B9C",
+          "word": "0x1062000A"
+        },
+        {
+          "instruction_address": "0x00178B78",
+          "target": "0x00178B9C",
+          "word": "0x14A30008"
+        },
+        {
+          "instruction_address": "0x00178B80",
+          "target": "0x00178B8C",
+          "word": "0x10A00002"
+        },
+        {
+          "instruction_address": "0x00178B94",
+          "target": "0x00178BA4",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x00178BE0",
+          "target": "0x00178CF8",
+          "word": "0x10000045"
+        },
+        {
+          "instruction_address": "0x00178BF0",
+          "target": "0x00178CF8",
+          "word": "0x54820041"
+        },
+        {
+          "instruction_address": "0x00178C00",
+          "target": "0x00178CF4",
+          "word": "0x1060003C"
+        },
+        {
+          "instruction_address": "0x00178C0C",
+          "target": "0x00178CC4",
+          "word": "0x1460002D"
+        },
+        {
+          "instruction_address": "0x00178C84",
+          "target": "0x00178CB0",
+          "word": "0x1062000A"
+        },
+        {
+          "instruction_address": "0x00178C8C",
+          "target": "0x00178CB0",
+          "word": "0x14A30008"
+        },
+        {
+          "instruction_address": "0x00178C94",
+          "target": "0x00178CA0",
+          "word": "0x10A00002"
+        },
+        {
+          "instruction_address": "0x00178CA8",
+          "target": "0x00178CB8",
+          "word": "0x10000003"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00178D10",
+      "address": "0x00178D10",
+      "file_offset": "0x00079D10",
+      "size": 368,
+      "original_sha256": "ea5d0d9030a9a61c4677efb71271094a7bd60d39bfd03b8259d8442a5d6a8582",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00178D10",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete368B visibility control: full64bit33set/clear beforefour optionalfreshobject calls; rawfullinputtruth choosesvisible0/1. Signedhalf2C0 countread aftercallbacks and reloaded every12Bstride loop; recordobject unconditionallypassedincludingNULL. Wholeduplicatebranches sharedwithout changingcapturedmode/freshnextfield behavior.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00178D10",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 368,
+          "compiled_size": 244,
+          "different_bytes": 321,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ea5d0d9030a9a61c4677efb71271094a7bd60d39bfd03b8259d8442a5d6a8582",
+          "compiled_sha256": "9dfbfa1b84ca1d37927e35532bb80cffa63a3dabcc6667912c65e7308cb54bee"
+        },
+        {
+          "name": "func_00178D10",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 368,
+          "compiled_size": 252,
+          "different_bytes": 347,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ea5d0d9030a9a61c4677efb71271094a7bd60d39bfd03b8259d8442a5d6a8582",
+          "compiled_sha256": "aa0847b55cbeffbde8c0753902eb9575182a3ea73cba91857283529be1ebb5c0"
+        },
+        {
+          "name": "func_00178D10",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 368,
+          "compiled_size": 252,
+          "different_bytes": 346,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ea5d0d9030a9a61c4677efb71271094a7bd60d39bfd03b8259d8442a5d6a8582",
+          "compiled_sha256": "5607f183808f25750f309556db44a79d96b1cf042fbc88d6cde8e7111a3ce139"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00178D24",
+          "target": "0x00178DC8",
+          "word": "0x10A00028"
+        },
+        {
+          "instruction_address": "0x00178D40",
+          "target": "0x00178D50",
+          "word": "0x10800003"
+        },
+        {
+          "instruction_address": "0x00178D54",
+          "target": "0x00178D68",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178D68",
+          "target": "0x00178D7C",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178D7C",
+          "target": "0x00178D90",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178D90",
+          "target": "0x00178E68",
+          "word": "0x18400035"
+        },
+        {
+          "instruction_address": "0x00178DB8",
+          "target": "0x00178DA0",
+          "word": "0x5440FFF9"
+        },
+        {
+          "instruction_address": "0x00178DC0",
+          "target": "0x00178E6C",
+          "word": "0x1000002A"
+        },
+        {
+          "instruction_address": "0x00178DE4",
+          "target": "0x00178DF4",
+          "word": "0x10800003"
+        },
+        {
+          "instruction_address": "0x00178DF8",
+          "target": "0x00178E0C",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178E0C",
+          "target": "0x00178E20",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178E20",
+          "target": "0x00178E34",
+          "word": "0x50800004"
+        },
+        {
+          "instruction_address": "0x00178E34",
+          "target": "0x00178E68",
+          "word": "0x1840000C"
+        },
+        {
+          "instruction_address": "0x00178E60",
+          "target": "0x00178E48",
+          "word": "0x5440FFF9"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 5,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00178E80",
+      "address": "0x00178E80",
+      "file_offset": "0x00079E80",
+      "size": 496,
+      "original_sha256": "b44154c627b53cc5edafce5663862474ffc40d5c7decad6f0d84340db37c81cd",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00178E80",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete496B pose request:370floatstore thenbit32/controlF0 and optionalcaptured1A0 reset; inlinecomponentA0+80 tablefreshafter307850. Request27390 hasnineintegerarguments plusf12/f13=0/5; callback192BC0/contextactor, thenexisting77C40 sevenintegerargs/f12=5. Freshprimary/370 writes428, reloadprimary434, blend384 andmatrixF0motion35C. Companion keymapper thenfreshcompanion request/storage/scale reloads.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00178E80",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 496,
+          "compiled_size": 492,
+          "different_bytes": 369,
+          "first_different_offsets": [
+            0,
+            6,
+            9,
+            10,
+            12,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b44154c627b53cc5edafce5663862474ffc40d5c7decad6f0d84340db37c81cd",
+          "compiled_sha256": "a9901fcc7104894342e042298f8ffb37f2c5e68ccd1b3eaee694ec5bccf7cceb"
+        },
+        {
+          "name": "func_00178E80",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 496,
+          "compiled_size": 488,
+          "different_bytes": 389,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b44154c627b53cc5edafce5663862474ffc40d5c7decad6f0d84340db37c81cd",
+          "compiled_sha256": "1f2c458a7ba8cf07edb2d3cfbc79654ed447f0cc1f38cf75898bf4988ccced23"
+        },
+        {
+          "name": "func_00178E80",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 496,
+          "compiled_size": 488,
+          "different_bytes": 384,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b44154c627b53cc5edafce5663862474ffc40d5c7decad6f0d84340db37c81cd",
+          "compiled_sha256": "9f42b901c75007afdcf88fe615e0428e2643eb2cc2b1d47fc1dcb564f547e63a"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00178EDC",
+          "target": "0x00178F20",
+          "word": "0x12400010"
+        },
+        {
+          "instruction_address": "0x00178FE0",
+          "target": "0x0017904C",
+          "word": "0x1040001A"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00179168",
+      "address": "0x00179168",
+      "file_offset": "0x0007A168",
+      "size": 212,
+      "original_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00179168",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete212B state1F4==2 ray setup: capturedprimary index andwrapped<<2array offset, capturedactor3F8<<6matrix; existingmatrixmultiply withB0. Outputtranslation formsstartY+1/w2 andendY+3000, f12=2 passedtoB85D0; fresh1F8aftermatrixcallback, unconditional1FC1afterraycallback. Else untouched.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00179168",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 212,
+          "compiled_size": 192,
+          "different_bytes": 171,
+          "first_different_offsets": [
+            6,
+            8,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+          "compiled_sha256": "574a1894f3ca57a068bc706f86315aa0c0f8a1f721e4d7b9e8da5053ecf9475b"
+        },
+        {
+          "name": "func_00179168",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 212,
+          "compiled_size": 200,
+          "different_bytes": 126,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            24,
+            27,
+            30,
+            31,
+            76
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+          "compiled_sha256": "84a2939aece56e3fded7e6f6530764be78d041d3b283155f8672c74699798e3b"
+        },
+        {
+          "name": "func_00179168",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 212,
+          "compiled_size": 200,
+          "different_bytes": 125,
+          "first_different_offsets": [
+            8,
+            12,
+            24,
+            27,
+            30,
+            31,
+            76,
+            78
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+          "compiled_sha256": "1039deed1133ce3504c09e8fcb00f6b967e14d57ad2e0b55145719ef6a76293f"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00179180",
+          "target": "0x00179230",
+          "word": "0x5443002B"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 3,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00190FC0",
+      "address": "0x00190FC0",
+      "file_offset": "0x00091FC0",
+      "size": 64,
+      "original_sha256": "28f57aa81cf6336ff2a48ffb5e7d48871304e741e27ff8ea573e8be1695a05c9",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00190FC0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete64B actualmaterializedduration callback: thirdinteger source to2A6E60, thenfresh2DCwordzero and2E8=duration*exact395A740E. Capturedactor survivescallback; fullreturn delay included.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00190FC0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 64,
+          "compiled_size": 64,
+          "different_bytes": 28,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "28f57aa81cf6336ff2a48ffb5e7d48871304e741e27ff8ea573e8be1695a05c9",
+          "compiled_sha256": "fc6f7af5605dae5de1448f31de742db8a9b2e1db1461c1e9af469555a3bd951c"
+        },
+        {
+          "name": "func_00190FC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 64,
+          "compiled_size": 64,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            44,
+            52,
+            55
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "28f57aa81cf6336ff2a48ffb5e7d48871304e741e27ff8ea573e8be1695a05c9",
+          "compiled_sha256": "0afdfd9d560592dfb097f3e8940fcacd717aaf3411222775c27bbe0855c30999"
+        },
+        {
+          "name": "func_00190FC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 64,
+          "compiled_size": 64,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            44,
+            52
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "28f57aa81cf6336ff2a48ffb5e7d48871304e741e27ff8ea573e8be1695a05c9",
+          "compiled_sha256": "71e78b7d68c5b013b081671fab0519c2f6a22f1c3bad5737bb9a10e378d74b49"
+        }
+      ],
+      "local_branch_evidence": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 0,
+        "actual_callback_materializations": 1,
+        "reachability": "proven_callback_materialization",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00191E88",
+      "address": "0x00191E88",
+      "file_offset": "0x00092E88",
+      "size": 240,
+      "original_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00191E88",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete240B damage event: onlychange<=0 orinitialfullstate13 abort; unorderedchange continues. Existing192078(keyEC789588,livefloat), fresh3A0+capturednotifygate, actorScriptObject serializer andfreshglobaltag4/payload/subtype stores beforefresh3A0 VMcall. Freshdata154 chooses95850 request; otherwise freshstate13/37 gates59051 and64flag27store.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00191E88",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 240,
+          "compiled_size": 236,
+          "different_bytes": 168,
+          "first_different_offsets": [
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c",
+          "compiled_sha256": "51ac5ae57eb54dc28fa5c5b02a88664d07c48bdc038891da94416e073dd24cc5"
+        },
+        {
+          "name": "func_00191E88",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 240,
+          "compiled_size": 240,
+          "different_bytes": 31,
+          "first_different_offsets": [
+            8,
+            10,
+            11,
+            16,
+            18,
+            19,
+            20,
+            47
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c",
+          "compiled_sha256": "572805f8484d9f765954482ed67e21cc5c41726887d80faa8ba784f159899bdc"
+        },
+        {
+          "name": "func_00191E88",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 240,
+          "compiled_size": 240,
+          "different_bytes": 29,
+          "first_different_offsets": [
+            8,
+            10,
+            16,
+            18,
+            20,
+            47,
+            50,
+            51
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c",
+          "compiled_sha256": "ec3bc3ecf3b40ab078d414f078d88d724f5f06be47a498f583de3776dadd041e"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00191EA4",
+          "target": "0x00191F64",
+          "word": "0x4501002F"
+        },
+        {
+          "instruction_address": "0x00191EB4",
+          "target": "0x00191F68",
+          "word": "0x5062002C"
+        },
+        {
+          "instruction_address": "0x00191ECC",
+          "target": "0x00191F10",
+          "word": "0x50400010"
+        },
+        {
+          "instruction_address": "0x00191ED4",
+          "target": "0x00191F10",
+          "word": "0x5220000E"
+        },
+        {
+          "instruction_address": "0x00191F14",
+          "target": "0x00191F38",
+          "word": "0x10600008"
+        },
+        {
+          "instruction_address": "0x00191F30",
+          "target": "0x00191F68",
+          "word": "0x1000000D"
+        },
+        {
+          "instruction_address": "0x00191F40",
+          "target": "0x00191F64",
+          "word": "0x10620008"
+        },
+        {
+          "instruction_address": "0x00191F48",
+          "target": "0x00191F64",
+          "word": "0x10620006"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00191F78",
+      "address": "0x00191F78",
+      "file_offset": "0x00092F78",
+      "size": 120,
+      "original_sha256": "8d4430c3d7f13620622f747203ef95b82f64b84c0a7918ac22adb3b4fe72fffa",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00191F78",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete120B health setter: old36C<incoming value orderedgate chooses incoming +/- data404, store36C beforefresh38Cgate. Notification current36Ccaptured thenfreshVMarg pointer scalar>tag2>subtype writes, fresh38Ccallbackload afterpotentialaliasstores. Noinventedlowerclamp.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00191F78",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 120,
+          "compiled_size": 116,
+          "different_bytes": 72,
+          "first_different_offsets": [
+            14,
+            16,
+            18,
+            19,
+            20,
+            22,
+            23,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8d4430c3d7f13620622f747203ef95b82f64b84c0a7918ac22adb3b4fe72fffa",
+          "compiled_sha256": "a0d192cbb1902ffe5cf2edca94faa6c5ec330142f66d37a7c2d8f42f8991b61e"
+        },
+        {
+          "name": "func_00191F78",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 120,
+          "compiled_size": 116,
+          "different_bytes": 93,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8d4430c3d7f13620622f747203ef95b82f64b84c0a7918ac22adb3b4fe72fffa",
+          "compiled_sha256": "98cbfa419b1d4d0f233413006159ba1f273b49982cb14956911d34d07fdcdbce"
+        },
+        {
+          "name": "func_00191F78",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 120,
+          "compiled_size": 116,
+          "different_bytes": 93,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8d4430c3d7f13620622f747203ef95b82f64b84c0a7918ac22adb3b4fe72fffa",
+          "compiled_sha256": "98cbfa419b1d4d0f233413006159ba1f273b49982cb14956911d34d07fdcdbce"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00191F90",
+          "target": "0x00191FA4",
+          "word": "0x45000004"
+        },
+        {
+          "instruction_address": "0x00191F9C",
+          "target": "0x00191FAC",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x00191FB4",
+          "target": "0x00191FE4",
+          "word": "0x1040000B"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 3,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00191FF0",
+      "address": "0x00191FF0",
+      "file_offset": "0x00092FF0",
+      "size": 136,
+      "original_sha256": "599f6f444ff119cc9b639554daa25acf7f73ad2e7611479f64de6aaa0b303ca4",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00191FF0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete136B health increment: capturesold36C, EEminimum(old+change,1) value model, old<clamped orderedgate +/- data404 andsamecomplete notification template. Noinventedzeroclamp; scalar publication mayaliascallbackword.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00191FF0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 136,
+          "compiled_size": 148,
+          "different_bytes": 124,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "599f6f444ff119cc9b639554daa25acf7f73ad2e7611479f64de6aaa0b303ca4",
+          "compiled_sha256": "c8dfcd9b3c7cf31c0a02821aefcbd650dbbb4af7db913aa9b2b34a4c48e4eba4"
+        },
+        {
+          "name": "func_00191FF0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 136,
+          "compiled_size": 172,
+          "different_bytes": 139,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "599f6f444ff119cc9b639554daa25acf7f73ad2e7611479f64de6aaa0b303ca4",
+          "compiled_sha256": "6b59e82d5d78ba1a0394764407f2e9665dc4c1b3a9920e7717d52190116a6ec0"
+        },
+        {
+          "name": "func_00191FF0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 136,
+          "compiled_size": 172,
+          "different_bytes": 139,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "599f6f444ff119cc9b639554daa25acf7f73ad2e7611479f64de6aaa0b303ca4",
+          "compiled_sha256": "6b59e82d5d78ba1a0394764407f2e9665dc4c1b3a9920e7717d52190116a6ec0"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00192018",
+          "target": "0x0019202C",
+          "word": "0x45000004"
+        },
+        {
+          "instruction_address": "0x00192024",
+          "target": "0x00192034",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x0019203C",
+          "target": "0x0019206C",
+          "word": "0x1040000B"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00192078",
+      "address": "0x00192078",
+      "file_offset": "0x00093078",
+      "size": 260,
+      "original_sha256": "56105b6ed6a153bae17afc86d5b4f6263377928af2dbc83c2c59d1953248fbb4",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00192078",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete260B scaled damage: initialcaptured64bits9/8 gatesallbody; optional28Crelease/clear thenfresh290release/clear; freshdata18 capturedaftercallbacks. Health old - incoming*config198 thenordered +/-404 store andwhole notification; originalcapturedkey3C0 stored AFTERnotification callback.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00192078",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 220,
+          "different_bytes": 230,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56105b6ed6a153bae17afc86d5b4f6263377928af2dbc83c2c59d1953248fbb4",
+          "compiled_sha256": "4fc0fe2f4145df80debe623e4b7437eb26986718b39f3bd193c51440cabff89e"
+        },
+        {
+          "name": "func_00192078",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 228,
+          "different_bytes": 217,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56105b6ed6a153bae17afc86d5b4f6263377928af2dbc83c2c59d1953248fbb4",
+          "compiled_sha256": "70277dae19f31547dac7588a4cfb35af00c3fb7e41b9fc37401bf3ca81770e78"
+        },
+        {
+          "name": "func_00192078",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 228,
+          "different_bytes": 215,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            10,
+            13,
+            14,
+            21,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56105b6ed6a153bae17afc86d5b4f6263377928af2dbc83c2c59d1953248fbb4",
+          "compiled_sha256": "e1c81ae3f7536124172be02191a910663a952ecf2b6eb995f286099025f9aeee"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x001920A8",
+          "target": "0x00192164",
+          "word": "0x1440002E"
+        },
+        {
+          "instruction_address": "0x001920C0",
+          "target": "0x00192168",
+          "word": "0x54400029"
+        },
+        {
+          "instruction_address": "0x001920CC",
+          "target": "0x001920E4",
+          "word": "0x50800005"
+        },
+        {
+          "instruction_address": "0x001920E4",
+          "target": "0x001920FC",
+          "word": "0x50800005"
+        },
+        {
+          "instruction_address": "0x00192114",
+          "target": "0x00192124",
+          "word": "0x45000003"
+        },
+        {
+          "instruction_address": "0x0019211C",
+          "target": "0x00192128",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x00192130",
+          "target": "0x00192160",
+          "word": "0x1040000B"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 8,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00192180",
+      "address": "0x00192180",
+      "file_offset": "0x00093180",
+      "size": 296,
+      "original_sha256": "a545dc81f442cba23112df6394da60430ce1978520f272cff85f52e58cdf0964",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00192180",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete296B key/health reset: initialfull64flags capture before3C0inputkey and36Czero-word stores; bits9/8/5 gate3BCpublicationonly. Ten exact full32 acceptedkeys pluszero->728F0147 default; otherkeys preserveold3BC. Sourceequalityset is equivalenttooriginalsigneddecisiontree withnocalls.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00192180",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 180,
+          "different_bytes": 267,
+          "first_different_offsets": [
+            2,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a545dc81f442cba23112df6394da60430ce1978520f272cff85f52e58cdf0964",
+          "compiled_sha256": "0770f26f566ea3fe31da8483ba1a1f7b4187a368b1819110bc5d6c8c5f878652"
+        },
+        {
+          "name": "func_00192180",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 188,
+          "different_bytes": 267,
+          "first_different_offsets": [
+            2,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a545dc81f442cba23112df6394da60430ce1978520f272cff85f52e58cdf0964",
+          "compiled_sha256": "e767327ae141216a6c397f17cb78e29d56c515f806713aeb2fd2c1ad54c9382d"
+        },
+        {
+          "name": "func_00192180",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 188,
+          "different_bytes": 267,
+          "first_different_offsets": [
+            2,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a545dc81f442cba23112df6394da60430ce1978520f272cff85f52e58cdf0964",
+          "compiled_sha256": "e767327ae141216a6c397f17cb78e29d56c515f806713aeb2fd2c1ad54c9382d"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00192198",
+          "target": "0x00192210",
+          "word": "0x1440001D"
+        },
+        {
+          "instruction_address": "0x001921B0",
+          "target": "0x00192210",
+          "word": "0x14400017"
+        },
+        {
+          "instruction_address": "0x001921BC",
+          "target": "0x00192210",
+          "word": "0x14400014"
+        },
+        {
+          "instruction_address": "0x001921C8",
+          "target": "0x0019229C",
+          "word": "0x10A20034"
+        },
+        {
+          "instruction_address": "0x001921D0",
+          "target": "0x00192234",
+          "word": "0x14400018"
+        },
+        {
+          "instruction_address": "0x001921E0",
+          "target": "0x0019229C",
+          "word": "0x10A2002E"
+        },
+        {
+          "instruction_address": "0x001921E8",
+          "target": "0x00192218",
+          "word": "0x1440000B"
+        },
+        {
+          "instruction_address": "0x001921F8",
+          "target": "0x00192210",
+          "word": "0x50A20005"
+        },
+        {
+          "instruction_address": "0x00192208",
+          "target": "0x00192210",
+          "word": "0x50A20001"
+        },
+        {
+          "instruction_address": "0x00192218",
+          "target": "0x0019228C",
+          "word": "0x10A0001C"
+        },
+        {
+          "instruction_address": "0x00192224",
+          "target": "0x00192210",
+          "word": "0x50A2FFFA"
+        },
+        {
+          "instruction_address": "0x00192238",
+          "target": "0x0019229C",
+          "word": "0x10A20018"
+        },
+        {
+          "instruction_address": "0x00192240",
+          "target": "0x0019226C",
+          "word": "0x1440000A"
+        },
+        {
+          "instruction_address": "0x00192250",
+          "target": "0x0019229C",
+          "word": "0x10A20012"
+        },
+        {
+          "instruction_address": "0x0019225C",
+          "target": "0x00192210",
+          "word": "0x50A2FFEC"
+        },
+        {
+          "instruction_address": "0x00192270",
+          "target": "0x0019229C",
+          "word": "0x10A2000A"
+        },
+        {
+          "instruction_address": "0x0019227C",
+          "target": "0x00192210",
+          "word": "0x50A2FFE4"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 5,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00192B28",
+      "address": "0x00192B28",
+      "file_offset": "0x00093B28",
+      "size": 148,
+      "original_sha256": "3f5456d055e70ad567606317c8d2673084741637dcecdff84efd797a5a7deccf",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00192B28",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete148B standalone pose reset:full64bit32 before signedadjustedcontrolF0, fresh1A0 capturedacross307850, inlineA0 componenttable+80freshload receivesfour zero words asVec4; no invented runtime memset/privatehelperbinding.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00192B28",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 136,
+          "different_bytes": 86,
+          "first_different_offsets": [
+            0,
+            12,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3f5456d055e70ad567606317c8d2673084741637dcecdff84efd797a5a7deccf",
+          "compiled_sha256": "8ad754093fb1fedcd22b34f767ca939574eb8a02e301772ea6bd4e9eda6c1a87"
+        },
+        {
+          "name": "func_00192B28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 140,
+          "different_bytes": 99,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3f5456d055e70ad567606317c8d2673084741637dcecdff84efd797a5a7deccf",
+          "compiled_sha256": "cf61e975d85306c6029ccbb29b738fc1a7222f8afcb7ea588c88cf6feb3e5285"
+        },
+        {
+          "name": "func_00192B28",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 140,
+          "different_bytes": 99,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3f5456d055e70ad567606317c8d2673084741637dcecdff84efd797a5a7deccf",
+          "compiled_sha256": "c407d499d41c374bf4cfedbd85cbe22c97ab70948e72ae4499914ddeeea0c5a5"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00192B68",
+          "target": "0x00192BB0",
+          "word": "0x52000011"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00192BC0",
+      "address": "0x00192BC0",
+      "file_offset": "0x00093BC0",
+      "size": 80,
+      "original_sha256": "54acda173a810dcebea033ede03ccc00e0045c63c459f5ecc1df591a37af23fb",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00192BC0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete80B materializedduration callback: source2A6E60 thenfresh370blendload, exactduration395A740E scaling before710102word and714=scaled-scaled*blend store. Noalgebraicreassociation; mul operandorder retained.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00192BC0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 80,
+          "compiled_size": 80,
+          "different_bytes": 39,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "54acda173a810dcebea033ede03ccc00e0045c63c459f5ecc1df591a37af23fb",
+          "compiled_sha256": "8ac1aeba30d03fccf73c247c3c86991152b6498846c53209db20240e21366acc"
+        },
+        {
+          "name": "func_00192BC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 80,
+          "compiled_size": 80,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            52,
+            68,
+            71
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "54acda173a810dcebea033ede03ccc00e0045c63c459f5ecc1df591a37af23fb",
+          "compiled_sha256": "d623ae6a24ce282e63a7fc731b2a7696c9ab8f4062cab540cdfab822904eb30a"
+        },
+        {
+          "name": "func_00192BC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 80,
+          "compiled_size": 80,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            52,
+            68
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "54acda173a810dcebea033ede03ccc00e0045c63c459f5ecc1df591a37af23fb",
+          "compiled_sha256": "a280bd9e214e7fe7b96997f986c40349fb5aa525cafb01c29e04c6a81052c117"
+        }
+      ],
+      "local_branch_evidence": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 0,
+        "actual_callback_materializations": 1,
+        "reachability": "proven_callback_materialization",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00195850",
+      "address": "0x00195850",
+      "file_offset": "0x00096850",
+      "size": 296,
+      "original_sha256": "da3a3f5beec3527a52716bf09657368a616ff7ed58203cef9b2f0bdd2d09a7af",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00195850",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete296B bool request: full2D8/state13gate returns0; successpublishes2D8=2/2DC=1 beforelookup(key,BCF06440). Capturedreference thenoptionalprimary eightGPRrequest(ownerfresh,callback190FC0/context), freshcompanion/owneraftercallback. Freshconfig1B4/emit/64flag20gate message withactor40,target3B8,word3B4; returns1 evenlookupNULL/noenginecalls.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195850",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 300,
+          "different_bytes": 237,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da3a3f5beec3527a52716bf09657368a616ff7ed58203cef9b2f0bdd2d09a7af",
+          "compiled_sha256": "76e4de4be3f6aaec2f761718ae1211fca358de2448092a766524fee955c83df6"
+        },
+        {
+          "name": "func_00195850",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 288,
+          "different_bytes": 189,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            11,
+            13,
+            14,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da3a3f5beec3527a52716bf09657368a616ff7ed58203cef9b2f0bdd2d09a7af",
+          "compiled_sha256": "0c5afd79f65c2aadeb6afaf098fa37d329db261d96b36897f07610cd559d1c16"
+        },
+        {
+          "name": "func_00195850",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 296,
+          "compiled_size": 288,
+          "different_bytes": 184,
+          "first_different_offsets": [
+            4,
+            6,
+            13,
+            14,
+            16,
+            18,
+            24,
+            26
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da3a3f5beec3527a52716bf09657368a616ff7ed58203cef9b2f0bdd2d09a7af",
+          "compiled_sha256": "dbbfbbb8c951f7281d59b5ca007fe60937a494da5468c799e9c657c2ee9f0c06"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00195878",
+          "target": "0x00195958",
+          "word": "0x14400037"
+        },
+        {
+          "instruction_address": "0x00195888",
+          "target": "0x00195958",
+          "word": "0x10620033"
+        },
+        {
+          "instruction_address": "0x001958AC",
+          "target": "0x00195904",
+          "word": "0x12200015"
+        },
+        {
+          "instruction_address": "0x001958B8",
+          "target": "0x00195904",
+          "word": "0x10800012"
+        },
+        {
+          "instruction_address": "0x001958E0",
+          "target": "0x00195904",
+          "word": "0x10800008"
+        },
+        {
+          "instruction_address": "0x0019590C",
+          "target": "0x0019595C",
+          "word": "0x10E00013"
+        },
+        {
+          "instruction_address": "0x00195914",
+          "target": "0x0019595C",
+          "word": "0x12600011"
+        },
+        {
+          "instruction_address": "0x00195930",
+          "target": "0x0019595C",
+          "word": "0x1440000A"
+        },
+        {
+          "instruction_address": "0x00195950",
+          "target": "0x0019595C",
+          "word": "0x10000002"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 6,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    },
+    {
+      "name": "func_00195DC8",
+      "address": "0x00195DC8",
+      "file_offset": "0x00096DC8",
+      "size": 188,
+      "original_sha256": "b5c0966da76872c10b89562f454a8d59205cbdc1e9c813573da125dac5aca126",
+      "source": "src/game/actor_actions.c",
+      "source_name": "func_00195DC8",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete188B collision wrapper: captureddata18/classword45A78000 gate; modefull32 choosesconfig230/234 orpositivezero. Snapshotderivedpoint usesoriginalposition+direction*forward withYthenvertical, thencapturedoutputpointers/mode and LIVEincomingf12 to13D328 throughcontrol48. Both realcaller15BF50 calls loadf12fromconfig244; engineobjectpointerreturn forwarded, rejectionNULL andoutputsuntouched.",
+      "boundary_evidence": "Complete originalentry through terminalreturn/delay andendlabel; exactraw section/file geometry andwholehash, trailingalignmentexcluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195DC8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc323.o",
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 168,
+          "different_bytes": 159,
+          "first_different_offsets": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b5c0966da76872c10b89562f454a8d59205cbdc1e9c813573da125dac5aca126",
+          "compiled_sha256": "292014ca3173b85f0ce27ebdefef5c397c1b9bd57222ec8ef19fab56746d64a8"
+        },
+        {
+          "name": "func_00195DC8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_actions/gcc29.o",
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 168,
+          "different_bytes": 136,
+          "first_different_offsets": [
+            28,
+            36,
+            37,
+            38,
+            39,
+            40,
+            43,
+            44
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b5c0966da76872c10b89562f454a8d59205cbdc1e9c813573da125dac5aca126",
+          "compiled_sha256": "b422833cb7b1d35f8e89c088d8d38ac6762e680da4fc4313bab4cd63aaa1838a"
+        },
+        {
+          "name": "func_00195DC8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_actions/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 168,
+          "different_bytes": 136,
+          "first_different_offsets": [
+            28,
+            36,
+            37,
+            38,
+            39,
+            40,
+            43,
+            44
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b5c0966da76872c10b89562f454a8d59205cbdc1e9c813573da125dac5aca126",
+          "compiled_sha256": "b422833cb7b1d35f8e89c088d8d38ac6762e680da4fc4313bab4cd63aaa1838a"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00195DE4",
+          "target": "0x00195E74",
+          "word": "0x14620023"
+        },
+        {
+          "instruction_address": "0x00195DEC",
+          "target": "0x00195E00",
+          "word": "0x11000004"
+        },
+        {
+          "instruction_address": "0x00195DF8",
+          "target": "0x00195E0C",
+          "word": "0x10000004"
+        },
+        {
+          "instruction_address": "0x00195E6C",
+          "target": "0x00195E7C",
+          "word": "0x10000003"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "actual_callback_materializations": 0,
+        "reachability": "proven_direct_caller",
+        "scope": "Wholecaller/constructor originalentry/hash proof; numericalnames andonlyobservedABI retained."
+      }
+    }
+  ],
+  "schema_version": 1,
+  "direct_call_references": [
+    {
+      "caller": "func_0010D7A0",
+      "instruction_address": "0x0010D940",
+      "target": "func_00178D10",
+      "original_word": "0x0C05E344",
+      "containing_geometry": {
+        "address": "0x0010D7A0",
+        "file_offset": "0x0000E7A0",
+        "size": 440,
+        "original_sha256": "e40de42882e7ffb56b94e0c9211e6bfa17545a7f0fe70e6244eb6f1623f303da"
+      }
+    },
+    {
+      "caller": "func_0010D958",
+      "instruction_address": "0x0010DA58",
+      "target": "func_00178D10",
+      "original_word": "0x0C05E344",
+      "containing_geometry": {
+        "address": "0x0010D958",
+        "file_offset": "0x0000E958",
+        "size": 292,
+        "original_sha256": "bb94c52a5d3c73524eace3085d2fb16502635ccb317a88877ddbae606e1ed1ff"
+      }
+    },
+    {
+      "caller": "func_0010DA80",
+      "instruction_address": "0x0010DAA0",
+      "target": "func_00178D10",
+      "original_word": "0x0C05E344",
+      "containing_geometry": {
+        "address": "0x0010DA80",
+        "file_offset": "0x0000EA80",
+        "size": 420,
+        "original_sha256": "c0c336844ef4ec3048b94ca4806dc88fc4000653c745d0942312783e532242de"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x001594AC",
+      "target": "func_00179168",
+      "original_word": "0x0C05E45A",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x001595F0",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x00159824",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x00159844",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x0015A9A8",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x0015A9B0",
+      "target": "func_00179168",
+      "original_word": "0x0C05E45A",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x0015ADB4",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_00158A80",
+      "instruction_address": "0x0015ADBC",
+      "target": "func_00179168",
+      "original_word": "0x0C05E45A",
+      "containing_geometry": {
+        "address": "0x00158A80",
+        "file_offset": "0x00059A80",
+        "size": 10300,
+        "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59"
+      }
+    },
+    {
+      "caller": "func_0015BF50",
+      "instruction_address": "0x0015BFA0",
+      "target": "func_00195DC8",
+      "original_word": "0x0C065772",
+      "containing_geometry": {
+        "address": "0x0015BF50",
+        "file_offset": "0x0005CF50",
+        "size": 436,
+        "original_sha256": "6d5713398a64b36fa89ecf12286b963e89da2acda20753d4a71e30eedf8a76bb"
+      }
+    },
+    {
+      "caller": "func_0015BF50",
+      "instruction_address": "0x0015C044",
+      "target": "func_00195DC8",
+      "original_word": "0x0C065772",
+      "containing_geometry": {
+        "address": "0x0015BF50",
+        "file_offset": "0x0005CF50",
+        "size": 436,
+        "original_sha256": "6d5713398a64b36fa89ecf12286b963e89da2acda20753d4a71e30eedf8a76bb"
+      }
+    },
+    {
+      "caller": "func_0015E410",
+      "instruction_address": "0x0015E444",
+      "target": "func_00191FF0",
+      "original_word": "0x0C0647FC",
+      "containing_geometry": {
+        "address": "0x0015E410",
+        "file_offset": "0x0005F410",
+        "size": 92,
+        "original_sha256": "bc068a9247b8e3848603065f7e6da06f65a145f095ad3297b18027a02fca9817"
+      }
+    },
+    {
+      "caller": "func_00160630",
+      "instruction_address": "0x00160714",
+      "target": "func_00191F78",
+      "original_word": "0x0C0647DE",
+      "containing_geometry": {
+        "address": "0x00160630",
+        "file_offset": "0x00061630",
+        "size": 516,
+        "original_sha256": "19a248eaa30f0ca8c76e242f557175744441dd9e061aaf545fd96e5b52059695"
+      }
+    },
+    {
+      "caller": "func_00160630",
+      "instruction_address": "0x001607CC",
+      "target": "func_00191F78",
+      "original_word": "0x0C0647DE",
+      "containing_geometry": {
+        "address": "0x00160630",
+        "file_offset": "0x00061630",
+        "size": 516,
+        "original_sha256": "19a248eaa30f0ca8c76e242f557175744441dd9e061aaf545fd96e5b52059695"
+      }
+    },
+    {
+      "caller": "func_00160630",
+      "instruction_address": "0x001607E8",
+      "target": "func_00191F78",
+      "original_word": "0x0C0647DE",
+      "containing_geometry": {
+        "address": "0x00160630",
+        "file_offset": "0x00061630",
+        "size": 516,
+        "original_sha256": "19a248eaa30f0ca8c76e242f557175744441dd9e061aaf545fd96e5b52059695"
+      }
+    },
+    {
+      "caller": "func_00161030",
+      "instruction_address": "0x0016107C",
+      "target": "func_00192180",
+      "original_word": "0x0C064860",
+      "containing_geometry": {
+        "address": "0x00161030",
+        "file_offset": "0x00062030",
+        "size": 188,
+        "original_sha256": "d9702ce05339893ccb5ede8810f48ed295abea628960ffbbaa209ee27099bea2"
+      }
+    },
+    {
+      "caller": "func_00161030",
+      "instruction_address": "0x001610B0",
+      "target": "func_00192180",
+      "original_word": "0x0C064860",
+      "containing_geometry": {
+        "address": "0x00161030",
+        "file_offset": "0x00062030",
+        "size": 188,
+        "original_sha256": "d9702ce05339893ccb5ede8810f48ed295abea628960ffbbaa209ee27099bea2"
+      }
+    },
+    {
+      "caller": "func_001619B0",
+      "instruction_address": "0x001619FC",
+      "target": "func_00178D10",
+      "original_word": "0x0C05E344",
+      "containing_geometry": {
+        "address": "0x001619B0",
+        "file_offset": "0x000629B0",
+        "size": 120,
+        "original_sha256": "12a653398d8da53f9ea7df9986df57d877cc02be0e155f8693a7498f314b7a40"
+      }
+    },
+    {
+      "caller": "func_00162508",
+      "instruction_address": "0x00162544",
+      "target": "func_00191FF0",
+      "original_word": "0x0C0647FC",
+      "containing_geometry": {
+        "address": "0x00162508",
+        "file_offset": "0x00063508",
+        "size": 100,
+        "original_sha256": "d0ae3b102f563ec94e9535889fc0ec73f964c91753b1e0d7574926ff31ce4993"
+      }
+    },
+    {
+      "caller": "func_00170600",
+      "instruction_address": "0x00170A78",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x00170600",
+        "file_offset": "0x00071600",
+        "size": 6584,
+        "original_sha256": "5de1315b996a89e1f14f68d73cc4a023f46077e89ada6c653028a181d3fb438a"
+      }
+    },
+    {
+      "caller": "func_00170600",
+      "instruction_address": "0x00170AB4",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x00170600",
+        "file_offset": "0x00071600",
+        "size": 6584,
+        "original_sha256": "5de1315b996a89e1f14f68d73cc4a023f46077e89ada6c653028a181d3fb438a"
+      }
+    },
+    {
+      "caller": "func_00170600",
+      "instruction_address": "0x00170B00",
+      "target": "func_00192180",
+      "original_word": "0x0C064860",
+      "containing_geometry": {
+        "address": "0x00170600",
+        "file_offset": "0x00071600",
+        "size": 6584,
+        "original_sha256": "5de1315b996a89e1f14f68d73cc4a023f46077e89ada6c653028a181d3fb438a"
+      }
+    },
+    {
+      "caller": "func_00170600",
+      "instruction_address": "0x00170D24",
+      "target": "func_00191E88",
+      "original_word": "0x0C0647A2",
+      "containing_geometry": {
+        "address": "0x00170600",
+        "file_offset": "0x00071600",
+        "size": 6584,
+        "original_sha256": "5de1315b996a89e1f14f68d73cc4a023f46077e89ada6c653028a181d3fb438a"
+      }
+    },
+    {
+      "caller": "func_00170600",
+      "instruction_address": "0x00171274",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x00170600",
+        "file_offset": "0x00071600",
+        "size": 6584,
+        "original_sha256": "5de1315b996a89e1f14f68d73cc4a023f46077e89ada6c653028a181d3fb438a"
+      }
+    },
+    {
+      "caller": "func_00173C68",
+      "instruction_address": "0x00173CEC",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x00173C68",
+        "file_offset": "0x00074C68",
+        "size": 408,
+        "original_sha256": "d756af7d5b7a2149bfe635efe037b80174b1239493c6d84baf5d3984dcbd0bf1"
+      }
+    },
+    {
+      "caller": "func_00173C68",
+      "instruction_address": "0x00173D74",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x00173C68",
+        "file_offset": "0x00074C68",
+        "size": 408,
+        "original_sha256": "d756af7d5b7a2149bfe635efe037b80174b1239493c6d84baf5d3984dcbd0bf1"
+      }
+    },
+    {
+      "caller": "func_00174378",
+      "instruction_address": "0x001743E8",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x00174378",
+        "file_offset": "0x00075378",
+        "size": 388,
+        "original_sha256": "73d4d6e40d498a7a9956bd6fa36525b0fc49e3ed5a4aec2bf2349c97f54e8c7b"
+      }
+    },
+    {
+      "caller": "func_00174378",
+      "instruction_address": "0x00174470",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x00174378",
+        "file_offset": "0x00075378",
+        "size": 388,
+        "original_sha256": "73d4d6e40d498a7a9956bd6fa36525b0fc49e3ed5a4aec2bf2349c97f54e8c7b"
+      }
+    },
+    {
+      "caller": "func_00174770",
+      "instruction_address": "0x00174798",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x00174770",
+        "file_offset": "0x00075770",
+        "size": 244,
+        "original_sha256": "019e3da93a84e8b00fc6f6f46e04dbe7ce5fb3389d113a7167afe773188c6072"
+      }
+    },
+    {
+      "caller": "func_0017ADA8",
+      "instruction_address": "0x0017B134",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x0017ADA8",
+        "file_offset": "0x0007BDA8",
+        "size": 1140,
+        "original_sha256": "7ce2a407cefaff9421d2578847e5b7a587e46b9d6437a3516328d6d5eb4dabc6"
+      }
+    },
+    {
+      "caller": "func_0017CA18",
+      "instruction_address": "0x0017CA60",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x0017CA18",
+        "file_offset": "0x0007DA18",
+        "size": 3820,
+        "original_sha256": "1924fd3b9c0a4d5931c12c1658b09cdb79f3cc9a40dcbdeb22d66759c1714ded"
+      }
+    },
+    {
+      "caller": "func_00183730",
+      "instruction_address": "0x001839B4",
+      "target": "func_001787B0",
+      "original_word": "0x0C05E1EC",
+      "containing_geometry": {
+        "address": "0x00183730",
+        "file_offset": "0x00084730",
+        "size": 672,
+        "original_sha256": "3e825dec2ae8061231d83f0a361bb3c1268a2aacc49001c2aa19b3b3dfb478de"
+      }
+    },
+    {
+      "caller": "func_0018C0C8",
+      "instruction_address": "0x0018C3F8",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x0018C0C8",
+        "file_offset": "0x0008D0C8",
+        "size": 1596,
+        "original_sha256": "8e1a1033c5697daaabacd846c8d2a070e91ff683428ad5c13cb6e54d133f6c87"
+      }
+    },
+    {
+      "caller": "func_00191E88",
+      "instruction_address": "0x00191EC0",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x00191E88",
+        "file_offset": "0x00092E88",
+        "size": 240,
+        "original_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c"
+      }
+    },
+    {
+      "caller": "func_00191E88",
+      "instruction_address": "0x00191F28",
+      "target": "func_00195850",
+      "original_word": "0x0C065614",
+      "containing_geometry": {
+        "address": "0x00191E88",
+        "file_offset": "0x00092E88",
+        "size": 240,
+        "original_sha256": "5e0be7aaf2ac9099147d4a7711dec691992f322cd0ad86fa87050b6be321dc2c"
+      }
+    },
+    {
+      "caller": "func_001934D0",
+      "instruction_address": "0x0019350C",
+      "target": "func_00178D10",
+      "original_word": "0x0C05E344",
+      "containing_geometry": {
+        "address": "0x001934D0",
+        "file_offset": "0x000944D0",
+        "size": 136,
+        "original_sha256": "3e7ec45b758b8fddd975ac6953b5b2f78d1d8f1d5200ad1f322e9ad3e7f7afb5"
+      }
+    },
+    {
+      "caller": "func_00193558",
+      "instruction_address": "0x0019359C",
+      "target": "func_00178E80",
+      "original_word": "0x0C05E3A0",
+      "containing_geometry": {
+        "address": "0x00193558",
+        "file_offset": "0x00094558",
+        "size": 124,
+        "original_sha256": "db921d036297f11e07f2f50bca3a5b3595acddac8437908914bc7834ed6f3335"
+      }
+    },
+    {
+      "caller": "func_0019DDB8",
+      "instruction_address": "0x0019DFFC",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x0019DDB8",
+        "file_offset": "0x0009EDB8",
+        "size": 1024,
+        "original_sha256": "59ec33e48e58c44006fe2be26671977d6e75b5dc2e3415633f264d83c0c4edc3"
+      }
+    },
+    {
+      "caller": "func_0019DDB8",
+      "instruction_address": "0x0019E184",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x0019DDB8",
+        "file_offset": "0x0009EDB8",
+        "size": 1024,
+        "original_sha256": "59ec33e48e58c44006fe2be26671977d6e75b5dc2e3415633f264d83c0c4edc3"
+      }
+    },
+    {
+      "caller": "func_001A07F8",
+      "instruction_address": "0x001A0E1C",
+      "target": "func_00192180",
+      "original_word": "0x0C064860",
+      "containing_geometry": {
+        "address": "0x001A07F8",
+        "file_offset": "0x000A17F8",
+        "size": 1828,
+        "original_sha256": "206b0fe5a333b4e2c89b814c206ab41b5a03c9ccecb920ef445e35320caa21b9"
+      }
+    },
+    {
+      "caller": "func_001A5018",
+      "instruction_address": "0x001A563C",
+      "target": "func_00192180",
+      "original_word": "0x0C064860",
+      "containing_geometry": {
+        "address": "0x001A5018",
+        "file_offset": "0x000A6018",
+        "size": 1828,
+        "original_sha256": "206b0fe5a333b4e2c89b814c206ab41b5a03c9ccecb920ef445e35320caa21b9"
+      }
+    },
+    {
+      "caller": "func_001A6630",
+      "instruction_address": "0x001A6900",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001A6630",
+        "file_offset": "0x000A7630",
+        "size": 2316,
+        "original_sha256": "154da22dd4f3de69fc48af5eb0480256d9db6998210ea919ecf4aacf6f6b07a5"
+      }
+    },
+    {
+      "caller": "func_001A6630",
+      "instruction_address": "0x001A6AB8",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001A6630",
+        "file_offset": "0x000A7630",
+        "size": 2316,
+        "original_sha256": "154da22dd4f3de69fc48af5eb0480256d9db6998210ea919ecf4aacf6f6b07a5"
+      }
+    },
+    {
+      "caller": "func_001A6630",
+      "instruction_address": "0x001A6D90",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001A6630",
+        "file_offset": "0x000A7630",
+        "size": 2316,
+        "original_sha256": "154da22dd4f3de69fc48af5eb0480256d9db6998210ea919ecf4aacf6f6b07a5"
+      }
+    },
+    {
+      "caller": "func_001A6630",
+      "instruction_address": "0x001A6EE8",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001A6630",
+        "file_offset": "0x000A7630",
+        "size": 2316,
+        "original_sha256": "154da22dd4f3de69fc48af5eb0480256d9db6998210ea919ecf4aacf6f6b07a5"
+      }
+    },
+    {
+      "caller": "func_001A6F40",
+      "instruction_address": "0x001A6F74",
+      "target": "func_00192078",
+      "original_word": "0x0C06481E",
+      "containing_geometry": {
+        "address": "0x001A6F40",
+        "file_offset": "0x000A7F40",
+        "size": 160,
+        "original_sha256": "d07f23b7288980db57363f46b06341193ade98c1e4caf20365ce8b8d47dea184"
+      }
+    },
+    {
+      "caller": "func_001A71E8",
+      "instruction_address": "0x001A726C",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001A71E8",
+        "file_offset": "0x000A81E8",
+        "size": 156,
+        "original_sha256": "3d55925e748f7eaa2a98b57532118093408ce6be74e3f7a3661ef43742dff744"
+      }
+    },
+    {
+      "caller": "func_001B6F68",
+      "instruction_address": "0x001B75D0",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001B6F68",
+        "file_offset": "0x000B7F68",
+        "size": 2108,
+        "original_sha256": "d28ca5c5d752afd83c62c47f0e3ef5e17d41a7e2daf9d42d19e63fcafa5cf2f2"
+      }
+    },
+    {
+      "caller": "func_001B6F68",
+      "instruction_address": "0x001B75E4",
+      "target": "func_001784D0",
+      "original_word": "0x0C05E134",
+      "containing_geometry": {
+        "address": "0x001B6F68",
+        "file_offset": "0x000B7F68",
+        "size": 2108,
+        "original_sha256": "d28ca5c5d752afd83c62c47f0e3ef5e17d41a7e2daf9d42d19e63fcafa5cf2f2"
+      }
+    },
+    {
+      "caller": "func_001BA968",
+      "instruction_address": "0x001BA9A8",
+      "target": "func_00192B28",
+      "original_word": "0x0C064ACA",
+      "containing_geometry": {
+        "address": "0x001BA968",
+        "file_offset": "0x000BB968",
+        "size": 100,
+        "original_sha256": "65af91c00cf1fc8e71ed0498325a2d2a612dd6a402e56dbc341db6b85b730ebe"
+      }
+    }
+  ],
+  "callback_references": [
+    {
+      "caller": "func_00195850",
+      "target": "func_00190FC0",
+      "symbol": "func_00190FC0",
+      "high_instruction": "0x001958B0",
+      "low_instruction": "0x001958BC",
+      "high_word": "0x3C020019",
+      "low_word": "0x244A0FC0",
+      "evidence": "Actualcompleteoriginal callbackargument materialization; bothregister writepaths andsurvival throughnextenginecall independentlyreviewable."
+    },
+    {
+      "caller": "func_00178E80",
+      "target": "func_00192BC0",
+      "symbol": "func_00192BC0",
+      "high_instruction": "0x00178F24",
+      "low_instruction": "0x00178F38",
+      "high_word": "0x3C080019",
+      "low_word": "0x25082BC0",
+      "evidence": "Actualcompleteoriginal callbackargument materialization; bothregister writepaths andsurvival throughnextenginecall independentlyreviewable."
+    }
+  ],
+  "jump_tables": [
+    {
+      "address": "0x0042C5E0",
+      "file_offset": "0x0032D5E0",
+      "size": 144,
+      "original_sha256": "406794f600a6e024968b634360b510fb23ed566fed0c891f60ca425948baf116",
+      "function": "func_001784D0",
+      "targets": [
+        {
+          "selector": 0,
+          "address": "0x00178780",
+          "behavior": "captureold58/store58/store504"
+        },
+        {
+          "selector": 1,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 2,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 3,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 4,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 5,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 6,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 7,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 8,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 9,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 10,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 11,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 12,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 13,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 14,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 15,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 16,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 17,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 18,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 19,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 20,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 21,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 22,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 23,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 24,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 25,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 26,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 27,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 28,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 29,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 30,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 31,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 32,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        },
+        {
+          "selector": 33,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 34,
+          "address": "0x00178778",
+          "behavior": "store58"
+        },
+        {
+          "selector": 35,
+          "address": "0x0017878C",
+          "behavior": "preserve58"
+        }
+      ],
+      "evidence": "Actualfull36word table/rawhash andalltargets within completefunction;sourceexplicitstatecondition,datareceivesnoseparatebyteaward."
+    }
+  ],
+  "binary32_constants": [
+    {
+      "literal": "-3.14159274101257324f",
+      "binary32": "0xC0490FDB"
+    },
+    {
+      "literal": "0.000208333338377997279f",
+      "binary32": "0x395A740E"
+    },
+    {
+      "literal": "0.0f",
+      "binary32": "0x00000000"
+    },
+    {
+      "literal": "1.0f",
+      "binary32": "0x3F800000"
+    },
+    {
+      "literal": "2.0f",
+      "binary32": "0x40000000"
+    },
+    {
+      "literal": "3.14159274101257324f",
+      "binary32": "0x40490FDB"
+    },
+    {
+      "literal": "3000.0f",
+      "binary32": "0x453B8000"
+    },
+    {
+      "literal": "5.0f",
+      "binary32": "0x40A00000"
+    },
+    {
+      "literal": "6.28318548202514648f",
+      "binary32": "0x40C90FDB"
+    }
+  ],
+  "binary64_constants": [
+    {
+      "binary64": "0x400921FB60000000",
+      "role": "angle PI fromoriginalEEfloatconstant"
+    },
+    {
+      "binary64": "0x401921FB60000000",
+      "role": "angleTWOPI fromoriginalEEfloatconstant"
+    },
+    {
+      "binary64": "0x3FF921FB60000000",
+      "role": "angleHALFPI fromoriginalEEfloatconstant"
+    },
+    {
+      "binary64": "0xBFF0000000000000",
+      "role": "negativeone softmultiply"
+    }
+  ],
+  "abi_evidence": {
+    "func_00178E80": {
+      "request_callee": "func_00272390",
+      "integer_arguments": 9,
+      "float_registers": [
+        "f12",
+        "f13"
+      ],
+      "secondary_callee": "func_00177C40",
+      "secondary_integer_arguments": 7,
+      "evidence": "Actualcallee27390 captures leadingGPRarguments, consumesGPR10/11 controls andloads ninthintegerfromcallerstack+0 foroptionalcallback; f12/f13stored separately; originalcaller178F34..178F5C suppliesmainword,0,0,callback,context,0,0,stackzero andf12=0/f13=5. Secondaryoriginalcall178F64..178F84 usessevenintegers/f12=5."
+    },
+    "func_00195850": {
+      "request_callee": "func_00272970",
+      "integer_arguments": 8,
+      "evidence": "Originalcalleeentry capturesGPR4..11, including reference/callback/context in9..11; bothrequestcalls in95850 passno stack/floating argument."
+    },
+    "func_00195DC8": {
+      "return_type": "void*",
+      "float_argument": "f12",
+      "calling_function": "func_0015BF50",
+      "engine_callee": "func_0013D328",
+      "engine_integer_arguments": 5,
+      "evidence": "Both encoded15BF50 calls5BFA0/5C044load f12fromconfig244; wrapper onlyforwards f12tocollisioncallee, passingmode infifthintegerargument. Callee/fullcaller treat returnedv0asobjectpointer orNULL. Capturedoutputpointers arefirsttwo calleroutputs."
+    }
+  },
+  "template_families": [
+    {
+      "functions": [
+        "func_001787B0"
+      ],
+      "template": "ENSURE_EFFECT",
+      "evidence": "Fivecompleteoriginalregistry occurrences reuse alreadyreviewed block withsource-only macro expansion, theneachbranchfreshkey/data/global read."
+    },
+    {
+      "functions": [
+        "func_00178E80",
+        "func_00192B28"
+      ],
+      "template": "RESET_POSE",
+      "evidence": "Identicalfullbit32/control/physical+componentreset sourcefamily; caller-specific370/request/motion behavior staysoutside."
+    },
+    {
+      "functions": [
+        "func_00191F78",
+        "func_00191FF0",
+        "func_00192078"
+      ],
+      "template": "NOTIFY_HEALTH",
+      "evidence": "Completefreshcallback/scalarargument/publication/reload/call block reused at identicaloriginalcallshape; precedinghealtharithmetic andfollowingkey remainexplicit."
+    }
+  ],
+  "validation": {
+    "native_harness": "tests/native/actor_actions.c",
+    "native_runner": "tests/native/run_actor_actions.py",
+    "native_checks": 1091,
+    "native_result": "passed",
+    "individual_links": 45,
+    "exact_matches": 0,
+    "candidate_exact_matches": 0,
+    "scope": "Assetfree32bit all15body scenarios, callbacks replacingfreshprimary/companion/data/componenttables/counts, argumentpayload/callbackalias, primary428store overwritingactor1B0beforefresh434, actualfiveeffectbranches/initinsert/reloadedkey, all36anglestategroups andstrictfinite PI/HALFPI/TWOPI boundaries, signedcounts/fullkeymembership/flagmasks, failedqueries/requests, livecollisionf12 andsnapshot-before-outputalias. Soft-double enginefunctions mockedbyfinitehost arithmetic; noEE FCR/generalnonfinite arithmetic identity claim."
+  },
+  "notes": [
+    "15completeconnectedactorangle/effect/visibility/pose/ray/health/damage/request/collisionfunctions;5012originaltextbytes; actualcaller/materializedcallbackproof foreveryentry.",
+    "Author, disc_tooling peer and parent independently read all 15 complete original bodies / 1,253 instructions against the frozen C/header. Peer and parent separately reproduced 52 actual incoming JALs and complete caller geometry/hashes, 128 bounded local branches, both callback materializations, the whole 144-byte table, 16 actual MTC1 sites / nine unique binary32 constants, five complete soft64 chains / four values, genuine request and collision input/return ABI evidence, all 45 fresh full compiler links with zero unresolved / zero exact, and all 1,091 native checks. No source defect found.",
+    "Numericalnames/partiallayouts retained; sharedDeimos/math/actor APIsandprovencompleteblocks reused, nofunctionassembly orprivatehelperaddresspatches. Currentcandidatesnotmatched."
+  ]
+}

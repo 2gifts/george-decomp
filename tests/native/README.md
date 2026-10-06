@@ -1,5 +1,15 @@
 # Native semantic checks
 
+`property_updates` exercises the five callback/deferred-destruction/cache routines
+with the existing ownership source as a separate translation unit. The 272
+authored original-instruction fixtures compare every memory word and callback
+event: 186,429 native checks, including recursive time capture, sibling removal,
+callback replacement and all cache modes. Preserved VU output is modeled only
+for exact identity-quaternion inputs; no hardware/heap fidelity is claimed.
+Run `tests/native/run_utilities.py --harness property_updates`; its neutral
+executable name avoids the Windows installer filename heuristic. Seven
+scoped guards run via `tests/test_trace_property_updates.py`.
+
 `property_lifecycle` checks six complete ownership/init callers with 64,188
 native word/call/event checks and 93 authored scoped fixtures. The harness and
 production source compile as separate translation units, reusing reviewed list C.
@@ -288,3 +298,17 @@ checks 175 authored original-instruction fixtures (94,071 checks). Seven scoped
 decoder guards reject unsupported memory, calls, operands, returns and delays.
 Engine/virtual effects are controlled caller observations; see
 [resource ownership notes](../../docs/resource_lifecycle.md).
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_script.py` for 598
+asset-free checks of all 23 registered actor VM callbacks. The harness covers
+signed typed gates, sparse result publication, full flags, scalar clamps and
+callback/argument aliases. Research and parent separately reproduced this
+result and reviewed all complete originals. See `docs/actor_script.md` for
+registration evidence, caller contracts and host/EE arithmetic limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_actions.py` for 1,091
+asset-free checks of all 15 actor angle/effect/pose/health/request methods.
+The harness covers full dispatch groups and flags, callback/argument aliases,
+five effect branches, duration reloads, ray outputs and live collision float
+arguments. Peer and parent independently reproduced this result and reviewed
+all complete originals. See `docs/actor_actions.md` for ABI and host/EE limits.

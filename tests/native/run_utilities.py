@@ -6,6 +6,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "property_updates": ["src/game/property_updates.c", "src/game/property_lifecycle.c"],
     "resource_lifecycle": ["src/game/resource_lifecycle.c"],
     "property_lifecycle": ["src/game/property_lifecycle.c"],
     "property_hierarchy": ["src/game/property_hierarchy.c"],
@@ -56,7 +57,7 @@ HARNESS_FLAGS = {
 }
 # Windows may classify an unmanifested executable containing "update" as an
 # installer and demand elevation. The algorithm harness requires no elevation.
-HARNESS_EXECUTABLES = {"tree_updates": "tree_walk.exe"}
+HARNESS_EXECUTABLES = {"tree_updates": "tree_walk.exe", "property_updates": "property_tick.exe"}
 
 
 def main():

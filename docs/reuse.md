@@ -1189,12 +1189,12 @@ calls and seven preserved global-address pairs. The tracked-layout source and
 dependency guards reproduce the same full nonexact comparisons with no
 unresolved relocations. Both functions remain reconstructed.
 
-The local `malloc_extend_top` entry at `0x0039B2A0` / 612 bytes is a binding for
-the malloc call. The author read that complete original helper; root checked
-its full hash, calls and binding metadata. The helper and the custom original
-lock/unlock wrappers receive no function-progress award. The separately
-reviewed free/trim/realloc continuation below adds three bodies from the same
-unchanged source; other bodies remain unregistered.
+The local `malloc_extend_top` entry at `0x0039B2A0` / 612 bytes is separately
+reconstructed from the same unchanged source, as described below. Its original
+malloc call and genuine compiler-local function symbols establish independent
+entry and source boundaries. The custom original lock/unlock wrappers remain
+bindings. The free/trim/realloc continuation below adds three more bodies from
+the unchanged source.
 
 The writable 1,032-byte bin initializer at `0x00405A38` has separate source
 identity evidence. Genuine GNU ld resolves all 256 original self `R_MIPS_32`
@@ -1230,4 +1230,66 @@ and symbol extents. Source/dependency guards pass, and a second link using
 only the registered central aliases reproduces each comparison. This is
 source/control/data identity evidence, without a native allocator behavioral
 harness or exhaustive malformed-heap/EE exception claim. Writable initializer
-evidence and the 612-byte local extend helper remain identity-only.
+evidence remains identity-only.
+
+Two more complete bodies now reuse that unchanged `mallocr.c`:
+`malloc_extend_top` at `0x0039B2A0` / 612 bytes and `_memalign_r` at
+`0x0039C620` / 464 bytes. The internal extend helper has a real direct call
+from `_malloc_r`, a separate original prologue and terminal return, and a
+genuine `LOCAL STT_FUNC` under both compilers. Its complete compiled extents
+are 620 and 572 bytes; neither is substituted for the independent 612-byte
+original interval. The `DEFINE_MALLOC` object also contains `_malloc_r`, which
+is selected and counted separately.
+
+The aligned allocation body proves the supported upstream option
+`SIZE_T_SMALLER_THAN_LONG`. Its original unsigned 32-bit size comparison forms
+a negative full 64-bit difference when the chunk is smaller than the padded
+request, and otherwise forms the positive difference, before the signed
+minimum-chunk comparison. With this option the unchanged source retains that
+behavior. GCC 2.9 emits the full 464-byte body with 26 differing bytes; it
+remains reconstructed. No source, instruction or compiler backend adjustment
+was made to resolve those differences.
+
+Seven connected reentrant syscall wrappers also reuse unchanged public
+newlib 1.8.1 sources from the same pinned revision:
+
+| Source | Function | Original address | Bytes |
+| --- | --- | --- | ---: |
+| `reent/closer.c` | `_close_r` | `0x0039DAC8` | 88 |
+| `reent/fstatr.c` | `_fstat_r` | `0x0039DB20` | 92 |
+| `reent/lseekr.c` | `_lseek_r` | `0x0039DB80` | 96 |
+| `reent/openr.c` | `_open_r` | `0x0039DBE0` | 96 |
+| `reent/readr.c` | `_read_r` | `0x0039DC40` | 96 |
+| `reent/sbrkr.c` | `_sbrk_r` | `0x0039DCA0` | 92 |
+| `reent/writer.c` | `_write_r` | `0x0039DD00` | 96 |
+
+These files have no separate copyright notice. The distribution's default
+Cygnus Solutions 1994/1997 notice is retained in
+`LICENSES/newlib-1.8.1.txt`, section 9. This software was developed at Cygnus
+Solutions. All seven source files are imported unchanged; their exact source
+and actual header dependency hashes are checked before compilation.
+
+The nine bodies total 1,732 original bytes. Author and root independently read
+all 433 original instructions, the complete active sources and supporting
+macros. Root reproduced 16 encoded entry references with whole containing
+assembly-byte intervals, 41 bounded branches, 13 preserved global-address
+pairs, both genuine 26-word ABI probes and all 18 natural full links. The ABI
+uses int, size and pointer widths of four bytes, `long`/`off_t` widths of eight,
+and the reentrant error field at offset zero. The wrappers preserve the actual
+syscall arguments, clear the source global error word, propagate a nonzero
+error only on the original failure sentinel, and return the syscall result.
+
+The accessed four-byte global `errno` at `0x00496158` is independently proved
+inside the original writable NOBITS section, including all seven original
+clear-store address pairs. The genuine `sbrkr.c` definition produces a
+four-byte zero-initialized global under `-fno-common`. It is bound to the
+original address for code linking; neither initialized data nor NOBITS is
+mapped or counted here. The OS functions and custom locking routines remain
+numeric bindings, without importing generic replacement stubs.
+
+After registration, 18 fresh tracked-layout links using only the central
+bindings reproduce every full comparison and actual dependency set. All nine
+bodies remain reconstructed with zero unresolved relocations and no new exact
+code award. No native OS or allocator behavioral harness, complete enclosing
+function claim for heuristic caller intervals, or exhaustive malformed-input
+or EE exception claim is made.
