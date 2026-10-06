@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "symbols": {
+    "strtol": {
+      "address": "0x39ca20",
+      "confidence": "confirmed",
+      "evidence": "R_MIPS_26 binding from verified upstream atoi; wrapper forwards to _strtol_r number parser."
+    },
+    "_strtol_r": {
+      "address": "0x39c7f0",
+      "confidence": "corroborated",
+      "evidence": "strtol call target; character classification, sign handling, radix and digit conversion establish parser semantics. Source not yet byte matched."
+    },
+    "_impure_ptr": {
+      "address": "0x405694",
+      "confidence": "corroborated",
+      "evidence": "strtol wrapper loads global reentrancy pointer before invoking _strtol_r."
+    },
+    "fmodf": {
+      "address": "0x37b238",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "__ieee754_fmodf": {
+      "address": "0x37b9c8",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "isnanf": {
+      "address": "0x37de88",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "fptodp": {
+      "address": "0x374848",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "dptofp": {
+      "address": "0x3734f8",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "matherr": {
+      "address": "0x37db30",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "__errno": {
+      "address": "0x393368",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "__fdlib_version": {
+      "address": "0x45567c",
+      "confidence": "corroborated",
+      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    }
+  }
+}

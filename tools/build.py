@@ -40,10 +40,20 @@ def main():
     for function in report["functions"]:
         if not function["identical"]:
             continue
-        object_path = ROOT / function["object"]
-        if object_path not in objects:
-            objects[object_path] = object_functions(object_path)
-        code, relocations = objects[object_path][function["compiled_symbol"]]
+        if function.get("linked_elf"):
+            with (ROOT / function["linked_elf"]).open("rb") as stream:
+                linked = ELFFile(stream)
+                symbol = next(s for s in linked.get_section_by_name(".symtab").iter_symbols()
+                              if s.name == function["compiled_symbol"])
+                section = linked.get_section(symbol["st_shndx"])
+                start = symbol["st_value"] - section["sh_addr"]
+                code = section.data()[start:start + symbol["st_size"]]
+                relocations = []
+        else:
+            object_path = ROOT / function["object"]
+            if object_path not in objects:
+                objects[object_path] = object_functions(object_path)
+            code, relocations = objects[object_path][function["compiled_symbol"]]
         if relocations or len(code) != function["expected_size"]:
             raise ValueError(f"Unresolved code in {function['name']}")
         address = int(function["address"], 0)

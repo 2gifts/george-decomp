@@ -12,7 +12,7 @@
    Prove an identity through exact bytes or stronger structural evidence, record
    the revision and license, and preserve notices. Similar-looking APIs do not
    prove identical code.
-5. Add the function to `config/recovered_functions.json`, including original
+5. Add the function to a batch manifest in `config/functions/`, including original
    address, mapped file offset, code size without alignment padding, original
    byte hash, source path, flags, evidence, and status. Imported runtime work goes
    in `config/runtime_functions.json` and `docs/reuse.md`.
@@ -24,10 +24,17 @@
    `orig/`, `build/`, and `tools/vendor/` remain local; neither game assets nor
    SDK/compiler binaries belong in commits.
 
-The current verifier supports relocation-free leaf functions. Functions with
-calls or global references need a linked comparison at their original addresses
-before they can count as matches. Do not ignore relocation words to award a
-source match. Expand the linker integration as that work begins.
+For calls or globals, set `link: true` and compile with `-ffunction-sections`.
+Record independently established addresses in `config/symbols/` or the
+function's `link_symbols` dictionary. `tools/link_match.py` uses the pinned GNU
+linker to resolve every supported relocation at the original function address.
+It rejects unknown references and compiler-local constant pools without a
+proven data mapping. Do not ignore relocation words to award a source match.
+
+`tools/function_index.py --rebuild` indexes the existing spimdisasm output.
+Use `--query DScriptMgr` or `--address 0x002CD990` to inspect direct callers,
+references, and nearby retained strings. These are navigation hints; confirm
+indirect calls and actual boundaries in assembly before reconstructing code.
 
 The denominator includes all three executable code sections, including runtime
 and VU code. Preserve separate counts for game C, runtime C, and reused assembly.

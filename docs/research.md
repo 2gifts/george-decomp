@@ -36,13 +36,14 @@ caller analysis before being promoted to original class definitions.
 
 - Identify compiler generation and optimization settings using representative
   game and middleware functions, retaining exact tool fingerprints.
-- Finish matching the current serializers and timer routines; then extend
-  verification to linked functions with calls and global references.
+- Finish matching reconstructed serializers, timers, registry, math, and script
+  routines using representative compiler profiles. Original-address linking
+  now resolves calls and global references without masking relocation bytes.
 - Map startup and the main loop, using string cross-references and callers to
   recover meaningful subsystem names and object layouts.
-- Expand runtime fingerprinting beyond relocation-free objects. Compare
-  relocation-normalized candidates to propose identities, then require a real
-  linked byte comparison before marking matches.
+- Expand the existing relocation-normalized runtime scanner. Its candidates
+  establish research leads; unchanged upstream source still needs a real
+  linked byte comparison before earning a match.
 - Separate game, physics, scripting, SDK, and runtime regions through evidence;
   establish per-subsystem progress after their boundaries are reviewed.
 - Split `.rentext`, VU programs, descriptors, data, and exception tables into
@@ -54,3 +55,8 @@ caller analysis before being promoted to original class definitions.
 Primary sources for the reused runtime and toolchain are recorded in
 [reuse.md](reuse.md). No other project's game source has been copied without a
 proven identity and an applicable license.
+
+Recovery notes now cover [Deimos values and lifecycle](deimos.md) and
+[string/search/CRC algorithms](string_algorithms.md). Twenty scalar/vector
+math routines and the named-object registry are recorded in batch manifests;
+each function's evidence and matching status is tracked independently.

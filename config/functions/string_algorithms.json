@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "New reconstructions; no third-party source identity established and no upstream C copied.",
+    "CRC table identity is independently confirmed from all 256 polynomial-generated words. The original table is bound, not copied into Git.",
+    "Near matches remain reconstructed. Branch-likely opcode differences and callee-save widths are compared without masking.",
+    "Host semantic tests cover ordinary byte/CRC/search behavior; IEEE host NaN behavior is not a full PS2 floating-point model."
+  ],
+  "functions": [
+    {
+      "name": "func_00295050",
+      "address": "0x00295050",
+      "file_offset": "0x00196050",
+      "size": 48,
+      "source": "src/game/string_algorithms.c",
+      "source_name": "func_00295050",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0eebdffa6c07510c32489659f138034aa99bf183a52d06171ff7c75918de3c05",
+      "compiled_size": 44,
+      "compiled_sha256": "ef32425848c0b21c1491175838b3652f6ce30d80f06f685c6fcb4c3f9e15e4bb",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Byte length scan excludes the terminator, uses signed byte loads, and has no null guard.",
+      "boundary_evidence": "Reviewed start, branch targets, final return, and return delay slot; post-endlabel alignment excluded.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "method": "GNU PS2 ld at original address, complete bytes and exact symbol size, all relocations resolved",
+        "identical": false,
+        "different_bytes": 25,
+        "first_different_offsets": [
+          4,
+          20,
+          22,
+          23,
+          26,
+          27,
+          28,
+          29
+        ],
+        "remaining_relocations": []
+      }
+    },
+    {
+      "name": "func_0029C588",
+      "address": "0x0029C588",
+      "file_offset": "0x0019D588",
+      "size": 104,
+      "source": "src/game/string_algorithms.c",
+      "source_name": "func_0029C588",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a2bc8beee9d688810d17b5709e81f62caa40713a9991fe71a920feae9edfb070",
+      "compiled_size": 104,
+      "compiled_sha256": "0bae115a87e262e0273864deb4de89b3c85a4daf166e855ae560567c8d4084c3",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Bespoke float binary search; signed division rounds toward zero, bounds stop when low>=high without a final comparison, and unordered comparisons return middle.",
+      "boundary_evidence": "Reviewed start, branch targets, final return, and return delay slot; post-endlabel alignment excluded.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "method": "GNU PS2 ld at original address, complete bytes and exact symbol size, all relocations resolved",
+        "identical": false,
+        "different_bytes": 1,
+        "first_different_offsets": [
+          87
+        ],
+        "remaining_relocations": []
+      }
+    },
+    {
+      "name": "func_0029C5F0",
+      "address": "0x0029C5F0",
+      "file_offset": "0x0019D5F0",
+      "size": 84,
+      "source": "src/game/string_algorithms.c",
+      "source_name": "func_0029C5F0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9ce7774f8f3dacdd2fab917b8d865a6d1d7e387ed8e4654306ef03e7d28c6ef7",
+      "compiled_size": 80,
+      "compiled_sha256": "87eb4ba47a05c9d723244969abd5a13c200672c37cac1e6a5c71655a751c3763",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Reflected CRC-32 streaming update; null buffer returns zero; non-null zero length preserves prior finalized CRC; every byte updates via the confirmed 256-word table.",
+      "boundary_evidence": "Reviewed start, branch targets, final return, and return delay slot; post-endlabel alignment excluded.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "method": "GNU PS2 ld at original address, complete bytes and exact symbol size, all relocations resolved",
+        "identical": false,
+        "different_bytes": 72,
+        "first_different_offsets": [
+          0,
+          3,
+          5,
+          6,
+          8,
+          10,
+          11,
+          12
+        ],
+        "remaining_relocations": []
+      },
+      "link_symbols": {
+        "D_00445650": "0x00445650"
+      }
+    },
+    {
+      "name": "func_0029C648",
+      "address": "0x0029C648",
+      "file_offset": "0x0019D648",
+      "size": 120,
+      "source": "src/game/string_algorithms.c",
+      "source_name": "func_0029C648",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e6e7aa851def2a9f9203e711f66f8c63d806d8f01c9404007284ac92e772fe30",
+      "compiled_size": 120,
+      "compiled_sha256": "0fd5d2de512d8ab2c0eee6c9229e6d6c873ee5d8762965294bbdc7cd3e244b45",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "String CRC starts with all bits set and excludes terminator. Calls byte strlen before its later null-pointer test, so null input is not a safe API contract.",
+      "boundary_evidence": "Reviewed start, branch targets, final return, and return delay slot; post-endlabel alignment excluded.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "method": "GNU PS2 ld at original address, complete bytes and exact symbol size, all relocations resolved",
+        "identical": false,
+        "different_bytes": 27,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "remaining_relocations": []
+      },
+      "link_symbols": {
+        "D_00445650": "0x00445650",
+        "func_00295050": "0x00295050"
+      }
+    }
+  ]
+}

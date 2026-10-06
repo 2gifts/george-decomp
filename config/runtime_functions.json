@@ -81,6 +81,51 @@
         "-fno-common"
       ],
       "evidence": "Unique exact relocation-free archive symbol match in official PS2DEV 2018-10-19 runtime; independently rebuilt from openly licensed upstream source using homebrew GCC 3.2.3 and its ee-as 2.14, then symbol-sized bytes compared exactly with retail ELF. Does not identify original game compiler."
+    },
+    {
+      "name": "atoi",
+      "address": "0x396320",
+      "file_offset": "0x297320",
+      "size": 40,
+      "source": "src/runtime/atoi.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "3076f1ca257f1d9ea0c05fb92fd32a6d9c1cd344baf9780cfaf5c6be5f4b4354",
+      "upstream_symbol": "atoi",
+      "upstream_revision": "newlib-1.10.0, newlib/libc/stdlib/atoi.c",
+      "upstream_license": "Newlib compilation: Red Hat/Cygnus permissive preserve-notice license, see LICENSES/newlib-1.10.0.txt",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "link_symbols": {
+        "strtol": "0x39ca20"
+      },
+      "evidence": "Unique relocation-normalized official PS2DEV libc.a symbol match; call binding to strtol corroborated by parser semantics at _strtol_r. Unchanged upstream source independently compiled and linked at retail address with strtol binding; all 40 bytes match retail ELF exactly."
+    },
+    {
+      "name": "fmodf",
+      "address": "0x37b238",
+      "file_offset": "0x27c238",
+      "size": 316,
+      "source": "src/runtime/fmodf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "d92b6d8c96ab18eed6079e03746aead0a5962c9862b18255516687b82036e636",
+      "upstream_symbol": "fmodf",
+      "upstream_revision": "newlib-1.10.0, newlib/libm/math/wf_fmod.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-reorder-blocks"
+      ],
+      "evidence": "Identity corroborated by embedded fmodf exception name at0x4550e0, complete control flow of newlib non-IEEE wrapper, isnanf checks, _LIB_VERSION handling, matherr, errno33, and float/double conversion helpers. Unchanged upstream source compiles but is not byte matched. Local constant-pool relocations await independent mapping; no link symbols recorded for verification yet."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately."

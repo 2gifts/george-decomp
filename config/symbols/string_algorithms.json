@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "symbols": {
+    "func_00295050": {
+      "address": "0x00295050",
+      "confidence": "reviewed",
+      "evidence": "Direct call target of string CRC; manual byte-length loop review."
+    },
+    "D_00445650": {
+      "address": "0x00445650",
+      "confidence": "confirmed",
+      "evidence": "All 256 little-endian words match reflected CRC-32 polynomial 0xEDB88320.",
+      "size": 1024,
+      "section": ".rodata",
+      "file_offset": "0x00346650",
+      "sha256": "12f3e0576d447eb37b36d82ba0c1c5481b8f0d12fdc70347ce4a076b229d4c86"
+    }
+  },
+  "references": [
+    "https://www.w3.org/TR/2003/REC-PNG-20031110/#D-CRCAppendix",
+    "https://raw.githubusercontent.com/madler/zlib/v1.1.4/crc32.c"
+  ]
+}

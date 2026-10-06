@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "No upstream game source copied.",
+    "No fast-math or reassociation used; -fno-math-errno permits direct sqrt.s matching observed retail hardware instruction."
+  ],
+  "functions": [
+    {
+      "name": "func_002CF298",
+      "address": "0x002CF298",
+      "file_offset": "0x001D0298",
+      "size": 448,
+      "source": "src/game/deimos_callbacks.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ab4191cf4c4a4b042a25a0899b732871d33e003bca6e2311756ac45e305d784f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections",
+        "-fno-math-errno"
+      ],
+      "link": true,
+      "evidence": "DVDist debug name; tag4 arguments. Four hash lookups per table, x/y/z values loaded after fourth lookup. Left-associated squares and EE sqrt.s, then optional tag2 result.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002D05E0",
+      "address": "0x002D05E0",
+      "file_offset": "0x001D15E0",
+      "size": 148,
+      "source": "src/game/deimos_callbacks.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5778d674aa02260a487e0032d4acbf59c1228b4ae5cd9e5f19849f02e09b017d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections",
+        "-fno-math-errno"
+      ],
+      "link": true,
+      "evidence": "DFMod debug name and two tag2 arguments; original f12/f13 call to identified newlib fmodf wrapper; optional tag2 result.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    }
+  ]
+}

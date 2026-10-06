@@ -143,13 +143,15 @@ class RevisionTests(unittest.TestCase):
 
 
 class ManifestTests(unittest.TestCase):
-    def read_manifests(self, game, runtime=()):
+    def read_manifests(self, game, runtime=(), batch=()):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             config = root / "config"
             config.mkdir()
             for name, functions in (("recovered_functions.json", game), ("runtime_functions.json", runtime)):
                 (config / name).write_text(json.dumps({"functions": list(functions)}), encoding="utf-8")
+            (config / "functions").mkdir()
+            (config / "functions/batch.json").write_text(json.dumps({"functions": list(batch)}), encoding="utf-8")
             with patch.object(verify, "ROOT", root):
                 return verify.manifests()
 
@@ -167,6 +169,37 @@ class ManifestTests(unittest.TestCase):
     def test_empty_manifest_rejected(self):
         with self.assertRaisesRegex(ValueError, "No recovered"):
             self.read_manifests([])
+
+    def test_batch_manifests_are_included_and_cannot_overlap(self):
+        game = [{"address": "0x1000", "size": 4}]
+        batch = [{"address": "0x1004", "size": 4}]
+        self.assertEqual(self.read_manifests(game, batch=batch), game + batch)
+        with self.assertRaisesRegex(ValueError, "overlap"):
+            self.read_manifests(game, batch=game)
+
+
+class BindingTests(unittest.TestCase):
+    def bindings(self, central, function):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "config/symbols").mkdir(parents=True)
+            for index, values in enumerate(central):
+                (root / f"config/symbols/{index}.json").write_text(json.dumps({"symbols": values}), encoding="utf-8")
+            with patch.object(verify, "ROOT", root):
+                return verify.symbol_bindings(function)
+
+    def test_central_and_per_function_addresses_are_merged(self):
+        result = self.bindings([{"global": "0x4000", "callee": {"address": "0x1000"}}],
+                               {"link_symbols": {"callee": 0x1000, "other": "0x2000"}})
+        self.assertEqual(result, {"global": 0x4000, "callee": 0x1000, "other": 0x2000})
+
+    def test_conflicting_central_addresses_are_rejected(self):
+        with self.assertRaisesRegex(ValueError, "Conflicting symbol"):
+            self.bindings([{"callee": "0x1000"}, {"callee": "0x1004"}], {})
+
+    def test_function_cannot_override_central_address(self):
+        with self.assertRaisesRegex(ValueError, "Conflicting per-function"):
+            self.bindings([{"callee": "0x1000"}], {"link_symbols": {"callee": "0x1004"}})
 
 
 class TargetRangeTests(unittest.TestCase):

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Partial observed types only; original names unknown.",
+    "Free/active list capacities and validity are caller invariants; no new checks added.",
+    "Pool reference increment retains modulo-65536 halfword behavior.",
+    "No upstream source copied."
+  ],
+  "functions": [
+    {
+      "name": "func_002CD0B8",
+      "address": "0x002CD0B8",
+      "file_offset": "0x001CE0B8",
+      "size": 120,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "35d2dbabdf8a38e74aff9d8c8b21656dd8da4b80fae031251a3aeb6423a1dc96",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Increment reference count; on zero, remove from active list and repair moved node slot.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CD130",
+      "address": "0x002CD130",
+      "file_offset": "0x001CE130",
+      "size": 112,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "233435e8135f78e8e442e17c5de9f607d6ba2d8175386bf4b161f21664a6ca3c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Modulo-65536 decrement; final reference calls payload release then pushes index derived by unsigned pointer-distance >>4.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CD248",
+      "address": "0x002CD248",
+      "file_offset": "0x001CE248",
+      "size": 104,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4462d8aa83b5f6ec3d1940561a1428754eb91c3e40aebec15b79a2651c5f3455",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Pop signed free-list index, append to active list, record slot, return pool node.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CD528",
+      "address": "0x002CD528",
+      "file_offset": "0x001CE528",
+      "size": 116,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3c2cab1689130a7ab407bad623183d56fb7a03ed7b570f3d7db2f8e9312aa634",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Inline pool allocation, type byte 1, payload word at +12.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CD990",
+      "address": "0x002CD990",
+      "file_offset": "0x001CE990",
+      "size": 144,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2997618454f7c50c58ff25a50c0034f34986190f7630c4a686b962cb82bc5a4a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "17-bucket unsigned-key lookup: secondary table before local table; return inline value +8.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CDA20",
+      "address": "0x002CDA20",
+      "file_offset": "0x001CEA20",
+      "size": 144,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b2b12ecf42676719d1354df3caa0d42a9aaea279978305f4831c9cfd2f712474",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "17-bucket callback traversal; next link read after callback and buckets reloaded each outer iteration.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CDB88",
+      "address": "0x002CDB88",
+      "file_offset": "0x001CEB88",
+      "size": 116,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "eaceac7eb5905c4f6bb119c370a3b3d1a633b59d2d6c548f7c67925c6b66f852",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Zero-terminated preserved-key list; unlisted signed tag3..5 releases pool reference, then clears tag only.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CDC00",
+      "address": "0x002CDC00",
+      "file_offset": "0x001CEC00",
+      "size": 152,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c3671f31e57f764c430225ac73e8ffa55982913985db07801ca026937197b525",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Traverse all17 own buckets with value-clear callback and preserved-key context; next link read after callback.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002CDF90",
+      "address": "0x002CDF90",
+      "file_offset": "0x001CEF90",
+      "size": 48,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "65cdafd6c6e4925238134b48425ae41c8d40ab387f0b92ad5fe2113678d32ac5",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Negative running-frame depth returns NULL; otherwise frame context member +0x14.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    },
+    {
+      "name": "func_002D0560",
+      "address": "0x002D0560",
+      "file_offset": "0x001D1560",
+      "size": 124,
+      "source": "src/game/deimos_values.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7dbcf948a70add5cad9d42fceea6744f27101db652eff7f6ebd4f04765e69735",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Unsigned time word converted to float and scaled by float bits 0x3A83126F; write tag 2 result unless destination -1.",
+      "boundary_evidence": "Function start and final return delay slot reviewed; trailing alignment padding excluded."
+    }
+  ]
+}

@@ -7,7 +7,15 @@ USA retail executable `SLUS_216.68`. Each byte sequence occurs exactly once in
 the executable's `.text` section. This scan tested 123 relocation-free functions
 between 24 and 4,096 bytes from `libc.a`, `libm.a`, and `libgcc.a`.
 
-The sources checked into this repository were then independently compiled or
+The extended scanner in `tools/runtime_scan.py` also masks only actual ELF
+relocation bits and derives external symbol bindings from the linked retail
+instructions. It found `atoi` with its `strtol` call relocated. The call target
+was corroborated by the number parser's character classification, sign, radix,
+and digit conversion behavior. Short generic wrappers can match uniquely by
+chance: a candidate named `_mallinfo_r` was rejected because its target has
+unrelated semantics. Scanner candidates alone do not establish function names.
+
+The five sources checked into this repository were then independently compiled or
 assembled, and their function bytes compared with the retail executable again:
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
@@ -16,11 +24,22 @@ assembled, and their function bytes compared with the retail executable again:
 | `memcpy` | `0x003934f8` | 172 | `src/runtime/memcpy.S` | Upstream assembly | Exact |
 | `memmove` | `0x003935a4` | 252 | `src/runtime/memmove.S` | Upstream assembly | Exact |
 | `fabsf` | `0x0037dd58` | 28 | `src/runtime/fabsf.c` | Upstream C | Exact |
+| `atoi` | `0x00396320` | 40 | `src/runtime/atoi.c` | Upstream C | Exact after linking `strtol` |
 
 The 572 bytes of reused assembly must remain separate from high-level C
-decompilation progress. The 28 bytes of compiled `fabsf` C are high-level source.
+decompilation progress. The 68 bytes of compiled `fabsf` and `atoi` C are high-level source.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
+
+One further upstream C routine, `fmodf` at `0x0037b238` (316 bytes), is
+reconstructed with strong identity evidence but has not matched. Its exception
+name is the literal `fmodf` at `0x004550e0`, and the entire wrapper's flow agrees
+with newlib: core remainder call, NaN checks, library-version handling, the
+zero-divisor domain exception, `matherr`, errno 33, and float/double conversion
+helpers. `src/runtime/fmodf.c` preserves the unchanged upstream implementation.
+Its candidate GCC 3.2.3 build differs in size and instruction scheduling;
+compiler-local data relocations still require independent address mapping.
+This routine contributes no matched bytes.
 
 ## Source provenance and licenses
 
@@ -41,6 +60,15 @@ These files preserve Sun Microsystems' 1993 permissive copyright notice and the
 float-conversion credit to Ian Lance Taylor. The release's complete collection
 of license notices is retained in `LICENSES/newlib-1.10.0.txt`. These sources keep
 their upstream terms; the project's own tooling license does not replace them.
+
+`atoi.c` is an unchanged copy of `newlib/libc/stdlib/atoi.c` from the same
+newlib archive. It retains Andy Wilson's authorship credit. It is covered by
+the newlib distribution notices, preserved in `LICENSES/newlib-1.10.0.txt`.
+Its exact source build links the symbol `strtol` at `0x0039ca20`; the required
+binding and supporting symbol evidence are in `config/symbols/runtime.json`.
+
+`fmodf.c` is an unchanged copy of `newlib/libm/math/wf_fmod.c` from the same
+archive, preserving its Sun Microsystems notice and Ian Lance Taylor credit.
 
 ## Reproducing the tool setup
 
@@ -76,7 +104,7 @@ Modern binutils v0.10 is useful for ELF inspection and later baseline assembly.
 
 ## Scope of the evidence
 
-These exact runtime matches establish reusable implementations of four specific
+These exact runtime matches establish reusable implementations of five specific
 functions. They do not identify the compiler used for Papaya's game code, prove
 that all newlib/SDK code is the same version, or establish a shared game engine
 with any other decompilation. The original compiler remains unidentified.

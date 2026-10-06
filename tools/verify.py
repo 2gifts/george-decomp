@@ -1,4 +1,4 @@
-"""Compile recovered C and count only exact, relocation-free function matches.
+"""Compile recovered C and count only exact function matches after linking.
 
 The retail compiler has not been identified. This candidate compiler is useful
 for individual byte matches; it does not establish a full matching game build.
@@ -66,7 +66,9 @@ def object_functions(path):
 
 def manifests():
     functions = []
-    for path in (ROOT / "config/recovered_functions.json", ROOT / "config/runtime_functions.json"):
+    paths = [ROOT / "config/recovered_functions.json", ROOT / "config/runtime_functions.json"]
+    paths.extend(sorted((ROOT / "config/functions").glob("*.json")))
+    for path in paths:
         if path.exists():
             functions.extend(json.loads(path.read_text(encoding="utf-8"))["functions"])
     if not functions:
@@ -75,6 +77,23 @@ def manifests():
     if any(a[1] > b[0] for a, b in zip(ranges, ranges[1:])):
         raise ValueError("Recovered function ranges overlap; progress would double-count bytes")
     return functions
+
+
+def symbol_bindings(function):
+    bindings = {}
+    for path in sorted((ROOT / "config/symbols").glob("*.json")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for name, value in data.get("symbols", {}).items():
+            address = number(value["address"] if isinstance(value, dict) else value)
+            if name in bindings and bindings[name] != address:
+                raise ValueError(f"Conflicting symbol binding {name}")
+            bindings[name] = address
+    for name, value in function.get("link_symbols", {}).items():
+        address = number(value["address"] if isinstance(value, dict) else value)
+        if name in bindings and bindings[name] != address:
+            raise ValueError(f"Conflicting per-function symbol binding {name}")
+        bindings[name] = address
+    return bindings
 
 
 def validate_target_function(function, sections):
@@ -150,7 +169,11 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     for function in functions:
         source = function["source"]
-        flags = tuple(function.get("compile_flags", DEFAULT_FLAGS))
+        use_linker = bool(function.get("link", False) or function.get("link_symbols"))
+        chosen_flags = list(function.get("compile_flags", DEFAULT_FLAGS))
+        if use_linker and "-ffunction-sections" not in chosen_flags:
+            chosen_flags.append("-ffunction-sections")
+        flags = tuple(chosen_flags)
         key = (source, flags)
         if key not in compiled:
             destination = output_dir / f"{len(compiled):03d}_{Path(source).stem}.o"
@@ -169,6 +192,13 @@ def main():
             raise ValueError(f"Original byte fingerprint mismatch: {function['name']}")
         symbol = function.get("compiled_symbol", function["name"])
         actual, relocations = compiled[key][symbol]
+        linked_path = None
+        if use_linker:
+            from link_match import link_function
+            linked = link_function(ROOT / compiled_paths[key], symbol, number(function["address"]),
+                                   symbol_bindings(function), ROOT / "build/linked" / function["name"])
+            actual, relocations = linked["code"], linked["remaining_relocations"]
+            linked_path = linked["linked_path"].relative_to(ROOT).as_posix()
         comparison = compare_function(expected, actual, relocations)
         # A recorded match is a regression gate; reconstructed entries may differ.
         if function["status"] in ("matched", "reused_matching_assembly") and not comparison["identical"]:
@@ -177,6 +207,7 @@ def main():
                         "category": "runtime" if source.startswith("src/runtime/") else "game",
                         "language": "assembly" if Path(source).suffix.lower() in (".s", ".asm") else "C",
                         "object": compiled_paths[key], "compiled_symbol": symbol,
+                        "linked_elf": linked_path,
                         "compile_flags": list(flags), **comparison})
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)
@@ -188,9 +219,10 @@ def main():
     progress = {"schema_version": 1, "revision": spec["serial"], "original_sha256": spec["executable_sha256"],
                 "compiler": version, "compiler_identity": "candidate; original compiler unidentified",
                 "compiler_sha256": hashlib.sha256(args.compiler.read_bytes()).hexdigest(),
-                "method": "Exact function code bytes and size, with no unresolved relocations. Padding excluded.",
+                "method": "Exact function code bytes and size after explicit symbol-address linking where needed; no unresolved relocations. Padding excluded.",
                 "full_game_build": False, "code_section_bytes": code_sizes, "total_code_bytes": total,
                 "reconstructed_c_functions": sum(r["language"] == "C" for r in results),
+                "reconstructed_c_code_bytes": sum(r["expected_size"] for r in results if r["language"] == "C"),
                 "matched_functions": len(matched_c),
                 "matched_game_functions": sum(r["category"] == "game" for r in matched_c),
                 "matched_runtime_functions": sum(r["category"] == "runtime" for r in matched_c),
@@ -202,7 +234,7 @@ def main():
     if args.publish_report:
         published = dict(progress)
         # Build paths are local implementation details, unnecessary for the public report.
-        published["functions"] = [{k: v for k, v in r.items() if k != "object"} for r in results]
+        published["functions"] = [{k: v for k, v in r.items() if k not in ("object", "linked_elf")} for r in results]
         write_json(ROOT / "reports/progress.json", published)
         publish_readme_progress(progress)
     print(f'{progress["matched_functions"]}/{progress["reconstructed_c_functions"]} C functions match: {matched_bytes:,}/{total:,} code bytes ({progress["matched_code_percent"]:.6f}%).')
