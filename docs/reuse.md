@@ -1437,3 +1437,81 @@ match and is excluded from the registered baseline. Valid IO buffers and C
 arithmetic domains are required; native OS/filesystem, malformed IO objects,
 original data initialization and EE exceptions are unclaimed. The canonical checkpoint passed 264 tooling tests and reproduced the retail
 ELF SHA-256 in a hybrid build.
+
+
+## Unsigned long conversion
+
+Unchanged pinned public newlib 1.8.1 `strtoul.c` recovers `_strtoul_r`
+(528 bytes) and `strtoul` (52 bytes), with the full 1990 Berkeley notice
+retained in source and `LICENSES/newlib-1.8.1.txt` section 1. This product
+includes software developed by the University of California, Berkeley and
+its contributors. Raw source SHA-256 is
+`3561c247567ebcb5872ecfec7a52d5648f8fcedfb493e133a40a6f8824650356`.
+The existing exact 257-byte licensed ctype table, GNU unsigned64 division,
+remainder and multiplication bindings, and authentic limits/reent headers
+are reused; no additional table/code award is claimed.
+
+Author, disc peer and parent read all 145 original instructions, full source
+and relevant authentic declarations/macros, plus both complete external
+callers. They preserve signed-char classification, whitespace/sign/radix,
+64-bit cutoff/accumulation and overflow return with errno34, low64 negation,
+and captured endptr. The wrapper returns a full unsigned64 value; actual
+callers perform their own signed32 narrowing afterward. Three real incoming
+JALs, 24 branches, 17 stores, complete return/alignment geometry and preserved
+ctype/impure pointer constructions are checked.
+
+Parent and peer reproduced four natural complete GNU links and the entire
+source/dependency/caller/16-word ABI/ctype identity packet. Long and unsigned
+long are eight bytes, int/pointers four, char signed, and ULONG_MAX full64.
+Both bodies remain reconstructed: all four links have zero unresolved
+relocations and genuine visible code differences. Readable strings, valid
+base and in-table ctype domains are required. Malformed radix/division traps,
+high-bit out-of-table indexing, arbitrary aliases and native/EE exception
+behavior are unclaimed. The parent repeated all four tracked-source links using only central
+bindings; complete code, symbol geometry, dependencies and both ABI/ctype
+proofs reproduced exactly. The canonical checkpoint passed 280 tooling tests (one platform-specific
+skip) and reproduced the retail ELF SHA-256 in a hybrid build.
+
+
+## Exit registration and va_list wrappers
+
+Four more complete bodies reuse unchanged newlib 1.8.1 source at the same
+pinned revision: `atexit` (156 bytes), `vprintf` (44 bytes), `vsprintf`
+(84 bytes) and `atof` (28 bytes). The three exit/stdio files retain the
+1990 Berkeley notices, including the original atexit sccs redistribution
+placeholder; the full applicable notice is retained in
+`LICENSES/newlib-1.8.1.txt` section 1. This product includes software
+developed by the University of California, Berkeley and its contributors.
+`atof.c` uses the default Cygnus Solutions 1994/1997 notice in section 9.
+This product includes software developed by Cygnus Solutions. Every raw
+source and actual compiler dependency has a SHA-256 pin in the manifest.
+
+Author, disc peer and parent read all 78 selected original instructions,
+complete sources and relevant authentic declarations, and all 42 instructions
+of the actual engine allocator. They verified 259 encoded incoming transfers
+and complete containing byte intervals, four branches, 19 stores and five
+preserved reentrancy-pointer constructions. The atexit list retains its
+embedded 32-entry node, signed index gate, allocation failure and fresh central
+pointer reloads. A per-source `-Dmalloc=func_002AF140` binds its actual
+136-byte engine allocation without changing the public source or central
+generic malloc alias. The target allocator retains its size/pointer and
+full return-register behavior.
+
+`vprintf` forwards its incoming va_list and fresh stdout; `vsprintf` builds
+the observed sparse 88-byte FILE and writes NUL through the post-formatter
+FILE pointer. The complete 84-byte original and compiler STT_FUNC end before
+the neighboring prologue. That neighbor's source identity remains unproved
+and is excluded. The preceding 16 bytes before atexit have no terminal JR,
+so no complete-body or noreturn assertion is made about them.
+
+Both independent reviewers reproduced every proof dictionary, eight genuine
+whole linked functions and two 24-word authentic ABI probes. The parent
+repeated all eight tracked-source links using only central bindings; full
+comparisons, dependencies, source fingerprints and ABI packets reproduced.
+Int/pointers/size_t/va_list are four bytes, long/double eight, atexit-node
+136 and reent 748. `atof` reuses the existing strtod binding and matches all
+28 original bytes under both compilers. The other three bodies remain
+reconstructed with zero unresolved relocations. Valid runtime objects,
+strings, buffers and va_list domains are assumed; formatter/OS/heap/EE
+implementation fidelity is outside this source-identity proof. The canonical checkpoint passed 280 tooling tests (one platform-specific
+skip) and reproduced the retail ELF SHA-256 in a hybrid build.

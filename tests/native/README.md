@@ -346,3 +346,21 @@ post-zero mutations preserve captured bases and published cursor fields.
 Native storage preserves low 16 address bits and its complete authored extent
 remains below bit 31; raw numeric pointers are never dereferenced. See
 `docs/arena_buffers.md` for reachability, ABI and modeled-call limits.
+
+Actor core: `python tests/native/run_actor_core.py` executes all five complete
+production bodies and 2,296 authored checks, warning-free. Callback mutations,
+member adjustments, shifted aliases, retained scratch, projection/emission ABI
+and soft-angle operand order are covered. Host arithmetic and engine callbacks
+are limited test doubles. See `docs/actor_core.md` for the complete contracts.
+
+Resource base: `python tests/native/run_utilities.py --harness resource_base`
+executes 290 authored fixtures and 795,118 checks with reused map/pool C and
+nested subscription/removal. Eight strict decoder guards pass. Every case
+compares all 2,560 words, global pointers and callback events; physical native
+storage must fit the original low28 mask. See `docs/resource_base.md`.
+
+Arena extensions: `python tests/native/run_utilities.py --harness arena_extensions`
+executes 628 authored fixtures and 337,948 checks with separate production C.
+Eight strict decoder guards pass. Whole buffers/descriptors, four output aliases,
+zero-call events and numeric wrap are checked; all five incoming entries remain
+unresolved. See `docs/arena_extensions.md` for scope and model limits.
