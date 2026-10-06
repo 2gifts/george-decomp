@@ -426,6 +426,31 @@
       "address": "0x00398468",
       "confidence": "identified",
       "evidence": "Complete signed-byte outer source-prefix loop and inner reject-string search stop at the first matching reject character or source terminator, then return the32-bit pointer difference. Entire original27-instruction graph agrees with unchanged public source; candidate scheduling/length differ, so remains reconstructed. Unchanged pinned public source, decoded originalJALentry and completeoriginalextent."
+    },
+    "strlwr": {
+      "address": "0x003984D8",
+      "confidence": "identified",
+      "evidence": "All 31 original instructions agree with the unchanged newlib signed-byte loop, original _ctype_+1 uppercase-bit test, conditional tolower0039CA58 call, byte store and initial-pointer return. The original table address is independently proven by LUI/ADDIU. The macro-only forced include retains the observed external ctype call without editing upstream C. Complete genuine linked code differs and remains reconstructed."
+    },
+    "sscanf": {
+      "address": "0x00395350",
+      "confidence": "identified",
+      "evidence": "All 38 original instructions agree with the unchanged public string-scanner wrapper: FILE flags4, original string base/current pointer, strlen-derived read/buffer sizes, EOF callback, null ungetc/line buffers, _impure_ptr data, variadic save area and __svfscanf(FILE,format,ap). Both compilers independently establish the authentic FILE88 layout and every used field offset. Entire candidate genuinely links but differs and remains reconstructed."
+    },
+    "eofread_sscanf": {
+      "address": "0x00395348",
+      "confidence": "matched",
+      "evidence": "Unchanged public sscanf.c local eofread callback returns zero. Both authentic compilers emit a complete LOCAL STT_FUNC symbol of eight bytes; actual linked bytes exactly equal the original JR/delay body. Original sscanf LUI/ADDIU materializes this exact entry and SW stores it in FILE._read at offset0x20; adjacent independent return and scanner entry prove disjoint boundaries. No heuristic-only or padding-based entry claim."
+    },
+    "ceilf": {
+      "address": "0x0037AF00",
+      "confidence": "identified",
+      "evidence": "All 53 original instructions agree with unchanged public sf_ceil.c: exponent-minus127 branches, signed-zero/positive-one handling below1, fractional mask and positive bias below2^23, huge1e30 inexact checks, integral returns and nonfinite x+x. The original huge single bits are0x7149F2CA. Genuine full linked candidates have no unresolved references but differ; reconstructed."
+    },
+    "func_0037AD28": {
+      "address": "0x0037AD28",
+      "confidence": "identified",
+      "evidence": "All 118 original instructions agree with the unchanged public double floor source: signed-zero/negative-one handling, high/low fractional masks, negative bias/carry, huge1e300 inexact checks, integral returns and nonfinite x+x. Three original LUI/LD pairs prove the huge symbol at0x4550C8 inside the whole16-byte readonly section at0x4550C0. -Dfloor=func_0037AD28 only renames the upstream definition/prototype, preserving its body and the separate existing floor0039CCD0 binding. Actual linked code differs and remains reconstructed."
     }
   }
 }

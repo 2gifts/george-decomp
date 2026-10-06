@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "One complete 2684-byte parser body, naturally linked in all three standard profiles without remaining relocations; no exact full-byte candidate match.",
+    "Reuses the reviewed complete text context, token/lowercase bodies and original case-insensitive comparison ABI; no layout/source changes or new library import.",
+    "240 instruction-derived synthetic cases execute 272391 instructions; 4005840 native full-context/input/call-count checks and six decoder guards pass. Callback mutations, input aliases, repeated parsing, slash-prefixed closing tags and capacity/termination preconditions documented.",
+    "Official pinned m2c draft remains ignored research; final ordinary C independently corrected against full original instructions. Canonical GCC29 authentic save attributes do not establish retail compiler identity.",
+    "Parent independently reviewed all 671 original instructions, full C/header, scoped decoder/native/docs; regenerated all 240 fixtures byte-identically, reran 4005840 native checks and six decoder guards, checked all 13 direct JALs and 10 complete writable table prefixes with 62 readonly names; no defect found."
+  ],
+  "functions": [
+    {
+      "name": "func_002B3460",
+      "address": "0x002B3460",
+      "file_offset": "0x1B4460",
+      "size": 2684,
+      "source": "src/game/text_parser.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3c3123998612e98f1ccac894f0b77ce3ee2f4ab514a3b00b06bdcd8a1b455b93",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "evidence": "Complete parser and all 671 original instructions; captured raw/cursor/window, current-byte LF counting and fresh bounds, comment closing lookahead, original token/lowercase/comparator calls, pre-increment signed-opening gate, exact two-byte copies, standalone slash-prefixed closing name, sparse resets, per-call table code/count/cursor reloads and wrapped final depth. Original capacities/readable lookahead/termination preconditions retained.",
+      "boundary_evidence": "Complete original prologue, every branch/call and final JR delay slot; following four zero padding bytes excluded; thirteen direct callers inspect context fields and do not consume return register.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 2684,
+        "compiled_size": 2716,
+        "different_bytes": 2049,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          8,
+          10,
+          12,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3c3123998612e98f1ccac894f0b77ce3ee2f4ab514a3b00b06bdcd8a1b455b93",
+        "compiled_sha256": "93e8a2490c11d5bdd7d0ee59aaf1c4900c9e6b5fe0acb20359a0f3f318c407a9"
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA254",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001D1DF4",
+          "caller": "func_001D1D08"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0022F0AC",
+          "caller": "func_0022F028"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0022F22C",
+          "caller": "func_0022F1A8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00232F1C",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023A91C",
+          "caller": "func_0023A890"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023AEE4",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023E3AC",
+          "caller": "func_0023E2E0"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00243EFC",
+          "caller": "func_00243E90"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002445A4",
+          "caller": "func_00244530"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002716BC",
+          "caller": "func_00271300"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002732F4",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002B4560",
+          "caller": "func_002B4538"
+        }
+      ],
+      "table_prefix_evidence": [
+        {
+          "address": "0x003F8970",
+          "file_offset": "0x002F9970",
+          "section": ".data",
+          "writable": true,
+          "size": 32,
+          "record_count": 4,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "9141b674f56304307ada2d047855afce045f513308e3af08eb5f61ede68800fc",
+          "readonly_name_count": 3
+        },
+        {
+          "address": "0x003F8C60",
+          "file_offset": "0x002F9C60",
+          "section": ".data",
+          "writable": true,
+          "size": 32,
+          "record_count": 4,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "b9926dacc2ed81f36d68469989174e8dc3af1ec1e7accd43b278a29d5fd76da3",
+          "readonly_name_count": 3
+        },
+        {
+          "address": "0x003F9AE0",
+          "file_offset": "0x002FAAE0",
+          "section": ".data",
+          "writable": true,
+          "size": 32,
+          "record_count": 4,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "c8735a36d08538eb48f3fa0cae648bc3945ebd21943323f846513f0a02de8f19",
+          "readonly_name_count": 3
+        },
+        {
+          "address": "0x003F9AA8",
+          "file_offset": "0x002FAAA8",
+          "section": ".data",
+          "writable": true,
+          "size": 32,
+          "record_count": 4,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "642653c41939ab69f7d3befebe407d00b725131b6563ee4bf3b3b1c044ffa8f8",
+          "readonly_name_count": 3
+        },
+        {
+          "address": "0x003F9F58",
+          "file_offset": "0x002FAF58",
+          "section": ".data",
+          "writable": true,
+          "size": 232,
+          "record_count": 29,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "312a992b107a4bd89a8bac6fa5ab35e8837a93ef4a1e4b5f4718cd64b4f84386",
+          "readonly_name_count": 28
+        },
+        {
+          "address": "0x003FA190",
+          "file_offset": "0x002FB190",
+          "section": ".data",
+          "writable": true,
+          "size": 24,
+          "record_count": 3,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "77ea3ee7ed373a648b539153367137135cbeac09a3b93a95331d28b6562c995b",
+          "readonly_name_count": 2
+        },
+        {
+          "address": "0x003FA270",
+          "file_offset": "0x002FB270",
+          "section": ".data",
+          "writable": true,
+          "size": 48,
+          "record_count": 6,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "0c709f9dbb752522cdbe517c1e0470148f2bca2c4bc879e68bc6ffb92b6d7182",
+          "readonly_name_count": 5
+        },
+        {
+          "address": "0x003FA2A0",
+          "file_offset": "0x002FB2A0",
+          "section": ".data",
+          "writable": true,
+          "size": 32,
+          "record_count": 4,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "8e758ff8aee59c94ea42944bade8604f9faff1073943800944f19098206e72d9",
+          "readonly_name_count": 3
+        },
+        {
+          "address": "0x003FA650",
+          "file_offset": "0x002FB650",
+          "section": ".data",
+          "writable": true,
+          "size": 64,
+          "record_count": 8,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "ed248ae496cd504a8c546c25032f7333e64bd12cbe2d43f6e508c26d39b72b17",
+          "readonly_name_count": 7
+        },
+        {
+          "address": "0x003FA718",
+          "file_offset": "0x002FB718",
+          "section": ".data",
+          "writable": true,
+          "size": 48,
+          "record_count": 6,
+          "terminal_code": "0x8000DEAD",
+          "original_sha256": "58e31c0287d8917c8d5018e4b29e8b05b93b9496e7b061414b04bc6d6920b293",
+          "readonly_name_count": 5
+        }
+      ]
+    }
+  ]
+}

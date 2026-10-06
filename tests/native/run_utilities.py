@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "text_parser": ["src/game/text_parser.c", "src/game/text_tokens.c", "src/game/text_lookup.c", "tests/native/text_lookup_ctype.c"],
+    "engine_angles": ["src/game/engine_angles.c"],
     "text_values": ["src/game/text_values.c", "src/game/text_tokens.c"],
     "algorithm_duplicates": ["src/game/algorithm_duplicates.c"],
     "text_lookup": ["src/game/text_lookup.c", "src/game/text_tokens.c", "tests/native/text_lookup_ctype.c"],
@@ -29,6 +31,7 @@ HARNESS_SOURCES = {
     "geometry": ["src/game/geometry.c", "src/game/vector_math.c"],
 }
 HARNESS_FLAGS = {
+    "engine_angles": ["-ffloat-store"],
     "tree_updates": ["-DGEORGE_TREE_NATIVE_COUNTER"],
 }
 # Windows may classify an unmanifested executable containing "update" as an

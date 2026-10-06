@@ -129,6 +129,15 @@ optional lowercase/copy order, initial output aliases, wrapped depth accumulatio
 and fresh EOF/count gates. Run it with `--harness text_values`. The scanner
 substitute writes every lane; unwritten lanes from real partial conversion remain
 outside defined C semantics. See `docs/text_values.md` for limits and reuse proof.
+
+The inverse-angle harness passes 3,106 checks, including 1,552 finite synthetic
+fixtures regenerated from the original instructions, signed zero and independent
+mathematical comparisons. Run it with `--harness engine_angles`. Its six decoder
+guards check operand order, aliases, function scope and bounded execution. The
+native build stores intermediate values as binary32; it models finite host
+arithmetic without establishing the EE's full SQRT/RSQRT precision or FCR behavior.
+See `docs/engine_angles.md` for fixture regeneration and limits.
+
 ## Identical game algorithm bodies
 
 `run_utilities.py --harness algorithm_duplicates` compiles all 61 recovered
@@ -136,3 +145,12 @@ entries using shared ordinary C definitions. It passes 2,375,547 checks against
 an independent sorted-range oracle, callback mutations, map lookup/visitor
 effects and gated action reload/overlap cases. The 58 search entries share one
 algorithm; repeated checks do not imply 58 distinct gameplay behaviors.
+
+The complete text-parser harness passes 4,005,840 checks across 240 synthetic
+instruction-derived fixtures, comparing every context/input byte and controlled
+call count. Run it with `--harness text_parser`. It covers comments, tags,
+slash-prefixed closing names, pointer-order-dependent scratch whitespace bounds,
+four input aliases, repeated parsing and callback mutations. The new scoped
+decoder has six guard tests and regenerates fixtures from the locally validated
+ELF; no original instructions or assets are included. See `docs/text_parser.md`
+for capacity, lookahead, termination and low-word model limits.

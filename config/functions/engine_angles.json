@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Three complete connected engine angle routines total484B. Two authentic profiles yield six fully linked candidates with no unresolved relocations; all remain reconstructed.",
+    "Reuse existing ee_math SQRT primitive and trace_geometry bounded decoder. RSQRT is one narrowly scoped authentic target instruction, not an assembly function body. No upstream source identity established for these engine algorithms.",
+    "Independent reviewer passed all121 complete original instructions, source/header/primitive and trace/native semantics, regenerated1552 original finite synthetic fixtures with header SHAc5931d280b8102c4f7343d8df902f2b03cd1a724410acedcfc641987d91bc525, reran3106native+sixguardchecks and reproduced all six fresh links.",
+    "Native -ffloat-store removes x87 excess precision for the explicit binary32 operation model. RSQRT finite model rounds square root then division and does not establish actual EE precision, special results, FCR or timing. Fixtures exclude nonfinite or undefined native stages; no native libm implementation replaces original target algorithms."
+  ],
+  "functions": [
+    {
+      "name": "func_0029C230",
+      "address": "0x0029C230",
+      "file_offset": "0x0019D230",
+      "size": 108,
+      "source": "src/game/engine_angles.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f8ae2475d304fe6a1ba14cf8ec571d8f4e6418d87138af0afda39b34a7b53ba7",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Strict negative reflection through original self-call; captured square, reciprocal, subtraction, authentic EE square root and original atan call in observed order. No host acos substitution or invented domain clamp.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_addresses": [
+          "0x0010FCD4",
+          "0x00117284",
+          "0x001301D4",
+          "0x001302EC",
+          "0x00133650",
+          "0x0013FA84",
+          "0x00169354",
+          "0x001695A0",
+          "0x001DBDB8",
+          "0x001DE4D8",
+          "0x001E3258",
+          "0x001E3304",
+          "0x001E358C",
+          "0x001E3770",
+          "0x001E4110",
+          "0x001E4598",
+          "0x001E49B0",
+          "0x001E4E4C",
+          "0x0021BD70",
+          "0x0029C274",
+          "0x002A0690",
+          "0x002A2840",
+          "0x002A3424",
+          "0x002E8790",
+          "0x002E8A38",
+          "0x002E8BB8",
+          "0x00355CD4",
+          "0x003561E8",
+          "0x00356744",
+          "0x003A1F84"
+        ]
+      },
+      "boundary_evidence": "Complete original body, internal branch graph and final return delay slot reviewed independently twice; exactly one excluded NOP before the following prologue.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 108,
+        "compiled_size": 96,
+        "different_bytes": 76,
+        "first_different_offsets": [
+          16,
+          18,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "f8ae2475d304fe6a1ba14cf8ec571d8f4e6418d87138af0afda39b34a7b53ba7",
+        "compiled_sha256": "0b71a81125e3fda94139322c9be498af1ff3add4103c4b86089b63e1cce3efd7"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 108,
+            "compiled_size": 96,
+            "different_bytes": 98,
+            "first_different_offsets": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "f8ae2475d304fe6a1ba14cf8ec571d8f4e6418d87138af0afda39b34a7b53ba7",
+            "compiled_sha256": "304027635fa8ef0fe24edf8a9271831349738bbb14b7d574d8b1389ea1bbaae6"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 108,
+            "compiled_size": 96,
+            "different_bytes": 76,
+            "first_different_offsets": [
+              16,
+              18,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "f8ae2475d304fe6a1ba14cf8ec571d8f4e6418d87138af0afda39b34a7b53ba7",
+            "compiled_sha256": "0b71a81125e3fda94139322c9be498af1ff3add4103c4b86089b63e1cce3efd7"
+          }
+        }
+      }
+    },
+    {
+      "name": "func_0029C2A0",
+      "address": "0x0029C2A0",
+      "file_offset": "0x0019D2A0",
+      "size": 92,
+      "source": "src/game/engine_angles.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2affa983fd06e6b6f6b17fe995e18972d26eb450b530d55aa7f2d5ee8e13d217",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Strict negative reflection through original self-call; captured square and subtraction, one authentic EE RSQRT instruction with original numerator/radicand operand order, then original atan call. No host asin substitution.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_addresses": [
+          "0x001BF03C",
+          "0x0029C2E4",
+          "0x002B86C4",
+          "0x0031A5A0",
+          "0x0031A5F4"
+        ]
+      },
+      "boundary_evidence": "Complete original body, internal branch graph and final return delay slot reviewed independently twice; exactly one excluded NOP before the following prologue.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 92,
+        "compiled_size": 84,
+        "different_bytes": 56,
+        "first_different_offsets": [
+          20,
+          22,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2affa983fd06e6b6f6b17fe995e18972d26eb450b530d55aa7f2d5ee8e13d217",
+        "compiled_sha256": "d6a6f48a2b0defda070dc7556ec266a6ab3d792c80cc8295b774bc9843be2407"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 92,
+            "compiled_size": 88,
+            "different_bytes": 58,
+            "first_different_offsets": [
+              12,
+              13,
+              16,
+              17,
+              19,
+              20,
+              22,
+              23
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2affa983fd06e6b6f6b17fe995e18972d26eb450b530d55aa7f2d5ee8e13d217",
+            "compiled_sha256": "a10a6268beacf4082bba3e079d312ef6674d50f8bdda627a4797fb51f5c5fdbd"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 92,
+            "compiled_size": 84,
+            "different_bytes": 56,
+            "first_different_offsets": [
+              20,
+              22,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2affa983fd06e6b6f6b17fe995e18972d26eb450b530d55aa7f2d5ee8e13d217",
+            "compiled_sha256": "d6a6f48a2b0defda070dc7556ec266a6ab3d792c80cc8295b774bc9843be2407"
+          }
+        }
+      }
+    },
+    {
+      "name": "func_0029C300",
+      "address": "0x0029C300",
+      "file_offset": "0x0019D300",
+      "size": 284,
+      "source": "src/game/engine_angles.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e38faf7e7d955417177b5d13c084ddab417af78ffc943297d39471f10fbc6c10",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Original squared-magnitude reciprocal reduction, sign-dependent half-pi reflection, strict squared threshold and recursive square-root reduction. Alternating odd-denominator series executes at least once, multiplies the power only after unequal comparison, and returns input times the preceding converged sum.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_addresses": [
+          "0x001301EC",
+          "0x0029C264",
+          "0x0029C2D4",
+          "0x0029C334",
+          "0x0029C3B4"
+        ]
+      },
+      "boundary_evidence": "Complete original body, internal branch graph and final return delay slot reviewed independently twice; exactly one excluded NOP before the following prologue.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 284,
+        "compiled_size": 256,
+        "different_bytes": 202,
+        "first_different_offsets": [
+          32,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "e38faf7e7d955417177b5d13c084ddab417af78ffc943297d39471f10fbc6c10",
+        "compiled_sha256": "0ee7eab93cb80a7c9d97b1792db3844c6ebed8a9e7ed7cdb551a7881575baa50"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 284,
+            "compiled_size": 264,
+            "different_bytes": 225,
+            "first_different_offsets": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "e38faf7e7d955417177b5d13c084ddab417af78ffc943297d39471f10fbc6c10",
+            "compiled_sha256": "17ce79856df62628dc01abf5a3a61db5f2e9c8809c60c3d28809a6d6114195ce"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 284,
+            "compiled_size": 256,
+            "different_bytes": 202,
+            "first_different_offsets": [
+              32,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "e38faf7e7d955417177b5d13c084ddab417af78ffc943297d39471f10fbc6c10",
+            "compiled_sha256": "0ee7eab93cb80a7c9d97b1792db3844c6ebed8a9e7ed7cdb551a7881575baa50"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -42,4 +42,18 @@ static __inline__ float george_ee_square_root(float value)
 #endif
 }
 
+/* RSQRT.S divides fs by sqrt(ft) as one EE operation. Keep its target
+ * instruction instead of a libm call or a pair of target operations. */
+static __inline__ float george_ee_reciprocal_square_root(float numerator,
+                                                       float radicand)
+{
+#if defined(__mips__) || defined(__mips) || defined(R5900) || defined(_R5900) || defined(__R5900__)
+    float result;
+    __asm__("rsqrt.s %0, %1, %2" : "=f" (result) : "f" (numerator), "f" (radicand));
+    return result;
+#else
+    return numerator / __builtin_sqrtf(radicand);
+#endif
+}
+
 #endif

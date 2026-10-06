@@ -774,3 +774,102 @@ alignment word is excluded. Full genuine links have no unresolved references,
 but emit 104 bytes with GCC 3.2.3 and 92 with GCC 2.9. `strcspn` remains
 reconstructed. The runtime exact totals are now 37 C functions / 4,820 bytes
 and three separate upstream assembly functions / 572 bytes.
+
+## Lowercase conversion, string scanning and rounding copies
+
+Five further complete functions reuse unchanged public newlib 1.8.1 source
+from the same pinned GNU repository revision
+`b595ded606227e93b8c4a447446c1d2ac093827d`. Their original bodies total 968
+bytes. Four bodies totaling 960 bytes remain reconstructed; the eight-byte
+scanner callback is a complete high-level C match.
+
+| Function | Original address | Original / selected compiled bytes | Status |
+| --- | --- | ---: | --- |
+| `strlwr` | `0x003984D8` | 124 / 124 | Reconstructed |
+| `sscanf` | `0x00395350` | 152 / 136 | Reconstructed |
+| Local `eofread` from `sscanf.c` | `0x00395348` | 8 / 8 | Exact C |
+| `ceilf` | `0x0037AF00` | 212 / 224 | Reconstructed |
+| Numeric entry `func_0037AD28`, floor algorithm | `0x0037AD28` | 472 / 480 | Reconstructed |
+
+The imported
+[`strlwr.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strlwr.c)
+has SHA256
+`723eb1a5dc76754d025bca292a3c7fe917528c4da0c472f1690397345bf87aa6`.
+All 31 original instructions agree with its signed-byte cursor loop, uppercase
+classification test, conditional `tolower` call, byte store and initial-pointer
+return. Seventeen decoded original calls establish the entry. The original
+`LUI`/`ADDIU` establishes `_ctype_+1` at `0x00456119`, whose complete unchanged
+table was already reviewed. The explicit macro-only forced include keeps the
+observed external `tolower` call while preserving the upstream C bytes. This
+file has no separate notice; the default Cygnus Solutions 1994/1997 permissive
+notice in section 9 of `LICENSES/newlib-1.8.1.txt` applies. This software was
+developed at Cygnus Solutions.
+
+The public
+[`sscanf.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/sscanf.c)
+has SHA256
+`23969007e1f29c448b24da604cb416ef71fba0d3923796c38fca93626506e432`.
+All 38 original wrapper instructions agree with the source's temporary
+`FILE`, flags, string pointers and lengths, EOF callback, null ungetc/line
+buffers, reentrancy data and variadic scanner call. Both authentic compiler
+profiles independently compiled the genuine `FILE` size and field offsets:
+88 bytes, with `_read` at `0x20` and `_data` at `0x54`. Twenty-four decoded
+original calls establish the wrapper entry. Its terminal return and delay end
+at `0x003953E8`; the heuristic's following unrelated prologue is excluded.
+
+The local `eofread` callback is independently compiled as a local `STT_FUNC`
+symbol of exactly eight bytes by both compilers. Both genuine full links equal
+the retail bytes with SHA256
+`008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061`.
+Original `LUI`/`ADDIU` instructions in `sscanf` materialize `0x00395348`, and
+the subsequent store installs it in the temporary `FILE._read` field. The
+preceding formatter's complete return/delay and the following `sscanf` entry
+establish disjoint boundaries without requiring a direct JAL to this callback.
+The function returns zero at string EOF, exactly as the unchanged source does.
+The full Berkeley 1990 notices remain in `sscanf.c` and its private `local.h`.
+This product includes software developed by the University of California,
+Berkeley and its contributors.
+
+The unchanged public
+[`sf_ceil.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_ceil.c)
+preserves its Sun Microsystems 1993 notice and Ian Lance Taylor conversion
+credit. Every exponent branch, signed-zero/positive-one case, fractional mask,
+positive bias, `1e30` inexact check and nonfinite `x+x` result agrees with the
+complete 53-instruction original. Five decoded calls establish the entry, and
+the following alignment word is excluded. The constant bits `0x7149F2CA` are
+independently present in the original instructions. The full candidate differs.
+
+The second complete double-floor body at `0x0037AD28` reuses the already
+imported, unchanged
+[`s_floor.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/s_floor.c),
+SHA256 `bfcaab777d6cde5ebb3402b56ae57f8f17155cb6ec7a81793dfe67290616ddda`.
+Its original source name remains unknown; the explicit
+`-Dfloor=func_0037AD28` build definition renames only the source definition and
+prototype, preserving the complete body and the separate existing `floor`
+binding at `0x0039CCD0`. All 118 original instructions agree with the high/low
+fractional masks, negative adjustment and carry, signed-zero handling,
+`1e300` inexact checks and nonfinite result. Ten decoded calls establish the
+entry. Three genuine original `LUI`/`LD` pairs prove the constant at
+`0x004550C8` inside the entire 16-byte readonly source section at `0x004550C0`.
+That whole section, including alignment, matches SHA256
+`b872a7ff1f9de62bf2879a07bc8b2264db3987e2460a65ec5807c0b712d182fe`.
+The real linker resolves it without data or instruction edits. Data identity
+earns no code-match credit. The Sun Microsystems notice remains unchanged.
+
+Actual compiler dependency lists are retained with per-file SHA256 checks.
+The existing system headers come from the pinned public PS2DEV
+[`2018-10-19` archive](https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19)
+and explicitly retain their newlib 1.10.0 provenance; they are not attributed
+to the older C source pin. Compiler headers retain their separate GNU profile
+provenance. The math imports use the unchanged, separately pinned official
+newlib 1.10.0 `fdlibm.h`. Header files remain in the hash-verified bootstrap
+paths, and the declared-source preflight checks every recorded dependency
+before compiling. A fresh matching setup runs both documented bootstraps
+before build or verification.
+
+Root independently reviewed all five entire original/source bodies and hashes,
+38 actual header dependency files, 56 genuine JAL entry references, the three
+floor pointer pairs and whole readonly object, the scanner's callback store
+and both authentic `FILE` layouts before registration. All ten independent
+full links have no unresolved references. Exact runtime totals are now 38 C
+functions / 4,828 bytes and three separate assembly functions / 572 bytes.
