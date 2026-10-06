@@ -15,7 +15,7 @@ and digit conversion behavior. Short generic wrappers can match uniquely by
 chance: a candidate named `_mallinfo_r` was rejected because its target has
 unrelated semantics. Scanner candidates alone do not establish function names.
 
-The eight verified functions checked into this repository were independently compiled or
+The ten verified functions checked into this repository were independently compiled or
 assembled, and their function bytes compared with the retail executable again:
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
@@ -28,10 +28,12 @@ assembled, and their function bytes compared with the retail executable again:
 | `matherr` | `0x0037db30` | 36 | `src/runtime/matherr.c` | Upstream C | Exact under GCC 2.9 after linking `dpcmp` |
 | `__errno` | `0x00393368` | 12 | `src/runtime/errno.c` | Upstream C | Exact after linking `_impure_ptr` |
 | `_localeconv_r` | `0x0039cc68` | 12 | `src/runtime/locale.c` | Upstream C | Exact with all readonly self-pointer relocations linked |
+| `sinf` | `0x0037b0c0` | 240 | `src/runtime/sinf.c` | Upstream C | Exact under GCC 2.9 after linking reviewed kernels and reducer |
+| `tanf` | `0x0037b1b0` | 136 | `src/runtime/tanf.c` | Upstream C | Exact under GCC 2.9 after linking reviewed kernel and reducer |
 
 The 572 bytes of reused assembly must remain separate from high-level C
-decompilation progress. The 128 bytes of compiled `fabsf`, `atoi`, `matherr`,
-`__errno`, and `_localeconv_r` C are high-level source.
+decompilation progress. The 504 bytes of compiled `fabsf`, `atoi`, `matherr`,
+`__errno`, `_localeconv_r`, `sinf`, and `tanf` C are high-level source.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -225,7 +227,7 @@ Modern binutils v0.10 is useful for ELF inspection and later baseline assembly.
 
 ## Scope of the evidence
 
-These exact runtime matches establish reusable implementations of eight specific
+These exact runtime matches establish reusable implementations of ten specific
 functions. They do not identify the compiler used for Papaya's game code, prove
 that all newlib/SDK code is the same version, or establish a shared game engine
 with any other decompilation. The original compiler remains unidentified.
@@ -295,3 +297,67 @@ shorter `LUI` sequences and produces 324 and 272 bytes respectively. They remain
 reconstructed assembly, earn no exact-match credit, and never count as
 high-level C recovery. These macro differences describe assembler behavior and
 do not identify the original compiler.
+
+## Additional fdlibm source identities
+
+Six more complete routines reuse unchanged public newlib 1.8.1 sources at
+[`b595ded606227e93b8c4a447446c1d2ac093827d`](https://github.com/SSXModding/ps2-ee-toolchain/tree/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm).
+Each file retains Sun Microsystems' 1993 permission notice. The manifest pins
+the exact source URL and SHA-256 as well as the complete original body hash.
+
+| Source function | Original address | Complete body bytes | Selected compiler | Current result |
+| --- | --- | ---: | --- | --- |
+| `__kernel_sinf` | `0x0037D790` | 260 | GCC 3.2.3 | Fully linked, differs |
+| `__kernel_tanf` | `0x0037D898` | 660 | GCC 3.2.3 | Fully linked, differs |
+| `rint` | `0x0037DB58` | 508 | GCC 2.9 with `-mdebuga` | Same size, 30 differing bytes |
+| `scalbnf` | `0x0037DEB0` | 352 | GCC 2.9 | Fully linked, differs |
+| `copysignf` | `0x0037E010` | 48 | GCC 2.9 | Fully linked, differs |
+| `__ieee754_logf` | `0x0037BC18` | 804 | GCC 3.2.3 | Fully linked, differs |
+
+The complete control flow and arithmetic paths were reviewed against original
+instructions: sine's tail correction; tangent's reduction, split polynomial and
+accurate reciprocal; double rounding's exponent/mask/sign cases; float scaling's
+normal, subnormal and extreme exponent cases; bitwise sign copying; and
+logarithm's normalization, small-input and compensated polynomial branches.
+This adds 2,632 original bytes represented by licensed high-level source, with
+zero new exact matches. It does not establish the source version of the entire
+runtime or guarantee that a host's IEEE floating-point behavior reproduces all
+Emotion Engine exception and rounding behavior.
+
+Five complete constant objects or sections provide separate identity evidence:
+sine's 28-byte pool at `0x0045561C`, tangent's 52-byte `T` object at
+`0x00455648`, rounding's 16-byte `TWO52` pool at `0x00455680`, scaling's
+16-byte pool at `0x00455694`, and logarithm's 48-byte pool at `0x00455130`.
+`python tools/check_runtime_data.py` now checks eight complete runtime data
+identities in total; data checks award no function bytes.
+
+The rounding and logarithm candidates map their complete readonly sections and
+use the normal linker to resolve references. Tangent's older-compiler 72-byte
+section has four final padding bytes that disagree with the adjacent original
+`__fdlib_version` value. That mapping is rejected; its selected GCC 3.2.3 recipe
+embeds the constants and fully links without changing data or instruction
+bytes. The isolated 52-byte `T` data identity is not used as a partial linker
+mapping. Rounding's supported `-mdebuga` option suppresses folded
+label-plus-register addresses in the unchanged backend; the remaining 30 bytes
+differ in register selection and constant-address construction and remain
+explicitly reconstructed.
+
+## Exact sine and tangent wrappers
+
+`sinf.c` and `tanf.c` are unchanged copies of the pinned newlib 1.8.1
+[`sf_sin.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_sin.c)
+and
+[`sf_tan.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_tan.c).
+Both retain Sun Microsystems' 1993 permission notice and Ian Lance Taylor's
+float-conversion credit. Their exact source hashes are recorded in the manifest.
+
+The unchanged GCC 2.9 baseline recipe links the complete sine and tangent
+wrappers to their independently reviewed kernels and pi/2 reducer. All 240
+and 136 original bytes respectively match, including branch offsets and call
+targets, with no unresolved relocations or masked bytes. The magnitude
+thresholds differ by two low bits (`0x3F490FD8` and `0x3F490FDA`); sine then
+selects four quadrants, while tangent uses `1-((n&1)<<1)` for the signed
+reciprocal result. These are complete C matches, separate from the remaining
+unmatched kernel bodies. The reducer's entire 960-byte constants section
+matches unchanged upstream data, corroborating the call binding; it does not
+award code progress before source registration and comparison.

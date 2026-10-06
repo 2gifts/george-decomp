@@ -85,7 +85,7 @@
     "_setlocale_r": {
       "address": "0x39ca98",
       "confidence": "corroborated",
-      "evidence": "Complete MB_CAPABLE implementation agrees: LC_CTYPE2/LC_ALL0, C/empty/C-JIS/C-EUCJP/C-SJIS comparisons (including redundant C check), previous/current locale strcpy, JIS8/multibyte2/default1, reentrancy fields0x30/0x34, and nullable query return. Source locale constants/table and initialized writable data independently agree with retail after actual data relocations. Compiler-local writable data and relocation-bearing readonly lconv mapping are unsupported by the verifier; source remains explicitly unresolved and reconstructed."
+      "evidence": "Complete MB_CAPABLE implementation agrees: LC_CTYPE2/LC_ALL0, C/empty/C-JIS/C-EUCJP/C-SJIS comparisons (including redundant C check), previous/current locale strcpy, JIS8/multibyte2/default1, reentrancy fields0x30/0x34, and nullable query return. Source locale constants/table and initialized writable data independently agree with retail after actual data relocations. Readonly lconv self-pointers now link exactly for _localeconv_r, while compiler-local writable data remain unsupported; source remains explicitly unresolved and reconstructed."
     },
     "_localeconv_r": {
       "address": "0x39cc68",
@@ -177,6 +177,61 @@
       "address": "0x372cc0",
       "confidence": "corroborated",
       "evidence": "Complete retail goal-state method reviewed by recover_code uses this helper on two full64 soft-double operands; call role is double subtraction. No source or byte identity claimed."
+    },
+    "__kernel_sinf": {
+      "address": "0x0037D790",
+      "confidence": "corroborated",
+      "evidence": "Complete sine kernel: tiny-magnitude integer-conversion return, squared/cubed argument, exact S1..S6 Horner coefficients, and distinct iy==0 versus tail-corrected return paths agree. All original argument and operation order reviewed; whole 28-byte constant pool independently matches."
+    },
+    "__kernel_tanf": {
+      "address": "0x0037D898",
+      "confidence": "corroborated",
+      "evidence": "Complete tangent kernel: tiny/zero reciprocal cases, signed pi/4 reduction at 0x3F2CA140, two interleaved T-polynomials, sign-factor result, and high-word-truncated accurate reciprocal correction agree. All thirteen T coefficients match as a complete 52-byte object. GCC323 inlines constants and fully links; GCC29 needs a 72-byte pool whose final padding differs, so no altered padding or partial-section mapping is used."
+    },
+    "rint": {
+      "address": "0x0037DB58",
+      "confidence": "corroborated",
+      "evidence": "Complete double rounding algorithm matches: exponent partitions below0/20/52, both fractional-word masks and carries, infinity/NaN x+x, signed zero, and sign-indexed TWO52 add/subtract paths. Complete 16-byte TWO52 object matches. Authentic supported -mdebuga prevents label-plus-register folded addressing; linked code has the original 508-byte size but still differs in 30 bytes of indexed constant address construction/register choices."
+    },
+    "scalbnf": {
+      "address": "0x0037DEB0",
+      "confidence": "corroborated",
+      "evidence": "Complete float exponent scaling matches: zero/subnormal normalization by 2^25, exponent extraction and n addition, +/-50000 extreme-n checks, infinity/NaN x+x, overflow and underflow sign copying, normal exponent replacement, and subnormal multiplication by 2^-25. Whole 16-byte two25/twom25/huge/tiny pool agrees; actual code embeds these values and does not require a local-data relocation."
+    },
+    "copysignf": {
+      "address": "0x0037E010",
+      "confidence": "corroborated",
+      "evidence": "Complete leaf merges x magnitude bits 0x7FFFFFFF with y sign bit 0x80000000, preserving payload and magnitude. Original f12/f13 inputs, f0 result and all entry-through-return-delay instructions reviewed. Pinned compiler/assembler scheduling and MFC1 hazard padding still differ."
+    },
+    "__ieee754_logf": {
+      "address": "0x0037BC18",
+      "confidence": "corroborated",
+      "evidence": "Complete float logarithm core agrees: zero/negative/subnormal handling, exponent normalization using 0x004AFB20, tiny-f exact and cubic paths, log1p reduction, split Lg1..Lg7 Horner evaluation, thresholds 0x0030A3D0/0x0035C288, and both compensated ln2_hi/ln2_lo return branches. Whole 48-byte constant section including zero and negative infinity matches; compiler emits a different complete body."
+    },
+    "fabsf": {
+      "address": "0x0037DD58",
+      "confidence": "confirmed",
+      "evidence": "Already registered unchanged upstream fabsf C matches all 28 original bytes; reviewed tangent kernel calls this exact target."
+    },
+    "sinf": {
+      "address": "0x0037B0C0",
+      "confidence": "confirmed",
+      "evidence": "Whole unchanged public newlib sine wrapper: magnitude threshold0x3F490FD8, nonfinite x-x, two-float pi/2 reduction result, and all four n&3 sine/cosine/sign cases match every original instruction. Fresh unchanged-source GCC29 object fully linked using independently reviewed runtime kernel/reducer addresses equals all240 original bytes, with no unresolved relocations."
+    },
+    "tanf": {
+      "address": "0x0037B1B0",
+      "confidence": "confirmed",
+      "evidence": "Whole unchanged public newlib tangent wrapper: magnitude threshold0x3F490FDA, nonfinite x-x, two-float pi/2 reduction result, and iy=1-((n&1)<<1) signed reciprocal selection match every original instruction. Fresh unchanged-source GCC29 object fully linked using independently reviewed runtime kernel/reducer addresses equals all136 original bytes, with no unresolved relocations."
+    },
+    "__kernel_cosf": {
+      "address": "0x0037CCE8",
+      "confidence": "corroborated",
+      "evidence": "Complete344-byte original cosine kernel matches unchanged pinned kf_cos.c algorithm: tiny integer-conversion return, C1..C6 coefficients, 0.3/0.78125 thresholds, qx construction and compensated tail. Whole28-byte upstream coefficient section equals retail at0x4555B0. Exact linked sine wrapper calls this target in quadrants1/3; kernel itself not yet imported or byte matched."
+    },
+    "__ieee754_rem_pio2f": {
+      "address": "0x0037C7D0",
+      "confidence": "corroborated",
+      "evidence": "Complete992-byte original pi/2 reduction matches pinned ef_rem_pio2.c: small direct output, signed n=1 special handling, medium cancellation refinements at8/25 bits, huge argument byte decomposition and six-argument reduction-kernel call. Whole960-byte two_over_pi/npio2_hw/constants section equals retail at0x4551E8. Exact linked sine/tangent wrappers call this target; reducer itself not yet imported or byte matched."
     }
   }
 }

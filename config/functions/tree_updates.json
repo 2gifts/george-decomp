@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Root independent full-instruction review passed all8 routines: Count-read order, deadline flags, global reloads, context restoration and captured-successor traversal.",
+    "Eight coherent tree update/context routines total1400 original instruction bytes. All remain reconstructed after complete original-address linked comparisons in both pinned profiles.",
+    "The bootstrap and node initialization sequence reuses the already reviewed tree.c implementation, inlined as retail does. No upstream game tree source identified or copied.",
+    "Official pinned m2c supplied7 local drafts; its CP0 unsupported-instruction diagnostics were resolved by full manual instruction review and narrowly scoped hardware primitive. No generated error placeholders remain.",
+    "The only target-specific assembly is the explicit Count-register read. The pinned EE compiler backend exposes no mfc0 builtin. No function-body assembly fallback, raw opcode arrays or scheduling patches.",
+    "Tracked native32-bit harness passed610 checks using actual recovered sources and explicit counter substitution. It validates algorithm/order and wrapped arithmetic, not actual EE timing or special-value floating behavior."
+  ],
+  "functions": [
+    {
+      "name": "func_002AC820",
+      "address": "0x002AC820",
+      "file_offset": "0x001AD820",
+      "size": 404,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "012c581694589b6f46a2d28dbb54e099648559dbd395eea0e07a27dd3f26ca12",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Set active current, decrement and clamp remaining deadline with observed flag masks, hardware Count-read around captured callback, wrap low32 cycles, reload global current, optionally recurse into captured-successor children and accumulate freshly read cycles.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 404,
+        "compiled_size": 340,
+        "different_bytes": 306,
+        "first_different_offsets": [
+          8,
+          10,
+          11,
+          13,
+          16,
+          18,
+          19,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "012c581694589b6f46a2d28dbb54e099648559dbd395eea0e07a27dd3f26ca12",
+        "compiled_sha256": "9b08102070f957faf6953d0199cc4d887c006eaac5a374fc6939795845f1c725"
+      },
+      "hardware_primitive": "Two scoped volatile mfc0 Count reads with output-register constraint and memory clobber; ordinary C callback, deadline, traversal and wrapped cycle arithmetic. No opcode data or function-body assembly fallback."
+    },
+    {
+      "name": "func_002AC9B8",
+      "address": "0x002AC9B8",
+      "file_offset": "0x001AD9B8",
+      "size": 340,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c1c633e455b3cbe15b921143acfbedc9da5984ab24484a3e929e6dc57db1c43f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Bootstrap, capture current and clear it, repeat inlined bootstrap/constructor, then restore captured current to freshly loaded active tree even on node allocation failure.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 340,
+        "compiled_size": 340,
+        "different_bytes": 105,
+        "first_different_offsets": [
+          4,
+          7,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "c1c633e455b3cbe15b921143acfbedc9da5984ab24484a3e929e6dc57db1c43f",
+        "compiled_sha256": "4c6393cfa30e7b7be5f562fa554dd8e939358bb6132f22e5579b95ee12eb0de7"
+      }
+    },
+    {
+      "name": "func_002ACB10",
+      "address": "0x002ACB10",
+      "file_offset": "0x001ADB10",
+      "size": 36,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b2be571e66f75bb07560f721219fd3d31db18b6842f1e8a9c4b6bb4d7afec5a4",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Return first global controller roots through original2AD2D0 call; no bootstrap or invalid-controller guard.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 36,
+        "compiled_size": 32,
+        "different_bytes": 32,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b2be571e66f75bb07560f721219fd3d31db18b6842f1e8a9c4b6bb4d7afec5a4",
+        "compiled_sha256": "0cae2097b01974c301d0248be5e5df3d23ce5be53a2f3705a7f63c3a8f6c5b20"
+      }
+    },
+    {
+      "name": "func_002ACB38",
+      "address": "0x002ACB38",
+      "file_offset": "0x001ADB38",
+      "size": 108,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "106558778182735a62844ad15e169188f9511121a6f7b00a285729a8d8657b47",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Bootstrap global controllers in order and initialize active slot only if null; reload slots after allocator calls.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 108,
+        "compiled_size": 108,
+        "different_bytes": 50,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "106558778182735a62844ad15e169188f9511121a6f7b00a285729a8d8657b47",
+        "compiled_sha256": "d2dc2f3e9d1a843725a08398bb17819b6d1c4c8568441ac5bf4409f374ce348e"
+      }
+    },
+    {
+      "name": "func_002ACBA8",
+      "address": "0x002ACBA8",
+      "file_offset": "0x001ADBA8",
+      "size": 68,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2006e733fa38621c70f4624c2547b12041b4b1489afede0d68b2e1ba83ec9814",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Destroy first controller, reload second controller and destroy it, then clear both slots; active slot remains untouched.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 68,
+        "compiled_size": 68,
+        "different_bytes": 29,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2006e733fa38621c70f4624c2547b12041b4b1489afede0d68b2e1ba83ec9814",
+        "compiled_sha256": "d36e7fd8bdd90b0e46c6e15483dbe73b8e9d0443fd61d517c8f2890b7584c789"
+      }
+    },
+    {
+      "name": "func_002ACBF0",
+      "address": "0x002ACBF0",
+      "file_offset": "0x001ADBF0",
+      "size": 92,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6c904b55304a90cc16a6674c0f8959929b63c72cd612cbbd64c80d02f4269cfe",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Capture active controller root head through original accessor, then update captured-successor roots with supplied elapsed float.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 92,
+        "compiled_size": 88,
+        "different_bytes": 38,
+        "first_different_offsets": [
+          8,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "6c904b55304a90cc16a6674c0f8959929b63c72cd612cbbd64c80d02f4269cfe",
+        "compiled_sha256": "ed94ccc1e2dd04bee42c5c77855e8f42678b57e32dd5f366de3a3a088672180a"
+      }
+    },
+    {
+      "name": "func_002ACC50",
+      "address": "0x002ACC50",
+      "file_offset": "0x001ADC50",
+      "size": 176,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f6abaf55dad862d71ff99de2fdf72ac29dab86fa7294a629ca6da14402a542c1",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Bootstrap, force active controller to first global tree and update its captured-successor roots; do not restore previous active controller.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 176,
+        "compiled_size": 172,
+        "different_bytes": 65,
+        "first_different_offsets": [
+          7,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "f6abaf55dad862d71ff99de2fdf72ac29dab86fa7294a629ca6da14402a542c1",
+        "compiled_sha256": "68f1143ba969f7e30da28601d0c1023a89522f75dbcfdd950d83c63d6cff27d9"
+      }
+    },
+    {
+      "name": "func_002ACD00",
+      "address": "0x002ACD00",
+      "file_offset": "0x001ADD00",
+      "size": 176,
+      "source": "src/game/tree_updates.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "43d95a10cfbd3c9896cbe38435506231df59b396167623c3b4b6ad134d968a96",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Bootstrap, force active controller to second global tree and update its captured-successor roots; do not restore previous active controller.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 176,
+        "compiled_size": 172,
+        "different_bytes": 69,
+        "first_different_offsets": [
+          7,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "43d95a10cfbd3c9896cbe38435506231df59b396167623c3b4b6ad134d968a96",
+        "compiled_sha256": "cce485f529472617d0a033ea6bfb2f7495b9051352791597d1f21fa69727b745"
+      }
+    }
+  ]
+}

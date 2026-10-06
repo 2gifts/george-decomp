@@ -6,13 +6,22 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "input_state": ["src/game/input_state.c"],
     "heap": ["src/game/heap.c"],
     "list": ["src/game/list.c", "src/game/list_aros.c"],
     "pool_slots": ["src/game/pool_slots.c"],
     "interpolation": ["src/game/interpolation.c"],
     "deimos_interpreter": ["src/game/deimos_interpreter.c"],
     "tree": ["src/game/tree.c", "src/game/list.c", "src/game/list_aros.c"],
+    "tree_updates": ["src/game/tree_updates.c", "src/game/tree.c", "src/game/list.c", "src/game/list_aros.c"],
+    "vector_math": ["src/game/vector_math.c"],
 }
+HARNESS_FLAGS = {
+    "tree_updates": ["-DGEORGE_TREE_NATIVE_COUNTER"],
+}
+# Windows may classify an unmanifested executable containing "update" as an
+# installer and demand elevation. The algorithm harness requires no elevation.
+HARNESS_EXECUTABLES = {"tree_updates": "tree_walk.exe"}
 
 
 def main():
@@ -29,11 +38,12 @@ def main():
     env = os.environ.copy()
     env["PATH"] = str(compiler.parent) + os.pathsep + env.get("PATH", "")
     for harness in args.harness or sorted(HARNESS_SOURCES):
-        executable = output / (harness + ".exe")
+        executable = output / HARNESS_EXECUTABLES.get(harness, harness + ".exe")
         sources = [ROOT / "tests/native" / (harness + ".c")]
         sources += [ROOT / source for source in HARNESS_SOURCES[harness]]
         command = [str(compiler), "-m32", "-O2", "-Wall", "-Wextra",
                    "-fno-strict-aliasing", "-I", str(ROOT / "include"),
+                   *HARNESS_FLAGS.get(harness, []),
                    *map(str, sources), "-lm", "-o", str(executable)]
         subprocess.run(command, env=env, cwd=ROOT, check=True)
         subprocess.run([str(executable)], env=env, cwd=ROOT, check=True)

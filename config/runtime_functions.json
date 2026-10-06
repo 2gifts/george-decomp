@@ -637,6 +637,677 @@
       ],
       "evidence": "Complete independently named string algorithm matches unchanged upstream assembly. All original instructions outside the two DLI macro expansions and the induced initial branch displacement agree exactly; both complete 64-bit constant values agree. The pinned assembler emits shorter LUI-based DLI expansions, so full bytes and size differ. This is reconstructed licensed assembly only, not high-level C or an exact byte match.",
       "boundary_evidence": "Entire entry through final jr and return delay slot reviewed; following function begins immediately after body."
+    },
+    {
+      "name": "__kernel_sinf",
+      "address": "0x0037D790",
+      "file_offset": "0x0027E790",
+      "size": 260,
+      "source": "src/runtime/kernel_sinf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "1449772f7ae41cf830de69673c88bbc09c770e3262ab3eda6d43e1ba2fa42002",
+      "upstream_symbol": "__kernel_sinf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/kf_sin.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "95c33e554946eaa08255355e5241db4299c816a84d57a5f87fae59eb58445f95",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/kf_sin.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete sine kernel: tiny-magnitude integer-conversion return, squared/cubed argument, exact S1..S6 Horner coefficients, and distinct iy==0 versus tail-corrected return paths agree. All original argument and operation order reviewed; whole 28-byte constant pool independently matches.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 276,
+          "different_bytes": 193,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1449772f7ae41cf830de69673c88bbc09c770e3262ab3eda6d43e1ba2fa42002",
+          "compiled_sha256": "f7063bddd216a6a27abf6ac9a2cde80e3f9eaa4d949d5953602844d0877bd9a2"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 284,
+          "different_bytes": 244,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1449772f7ae41cf830de69673c88bbc09c770e3262ab3eda6d43e1ba2fa42002",
+          "compiled_sha256": "498d81e1bd8d470e44be0f7257dd85b1f354abf4317f5c05d54fdf63e84152f4"
+        }
+      ]
+    },
+    {
+      "name": "__kernel_tanf",
+      "address": "0x0037D898",
+      "file_offset": "0x0027E898",
+      "size": 660,
+      "source": "src/runtime/kernel_tanf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "1fa8f6ada6aa17662bef620e5917dd51be4f18e8f810e468a021abfdcf955f66",
+      "upstream_symbol": "__kernel_tanf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/kf_tan.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "42f649485b5a0edf9103d2ab42ebdc75af86a843c8a62dac228ba7d56230ae36",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/kf_tan.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete tangent kernel: tiny/zero reciprocal cases, signed pi/4 reduction at 0x3F2CA140, two interleaved T-polynomials, sign-factor result, and high-word-truncated accurate reciprocal correction agree. All thirteen T coefficients match as a complete 52-byte object. GCC323 inlines constants and fully links; GCC29 needs a 72-byte pool whose final padding differs, so no altered padding or partial-section mapping is used.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 660,
+          "compiled_size": 804,
+          "different_bytes": 680,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1fa8f6ada6aa17662bef620e5917dd51be4f18e8f810e468a021abfdcf955f66",
+          "compiled_sha256": "5e75ba682b5fe35199f61e26de12cf8b946fae2f6a6e0f301229606ac87907e0"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "limitation": "LinkError('Unmapped local data/constant section: .rodata')"
+        }
+      ]
+    },
+    {
+      "name": "rint",
+      "address": "0x0037DB58",
+      "file_offset": "0x0027EB58",
+      "size": 508,
+      "source": "src/runtime/rint.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "7c9a70d527dd18ecd6ad19899988d64978626345a5e512e2cc4f9800038845c8",
+      "upstream_symbol": "rint",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/common/s_rint.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "847035d77df2fc24130f29bc784a202053a48c4066eadf02495f3dc154a63ebd",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/common/s_rint.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-mdebuga"
+      ],
+      "link": true,
+      "evidence": "Complete double rounding algorithm matches: exponent partitions below0/20/52, both fractional-word masks and carries, infinity/NaN x+x, signed zero, and sign-indexed TWO52 add/subtract paths. Complete 16-byte TWO52 object matches. Authentic supported -mdebuga prevents label-plus-register folded addressing; linked code has the original 508-byte size but still differs in 30 bytes of indexed constant address construction/register choices.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 508,
+          "compiled_size": 572,
+          "different_bytes": 510,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7c9a70d527dd18ecd6ad19899988d64978626345a5e512e2cc4f9800038845c8",
+          "compiled_sha256": "395fa50234858ec8b0ec33a2a7f6a8b87e669f072304010f59d024c0cdc5aa5d"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-mdebuga"
+          ],
+          "identical": false,
+          "expected_size": 508,
+          "compiled_size": 508,
+          "different_bytes": 30,
+          "first_different_offsets": [
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7c9a70d527dd18ecd6ad19899988d64978626345a5e512e2cc4f9800038845c8",
+          "compiled_sha256": "933ce8f7496d82ac22da867286d9172e322929e32b8a4e180dd6c2e1f1a1a26b"
+        }
+      ],
+      "link_data": {
+        ".rodata": {
+          "address": "0x00455680",
+          "file_offset": "0x00356680",
+          "size": 16,
+          "original_sha256": "efa7c35f48deb43d318f697918b8a654689304b7f588cfefcfb89ed77b4e9f79",
+          "evidence": "Complete unchanged compiler-generated readonly constant section equals original data; actual GNU link resolves all code references without patches."
+        }
+      }
+    },
+    {
+      "name": "scalbnf",
+      "address": "0x0037DEB0",
+      "file_offset": "0x0027EEB0",
+      "size": 352,
+      "source": "src/runtime/scalbnf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "fe715cca6bc12e0ddae2a5eadc140f697a0a4fbdb0182c5314d63db0d76a019d",
+      "upstream_symbol": "scalbnf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/common/sf_scalbn.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "ad11ee48edac3c813fb306f1411629530421b056acb89b30a5b0507b760b0db4",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/common/sf_scalbn.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-Isrc/runtime/include"
+      ],
+      "link": true,
+      "evidence": "Complete float exponent scaling matches: zero/subnormal normalization by 2^25, exponent extraction and n addition, +/-50000 extreme-n checks, infinity/NaN x+x, overflow and underflow sign copying, normal exponent replacement, and subnormal multiplication by 2^-25. Whole 16-byte two25/twom25/huge/tiny pool agrees; actual code embeds these values and does not require a local-data relocation.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 352,
+          "compiled_size": 348,
+          "different_bytes": 296,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fe715cca6bc12e0ddae2a5eadc140f697a0a4fbdb0182c5314d63db0d76a019d",
+          "compiled_sha256": "623154f2b904a2f436c5194a92866ec0a1e44b34ec2a38cc748c23f3843ae597"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 352,
+          "compiled_size": 360,
+          "different_bytes": 250,
+          "first_different_offsets": [
+            28,
+            60,
+            84,
+            85,
+            87,
+            88,
+            90,
+            91
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fe715cca6bc12e0ddae2a5eadc140f697a0a4fbdb0182c5314d63db0d76a019d",
+          "compiled_sha256": "c841590cdd5e26457d4a94d9309454a32446f0ef19b861777e08783d9d826078"
+        }
+      ]
+    },
+    {
+      "name": "copysignf",
+      "address": "0x0037E010",
+      "file_offset": "0x0027F010",
+      "size": 48,
+      "source": "src/runtime/copysignf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "1b20fa32432a78e14f75f8c38f4a0568b1af9ed60e16b1248c407c1e32a689a0",
+      "upstream_symbol": "copysignf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/common/sf_copysign.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "29f9fac19328beb4eebe6f2cd41bd8b6a30b8fca589210cdd49e1a853cdbcc35",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/common/sf_copysign.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete leaf merges x magnitude bits 0x7FFFFFFF with y sign bit 0x80000000, preserving payload and magnitude. Original f12/f13 inputs, f0 result and all entry-through-return-delay instructions reviewed. Pinned compiler/assembler scheduling and MFC1 hazard padding still differ.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 48,
+          "compiled_size": 44,
+          "different_bytes": 37,
+          "first_different_offsets": [
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1b20fa32432a78e14f75f8c38f4a0568b1af9ed60e16b1248c407c1e32a689a0",
+          "compiled_sha256": "0b119429a4760c7e4371a579cc1645a1045fa115ec21dc5584daeffadf20c8db"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 48,
+          "compiled_size": 52,
+          "different_bytes": 37,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1b20fa32432a78e14f75f8c38f4a0568b1af9ed60e16b1248c407c1e32a689a0",
+          "compiled_sha256": "0114e4ae383b1481db779e62e374fa732a9954cc16dde3b50a77925d139e891b"
+        }
+      ]
+    },
+    {
+      "name": "__ieee754_logf",
+      "address": "0x0037BC18",
+      "file_offset": "0x0027CC18",
+      "size": 804,
+      "source": "src/runtime/ieee754_logf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "3b44cc6b66f0a9e96783e57247aac1a8ced350ee662079b78125d45b7a432031",
+      "upstream_symbol": "__ieee754_logf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/ef_log.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "9a55a9267fc73eed9f5582595d5e4a6119d0437ed8c4ca979208f2f91a9f9b21",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/ef_log.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice retained in unchanged source.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Complete float logarithm core agrees: zero/negative/subnormal handling, exponent normalization using 0x004AFB20, tiny-f exact and cubic paths, log1p reduction, split Lg1..Lg7 Horner evaluation, thresholds 0x0030A3D0/0x0035C288, and both compensated ln2_hi/ln2_lo return branches. Whole 48-byte constant section including zero and negative infinity matches; compiler emits a different complete body.",
+      "boundary_evidence": "Every original entry-through-final-JR/return-delay instruction reviewed; complete body hash recorded; following zero alignment padding is excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 804,
+          "compiled_size": 832,
+          "different_bytes": 662,
+          "first_different_offsets": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3b44cc6b66f0a9e96783e57247aac1a8ced350ee662079b78125d45b7a432031",
+          "compiled_sha256": "d06bd813dece0608806453245d66bbc59e4d46975cd204ee06a998c91d6c69be"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 804,
+          "compiled_size": 840,
+          "different_bytes": 711,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3b44cc6b66f0a9e96783e57247aac1a8ced350ee662079b78125d45b7a432031",
+          "compiled_sha256": "2f812647959b481d7b16587c3232b140edfb82346b603ce86b4837f27dda0038"
+        }
+      ],
+      "link_data": {
+        ".rodata": {
+          "address": "0x00455130",
+          "file_offset": "0x00356130",
+          "size": 48,
+          "original_sha256": "661ea8b3c6aeb124144aa5f7f9c59539b2403106e12718b8cb91b28e071ddecf",
+          "evidence": "Complete unchanged compiler-generated readonly constant section equals original data; actual GNU link resolves all code references without patches."
+        }
+      }
+    },
+    {
+      "name": "sinf",
+      "address": "0x0037B0C0",
+      "file_offset": "0x0027C0C0",
+      "size": 240,
+      "source": "src/runtime/sinf.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "4e80252239005ef2bc468314f29027ed901ba4c03f05013b329f1922f9ec6ad4",
+      "upstream_symbol": "sinf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/sf_sin.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "2b53aefab7c79628d65899c4b50f417b1aec65357077c6ae83d31567087a374a",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_sin.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice and conversion credit retained in unchanged source.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Whole unchanged public newlib sine wrapper: magnitude threshold0x3F490FD8, nonfinite x-x, two-float pi/2 reduction result, and all four n&3 sine/cosine/sign cases match every original instruction. Fresh unchanged-source GCC29 object fully linked using independently reviewed runtime kernel/reducer addresses equals all240 original bytes, with no unresolved relocations.",
+      "boundary_evidence": "Complete entry through final JR and return delay slot; following routine begins immediately at body end. No padding excluded or bytes masked.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 240,
+          "compiled_size": 228,
+          "different_bytes": 208,
+          "first_different_offsets": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4e80252239005ef2bc468314f29027ed901ba4c03f05013b329f1922f9ec6ad4",
+          "compiled_sha256": "97c208169941702302abc7512d9fe834ae6d21cb8f2463e0136fd07c489d4220"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 240,
+          "compiled_size": 240,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "4e80252239005ef2bc468314f29027ed901ba4c03f05013b329f1922f9ec6ad4",
+          "compiled_sha256": "4e80252239005ef2bc468314f29027ed901ba4c03f05013b329f1922f9ec6ad4"
+        }
+      ],
+      "match_evidence": "Every linked code byte, complete size, and SHA256 equal original; no remaining relocation."
+    },
+    {
+      "name": "tanf",
+      "address": "0x0037B1B0",
+      "file_offset": "0x0027C1B0",
+      "size": 136,
+      "source": "src/runtime/tanf.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "52f4fb91723b9392a8634bae5cd5d8f12915a8ace25a1ecf15dba2ac1a9ad99e",
+      "upstream_symbol": "tanf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libm/math/sf_tan.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "2b2a23f27047efa116808de3d562ea0c095005bd83dbd3f429359474cbe684f6",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/sf_tan.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license; exact notice and conversion credit retained in unchanged source.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Whole unchanged public newlib tangent wrapper: magnitude threshold0x3F490FDA, nonfinite x-x, two-float pi/2 reduction result, and iy=1-((n&1)<<1) signed reciprocal selection match every original instruction. Fresh unchanged-source GCC29 object fully linked using independently reviewed runtime kernel/reducer addresses equals all136 original bytes, with no unresolved relocations.",
+      "boundary_evidence": "Complete entry through final JR and return delay slot; following routine begins immediately at body end. No padding excluded or bytes masked.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 136,
+          "compiled_size": 136,
+          "different_bytes": 117,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "52f4fb91723b9392a8634bae5cd5d8f12915a8ace25a1ecf15dba2ac1a9ad99e",
+          "compiled_sha256": "9806b1aeb1958175ba3271f040c44eb5bcdf9899d3bcaea4fc63dcec0084e784"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 136,
+          "compiled_size": 136,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "52f4fb91723b9392a8634bae5cd5d8f12915a8ace25a1ecf15dba2ac1a9ad99e",
+          "compiled_sha256": "52f4fb91723b9392a8634bae5cd5d8f12915a8ace25a1ecf15dba2ac1a9ad99e"
+        }
+      ],
+      "match_evidence": "Every linked code byte, complete size, and SHA256 equal original; no remaining relocation."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",
@@ -702,6 +1373,103 @@
       "size": 24,
       "original_sha256": "6a6d1d52d2603c79bead3971f3aad0090b683e09158e29fa73f702a1919cb944",
       "input_section": ".data"
+    },
+    {
+      "name": "kernel_sinf_constants",
+      "source": "src/runtime/kernel_sinf.c",
+      "upstream_source_sha256": "95c33e554946eaa08255355e5241db4299c816a84d57a5f87fae59eb58445f95",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "input_section": ".rodata",
+      "address": "0x45561c",
+      "size": 28,
+      "file_offset": "0x0035661C",
+      "original_sha256": "a4465dce522c81d6cce9100dd6c621afd8a7960635fa1a42c64160b406d512bd"
+    },
+    {
+      "name": "kernel_tanf_constants",
+      "source": "src/runtime/kernel_tanf.c",
+      "upstream_source_sha256": "42f649485b5a0edf9103d2ab42ebdc75af86a843c8a62dac228ba7d56230ae36",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "symbol": "T",
+      "address": "0x00455648",
+      "size": 52,
+      "file_offset": "0x00356648",
+      "original_sha256": "7a71e28d05e16ffa56cbfb622f82878df967b8b0c04f00db210975e9d2b21150"
+    },
+    {
+      "name": "rint_constants",
+      "source": "src/runtime/rint.c",
+      "upstream_source_sha256": "847035d77df2fc24130f29bc784a202053a48c4066eadf02495f3dc154a63ebd",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-mdebuga"
+      ],
+      "input_section": ".rodata",
+      "address": "0x455680",
+      "size": 16,
+      "file_offset": "0x00356680",
+      "original_sha256": "efa7c35f48deb43d318f697918b8a654689304b7f588cfefcfb89ed77b4e9f79"
+    },
+    {
+      "name": "scalbnf_constants",
+      "source": "src/runtime/scalbnf.c",
+      "upstream_source_sha256": "ad11ee48edac3c813fb306f1411629530421b056acb89b30a5b0507b760b0db4",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-Isrc/runtime/include"
+      ],
+      "input_section": ".rodata",
+      "address": "0x455694",
+      "size": 16,
+      "file_offset": "0x00356694",
+      "original_sha256": "a904d898b37df447676b067a8a316d2693ac2a5f63ebddaafcf537bbee36385f"
+    },
+    {
+      "name": "ieee754_logf_constants",
+      "source": "src/runtime/ieee754_logf.c",
+      "upstream_source_sha256": "9a55a9267fc73eed9f5582595d5e4a6119d0437ed8c4ca979208f2f91a9f9b21",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "input_section": ".rodata",
+      "address": "0x455130",
+      "size": 48,
+      "file_offset": "0x00356130",
+      "original_sha256": "661ea8b3c6aeb124144aa5f7f9c59539b2403106e12718b8cb91b28e071ddecf"
     }
   ]
 }

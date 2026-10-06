@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Seven related vector/quaternion routines total1412 original instruction bytes; only complete120-byte hemisphere adjustment matches. All others remain reconstructed.",
+    "Reuse GeorgeMathVec3/Vec4 and original numeric trig entry bindings. Floating comparisons, call boundaries, rounded arithmetic and shifted alias effects preserved. No fast-math or host trig replacement.",
+    "Sole scoped target assembly is real R5900 SQRT.S with compiler-chosen float registers, expressing original no-errno hardware operation. No function-body assembly or raw opcode arrays. Native fallback is a limited host arithmetic model.",
+    "Independent full-body/three-recipe audit passed. Tracked native32 harness passes77 focused algorithm and alias checks; no full EE/FCR or emulator validation asserted."
+  ],
+  "functions": [
+    {
+      "name": "func_002A3080",
+      "address": "0x002A3080",
+      "file_offset": "0x001A4080",
+      "size": 184,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "14d1b4aa84c0c1b9b8fa4aaa86b23bcd7d3d5ca158bf05a95f65b2e3cd454def",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 184,
+        "compiled_size": 164,
+        "different_bytes": 127,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          14,
+          16,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "14d1b4aa84c0c1b9b8fa4aaa86b23bcd7d3d5ca158bf05a95f65b2e3cd454def",
+        "compiled_sha256": "4c4a3d5eb6b9549764ad3865e37980942a0c75c1f4acbf0a7715229fe0520652"
+      },
+      "evidence": "Ordered squared xyz length with hardware SQRT.S, original two-float angle lookup, factor defaults to length unless strictly positive, then interleaved reloaded components and w-before-z store.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A3138",
+      "address": "0x002A3138",
+      "file_offset": "0x001A4138",
+      "size": 232,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "61a8593a64d90a64efe3c84927f5ca2a8f9d9a3d494423b6019d3ea901f795cf",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 232,
+        "compiled_size": 208,
+        "different_bytes": 186,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          8,
+          10,
+          12,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "61a8593a64d90a64efe3c84927f5ca2a8f9d9a3d494423b6019d3ea901f795cf",
+        "compiled_sha256": "676887bc4105c9666f4541f5c49ab164c87fd2db1994fcdac8a3a0bc7d61ce6b"
+      },
+      "evidence": "Capture componentwise negative-left xyz products and positive w product, original angle lookup and positive-length scaling; output w then xyz. No substituted quaternion multiplication.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A3220",
+      "address": "0x002A3220",
+      "file_offset": "0x001A4220",
+      "size": 188,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6eb17c041959b8fecc723c82322ba91eef58b942bb71557ae216f68acdf588a7",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 188,
+        "compiled_size": 188,
+        "different_bytes": 99,
+        "first_different_offsets": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "6eb17c041959b8fecc723c82322ba91eef58b942bb71557ae216f68acdf588a7",
+        "compiled_sha256": "4e347df2fae0bc0675a92160f1507b60bbc8ce87bb69b4dbf4c86bea83cf1fc0"
+      },
+      "evidence": "Ordered 0x38D1B717 threshold, original sin/length or factor1, interleaved post-call xyz copies, then original cosine lookup and w store.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A32E0",
+      "address": "0x002A32E0",
+      "file_offset": "0x001A42E0",
+      "size": 120,
+      "source": "src/game/vector_math.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "b17b2c99c0e303193291dcf1017af61628aedebb64e7987d84ded6955ffa509b",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 120,
+        "compiled_size": 120,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "b17b2c99c0e303193291dcf1017af61628aedebb64e7987d84ded6955ffa509b",
+        "compiled_sha256": "b17b2c99c0e303193291dcf1017af61628aedebb64e7987d84ded6955ffa509b"
+      },
+      "evidence": "Left-associated four-component dot product with captured value components; strictly negative result negates all components. Complete pinned GCC29 compile/link matches120 bytes.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A3390",
+      "address": "0x002A3390",
+      "file_offset": "0x001A4390",
+      "size": 424,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "460cef3f5e24c94782c29e85ecf87610c2eb9d68e8c3a9ac6957da464347ac44",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 424,
+        "compiled_size": 408,
+        "different_bytes": 197,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          8,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "460cef3f5e24c94782c29e85ecf87610c2eb9d68e8c3a9ac6957da464347ac44",
+        "compiled_sha256": "f06051efef275de522d43852c2e2b48810b6bbe6a40f819ba7b5b205ea355a09"
+      },
+      "evidence": "Ordered dot clamp, original acos/sin calls, exact zero/pi fallback with interleaved copies, separately rounded reciprocal/weights, post-call captures and z/x/y stores.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A3538",
+      "address": "0x002A3538",
+      "file_offset": "0x001A4538",
+      "size": 136,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a0e83bf6cdaad7427f7421ae598cd2adad00350d1e6f7f92572667e5b85a71b0",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 136,
+        "compiled_size": 128,
+        "different_bytes": 87,
+        "first_different_offsets": [
+          2,
+          6,
+          9,
+          10,
+          17,
+          18,
+          25,
+          36
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "a0e83bf6cdaad7427f7421ae598cd2adad00350d1e6f7f92572667e5b85a71b0",
+        "compiled_sha256": "082f1004757804abf5e61f66967e7aee3e294cd853b2fe6861245268a0631ca4"
+      },
+      "evidence": "Hardware SQRT.S of ordered squared length, exact-zero fallback to (1,0,0), otherwise reciprocal multiplication; captured components and z/x/y stores; return original length.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    },
+    {
+      "name": "func_002A35C0",
+      "address": "0x002A35C0",
+      "file_offset": "0x001A45C0",
+      "size": 128,
+      "source": "src/game/vector_math.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ca6b1448ebbdb72dbcb8b85e75aa7018636acddeb0c6febe4bf142cd9ace29ce",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 128,
+        "compiled_size": 112,
+        "different_bytes": 80,
+        "first_different_offsets": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "ca6b1448ebbdb72dbcb8b85e75aa7018636acddeb0c6febe4bf142cd9ace29ce",
+        "compiled_sha256": "556f6885de950b0712102ec3cbfa007501362fd469decb88a94378f4d60c07bd"
+      },
+      "evidence": "Capture original x and ordered squared length, hardware SQRT.S, zero fallback (scale,0,0), else scale/length with y/z reads after preceding stores; return captured length.",
+      "boundary_evidence": "Every original instruction and final return delay slot independently reviewed; trailing zero alignment padding excluded.",
+      "independent_review": "Independent agent reviewed all7 complete original bodies and reproduced all21 full links across3 pinned recipes. Root native32 harness passed77 checks. No defect found."
+    }
+  ]
+}

@@ -36,3 +36,19 @@ intrusive sentinel/link operations. The interpreter covers every opcode and
 callback mutations; tree checks cover sorted membership, recursive destruction
 and captured successor behavior. These tests compile the actual recovered
 sources, including the licensed AROS adapter for list operations.
+
+The tree update harness uses an explicit native Count-register substitute for
+its 610 algorithm checks, including deadlines, callback gates, context changes,
+captured successors and wrapped cycle arithmetic. It does not model physical
+CP0 timing. Run it with `--harness tree_updates`; the runner uses `tree_walk.exe`
+to avoid Windows treating an executable name containing `update` as an installer.
+
+The input-state harness covers controller edges/history, consumed axis flags,
+shifted scalar aliases, disabled updates, allocation and field preservation,
+repeat endpoints and all 256 key-byte encodings. Run it with
+`--harness input_state`; its 2,475 checks use synthetic input values.
+
+The vector-math harness passes 77 checks for vector/quaternion arithmetic,
+thresholds, zero/antipodal fallbacks, callback captures and shifted aliases.
+Run it with `--harness vector_math`. Its square-root fallback tests host
+arithmetic, without claiming full EE floating-point or FCR behavior.
