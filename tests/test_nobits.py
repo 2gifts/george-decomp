@@ -156,6 +156,133 @@ class OriginalNobitsProofTests(unittest.TestCase):
             with self.subTest(middle=middle), self.assertRaisesRegex(ValueError, "register write"):
                 verify.mapped_bss(proof, struct.pack("<III", 0x3C020035, middle, 0x24428008), self.sections())
 
+    def word_proof(self, access="lw32", distance=4, relative=0, preserved=None):
+        pointer = {"hi_offset": 0, "lo_offset": distance, "relative_offset": relative}
+        if access is not None:
+            pointer["access"] = access
+        if preserved is not None:
+            pointer["preserved_sequence"] = preserved
+        proof = self.proof(code_bindings=[pointer])
+        proof["size"] = distance + 4
+        return proof
+
+    def test_declared_word_accesses_use_exact_signed_low_effective_address(self):
+        for access, lower in (("lw32", 0x8C438008), ("sw32", 0xAC448008),
+                              ("sw32", 0xAC408008)):
+            with self.subTest(access=access, lower=lower):
+                self.assertEqual(verify.mapped_bss(self.word_proof(access),
+                    struct.pack("<II", 0x3C020035, lower), self.sections()),
+                    {".bss": zero_mapping()})
+        # The final complete four-byte word is valid, but an interior pointer
+        # to the last byte is not sufficient evidence for a word load/store.
+        self.assertEqual(verify.mapped_bss(self.word_proof(relative=12),
+            struct.pack("<II", 0x3C020035, 0x8C438014), self.sections()),
+            {".bss": zero_mapping()})
+
+    def test_word_access_requires_opt_in_opcode_register_and_full_extent(self):
+        for lower in (0x24438008, 0x84438008, 0xDC438008, 0xAC438008,
+                      0x8C638008, 0x8C408008, 0x8C428008, 0x8C438010):
+            with self.subTest(lower=hex(lower)), self.assertRaises(ValueError):
+                verify.mapped_bss(self.word_proof(), struct.pack("<II", 0x3C020035, lower), self.sections())
+        for relative in (1, 13, 14, 15):
+            with self.subTest(relative=relative), self.assertRaisesRegex(ValueError, "unaligned|whole storage"):
+                verify.mapped_bss(self.word_proof(relative=relative),
+                    struct.pack("<II", 0x3C020035, 0x8C438008 + relative), self.sections())
+        for size in (1, 2, 3):
+            proof=self.word_proof();proof["link_bss"][".bss"].update(zero_mapping(size=size))
+            with self.subTest(size=size), self.assertRaisesRegex(ValueError, "whole storage"):
+                verify.mapped_bss(proof, struct.pack("<II", 0x3C020035, 0x8C438008), self.sections())
+        with self.assertRaisesRegex(ValueError, "declared same-base"):
+            verify.mapped_bss(self.proof(), struct.pack("<II", 0x3C020035, 0x8C438008), self.sections())
+
+    def test_preserved_sequence_is_explicit_and_literal_true_only(self):
+        original=struct.pack("<III", 0x3C020035, 0, 0x8C438008)
+        with self.assertRaises(ValueError):
+            verify.mapped_bss(self.word_proof(distance=8), original, self.sections())
+        self.assertEqual(verify.mapped_bss(self.word_proof(distance=8, preserved=True),
+            original, self.sections()), {".bss": zero_mapping()})
+        for value in (False, 0, 1, "true", None, [], {}):
+            proof=self.word_proof(distance=8, preserved=True)
+            proof["link_bss"][".bss"]["code_bindings"][0]["preserved_sequence"]=value
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "literal true"):
+                verify.mapped_bss(proof, original, self.sections())
+        for value in ("pointer", "lw", "sd64", False, 1, None):
+            proof=self.word_proof();proof["link_bss"][".bss"]["code_bindings"][0]["access"]=value
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "access proof"):
+                verify.mapped_bss(proof, struct.pack("<II", 0x3C020035, 0x8C438008), self.sections())
+        proof=self.word_proof();proof["link_bss"][".bss"]["code_bindings"][0]["unknown"]=True
+        with self.assertRaisesRegex(ValueError, "Unsupported original"):
+            verify.mapped_bss(proof, struct.pack("<II", 0x3C020035, 0x8C438008), self.sections())
+
+    def test_preserved_whitelist_matches_real_frame_global_sequences(self):
+        # Synthetic addresses/words, rather than game code or data fixtures.
+        for middle in (0, 0xFFA40010, 0xACA40008, 0x27BDFFE0, 0x8C438008):
+            for access, lower in (("lw32", 0x8C508008), ("sw32", 0xAC448008),
+                                  (None, 0x24458008)):
+                with self.subTest(middle=hex(middle), access=access):
+                    proof=self.word_proof(access, distance=12, preserved=True)
+                    self.assertEqual(verify.mapped_bss(proof,
+                        struct.pack("<IIII", 0x3C020035, middle, middle, lower), self.sections()),
+                        {".bss": zero_mapping()})
+        # LUI, stack adjustment, load into a different register, ADDIU pointer.
+        proof=self.word_proof(None, distance=12, preserved=True)
+        self.assertEqual(verify.mapped_bss(proof,
+            struct.pack("<IIII", 0x3C020035, 0x27BDFFE0, 0x8C438008, 0x24458008),
+            self.sections()), {".bss": zero_mapping()})
+
+    def test_preserved_whitelist_rejects_clobbers_calls_control_and_unknowns(self):
+        for middle in (0x24420001, 0x24430001, 0x8C428008, 0x8C408008,
+                       0xDC438008, 0x00401021, 0x0C100000, 0x08100000,
+                       0x10000004, 0x03E00008, 0x0080F809, 0x40026000,
+                       0x70000000, 0x00021000):
+            with self.subTest(middle=hex(middle)), self.assertRaisesRegex(ValueError, "unsupported/base-clobbering"):
+                verify.mapped_bss(self.word_proof(distance=8, preserved=True),
+                    struct.pack("<III", 0x3C020035, middle, 0x8C438008), self.sections())
+        # An adjustment of SP clobbers the address when SP is the LUI base.
+        with self.assertRaisesRegex(ValueError, "unsupported/base-clobbering"):
+            verify.mapped_bss(self.word_proof(None, distance=8, preserved=True),
+                struct.pack("<III", 0x3C1D0035, 0x27BDFFE0, 0x27A58008), self.sections())
+        # Legacy gap8 JR/branch proofs remain unchanged, but the opt-in
+        # straight-line preservation grammar deliberately rejects them.
+        for middle in (0x03E00008, 0x10000004):
+            verify.mapped_bss(self.word_proof(None, distance=8),
+                struct.pack("<III", 0x3C020035, middle, 0x24458008), self.sections())
+            with self.assertRaises(ValueError):
+                verify.mapped_bss(self.word_proof(None, distance=8, preserved=True),
+                    struct.pack("<III", 0x3C020035, middle, 0x24458008), self.sections())
+
+    def test_extended_geometry_duplicates_bools_and_longer_gap_fail(self):
+        words=struct.pack("<IIII", 0x3C020035, 0, 0, 0x24458008)
+        with self.assertRaises(ValueError):
+            verify.mapped_bss(self.word_proof(None, distance=12), words, self.sections())
+        for key in ("file_offset", "size"):
+            proof=self.word_proof(None, distance=12, preserved=True);proof[key]=True
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                verify.mapped_bss(proof, words, self.sections())
+        for key in ("hi_offset", "lo_offset", "relative_offset"):
+            proof=self.word_proof(None, distance=12, preserved=True)
+            proof["link_bss"][".bss"]["code_bindings"][0][key]=False
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                verify.mapped_bss(proof, words, self.sections())
+        proof=self.word_proof(None, distance=12, preserved=True)
+        proof["link_bss"][".bss"]["code_bindings"]*=2
+        with self.assertRaises(ValueError):verify.mapped_bss(proof, words, self.sections())
+        proof=self.word_proof(None, distance=16, preserved=True)
+        with self.assertRaises(ValueError):
+            verify.mapped_bss(proof, struct.pack("<IIIII", 0x3C020035, 0, 0, 0, 0x24458008), self.sections())
+
+    def test_scheduled_pair_and_effective_address_bounds_and_carry_fail(self):
+        original=struct.pack("<IIII", 0x3C020035, 0, 0, 0x8C438008)
+        proof=self.word_proof(distance=12, preserved=True)
+        for change in ({"hi_offset": 1}, {"lo_offset": 16}, {"relative_offset": -1}):
+            altered=self.word_proof(distance=12, preserved=True)
+            altered["link_bss"][".bss"]["code_bindings"][0].update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                verify.mapped_bss(altered, original, self.sections())
+        with self.assertRaises(ValueError):verify.mapped_bss(proof, original[:-1], self.sections())
+        with self.assertRaisesRegex(ValueError, "differs"):
+            verify.mapped_bss(proof, struct.pack("<IIII", 0x3C020034, 0, 0, 0x8C438008), self.sections())
+
 
 class ActualNobitsLinkTests(unittest.TestCase):
     @unittest.skipUnless((link_match.DEFAULT_BINUTILS / "mips-ps2-decompals-ld.exe").is_file(), "pinned linker unavailable")
@@ -172,6 +299,29 @@ class ActualNobitsLinkTests(unittest.TestCase):
             self.assertIn("(NOLOAD)", linked["script_path"].read_text())
             self.assertEqual(path.read_bytes(), original)
             self.assertEqual(linked["object_path"].read_bytes(), original)
+
+    @unittest.skipUnless((link_match.DEFAULT_BINUTILS / "mips-ps2-decompals-ld.exe").is_file(), "pinned linker unavailable")
+    def test_public_word_access_proof_drives_actual_unpatched_gnu_link(self):
+        sections=[{"name": ".bss", "address": 0x340000, "size": 0x10000,
+                   "type": "SHT_NOBITS", "flags": 3}]
+        for access, input_word, expected_word in (("lw32", 0x8C430000, 0x8C438008),
+                                                 ("sw32", 0xAC440000, 0xAC448008)):
+            with self.subTest(access=access), tempfile.TemporaryDirectory() as folder:
+                path=Path(folder)/"fixture.o"
+                original_object=zero_object(words=(0x3C020000,input_word))
+                path.write_bytes(original_object)
+                expected=struct.pack("<II",0x3C020035,expected_word)
+                proof={"file_offset": 0, "size": 8, "link_bss": {".bss": {
+                    **zero_mapping(), "original_section": ".bss", "code_bindings": [
+                        {"hi_offset": 0, "lo_offset": 4, "relative_offset": 0, "access": access}]}}}
+                mapping=verify.mapped_bss(proof,expected,sections)
+                linked=link_match.link_function(path,"fixture",0x110000,{},Path(folder)/"linked",
+                    mapped_nobits=mapping)
+                self.assertEqual(linked["code"],expected)
+                self.assertEqual(linked["remaining_relocations"],[])
+                self.assertEqual(linked["mapped_nobits"][0]["size"],16)
+                self.assertEqual(path.read_bytes(),original_object)
+                self.assertEqual(linked["object_path"].read_bytes(),original_object)
 
 
 if __name__ == "__main__":

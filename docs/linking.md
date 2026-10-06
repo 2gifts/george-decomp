@@ -42,6 +42,26 @@ storage address plus a bounded relative offset. The linker independently
 checks all actual source-local relocation addends against the complete input
 section. Fully linked code equality remains required to award a match.
 
+A binding can instead declare `access: "lw32"` or `access: "sw32"` to prove
+the effective address of an original same-base `LUI`/`LW` or `LUI`/`SW`.
+The complete four-byte access must be aligned and lie inside the proven
+storage; `LW` must write a nonzero register different from the address base.
+An adjacent access needs only this explicit declaration. A gap of eight or
+twelve bytes also requires `preserved_sequence: true`. That opt-in permits
+only NOP, ordinary `SD`/`SW`, `ADDIU SP,SP` when SP is not the address base,
+and `LW` into a nonzero register different from the base between the pair.
+Calls, control transfers, other instructions and base clobbers fail. The same
+opt-in allows a twelve-byte `LUI`/`ADDIU` pointer pair. Only literal `true` is
+accepted; the legacy three-field four/eight-byte pointer proofs retain their
+existing behavior. All offsets still refer to the complete original function.
+
+For example, a word-load binding is
+`{"hi_offset": 0, "lo_offset": 12, "relative_offset": 0, "access": "lw32", "preserved_sequence": true}`.
+Its actual original words must pass those checks; the declaration supplies no
+replacement instructions. These proofs leave the full NOBITS geometry,
+zero digest, genuine GNU link, relocation checks and complete code comparison
+unchanged. They permit no initialized writable data or storage byte credit.
+
 The hybrid executable build replaces only verified function bytes in the
 original executable. It retains the retail file's original section layout,
 NOBITS geometry and metadata; per-function test links are verification
@@ -51,5 +71,8 @@ artifacts. A zero-storage proof alone awards no code or data-identity progress.
 linking, original signed-low pointer decoding, full-size initialization proofs,
 alignment and overlap, local symbol/addend bounds, relocation rejection,
 malformed/initialized storage, unused mappings, clobbered pointer pairs and
-preservation of the original read-only rejection guards. It does not contain
+preservation of the original read-only rejection guards. Explicit word-access
+tests also cover signed-low carry, alignment/full-word extent, the strict
+intervening-instruction whitelist, unknown fields, malformed opt-ins and
+unchanged legacy proof behavior. It does not contain
 game bytes or mirror one runtime function's implementation.

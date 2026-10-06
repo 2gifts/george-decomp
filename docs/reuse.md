@@ -1627,3 +1627,18 @@ Canonical checkpoint verification and the hybrid build passed, together with
 307 tooling tests (one platform-specific symlink skip). The hybrid executable
 retains retail SHA-256 `01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8`;
 remaining original assembly contributes no additional C matching credit.
+
+## GNU frame sorting and state decoding
+
+[The frame runtime evidence](frame_runtime.md) covers fifteen complete
+functions / 3,988 bytes from unchanged historical GNU source. Nine independently reproduced
+whole linked functions match all 2,380 bytes in canonical verification.
+Four BSS users resolve through separately reviewed whole zero-storage proofs;
+the decoder's complete
+208-byte pool remains nonmatching. The five exact Git blobs, individual GPL
+notices and historical frame linking exception are retained. The proof uses
+actual target/header dependencies and 31-word ABI probes under four transparent
+recipes, with no native unwinder or hardware claim.
+
+The frame checkpoint passed canonical verification, the retail-identical hybrid
+build and 321 tooling tests (one platform-specific symlink skip).

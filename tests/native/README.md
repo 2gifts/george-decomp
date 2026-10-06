@@ -404,3 +404,10 @@ executes thirteen production functions and the published accessor across
 414 authored fixtures, passing 424,710 checks. Nine decoder guards and
 24,495 original instructions cover pooled mutations, aliases, sentinel walks
 and indexed/linear lookup. See `docs/resource_registry.md`.
+
+`run_path_sampling.py` checks five connected path helpers together with the
+existing production matrix inverse: 225,346 warning-free assertions against
+422 authored fixtures / 40,656 original instructions, plus six decoder guards.
+Lower curve projection/evaluation and the VU transform use explicit finite
+contracts; this validates caller capture, aliases and ordering. See
+[the path sampling evidence](../../docs/path_sampling.md) for the numerical limits.

@@ -208,8 +208,27 @@ def gate_generated_comparison(comparison, mapping_reports):
     return result
 
 
+def _nobits_preserved_instruction(instruction, register):
+    """Recognize only reviewed straight-line instructions preserving the base."""
+    if instruction == 0:
+        return True
+    opcode, source, destination = instruction >> 26, instruction >> 21 & 31, instruction >> 16 & 31
+    if opcode in (43, 63):  # Ordinary SW/SD do not write any GPR.
+        return True
+    if opcode == 9:  # Only the observed stack adjustment, never the LUI base.
+        return source == destination == 29 and register != 29
+    if opcode == 35:  # LW writes its destination after reading the address.
+        return destination != 0 and destination != register
+    return False
+
+
 def mapped_bss(function, original, sections):
-    """Prove zero storage from original NOBITS geometry and actual code pointers."""
+    """Prove complete zero storage from original pointers or opt-in word accesses.
+
+    Legacy LUI/ADDIU pairs retain their original four/eight-byte grammar.
+    Explicit word accesses and longer pairs require narrowly decoded base
+    preservation; they do not change the linker or create initialized bytes.
+    """
     from link_match import MAX_NOBITS_SIZE
     proofs = function.get("link_bss", {})
     if not isinstance(proofs, dict):
@@ -236,11 +255,23 @@ def mapped_bss(function, original, sections):
             raise ValueError("NOBITS mapping requires original code pointer bindings")
         seen = set()
         for pointer in pointers:
-            if not isinstance(pointer, dict) or set(pointer) != {"hi_offset", "lo_offset", "relative_offset"}:
+            required = {"hi_offset", "lo_offset", "relative_offset"}
+            if (not isinstance(pointer, dict) or not required <= set(pointer)
+                    or set(pointer) - required - {"access", "preserved_sequence"}):
                 raise ValueError("Unsupported original NOBITS code binding proof")
+            access = pointer.get("access")
+            if "access" in pointer and access not in ("lw32", "sw32"):
+                raise ValueError("Unsupported original NOBITS access proof")
+            preserved = pointer.get("preserved_sequence", False)
+            if "preserved_sequence" in pointer and preserved is not True:
+                raise ValueError("NOBITS preserved_sequence requires literal true")
             hi, lo, relative = (number(pointer[key]) for key in ("hi_offset", "lo_offset", "relative_offset"))
             if (any(type(value) is not int for value in (hi, lo, relative)) or hi & 3 or lo & 3
-                    or not 0 <= hi < lo <= function_size - 4 or lo - hi not in (4, 8)
+                    or type(function_offset) is not int or type(function_size) is not int
+                    or function_size <= 0 or function_size & 3
+                    or not 0 <= hi < lo <= function_size - 4 or lo - hi not in (4, 8, 12)
+                    or (lo - hi == 12 and not preserved)
+                    or (access is not None and lo - hi != 4 and not preserved)
                     or not 0 <= relative < size
                     or function_offset < 0 or function_offset + function_size > len(original)
                     or (hi, lo) in seen):
@@ -248,10 +279,19 @@ def mapped_bss(function, original, sections):
             seen.add((hi, lo))
             upper, lower = (struct.unpack_from("<I", original, function_offset + offset)[0] for offset in (hi, lo))
             register = upper >> 16 & 31
+            lower_opcode, destination = lower >> 26, lower >> 16 & 31
             if (upper >> 26 != 15 or (upper >> 21 & 31) or not register
-                    or lower >> 26 != 9 or (lower >> 21 & 31) != register or not (lower >> 16 & 31)):
-                raise ValueError("NOBITS original binding requires LUI and same-base ADDIU")
-            if lo - hi == 8:
+                    or (lower >> 21 & 31) != register
+                    or (access is None and (lower_opcode != 9 or not destination))
+                    or (access == "lw32" and (lower_opcode != 35 or not destination or destination == register))
+                    or (access == "sw32" and lower_opcode != 43)):
+                raise ValueError("NOBITS original binding requires LUI and its declared same-base lower instruction")
+            if preserved:
+                for offset in range(hi + 4, lo, 4):
+                    middle = struct.unpack_from("<I", original, function_offset + offset)[0]
+                    if not _nobits_preserved_instruction(middle, register):
+                        raise ValueError("Original NOBITS preserved sequence contains an unsupported/base-clobbering instruction")
+            elif lo - hi == 8:
                 middle = struct.unpack_from("<I", original, function_offset + hi + 4)[0]
                 opcode = middle >> 26
                 branch = (opcode in (2, 4, 5, 6, 7, 20, 21, 22, 23)
@@ -262,6 +302,8 @@ def mapped_bss(function, original, sections):
             target = (((upper & 0xFFFF) << 16) + (immediate - 0x10000 if immediate & 0x8000 else immediate)) & 0xFFFFFFFF
             if target != address + relative:
                 raise ValueError("Original code pointer differs from NOBITS mapping")
+            if access is not None and (target & 3 or relative + 4 > size):
+                raise ValueError("Original NOBITS word access is unaligned or exceeds whole storage")
         result[name] = {"address": address, "size": size, "zero_sha256": digest}
     return result
 
