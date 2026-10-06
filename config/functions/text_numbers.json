@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Twelve complete direct-output numeric scanner lookups, 3808 bytes / 952 original instructions. All 36 standard compiler candidates naturally link completely without remaining relocations; none is a full-byte match.",
+    "Reuses reviewed lookup template unchanged, complete original token/compare/copy/scanner call graph, existing context storage and original readonly %d/%f/%hd literal bindings; no new engine/library source or shared refactor.",
+    "Integer variants clear only their first word; float variants clear every output word; short variants clear every output halfword, before lookup. Scanner receives caller outputs directly, all pointers in observed order; return count ignored and lookup presence returned. Partial conversions leave unwritten caller lanes unchanged after initial/callback stores.",
+    "Native 32-bit scoped harness passes 159630 checks for real host partial vsscanf writes, ignored substituted counts, all lookup precedences/misses, distinct/shared/reordered output aliases, initial key/context mutations and compare/scanner callbacks. No original scanner hardware/exception/out-of-range proof claimed.",
+    "Actual direct JAL references and complete readonly format-literal hashes/geometry recorded; no invented callers for unused overloads, no original table/name/code bytes copied.",
+    "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+  ],
+  "functions": [
+    {
+      "name": "func_002B4840",
+      "address": "0x002B4840",
+      "file_offset": "0x1B5840",
+      "size": 288,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "71794579d918dfd4de2e00f4457f96278139277c9ed94249769eb0c87b778f91",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233BEC",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233F50",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233F64",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B1BC",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023E3D8",
+          "caller": "func_0023E2E0"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0024401C",
+          "caller": "func_00243E90"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00271714",
+          "caller": "func_00271300"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x004476F0",
+        "file_offset": "0x003486F0",
+        "size": 3,
+        "section": ".rodata",
+        "original_sha256": "0b782fc3030dbdf3756f17e7adf2ce5808dfc513ca7589adeb679c7d25eaef6f"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear first output word only before lookup; captured text/format and 1 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 288,
+        "compiled_size": 280,
+        "different_bytes": 232,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          16,
+          18,
+          20,
+          21,
+          22
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "71794579d918dfd4de2e00f4457f96278139277c9ed94249769eb0c87b778f91",
+        "compiled_sha256": "3cbb4bac04172ee65c1d8f44a08cae9fae376326026601d6fa1b193e1f71afc8"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4960",
+      "address": "0x002B4960",
+      "file_offset": "0x1B5960",
+      "size": 304,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b7f4f764ae1b6ca27fadecab5357c2967f4399050a92989d73de8f355d65bd3f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [],
+      "format_evidence": {
+        "address": "0x004476F8",
+        "file_offset": "0x003486F8",
+        "size": 6,
+        "section": ".rodata",
+        "original_sha256": "574ee6df1b8b34eaadebc4240ac196e7d9c7538fb03fe87b0f1b4d2a45525eb5"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear first output word only before lookup; captured text/format and 2 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 304,
+        "compiled_size": 296,
+        "different_bytes": 244,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          18,
+          20,
+          21,
+          22,
+          23
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b7f4f764ae1b6ca27fadecab5357c2967f4399050a92989d73de8f355d65bd3f",
+        "compiled_sha256": "a01f8920893c0d3c0f7ca4c076b71f56728a11938d00abe77a5b80a4102279b0"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4A90",
+      "address": "0x002B4A90",
+      "file_offset": "0x1B5A90",
+      "size": 320,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "092c0a1da2915daa4fa8ed28dee2baa086f1a6c1fc61ccc713baa50dafec871c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [],
+      "format_evidence": {
+        "address": "0x00447700",
+        "file_offset": "0x00348700",
+        "size": 9,
+        "section": ".rodata",
+        "original_sha256": "91c3fb634163c17b24071195d0fbe618d118132b70bb33c17c23d846933cdc59"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear first output word only before lookup; captured text/format and 3 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 320,
+        "compiled_size": 312,
+        "different_bytes": 257,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          18,
+          20,
+          21,
+          22,
+          23
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "092c0a1da2915daa4fa8ed28dee2baa086f1a6c1fc61ccc713baa50dafec871c",
+        "compiled_sha256": "5db97244e70320d5b3d2593648372c39f843ad7d14de25123a3e22ae5274b730"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4BD0",
+      "address": "0x002B4BD0",
+      "file_offset": "0x1B5BD0",
+      "size": 336,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "313c506d88440376d4a71e24b9c9f6eb9959a3cbcde4f7cd8251ec008f843310",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233980",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233A08",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233C14",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B3EC",
+          "caller": "func_0023AE50"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447710",
+        "file_offset": "0x00348710",
+        "size": 12,
+        "section": ".rodata",
+        "original_sha256": "7303dc7ecc6937511ee38c2a996aefd1acded95e5742520f340818af0660bfea"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear first output word only before lookup; captured text/format and 4 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 336,
+        "compiled_size": 328,
+        "different_bytes": 274,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          18,
+          20,
+          21,
+          22,
+          23
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "313c506d88440376d4a71e24b9c9f6eb9959a3cbcde4f7cd8251ec008f843310",
+        "compiled_sha256": "a8d646f21ce439861da5900fc7dfcf056ebb098d39377d3daf7cb5500378e46a"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4D20",
+      "address": "0x002B4D20",
+      "file_offset": "0x1B5D20",
+      "size": 288,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e9780727652c29c30268ef255f2a64d9c5a71934fd33455b7afb355d9d1b1899",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA288",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA29C",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA2B0",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA2C4",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA2D8",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA2EC",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA2FC",
+          "caller": "func_001AA1B8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0022F100",
+          "caller": "func_0022F028"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0022F318",
+          "caller": "func_0022F1A8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0022F344",
+          "caller": "func_0022F1A8"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233894",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002338BC",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002338F4",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233930",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00234198",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B0A8",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B0E4",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B124",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B16C",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00243FF4",
+          "caller": "func_00243E90"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00244008",
+          "caller": "func_00243E90"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0027192C",
+          "caller": "func_00271300"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002733B8",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002733C8",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002733DC",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002733F0",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273404",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002738C4",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002738D8",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002738EC",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273900",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273914",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273BE4",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273BF8",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273C0C",
+          "caller": "func_00273168"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447720",
+        "file_offset": "0x00348720",
+        "size": 3,
+        "section": ".rodata",
+        "original_sha256": "8346c482354e2aa8efdf29fce7f28cf59a13ed3b688aec6b3414a5755740061b"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all float output words in argument order before lookup; captured text/format and 1 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 288,
+        "compiled_size": 280,
+        "different_bytes": 232,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          16,
+          18,
+          20,
+          21,
+          22
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "e9780727652c29c30268ef255f2a64d9c5a71934fd33455b7afb355d9d1b1899",
+        "compiled_sha256": "d41139b7ad8c5fff9a93f007c170a5618bc20db417a6bb8894d0a754b56f4106"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4E40",
+      "address": "0x002B4E40",
+      "file_offset": "0x1B5E40",
+      "size": 312,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fe29ffae6af01d6cd2c10e2b1114e98d2d8301348664d5d56c6f150146c28483",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002719BC",
+          "caller": "func_00271300"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447728",
+        "file_offset": "0x00348728",
+        "size": 6,
+        "section": ".rodata",
+        "original_sha256": "23639148836277d5e25e625d3b454d874d18e572bdc6485fbf4969f7f580c7d0"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all float output words in argument order before lookup; captured text/format and 2 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 312,
+        "compiled_size": 304,
+        "different_bytes": 246,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "fe29ffae6af01d6cd2c10e2b1114e98d2d8301348664d5d56c6f150146c28483",
+        "compiled_sha256": "62f960fe07f000dcb4a565025a182e88dbad23e51a504f360ad78151723753b4"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B4F78",
+      "address": "0x002B4F78",
+      "file_offset": "0x1B5F78",
+      "size": 328,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "86df4265facf8de35f36132626d1a6ba669919aad199e111dd9f815aabe3566b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233CE0",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233D1C",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233DB4",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233DD0",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023B234",
+          "caller": "func_0023AE50"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273420",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273498",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002734D0",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273508",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273544",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0027357C",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002735B4",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273608",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273780",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002737B4",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002737E8",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273820",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273858",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273894",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273A68",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273A9C",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273AD0",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273B08",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273B40",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273B78",
+          "caller": "func_00273168"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00273BB4",
+          "caller": "func_00273168"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447730",
+        "file_offset": "0x00348730",
+        "size": 9,
+        "section": ".rodata",
+        "original_sha256": "9d9949291b3b8e3c232368c93b65e79990accb06a9529b2849f12be443b13192"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all float output words in argument order before lookup; captured text/format and 3 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 328,
+        "compiled_size": 320,
+        "different_bytes": 263,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "86df4265facf8de35f36132626d1a6ba669919aad199e111dd9f815aabe3566b",
+        "compiled_sha256": "5e7873133e241d17bf25cec0125988da0671df1f10142417807589390a695ba2"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B50C0",
+      "address": "0x002B50C0",
+      "file_offset": "0x1B60C0",
+      "size": 352,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5fb5adeaca214aef222d621977f197cb8dc891d6f5dbd9bb274a53b2f428e649",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00233D3C",
+          "caller": "func_00232E88"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0023E3F4",
+          "caller": "func_0023E2E0"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0027345C",
+          "caller": "func_00273168"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447740",
+        "file_offset": "0x00348740",
+        "size": 12,
+        "section": ".rodata",
+        "original_sha256": "46d3c2881c4508ec6c5af4d8f7c6b6f2bce51b21f80fc61b4faa563722590dc0"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all float output words in argument order before lookup; captured text/format and 4 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 352,
+        "compiled_size": 344,
+        "different_bytes": 280,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "5fb5adeaca214aef222d621977f197cb8dc891d6f5dbd9bb274a53b2f428e649",
+        "compiled_sha256": "7da0263fdd3d5e091b2f849f3f45b7e1961b48b68f22a0bab32734e17b972869"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B5220",
+      "address": "0x002B5220",
+      "file_offset": "0x1B6220",
+      "size": 288,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "348bb31b4a2d3d776ec8374ed4b6c865f12c87095a66b89f361d19290ab93423",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [],
+      "format_evidence": {
+        "address": "0x00447750",
+        "file_offset": "0x00348750",
+        "size": 4,
+        "section": ".rodata",
+        "original_sha256": "cea19872e524a570b359182133128591c508729413bb52a282667eaa7e78ee40"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all output halfwords in argument order before lookup; captured text/format and 1 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 288,
+        "compiled_size": 280,
+        "different_bytes": 232,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          16,
+          18,
+          20,
+          21,
+          22
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "348bb31b4a2d3d776ec8374ed4b6c865f12c87095a66b89f361d19290ab93423",
+        "compiled_sha256": "66b903d655591ee75683104ee7f4b6752d14dcc8098ac99b27d81b9bdacaec58"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B5340",
+      "address": "0x002B5340",
+      "file_offset": "0x1B6340",
+      "size": 312,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2414635a11255b62beb0e55eaaa78030c5ba27e7957f40764a622c93b0858494",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [],
+      "format_evidence": {
+        "address": "0x00447758",
+        "file_offset": "0x00348758",
+        "size": 8,
+        "section": ".rodata",
+        "original_sha256": "e6a3b36d0691032ff88859fcee60ded2cd57f78917f106cdb69001ef068ec2a0"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all output halfwords in argument order before lookup; captured text/format and 2 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 312,
+        "compiled_size": 304,
+        "different_bytes": 246,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2414635a11255b62beb0e55eaaa78030c5ba27e7957f40764a622c93b0858494",
+        "compiled_sha256": "384dcb1fb5e7b635db02217d338e85e302a2db7ad187b1f5bebe3fe263c1be30"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B5478",
+      "address": "0x002B5478",
+      "file_offset": "0x1B6478",
+      "size": 328,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "8d6c865d65b1f559ce8ef7017427dcc444f4380b9e69606dd5458c0af005b996",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x001AA38C",
+          "caller": "func_001AA1B8"
+        }
+      ],
+      "format_evidence": {
+        "address": "0x00447760",
+        "file_offset": "0x00348760",
+        "size": 12,
+        "section": ".rodata",
+        "original_sha256": "efaddc0c32a6c29c18beb682c4323544d6fb415c89bb08e84363a389d084056d"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all output halfwords in argument order before lookup; captured text/format and 3 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 328,
+        "compiled_size": 320,
+        "different_bytes": 263,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "8d6c865d65b1f559ce8ef7017427dcc444f4380b9e69606dd5458c0af005b996",
+        "compiled_sha256": "d470f64240ef31ac521db809ef91ac7979fc3dd5f6885041c8f7c55dffe3d144"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    },
+    {
+      "name": "func_002B55C0",
+      "address": "0x002B55C0",
+      "file_offset": "0x1B65C0",
+      "size": 352,
+      "source": "src/game/text_numbers.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "87ca05314387e8d4b79ced94f3c220a5ab41c849e51177e52ceffd12e596b222",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "entry_references": [],
+      "format_evidence": {
+        "address": "0x00447770",
+        "file_offset": "0x00348770",
+        "size": 16,
+        "section": ".rodata",
+        "original_sha256": "926e96302306e98c712d24fa62036d2790198fb31526e410a8420f15d5f24084"
+      },
+      "evidence": "Complete original lookup body with unchanged reviewed ordered lookup template; clear all output halfwords in argument order before lookup; captured text/format and 4 direct captured output pointers in original argument order; ignored scanner/copy returns; return lookup-presence status, preserving partial writes, untouched lanes, output/key/context aliases and callback mutations.",
+      "boundary_evidence": "All original branches/calls, complete prologue/captured inputs and final stack restoration/JR delay independently reviewed; zero following padding excluded; coherent adjacent overload bodies corroborate unreferenced entries without invented direct calls.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 352,
+        "compiled_size": 344,
+        "different_bytes": 280,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          16,
+          18,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "87ca05314387e8d4b79ced94f3c220a5ab41c849e51177e52ceffd12e596b222",
+        "compiled_sha256": "0e0fe2a9cbfaf3a83bc67b1f106608363e75a7062b4b880342e2b0107394b144"
+      },
+      "independent_review": "Parent independently reviewed all 952 original instructions and complete source/header/template/native/docs; audited all 12 full hashes, boundaries/local branches, 77 encoded actual JAL references and 12 complete readonly format hashes. All 36 fresh isolated natural links are byte-semantically equal to the recorded comparisons; independent native rerun passes 159630 checks."
+    }
+  ]
+}

@@ -154,3 +154,22 @@ four input aliases, repeated parsing and callback mutations. The new scoped
 decoder has six guard tests and regenerates fixtures from the locally validated
 ELF; no original instructions or assets are included. See `docs/text_parser.md`
 for capacity, lookahead, termination and low-word model limits.
+
+The direct numeric-lookup harness passes 159,630 checks for all twelve
+integer/float/halfword variants, real host partial conversion writes, ignored
+scanner counts, lookup precedence, pointer order, output aliases and callback
+mutations. Run it with `--harness text_numbers`. See `docs/text_numbers.md` for
+initial-store differences, buffer preconditions and host scanner limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_states3.py` for 1,621
+asset-free checks of the complete phase/callback, effect, matrix and attachment
+paths in `actor_states3.c`. Full signed phase boundaries, wrapping counters,
+branch-likely phase102 gating, callback reloads and unaligned position aliasing
+are checked. The host callee/arithmetic models do not claim EE FCR equivalence.
+
+The direct-content harness passes 231,402 checks for all seven scanner pointer
+ABIs, real host partial/empty writes and propagated counts, aliases/callbacks,
+short-circuit truth comparisons, copy-return forwarding and complete sparse
+rewind storage preservation. Run it with `--harness text_content`. See
+`docs/text_content.md` for original unused return-type uncertainty and runtime
+preconditions.

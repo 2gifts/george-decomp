@@ -451,6 +451,16 @@
       "address": "0x0037AD28",
       "confidence": "identified",
       "evidence": "All 118 original instructions agree with the unchanged public double floor source: signed-zero/negative-one handling, high/low fractional masks, negative bias/carry, huge1e300 inexact checks, integral returns and nonfinite x+x. Three original LUI/LD pairs prove the huge symbol at0x4550C8 inside the whole16-byte readonly section at0x4550C0. -Dfloor=func_0037AD28 only renames the upstream definition/prototype, preserving its body and the separate existing floor0039CCD0 binding. Actual linked code differs and remains reconstructed."
+    },
+    "__svfscanf": {
+      "address": "0x395558",
+      "confidence": "identified",
+      "evidence": "Complete source identity includes multibyte format traversal and persistent state (-DMB_CAPABLE), signed format/classification bytes, suppression/length/width flags, all five conversion categories, NUMBUF350 cap349,17 basefix values, V7 scanset helper, whitespace/literal/refill/ungetc behavior, integer/float result widths and assignment/read counts. All four complete switch tables and original pointer bases are proven. Actual GNU ld links the entire generated readonly1136B table at its original VMA; full linked code and full table differ, so reconstructed with zero code/data matching credit."
+    },
+    "__sccl": {
+      "address": "0x396068",
+      "confidence": "identified",
+      "evidence": "All60 original instructions agree with unchanged __sccl:256-byte table initialization, optional inversion, first closing bracket/literal hyphen handling, signed format bytes, earlyNUL returning fmt-1, V7 chained-range expansion including equal endpoint behavior, final close-bracket/return cursor. Original direct scanner JAL proves entry; complete actual linked body differs and remains reconstructed."
     }
   }
 }

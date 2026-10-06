@@ -6288,6 +6288,2600 @@
           "evidence": "Whole source readonly section exactly equals original16B including alignment; three complete original LUI/LD pairs prove referenced huge symbol at section+8. Genuine ld resolves relocations; data identity alone earns no code match."
         }
       }
+    },
+    {
+      "name": "__svfscanf",
+      "address": "0x395558",
+      "file_offset": "0x296558",
+      "size": 2832,
+      "source": "src/runtime/stdio/vfscanf.c",
+      "original_sha256": "596133af5a46b17597fce2760fe3835701a12fe65bbff6751945e7a2950144c9",
+      "upstream_source_sha256": "824bad6c45dd382a66a3e5f0cdc0d770dd68d4e39cbe89359abc0bac7afcce57",
+      "source_kind": "c",
+      "compiled_symbol": "__svfscanf",
+      "status": "reconstructed",
+      "upstream_symbol": "__svfscanf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/stdio/vfscanf.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/vfscanf.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim in vfscanf.c/local.h/floatio.h. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DMB_CAPABLE"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/vfscanf.c",
+          "sha256": "824bad6c45dd382a66a3e5f0cdc0d770dd68d4e39cbe89359abc0bac7afcce57",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/vfscanf.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/vfscanf.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/ctype.h",
+          "sha256": "ca9f1c974e36f74bdc490684d0c9dea5afa806e783f769e2fd2d438b6c2d0d3a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "src/runtime/stdio/floatio.h",
+          "sha256": "ceb13c8d94569d2ea6eeaecdd2953be30c003222733808e685118aaf12269045",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/floatio.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/floatio.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x3953d0"
+        ],
+        "return_address": "0x396060",
+        "delay_address": "0x396064"
+      },
+      "internal_direct_calls": [
+        {
+          "pc": "0x3955d0",
+          "target": "0x3963a8"
+        },
+        {
+          "pc": "0x395640",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x3956dc",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x3957e8",
+          "target": "0x396068"
+        },
+        {
+          "pc": "0x3958a8",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x39590c",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395994",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x3959e4",
+          "target": "0x394808"
+        },
+        {
+          "pc": "0x395a58",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395ad8",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395b74",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395bf8",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395d4c",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395d80",
+          "target": "0x39e1d0"
+        },
+        {
+          "pc": "0x395db0",
+          "target": "0x39e1d0"
+        },
+        {
+          "pc": "0x395f20",
+          "target": "0x3950a0"
+        },
+        {
+          "pc": "0x395f64",
+          "target": "0x39e1d0"
+        },
+        {
+          "pc": "0x395f9c",
+          "target": "0x39e1d0"
+        },
+        {
+          "pc": "0x395fb0",
+          "target": "0x39e1d0"
+        },
+        {
+          "pc": "0x395fc8",
+          "target": "0x396300"
+        },
+        {
+          "pc": "0x395ffc",
+          "target": "0x3734f8"
+        }
+      ],
+      "internal_branches": [
+        {
+          "pc": "0x3955e8",
+          "target": "0x396034"
+        },
+        {
+          "pc": "0x3955f4",
+          "target": "0x395678"
+        },
+        {
+          "pc": "0x395610",
+          "target": "0x395674"
+        },
+        {
+          "pc": "0x395618",
+          "target": "0x395638"
+        },
+        {
+          "pc": "0x395638",
+          "target": "0x395654"
+        },
+        {
+          "pc": "0x395648",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395664",
+          "target": "0x395620"
+        },
+        {
+          "pc": "0x39566c",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x39567c",
+          "target": "0x3956c4"
+        },
+        {
+          "pc": "0x3956a0",
+          "target": "0x395870"
+        },
+        {
+          "pc": "0x3956c8",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x3956d4",
+          "target": "0x3956f0"
+        },
+        {
+          "pc": "0x3956e4",
+          "target": "0x396028"
+        },
+        {
+          "pc": "0x3956f8",
+          "target": "0x396034"
+        },
+        {
+          "pc": "0x39571c",
+          "target": "0x3956d0"
+        },
+        {
+          "pc": "0x395724",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x39572c",
+          "target": "0x39568c"
+        },
+        {
+          "pc": "0x395734",
+          "target": "0x39568c"
+        },
+        {
+          "pc": "0x39573c",
+          "target": "0x39568c"
+        },
+        {
+          "pc": "0x395744",
+          "target": "0x39568c"
+        },
+        {
+          "pc": "0x395758",
+          "target": "0x39568c"
+        },
+        {
+          "pc": "0x39576c",
+          "target": "0x3957b4"
+        },
+        {
+          "pc": "0x395784",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957a0",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957b8",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957c4",
+          "target": "0x39580c"
+        },
+        {
+          "pc": "0x3957cc",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957d4",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957f0",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x3957fc",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x395818",
+          "target": "0x39589c"
+        },
+        {
+          "pc": "0x395824",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x395830",
+          "target": "0x395848"
+        },
+        {
+          "pc": "0x395840",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x395848",
+          "target": "0x39585c"
+        },
+        {
+          "pc": "0x395854",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x395860",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x395868",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x3958a0",
+          "target": "0x3958bc"
+        },
+        {
+          "pc": "0x3958b0",
+          "target": "0x396028"
+        },
+        {
+          "pc": "0x3958bc",
+          "target": "0x39593c"
+        },
+        {
+          "pc": "0x3958e0",
+          "target": "0x39593c"
+        },
+        {
+          "pc": "0x3958f8",
+          "target": "0x39590c"
+        },
+        {
+          "pc": "0x395904",
+          "target": "0x39591c"
+        },
+        {
+          "pc": "0x395914",
+          "target": "0x396028"
+        },
+        {
+          "pc": "0x395930",
+          "target": "0x3958f0"
+        },
+        {
+          "pc": "0x39593c",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x395968",
+          "target": "0x3959d4"
+        },
+        {
+          "pc": "0x39597c",
+          "target": "0x3959b4"
+        },
+        {
+          "pc": "0x39599c",
+          "target": "0x395978"
+        },
+        {
+          "pc": "0x3959a4",
+          "target": "0x396024"
+        },
+        {
+          "pc": "0x3959ac",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x3959cc",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x3959ec",
+          "target": "0x396024"
+        },
+        {
+          "pc": "0x3959fc",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x395a10",
+          "target": "0x395a80"
+        },
+        {
+          "pc": "0x395a2c",
+          "target": "0x395a70"
+        },
+        {
+          "pc": "0x395a48",
+          "target": "0x395a70"
+        },
+        {
+          "pc": "0x395a50",
+          "target": "0x395a20"
+        },
+        {
+          "pc": "0x395a60",
+          "target": "0x395a20"
+        },
+        {
+          "pc": "0x395a68",
+          "target": "0x396028"
+        },
+        {
+          "pc": "0x395a70",
+          "target": "0x396034"
+        },
+        {
+          "pc": "0x395a78",
+          "target": "0x3955bc"
+        },
+        {
+          "pc": "0x395a9c",
+          "target": "0x395af4"
+        },
+        {
+          "pc": "0x395ac4",
+          "target": "0x395af0"
+        },
+        {
+          "pc": "0x395ad0",
+          "target": "0x395a90"
+        },
+        {
+          "pc": "0x395ae0",
+          "target": "0x395a90"
+        },
+        {
+          "pc": "0x395ae8",
+          "target": "0x396028"
+        },
+        {
+          "pc": "0x395af4",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395b08",
+          "target": "0x395b84"
+        },
+        {
+          "pc": "0x395b1c",
+          "target": "0x395b8c"
+        },
+        {
+          "pc": "0x395b48",
+          "target": "0x395b84"
+        },
+        {
+          "pc": "0x395b64",
+          "target": "0x395b84"
+        },
+        {
+          "pc": "0x395b6c",
+          "target": "0x395b38"
+        },
+        {
+          "pc": "0x395b7c",
+          "target": "0x395b38"
+        },
+        {
+          "pc": "0x395b84",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x395bc0",
+          "target": "0x395c08"
+        },
+        {
+          "pc": "0x395be4",
+          "target": "0x395c08"
+        },
+        {
+          "pc": "0x395bf0",
+          "target": "0x395bb0"
+        },
+        {
+          "pc": "0x395c00",
+          "target": "0x395bb0"
+        },
+        {
+          "pc": "0x395c14",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x395c38",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395c54",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395c74",
+          "target": "0x395c88"
+        },
+        {
+          "pc": "0x395c88",
+          "target": "0x395d20"
+        },
+        {
+          "pc": "0x395c90",
+          "target": "0x395d20"
+        },
+        {
+          "pc": "0x395cb0",
+          "target": "0x395d24"
+        },
+        {
+          "pc": "0x395cd0",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395cd8",
+          "target": "0x395d24"
+        },
+        {
+          "pc": "0x395ce4",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395cec",
+          "target": "0x395d24"
+        },
+        {
+          "pc": "0x395cf8",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395d00",
+          "target": "0x395d24"
+        },
+        {
+          "pc": "0x395d0c",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395d14",
+          "target": "0x395d68"
+        },
+        {
+          "pc": "0x395d34",
+          "target": "0x395d4c"
+        },
+        {
+          "pc": "0x395d44",
+          "target": "0x395d5c"
+        },
+        {
+          "pc": "0x395d54",
+          "target": "0x395d6c"
+        },
+        {
+          "pc": "0x395d60",
+          "target": "0x395c48"
+        },
+        {
+          "pc": "0x395d6c",
+          "target": "0x395d90"
+        },
+        {
+          "pc": "0x395d74",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395d88",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395d98",
+          "target": "0x395da8"
+        },
+        {
+          "pc": "0x395da0",
+          "target": "0x395dbc"
+        },
+        {
+          "pc": "0x395dbc",
+          "target": "0x39601c"
+        },
+        {
+          "pc": "0x395de4",
+          "target": "0x395e04"
+        },
+        {
+          "pc": "0x395dfc",
+          "target": "0x395e44"
+        },
+        {
+          "pc": "0x395e04",
+          "target": "0x395e1c"
+        },
+        {
+          "pc": "0x395e14",
+          "target": "0x395e44"
+        },
+        {
+          "pc": "0x395e20",
+          "target": "0x395e34"
+        },
+        {
+          "pc": "0x395e2c",
+          "target": "0x395e44"
+        },
+        {
+          "pc": "0x395e4c",
+          "target": "0x396018"
+        },
+        {
+          "pc": "0x395e70",
+          "target": "0x395f3c"
+        },
+        {
+          "pc": "0x395e8c",
+          "target": "0x395f3c"
+        },
+        {
+          "pc": "0x395eb0",
+          "target": "0x395ef8"
+        },
+        {
+          "pc": "0x395ebc",
+          "target": "0x395f3c"
+        },
+        {
+          "pc": "0x395ec4",
+          "target": "0x395ef8"
+        },
+        {
+          "pc": "0x395ed0",
+          "target": "0x395f3c"
+        },
+        {
+          "pc": "0x395ed8",
+          "target": "0x395ef8"
+        },
+        {
+          "pc": "0x395ee8",
+          "target": "0x395f3c"
+        },
+        {
+          "pc": "0x395f08",
+          "target": "0x395f20"
+        },
+        {
+          "pc": "0x395f18",
+          "target": "0x395f30"
+        },
+        {
+          "pc": "0x395f28",
+          "target": "0x395f40"
+        },
+        {
+          "pc": "0x395f34",
+          "target": "0x395e80"
+        },
+        {
+          "pc": "0x395f40",
+          "target": "0x395fb8"
+        },
+        {
+          "pc": "0x395f48",
+          "target": "0x395f80"
+        },
+        {
+          "pc": "0x395f50",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395f70",
+          "target": "0x395f60"
+        },
+        {
+          "pc": "0x395f78",
+          "target": "0x396038"
+        },
+        {
+          "pc": "0x395f8c",
+          "target": "0x395fac"
+        },
+        {
+          "pc": "0x395f94",
+          "target": "0x395fac"
+        },
+        {
+          "pc": "0x395fbc",
+          "target": "0x39601c"
+        },
+        {
+          "pc": "0x395fd8",
+          "target": "0x395ff0"
+        },
+        {
+          "pc": "0x395fe4",
+          "target": "0x395ffc"
+        },
+        {
+          "pc": "0x395ff4",
+          "target": "0x39600c"
+        },
+        {
+          "pc": "0x39601c",
+          "target": "0x3955b8"
+        },
+        {
+          "pc": "0x39602c",
+          "target": "0x396038"
+        }
+      ],
+      "boundary_evidence": "Independent complete raw instruction interval includes final JR and delay, excludes neighboring functions/padding. __svfscanf395558..396068 is2832B; __sccl396068..396158 is240B. Authentic separately compiled function symbols and original direct entry calls corroborate boundaries.",
+      "independent_review": "Root reviewed all708+60 original instructions, complete pinned vfscanf/floatio/local source, source/dependency hashes,21 original calls, original entry/branch intervals, six pointer pairs, all263 switch targets/basefix/84 literal+padding bytes, genuine sizeof(long)8/pointer4 and fresh complete code/table links before registration.",
+      "link_symbols": {
+        "__mb_cur_max": "0x00405E90",
+        "_mbtowc_r": "0x003963A8",
+        "__srefill": "0x003950A0",
+        "strtoul": "0x00398368",
+        "fread": "0x00394808",
+        "ungetc": "0x0039E1D0",
+        "atof": "0x00396300",
+        "__sccl": "0x00396068"
+      },
+      "link_codegen_readonly": {
+        ".rodata": {
+          "address": "0x456230",
+          "file_offset": "0x357230",
+          "size": 1136,
+          "original_sha256": "c8183412d76019600c6dc08ceeec9eaf8eb48b295d02aab2c08c995934f34e59",
+          "code_bindings": [
+            {
+              "hi_offset": 332,
+              "lo_offset": 340,
+              "relative_offset": 48
+            },
+            {
+              "hi_offset": 1004,
+              "lo_offset": 1012,
+              "relative_offset": 544
+            },
+            {
+              "hi_offset": 1792,
+              "lo_offset": 1800,
+              "relative_offset": 576
+            },
+            {
+              "hi_offset": 2360,
+              "lo_offset": 2368,
+              "relative_offset": 896
+            },
+            {
+              "hi_offset": 1856,
+              "lo_offset": 1864,
+              "relative_offset": 0
+            },
+            {
+              "hi_offset": 1888,
+              "lo_offset": 1896,
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Whole original readonly scanner pool:17 authentic basefix shorts, all padding and four independently decoded jump tables. Six real original LUI/ADDIU bindings prove internal table/constant bases. Only genuine compiler R_MIPS_32 local case pointers may differ; actual full linked code+data comparison remains mandatory."
+        }
+      },
+      "original_data_pointer_proofs": [
+        {
+          "upper_address": "0x3956a4",
+          "upper_word": "3c020045",
+          "lower_address": "0x3956ac",
+          "lower_word": "24426260",
+          "target": "0x456260"
+        },
+        {
+          "upper_address": "0x395944",
+          "upper_word": "3c020045",
+          "lower_address": "0x39594c",
+          "lower_word": "24426450",
+          "target": "0x456450"
+        },
+        {
+          "upper_address": "0x395c58",
+          "upper_word": "3c020045",
+          "lower_address": "0x395c60",
+          "lower_word": "24426470",
+          "target": "0x456470"
+        },
+        {
+          "upper_address": "0x395e90",
+          "upper_word": "3c020045",
+          "lower_address": "0x395e98",
+          "lower_word": "244265b0",
+          "target": "0x4565b0"
+        },
+        {
+          "upper_address": "0x395c98",
+          "upper_word": "3c020045",
+          "lower_address": "0x395ca0",
+          "lower_word": "24426230",
+          "target": "0x456230"
+        },
+        {
+          "upper_address": "0x395cb8",
+          "upper_word": "3c020045",
+          "lower_address": "0x395cc0",
+          "lower_word": "24426230",
+          "target": "0x456230"
+        }
+      ],
+      "original_switch_tables": [
+        {
+          "name": "format",
+          "address": "0x456260",
+          "size": 484,
+          "original_sha256": "e8d4242622192ecfab691916f3876ad4703c6abcca32423b8503d6e02ab49333",
+          "character_bias": 0,
+          "entries": [
+            {
+              "input": 0,
+              "target": "0x395868"
+            },
+            {
+              "input": 1,
+              "target": "0x395870"
+            },
+            {
+              "input": 2,
+              "target": "0x395870"
+            },
+            {
+              "input": 3,
+              "target": "0x395870"
+            },
+            {
+              "input": 4,
+              "target": "0x395870"
+            },
+            {
+              "input": 5,
+              "target": "0x395870"
+            },
+            {
+              "input": 6,
+              "target": "0x395870"
+            },
+            {
+              "input": 7,
+              "target": "0x395870"
+            },
+            {
+              "input": 8,
+              "target": "0x395870"
+            },
+            {
+              "input": 9,
+              "target": "0x395870"
+            },
+            {
+              "input": 10,
+              "target": "0x395870"
+            },
+            {
+              "input": 11,
+              "target": "0x395870"
+            },
+            {
+              "input": 12,
+              "target": "0x395870"
+            },
+            {
+              "input": 13,
+              "target": "0x395870"
+            },
+            {
+              "input": 14,
+              "target": "0x395870"
+            },
+            {
+              "input": 15,
+              "target": "0x395870"
+            },
+            {
+              "input": 16,
+              "target": "0x395870"
+            },
+            {
+              "input": 17,
+              "target": "0x395870"
+            },
+            {
+              "input": 18,
+              "target": "0x395870"
+            },
+            {
+              "input": 19,
+              "target": "0x395870"
+            },
+            {
+              "input": 20,
+              "target": "0x395870"
+            },
+            {
+              "input": 21,
+              "target": "0x395870"
+            },
+            {
+              "input": 22,
+              "target": "0x395870"
+            },
+            {
+              "input": 23,
+              "target": "0x395870"
+            },
+            {
+              "input": 24,
+              "target": "0x395870"
+            },
+            {
+              "input": 25,
+              "target": "0x395870"
+            },
+            {
+              "input": 26,
+              "target": "0x395870"
+            },
+            {
+              "input": 27,
+              "target": "0x395870"
+            },
+            {
+              "input": 28,
+              "target": "0x395870"
+            },
+            {
+              "input": 29,
+              "target": "0x395870"
+            },
+            {
+              "input": 30,
+              "target": "0x395870"
+            },
+            {
+              "input": 31,
+              "target": "0x395870"
+            },
+            {
+              "input": 32,
+              "target": "0x395870"
+            },
+            {
+              "input": 33,
+              "target": "0x395870"
+            },
+            {
+              "input": 34,
+              "target": "0x395870"
+            },
+            {
+              "input": 35,
+              "target": "0x395870"
+            },
+            {
+              "input": 36,
+              "target": "0x395870"
+            },
+            {
+              "input": 37,
+              "target": "0x3956c0"
+            },
+            {
+              "input": 38,
+              "target": "0x395870"
+            },
+            {
+              "input": 39,
+              "target": "0x395870"
+            },
+            {
+              "input": 40,
+              "target": "0x395870"
+            },
+            {
+              "input": 41,
+              "target": "0x395870"
+            },
+            {
+              "input": 42,
+              "target": "0x39572c"
+            },
+            {
+              "input": 43,
+              "target": "0x395870"
+            },
+            {
+              "input": 44,
+              "target": "0x395870"
+            },
+            {
+              "input": 45,
+              "target": "0x395870"
+            },
+            {
+              "input": 46,
+              "target": "0x395870"
+            },
+            {
+              "input": 47,
+              "target": "0x395870"
+            },
+            {
+              "input": 48,
+              "target": "0x39574c"
+            },
+            {
+              "input": 49,
+              "target": "0x39574c"
+            },
+            {
+              "input": 50,
+              "target": "0x39574c"
+            },
+            {
+              "input": 51,
+              "target": "0x39574c"
+            },
+            {
+              "input": 52,
+              "target": "0x39574c"
+            },
+            {
+              "input": 53,
+              "target": "0x39574c"
+            },
+            {
+              "input": 54,
+              "target": "0x39574c"
+            },
+            {
+              "input": 55,
+              "target": "0x39574c"
+            },
+            {
+              "input": 56,
+              "target": "0x39574c"
+            },
+            {
+              "input": 57,
+              "target": "0x39574c"
+            },
+            {
+              "input": 58,
+              "target": "0x395870"
+            },
+            {
+              "input": 59,
+              "target": "0x395870"
+            },
+            {
+              "input": 60,
+              "target": "0x395870"
+            },
+            {
+              "input": 61,
+              "target": "0x395870"
+            },
+            {
+              "input": 62,
+              "target": "0x395870"
+            },
+            {
+              "input": 63,
+              "target": "0x395870"
+            },
+            {
+              "input": 64,
+              "target": "0x395870"
+            },
+            {
+              "input": 65,
+              "target": "0x395870"
+            },
+            {
+              "input": 66,
+              "target": "0x395870"
+            },
+            {
+              "input": 67,
+              "target": "0x395870"
+            },
+            {
+              "input": 68,
+              "target": "0x395760"
+            },
+            {
+              "input": 69,
+              "target": "0x3957cc"
+            },
+            {
+              "input": 70,
+              "target": "0x395870"
+            },
+            {
+              "input": 71,
+              "target": "0x3957cc"
+            },
+            {
+              "input": 72,
+              "target": "0x395870"
+            },
+            {
+              "input": 73,
+              "target": "0x395870"
+            },
+            {
+              "input": 74,
+              "target": "0x395870"
+            },
+            {
+              "input": 75,
+              "target": "0x395870"
+            },
+            {
+              "input": 76,
+              "target": "0x39573c"
+            },
+            {
+              "input": 77,
+              "target": "0x395870"
+            },
+            {
+              "input": 78,
+              "target": "0x395870"
+            },
+            {
+              "input": 79,
+              "target": "0x39578c"
+            },
+            {
+              "input": 80,
+              "target": "0x395870"
+            },
+            {
+              "input": 81,
+              "target": "0x395870"
+            },
+            {
+              "input": 82,
+              "target": "0x395870"
+            },
+            {
+              "input": 83,
+              "target": "0x395870"
+            },
+            {
+              "input": 84,
+              "target": "0x395870"
+            },
+            {
+              "input": 85,
+              "target": "0x395870"
+            },
+            {
+              "input": 86,
+              "target": "0x395870"
+            },
+            {
+              "input": 87,
+              "target": "0x395870"
+            },
+            {
+              "input": 88,
+              "target": "0x3957c0"
+            },
+            {
+              "input": 89,
+              "target": "0x395870"
+            },
+            {
+              "input": 90,
+              "target": "0x395870"
+            },
+            {
+              "input": 91,
+              "target": "0x3957dc"
+            },
+            {
+              "input": 92,
+              "target": "0x395870"
+            },
+            {
+              "input": 93,
+              "target": "0x395870"
+            },
+            {
+              "input": 94,
+              "target": "0x395870"
+            },
+            {
+              "input": 95,
+              "target": "0x395870"
+            },
+            {
+              "input": 96,
+              "target": "0x395870"
+            },
+            {
+              "input": 97,
+              "target": "0x395870"
+            },
+            {
+              "input": 98,
+              "target": "0x395870"
+            },
+            {
+              "input": 99,
+              "target": "0x3957f8"
+            },
+            {
+              "input": 100,
+              "target": "0x395764"
+            },
+            {
+              "input": 101,
+              "target": "0x3957cc"
+            },
+            {
+              "input": 102,
+              "target": "0x3957cc"
+            },
+            {
+              "input": 103,
+              "target": "0x3957cc"
+            },
+            {
+              "input": 104,
+              "target": "0x395744"
+            },
+            {
+              "input": 105,
+              "target": "0x395774"
+            },
+            {
+              "input": 106,
+              "target": "0x395870"
+            },
+            {
+              "input": 107,
+              "target": "0x395870"
+            },
+            {
+              "input": 108,
+              "target": "0x395734"
+            },
+            {
+              "input": 109,
+              "target": "0x395870"
+            },
+            {
+              "input": 110,
+              "target": "0x395820"
+            },
+            {
+              "input": 111,
+              "target": "0x395790"
+            },
+            {
+              "input": 112,
+              "target": "0x395804"
+            },
+            {
+              "input": 113,
+              "target": "0x395870"
+            },
+            {
+              "input": 114,
+              "target": "0x395870"
+            },
+            {
+              "input": 115,
+              "target": "0x3957d4"
+            },
+            {
+              "input": 116,
+              "target": "0x395870"
+            },
+            {
+              "input": 117,
+              "target": "0x3957a8"
+            },
+            {
+              "input": 118,
+              "target": "0x395870"
+            },
+            {
+              "input": 119,
+              "target": "0x395870"
+            },
+            {
+              "input": 120,
+              "target": "0x3957c0"
+            }
+          ],
+          "case_groups": {
+            "0x3956c0": [
+              37
+            ],
+            "0x39572c": [
+              42
+            ],
+            "0x395734": [
+              108
+            ],
+            "0x39573c": [
+              76
+            ],
+            "0x395744": [
+              104
+            ],
+            "0x39574c": [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57
+            ],
+            "0x395760": [
+              68
+            ],
+            "0x395764": [
+              100
+            ],
+            "0x395774": [
+              105
+            ],
+            "0x39578c": [
+              79
+            ],
+            "0x395790": [
+              111
+            ],
+            "0x3957a8": [
+              117
+            ],
+            "0x3957c0": [
+              88,
+              120
+            ],
+            "0x3957cc": [
+              69,
+              71,
+              101,
+              102,
+              103
+            ],
+            "0x3957d4": [
+              115
+            ],
+            "0x3957dc": [
+              91
+            ],
+            "0x3957f8": [
+              99
+            ],
+            "0x395804": [
+              112
+            ],
+            "0x395820": [
+              110
+            ],
+            "0x395868": [
+              0
+            ]
+          },
+          "default_target": "0x395870"
+        },
+        {
+          "name": "conversion",
+          "address": "0x456450",
+          "size": 20,
+          "original_sha256": "ff098167dde33842a512fe236219e8591019b4c6751ea0a2ae5ce3852839dfdc",
+          "character_bias": 0,
+          "entries": [
+            {
+              "input": 0,
+              "target": "0x395960"
+            },
+            {
+              "input": 1,
+              "target": "0x395a04"
+            },
+            {
+              "input": 2,
+              "target": "0x395b10"
+            },
+            {
+              "input": 3,
+              "target": "0x395c1c"
+            },
+            {
+              "input": 4,
+              "target": "0x395e54"
+            }
+          ],
+          "case_groups": {
+            "0x395960": [
+              0
+            ],
+            "0x395a04": [
+              1
+            ],
+            "0x395b10": [
+              2
+            ],
+            "0x395c1c": [
+              3
+            ],
+            "0x395e54": [
+              4
+            ]
+          },
+          "default_target": null
+        },
+        {
+          "name": "integer",
+          "address": "0x456470",
+          "size": 312,
+          "original_sha256": "26794ad010e1059ff333b1559beddc584aab1b1e3badb03b79453e808cf47125",
+          "character_bias": 43,
+          "entries": [
+            {
+              "input": 43,
+              "target": "0x395cf4"
+            },
+            {
+              "input": 44,
+              "target": "0x395d68"
+            },
+            {
+              "input": 45,
+              "target": "0x395cf4"
+            },
+            {
+              "input": 46,
+              "target": "0x395d68"
+            },
+            {
+              "input": 47,
+              "target": "0x395d68"
+            },
+            {
+              "input": 48,
+              "target": "0x395c74"
+            },
+            {
+              "input": 49,
+              "target": "0x395c98"
+            },
+            {
+              "input": 50,
+              "target": "0x395c98"
+            },
+            {
+              "input": 51,
+              "target": "0x395c98"
+            },
+            {
+              "input": 52,
+              "target": "0x395c98"
+            },
+            {
+              "input": 53,
+              "target": "0x395c98"
+            },
+            {
+              "input": 54,
+              "target": "0x395c98"
+            },
+            {
+              "input": 55,
+              "target": "0x395c98"
+            },
+            {
+              "input": 56,
+              "target": "0x395cb8"
+            },
+            {
+              "input": 57,
+              "target": "0x395cb8"
+            },
+            {
+              "input": 58,
+              "target": "0x395d68"
+            },
+            {
+              "input": 59,
+              "target": "0x395d68"
+            },
+            {
+              "input": 60,
+              "target": "0x395d68"
+            },
+            {
+              "input": 61,
+              "target": "0x395d68"
+            },
+            {
+              "input": 62,
+              "target": "0x395d68"
+            },
+            {
+              "input": 63,
+              "target": "0x395d68"
+            },
+            {
+              "input": 64,
+              "target": "0x395d68"
+            },
+            {
+              "input": 65,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 66,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 67,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 68,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 69,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 70,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 71,
+              "target": "0x395d68"
+            },
+            {
+              "input": 72,
+              "target": "0x395d68"
+            },
+            {
+              "input": 73,
+              "target": "0x395d68"
+            },
+            {
+              "input": 74,
+              "target": "0x395d68"
+            },
+            {
+              "input": 75,
+              "target": "0x395d68"
+            },
+            {
+              "input": 76,
+              "target": "0x395d68"
+            },
+            {
+              "input": 77,
+              "target": "0x395d68"
+            },
+            {
+              "input": 78,
+              "target": "0x395d68"
+            },
+            {
+              "input": 79,
+              "target": "0x395d68"
+            },
+            {
+              "input": 80,
+              "target": "0x395d68"
+            },
+            {
+              "input": 81,
+              "target": "0x395d68"
+            },
+            {
+              "input": 82,
+              "target": "0x395d68"
+            },
+            {
+              "input": 83,
+              "target": "0x395d68"
+            },
+            {
+              "input": 84,
+              "target": "0x395d68"
+            },
+            {
+              "input": 85,
+              "target": "0x395d68"
+            },
+            {
+              "input": 86,
+              "target": "0x395d68"
+            },
+            {
+              "input": 87,
+              "target": "0x395d68"
+            },
+            {
+              "input": 88,
+              "target": "0x395d08"
+            },
+            {
+              "input": 89,
+              "target": "0x395d68"
+            },
+            {
+              "input": 90,
+              "target": "0x395d68"
+            },
+            {
+              "input": 91,
+              "target": "0x395d68"
+            },
+            {
+              "input": 92,
+              "target": "0x395d68"
+            },
+            {
+              "input": 93,
+              "target": "0x395d68"
+            },
+            {
+              "input": 94,
+              "target": "0x395d68"
+            },
+            {
+              "input": 95,
+              "target": "0x395d68"
+            },
+            {
+              "input": 96,
+              "target": "0x395d68"
+            },
+            {
+              "input": 97,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 98,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 99,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 100,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 101,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 102,
+              "target": "0x395ce0"
+            },
+            {
+              "input": 103,
+              "target": "0x395d68"
+            },
+            {
+              "input": 104,
+              "target": "0x395d68"
+            },
+            {
+              "input": 105,
+              "target": "0x395d68"
+            },
+            {
+              "input": 106,
+              "target": "0x395d68"
+            },
+            {
+              "input": 107,
+              "target": "0x395d68"
+            },
+            {
+              "input": 108,
+              "target": "0x395d68"
+            },
+            {
+              "input": 109,
+              "target": "0x395d68"
+            },
+            {
+              "input": 110,
+              "target": "0x395d68"
+            },
+            {
+              "input": 111,
+              "target": "0x395d68"
+            },
+            {
+              "input": 112,
+              "target": "0x395d68"
+            },
+            {
+              "input": 113,
+              "target": "0x395d68"
+            },
+            {
+              "input": 114,
+              "target": "0x395d68"
+            },
+            {
+              "input": 115,
+              "target": "0x395d68"
+            },
+            {
+              "input": 116,
+              "target": "0x395d68"
+            },
+            {
+              "input": 117,
+              "target": "0x395d68"
+            },
+            {
+              "input": 118,
+              "target": "0x395d68"
+            },
+            {
+              "input": 119,
+              "target": "0x395d68"
+            },
+            {
+              "input": 120,
+              "target": "0x395d08"
+            }
+          ],
+          "case_groups": {
+            "0x395c74": [
+              48
+            ],
+            "0x395c98": [
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            "0x395cb8": [
+              56,
+              57
+            ],
+            "0x395ce0": [
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102
+            ],
+            "0x395cf4": [
+              43,
+              45
+            ],
+            "0x395d08": [
+              88,
+              120
+            ]
+          },
+          "default_target": "0x395d68"
+        },
+        {
+          "name": "float",
+          "address": "0x4565b0",
+          "size": 236,
+          "original_sha256": "c72876505daea71353440bae1280e2d42dd05db7710854eeda0c0430228032c4",
+          "character_bias": 43,
+          "entries": [
+            {
+              "input": 43,
+              "target": "0x395eb8"
+            },
+            {
+              "input": 44,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 45,
+              "target": "0x395eb8"
+            },
+            {
+              "input": 46,
+              "target": "0x395ecc"
+            },
+            {
+              "input": 47,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 48,
+              "target": "0x395eac"
+            },
+            {
+              "input": 49,
+              "target": "0x395eac"
+            },
+            {
+              "input": 50,
+              "target": "0x395eac"
+            },
+            {
+              "input": 51,
+              "target": "0x395eac"
+            },
+            {
+              "input": 52,
+              "target": "0x395eac"
+            },
+            {
+              "input": 53,
+              "target": "0x395eac"
+            },
+            {
+              "input": 54,
+              "target": "0x395eac"
+            },
+            {
+              "input": 55,
+              "target": "0x395eac"
+            },
+            {
+              "input": 56,
+              "target": "0x395eac"
+            },
+            {
+              "input": 57,
+              "target": "0x395eac"
+            },
+            {
+              "input": 58,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 59,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 60,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 61,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 62,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 63,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 64,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 65,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 66,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 67,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 68,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 69,
+              "target": "0x395ee0"
+            },
+            {
+              "input": 70,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 71,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 72,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 73,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 74,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 75,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 76,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 77,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 78,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 79,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 80,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 81,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 82,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 83,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 84,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 85,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 86,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 87,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 88,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 89,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 90,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 91,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 92,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 93,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 94,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 95,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 96,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 97,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 98,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 99,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 100,
+              "target": "0x395f3c"
+            },
+            {
+              "input": 101,
+              "target": "0x395ee0"
+            }
+          ],
+          "case_groups": {
+            "0x395eac": [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57
+            ],
+            "0x395eb8": [
+              43,
+              45
+            ],
+            "0x395ecc": [
+              46
+            ],
+            "0x395ee0": [
+              69,
+              101
+            ]
+          },
+          "default_target": "0x395f3c"
+        }
+      ],
+      "original_basefix": {
+        "address": "0x456230",
+        "size": 34,
+        "values": [
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "original_sha256": "dd6ca879828b24ddb6c171a3acd1e238dc0080e3b9f466c4b11c39cdc402a413"
+      },
+      "abi_proof": {
+        "long_bytes": 8,
+        "int_bytes": 4,
+        "short_bytes": 2,
+        "pointer_bytes": 4,
+        "double_bytes": 8,
+        "FILE_bytes": 88,
+        "variadic_pointer_slot_bytes": 8,
+        "evidence": "Both authentic compiler profiles independently passed sizeof static assertions; original LONG integer/%n SD versus ordinary SW/SHORT SH and floating LONG/LONGDBL SD prove target layout. Existing FILE field-offset proof retained by sscanf wrapper."
+      },
+      "evidence": "Complete source identity includes multibyte format traversal and persistent state (-DMB_CAPABLE), signed format/classification bytes, suppression/length/width flags, all five conversion categories, NUMBUF350 cap349,17 basefix values, V7 scanset helper, whitespace/literal/refill/ungetc behavior, integer/float result widths and assignment/read counts. All four complete switch tables and original pointer bases are proven. Actual GNU ld links the entire generated readonly1136B table at its original VMA; full linked code and full table differ, so reconstructed with zero code/data matching credit.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DMB_CAPABLE"
+          ],
+          "identical": false,
+          "expected_size": 2832,
+          "compiled_size": 2784,
+          "different_bytes": 2326,
+          "first_different_offsets": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            19,
+            21
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "596133af5a46b17597fce2760fe3835701a12fe65bbff6751945e7a2950144c9",
+          "compiled_sha256": "1d4a19d810958e96d0dd9e18ce82768764616c91e1b62cdf8731cf93a65c5538",
+          "code_identical": false,
+          "generated_data_identical": false,
+          "mapped_codegen_readonly": [
+            {
+              "name": ".rodata",
+              "output_section": ".george_generated_rodata_0",
+              "address": 4547120,
+              "size": 1136,
+              "sha256": "927dcfccee818adbfa8a13127ba0fb44f63c076e3e9a69dc5eb881087fb62098",
+              "identical": false,
+              "literal_byte_count": 84,
+              "original_sha256": "c8183412d76019600c6dc08ceeec9eaf8eb48b295d02aab2c08c995934f34e59",
+              "file_offset": 3502640,
+              "relocation_count": 263
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "__sccl",
+      "address": "0x396068",
+      "file_offset": "0x297068",
+      "size": 240,
+      "source": "src/runtime/stdio/vfscanf.c",
+      "original_sha256": "2b185bea21be6ac428875cfe2fb93fc835d440043e0a5bb4b2c108f3037c4ce0",
+      "upstream_source_sha256": "824bad6c45dd382a66a3e5f0cdc0d770dd68d4e39cbe89359abc0bac7afcce57",
+      "source_kind": "c",
+      "compiled_symbol": "__sccl",
+      "status": "reconstructed",
+      "upstream_symbol": "__sccl",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/stdio/vfscanf.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/vfscanf.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim in vfscanf.c/local.h/floatio.h. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DMB_CAPABLE"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/vfscanf.c",
+          "sha256": "824bad6c45dd382a66a3e5f0cdc0d770dd68d4e39cbe89359abc0bac7afcce57",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/vfscanf.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/vfscanf.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/ctype.h",
+          "sha256": "ca9f1c974e36f74bdc490684d0c9dea5afa806e783f769e2fd2d438b6c2d0d3a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers, source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original GNU notices and applicable header/runtime exceptions remain in the complete corresponding source package."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in official public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from the existing hash-verified bootstrap archive; source pin is newlib1.8.1 while these public system headers are explicitly newlib1.10.0."
+        },
+        {
+          "path": "src/runtime/stdio/floatio.h",
+          "sha256": "ceb13c8d94569d2ea6eeaecdd2953be30c003222733808e685118aaf12269045",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/floatio.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/floatio.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x3957e8"
+        ],
+        "return_address": "0x396150",
+        "delay_address": "0x396154"
+      },
+      "internal_direct_calls": [],
+      "internal_branches": [
+        {
+          "pc": "0x396070",
+          "target": "0x396088"
+        },
+        {
+          "pc": "0x396080",
+          "target": "0x39608c"
+        },
+        {
+          "pc": "0x3960a8",
+          "target": "0x396098"
+        },
+        {
+          "pc": "0x3960b0",
+          "target": "0x3960c0"
+        },
+        {
+          "pc": "0x3960d8",
+          "target": "0x39610c"
+        },
+        {
+          "pc": "0x3960e4",
+          "target": "0x3960fc"
+        },
+        {
+          "pc": "0x3960ec",
+          "target": "0x3960b8"
+        },
+        {
+          "pc": "0x3960f4",
+          "target": "0x3960cc"
+        },
+        {
+          "pc": "0x3960fc",
+          "target": "0x396150"
+        },
+        {
+          "pc": "0x396104",
+          "target": "0x3960cc"
+        },
+        {
+          "pc": "0x396114",
+          "target": "0x396124"
+        },
+        {
+          "pc": "0x39611c",
+          "target": "0x396130"
+        },
+        {
+          "pc": "0x396124",
+          "target": "0x3960c8"
+        },
+        {
+          "pc": "0x396140",
+          "target": "0x396130"
+        },
+        {
+          "pc": "0x396148",
+          "target": "0x3960d4"
+        }
+      ],
+      "boundary_evidence": "Independent complete raw instruction interval includes final JR and delay, excludes neighboring functions/padding. __svfscanf395558..396068 is2832B; __sccl396068..396158 is240B. Authentic separately compiled function symbols and original direct entry calls corroborate boundaries.",
+      "independent_review": "Root reviewed all708+60 original instructions, complete pinned vfscanf/floatio/local source, source/dependency hashes,21 original calls, original entry/branch intervals, six pointer pairs, all263 switch targets/basefix/84 literal+padding bytes, genuine sizeof(long)8/pointer4 and fresh complete code/table links before registration.",
+      "evidence": "All60 original instructions agree with unchanged __sccl:256-byte table initialization, optional inversion, first closing bracket/literal hyphen handling, signed format bytes, earlyNUL returning fmt-1, V7 chained-range expansion including equal endpoint behavior, final close-bracket/return cursor. Original direct scanner JAL proves entry; complete actual linked body differs and remains reconstructed.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DMB_CAPABLE"
+          ],
+          "identical": false,
+          "expected_size": 240,
+          "compiled_size": 260,
+          "different_bytes": 179,
+          "first_different_offsets": [
+            2,
+            10,
+            18,
+            22,
+            33,
+            38,
+            50,
+            54
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2b185bea21be6ac428875cfe2fb93fc835d440043e0a5bb4b2c108f3037c4ce0",
+          "compiled_sha256": "70a65843b897e35415bea97e365a2dc5f3bdf4e0cc83ed131b267da369fdc6fd"
+        }
+      ]
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

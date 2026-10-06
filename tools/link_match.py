@@ -5,6 +5,9 @@ read-only mappings require exact expected bytes, their SHA-256, and fixed retail
 addresses; the caller separately proves those against the original executable.
 Separate local NOBITS mappings require complete zero-initialized section
 geometry; they never permit initialized writable data or relax read-only guards.
+Distinct generated readonly mappings permit only genuine function-local case
+pointers and unchanged literal bytes. Their complete linked data is compared
+without masking; any mismatch is reported for reconstructed candidates only.
 No instruction or relocation bytes are masked, and unresolved references fail.
 """
 
@@ -207,6 +210,93 @@ def _mapped_addends(relocations, symbols, mapped, code):
         raise LinkError("Unpaired HI16 relocation to mapped read-only data")
 
 
+def _generated_sections(values, elf, code_index, code_address, code_size, symbols,
+                        symtab_index, occupied_ranges):
+    """Keep authentic local jump tables; never infer a data or code match."""
+    if values is None:
+        values = {}
+    if not isinstance(values, dict):
+        raise LinkError("Generated readonly mappings must be a dictionary")
+    result, ranges = {}, list(occupied_ranges)
+    for name, proof in values.items():
+        if not isinstance(name, str) or not SECTION.fullmatch(name):
+            raise LinkError(f"Unsupported generated readonly section name: {name!r}")
+        required = {"address", "expected_bytes", "expected_sha256", "original_function_size"}
+        if not isinstance(proof, dict) or set(proof) != required:
+            raise LinkError("Generated readonly requires complete byte/hash/address and original function extent proof")
+        address = _address(proof["address"], f"Generated readonly {name} address")
+        expected, digest = proof["expected_bytes"], proof["expected_sha256"]
+        original_size = proof["original_function_size"]
+        if (type(expected) is not bytes or not expected or not isinstance(digest, str)
+                or not SHA256.fullmatch(digest) or hashlib.sha256(expected).hexdigest() != digest
+                or type(original_size) is not int or original_size <= 0 or original_size & 3
+                or code_address + original_size > 0x100000000):
+            raise LinkError("Invalid generated readonly byte/hash/original function proof")
+        matches = [(index, section) for index, section in enumerate(elf.iter_sections()) if section.name == name]
+        if len(matches) != 1:
+            raise LinkError(f"Missing or ambiguous generated readonly input section: {name}")
+        index, section = matches[0]
+        if (section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] != 2
+                or section["sh_addr"] != 0 or section["sh_entsize"] != 0
+                or section["sh_size"] != len(expected)):
+            raise LinkError("Generated readonly requires a whole plain allocated readonly PROGBITS section")
+        alignment = section["sh_addralign"]
+        if alignment < 4 or alignment & (alignment - 1) or address % alignment:
+            raise LinkError("Generated readonly address conflicts with complete section alignment")
+        if address + len(expected) > 0x100000000:
+            raise LinkError("Generated readonly exceeds32-bit address space")
+        tables = [item for item in elf.iter_sections() if isinstance(item, RelocationSection)
+                  and item["sh_info"] == index and item["sh_size"]]
+        if len(tables) != 1:
+            raise LinkError("Generated readonly requires one nonempty relocation table")
+        table = tables[0]
+        if (table.is_RELA() or table["sh_link"] != symtab_index or table["sh_entsize"] != 8
+                or table["sh_size"] % 8):
+            raise LinkError("Unsupported generated readonly REL table or symbol-table association")
+        data, relocations, positions = section.data(), [], set()
+        for relocation in table.iter_relocations():
+            offset, kind, symbol_index = relocation["r_offset"], relocation["r_info_type"], relocation["r_info_sym"]
+            if kind != 2:
+                raise LinkError("Generated readonly permits only R_MIPS_32 entries")
+            if offset & 3 or offset + 4 > len(data) or symbol_index >= len(symbols) or offset in positions:
+                raise LinkError("Generated readonly relocation must be unique, aligned and bounded")
+            positions.add(offset)
+            item = symbols[symbol_index]
+            symbol_type, value = item["st_info"]["type"], item["st_value"]
+            if (item["st_shndx"] != code_index or item["st_size"] != 0
+                    or symbol_type not in ("STT_SECTION", "STT_NOTYPE")
+                    or item["st_info"]["bind"] != "STB_LOCAL"
+                    or value >= code_size or value & 3
+                    or (symbol_type == "STT_SECTION" and value != 0)):
+                raise LinkError("Generated readonly target must be a local label in the selected function")
+            word = struct.unpack_from("<I", data, offset)[0]
+            addend = word - (0x100000000 if word & 0x80000000 else 0)
+            relative = value + addend
+            if not 0 < relative < code_size or relative & 3:
+                raise LinkError("Generated readonly addend escapes the selected function or names padding")
+            original_pointer = struct.unpack_from("<I", expected, offset)[0]
+            if (original_pointer & 3 or not code_address < original_pointer < code_address + original_size):
+                raise LinkError("Original generated-table pointer is outside the complete original function")
+            relocations.append({"offset": offset, "type": kind, "symbol": item.name,
+                                "symbol_index": symbol_index, "addend": addend, "relative_offset": relative,
+                                "linked_target": code_address + relative, "original_target": original_pointer})
+        pointer_bytes = {byte for position in positions for byte in range(position, position + 4)}
+        # This checks literal inputs only. No pointer byte is masked when the
+        # complete real linked data is later compared or any match is awarded.
+        if any(data[byte] != expected[byte] for byte in range(len(data)) if byte not in pointer_bytes):
+            raise LinkError("Generated readonly unrelocated literal/alignment byte differs from original")
+        ranges.append((address, address + len(data), name))
+        result[index] = {"name": name, "address": address, "size": len(data), "alignment": alignment,
+                         "data": data, "expected_bytes": expected, "expected_sha256": digest,
+                         "input_sha256": hashlib.sha256(data).hexdigest(), "input_relocations": relocations,
+                         "literal_byte_count": len(data) - 4 * len(positions),
+                         "output_section": f".george_generated_rodata_{len(result)}"}
+    for previous, current in zip(sorted(ranges), sorted(ranges)[1:]):
+        if previous[1] > current[0]:
+            raise LinkError(f"Generated readonly address overlap: {previous[2]} and {current[2]}")
+    return result
+
+
 def _nobits_sections(values, elf, occupied_ranges):
     """Retain only complete explicitly proven compiler-local zero storage."""
     if values is None:
@@ -250,7 +340,8 @@ def _nobits_sections(values, elf, occupied_ranges):
     return result
 
 
-def _inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None):
+def _inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None,
+                      mapped_codegen_readonly=None):
     """Validate a target and plan symbol-only normalization, without invoking ld.
 
     Defined functions in other dedicated sections are changed to SHN_ABS in a
@@ -304,6 +395,12 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
         readonly = dict(mapped)
         occupied = [(address, address + section["sh_size"], "selected code section")]
         occupied.extend((item["address"], item["address"] + item["size"], item["name"]) for item in mapped.values())
+        generated = _generated_sections(mapped_codegen_readonly, elf, section_index, address, size, symbols,
+                                        elf.get_section_index(".symtab"), occupied)
+        if set(generated) & set(mapped):
+            raise LinkError("Generated and exact-original readonly mappings cannot share an input section")
+        mapped.update(generated)
+        occupied.extend((item["address"], item["address"] + item["size"], item["name"]) for item in generated.values())
         nobits = _nobits_sections(mapped_nobits, elf, occupied)
         mapped.update(nobits)
         used_mappings = set()
@@ -430,13 +527,16 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
                 "object_sha256": object_hash,
                 "symbol_table_offset": symtab["sh_offset"], "symbol_patches": patches,
                 "assignments": assignments, "resolved_bindings": resolved, "input_relocations": relocations,
-                "mapped_sections": list(readonly.values()), "mapped_nobits": list(nobits.values())}
+                "mapped_sections": list(readonly.values()), "mapped_nobits": list(nobits.values()),
+                "mapped_codegen_readonly": list(generated.values())}
 
 
-def inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None):
+def inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None,
+                     mapped_codegen_readonly=None):
     """Plan strict original-address linking; malformed ELF input is rejected."""
     try:
-        return _inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits)
+        return _inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits,
+                                 mapped_codegen_readonly)
     except (ELFError, struct.error) as error:
         raise LinkError(f"Malformed input ELF: {error}") from error
 
@@ -456,7 +556,7 @@ def _linker(binutils):
 
 
 def link_function(object_path, symbol, address, bindings, output_dir, binutils=DEFAULT_BINUTILS,
-                  mapped_sections=None, mapped_nobits=None):
+                  mapped_sections=None, mapped_nobits=None, mapped_codegen_readonly=None):
     """Return exact linked bytes and audit artifacts, or raise LinkError.
 
     The return dict contains code, remaining_relocations, linked_path,
@@ -472,9 +572,15 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     Separate mapped_nobits={section_name:{address,size,zero_sha256}} retains a
     complete compiler-local zero-initialized NOBITS section with GNU NOLOAD.
     The caller independently proves its original memory geometry and bindings.
+    Distinct mapped_codegen_readonly requires whole original readonly geometry,
+    byte/hash proof and original_function_size. Only real local R_MIPS_32 case
+    pointers inside this selected function may differ at input; every literal
+    byte must agree. Actual ld output is returned with complete data equality,
+    and the caller must gate a function match on both full code and data.
     """
     object_path = Path(object_path).resolve()
-    plan = inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits)
+    plan = inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits,
+                            mapped_codegen_readonly)
     linker = _linker(binutils)
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -496,6 +602,8 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     lines.extend(["SECTIONS {", f'  .text 0x{address:08X} : {{ KEEP(*("{plan["section"]}")) }}'])
     for mapping in plan["mapped_sections"]:
         lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
+    for mapping in plan["mapped_codegen_readonly"]:
+        lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
     for mapping in plan["mapped_nobits"]:
         lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} (NOLOAD) : {{ KEEP(*("{mapping["name"]}")) }}')
     lines.extend(["  /DISCARD/ : { *(*) }", "}"])
@@ -506,7 +614,7 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     process = subprocess.run(command, capture_output=True, text=True)
     if process.returncode:
         raise LinkError("GNU PS2 link failed:\n" + (process.stderr + process.stdout)[-6000:])
-    remaining, linked_mappings, linked_nobits = [], [], []
+    remaining, linked_mappings, linked_nobits, linked_generated = [], [], [], []
     with linked.open("rb") as stream:
         elf = ELFFile(stream)
         _format(elf, "ET_EXEC")
@@ -536,7 +644,26 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
                     or section["sh_addralign"] != mapping["alignment"] or section["sh_entsize"] != 0):
                 raise LinkError(f"Linked NOBITS storage differs from complete original proof: {mapping['name']}")
             linked_nobits.append(dict(mapping))
+        for mapping in plan["mapped_codegen_readonly"]:
+            section = elf.get_section_by_name(mapping["output_section"])
+            if (section is None or section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] != 2
+                    or section["sh_addr"] != mapping["address"] or section["sh_size"] != mapping["size"]
+                    or section["sh_addralign"] != mapping["alignment"] or section["sh_entsize"] != 0):
+                raise LinkError("Linked generated readonly geometry changed")
+            actual = section.data()
+            pointer_positions = set()
+            for relocation in mapping["input_relocations"]:
+                offset = relocation["offset"]
+                if struct.unpack_from("<I", actual, offset)[0] != relocation["linked_target"]:
+                    raise LinkError("Actual ld did not resolve a generated pointer to its genuine local label")
+                pointer_positions.update(range(offset, offset + 4))
+            if any(actual[byte] != mapping["expected_bytes"][byte] for byte in range(len(actual))
+                   if byte not in pointer_positions):
+                raise LinkError("Linked generated readonly literal byte changed")
+            linked_generated.append({**mapping, "data": actual, "sha256": hashlib.sha256(actual).hexdigest(),
+                                     "identical": actual == mapping["expected_bytes"]})
         expected_allocated = {".text", *(mapping["output_section"] for mapping in plan["mapped_sections"]),
+                              *(mapping["output_section"] for mapping in plan["mapped_codegen_readonly"]),
                               *(mapping["output_section"] for mapping in plan["mapped_nobits"])}
         if any(section["sh_flags"] & 2 and section.name not in expected_allocated for section in elf.iter_sections()):
             raise LinkError("Unexpected allocated output section")
@@ -550,4 +677,5 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     return {"code": code, "remaining_relocations": remaining, "linked_path": linked, "script_path": script,
             "object_path": normalized, "address": address, "size": plan["size"],
             "resolved_bindings": plan["resolved_bindings"], "input_relocations": plan["input_relocations"],
-            "mapped_sections": linked_mappings, "mapped_nobits": linked_nobits}
+            "mapped_sections": linked_mappings, "mapped_nobits": linked_nobits,
+            "mapped_codegen_readonly": linked_generated}

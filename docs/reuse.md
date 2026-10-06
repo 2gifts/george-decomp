@@ -873,3 +873,64 @@ floor pointer pairs and whole readonly object, the scanner's callback store
 and both authentic `FILE` layouts before registration. All ten independent
 full links have no unresolved references. Exact runtime totals are now 38 C
 functions / 4,828 bytes and three separate assembly functions / 572 bytes.
+
+The complete scanner core and scanset helper now reuse unchanged public
+[`vfscanf.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/vfscanf.c),
+SHA256 `824bad6c45dd382a66a3e5f0cdc0d770dd68d4e39cbe89359abc0bac7afcce57`.
+The original `__svfscanf` interval is `0x00395558..0x00396068`: 2,832 bytes,
+including the terminal return and its delay instruction. The independently
+entered `__sccl` interval is `0x00396068..0x00396158`: 240 bytes. The pair
+recovers 3,072 original code bytes, with both functions reconstructed. Their
+selected genuine GCC2.9 linked bodies have 2,784 and 260 bytes respectively;
+neither full body matches the original.
+
+The full 708-instruction scanner agrees with the upstream multibyte format
+traversal and persistent state enabled by `-DMB_CAPABLE`, signed format and
+classification bytes, suppression/length/width flags, whitespace and literal
+handling, all five conversion categories, refill/ungetc calls, assignment/read
+counts and the 350-byte numeric buffer with its 349-character cap. The
+original integer conversion and `%n` paths store 64-bit `long` values with
+`SD`, 32-bit integers/pointers with `SW`, and shorts with `SH`. Floating
+`%l`/`%L` stores use the original soft double result; the ordinary float path
+calls the already proven conversion helper. Both authentic compiler profiles
+independently passed `sizeof(long)==8`, pointer/int size 4, double size 8 and
+`FILE` size 88 checks. The full 60-instruction scanset helper agrees with
+the optional inversion, 256-byte initialization, closing-bracket and hyphen
+handling, signed format cursor, early NUL result and V7 chained-range rule.
+Genuine original direct calls establish both function entries.
+
+Six original `LUI`/`ADDIU` pairs establish the whole readonly scanner pool at
+`0x00456230`, size 1,136 bytes, SHA256
+`c8183412d76019600c6dc08ceeec9eaf8eb48b295d02aab2c08c995934f34e59`.
+It contains the complete 17-short base table, four switch tables with 263
+decoded original targets, and all intervening literal/alignment bytes.
+The explicitly opted-in
+[generated readonly linker path](scanner_linking.md) permits only actual
+compiler `R_MIPS_32` entries targeting proven labels strictly inside the
+selected complete function; every other byte must independently equal the
+original. The actual GNU linker places the entire source section at its
+original address. All 84 unrelocated bytes agree, while the complete linked
+table differs because its internal case labels differ. This earns no data
+identity or code-match credit, and the hybrid build retains the original
+scanner code/table until both complete comparisons pass.
+
+The unchanged private
+[`floatio.h`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/floatio.h)
+has SHA256 `ceb13c8d94569d2ea6eeaecdd2953be30c003222733808e685118aaf12269045`;
+the existing unchanged `local.h` is reused. Complete Berkeley 1990 notices
+remain in all three files. This product includes software developed by the
+University of California, Berkeley and its contributors.
+
+A fresh tracked-layout compiler dependency scan found the same 20 source and
+header files and hashes as the independently reviewed probe. The source and
+private headers retain their public newlib 1.8.1 Git pin, system headers retain
+the pinned PS2DEV archive's newlib 1.10.0 provenance, and GNU headers retain
+their separate compiler release provenance. Every dependency is guarded
+before compilation. Root independently reviewed all 768 original instructions,
+unchanged source/private headers, 21 original direct calls, entry/branch
+boundaries, six pointer pairs and their nonclobbering intervening shifts,
+all switch targets/base values/literal bytes and actual ABI checks, then
+reproduced both full linked comparisons before approving registration.
+The tracked-layout reproduction has zero unresolved relocations and exactly
+the same complete code/table hashes. Exact runtime totals remain 38 C
+functions / 4,828 bytes and three separate assembly functions / 572 bytes.

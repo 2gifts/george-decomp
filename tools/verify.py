@@ -142,6 +142,72 @@ def mapped_data(function, original, sections):
     return mappings
 
 
+def mapped_codegen_data(function, original, sections):
+    """Prove original readonly geometry and real code-derived table pointers.
+
+    This is distinct from exact-original mapped_data. Complete input literals
+    and real compiler-local R_MIPS_32 labels are checked by the linker planner;
+    actual whole output data still determines matching eligibility.
+    """
+    proofs = function.get("link_codegen_readonly", {})
+    if not isinstance(proofs, dict):
+        raise ValueError("Generated readonly proofs must be a dictionary")
+    mappings = {}
+    for name, proof in proofs.items():
+        required = {"file_offset", "size", "address", "original_sha256", "code_bindings"}
+        if not isinstance(proof, dict) or not required <= set(proof) or set(proof) - required - {"evidence"}:
+            raise ValueError("Generated readonly requires whole original geometry/hash and code pointer bindings")
+        base_proof = {key: proof[key] for key in ("file_offset", "size", "address", "original_sha256")}
+        mapping = mapped_data({"link_data": {name: base_proof}}, original, sections)[name]
+        address, size = mapping["address"], len(mapping["expected_bytes"])
+        function_offset, function_size = number(function["file_offset"]), number(function["size"])
+        function_address = number(function["address"])
+        if (any(type(value) is not int for value in (function_offset, function_size, function_address))
+                or function_offset < 0 or function_size <= 0 or function_size & 3
+                or function_offset + function_size > len(original)
+                or not 0 <= function_address <= 0xFFFFFFFF or function_address + function_size > 0x100000000):
+            raise ValueError("Invalid original function extent for generated readonly proof")
+        pointers = proof["code_bindings"]
+        if not isinstance(pointers, list) or not pointers:
+            raise ValueError("Generated readonly requires actual original code pointer bindings")
+        seen = set()
+        for pointer in pointers:
+            if not isinstance(pointer, dict) or set(pointer) != {"hi_offset", "lo_offset", "relative_offset"}:
+                raise ValueError("Unsupported generated readonly code binding proof")
+            hi, lo, relative = (number(pointer[key]) for key in ("hi_offset", "lo_offset", "relative_offset"))
+            if (any(type(value) is not int for value in (hi, lo, relative)) or hi & 3 or lo & 3
+                    or not 0 <= hi < lo <= function_size - 4 or lo - hi not in (4, 8)
+                    or not 0 <= relative < size or (hi, lo) in seen):
+                raise ValueError("Generated readonly code binding escapes whole function/data")
+            seen.add((hi, lo))
+            upper, lower = (struct.unpack_from("<I", original, function_offset + offset)[0] for offset in (hi, lo))
+            register = (upper >> 16) & 31
+            if (upper >> 26 != 15 or (upper >> 21) & 31 or register == 0
+                    or lower >> 26 != 9 or (lower >> 21) & 31 != register or (lower >> 16) & 31 == 0):
+                raise ValueError("Generated readonly binding must materialize a nonzero LUI/ADDIU pointer")
+            if lo - hi == 8:
+                middle = struct.unpack_from("<I", original, function_offset + hi + 4)[0]
+                if middle >> 26 != 0 or middle & 63 != 0 or (middle >> 21) & 31 or (middle >> 11) & 31 == register:
+                    raise ValueError("Generated readonly pointer pair has an intervening unsupported/clobbering instruction")
+            immediate = (lower & 0xFFFF) - (0x10000 if lower & 0x8000 else 0)
+            if (((upper & 0xFFFF) << 16) + immediate) & 0xFFFFFFFF != address + relative:
+                raise ValueError("Generated readonly original pointer binding disagrees with section offset")
+        mappings[name] = {**mapping, "original_function_size": function_size}
+    return mappings
+
+
+def gate_generated_comparison(comparison, mapping_reports):
+    """A whole code match alone cannot award a differing generated data table."""
+    result = dict(comparison)
+    if mapping_reports:
+        if any(type(mapping.get("identical")) is not bool for mapping in mapping_reports):
+            raise ValueError("Generated readonly comparison requires actual full-data equality")
+        result["code_identical"] = result["identical"]
+        result["generated_data_identical"] = all(mapping["identical"] for mapping in mapping_reports)
+        result["identical"] = result["code_identical"] and result["generated_data_identical"]
+    return result
+
+
 def mapped_bss(function, original, sections):
     """Prove zero storage from original NOBITS geometry and actual code pointers."""
     from link_match import MAX_NOBITS_SIZE
@@ -318,7 +384,7 @@ def main():
         setup = compiler_profiles[profile_name]
         profile = setup["profile"]
         use_linker = bool(function.get("link", False) or function.get("link_symbols")
-                          or function.get("link_data") or function.get("link_bss"))
+                          or function.get("link_data") or function.get("link_bss") or function.get("link_codegen_readonly"))
         chosen_flags = list(function.get("compile_flags", DEFAULT_FLAGS))
         if use_linker and "-ffunction-sections" not in chosen_flags:
             chosen_flags.append("-ffunction-sections")
@@ -349,13 +415,16 @@ def main():
         linked_path = None
         mapping_report = []
         bss_report = []
+        generated_report = []
         if use_linker:
             from link_match import link_function
             mappings = mapped_data(function, original, readonly_sections)
             bss_mappings = mapped_bss(function, original, nobits_sections)
+            generated_mappings = mapped_codegen_data(function, original, readonly_sections)
             linked = link_function(ROOT / compiled_paths[key], symbol, number(function["address"]),
                                    symbol_bindings(function), ROOT / "build/linked" / function["name"],
-                                   mapped_sections=mappings, mapped_nobits=bss_mappings)
+                                   mapped_sections=mappings, mapped_nobits=bss_mappings,
+                                   mapped_codegen_readonly=generated_mappings)
             for mapped in linked["mapped_sections"]:
                 expected_mapping = mappings[mapped["name"]]
                 if (mapped["data"] != expected_mapping["expected_bytes"]
@@ -368,9 +437,21 @@ def main():
                 if any(mapped[key] != expected_mapping[key] for key in ("address", "size", "zero_sha256")):
                     raise ValueError(f"Linked NOBITS geometry changed: {mapped['name']}")
                 bss_report.append({key: mapped[key] for key in ("name", "address", "size", "zero_sha256")})
+            for mapped in linked["mapped_codegen_readonly"]:
+                expected_mapping = generated_mappings[mapped["name"]]
+                if (mapped["address"] != expected_mapping["address"]
+                        or mapped["expected_sha256"] != expected_mapping["expected_sha256"]
+                        or mapped["size"] != len(expected_mapping["expected_bytes"])
+                        or mapped["sha256"] != hashlib.sha256(mapped["data"]).hexdigest()
+                        or mapped["identical"] != (mapped["data"] == expected_mapping["expected_bytes"])):
+                    raise ValueError("Generated readonly full output proof changed")
+                generated_report.append({**{key: mapped[key] for key in ("name", "output_section", "address", "size", "sha256", "identical", "literal_byte_count")},
+                                         "original_sha256": expected_mapping["expected_sha256"],
+                                         "file_offset": number(function["link_codegen_readonly"][mapped["name"]]["file_offset"]),
+                                         "relocation_count": len(mapped["input_relocations"])})
             actual, relocations = linked["code"], linked["remaining_relocations"]
             linked_path = linked["linked_path"].relative_to(ROOT).as_posix()
-        comparison = compare_function(expected, actual, relocations)
+        comparison = gate_generated_comparison(compare_function(expected, actual, relocations), generated_report)
         # A recorded match is a regression gate; reconstructed entries may differ.
         if function["status"] in ("matched", "reused_matching_assembly") and not comparison["identical"]:
             raise ValueError(f"Previously recorded match regressed: {function['name']}")
@@ -381,7 +462,7 @@ def main():
                         "linked_elf": linked_path,
                         "compiler_profile": profile_name, "compiler": setup["version"],
                         "compiler_sha256": setup["sha256"], "mapped_data": mapping_report, "mapped_nobits": bss_report,
-                        "compile_flags": list(flags), **comparison})
+                        "compile_flags": list(flags), **({"mapped_codegen_readonly": generated_report} if generated_report else {}), **comparison})
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)
         code_sizes = {name: elf.get_section_by_name(name)["sh_size"] for name in (".text", ".rentext", ".vutext")}
@@ -395,7 +476,7 @@ def main():
                 "compiler_sha256": default_setup["sha256"],
                 "compiler_profiles": {name: {"version": setup["version"], "sha256": setup["sha256"]}
                                       for name, setup in compiler_profiles.items()},
-                "method": "Exact function code bytes and size after explicit symbol-address linking where needed; no unresolved relocations. Padding excluded.",
+                "method": "Exact function code bytes and size plus complete equality of any generated readonly tables after actual linking; no unresolved relocations. Padding excluded.",
                 "full_game_build": False, "code_section_bytes": code_sizes, "total_code_bytes": total,
                 "reconstructed_c_functions": sum(r["language"] == "C" for r in results),
                 "reconstructed_c_code_bytes": sum(r["expected_size"] for r in results if r["language"] == "C"),

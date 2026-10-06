@@ -12,8 +12,35 @@ import sys
 
 from elftools.elf.elffile import ELFFile
 from analyze import ROOT, validated_elf, write_json
-from verify import manifests, object_functions, validate_target_function
+from verify import manifests, mapped_data, object_functions, validate_target_function
 from source_provenance import validate_sources
+
+
+def validate_codegen_hybrid(function, linked, original, readonly_sections):
+    """Independently reject differing generated tables before substituting code."""
+    mappings = function.get("mapped_codegen_readonly", [])
+    if not isinstance(mappings, list):
+        raise ValueError("Malformed generated readonly build report")
+    if not mappings:
+        return
+    if linked is None or function.get("generated_data_identical") is not True:
+        raise ValueError("A generated readonly candidate needs complete linked data equality for hybrid substitution")
+    seen = set()
+    for index, mapping in enumerate(mappings):
+        if not isinstance(mapping, dict) or mapping.get("identical") is not True:
+            raise ValueError("Differing generated readonly data cannot enter the hybrid")
+        output_name = mapping.get("output_section")
+        if output_name != f".george_generated_rodata_{index}" or mapping.get("name") in seen:
+            raise ValueError("Invalid or duplicate generated readonly output section")
+        seen.add(mapping["name"])
+        proof = {key: mapping[key] for key in ("address", "file_offset", "size", "original_sha256")}
+        expected = mapped_data({"link_data": {mapping["name"]: proof}}, original, readonly_sections)[mapping["name"]]
+        section = linked.get_section_by_name(output_name)
+        if (section is None or section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] != 2
+                or section["sh_addr"] != expected["address"] or section["sh_size"] != len(expected["expected_bytes"])
+                or section.data() != expected["expected_bytes"]
+                or hashlib.sha256(section.data()).hexdigest() != mapping["sha256"]):
+            raise ValueError("Generated readonly hybrid section differs from complete original proof")
 
 
 def main():
@@ -29,6 +56,9 @@ def main():
                      "address": elf.get_section_by_name(name)["sh_addr"],
                      "size": elf.get_section_by_name(name)["sh_size"]}
                     for name in (".text", ".rentext", ".vutext")]
+        readonly_sections = [{"offset": section["sh_offset"], "address": section["sh_addr"], "size": section["sh_size"]}
+                             for section in elf.iter_sections() if section["sh_type"] == "SHT_PROGBITS"
+                             and section["sh_flags"] & 2 and not section["sh_flags"] & 5]
     text = sections[0]
     with (ROOT / "build/text.elf").open("rb") as stream:
         compiled_text = ELFFile(stream).get_section_by_name(".text").data()
@@ -45,6 +75,7 @@ def main():
         if function.get("linked_elf"):
             with (ROOT / function["linked_elf"]).open("rb") as stream:
                 linked = ELFFile(stream)
+                validate_codegen_hybrid(function, linked, original, readonly_sections)
                 symbol = next(s for s in linked.get_section_by_name(".symtab").iter_symbols()
                               if s.name == function["compiled_symbol"])
                 section = linked.get_section(symbol["st_shndx"])
@@ -52,6 +83,7 @@ def main():
                 code = section.data()[start:start + symbol["st_size"]]
                 relocations = []
         else:
+            validate_codegen_hybrid(function, None, original, readonly_sections)
             object_path = ROOT / function["object"]
             if object_path not in objects:
                 objects[object_path] = object_functions(object_path)
