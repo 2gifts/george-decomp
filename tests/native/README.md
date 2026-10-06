@@ -330,3 +330,19 @@ original-code traces and execute all five connected helper C bodies. 173,269 che
 and eight decoder guards pass. Only proved pointer fields are translated; aligned
 storage preserves low 16 pointer aliases. Original engine/heap/EE timing is outside
 the controlled model. Complete scope and contracts: `docs/resource_groups.md`.
+
+
+Resource bounds: `python tests/native/run_resource_bounds.py` executes 239
+authored fixtures and 179,846 checks with separate production bounds/group TUs.
+The checked bounds-table pair invokes real FCC0; engine projection supplies
+only a 16-byte point and 48-byte frame prefix. Ten strict trace guards pass.
+Pointer fields/count aliases retain their original widths; complete contracts
+and unresolved incoming-entry evidence are in `docs/resource_bounds.md`.
+
+Arena buffers: `python tests/native/run_utilities.py --harness arena_buffers`
+executes 452 authored fixtures and 238,300 checks with separate production C.
+Eight decoder guards pass. Numeric wrap, signed padding, output aliases and
+post-zero mutations preserve captured bases and published cursor fields.
+Native storage preserves low 16 address bits and its complete authored extent
+remains below bit 31; raw numeric pointers are never dereferenced. See
+`docs/arena_buffers.md` for reachability, ABI and modeled-call limits.

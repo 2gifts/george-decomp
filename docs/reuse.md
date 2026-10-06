@@ -1341,3 +1341,99 @@ zero unresolved relocations. Both compilers match every byte of the complete
 five functions total 532 original bytes. This is source, control and entry
 identity plus the stated complete match, without a native OS harness,
 complete enclosing caller or dispatch claim, or EE precision/exception claim.
+
+
+The stdio setup/open batch reuses unchanged public newlib 1.8.1
+[findfp.c](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/findfp.c)
+and [fopen.c](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fopen.c).
+This software was developed by the University of California, Berkeley.
+Both complete 1990 Berkeley notices are retained under section 1 of
+`LICENSES/newlib-1.8.1.txt`. Raw source SHA-256 pins are
+`c287d8427ec98c15dfbd1bc435db3b60bc1643852badc9d192de3a08dcf14ff1`
+and `b9074c67e46244b093080b5a13039f2a6e6314ce719cba6461aa874ffcb2353c`.
+The authentic private header, reentrancy layout and compiler headers remain
+unchanged, with every selected compiler dependency fingerprinted.
+
+Seven complete bodies recover 860 original bytes: the genuinely separate
+local `std` helper, `__sfmoreglue`, `__sfp`, `__sinit`, `_fopen_r`, `fopen`
+and `_cleanup_r`. The local helper has three actual incoming JALs and a whole
+88-byte LOCAL STT_FUNC under both compilers; its source name is not claimed
+as retail debug information. All seven entries have actual encoded incoming
+references. The original boundaries, terminal delays, neighboring entries,
+16 incoming J/JALs, 15 local branches and 60 stores were checked directly.
+Their containing assembly intervals have full hash/byte proof, without
+asserting complete enclosing caller semantics.
+
+The glue walk preserves signed decrement/scan order, next publication before
+failure, ENOMEM and the sparse free-slot initialization. Cookie and callbacks
+are intentionally untouched until initialization/open succeeds. Reentrancy
+initialization publishes its real cleanup callback before initializing three
+embedded FILEs. Open preserves every failure gate, signed descriptor, captured
+FILE return and append seek with a full 64-bit long argument. The successful
+open's read-callback LUI is in the BGEZ delay; the failed path cannot be treated
+as a linear callback materialization. Cleanup materializes the actual fflush
+callback in the fwalk JAL delay. Previously reviewed callback paths are reused.
+
+Author, disc peer and parent each read all 215 original instructions and the
+complete unchanged sources. Both independent probes reproduced all fourteen
+natural complete GNU links and the full identity packet. Two actual 45-word
+ABI probes agree on FILE=88, glue=12, reent=748, int=4, long=8 and pointer=4,
+including every used offset and flag. All seven bodies remain reconstructed:
+zero links match exactly and none has unresolved relocations. Genuine compiler
+symbol sizes are retained, including the GCC 2.9 cleanup tail call. No code
+patching, symbol slicing, size coercion or generic OS substitute is used.
+The source's additional `_cleanup` body is outside this seven-entry award and
+is separately recovered in the following writer batch;
+fseek is only an ABI/address binding. Native filesystem behavior, malformed
+objects, EE exceptions and original data initialization are unclaimed.
+The parent repeated all fourteen actual tracked-source links using only central
+bindings. Complete code comparisons, symbol geometry and dependency hashes
+reproduced the isolated proof. The canonical checkpoint passed all 264 tooling tests and reproduced the
+retail ELF SHA-256 in a hybrid build.
+
+
+## Buffered writers and output wrappers
+
+The writer batch reuses unchanged public newlib 1.8.1 `fvwrite.c`, `fwrite.c`,
+`fprintf.c`, `printf.c`, `fileno.c` and `fvwrite.h` at the same pinned revision
+`b595ded606227e93b8c4a447446c1d2ac093827d`. The previously imported `findfp.c`
+is reused byte for byte for `_cleanup`. Every source and compiler dependency
+has a SHA-256 pin in the runtime manifest. Full notices remain intact:
+`fvwrite.c`, `fwrite.c`, `fprintf.c`, `findfp.c` and `fvwrite.h` use the 1990
+Berkeley notice in `LICENSES/newlib-1.8.1.txt` section 1. This product includes
+software developed by the University of California, Berkeley and its
+contributors. `printf.c` and `fileno.c` use the newlib default Cygnus Solutions
+1994/1997 notice in section 9. This product includes software developed by
+Cygnus Solutions. The complete upstream license is retained.
+
+Seven complete bodies recover 1,468 original bytes: `__sfvwrite`, `fwrite`,
+`fprintf`, `_printf_r`, `printf`, `fileno` and `_cleanup`. Author, disc peer and
+parent read all 367 original instructions, the complete unchanged sources,
+private IO and authentic reentrancy headers, and the three full binding bodies
+for memchr, memmove and __swsetup. Two genuine 34-word compiler ABI probes
+establish FILE=88, iov=8, uio=12 with a signed four-byte residual, long=8,
+va_list=4 and all observed field offsets/flags. The original 100 incoming
+J/JALs, 45 branches, 69 stores, three write callbacks and four preserved
+central-pointer pairs have complete byte and geometry evidence.
+
+The writer preserves zero-residual return, zero-length-vector skips, partial
+writes, errors, string-buffer truncation with full-length accounting, fresh
+residuals, line-buffer newline distance and callback publication order. The
+wrappers preserve unsigned product/quotient behavior, actual variadic lanes,
+stdout data publication before a fresh central-pointer reload, signed fileno
+and initialization, and cleanup. `_printf_r` is a genuine independently
+returned 76-byte original body and compiler STT_FUNC; no incoming encoded call
+or aligned allocated pointer was found, so its caller reachability remains
+unresolved. Formatter and __swsetup source identities are not imported.
+The existing matching memmove assembly is reused through its numeric binding.
+
+The parent and peer independently reproduced all fourteen natural whole GNU
+links and complete identity packets. A tracked-source repetition using only
+central bindings produced identical code comparisons, symbol geometry and
+dependency fingerprints. Only GCC 3.2.3 `_cleanup` matches all 36 original bytes;
+the other six routines remain reconstructed with their genuine size and code
+differences. One isolated scheduling experiment yielded no further exact
+match and is excluded from the registered baseline. Valid IO buffers and C
+arithmetic domains are required; native OS/filesystem, malformed IO objects,
+original data initialization and EE exceptions are unclaimed. The canonical checkpoint passed 264 tooling tests and reproduced the retail
+ELF SHA-256 in a hybrid build.
