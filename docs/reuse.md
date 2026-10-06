@@ -1148,3 +1148,57 @@ alignment/flags and no data relocations. Real original instruction pairs bind
 each address. The powers-of-five and ten sections are mapped whole for their
 actual source references; these data identities receive no function or text
 matching award.
+
+The complete byte substring search at `0x00398628` / 116 bytes now reuses
+unchanged public newlib 1.8.1
+[`strstr.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strstr.c).
+Its source SHA256 is
+`09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7`.
+No file-specific notice appears in that source; section 9 of
+`LICENSES/newlib-1.8.1.txt` supplies the applicable Cygnus 1994/1997 permissive
+notice. This software was developed at Cygnus Solutions.
+
+Both author and root read all 29 original instructions against the complete
+unchanged source. The empty-string guards, signed-byte comparisons, 32-bit
+inner index, outer advance and return paths agree. Root independently checked
+121 encoded entry calls and their containing assembly bytes, three returns
+with their delay slots, six bounded branches, seven signed-byte loads and the
+real target ABI. Two fresh complete links and both seven-file dependency sets
+reproduce after importing the tracked source. GCC 2.9 emits 108 bytes and GCC
+3.2.3 emits 88 bytes; both differ from the complete original body and remain
+reconstructed. No exact-text or data award is added.
+
+Two complete allocator functions now reuse unchanged
+[`mallocr.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mallocr.c)
+from the same public newlib 1.8.1 pin: `_calloc_r` at `0x0039F458` / 188 bytes
+and `_malloc_r` at `0x0039B508` / 1,840 bytes. The unchanged source SHA256 is
+`8a3fe01c7c61463488c7bcb5cc284277961ef493e94587e335d4134958bdea3e`.
+Its complete header retains Doug Lea's public-domain dedication and version
+2.6.4 identification. The genuine source options `INTERNAL_NEWLIB`,
+`MALLOC_ALIGNMENT=16` and the appropriate `DEFINE_CALLOC` / `DEFINE_MALLOC`
+select these functions without modifying their source.
+
+The author and root read all 507 original instructions against the complete
+source and supporting macros. The original wrapped 32-bit calloc product,
+small clearing ladder, exact-fit and remainder bins, ordered unlink/reinsert,
+block mask traversal, top-chunk split and extend/recheck paths agree. Actual
+ABI probes confirm int/size_t/pointer 4, long 8, chunk 16 and mallinfo 40 bytes.
+Root independently reproduced four complete links, actual 17/16-file
+dependency sets, all original interval hashes and branches, nine encoded entry
+calls and seven preserved global-address pairs. The tracked-layout source and
+dependency guards reproduce the same full nonexact comparisons with no
+unresolved relocations. Both functions remain reconstructed.
+
+The local `malloc_extend_top` entry at `0x0039B2A0` / 612 bytes is a binding for
+the malloc call. The author read that complete original helper; root checked
+its full hash, calls and binding metadata. The helper and the custom original
+lock/unlock wrappers receive no function-progress award. Other bodies in the
+complete source file remain unregistered.
+
+The writable 1,032-byte bin initializer at `0x00405A38` has separate source
+identity evidence. Genuine GNU ld resolves all 256 original self `R_MIPS_32`
+entries at the original address under both compilers, and all 1,032 output
+bytes match. Six adjacent complete scalar/struct globals also match, including
+the target's 64-bit long counters. Root independently reproduced these data
+checks. They establish bindings only: no writable-data mapper, initialization
+edits, text-match award or readonly-data-progress award is used.

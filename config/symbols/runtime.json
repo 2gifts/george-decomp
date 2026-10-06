@@ -634,13 +634,48 @@
     },
     "_calloc_r": {
       "address": "0x0039F458",
-      "confidence": "identified",
-      "evidence": "Complete genuine David Gay mprec source/helper graph, actual original JAL/address/ABI proof independently reviewed by root. Bindings of calloc/memcpy identify original callee roles without claiming new callee source recovery."
+      "confidence": "corroborated",
+      "evidence": "Complete modulo32 n*elem_size passes to _malloc_r with original reent; null returnsnull. Returned chunksize=(word[-1]&~3), clearing size subtracts4. Authentic MALLOC_ZERO clears3/5/7/9 four-byte words for <=36B and uses original memset3936A0 otherwise; no overflow safeguard or invented mmap/clears branch. Author read the complete507 calloc/malloc original instructions, unchanged source/supporting macros and full612B extend helper. Root independently read the507 approved original instructions and complete source/macros/public-domain notice; reproduced4 actual full links/dependency sets/15 genuine ABI words. Root independently checked3 original interval hashes/101 branches,9 actual entryJALs and containing body bytes,7 preserved global pointer pairs, both actualGNU links of the whole1032B/256 selfrelocation initializer and adjacent6 global extents. Root helper review covers hash/calls/binding metadata, not a manual full helper-body review."
     },
     "memcpy": {
       "address": "0x003934F8",
       "confidence": "identified",
       "evidence": "Complete genuine David Gay mprec source/helper graph, actual original JAL/address/ABI proof independently reviewed by root. Bindings of calloc/memcpy identify original callee roles without claiming new callee source recovery."
+    },
+    "strstr": {
+      "address": "0x00398628",
+      "confidence": "corroborated",
+      "evidence": "All29 original instructions read against unchanged pinned source: initial empty haystack returnsNULL for nonempty needle, otherwise input; nonempty outer haystack resets32-bit size_t i, returns input when needle[i] terminates, compares signed char bytes and advances inner index until mismatch, then increments haystack and repeats, exhausted haystack returnsNULL. All seven original LB instructions correspond to target signed-char source; no new helper or accelerated/string algorithm substituted. Root independently read all29 original instructions, complete unchanged pinned source and license9; independently reproduced2 full links/dependency sets/5 genuine ABI words, whole puretext compiled symbols,121 actual JAL entries and complete containing assembly bytes, all3 returns/6 bounded branches/7 signed LB instructions. Author tracked-layout reproduction passes the same whole comparisons and source/dependency guards."
+    },
+    "_malloc_r": {
+      "address": "0x0039B508",
+      "confidence": "corroborated",
+      "evidence": "Complete source-supported MALLOC_ALIGNMENT16 request2size uses+19, minimum16 and mask~15 before original lock. Exact small-bin search skips neighboring8-byte bin with16alignment; logarithmic bin thresholds56/91/110/119/124/126; long64 signed-safe size differences; exact-fit unlink/inuse bit, last-remainder resplit/exhaust/reinsert, four-bin blockmask traversal with extra small-bin skip, full ordered frontlink/unlink, partial-block bitclear, top-chunk split or one real extend call/recheck, original unlock on all exits. Complete1840B instruction interval manually reviewed against unchanged source and all supporting macros. Author read the complete507 calloc/malloc original instructions, unchanged source/supporting macros and full612B extend helper. Root independently read the507 approved original instructions and complete source/macros/public-domain notice; reproduced4 actual full links/dependency sets/15 genuine ABI words. Root independently checked3 original interval hashes/101 branches,9 actual entryJALs and containing body bytes,7 preserved global pointer pairs, both actualGNU links of the whole1032B/256 selfrelocation initializer and adjacent6 global extents. Root helper review covers hash/calls/binding metadata, not a manual full helper-body review."
+    },
+    "__malloc_lock": {
+      "address": "0x003966E8",
+      "confidence": "corroborated",
+      "evidence": "Encoded original directJALs from independently reviewed malloc/free graph establish custom original entry3966E8;96B custom locking wrapper is binding-only and is not imported as generic newlib stub."
+    },
+    "__malloc_unlock": {
+      "address": "0x00396748",
+      "confidence": "corroborated",
+      "evidence": "Encoded original directJALs from independently reviewed malloc/free graph establish custom original entry396748;64B custom unlocking wrapper is binding-only and is not imported as generic newlib stub."
+    },
+    "__malloc_av_": {
+      "address": "0x00405A38",
+      "confidence": "corroborated",
+      "evidence": "Whole1032B original writable bin initializer at405A38 exactly matches unchanged source linked by genuineGNUld under both profiles with256 genuine selfR_MIPS_32 entries. Original code-derived base pairs39B558/39B560 and39B2A4/39B2E4 prove binding. Identity-only, no mapped writable section or data/code award."
+    },
+    "malloc_extend_top": {
+      "address": "0x0039B2A0",
+      "confidence": "corroborated",
+      "evidence": "Binding-only612B independently called complete helper manually reviewed: capturedoldtop/size/end; size=nb+top_pad+16 and4K-page rounding except sentinelbase-1, sbrk39DCA0 failure/foreignbrk gates, exact currentarena accounting,16alignment correction plus second4K correction, failureearlyreturn, newtop publish, two4-byte fenceposts and optional free39BC38, then long64 maximum tracking. No helper code progress proposed. Author full612B body review; root fullhash/calls/binding metadata review only. No helper progress registration."
+    },
+    "memset": {
+      "address": "0x003936A0",
+      "confidence": "corroborated",
+      "evidence": "Complete188B unchanged newlib calloc body calls original3936A0 at39F4F8 encoded0x0C0E4DA8 with returned allocation,zero byte and observed chunk clearing length. Original call/ABI and whole linked source were independently reviewed. Shared binding only; no new callee source or progress award."
     }
   }
 }

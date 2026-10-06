@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "property_hierarchy": ["src/game/property_hierarchy.c"],
+    "geometry_classify6": ["src/game/geometry_classify6.c"],
     "property_pack": ["src/game/property_pack.c"],
     "matrix_rigid": ["src/game/matrix_rigid.c"],
     "property_records": ["src/game/property_records.c"],
@@ -40,6 +42,7 @@ HARNESS_SOURCES = {
     "geometry": ["src/game/geometry.c", "src/game/vector_math.c"],
 }
 HARNESS_FLAGS = {
+    "geometry_classify6": ["-ffloat-store"],
     "matrix_rigid": ["-ffloat-store"],
     "property_records": ["-ffloat-store"],
     "camera_basis": ["-ffloat-store"],

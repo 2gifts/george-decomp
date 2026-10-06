@@ -20756,6 +20756,2404 @@
           "evidence": "Whole compiler-generated readonly section, including source padding, exactly equals original allocated readonly bytes under both genuine compilers. Real original LUI/ADDIU pair establishes pointer and every intervening instruction preserves high register. No game/data byte award from identity. Actual original pointer pair 0x39f408, 0x39f410 independently reviewed."
         }
       }
+    },
+    {
+      "name": "strstr",
+      "compiled_symbol": "strstr",
+      "upstream_symbol": "strstr",
+      "address": "0x00398628",
+      "file_offset": "0x00299628",
+      "size": 116,
+      "source": "src/runtime/strstr.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "b86a1f58672770c6ebf30a910f1f6b57049f0cb201b87ff1f5fcc2573b59f353",
+      "upstream_source_sha256": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strstr.c",
+      "upstream_license": "No file-specific notice; newlib1.8.1 section9 Cygnus1994/1997 permissive notice in LICENSES/newlib-1.8.1.txt applies. This software was developed at Cygnus Solutions.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strstr.c",
+          "sha256": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/string/strstr.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/string/strstr.c",
+          "upstream_license": "No file-specific notice; newlib1.8.1 section9 Cygnus1994/1997 permissive notice in LICENSES/newlib-1.8.1.txt applies. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        }
+      ],
+      "link": true,
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 116,
+          "compiled_size": 108,
+          "different_bytes": 74,
+          "first_different_offsets": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            40,
+            41
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b86a1f58672770c6ebf30a910f1f6b57049f0cb201b87ff1f5fcc2573b59f353",
+          "compiled_sha256": "523dafbcaf096715c864df55db28bb2b4d497e591f4a9605d300868dc9b7a405"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 116,
+          "compiled_size": 88,
+          "different_bytes": 97,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b86a1f58672770c6ebf30a910f1f6b57049f0cb201b87ff1f5fcc2573b59f353",
+          "compiled_sha256": "1e3226f79689939a0bf36fa544eb69d627e3cf64428bfdf397957c1cc024331e"
+        }
+      ],
+      "independent_review": "Root independently read all29 original instructions, complete unchanged pinned source and license9; independently reproduced2 full links/dependency sets/5 genuine ABI words, whole puretext compiled symbols,121 actual JAL entries and complete containing assembly bytes, all3 returns/6 bounded branches/7 signed LB instructions. Author tracked-layout reproduction passes the same whole comparisons and source/dependency guards.",
+      "control_flow_identity": "All29 original instructions read against unchanged pinned source: initial empty haystack returnsNULL for nonempty needle, otherwise input; nonempty outer haystack resets32-bit size_t i, returns input when needle[i] terminates, compares signed char bytes and advances inner index until mismatch, then increments haystack and repeats, exhausted haystack returnsNULL. All seven original LB instructions correspond to target signed-char source; no new helper or accelerated/string algorithm substituted.",
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x39862c",
+          "word": "0x14400006",
+          "target": "0x398648"
+        },
+        {
+          "instruction_address": "0x398650",
+          "word": "0x1060fffb",
+          "target": "0x398640"
+        },
+        {
+          "instruction_address": "0x39865c",
+          "word": "0x5462000a",
+          "target": "0x398688"
+        },
+        {
+          "instruction_address": "0x398670",
+          "word": "0x10c0fff3",
+          "target": "0x398640"
+        },
+        {
+          "instruction_address": "0x39867c",
+          "word": "0x50c3fffa",
+          "target": "0x398668"
+        },
+        {
+          "instruction_address": "0x39868c",
+          "word": "0x5440ffee",
+          "target": "0x398648"
+        }
+      ],
+      "return_evidence": [
+        {
+          "instruction_address": "0x398638",
+          "delay_address": "0x39863c",
+          "word": "0x3e00008",
+          "delay_word": "0x83100a"
+        },
+        {
+          "instruction_address": "0x398640",
+          "delay_address": "0x398644",
+          "word": "0x3e00008",
+          "delay_word": "0x80102d"
+        },
+        {
+          "instruction_address": "0x398694",
+          "delay_address": "0x398698",
+          "word": "0x3e00008",
+          "delay_word": "0x102d"
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 121,
+        "references": [
+          {
+            "instruction_address": "0x100f20",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00100EA8",
+            "assembly": "build/functions/func_00100EA8.s"
+          },
+          {
+            "instruction_address": "0x217888",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x2178a0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x2178b8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x2178d0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x2178e8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x217900",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x217918",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x217930",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217828",
+            "assembly": "build/functions/func_00217828.s"
+          },
+          {
+            "instruction_address": "0x217c2c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217c44",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217c5c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217c74",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217c8c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217ca4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217cbc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x217cd4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00217BE8",
+            "assembly": "build/functions/func_00217BE8.s"
+          },
+          {
+            "instruction_address": "0x218b74",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00218930",
+            "assembly": "build/functions/func_00218930.s"
+          },
+          {
+            "instruction_address": "0x219210",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00219200",
+            "assembly": "build/functions/func_00219200.s"
+          },
+          {
+            "instruction_address": "0x227298",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2272c8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2272ec",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227310",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227338",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227360",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227390",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2273b4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2273e4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227408",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227438",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227468",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227498",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2274c8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2274f8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227528",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x22754c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227570",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x227594",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2275b8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x2275ec",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_00227248",
+            "assembly": "build/functions/func_00227248.s"
+          },
+          {
+            "instruction_address": "0x26ca00",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_0026C940",
+            "assembly": "build/functions/func_0026C940.s"
+          },
+          {
+            "instruction_address": "0x26cabc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_0026CA80",
+            "assembly": "build/functions/func_0026CA80.s"
+          },
+          {
+            "instruction_address": "0x26cae8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_0026CA80",
+            "assembly": "build/functions/func_0026CA80.s"
+          },
+          {
+            "instruction_address": "0x26cb30",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_0026CA80",
+            "assembly": "build/functions/func_0026CA80.s"
+          },
+          {
+            "instruction_address": "0x2959a4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002957E0",
+            "assembly": "build/functions/func_002957E0.s"
+          },
+          {
+            "instruction_address": "0x2959b8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002957E0",
+            "assembly": "build/functions/func_002957E0.s"
+          },
+          {
+            "instruction_address": "0x2983e0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2983f8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298410",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298428",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298444",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29845c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298478",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298490",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2984a8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2984c0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2984dc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2984f4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29850c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298524",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29853c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298554",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29856c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298584",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29859c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2985b4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2985cc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2985e4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2985fc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298614",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29862c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298644",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29865c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298674",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29868c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2986a4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2986bc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2986d4",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2986e8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298700",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298714",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29872c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298744",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x29875c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298770",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298788",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2987a0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2987b8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2987d0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2987e8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298800",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298818",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298830",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298848",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298860",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298878",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298890",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2988a8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2988c0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2988d8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2988f0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298908",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298920",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298938",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298950",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298968",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298980",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x298998",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2989b0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2989c8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2989e0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2989f8",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002983C0",
+            "assembly": "build/functions/func_002983C0.s"
+          },
+          {
+            "instruction_address": "0x2a4d00",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002A4B70",
+            "assembly": "build/functions/func_002A4B70.s"
+          },
+          {
+            "instruction_address": "0x2abd30",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002ABAE8",
+            "assembly": "build/functions/func_002ABAE8.s"
+          },
+          {
+            "instruction_address": "0x2b1bcc",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002B1BA8",
+            "assembly": "build/functions/func_002B1BA8.s"
+          },
+          {
+            "instruction_address": "0x2b1f1c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002B1EE0",
+            "assembly": "build/functions/func_002B1EE0.s"
+          },
+          {
+            "instruction_address": "0x2b200c",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002B1EE0",
+            "assembly": "build/functions/func_002B1EE0.s"
+          },
+          {
+            "instruction_address": "0x2b99e0",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002B99B0",
+            "assembly": "build/functions/func_002B99B0.s"
+          },
+          {
+            "instruction_address": "0x2e7818",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002E76E8",
+            "assembly": "build/functions/func_002E76E8.s"
+          },
+          {
+            "instruction_address": "0x2e7a68",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_002E7A60",
+            "assembly": "build/functions/func_002E7A60.s"
+          },
+          {
+            "instruction_address": "0x3abf98",
+            "word": "0xc0e618a",
+            "containing_heuristic_function": "func_003ABEC0",
+            "assembly": "build/functions/func_003ABEC0.s"
+          }
+        ]
+      },
+      "boundary_evidence": "Entire116-byte original entry-to-terminalJR398694/delay398698 interval independently reviewed; includes two earlier returns398638/398640 and their delay slots, excludes alignment zero39869C;121 encoded direct entry calls establish actual entry. Both genuine compiled STT_FUNC extents compared in full.",
+      "evidence": "Unchanged pinned public newlib byte substring-search algorithm with signed char and size_t32 ABI, complete control-flow identity and actual source dependencies. Both complete linked bodies remain nonexact with zero unresolved relocations; no matching award or byte masking."
+    },
+    {
+      "name": "_calloc_r",
+      "compiled_symbol": "_calloc_r",
+      "upstream_symbol": "_calloc_r",
+      "address": "0x0039F458",
+      "file_offset": "0x002A0458",
+      "size": 188,
+      "source": "src/runtime/stdlib/mallocr.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "04ab89b070483cd4b821d9e29255165e9e7040a7df688d545d344b4e365e67ed",
+      "upstream_source_sha256": "8a3fe01c7c61463488c7bcb5cc284277961ef493e94587e335d4134958bdea3e",
+      "upstream_revision": "Public GNU EE newlib1.8.1 Doug Lea dlmalloc2.6.4, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mallocr.c",
+      "upstream_license": "Doug Lea dlmalloc2.6.4 public domain dedication in complete unchanged source; pinned newlib distribution source retained.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-DINTERNAL_NEWLIB",
+        "-DMALLOC_ALIGNMENT=16",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-DDEFINE_CALLOC"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/mallocr.c",
+          "sha256": "8a3fe01c7c61463488c7bcb5cc284277961ef493e94587e335d4134958bdea3e",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mallocr.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mallocr.c",
+          "upstream_license": "Doug Lea dlmalloc2.6.4 public domain dedication in complete unchanged source; pinned newlib distribution source retained."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Authentic public newlib1.8.1 reent header unchanged; public source/distribution notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "link": true,
+      "candidate_comparisons": [
+        {
+          "name": "_calloc_r",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-DINTERNAL_NEWLIB",
+            "-DMALLOC_ALIGNMENT=16",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-DDEFINE_CALLOC"
+          ],
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 188,
+          "different_bytes": 102,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "04ab89b070483cd4b821d9e29255165e9e7040a7df688d545d344b4e365e67ed",
+          "compiled_sha256": "3740ec9d822704347cc94c0d4c1d015ea10d9624c6f85bc8954e964e408bbec9"
+        },
+        {
+          "name": "_calloc_r",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-DINTERNAL_NEWLIB",
+            "-DMALLOC_ALIGNMENT=16",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-DDEFINE_CALLOC"
+          ],
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 184,
+          "different_bytes": 138,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "04ab89b070483cd4b821d9e29255165e9e7040a7df688d545d344b4e365e67ed",
+          "compiled_sha256": "06b2127fba2c5fbdda2c46de02b93adb98f840e4257fe5288fbb3427e0651666"
+        }
+      ],
+      "independent_review": "Author read the complete507 calloc/malloc original instructions, unchanged source/supporting macros and full612B extend helper. Root independently read the507 approved original instructions and complete source/macros/public-domain notice; reproduced4 actual full links/dependency sets/15 genuine ABI words. Root independently checked3 original interval hashes/101 branches,9 actual entryJALs and containing body bytes,7 preserved global pointer pairs, both actualGNU links of the whole1032B/256 selfrelocation initializer and adjacent6 global extents. Root helper review covers hash/calls/binding metadata, not a manual full helper-body review.",
+      "control_flow_identity": "Complete modulo32 n*elem_size passes to _malloc_r with original reent; null returnsnull. Returned chunksize=(word[-1]&~3), clearing size subtracts4. Authentic MALLOC_ZERO clears3/5/7/9 four-byte words for <=36B and uses original memset3936A0 otherwise; no overflow safeguard or invented mmap/clears branch.",
+      "original_direct_calls": [
+        {
+          "instruction": "0x39f46c",
+          "target": "0x39b508",
+          "word": "0xc0e6d42"
+        },
+        {
+          "instruction": "0x39f4f8",
+          "target": "0x3936a0",
+          "word": "0xc0e4da8"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x39f478",
+          "target": "0x39f488",
+          "word": "0x56000003"
+        },
+        {
+          "instruction": "0x39f480",
+          "target": "0x39f504",
+          "word": "0x10000020"
+        },
+        {
+          "instruction": "0x39f49c",
+          "target": "0x39f4f4",
+          "word": "0x10400015"
+        },
+        {
+          "instruction": "0x39f4a4",
+          "target": "0x39f4e0",
+          "word": "0x1440000e"
+        },
+        {
+          "instruction": "0x39f4b8",
+          "target": "0x39f4e0",
+          "word": "0x14400009"
+        },
+        {
+          "instruction": "0x39f4cc",
+          "target": "0x39f4e0",
+          "word": "0x14400004"
+        },
+        {
+          "instruction": "0x39f4ec",
+          "target": "0x39f500",
+          "word": "0x10000004"
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "references": [
+          {
+            "instruction": "0x39e474",
+            "target": "0x39f458",
+            "word": "0xc0e7d16"
+          },
+          {
+            "instruction": "0x39e4b8",
+            "target": "0x39f458",
+            "word": "0xc0e7d16"
+          }
+        ]
+      },
+      "boundary_evidence": "Complete original entry-through-terminalJR/delay interval with full source graph, independent actual directentry calls and full originalSHA; following alignment/other functions excluded. Both actual compiled source symbols compared in full.",
+      "evidence": "Unchanged public-domain dlmalloc2.6.4 source uses genuine INTERNAL_NEWLIB and MALLOC_ALIGNMENT16 options, int4/long8/size_t4/pointer4/chunk16/mallinfo40 ABI. Complete linked bodies remain nonexact with zero unresolved relocations; no exact code award, masking or instruction/initialization edits."
+    },
+    {
+      "name": "_malloc_r",
+      "compiled_symbol": "_malloc_r",
+      "upstream_symbol": "_malloc_r",
+      "address": "0x0039B508",
+      "file_offset": "0x0029C508",
+      "size": 1840,
+      "source": "src/runtime/stdlib/mallocr.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "d49de0b7d89bb82519644509e0dcd0a2a64a6d78b92a3f94e702cb0c20966b79",
+      "upstream_source_sha256": "8a3fe01c7c61463488c7bcb5cc284277961ef493e94587e335d4134958bdea3e",
+      "upstream_revision": "Public GNU EE newlib1.8.1 Doug Lea dlmalloc2.6.4, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mallocr.c",
+      "upstream_license": "Doug Lea dlmalloc2.6.4 public domain dedication in complete unchanged source; pinned newlib distribution source retained.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-DINTERNAL_NEWLIB",
+        "-DMALLOC_ALIGNMENT=16",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-DDEFINE_MALLOC"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/mallocr.c",
+          "sha256": "8a3fe01c7c61463488c7bcb5cc284277961ef493e94587e335d4134958bdea3e",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mallocr.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mallocr.c",
+          "upstream_license": "Doug Lea dlmalloc2.6.4 public domain dedication in complete unchanged source; pinned newlib distribution source retained."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Authentic public newlib1.8.1 reent header unchanged; public source/distribution notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0/GNU GCC3.2.3 headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "link": true,
+      "candidate_comparisons": [
+        {
+          "name": "_malloc_r",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-DINTERNAL_NEWLIB",
+            "-DMALLOC_ALIGNMENT=16",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-DDEFINE_MALLOC"
+          ],
+          "identical": false,
+          "expected_size": 1840,
+          "compiled_size": 1664,
+          "different_bytes": 1621,
+          "first_different_offsets": [
+            0,
+            6,
+            10,
+            11,
+            14,
+            16,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d49de0b7d89bb82519644509e0dcd0a2a64a6d78b92a3f94e702cb0c20966b79",
+          "compiled_sha256": "bd49d10275599dd67af4e9b162aea09305100636d9d64d6f4343605adffbcd21"
+        },
+        {
+          "name": "_malloc_r",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-DINTERNAL_NEWLIB",
+            "-DMALLOC_ALIGNMENT=16",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-DDEFINE_MALLOC"
+          ],
+          "identical": false,
+          "expected_size": 1840,
+          "compiled_size": 1560,
+          "different_bytes": 1647,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d49de0b7d89bb82519644509e0dcd0a2a64a6d78b92a3f94e702cb0c20966b79",
+          "compiled_sha256": "69de7b59bd3b34a0e0db32b6de7f8a362753a2447d2d3e305dae6c22da1b54c7"
+        }
+      ],
+      "independent_review": "Author read the complete507 calloc/malloc original instructions, unchanged source/supporting macros and full612B extend helper. Root independently read the507 approved original instructions and complete source/macros/public-domain notice; reproduced4 actual full links/dependency sets/15 genuine ABI words. Root independently checked3 original interval hashes/101 branches,9 actual entryJALs and containing body bytes,7 preserved global pointer pairs, both actualGNU links of the whole1032B/256 selfrelocation initializer and adjacent6 global extents. Root helper review covers hash/calls/binding metadata, not a manual full helper-body review.",
+      "control_flow_identity": "Complete source-supported MALLOC_ALIGNMENT16 request2size uses+19, minimum16 and mask~15 before original lock. Exact small-bin search skips neighboring8-byte bin with16alignment; logarithmic bin thresholds56/91/110/119/124/126; long64 signed-safe size differences; exact-fit unlink/inuse bit, last-remainder resplit/exhaust/reinsert, four-bin blockmask traversal with extra small-bin skip, full ordered frontlink/unlink, partial-block bitclear, top-chunk split or one real extend call/recheck, original unlock on all exits. Complete1840B instruction interval manually reviewed against unchanged source and all supporting macros.",
+      "original_direct_calls": [
+        {
+          "instruction": "0x39b548",
+          "target": "0x3966e8",
+          "word": "0xc0e59ba"
+        },
+        {
+          "instruction": "0x39bacc",
+          "target": "0x39b2a0",
+          "word": "0xc0e6ca8"
+        },
+        {
+          "instruction": "0x39bb34",
+          "target": "0x396748",
+          "word": "0xc0e59d2"
+        },
+        {
+          "instruction": "0x39bc0c",
+          "target": "0x396748",
+          "word": "0xc0e59d2"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x39b52c",
+          "target": "0x39b544",
+          "word": "0x14400005"
+        },
+        {
+          "instruction": "0x39b53c",
+          "target": "0x39b548",
+          "word": "0x10000002"
+        },
+        {
+          "instruction": "0x39b554",
+          "target": "0x39b5b0",
+          "word": "0x10400016"
+        },
+        {
+          "instruction": "0x39b56c",
+          "target": "0x39b5a8",
+          "word": "0x1209000e"
+        },
+        {
+          "instruction": "0x39b5a0",
+          "target": "0x39bc08",
+          "word": "0x10000199"
+        },
+        {
+          "instruction": "0x39b5a8",
+          "target": "0x39b6a0",
+          "word": "0x1000003d"
+        },
+        {
+          "instruction": "0x39b5b4",
+          "target": "0x39b5c4",
+          "word": "0x14800003"
+        },
+        {
+          "instruction": "0x39b5bc",
+          "target": "0x39b620",
+          "word": "0x10000018"
+        },
+        {
+          "instruction": "0x39b5c4",
+          "target": "0x39b5d4",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b5cc",
+          "target": "0x39b620",
+          "word": "0x10000014"
+        },
+        {
+          "instruction": "0x39b5d8",
+          "target": "0x39b620",
+          "word": "0x14400011"
+        },
+        {
+          "instruction": "0x39b5e4",
+          "target": "0x39b5f4",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b5ec",
+          "target": "0x39b620",
+          "word": "0x1000000c"
+        },
+        {
+          "instruction": "0x39b5f8",
+          "target": "0x39b608",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b600",
+          "target": "0x39b620",
+          "word": "0x10000007"
+        },
+        {
+          "instruction": "0x39b60c",
+          "target": "0x39b61c",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b614",
+          "target": "0x39b620",
+          "word": "0x10000002"
+        },
+        {
+          "instruction": "0x39b634",
+          "target": "0x39b64c",
+          "word": "0x10000005"
+        },
+        {
+          "instruction": "0x39b640",
+          "target": "0x39bb44",
+          "word": "0x4e30140"
+        },
+        {
+          "instruction": "0x39b64c",
+          "target": "0x39b6a0",
+          "word": "0x52080014"
+        },
+        {
+          "instruction": "0x39b668",
+          "target": "0x39b680",
+          "word": "0x10800005"
+        },
+        {
+          "instruction": "0x39b678",
+          "target": "0x39b68c",
+          "word": "0x10000004"
+        },
+        {
+          "instruction": "0x39b690",
+          "target": "0x39b640",
+          "word": "0x1440ffeb"
+        },
+        {
+          "instruction": "0x39b6b0",
+          "target": "0x39b8cc",
+          "word": "0x12020086"
+        },
+        {
+          "instruction": "0x39b6cc",
+          "target": "0x39b6e4",
+          "word": "0x10800005"
+        },
+        {
+          "instruction": "0x39b6dc",
+          "target": "0x39b6f0",
+          "word": "0x10000004"
+        },
+        {
+          "instruction": "0x39b6f4",
+          "target": "0x39b748",
+          "word": "0x14400014"
+        },
+        {
+          "instruction": "0x39b740",
+          "target": "0x39bc0c",
+          "word": "0x10000132"
+        },
+        {
+          "instruction": "0x39b74c",
+          "target": "0x39b768",
+          "word": "0x4e00006"
+        },
+        {
+          "instruction": "0x39b760",
+          "target": "0x39bc08",
+          "word": "0x10000129"
+        },
+        {
+          "instruction": "0x39b76c",
+          "target": "0x39b7b8",
+          "word": "0x10400012"
+        },
+        {
+          "instruction": "0x39b7b0",
+          "target": "0x39b8b8",
+          "word": "0x10000041"
+        },
+        {
+          "instruction": "0x39b7bc",
+          "target": "0x39b7cc",
+          "word": "0x14600003"
+        },
+        {
+          "instruction": "0x39b7c4",
+          "target": "0x39b828",
+          "word": "0x10000018"
+        },
+        {
+          "instruction": "0x39b7cc",
+          "target": "0x39b7dc",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b7d4",
+          "target": "0x39b828",
+          "word": "0x10000014"
+        },
+        {
+          "instruction": "0x39b7e0",
+          "target": "0x39b828",
+          "word": "0x14400011"
+        },
+        {
+          "instruction": "0x39b7ec",
+          "target": "0x39b7fc",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b7f4",
+          "target": "0x39b828",
+          "word": "0x1000000c"
+        },
+        {
+          "instruction": "0x39b800",
+          "target": "0x39b810",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b808",
+          "target": "0x39b828",
+          "word": "0x10000007"
+        },
+        {
+          "instruction": "0x39b814",
+          "target": "0x39b824",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b81c",
+          "target": "0x39b828",
+          "word": "0x10000002"
+        },
+        {
+          "instruction": "0x39b838",
+          "target": "0x39b874",
+          "word": "0x54c8000e"
+        },
+        {
+          "instruction": "0x39b86c",
+          "target": "0x39b8b8",
+          "word": "0x10000012"
+        },
+        {
+          "instruction": "0x39b884",
+          "target": "0x39b8b8",
+          "word": "0x5060000c"
+        },
+        {
+          "instruction": "0x39b898",
+          "target": "0x39b8b8",
+          "word": "0x50c80007"
+        },
+        {
+          "instruction": "0x39b8ac",
+          "target": "0x39b898",
+          "word": "0x5440fffa"
+        },
+        {
+          "instruction": "0x39b8f0",
+          "target": "0x39ba60",
+          "word": "0x1460005b"
+        },
+        {
+          "instruction": "0x39b8fc",
+          "target": "0x39b93c",
+          "word": "0x1440000f"
+        },
+        {
+          "instruction": "0x39b914",
+          "target": "0x39b938",
+          "word": "0x14600008"
+        },
+        {
+          "instruction": "0x39b930",
+          "target": "0x39b920",
+          "word": "0x1040fffb"
+        },
+        {
+          "instruction": "0x39b958",
+          "target": "0x39b9c0",
+          "word": "0x12080019"
+        },
+        {
+          "instruction": "0x39b978",
+          "target": "0x39b990",
+          "word": "0x10600005"
+        },
+        {
+          "instruction": "0x39b988",
+          "target": "0x39b99c",
+          "word": "0x10000004"
+        },
+        {
+          "instruction": "0x39b9a0",
+          "target": "0x39bb64",
+          "word": "0x50400070"
+        },
+        {
+          "instruction": "0x39b9a8",
+          "target": "0x39bbbc",
+          "word": "0x4e10084"
+        },
+        {
+          "instruction": "0x39b9b4",
+          "target": "0x39b970",
+          "word": "0x5608ffee"
+        },
+        {
+          "instruction": "0x39b9c0",
+          "target": "0x39b9d0",
+          "word": "0x10400003"
+        },
+        {
+          "instruction": "0x39b9d8",
+          "target": "0x39b958",
+          "word": "0x5440ffdf"
+        },
+        {
+          "instruction": "0x39b9e4",
+          "target": "0x39ba40",
+          "word": "0x10400016"
+        },
+        {
+          "instruction": "0x39b9f0",
+          "target": "0x39b9e0",
+          "word": "0x1049fffb"
+        },
+        {
+          "instruction": "0x39ba04",
+          "target": "0x39ba60",
+          "word": "0x54400016"
+        },
+        {
+          "instruction": "0x39ba0c",
+          "target": "0x39ba5c",
+          "word": "0x10c00013"
+        },
+        {
+          "instruction": "0x39ba14",
+          "target": "0x39b948",
+          "word": "0x1440ffcc"
+        },
+        {
+          "instruction": "0x39ba30",
+          "target": "0x39ba20",
+          "word": "0x1040fffb"
+        },
+        {
+          "instruction": "0x39ba38",
+          "target": "0x39b948",
+          "word": "0x1000ffc3"
+        },
+        {
+          "instruction": "0x39ba54",
+          "target": "0x39b9f8",
+          "word": "0x1000ffe8"
+        },
+        {
+          "instruction": "0x39ba78",
+          "target": "0x39ba94",
+          "word": "0x50800006"
+        },
+        {
+          "instruction": "0x39ba8c",
+          "target": "0x39ba9c",
+          "word": "0x10000003"
+        },
+        {
+          "instruction": "0x39bab8",
+          "target": "0x39bacc",
+          "word": "0x14400004"
+        },
+        {
+          "instruction": "0x39bac4",
+          "target": "0x39bbe0",
+          "word": "0x10400046"
+        },
+        {
+          "instruction": "0x39bae4",
+          "target": "0x39bafc",
+          "word": "0x10400005"
+        },
+        {
+          "instruction": "0x39baf4",
+          "target": "0x39bb08",
+          "word": "0x10000004"
+        },
+        {
+          "instruction": "0x39bb24",
+          "target": "0x39bb34",
+          "word": "0x14400003"
+        },
+        {
+          "instruction": "0x39bb2c",
+          "target": "0x39bbe0",
+          "word": "0x1040002c"
+        },
+        {
+          "instruction": "0x39bb3c",
+          "target": "0x39bc18",
+          "word": "0x10000036"
+        },
+        {
+          "instruction": "0x39bb5c",
+          "target": "0x39bc08",
+          "word": "0x1000002a"
+        },
+        {
+          "instruction": "0x39bbb4",
+          "target": "0x39bc0c",
+          "word": "0x10000015"
+        },
+        {
+          "instruction": "0x39bbd8",
+          "target": "0x39bc0c",
+          "word": "0x1000000c"
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "references": [
+          {
+            "instruction": "0x394470",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          },
+          {
+            "instruction": "0x39c0dc",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          },
+          {
+            "instruction": "0x39c45c",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          },
+          {
+            "instruction": "0x39c654",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          },
+          {
+            "instruction": "0x39c69c",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          },
+          {
+            "instruction": "0x39f46c",
+            "target": "0x39b508",
+            "word": "0xc0e6d42"
+          }
+        ]
+      },
+      "boundary_evidence": "Complete original entry-through-terminalJR/delay interval with full source graph, independent actual directentry calls and full originalSHA; following alignment/other functions excluded. Both actual compiled source symbols compared in full.",
+      "evidence": "Unchanged public-domain dlmalloc2.6.4 source uses genuine INTERNAL_NEWLIB and MALLOC_ALIGNMENT16 options, int4/long8/size_t4/pointer4/chunk16/mallinfo40 ABI. Complete linked bodies remain nonexact with zero unresolved relocations; no exact code award, masking or instruction/initialization edits.",
+      "binding_only_helper": {
+        "name": "malloc_extend_top",
+        "address": "0x39b2a0",
+        "size": 612,
+        "original_sha256": "d672e56587a6aa6e21d332042ea156e961ea6d01deb29a23543c27804d12659d",
+        "original_calls": [
+          {
+            "instruction": "0x39b344",
+            "target": "0x39dca0",
+            "word": "0xc0e7728"
+          },
+          {
+            "instruction": "0x39b3f0",
+            "target": "0x39dca0",
+            "word": "0xc0e7728"
+          },
+          {
+            "instruction": "0x39b494",
+            "target": "0x39bc38",
+            "word": "0xc0e6f0e"
+          }
+        ],
+        "control_flow_identity": "Binding-only612B independently called complete helper manually reviewed: capturedoldtop/size/end; size=nb+top_pad+16 and4K-page rounding except sentinelbase-1, sbrk39DCA0 failure/foreignbrk gates, exact currentarena accounting,16alignment correction plus second4K correction, failureearlyreturn, newtop publish, two4-byte fenceposts and optional free39BC38, then long64 maximum tracking. No helper code progress proposed."
+      },
+      "original_global_address_evidence": [
+        {
+          "symbol": "__malloc_av_",
+          "address": "0x405a38",
+          "high_instruction": "0x39b558",
+          "low_instruction": "0x39b560",
+          "high_word": "0x3c020040",
+          "low_word": "0x24435a38",
+          "intervening_words": [
+            {
+              "address": "0x39b55c",
+              "word": "0x1150c2",
+              "gpr_written": 10
+            }
+          ]
+        },
+        {
+          "symbol": "__malloc_av_",
+          "address": "0x405a38",
+          "high_instruction": "0x39b2a4",
+          "low_instruction": "0x39b2e4",
+          "high_word": "0x3c020040",
+          "low_word": "0x245e5a38",
+          "intervening_words": [
+            {
+              "address": "0x39b2a8",
+              "word": "0x7fb00090",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2ac",
+              "word": "0x3c060040",
+              "gpr_written": 6
+            },
+            {
+              "address": "0x39b2b0",
+              "word": "0x7fb20070",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2b4",
+              "word": "0x5283c",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b2b8",
+              "word": "0x7fb30060",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2bc",
+              "word": "0x5283e",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b2c0",
+              "word": "0x7fb50040",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2c4",
+              "word": "0x3c10ffff",
+              "gpr_written": 16
+            },
+            {
+              "address": "0x39b2c8",
+              "word": "0x7fb60030",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2cc",
+              "word": "0x3610ffff",
+              "gpr_written": 16
+            },
+            {
+              "address": "0x39b2d0",
+              "word": "0x7fb70020",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2d4",
+              "word": "0x3c160040",
+              "gpr_written": 22
+            },
+            {
+              "address": "0x39b2d8",
+              "word": "0x7fbe0010",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2dc",
+              "word": "0x80b82d",
+              "gpr_written": 23
+            },
+            {
+              "address": "0x39b2e0",
+              "word": "0x7fb10080",
+              "gpr_written": null
+            }
+          ]
+        },
+        {
+          "symbol": "__malloc_top_pad",
+          "address": "0x405e48",
+          "high_instruction": "0x39b2ac",
+          "low_instruction": "0x39b2fc",
+          "high_word": "0x3c060040",
+          "low_word": "0xdcc35e48",
+          "intervening_words": [
+            {
+              "address": "0x39b2b0",
+              "word": "0x7fb20070",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2b4",
+              "word": "0x5283c",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b2b8",
+              "word": "0x7fb30060",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2bc",
+              "word": "0x5283e",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b2c0",
+              "word": "0x7fb50040",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2c4",
+              "word": "0x3c10ffff",
+              "gpr_written": 16
+            },
+            {
+              "address": "0x39b2c8",
+              "word": "0x7fb60030",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2cc",
+              "word": "0x3610ffff",
+              "gpr_written": 16
+            },
+            {
+              "address": "0x39b2d0",
+              "word": "0x7fb70020",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2d4",
+              "word": "0x3c160040",
+              "gpr_written": 22
+            },
+            {
+              "address": "0x39b2d8",
+              "word": "0x7fbe0010",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2dc",
+              "word": "0x80b82d",
+              "gpr_written": 23
+            },
+            {
+              "address": "0x39b2e0",
+              "word": "0x7fb10080",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2e4",
+              "word": "0x245e5a38",
+              "gpr_written": 30
+            },
+            {
+              "address": "0x39b2e8",
+              "word": "0xffbf0000",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2ec",
+              "word": "0x3c02ffff",
+              "gpr_written": 2
+            },
+            {
+              "address": "0x39b2f0",
+              "word": "0x7fb40050",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2f4",
+              "word": "0x3442fffc",
+              "gpr_written": 2
+            },
+            {
+              "address": "0x39b2f8",
+              "word": "0x8fd40008",
+              "gpr_written": 20
+            }
+          ]
+        },
+        {
+          "symbol": "__malloc_sbrk_base",
+          "address": "0x405e50",
+          "high_instruction": "0x39b2d4",
+          "low_instruction": "0x39b310",
+          "high_word": "0x3c160040",
+          "low_word": "0x8ec25e50",
+          "intervening_words": [
+            {
+              "address": "0x39b2d8",
+              "word": "0x7fbe0010",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2dc",
+              "word": "0x80b82d",
+              "gpr_written": 23
+            },
+            {
+              "address": "0x39b2e0",
+              "word": "0x7fb10080",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2e4",
+              "word": "0x245e5a38",
+              "gpr_written": 30
+            },
+            {
+              "address": "0x39b2e8",
+              "word": "0xffbf0000",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2ec",
+              "word": "0x3c02ffff",
+              "gpr_written": 2
+            },
+            {
+              "address": "0x39b2f0",
+              "word": "0x7fb40050",
+              "gpr_written": null
+            },
+            {
+              "address": "0x39b2f4",
+              "word": "0x3442fffc",
+              "gpr_written": 2
+            },
+            {
+              "address": "0x39b2f8",
+              "word": "0x8fd40008",
+              "gpr_written": 20
+            },
+            {
+              "address": "0x39b2fc",
+              "word": "0xdcc35e48",
+              "gpr_written": 3
+            },
+            {
+              "address": "0x39b300",
+              "word": "0x8e860004",
+              "gpr_written": 6
+            },
+            {
+              "address": "0x39b304",
+              "word": "0xa3282d",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b308",
+              "word": "0xc29824",
+              "gpr_written": 19
+            },
+            {
+              "address": "0x39b30c",
+              "word": "0x64a50010",
+              "gpr_written": 5
+            }
+          ]
+        },
+        {
+          "symbol": "__malloc_current_mallinfo",
+          "address": "0x405e68",
+          "high_instruction": "0x39b368",
+          "low_instruction": "0x39b36c",
+          "high_word": "0x3c020040",
+          "low_word": "0x8c435e68",
+          "intervening_words": []
+        },
+        {
+          "symbol": "__malloc_max_sbrked_mem",
+          "address": "0x405e58",
+          "high_instruction": "0x39b4a0",
+          "low_instruction": "0x39b4a8",
+          "high_word": "0x3c040040",
+          "low_word": "0xdc825e58",
+          "intervening_words": [
+            {
+              "address": "0x39b4a4",
+              "word": "0x8c435e68",
+              "gpr_written": 3
+            }
+          ]
+        },
+        {
+          "symbol": "__malloc_max_total_mem",
+          "address": "0x405e60",
+          "high_instruction": "0x39b4b8",
+          "low_instruction": "0x39b4c4",
+          "high_word": "0x3c040040",
+          "low_word": "0xdc825e60",
+          "intervening_words": [
+            {
+              "address": "0x39b4bc",
+              "word": "0x3c050040",
+              "gpr_written": 5
+            },
+            {
+              "address": "0x39b4c0",
+              "word": "0x8ca35e68",
+              "gpr_written": 3
+            }
+          ]
+        }
+      ],
+      "writable_data_identity_evidence": [
+        {
+          "compiler_profile": "gcc29",
+          "address": "0x00405A38",
+          "size": 1032,
+          "original_sha256": "287056327f3f3f3dfafd0a82dc605a6de8187450c647bc5ebb94aa53989dffd4",
+          "actual_linked_sha256": "287056327f3f3f3dfafd0a82dc605a6de8187450c647bc5ebb94aa53989dffd4",
+          "other_globals": [
+            {
+              "name": "__malloc_trim_threshold",
+              "address": "0x405e40",
+              "size": 8,
+              "original_sha256": "446bfbd9ec163187d37929dc2e44cc86f8403d574c2d841c9a5e4f3b5a0c20e3"
+            },
+            {
+              "name": "__malloc_top_pad",
+              "address": "0x405e48",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_sbrk_base",
+              "address": "0x405e50",
+              "size": 4,
+              "original_sha256": "ad95131bc0b799c0b1af477fb14fcf26a6a9f76079e48bf090acb7e8367bfd0e"
+            },
+            {
+              "name": "__malloc_max_sbrked_mem",
+              "address": "0x405e58",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_max_total_mem",
+              "address": "0x405e60",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_current_mallinfo",
+              "address": "0x405e68",
+              "size": 40,
+              "original_sha256": "2c34ce1df23b838c5abf2a7f6437cca3d3067ed509ff25f11df6b11b582b51eb"
+            }
+          ],
+          "evidence": "Whole authentic writable bin initializer linked unchanged at its actual original VMA. Every one of256 self R_MIPS_32 entries and all1032 output bytes match. Identity-only; no decomp readonly mapper, initialization edits or data progress award."
+        },
+        {
+          "compiler_profile": "gcc323",
+          "address": "0x00405A38",
+          "size": 1032,
+          "original_sha256": "287056327f3f3f3dfafd0a82dc605a6de8187450c647bc5ebb94aa53989dffd4",
+          "actual_linked_sha256": "287056327f3f3f3dfafd0a82dc605a6de8187450c647bc5ebb94aa53989dffd4",
+          "other_globals": [
+            {
+              "name": "__malloc_trim_threshold",
+              "address": "0x405e40",
+              "size": 8,
+              "original_sha256": "446bfbd9ec163187d37929dc2e44cc86f8403d574c2d841c9a5e4f3b5a0c20e3"
+            },
+            {
+              "name": "__malloc_top_pad",
+              "address": "0x405e48",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_sbrk_base",
+              "address": "0x405e50",
+              "size": 4,
+              "original_sha256": "ad95131bc0b799c0b1af477fb14fcf26a6a9f76079e48bf090acb7e8367bfd0e"
+            },
+            {
+              "name": "__malloc_max_sbrked_mem",
+              "address": "0x405e58",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_max_total_mem",
+              "address": "0x405e60",
+              "size": 8,
+              "original_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "name": "__malloc_current_mallinfo",
+              "address": "0x405e68",
+              "size": 40,
+              "original_sha256": "2c34ce1df23b838c5abf2a7f6437cca3d3067ed509ff25f11df6b11b582b51eb"
+            }
+          ],
+          "evidence": "Whole authentic writable bin initializer linked unchanged at its actual original VMA. Every one of256 self R_MIPS_32 entries and all1032 output bytes match. Identity-only; no decomp readonly mapper, initialization edits or data progress award."
+        }
+      ]
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

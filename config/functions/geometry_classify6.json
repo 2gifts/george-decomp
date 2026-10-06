@@ -1,0 +1,447 @@
+{
+  "functions": [
+    {
+      "name": "func_002A4808",
+      "address": "0x002A4808",
+      "size": 228,
+      "source": "src/game/geometry_classify6.c",
+      "file_offset": "0x1a5808",
+      "original_sha256": "8e477017db6f24336be8454c9b5b05b02717df1d3da0e5e87365118e84f72a6e",
+      "profile_comparisons": {
+        "gcc323": {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 192,
+            "different_bytes": 173,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e477017db6f24336be8454c9b5b05b02717df1d3da0e5e87365118e84f72a6e",
+            "compiled_sha256": "35aa366180c29de09a4eeec5ddf6fa9c8ac0e33d3d52c94b56ca64f837a192ab"
+          }
+        },
+        "gcc29": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 196,
+            "different_bytes": 173,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e477017db6f24336be8454c9b5b05b02717df1d3da0e5e87365118e84f72a6e",
+            "compiled_sha256": "914217d161da5eabb500e80a617622d709779873b52cf9c611ca2db89a77f490"
+          }
+        },
+        "gcc29_save128": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 196,
+            "different_bytes": 166,
+            "first_different_offsets": [
+              4,
+              6,
+              8,
+              10,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e477017db6f24336be8454c9b5b05b02717df1d3da0e5e87365118e84f72a6e",
+            "compiled_sha256": "ff5dfd16b14476c9b937af2b95d868bc90f21c77d7e90709b419bfaada1d10bc"
+          }
+        }
+      },
+      "template_identity": {
+        "reference": "func_002A4678",
+        "instruction_differences": [
+          {
+            "offset": "0x2c",
+            "original_five_face_word": "0x24140003",
+            "original_six_face_word": "0x24140004"
+          },
+          {
+            "offset": "0x7c",
+            "original_five_face_word": "0x2e220005",
+            "original_six_face_word": "0x2e220006"
+          },
+          {
+            "offset": "0xa0",
+            "original_five_face_word": "0x2e220005",
+            "original_six_face_word": "0x2e220006"
+          }
+        ],
+        "evidence": "Complete equal-size bodies identical except genuine immediate3->4 crossing eligibility and5->6 face counts."
+      },
+      "source_name": "func_002A4808",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 228,
+        "compiled_size": 196,
+        "different_bytes": 166,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "8e477017db6f24336be8454c9b5b05b02717df1d3da0e5e87365118e84f72a6e",
+        "compiled_sha256": "ff5dfd16b14476c9b937af2b95d868bc90f21c77d7e90709b419bfaada1d10bc"
+      },
+      "entry_references": [
+        {
+          "instruction_address": "0x20ed3c",
+          "caller": "func_0020ECA0",
+          "full_caller": {
+            "address": "0x20eca0",
+            "size": 208,
+            "original_sha256": "b3dec84db947b3e75e942a36de28ad03c27d28c59946d58bcc7da7038334d658",
+            "excluded_alignment": 0
+          }
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "address": "0x2a4858",
+          "target": "0x2a4894",
+          "word": "0x1076000e"
+        },
+        {
+          "address": "0x2a4860",
+          "target": "0x2a4878",
+          "word": "0x10400005"
+        },
+        {
+          "address": "0x2a4868",
+          "target": "0x2a4888",
+          "word": "0x10600007"
+        },
+        {
+          "address": "0x2a4870",
+          "target": "0x2a48a8",
+          "word": "0x1000000d"
+        },
+        {
+          "address": "0x2a4878",
+          "target": "0x2a489c",
+          "word": "0x10750008"
+        },
+        {
+          "address": "0x2a4880",
+          "target": "0x2a48ac",
+          "word": "0x1000000a"
+        },
+        {
+          "address": "0x2a488c",
+          "target": "0x2a48a4",
+          "word": "0x10000005"
+        },
+        {
+          "address": "0x2a4894",
+          "target": "0x2a48a4",
+          "word": "0x10000003"
+        },
+        {
+          "address": "0x2a489c",
+          "target": "0x2a48c4",
+          "word": "0x10000009"
+        },
+        {
+          "address": "0x2a48ac",
+          "target": "0x2a4848",
+          "word": "0x1440ffe6"
+        }
+      ],
+      "direct_callee_evidence": [
+        {
+          "address": "0x2a484c",
+          "target": "0x29e098",
+          "word": "0xc0a7826"
+        }
+      ],
+      "return_evidence": [
+        {
+          "address": "0x2a48e4",
+          "delay_address": "0x2a48e8",
+          "delay_word": "0x27bd0080"
+        }
+      ],
+      "boundary_evidence": "Complete original entry through terminal JR31 and its delay slot; all local branches bounded. Four-byte zero alignment excluded. Full encoded entry JAL and whole containing caller independently audited.",
+      "evidence": "Ordinary C frame/sphere template reuse after full five/six body proof. Six28B faces, crossing eligible only at indices0..4; strict gates and captured inputs preserved. Parent and independent agent read all98 original instructions/source/header/native; six genuine whole links zero unresolved/nonexact."
+    },
+    {
+      "name": "func_002A48F0",
+      "address": "0x002A48F0",
+      "size": 164,
+      "source": "src/game/geometry_classify6.c",
+      "file_offset": "0x1a58f0",
+      "original_sha256": "cf7dd14e2a47f10f89e8c4ec15a0cf175b4099b20f0630bbd4ebbba17f63107d",
+      "profile_comparisons": {
+        "gcc323": {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 164,
+            "compiled_size": 168,
+            "different_bytes": 101,
+            "first_different_offsets": [
+              2,
+              5,
+              8,
+              10,
+              13,
+              16,
+              17,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cf7dd14e2a47f10f89e8c4ec15a0cf175b4099b20f0630bbd4ebbba17f63107d",
+            "compiled_sha256": "fec3ba2f1eef47b52e1f19d27042d6035f081425abc19633c190b6cd796d4b2b"
+          }
+        },
+        "gcc29": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 164,
+            "compiled_size": 164,
+            "different_bytes": 9,
+            "first_different_offsets": [
+              0,
+              2,
+              8,
+              10,
+              16,
+              24,
+              41,
+              49
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cf7dd14e2a47f10f89e8c4ec15a0cf175b4099b20f0630bbd4ebbba17f63107d",
+            "compiled_sha256": "08da950c74d50e1020278dfe7153ba6dfee98af472d476e850b233160e333963"
+          }
+        },
+        "gcc29_save128": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 164,
+            "compiled_size": 164,
+            "different_bytes": 9,
+            "first_different_offsets": [
+              0,
+              2,
+              8,
+              10,
+              16,
+              24,
+              41,
+              49
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cf7dd14e2a47f10f89e8c4ec15a0cf175b4099b20f0630bbd4ebbba17f63107d",
+            "compiled_sha256": "08da950c74d50e1020278dfe7153ba6dfee98af472d476e850b233160e333963"
+          }
+        }
+      },
+      "template_identity": {
+        "reference": "func_002A4760",
+        "instruction_differences": [
+          {
+            "offset": "0x14",
+            "original_five_face_word": "0x24080003",
+            "original_six_face_word": "0x24080004"
+          },
+          {
+            "offset": "0x84",
+            "original_five_face_word": "0x2ce20005",
+            "original_six_face_word": "0x2ce20006"
+          }
+        ],
+        "evidence": "Complete equal-size bodies identical except genuine immediate3->4 crossing eligibility and5->6 face counts."
+      },
+      "source_name": "func_002A48F0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 164,
+        "compiled_size": 164,
+        "different_bytes": 9,
+        "first_different_offsets": [
+          0,
+          2,
+          8,
+          10,
+          16,
+          24,
+          41,
+          49
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "cf7dd14e2a47f10f89e8c4ec15a0cf175b4099b20f0630bbd4ebbba17f63107d",
+        "compiled_sha256": "08da950c74d50e1020278dfe7153ba6dfee98af472d476e850b233160e333963"
+      },
+      "entry_references": [
+        {
+          "instruction_address": "0x20ed0c",
+          "caller": "func_0020ECA0",
+          "full_caller": {
+            "address": "0x20eca0",
+            "size": 208,
+            "original_sha256": "b3dec84db947b3e75e942a36de28ad03c27d28c59946d58bcc7da7038334d658",
+            "excluded_alignment": 0
+          }
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "address": "0x2a4940",
+          "target": "0x2a4950",
+          "word": "0x45020003"
+        },
+        {
+          "address": "0x2a4958",
+          "target": "0x2a496c",
+          "word": "0x45000004"
+        },
+        {
+          "address": "0x2a4964",
+          "target": "0x2a4970",
+          "word": "0x10000002"
+        },
+        {
+          "address": "0x2a4978",
+          "target": "0x2a4910",
+          "word": "0x1440ffe5"
+        }
+      ],
+      "direct_callee_evidence": [],
+      "return_evidence": [
+        {
+          "address": "0x2a4948",
+          "delay_address": "0x2a494c",
+          "delay_word": "0x102d"
+        },
+        {
+          "address": "0x2a498c",
+          "delay_address": "0x2a4990",
+          "delay_word": "0x64100a"
+        }
+      ],
+      "boundary_evidence": "Complete original entry through terminal JR31 and its delay slot; all local branches bounded. Four-byte zero alignment excluded. Full encoded entry JAL and whole containing caller independently audited.",
+      "evidence": "Ordinary C frame/sphere template reuse after full five/six body proof. Six28B faces, crossing eligible only at indices0..4; strict gates and captured inputs preserved. Parent and independent agent read all98 original instructions/source/header/native; six genuine whole links zero unresolved/nonexact."
+    }
+  ],
+  "schema_version": 1,
+  "notes": [
+    "Two complete six-face classifiers,392 original bytes/98 instructions. Shared ordinary C templates reuse reviewed five-face source; entire equal-size originals differ only in five genuine immediates.",
+    "All15 prior whole linked comparison dictionaries including hashes reproduce unchanged after template extraction. Six new whole links zero unresolved and zero exact matches; no instruction editing or matching masks.",
+    "Independent full original/source/native review passed. New native39255 finite dyadic/helper-contract checks; prior94656 checks unchanged. Host models do not certify EE FCR, arbitrary special values or hardware behavior."
+  ]
+}

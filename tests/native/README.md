@@ -257,3 +257,20 @@ original-instruction fixtures across every four-byte input/output overlap shift
 from -60 through +60 and disjoint output. Run it with --harness matrix_rigid.
 Three scoped guards cover code/memory, operands and return/delay transfers. See
 docs/matrix_rigid.md for finite host arithmetic and caller storage limits.
+
+Run .venv/Scripts/python.exe tests/native/run_actor_states8.py for 1,341
+asset-free checks of all 17 state39-41 members and connected callbacks/controls.
+Independent reviews preserve lifecycle stores, fresh predicates, signed phase
+gates, vector aliases and ballistic snapshots. See docs/actor_states8.md.
+
+Run --harness geometry_classify6 for 39,255 finite dyadic and helper-call checks
+of both complete six-face classifiers. Shared ordinary C templates preserve all
+15 prior five-face comparison hashes and 94,656 existing native checks. See
+docs/geometry_classify6.md for strict gates and host/EE arithmetic limits.
+
+Run --harness property_hierarchy for 100,057 exact word/event checks against
+153 authored graphs executing 15,132 original instructions. The runner compiles
+production property_hierarchy.c as a separate translation unit. The native
+substring adapter includes the unchanged tracked newlib source. Six guards
+check original body/call/return/memory scopes and reused opcode restrictions.
+See docs/property_hierarchy.md for captured successors and capacity overshoot.

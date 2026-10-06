@@ -1,5 +1,6 @@
 #include "george/geometry_classify.h"
 #include "geometry_classify_template.h"
+#include "geometry_classify_frame_template.h"
 
 /* The established 64-bit soft arithmetic representation is an integer bit
  * pattern, passed in one EE register. Host tests substitute these calls. */
@@ -14,32 +15,8 @@ extern float func_003734F8(GeometryBits64 value);
 GEORGE_DEFINE_FACE_BOX_CLASSIFY(func_002A3CA0, 5, 3)
 GEORGE_DEFINE_FACE_BOX_CLASSIFY(func_002A4520, 6, 4)
 
-u32 func_002A4678(const GeorgeGeometryFace *faces, const GeorgeGeometryFrame *frame)
-{
-    u32 flags = 0, index;
-    for (index = 0; index < 5; ++index, ++faces) {
-        s32 result = (s32)func_0029E098(frame, faces);
-        if (result == 1) flags |= 1;
-        else if (result == 0) { if (index <= 3) flags |= 2; }
-        else if (result == 2) return 0;
-    }
-    return (flags & 2) ? 2 : 1;
-}
-
-u32 func_002A4760(const GeorgeGeometryFace *faces, const GeorgeMathVec4 *sphere)
-{
-    float radius = sphere->w;
-    float x = sphere->x, y = sphere->y, z = sphere->z;
-    u32 flags = 0, index;
-    for (index = 0; index < 5; ++index, ++faces) {
-        float value = ((x * faces->normal.x + y * faces->normal.y) +
-                       z * faces->normal.z) - faces->distance;
-        if (radius < value) return 0;
-        if (-radius < value) { if (index <= 3) flags |= 2; }
-        else flags |= 1;
-    }
-    return (flags & 2) ? 2 : 1;
-}
+GEORGE_DEFINE_FACE_FRAME_CLASSIFY(func_002A4678, 5, 3)
+GEORGE_DEFINE_FACE_SPHERE_CLASSIFY(func_002A4760, 5, 3)
 
 #if defined(__GNUC__)
 #define CLASSIFY_INLINE static __inline__ __attribute__((always_inline))
