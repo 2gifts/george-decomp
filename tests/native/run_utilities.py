@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "rotation": ["src/game/rotation.c"],
+    "pad_device": ["src/game/pad_device.c"],
     "pad_input": ["src/game/pad_input.c"],
     "input_state": ["src/game/input_state.c"],
     "heap": ["src/game/heap.c"],

@@ -136,6 +136,8 @@ class Trace:
                     self.f[fd] = rounded(math.sqrt(self.f[ft]))
                 elif fn == 6:
                     self.f[fd] = self.f[fs]
+                elif fn == 7:
+                    self.f[fd] = -self.f[fs]
                 elif fn == 0x32:
                     self.condition = self.f[fs] == self.f[ft]
                 else:
@@ -147,8 +149,8 @@ class Trace:
         self.r[0] = 0
         return target, annul
 
-    def run(self):
-        pc = ENTRY
+    def run(self, entry=ENTRY):
+        pc = entry
         while pc != RETURN:
             target, annul = self.execute(self.fetch(pc), pc)
             if target is not None:

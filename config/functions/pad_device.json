@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Coherent4-function pad-device batch totals1820 original bytes. Nullable delta getter2B2ED8 matches complete72B under both pinned profiles; the other three remain reconstructed.",
+    "Retail78-word readonly switch table at447530 was independently hashed and grouped. Source keeps the full natural switch; compiler-local code pointers remain unsupported by the strict mapper, so main reader is reconstructed link:false and no relocations are masked.",
+    "Pinned official m2c drafts assisted reconstruction; the main draft was supplied only independently validated internal labels plus the original derived table in ignored research files. All tracked C was manually typed and instruction-reviewed, with no generated placeholders or assembly fallback.",
+    "SDK implementation sources are not imported or counted. Twelve observed SDK-facing entry addresses and argument shapes are retained. The engine wrapper uses a refined shared384-byte record layout and existing pad_input caller/header.",
+    "Native32-bit harness passed4047 checks for state cases/defaults, signed SDK returns, repeated requests, callback mutations/wrapped increments, initialization field preservation and open ordering, buttons/axes/pressure decoding, shifted pressure/delta/getter aliases and motor narrowing.",
+    "Original local packet is not initialized when SDKstatus2/6 and kind<=0 bypass SDKread. Packet-type and any subsequently exposed packet reads are indeterminate on that path; native deterministic fixtures avoid it and no zero was invented.",
+    "Connected pad_input native harness rerun passed610739 checks after shared layout refinement; canonical target recipes preserve numeric callee addresses."
+  ],
+  "functions": [
+    {
+      "name": "func_002B2800",
+      "address": "0x002B2800",
+      "file_offset": "0x001B3800",
+      "size": 1376,
+      "source": "src/game/pad_device.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6148019f69bdab1bb569f9c93c0f4fe50e92c7de63d9c3ad3127b102c0ded29c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": false,
+      "evidence": "Complete78-entry pad connection state machine, repeated request calls and fresh callback state reloads; wraps update counter, decodes active-low buttons, signed axes/deltas, interleaved pressure outputs and fresh final kind. Original packet remains indeterminate if connected SDK status accompanies nonpositive kind and skips reading.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 1376,
+        "compiled_size": 1360,
+        "different_bytes": 1089,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [
+          108,
+          152,
+          156,
+          208,
+          236,
+          332,
+          372,
+          392,
+          432,
+          476,
+          500,
+          532,
+          556,
+          596,
+          624,
+          660,
+          700,
+          740,
+          880
+        ],
+        "expected_sha256": "6148019f69bdab1bb569f9c93c0f4fe50e92c7de63d9c3ad3127b102c0ded29c",
+        "compiled_sha256": "56c7d8b8d03cf7a4974218646dfdb756f8501112e3ca6357537ceb82ef2df3ff"
+      },
+      "link_blocker": "Unmapped local data/constant section: .rodata; natural compiler switch data references internal code labels unsupported by the conservative mapper.",
+      "jump_table_evidence": {
+        "address": "0x447530",
+        "file_offset": "0x348530",
+        "size": 312,
+        "section": ".rodata",
+        "sha256": "0c947dda92650b8efe1c2dd22551a487e973e4511436c840c4fdf1ce0bbae436",
+        "targets": {
+          "0x2b28ac": [
+            0
+          ],
+          "0x2b2934": [
+            40
+          ],
+          "0x2b295c": [
+            41
+          ],
+          "0x2b2978": [
+            42
+          ],
+          "0x2b29c0": [
+            70
+          ],
+          "0x2b2a10": [
+            71
+          ],
+          "0x2b2a50": [
+            72
+          ],
+          "0x2b2a80": [
+            76
+          ],
+          "0x2b2aa8": [
+            77
+          ],
+          "0x2b2af0": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            73,
+            74,
+            75
+          ]
+        },
+        "entry_count": 78
+      }
+    },
+    {
+      "name": "func_002B2D60",
+      "address": "0x002B2D60",
+      "file_offset": "0x001B3D60",
+      "size": 68,
+      "source": "src/game/pad_device.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "84c9b4f56d224e312733dcc742181f6cde59332b41df83d766da181ce3049dfd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Signed kind>=2 gate; small motor from full signed positivity, large motor narrowed tobyte; only first two motor bytes changed before original SDK sender.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 68,
+        "compiled_size": 68,
+        "different_bytes": 40,
+        "first_different_offsets": [
+          4,
+          5,
+          6,
+          7,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "84c9b4f56d224e312733dcc742181f6cde59332b41df83d766da181ce3049dfd",
+        "compiled_sha256": "bb75dcf67aa97d288292db8ad201bf094ff6117064fb56d7153ae61e902019c4"
+      }
+    },
+    {
+      "name": "func_002B2DA8",
+      "address": "0x002B2DA8",
+      "file_offset": "0x001B3DA8",
+      "size": 304,
+      "source": "src/game/pad_device.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5c0af12be1709d1d957708081dfea890095464a374a6f365f45cac2309b73e04",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Initialize six interleaved motor/actuator pairs, twelve reverse pressure bytes and observed fields; preserve kind/unmodeled bytes; one-time SDK setup and captured result; captured port/slot passed to open despite callback mutation, word/counters cleared after open.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 304,
+        "compiled_size": 296,
+        "different_bytes": 215,
+        "first_different_offsets": [
+          8,
+          11,
+          16,
+          18,
+          19,
+          21,
+          22,
+          23
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "5c0af12be1709d1d957708081dfea890095464a374a6f365f45cac2309b73e04",
+        "compiled_sha256": "d5f3c2a74397a6d92c4dfdf7279787768383032aa257ed8413b6bca680e1140c"
+      }
+    },
+    {
+      "name": "func_002B2ED8",
+      "address": "0x002B2ED8",
+      "file_offset": "0x001B3ED8",
+      "size": 72,
+      "source": "src/game/pad_device.c",
+      "compiler_profile": "gcc323",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "complete_linked_bytes",
+      "original_sha256": "fd0c75fa3c09a4df296716d62ec6cbc8b1df18c7f989f41653acabc1b48dc3a6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Four nullable u16 outputs read observed s16 delta slots in order; fresh later reads preserve shifted aliases. Complete72-byte code matches after original-address linking under both pinned profiles.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 72,
+        "compiled_size": 72,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "fd0c75fa3c09a4df296716d62ec6cbc8b1df18c7f989f41653acabc1b48dc3a6",
+        "compiled_sha256": "fd0c75fa3c09a4df296716d62ec6cbc8b1df18c7f989f41653acabc1b48dc3a6"
+      }
+    }
+  ]
+}

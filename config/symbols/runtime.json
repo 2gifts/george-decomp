@@ -33,14 +33,14 @@
       "evidence": "fmodf call target, exponent-mask subtract sign-bit algorithm and unchanged newlib1.8.1 source agree; no high-level byte match awarded yet."
     },
     "fptodp": {
-      "address": "0x374848",
-      "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "address": "0x00374848",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (64 bytes)."
     },
     "dptofp": {
-      "address": "0x3734f8",
-      "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "address": "0x003734F8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (84 bytes)."
     },
     "matherr": {
       "address": "0x37db30",
@@ -63,9 +63,9 @@
       "evidence": "Complete sign/exponent bit manipulation agrees with unchanged newlib1.8.1 finitef; no high-level byte match awarded yet."
     },
     "dpcmp": {
-      "address": "0x373250",
-      "confidence": "confirmed",
-      "evidence": "Compiler-generated soft-double comparison helper binding from exact linked newlib matherr; both double operands are x->arg1."
+      "address": "0x00373250",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (76 bytes)."
     },
     "floorf": {
       "address": "0x37dda0",
@@ -159,9 +159,9 @@
       "evidence": "Original locale implementation writes8 for C-JIS,2 for longer locale names,1 for C/empty; initialized writable source data agrees exactly."
     },
     "dpadd": {
-      "address": "0x372c68",
-      "confidence": "corroborated",
-      "evidence": "Complete floor source identity associates huge+x and special-value x+x original calls with soft-double add."
+      "address": "0x00372C68",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (88 bytes)."
     },
     "dpmul": {
       "address": "0x372d28",
@@ -174,9 +174,9 @@
       "evidence": "Complete double fmod exceptional source path divides its two independently computed x*y results by this helper."
     },
     "dpsub": {
-      "address": "0x372cc0",
-      "confidence": "corroborated",
-      "evidence": "Complete retail goal-state method reviewed by recover_code uses this helper on two full64 soft-double operands; call role is double subtraction. No source or byte identity claimed."
+      "address": "0x00372CC0",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (100 bytes)."
     },
     "__kernel_sinf": {
       "address": "0x0037D790",
@@ -266,6 +266,66 @@
       "address": "0x0037BF40",
       "confidence": "corroborated",
       "evidence": "Complete2188-byte power core agrees: y=zero first, NaN x+y, negative-base odd/even integer classification, infinity/one/two/half exponents and software sqrt call, zero/infinity/one bases, nonintegral negative-base NaN, huge-y near-one polynomial, subnormal scaling, interval splits, compensated log2 polynomial with exact coefficients and arrays, sign, split y product, overflow128 and underflow-150 boundaries, fractional exp reconstruction and subnormal scalbnf return. Whole136-byte bp/dp/constants readonly section uniquely equals retail and genuinely links. Four subsequent zero alignment bytes are excluded."
+    },
+    "__pack_d": {
+      "address": "0x00372858",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (300 bytes)."
+    },
+    "__unpack_d": {
+      "address": "0x00372988",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (156 bytes)."
+    },
+    "__fpcmp_parts_d": {
+      "address": "0x00373138",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (276 bytes)."
+    },
+    "litodp": {
+      "address": "0x003732A0",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (184 bytes)."
+    },
+    "dptoli": {
+      "address": "0x00373358",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (148 bytes)."
+    },
+    "dptoul": {
+      "address": "0x003733F0",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (160 bytes)."
+    },
+    "__make_dp": {
+      "address": "0x003734C8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation, direct JAL entry proof and complete independent linked byte equality (44 bytes)."
+    },
+    "__pack_f": {
+      "address": "0x00373CA8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (268 bytes)."
+    },
+    "__unpack_f": {
+      "address": "0x00373DB8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (144 bytes)."
+    },
+    "__fpcmp_parts_f": {
+      "address": "0x00374498",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (276 bytes)."
+    },
+    "fptoui": {
+      "address": "0x00374748",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (152 bytes)."
+    },
+    "__make_fp": {
+      "address": "0x00374818",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (44 bytes)."
     }
   }
 }

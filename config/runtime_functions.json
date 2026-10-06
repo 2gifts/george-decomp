@@ -1817,6 +1817,1106 @@
           "compiled_sha256": "f2da9245b3003116a6a29f754e39692da98985987bb54d7ec7b07d8d671937b8"
         }
       ]
+    },
+    {
+      "name": "__pack_d",
+      "address": "0x00372858",
+      "file_offset": "0x00273858",
+      "size": 300,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "0459859b66d07c43685a7692eb1192893d3f7635200c01bc7fd4efd2404c45e5",
+      "upstream_symbol": "__pack_d",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 7,
+        "reference_addresses": [
+          "0x00372CA8",
+          "0x00372D0C",
+          "0x00372F9C",
+          "0x00373120"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 300,
+          "compiled_size": 300,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "0459859b66d07c43685a7692eb1192893d3f7635200c01bc7fd4efd2404c45e5",
+          "compiled_sha256": "0459859b66d07c43685a7692eb1192893d3f7635200c01bc7fd4efd2404c45e5"
+        }
+      ]
+    },
+    {
+      "name": "__unpack_d",
+      "address": "0x00372988",
+      "file_offset": "0x00273988",
+      "size": 156,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "0e562684d41ea3af7e669162bb20c14562660e444f820ac613d567eeeca6b732",
+      "upstream_symbol": "__unpack_d",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 14,
+        "reference_addresses": [
+          "0x00372C80",
+          "0x00372C90",
+          "0x00372CD8",
+          "0x00372CE8"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 156,
+          "compiled_size": 156,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "0e562684d41ea3af7e669162bb20c14562660e444f820ac613d567eeeca6b732",
+          "compiled_sha256": "0e562684d41ea3af7e669162bb20c14562660e444f820ac613d567eeeca6b732"
+        }
+      ]
+    },
+    {
+      "name": "dpadd",
+      "address": "0x00372C68",
+      "file_offset": "0x00273C68",
+      "size": 88,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "f2f2b50bda8f60a39b1f9c4b771cab857606d3c640c7db4c1f09a55474a2cf42",
+      "upstream_symbol": "dpadd",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 90,
+        "reference_addresses": [
+          "0x0011991C",
+          "0x0015B81C",
+          "0x0015B854",
+          "0x00182D64"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 88,
+          "compiled_size": 88,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "f2f2b50bda8f60a39b1f9c4b771cab857606d3c640c7db4c1f09a55474a2cf42",
+          "compiled_sha256": "f2f2b50bda8f60a39b1f9c4b771cab857606d3c640c7db4c1f09a55474a2cf42"
+        }
+      ],
+      "link_symbols": {
+        "_fpadd_parts": {
+          "address": "0x00372A28",
+          "evidence": "Both original wrappers call this common parts-adder between independently exact unpack/pack functions. Unchanged double-precision source declares it file-local; its classification/sign/normalization algorithm identifies the common call target. Not counted as a matched function."
+        }
+      }
+    },
+    {
+      "name": "dpsub",
+      "address": "0x00372CC0",
+      "file_offset": "0x00273CC0",
+      "size": 100,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "dfa2db669262ae94a58bbbdbb118c92d20f2336d558ba132c0b928e8e839eae0",
+      "upstream_symbol": "dpsub",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 429,
+        "reference_addresses": [
+          "0x00108290",
+          "0x001082E4",
+          "0x00108328",
+          "0x0010836C"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 100,
+          "compiled_size": 100,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "dfa2db669262ae94a58bbbdbb118c92d20f2336d558ba132c0b928e8e839eae0",
+          "compiled_sha256": "dfa2db669262ae94a58bbbdbb118c92d20f2336d558ba132c0b928e8e839eae0"
+        }
+      ],
+      "link_symbols": {
+        "_fpadd_parts": {
+          "address": "0x00372A28",
+          "evidence": "Both original wrappers call this common parts-adder between independently exact unpack/pack functions. Unchanged double-precision source declares it file-local; its classification/sign/normalization algorithm identifies the common call target. Not counted as a matched function."
+        }
+      }
+    },
+    {
+      "name": "__fpcmp_parts_d",
+      "address": "0x00373138",
+      "file_offset": "0x00274138",
+      "size": 276,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "c1191fa287c046a4f86569cf0bb1305002b30fe5fb8fbb3f6fd3dc714639663f",
+      "upstream_symbol": "__fpcmp_parts_d",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x00373284"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 276,
+          "compiled_size": 276,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c1191fa287c046a4f86569cf0bb1305002b30fe5fb8fbb3f6fd3dc714639663f",
+          "compiled_sha256": "c1191fa287c046a4f86569cf0bb1305002b30fe5fb8fbb3f6fd3dc714639663f"
+        }
+      ]
+    },
+    {
+      "name": "dpcmp",
+      "address": "0x00373250",
+      "file_offset": "0x00274250",
+      "size": 76,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "4ed0022da1e7b9e817e88c398cbdc26e5f8f3ac2fb9a5ac952a722507bde9082",
+      "upstream_symbol": "dpcmp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 643,
+        "reference_addresses": [
+          "0x00108280",
+          "0x001082B0",
+          "0x001082D0",
+          "0x001082F4"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 76,
+          "compiled_size": 76,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "4ed0022da1e7b9e817e88c398cbdc26e5f8f3ac2fb9a5ac952a722507bde9082",
+          "compiled_sha256": "4ed0022da1e7b9e817e88c398cbdc26e5f8f3ac2fb9a5ac952a722507bde9082"
+        }
+      ]
+    },
+    {
+      "name": "litodp",
+      "address": "0x003732A0",
+      "file_offset": "0x002742A0",
+      "size": 184,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "f55e4a03ca3f32346d94ed3f352e422f371e8ce68810c51e7dd5ffbc85077f4e",
+      "upstream_symbol": "litodp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 29,
+        "reference_addresses": [
+          "0x002A92CC",
+          "0x002A981C",
+          "0x002A9BC8",
+          "0x002A9D04"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 184,
+          "compiled_size": 184,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "f55e4a03ca3f32346d94ed3f352e422f371e8ce68810c51e7dd5ffbc85077f4e",
+          "compiled_sha256": "f55e4a03ca3f32346d94ed3f352e422f371e8ce68810c51e7dd5ffbc85077f4e"
+        }
+      ]
+    },
+    {
+      "name": "dptoli",
+      "address": "0x00373358",
+      "file_offset": "0x00274358",
+      "size": 148,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "620fc65604810abec4c92c2b05f7cc8882b41a589d8e98b5a209ea7668ae4536",
+      "upstream_symbol": "dptoli",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 14,
+        "reference_addresses": [
+          "0x002A92F8",
+          "0x002A9848",
+          "0x002A9BF4",
+          "0x002A9D30"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 148,
+          "compiled_size": 148,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "620fc65604810abec4c92c2b05f7cc8882b41a589d8e98b5a209ea7668ae4536",
+          "compiled_sha256": "620fc65604810abec4c92c2b05f7cc8882b41a589d8e98b5a209ea7668ae4536"
+        }
+      ]
+    },
+    {
+      "name": "dptoul",
+      "address": "0x003733F0",
+      "file_offset": "0x002743F0",
+      "size": 160,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "a29c279665e28d7a727cffee5451177dcdab80aad692e728e3a2d11ef85b9a68",
+      "upstream_symbol": "dptoul",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 6,
+        "reference_addresses": [
+          "0x00371350",
+          "0x003713BC",
+          "0x003713D4",
+          "0x00371448"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 160,
+          "compiled_size": 160,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "a29c279665e28d7a727cffee5451177dcdab80aad692e728e3a2d11ef85b9a68",
+          "compiled_sha256": "a29c279665e28d7a727cffee5451177dcdab80aad692e728e3a2d11ef85b9a68"
+        }
+      ]
+    },
+    {
+      "name": "__make_dp",
+      "address": "0x003734C8",
+      "file_offset": "0x002744C8",
+      "size": 44,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "dac0b2916a2a3167283533635afe96a6c4ed7fbaf93076e58a706680a222e98e",
+      "upstream_symbol": "__make_dp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x00374874"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 44,
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "dac0b2916a2a3167283533635afe96a6c4ed7fbaf93076e58a706680a222e98e",
+          "compiled_sha256": "dac0b2916a2a3167283533635afe96a6c4ed7fbaf93076e58a706680a222e98e"
+        }
+      ]
+    },
+    {
+      "name": "dptofp",
+      "address": "0x003734F8",
+      "file_offset": "0x002744F8",
+      "size": 84,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "f341977ad79b159da4542eedc209f849c2ebd7d2b54e49182c6def08f5b095f6",
+      "upstream_symbol": "dptofp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the double-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 87,
+        "reference_addresses": [
+          "0x0015A028",
+          "0x0015B85C",
+          "0x0015BAF8",
+          "0x0015BCFC"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 84,
+          "compiled_size": 84,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "f341977ad79b159da4542eedc209f849c2ebd7d2b54e49182c6def08f5b095f6",
+          "compiled_sha256": "f341977ad79b159da4542eedc209f849c2ebd7d2b54e49182c6def08f5b095f6"
+        }
+      ]
+    },
+    {
+      "name": "__pack_f",
+      "address": "0x00373CA8",
+      "file_offset": "0x00274CA8",
+      "size": 268,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "a482b3df40c6e2cce5c69189a8bb8d0cb88aadcd45b190201c41de2d8f9262d2",
+      "upstream_symbol": "__pack_f",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 7,
+        "reference_addresses": [
+          "0x003740C0",
+          "0x00374124",
+          "0x0037431C",
+          "0x00374480"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 268,
+          "compiled_size": 268,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "a482b3df40c6e2cce5c69189a8bb8d0cb88aadcd45b190201c41de2d8f9262d2",
+          "compiled_sha256": "a482b3df40c6e2cce5c69189a8bb8d0cb88aadcd45b190201c41de2d8f9262d2"
+        }
+      ]
+    },
+    {
+      "name": "__unpack_f",
+      "address": "0x00373DB8",
+      "file_offset": "0x00274DB8",
+      "size": 144,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54",
+      "upstream_symbol": "__unpack_f",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 14,
+        "reference_addresses": [
+          "0x00374098",
+          "0x003740A8",
+          "0x003740F0",
+          "0x00374100"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 144,
+          "compiled_size": 144,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54",
+          "compiled_sha256": "8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54"
+        }
+      ]
+    },
+    {
+      "name": "__fpcmp_parts_f",
+      "address": "0x00374498",
+      "file_offset": "0x00275498",
+      "size": 276,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "e4722c6e6db41131f62dde2c12754b2d46000b78316a392c812f7915e307f60f",
+      "upstream_symbol": "__fpcmp_parts_f",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x003745E4"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 276,
+          "compiled_size": 276,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "e4722c6e6db41131f62dde2c12754b2d46000b78316a392c812f7915e307f60f",
+          "compiled_sha256": "e4722c6e6db41131f62dde2c12754b2d46000b78316a392c812f7915e307f60f"
+        }
+      ]
+    },
+    {
+      "name": "fptoui",
+      "address": "0x00374748",
+      "file_offset": "0x00275748",
+      "size": 152,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "65890cfbc29921a87f2de9e9d91d0bbeab347c0ccd514e93862bef71f1eaf7a2",
+      "upstream_symbol": "fptoui",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 49,
+        "reference_addresses": [
+          "0x001ACE1C",
+          "0x001BDEC0",
+          "0x001C2888",
+          "0x001C51AC"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 152,
+          "compiled_size": 152,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "65890cfbc29921a87f2de9e9d91d0bbeab347c0ccd514e93862bef71f1eaf7a2",
+          "compiled_sha256": "65890cfbc29921a87f2de9e9d91d0bbeab347c0ccd514e93862bef71f1eaf7a2"
+        }
+      ]
+    },
+    {
+      "name": "__make_fp",
+      "address": "0x00374818",
+      "file_offset": "0x00275818",
+      "size": 44,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "2b135ae0419a2584f3c9fbc4dd1bd8a292e7a98566c10373d70e4b7f04cb0e18",
+      "upstream_symbol": "__make_fp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 1,
+        "reference_addresses": [
+          "0x00373538"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 44,
+          "compiled_size": 44,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "2b135ae0419a2584f3c9fbc4dd1bd8a292e7a98566c10373d70e4b7f04cb0e18",
+          "compiled_sha256": "2b135ae0419a2584f3c9fbc4dd1bd8a292e7a98566c10373d70e4b7f04cb0e18"
+        }
+      ]
+    },
+    {
+      "name": "fptodp",
+      "address": "0x00374848",
+      "file_offset": "0x00275848",
+      "size": 64,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "90845880ee36da0bf73f680d9b4e167faf8111964a7ee813b753d3b79c66513a",
+      "upstream_symbol": "fptodp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Unchanged authentic GNU EE fp-bit.c compiled with the pinned public GCC29 profile and t-r5900 floating-point build defines. Entire independently sized function including all relocated calls exactly equals retail bytes after actual GNU linking. The source implements the single-precision runtime role and exact call graph; no instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Standalone compiled STT_FUNC size equals complete original entry-through-JR/return-delay extent. Decoded original JAL instructions establish entry references; original full hash, no overlap and no trailing alignment padding are checked.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 490,
+        "reference_addresses": [
+          "0x00108270",
+          "0x001082C0",
+          "0x00108304",
+          "0x00108348"
+        ]
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 64,
+          "compiled_size": 64,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "90845880ee36da0bf73f680d9b4e167faf8111964a7ee813b753d3b79c66513a",
+          "compiled_sha256": "90845880ee36da0bf73f680d9b4e167faf8111964a7ee813b753d3b79c66513a"
+        }
+      ]
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

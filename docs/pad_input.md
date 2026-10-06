@@ -24,8 +24,9 @@ startup at `002957E0` and already recovered destructor at `00295A78` are exclude
 Startup creates four mode-1 states, captures their four alias pointers before
 allocating a fifth mode-2 state, clears that fifth state's conversion request
 bits `18`, creates the key state, and initializes four 384-byte pad records.
-It preserves the retail unchecked allocation contract. The new record layout
-models only the connection-state word at `11C`; the SDK wrapper owns the rest.
+It preserves the retail unchecked allocation contract. The connected pad-device
+batch refines the shared 384-byte record layout around its SDK-owned DMA prefix;
+this poller uses only the connection-state word at `11C`.
 
 Polling always calls the pad reader and frame updater for each slot. Only
 connection state 99 enables the delta getter and input conversion. Kind 1 uses

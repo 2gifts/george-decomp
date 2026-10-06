@@ -59,6 +59,12 @@ callback-dependent state reloads. Run it with `--harness pad_input`; its 610,739
 checks include callee argument/sequence assertions. Pad and angle callees are
 controlled substitutes, and native square root is a finite host arithmetic model.
 
+The pad-device harness passes 4,047 checks for connection-state transitions,
+packet/button/axis/pressure decoding, repeated SDK queries, field preservation,
+callbacks and shifted outputs. Run it with `--harness pad_device`. Its SDK calls
+are controlled substitutes; original paths reading an uninitialized local
+packet are documented and excluded from deterministic fixtures.
+
 The geometry harness passes 783 checks for perspective-plane construction,
 zero extents and shifted frame/output aliases. Run it with `--harness geometry`.
 Its 13 synthetic golden fixtures reproduce from `tools/trace_geometry.py`, a
@@ -69,3 +75,13 @@ Run `tests/native/run_goal_methods4.py` for the drive and traffic batch's 383
 checks. They cover callback mutations, signed route bytes, queue budget reloads,
 geometry aliases and motion calls. See `docs/goal_methods4.md` for the recovered
 state contracts and remaining platform limitations.
+
+The rotation harness passes 2,530 checks for quaternion arithmetic, shifted
+aliases, callback mutations, trig/store ordering and retail fallback behavior.
+Run it with `--harness rotation`. Its 74 finite synthetic alias fixtures
+reproduce from `tools/trace_rotation.py`; see `docs/rotation.md` for the bounded
+reference and EE precision/FCR limits.
+
+Run `tests/native/run_goal_methods5.py` for the route/reference batch's 169
+checks, including persistent scoring flags, signed route modes, NaN timers,
+wide member adjustments and callback mutations. See `docs/goal_methods5.md`.

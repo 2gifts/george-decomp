@@ -15,8 +15,10 @@ and digit conversion behavior. Short generic wrappers can match uniquely by
 chance: a candidate named `_mallinfo_r` was rejected because its target has
 unrelated semantics. Scanner candidates alone do not establish function names.
 
-The ten verified functions checked into this repository were independently compiled or
-assembled, and their function bytes compared with the retail executable again:
+These ten earlier verified functions were independently compiled or assembled,
+and their complete function bytes compared with the retail executable again.
+The GNU floating-point runtime batch below adds seventeen further verified C
+functions from unchanged upstream source.
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
 | --- | --- | ---: | --- | --- | --- |
@@ -31,9 +33,10 @@ assembled, and their function bytes compared with the retail executable again:
 | `sinf` | `0x0037b0c0` | 240 | `src/runtime/sinf.c` | Upstream C | Exact under GCC 2.9 after linking reviewed kernels and reducer |
 | `tanf` | `0x0037b1b0` | 136 | `src/runtime/tanf.c` | Upstream C | Exact under GCC 2.9 after linking reviewed kernel and reducer |
 
-The 572 bytes of reused assembly must remain separate from high-level C
+The 572 bytes of reused assembly remain separate from high-level C
 decompilation progress. The 504 bytes of compiled `fabsf`, `atoi`, `matherr`,
-`__errno`, `_localeconv_r`, `sinf`, and `tanf` C are high-level source.
+`__errno`, `_localeconv_r`, `sinf`, and `tanf`, plus the 2,564 bytes of the GNU
+floating-point runtime batch below, total 3,068 bytes from 24 verified C functions.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -444,3 +447,78 @@ original instruction and the complete unchanged sources, including return
 delays, soft-double exception calls and all argument-reduction output branches.
 No identity or boundary defects were found. The data checker reproduces all
 sixteen complete constant identities from the pinned source files.
+
+## GNU EE software floating-point runtime
+
+Seventeen directly referenced runtime functions now reproduce 2,564 complete
+retail code bytes from one unchanged upstream C file, `src/runtime/fp_bit.c`.
+The source is pinned to the public GNU EE toolchain commit
+[`b595ded606227e93b8c4a447446c1d2ac093827d`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c).
+Its complete SHA256 is
+`c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190`.
+The original FSF copyright, GPL terms, unlimited permission to link the
+compiled file, and additional GCC linking exception are preserved verbatim.
+The two exception notices are also in `LICENSES/GCC-fp-bit-exception.txt`;
+the complete GPL text is in `LICENSES/GPL-2.0.txt`.
+
+The authentic [R5900 build recipe](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/mips/t-r5900#L14)
+defines `US_SOFTWARE_GOFAST` and `NO_DENORMALS`, and defines
+`FLOAT_BIT_ORDER_MISMATCH` for the little-endian target. The single-precision
+copy additionally defines `FLOAT`. The repository supplies these defines as
+per-function compiler flags while preserving the imported file unchanged.
+`NO_DENORMALS` reproduces the original unpackers' treatment of zero-exponent
+inputs as zero; it is part of the public EE recipe, not a match-specific source
+change. These routines implement numeric packing, comparison, arithmetic and
+integer/precision conversions without a floating-point exception-state API.
+
+| Symbol | Original address | Complete bytes | Precision |
+| --- | --- | ---: | --- |
+| `__pack_d` | `0x00372858` | 300 | Double |
+| `__unpack_d` | `0x00372988` | 156 | Double |
+| `dpadd` | `0x00372C68` | 88 | Double |
+| `dpsub` | `0x00372CC0` | 100 | Double |
+| `__fpcmp_parts_d` | `0x00373138` | 276 | Double |
+| `dpcmp` | `0x00373250` | 76 | Double |
+| `litodp` | `0x003732A0` | 184 | Double |
+| `dptoli` | `0x00373358` | 148 | Double |
+| `dptoul` | `0x003733F0` | 160 | Double |
+| `__make_dp` | `0x003734C8` | 44 | Double |
+| `dptofp` | `0x003734F8` | 84 | Double |
+| `__pack_f` | `0x00373CA8` | 268 | Single |
+| `__unpack_f` | `0x00373DB8` | 144 | Single |
+| `__fpcmp_parts_f` | `0x00374498` | 276 | Single |
+| `fptoui` | `0x00374748` | 152 | Single |
+| `__make_fp` | `0x00374818` | 44 | Single |
+| `fptodp` | `0x00374848` | 64 | Single |
+
+Every entry has real original decoded direct `JAL` references. Each unchanged
+source symbol is compiled with the pinned `gcc29` profile, independently sized
+by its ELF `STT_FUNC` symbol, and genuinely linked at its original address with
+the established runtime bindings. The complete resulting bytes, including all
+relocated calls and the return delay, match the retail SHA256. No relocation
+mask, instruction rewrite, or data replacement is used for awarding matches.
+These runtime matches identify a compatible recipe for these functions;
+they do not identify the compiler used for every game translation unit.
+
+The preliminary disassembly heuristic merges some adjacent library functions.
+For example, its 216-byte region at `0x003733F0` contains the complete 160-byte
+`dptoul` followed by a separate 56-byte negate helper. Only `dptoul` is currently
+registered there. `__fpcmp_parts_f` occupies 276 bytes of the heuristic's larger
+region at `0x00374498`. The manifest records the independently compiled
+complete function extents, decoded call entry proofs, original full hashes,
+and disjoint bounds; heuristic file length is not used as a function size.
+
+Both double arithmetic wrappers call the same file-local parts adder at
+`0x00372A28`. Their per-function binding records that address and its proven
+position between the exact unpack and pack calls. That helper remains
+uncounted. The whole imported source also compiles other routines; their mere
+presence in an object does not award recovery or matching progress. Seven
+further exact symbol-sized candidates without direct call references remain
+outside the manifest pending independent boundary and entry review. The
+current batch needs no mapped constant sections or writable-data exception.
+
+Root independently checked all seventeen original complete-body hashes,
+terminal returns and delay extents, every recorded direct-call entry, the
+unchanged source hash and complete linked comparisons. The full verifier
+reproduced all seventeen matches, and the hybrid build retained the retail
+executable SHA256 after their substitution.
