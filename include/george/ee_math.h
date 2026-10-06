@@ -3,6 +3,30 @@
 
 #include "george/types.h"
 
+/* EE MIN.S/MAX.S select signed encodings, reversing their ordering when both
+ * operands are negative. This value model preserves signed zero and nonfinite
+ * encodings, but does not model FCR cause flags. See docs/pad_input.md and the
+ * pinned public PCSX2 fp_min/fp_max evidence cited there. */
+static __inline__ float george_ee_minimum(float first, float second)
+{
+    union { float scalar; s32 signed_bits; u32 bits; } left, right;
+    left.scalar = first;
+    right.scalar = second;
+    if ((left.bits & right.bits & 0x80000000U) != 0)
+        return left.signed_bits > right.signed_bits ? first : second;
+    return left.signed_bits < right.signed_bits ? first : second;
+}
+
+static __inline__ float george_ee_maximum(float first, float second)
+{
+    union { float scalar; s32 signed_bits; u32 bits; } left, right;
+    left.scalar = first;
+    right.scalar = second;
+    if ((left.bits & right.bits & 0x80000000U) != 0)
+        return left.signed_bits < right.signed_bits ? first : second;
+    return left.signed_bits > right.signed_bits ? first : second;
+}
+
 /* R5900 SQRT.S consumes ft, unlike the standard MIPS fs encoding. This narrow
  * primitive also preserves the hardware operation without a libm/errno path.
  * GNU's sqrt builtin adds such a path unless global fast-math is enabled.

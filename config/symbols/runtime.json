@@ -226,12 +226,46 @@
     "__kernel_cosf": {
       "address": "0x0037CCE8",
       "confidence": "corroborated",
-      "evidence": "Complete344-byte original cosine kernel matches unchanged pinned kf_cos.c algorithm: tiny integer-conversion return, C1..C6 coefficients, 0.3/0.78125 thresholds, qx construction and compensated tail. Whole28-byte upstream coefficient section equals retail at0x4555B0. Exact linked sine wrapper calls this target in quadrants1/3; kernel itself not yet imported or byte matched."
+      "evidence": "Complete344-byte cosine kernel: tiny input integer-conversion return, C1..C6 Horner coefficients, 0.3/0.78125 magnitude thresholds, qx bit construction, one/half constants and both compensated tail return paths all agree. Whole28-byte unchanged coefficient section equals original data; actual code embeds constants, with no local-data relocation."
     },
     "__ieee754_rem_pio2f": {
       "address": "0x0037C7D0",
       "confidence": "corroborated",
-      "evidence": "Complete992-byte original pi/2 reduction matches pinned ef_rem_pio2.c: small direct output, signed n=1 special handling, medium cancellation refinements at8/25 bits, huge argument byte decomposition and six-argument reduction-kernel call. Whole960-byte two_over_pi/npio2_hw/constants section equals retail at0x4551E8. Exact linked sine/tangent wrappers call this target; reducer itself not yet imported or byte matched."
+      "evidence": "Complete992-byte pi/2 reduction: small direct x/zero output, signed n=1 special handling and near-pi/2 second split, medium n approximation and npio2 high-word check, cancellation refinements at8/25 exponent bits, nonfinite x-x pair, large byte decomposition/trailing-zero scan and six-argument kernel call, then sign-corrected output/n all agree. Whole960-byte two_over_pi/npio2_hw/constants section matches and genuinely links."
+    },
+    "__ieee754_sqrtf": {
+      "address": "0x0037CBB0",
+      "confidence": "corroborated",
+      "evidence": "Complete312-byte software square root: nonfinite x*x+x, signed-zero preservation, negative (x-x)/(x-x), subnormal normalization, exponent parity/unbias, bit-by-bit trial subtraction, round-to-even final increment and exponent reconstruction all agree. Whole8-byte one/tiny source pool matches. Compiler folds the constant rounding-direction test just as retail does; this is the software runtime routine, separate from game hardware SQRT.S primitives."
+    },
+    "logf": {
+      "address": "0x0037B378",
+      "confidence": "corroborated",
+      "evidence": "Complete328-byte logarithm exception wrapper: core log call, IEEE/NaN/positive early exits, logf exception name, zero err, full64 converted arg1/arg2, SVID negative-HUGE versus negative-HUGE_VAL, zero singular errno34 in POSIX, negative domain errno33, matherr callback and optional exc.err override, plus final double-to-float conversion all agree. Whole16-byte name/negative-HUGE section matches; original positive double infinity8B at0x4550D0 binds __infinity."
+    },
+    "__kernel_rem_pio2f": {
+      "address": "0x0037CE40",
+      "confidence": "corroborated",
+      "evidence": "Complete2380-byte reduction kernel: init_jk precision selection; jv/q0 and byte-chunk convolution; reverse distillation; scalbn/floor trim to n modulo8; q0/half extraction; carry complement and 0x7F/0x3F masks; cancellation recomputation; zero chopping/byte splitting; weighted integer conversion; PIo2 convolution; all precision0/1/2/3 output compression paths; and n&7 return agree. Authentic -fdata-sections separates full16-byte init_jk and48-byte PIo2 sections that each match original bytes including padding; genuine full link resolves both. Unused scalar pools are not mapped, sliced or patched."
+    },
+    "__infinity": {
+      "address": "0x004550D0",
+      "confidence": "corroborated",
+      "size": 8,
+      "file_offset": "0x003560D0",
+      "section": ".rodata",
+      "sha256": "9402bb655bc3b7331a00f1219ef647565bbe517c74aa0e41026885785867d1cd",
+      "evidence": "Original log wrapper loads full64 positive IEEE double infinity from this8-byte readonly object and calls dpsub with zero to form negative infinity. Unchanged source uses -HUGE_VAL; actual public newlib compiler headers resolve that reference as __infinity. Full original object bytes, type/size and arithmetic role corroborate binding, without claiming its original symbol survived stripping."
+    },
+    "powf": {
+      "address": "0x0037B4C0",
+      "confidence": "corroborated",
+      "evidence": "Complete1288-byte exception wrapper agrees: pow core, IEEE/NaN-y early returns, NaN-x/zero-x cases, finite negative exponent, nonintegral negative base, overflow with rint(y/2) sign selection, zero-result underflow, DOMAIN/OVERFLOW/UNDERFLOW exception types, version-dependent HUGE/HUGE_VAL/NaN/zero/one values, full64 argument conversions, matherr, POSIX errno33/34 and optional exc.err override. Whole32-byte powf/name/NaN/HUGE/-HUGE readonly pool uniquely equals retail and genuinely links."
+    },
+    "__ieee754_powf": {
+      "address": "0x0037BF40",
+      "confidence": "corroborated",
+      "evidence": "Complete2188-byte power core agrees: y=zero first, NaN x+y, negative-base odd/even integer classification, infinity/one/two/half exponents and software sqrt call, zero/infinity/one bases, nonintegral negative-base NaN, huge-y near-one polynomial, subnormal scaling, interval splits, compensated log2 polynomial with exact coefficients and arrays, sign, split y product, overflow128 and underflow-150 boundaries, fractional exp reconstruction and subnormal scalbnf return. Whole136-byte bp/dp/constants readonly section uniquely equals retail and genuinely links. Four subsequent zero alignment bytes are excluded."
     }
   }
 }

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "One reconstructed C function covers1628 original instruction bytes. All three existing compiler recipes compile and fully link; none matches retail.",
+    "Existing recovered vector normalizer is reused by its observed original address. Scalar geometry remains ordinary C with no function-body assembly fallback.",
+    "Independent full-instruction, normalizer and caller review found no defects. Native32-bit harness passed783 checks over unit/outward planes, collapsed extents, untouched memory and13 shifted input/output fixtures.",
+    "tools/trace_geometry.py reads the local hash-validated retail instructions at runtime. Its bounded finite host-IEEE subset reproduces all13 synthetic golden fixtures,547 executed instructions each including delays. It excludes EE special-value precision, FCR flags and cycles; this evidence does not award byte matching."
+  ],
+  "functions": [
+    {
+      "name": "func_002A3640",
+      "address": "0x002A3640",
+      "file_offset": "0x001A4640",
+      "size": 1628,
+      "source": "src/game/geometry.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "94c0bf71190e050f2c0075010e16b89f9e7b75045c9f470885aa1a9bec2926a2",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 1628,
+        "compiled_size": 1160,
+        "different_bytes": 1404,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "94c0bf71190e050f2c0075010e16b89f9e7b75045c9f470885aa1a9bec2926a2",
+        "compiled_sha256": "fd253f684f93b538ee97a276ab80f70d01bc8b45eb67e601343f395ab25303c1"
+      },
+      "evidence": "Five-plane perspective pyramid: all scaled frame axes captured before writes; interleaved apex translation, per-vertex translation reloads, ordered cross products and component stores, original vector normalizer calls and ordered vertex dots. Complete body independently reviewed against all407 original instructions and the only caller; caller does not consume f0. Numeric name retained; geometry names are behavioral inferences.",
+      "boundary_evidence": "Complete1628-byte body through return delay at0x002A3C98; four following zero alignment bytes excluded."
+    }
+  ]
+}

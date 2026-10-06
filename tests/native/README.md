@@ -52,3 +52,20 @@ The vector-math harness passes 77 checks for vector/quaternion arithmetic,
 thresholds, zero/antipodal fallbacks, callback captures and shifted aliases.
 Run it with `--harness vector_math`. Its square-root fallback tests host
 arithmetic, without claiming full EE floating-point or FCR behavior.
+
+The pad-input harness checks startup aliases, all 65,536 raw button patterns,
+stick deadzones, output aliases, signed pressure, connection gates, rumble and
+callback-dependent state reloads. Run it with `--harness pad_input`; its 610,739
+checks include callee argument/sequence assertions. Pad and angle callees are
+controlled substitutes, and native square root is a finite host arithmetic model.
+
+The geometry harness passes 783 checks for perspective-plane construction,
+zero extents and shifted frame/output aliases. Run it with `--harness geometry`.
+Its 13 synthetic golden fixtures reproduce from `tools/trace_geometry.py`, a
+bounded finite host-IEEE instruction reference that reads the local validated
+ELF. See `docs/geometry.md` for regeneration and its EE precision/FCR limits.
+
+Run `tests/native/run_goal_methods4.py` for the drive and traffic batch's 383
+checks. They cover callback mutations, signed route bytes, queue budget reloads,
+geometry aliases and motion calls. See `docs/goal_methods4.md` for the recovered
+state contracts and remaining platform limitations.

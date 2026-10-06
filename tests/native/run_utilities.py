@@ -6,6 +6,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "pad_input": ["src/game/pad_input.c"],
     "input_state": ["src/game/input_state.c"],
     "heap": ["src/game/heap.c"],
     "list": ["src/game/list.c", "src/game/list_aros.c"],
@@ -15,6 +16,7 @@ HARNESS_SOURCES = {
     "tree": ["src/game/tree.c", "src/game/list.c", "src/game/list_aros.c"],
     "tree_updates": ["src/game/tree_updates.c", "src/game/tree.c", "src/game/list.c", "src/game/list_aros.c"],
     "vector_math": ["src/game/vector_math.c"],
+    "geometry": ["src/game/geometry.c", "src/game/vector_math.c"],
 }
 HARNESS_FLAGS = {
     "tree_updates": ["-DGEORGE_TREE_NATIVE_COUNTER"],

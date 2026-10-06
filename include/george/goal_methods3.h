@@ -2,6 +2,7 @@
 #define GEORGE_GOAL_METHODS3_H
 
 #include "george/goal_methods2.h"
+#include "george/ee_math.h"
 
 /* Alternate observed view of the word-zeroed timer's vector fields. */
 typedef struct GeorgeGoalMotion {
@@ -45,20 +46,6 @@ typedef struct GeorgeGoalRoadGeometry {
     u32 unknown44;
     GeorgeMathVec3 *field48;
 } GeorgeGoalRoadGeometry;
-
-/* EE MIN.S orders signed encodings, reversing when both are negative.
- * This independently expressed value model also retains negative NaN encodings
- * and selects -0 over +0. It does not model FCR cause flags. See goal_methods3.md.
- */
-static __inline__ float george_ee_minimum(float first, float second)
-{
-    union { float scalar; s32 signed_bits; u32 bits; } left, right;
-    left.scalar = first;
-    right.scalar = second;
-    if ((left.bits & right.bits & 0x80000000U) != 0)
-        return left.signed_bits > right.signed_bits ? first : second;
-    return left.signed_bits < right.signed_bits ? first : second;
-}
 
 #define GM3_OFFSET(type, member, offset) \
     typedef char gm3_offset_##type##_##member[(offsetof(type, member) == (offset)) ? 1 : -1]

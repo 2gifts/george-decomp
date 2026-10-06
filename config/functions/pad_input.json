@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Root independently reviewed all four complete original bodies through their epilogues: startup captures, radial scale/magnitude separation, SDK mapping, mixed-register frame ABI and post-motor captured-state reload. No defects found.",
+    "Coherent4-function startup/pad/radial batch totals2420 original instruction bytes; all four are reconstructed with zero new byte matches.",
+    "Both pinned compiler profiles compiled and fully linked complete bodies at original addresses with no unresolved relocations; canonical GCC3.2.3 differences remain visible and no compiler flag sweep was used.",
+    "Existing input-state allocation/frame methods and authentic memset/fmodf entries are reused by original addresses. SDK wrappers remain original-address calls; no SDK source identity or implementation is imported.",
+    "Pinned official m2c supplied clean startup/scalar drafts; unsupported non-f0 R5900 SQRT aliases in two radial bodies required complete manual typed reconstruction. No generated placeholders or assembly fallback remain.",
+    "Shared EE square-root primitive is one genuine SQRT.S operation with floating-register constraints. Ordinary C implements normalization, selection, mapping, traversal and rumble. Shared encoding-based minimum/maximum are independently expressed from pinned public PCSX2 behavior evidence; FCR cause flags are not modeled.",
+    "Tracked native32-bit harness passed610739 checks, including all65536 raw16-bit button masks, scalar endpoints, finite radial grids, all256 output alias combinations, signed pressure values, startup aliases, callback-dependent threshold/state/phase reloads and rumble boundaries. Controlled pad/angle/fmod callees and host arithmetic do not establish full EE arithmetic or the unrecovered angle lookup implementation.",
+    "Existing goal_methods3 native harness rerun passed106 checks after moving its unchanged minimum helper to shared ee_math.h."
+  ],
+  "functions": [
+    {
+      "name": "func_00295080",
+      "address": "0x00295080",
+      "file_offset": "0x00196080",
+      "size": 236,
+      "source": "src/game/pad_input.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a751a0c68dd7c7c2fb63932ed42296505e641f10ad97ddf8826dfadbc318519c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Allocate four mode1 frame states and capture four aliases before fifth allocation; fifth mode2 state clears conversion flags18; create key state and initialize four 0x180-byte pad records. Original unchecked fifth-allocation contract retained.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 236,
+        "compiled_size": 232,
+        "different_bytes": 161,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "a751a0c68dd7c7c2fb63932ed42296505e641f10ad97ddf8826dfadbc318519c",
+        "compiled_sha256": "aed3c83f8c0c3165161d2b50f67fbac709a07eb6c3f339c1856c67c10cb23759"
+      }
+    },
+    {
+      "name": "func_00295170",
+      "address": "0x00295170",
+      "file_offset": "0x00196170",
+      "size": 1648,
+      "source": "src/game/pad_input.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9268b9ba9c2aa2c9c1b7764ffb3041c7428c80b7e87ee68ce3e833aac3e69371",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Four-pad poller: connection state99 gate, original SDK calls and mixed-register frame ABI; signed raw-axis and signed pressure-byte conversion, two inline radial transforms with fresh state threshold between calls, exact16-bit button mapping and fresh state after frame callback. Rumble phase D4 reload after motor callback retained.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 1648,
+        "compiled_size": 1828,
+        "different_bytes": 1637,
+        "first_different_offsets": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "9268b9ba9c2aa2c9c1b7764ffb3041c7428c80b7e87ee68ce3e833aac3e69371",
+        "compiled_sha256": "f867501fe6037b0dca1d0e6be26480c18354f5e80ade7f08b9fb6d2136f5011e"
+      },
+      "hardware_primitive": "Shared scoped SQRT.S primitive with floating-register constraints; ordinary C implements all normalization, EE encoding selection, output order, pad traversal and rumble. FCR flags are not modeled; no opcode bytes or function-body assembly fallback."
+    },
+    {
+      "name": "func_00295B18",
+      "address": "0x00295B18",
+      "file_offset": "0x00196B18",
+      "size": 184,
+      "source": "src/game/pad_input.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "97c76e7320d67f7abe046183c9e9b158217523b9b37f708fd0af289c0bb6ff15",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Clamp scalar to[-127,127], apply separate positive/negative20-unit deadzone and original float multiplier3F97ECDC; strict zero/unordered branch behavior preserved.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 184,
+        "compiled_size": 200,
+        "different_bytes": 140,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "97c76e7320d67f7abe046183c9e9b158217523b9b37f708fd0af289c0bb6ff15",
+        "compiled_sha256": "469faf24ccd44fdce39a86ee0be5e2e7ce8d6298f95df7a7f9e82ff8098e5cdd"
+      }
+    },
+    {
+      "name": "func_00295BD0",
+      "address": "0x00295BD0",
+      "file_offset": "0x00196BD0",
+      "size": 352,
+      "source": "src/game/pad_input.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9176bf10b3f42bac4f6d414092de2d88e1102cbf3e864b5cef857348315d139c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Radial transform computes original reciprocal deadzone scale, EE encoding-based MAX/MIN value selection, stores magnitude before angle/fmod calls then angle then x/y; zero-length fallback and aliased outputs retain original store order. SQRT.S uses shared legitimate hardware primitive.",
+      "boundary_evidence": "Complete original instruction body, all branch destinations and final return delay slot reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 352,
+        "compiled_size": 456,
+        "different_bytes": 380,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "9176bf10b3f42bac4f6d414092de2d88e1102cbf3e864b5cef857348315d139c",
+        "compiled_sha256": "474a384fecd1e2868972beca3ae52800188c722e032223dbabb938df970ddb47"
+      },
+      "hardware_primitive": "Shared scoped SQRT.S primitive with floating-register constraints; ordinary C implements all normalization, EE encoding selection, output order, pad traversal and rumble. FCR flags are not modeled; no opcode bytes or function-body assembly fallback."
+    }
+  ]
+}

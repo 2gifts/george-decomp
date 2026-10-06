@@ -328,7 +328,7 @@ Five complete constant objects or sections provide separate identity evidence:
 sine's 28-byte pool at `0x0045561C`, tangent's 52-byte `T` object at
 `0x00455648`, rounding's 16-byte `TWO52` pool at `0x00455680`, scaling's
 16-byte pool at `0x00455694`, and logarithm's 48-byte pool at `0x00455130`.
-`python tools/check_runtime_data.py` now checks eight complete runtime data
+`python tools/check_runtime_data.py` now checks sixteen complete runtime data
 identities in total; data checks award no function bytes.
 
 The rounding and logarithm candidates map their complete readonly sections and
@@ -361,3 +361,86 @@ reciprocal result. These are complete C matches, separate from the remaining
 unmatched kernel bodies. The reducer's entire 960-byte constants section
 matches unchanged upstream data, corroborating the call binding; it does not
 award code progress before source registration and comparison.
+
+## Cosine, square root, logarithm and argument reduction
+
+Five further unchanged sources from the same pinned public newlib 1.8.1 tree
+cover 4,356 original code bytes. They retain the Sun Microsystems 1993 notice
+and Ian Lance Taylor's conversion credit; exact file hashes and URLs are in
+the manifest. All selected recipes compile and fully link, but none match the
+complete original code bytes, so every entry remains reconstructed.
+
+| Source function | Original address | Complete body bytes | Selected compiler recipe |
+| --- | --- | ---: | --- |
+| `__kernel_cosf` | `0x0037CCE8` | 344 | GCC 2.9 baseline |
+| `__ieee754_sqrtf` | `0x0037CBB0` | 312 | GCC 2.9 baseline |
+| `logf` | `0x0037B378` | 328 | GCC 2.9 baseline |
+| `__ieee754_rem_pio2f` | `0x0037C7D0` | 992 | GCC 2.9 baseline |
+| `__kernel_rem_pio2f` | `0x0037CE40` | 2,380 | GCC 2.9 with `-fdata-sections` |
+
+The reviews cover the entire original control flow, not only calls or constants:
+cosine's compensated polynomial and tail; software square root's bit trials,
+normalization and final rounding; logarithm's version-dependent exception and
+errno paths; pi/2 reduction's signed special case, cancellation refinements and
+large-input decomposition; and the reduction kernel's byte convolution,
+carry complement, recomputation loop and every precision-output branch.
+Software square root here is the runtime's iterative implementation, separate
+from the game's hardware `SQRT.S` operations.
+
+The complete 960-byte reducer section at `0x004551E8` matches unchanged source
+and is mapped during actual linking. The reduction kernel's baseline 80-byte
+combined pool fails whole-section comparison because its final alignment bytes
+disagree. The supported `-fdata-sections` option instead emits separate input
+sections: all 16 bytes of `.rodata.init_jk` at `0x004555D0`, and all 48 bytes of
+`.rodata.PIo2` at `0x004555E0`, match original allocated readonly data including
+padding. The genuine linker resolves both sections without source or byte
+patches; the code still differs. This uses complete sections rather than
+partial linker mappings.
+
+The cosine 28-byte pool at `0x004555B0` and square-root 8-byte pool at
+`0x004555A8` also match as complete data identities. Their selected code embeds
+the constants, so these unused pools are not mapped by the code linker. The
+logarithm wrapper's full 16-byte exception-name/negative-HUGE pool at
+`0x004550F0` is genuinely linked, along with its separately evidenced positive
+double-infinity reference at `0x004550D0`. The data checker verifies sixteen
+complete upstream data identities in total and awards no code progress for them.
+
+## Power wrapper and core
+
+`powf.c` and `ieee754_powf.c` preserve the complete unchanged pinned newlib
+[`wf_pow.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/wf_pow.c)
+and
+[`ef_pow.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libm/math/ef_pow.c),
+including Sun Microsystems' 1993 permission notice and Ian Lance Taylor's
+float-conversion credit. The manifest records both exact source hashes.
+
+The original wrapper at `0x0037B4C0` is 1,288 bytes. Its complete exception
+paths agree: NaN inputs, zero exponents and bases, finite negative exponents,
+nonintegral negative bases, overflow sign selection using `rint(y/2)`, and
+underflow. The review includes full double argument/result conversions,
+version-dependent zero/one/HUGE/infinity/NaN returns, `matherr`, errno 33/34,
+and the optional exception error override. Its whole 32-byte name and constant
+section at `0x00455100` matches and genuinely links, as does the independently
+evidenced infinity binding at `0x004550D0`.
+
+The original power core at `0x0037BF40` is 2,188 bytes, ending with the return
+delay instruction at `0x0037C7C8`; the following four zero alignment bytes are
+excluded. Every original branch and arithmetic path agrees with the unchanged
+source: odd/even exponent classification, special values, subnormal scaling,
+interval selection, compensated logarithm polynomial, split exponent product,
+128/-150 overflow and underflow limits, exponential reconstruction and the
+subnormal `scalbnf` call. All 136 bytes of its array and constant section at
+`0x00455160` match, including padding, and the normal linker resolves its
+references.
+
+Both selected GCC 2.9 recipes compile and fully link without unresolved
+relocations. They differ from the complete retail code and remain
+reconstructed, adding 3,476 represented original code bytes and zero exact
+matches. Complete readonly data checks provide source identity evidence and
+award no function progress.
+
+Independent review of these seven newly registered math bodies covered every
+original instruction and the complete unchanged sources, including return
+delays, soft-double exception calls and all argument-reduction output branches.
+No identity or boundary defects were found. The data checker reproduces all
+sixteen complete constant identities from the pinned source files.
