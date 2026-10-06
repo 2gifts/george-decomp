@@ -676,6 +676,34 @@
       "address": "0x003936A0",
       "confidence": "corroborated",
       "evidence": "Complete188B unchanged newlib calloc body calls original3936A0 at39F4F8 encoded0x0C0E4DA8 with returned allocation,zero byte and observed chunk clearing length. Original call/ABI and whole linked source were independently reviewed. Shared binding only; no new callee source or progress award."
+    },
+    "_free_r": {
+      "address": "0x0039BC38",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "_malloc_trim_r": {
+      "address": "0x0039BF30",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "_sbrk_r": {
+      "address": "0x0039DCA0",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "__malloc_trim_threshold": {
+      "address": "0x00405E40",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "__malloc_top_pad": {
+      "address": "0x00405E48",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "__malloc_sbrk_base": {
+      "address": "0x00405E50",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
+    },
+    "__malloc_current_mallinfo": {
+      "address": "0x00405E68",
+      "evidence": "Complete reviewed unchanged dlmalloc2.6.4 free/trim/realloc original source/control graph. Actual original direct callee JALs and preserved global LUI/load pairs at these bindings independently reproduced in allocator continuation packet; aliases only, no callee/data recovery award."
     }
   }
 }

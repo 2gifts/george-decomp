@@ -318,8 +318,8 @@ void func_00185EA0(GeorgeGoalEntity *entity,void *reference,u32 first,u32 second
 {CHECK(entity==actor&&first==1&&second==0);emit(SPECIAL_REQUEST,entity,(void *)vector,(u32)reference,0,0);}
 void func_00190E00(GeorgeGoalEntity *entity,u32 state){CHECK(entity==actor&&state==39);emit(CHANGE_STATE,entity,0,state,0,0);}
 void func_00194FD8(GeorgeGoalEntity *entity){CHECK(entity==actor);emit(REFRESH,entity,0,0,0,0);}
-void func_0018B710(GeorgeGoalEntity *entity,const GeorgeMathVec3 *direction,const GeorgeMathVec3 *position)
-{CHECK(entity==actor);last_vector=*direction;last_motion=*position;emit(WALK_RECORD,entity,(void *)direction,0,0,0);}
+s32 func_0018B710(GeorgeGoalEntity *entity,const GeorgeMathVec3 *direction,const GeorgeMathVec3 *position)
+{CHECK(entity==actor);last_vector=*direction;last_motion=*position;emit(WALK_RECORD,entity,(void *)direction,0,0,0);return 0; }
 u32 func_00297640(u32 word){u32 result=mask_result;emit(MASK_QUERY,0,0,word,0,0);return result;}
 u32 func_002A7418(u32 word){u32 result=identifier_result;emit(IDENTIFIER,0,0,word,0,0);return result;}
 void *func_00238BA0(void *object,u32 key){CHECK(key==0x0B6C8F2B);emit(COMPONENT,object,0,key,0,0);return component_storage;}

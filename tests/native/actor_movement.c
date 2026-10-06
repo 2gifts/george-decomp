@@ -221,7 +221,7 @@ void func_002393F8(u32 word) { CHECK(word==0x11||word==0x33);++release_calls;AT(
 void func_00272A58(void *object) { CHECK(object==object_store);++action_calls; }
 void func_00196980(GeorgeGoalEntity *entity) { CHECK(entity==actor);++action_calls; }
 void func_00192078(GeorgeGoalEntity *entity,u32 key,float adjustment) { CHECK(entity==actor);CHECK(key==0xEC789588U);observed_float=adjustment;++action_calls; }
-void func_0018B710(GeorgeGoalEntity *entity,const GeorgeMathVec3 *direction,const GeorgeMathVec3 *position) { CHECK(entity==actor);direction_result=*direction;motion_result=*position;++action_calls; }
+s32 func_0018B710(GeorgeGoalEntity *entity,const GeorgeMathVec3 *direction,const GeorgeMathVec3 *position) { CHECK(entity==actor);direction_result=*direction;motion_result=*position;++action_calls; return 0; }
 void func_00191DC8(GeorgeGoalEntity *entity,u32 word) { CHECK(entity==actor);observed_word=word;AT(actor,0x298,void *)=transform_store; }
 void *func_00192748(GeorgeGoalEntity *entity,u32 index) { CHECK(entity==actor);CHECK(index==41);return model_store; }
 void func_002A1C60(const void *matrix_input,const GeorgeMathVec3 *input,GeorgeMathVec3 *output) { CHECK(matrix_input==actor_store.bytes+0xF0);CHECK(input==VEC(model_store,0x30));output->x=10;output->y=20;output->z=30;actor->field18=data[1];++matrix_calls; }

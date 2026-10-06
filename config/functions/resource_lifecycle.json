@@ -1,0 +1,817 @@
+{
+  "schema_version": 1,
+  "functions": [
+    {
+      "name": "func_0020EF60",
+      "address": "0x20ef60",
+      "file_offset": "0x10ff60",
+      "size": 104,
+      "source": "src/game/resource_lifecycle.c",
+      "source_name": "func_0020EF60",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_body_author_and_independent_reviewed_reconstruction",
+      "original_sha256": "304bb64013bc58e72054ab398ce2b08378dd8e1dc9ac901675a3e1ac659d798f",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 104,
+        "compiled_size": 100,
+        "different_bytes": 40,
+        "first_different_offsets": [
+          4,
+          8,
+          31,
+          34,
+          35,
+          44,
+          52,
+          54
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "304bb64013bc58e72054ab398ce2b08378dd8e1dc9ac901675a3e1ac659d798f",
+        "compiled_sha256": "7701c171157d763f93d71627915f6b5376e7377779718e7a5308cd6efc66ca43"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 108,
+            "different_bytes": 61,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "304bb64013bc58e72054ab398ce2b08378dd8e1dc9ac901675a3e1ac659d798f",
+            "compiled_sha256": "5f3e17f623bbf8240785f1dd49137a1b43d49177da1bb2de64e49feb3154be70"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 100,
+            "different_bytes": 43,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              31,
+              34,
+              35,
+              44,
+              52
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "304bb64013bc58e72054ab398ce2b08378dd8e1dc9ac901675a3e1ac659d798f",
+            "compiled_sha256": "39c5ec76f0070f40f1fe6bd8852f22351fab7002bbe45744f44af0edc8237f07"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 100,
+            "different_bytes": 40,
+            "first_different_offsets": [
+              4,
+              8,
+              31,
+              34,
+              35,
+              44,
+              52,
+              54
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "304bb64013bc58e72054ab398ce2b08378dd8e1dc9ac901675a3e1ac659d798f",
+            "compiled_sha256": "7701c171157d763f93d71627915f6b5376e7377779718e7a5308cd6efc66ca43"
+          }
+        }
+      },
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x20ef7c",
+          "target_address": "0x20ef94",
+          "word": "0x10400005",
+          "delay_word": "0x0"
+        },
+        {
+          "instruction_address": "0x20ef8c",
+          "target_address": "0x20efa4",
+          "word": "0x10000005",
+          "delay_word": "0x8e040010"
+        },
+        {
+          "instruction_address": "0x20efa8",
+          "target_address": "0x20efbc",
+          "word": "0x10400004",
+          "delay_word": "0x7bb00010"
+        }
+      ],
+      "entry_references": [],
+      "aligned_pointer_references": [
+        {
+          "address": "0x43a434",
+          "target": "0x20ef60",
+          "section": ".rodata",
+          "signed_adjustment": 0,
+          "whole_pair_address": "0x43a430",
+          "whole_pair_bytes": 8,
+          "whole_pair_sha256": "b01965ee635ca19896cb17586beab6d527588505a72d00bfcd4dfa3f90d93ef6",
+          "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+        }
+      ],
+      "evidence": "Capture child, activate80-marked child or increment low16 count, then reload holder and notify if holder byte2 is nonzero. Original requires a nonNULL child/holder.",
+      "boundary_evidence": "Complete original prologue through terminalJR31/delay; original raw/disassembly full equality and hash. Trailing zero alignment excluded."
+    },
+    {
+      "name": "func_0020EFC8",
+      "address": "0x20efc8",
+      "file_offset": "0x10ffc8",
+      "size": 60,
+      "source": "src/game/resource_lifecycle.c",
+      "source_name": "func_0020EFC8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_body_author_and_independent_reviewed_reconstruction",
+      "original_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 60,
+        "compiled_size": 60,
+        "different_bytes": 13,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          22,
+          26,
+          28,
+          32,
+          33
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625",
+        "compiled_sha256": "83b9bdf806f2bc56acbd1d97665b4cb93dcb6114c24b4e5e46c5864a132dc740"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 60,
+            "compiled_size": 60,
+            "different_bytes": 13,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              22,
+              26,
+              28,
+              32,
+              33
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625",
+            "compiled_sha256": "83b9bdf806f2bc56acbd1d97665b4cb93dcb6114c24b4e5e46c5864a132dc740"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 60,
+            "compiled_size": 60,
+            "different_bytes": 17,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              34,
+              35,
+              36,
+              37,
+              38
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625",
+            "compiled_sha256": "d9e8d99c6f9788681e217ff3896c32a46ca46410baf80533d7ad35f86e6816ba"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 60,
+            "compiled_size": 60,
+            "different_bytes": 17,
+            "first_different_offsets": [
+              4,
+              8,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625",
+            "compiled_sha256": "0a3925385b6f995e8a9487e0cdee53d326b3ec04db8789a13a4243dd0f7f7897"
+          }
+        }
+      },
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x20efe4",
+          "target_address": "0x20eff8",
+          "word": "0x10400004",
+          "delay_word": "0x7bb00010"
+        }
+      ],
+      "entry_references": [],
+      "aligned_pointer_references": [
+        {
+          "address": "0x43a42c",
+          "target": "0x20efc8",
+          "section": ".rodata",
+          "signed_adjustment": 0,
+          "whole_pair_address": "0x43a428",
+          "whole_pair_bytes": 8,
+          "whole_pair_sha256": "33f1d7c8743ea45612286a7b44e54655de1a32c30b98fb282b64889408b22e89",
+          "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+        }
+      ],
+      "evidence": "Call complete original20F008 release wrapper, then reload holder and notify removal if fresh holder byte2 is nonzero.",
+      "boundary_evidence": "Complete original prologue through terminalJR31/delay; original raw/disassembly full equality and hash. Trailing zero alignment excluded."
+    },
+    {
+      "name": "func_0020F008",
+      "address": "0x20f008",
+      "file_offset": "0x110008",
+      "size": 104,
+      "source": "src/game/resource_lifecycle.c",
+      "source_name": "func_0020F008",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_body_author_and_independent_reviewed_reconstruction",
+      "original_sha256": "8ff59954476c15a1ee0096ba4ea1d27819a5260be787b296c6bb3b60ac4b0277",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 104,
+        "compiled_size": 104,
+        "different_bytes": 62,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "8ff59954476c15a1ee0096ba4ea1d27819a5260be787b296c6bb3b60ac4b0277",
+        "compiled_sha256": "dc639e8fc7b067205c715a6f2898dff18233fc305b848f42aa723ec2938ec701"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 104,
+            "different_bytes": 62,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8ff59954476c15a1ee0096ba4ea1d27819a5260be787b296c6bb3b60ac4b0277",
+            "compiled_sha256": "dc639e8fc7b067205c715a6f2898dff18233fc305b848f42aa723ec2938ec701"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 100,
+            "different_bytes": 69,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              20,
+              23,
+              24,
+              26,
+              27
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8ff59954476c15a1ee0096ba4ea1d27819a5260be787b296c6bb3b60ac4b0277",
+            "compiled_sha256": "ce5c96c0f353f549413b6ba2898349ca56a516947fd56601a15cb62ba7a9799d"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 104,
+            "compiled_size": 100,
+            "different_bytes": 67,
+            "first_different_offsets": [
+              4,
+              8,
+              20,
+              23,
+              24,
+              26,
+              27,
+              30
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8ff59954476c15a1ee0096ba4ea1d27819a5260be787b296c6bb3b60ac4b0277",
+            "compiled_sha256": "4edb28e7339d01dd7321b67a2e216aa54ce4f04d7ad74dfee5ada2207b19c253"
+          }
+        }
+      },
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x20f01c",
+          "target_address": "0x20f064",
+          "word": "0x50800011",
+          "delay_word": "0x7bb00010"
+        },
+        {
+          "instruction_address": "0x20f02c",
+          "target_address": "0x20f044",
+          "word": "0x10400005",
+          "delay_word": "0x30620020"
+        },
+        {
+          "instruction_address": "0x20f034",
+          "target_address": "0x20f048",
+          "word": "0x54400004",
+          "delay_word": "0x8e060024"
+        }
+      ],
+      "entry_references": [
+        {
+          "kind": "JAL",
+          "instruction_address": "0x20efd4",
+          "target": "0x20f008",
+          "word": "0xc083c02",
+          "caller": "func_0020EFC8"
+        }
+      ],
+      "aligned_pointer_references": [],
+      "evidence": "Capture child before flags; if nonNULL, detach pending4/not20 child, reload child after detach and call its signed-adjusted virtual pair+10 with zero word.",
+      "boundary_evidence": "Complete original prologue through terminalJR31/delay; original raw/disassembly full equality and hash. Trailing zero alignment excluded."
+    },
+    {
+      "name": "func_0020F070",
+      "address": "0x20f070",
+      "file_offset": "0x110070",
+      "size": 184,
+      "source": "src/game/resource_lifecycle.c",
+      "source_name": "func_0020F070",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_body_author_and_independent_reviewed_reconstruction",
+      "original_sha256": "ea5c0a1d539db1947f29a7a961f7d06b91da50067ba8647554d59cf27efcf622",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 184,
+        "compiled_size": 180,
+        "different_bytes": 77,
+        "first_different_offsets": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "ea5c0a1d539db1947f29a7a961f7d06b91da50067ba8647554d59cf27efcf622",
+        "compiled_sha256": "02a9b3fa09f956b89eb4a7224e7bc65a945b42f10cba18a340822bc3fbadd007"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 184,
+            "compiled_size": 192,
+            "different_bytes": 150,
+            "first_different_offsets": [
+              8,
+              10,
+              11,
+              16,
+              18,
+              19,
+              20,
+              21
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ea5c0a1d539db1947f29a7a961f7d06b91da50067ba8647554d59cf27efcf622",
+            "compiled_sha256": "b489b4fd8f99867e6f84b5e6e9b840c76e40b45d9fbc42bbd1d143a1aafa9037"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 184,
+            "compiled_size": 180,
+            "different_bytes": 80,
+            "first_different_offsets": [
+              6,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ea5c0a1d539db1947f29a7a961f7d06b91da50067ba8647554d59cf27efcf622",
+            "compiled_sha256": "17b35ad08fa66b5b982567ec086e5a7fdfef0def27d02b6adefdc62229afd2c6"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 184,
+            "compiled_size": 180,
+            "different_bytes": 77,
+            "first_different_offsets": [
+              6,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ea5c0a1d539db1947f29a7a961f7d06b91da50067ba8647554d59cf27efcf622",
+            "compiled_sha256": "02a9b3fa09f956b89eb4a7224e7bc65a945b42f10cba18a340822bc3fbadd007"
+          }
+        }
+      },
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x20f098",
+          "target_address": "0x20f108",
+          "word": "0x1460001b",
+          "delay_word": "0xa0882d"
+        },
+        {
+          "instruction_address": "0x20f0a4",
+          "target_address": "0x20f0e0",
+          "word": "0x1080000e",
+          "delay_word": "0x30c20004"
+        },
+        {
+          "instruction_address": "0x20f0ac",
+          "target_address": "0x20f0c4",
+          "word": "0x10400005",
+          "delay_word": "0x30c20020"
+        },
+        {
+          "instruction_address": "0x20f0b4",
+          "target_address": "0x20f0c8",
+          "word": "0x54400004",
+          "delay_word": "0x8e060024"
+        },
+        {
+          "instruction_address": "0x20f0e8",
+          "target_address": "0x20f10c",
+          "word": "0x10400008",
+          "delay_word": "0x200202d"
+        },
+        {
+          "instruction_address": "0x20f0f8",
+          "target_address": "0x20f10c",
+          "word": "0x50400004",
+          "delay_word": "0x200202d"
+        }
+      ],
+      "entry_references": [],
+      "aligned_pointer_references": [
+        {
+          "address": "0x43a414",
+          "target": "0x20f070",
+          "section": ".rodata",
+          "signed_adjustment": 0,
+          "whole_pair_address": "0x43a410",
+          "whole_pair_bytes": 8,
+          "whole_pair_sha256": "bb06fc692afee3d49eafd9d6fcf9c3eb1a47401fbea300f74c14f1a5e6713ee6",
+          "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+        }
+      ],
+      "evidence": "Publish original vtable before captured flags; bit80 skips child/holder work. Otherwise capture child, optionally detach4/not20, reload child before signed-adjusted pair+10 call, then fresh flags20 gate and fresh holderbyte2 removal notification. Captured incoming low32mode survives all calls to original base teardown.",
+      "boundary_evidence": "Complete original prologue through terminalJR31/delay; original raw/disassembly full equality and hash. Trailing zero alignment excluded."
+    }
+  ],
+  "complete_original_instructions": 113,
+  "direct_call_evidence": [
+    {
+      "instruction_address": "0x20ef84",
+      "target": "0x226d78",
+      "delay_word": "0x0"
+    },
+    {
+      "instruction_address": "0x20efb0",
+      "target": "0x21c508",
+      "delay_word": "0x0"
+    },
+    {
+      "instruction_address": "0x20efd4",
+      "target": "0x20f008",
+      "delay_word": "0x80802d"
+    },
+    {
+      "instruction_address": "0x20efec",
+      "target": "0x21c5d8",
+      "delay_word": "0x0"
+    },
+    {
+      "instruction_address": "0x20f03c",
+      "target": "0x226ed8",
+      "delay_word": "0x200282d"
+    },
+    {
+      "instruction_address": "0x20f0bc",
+      "target": "0x226ed8",
+      "delay_word": "0x200282d"
+    },
+    {
+      "instruction_address": "0x20f100",
+      "target": "0x21c5d8",
+      "delay_word": "0x0"
+    },
+    {
+      "instruction_address": "0x20f10c",
+      "target": "0x2267d0",
+      "delay_word": "0x220282d"
+    }
+  ],
+  "indirect_call_evidence": [
+    {
+      "instruction_address": "0x20f058",
+      "source_register": 2,
+      "link_register": 31,
+      "delay_word": "0xc42021"
+    },
+    {
+      "instruction_address": "0x20f0d8",
+      "source_register": 2,
+      "link_register": 31,
+      "delay_word": "0xc42021"
+    }
+  ],
+  "complete_nonstack_store_inventory": [
+    {
+      "instruction_address": "0x20ef9c",
+      "opcode": 41,
+      "base_gpr": 4,
+      "source_register": 2,
+      "signed_offset": 0,
+      "word": "0xa4820000"
+    },
+    {
+      "instruction_address": "0x20f08c",
+      "opcode": 43,
+      "base_gpr": 16,
+      "source_register": 2,
+      "signed_offset": 32,
+      "word": "0xae020020"
+    }
+  ],
+  "whole_entry_caller_proofs": {
+    "func_0020EFC8": {
+      "address": "0x20efc8",
+      "size": 60,
+      "original_sha256": "33671f66afa73ca59c5630e387069c4dbb1194d090148e3e22bcc177da9c7625"
+    }
+  },
+  "aligned_pointer_references": [
+    {
+      "address": "0x43a414",
+      "target": "0x20f070",
+      "section": ".rodata",
+      "signed_adjustment": 0,
+      "whole_pair_address": "0x43a410",
+      "whole_pair_bytes": 8,
+      "whole_pair_sha256": "bb06fc692afee3d49eafd9d6fcf9c3eb1a47401fbea300f74c14f1a5e6713ee6",
+      "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+    },
+    {
+      "address": "0x43a42c",
+      "target": "0x20efc8",
+      "section": ".rodata",
+      "signed_adjustment": 0,
+      "whole_pair_address": "0x43a428",
+      "whole_pair_bytes": 8,
+      "whole_pair_sha256": "33f1d7c8743ea45612286a7b44e54655de1a32c30b98fb282b64889408b22e89",
+      "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+    },
+    {
+      "address": "0x43a434",
+      "target": "0x20ef60",
+      "section": ".rodata",
+      "signed_adjustment": 0,
+      "whole_pair_address": "0x43a430",
+      "whole_pair_bytes": 8,
+      "whole_pair_sha256": "b01965ee635ca19896cb17586beab6d527588505a72d00bfcd4dfa3f90d93ef6",
+      "limit": "Actual aligned zero-adjustment/target pair; complete enclosing table and runtime dispatch not asserted."
+    }
+  ],
+  "readonly_vtable_evidence": {
+    "address": "0x0043A408",
+    "size": 16,
+    "original_sha256": "c8a486a185341df4e5be1e23f5bae29bfb0860322bbc2ba72da61941e8e2fbc5",
+    "high_address": "0x0020F074",
+    "lower_address": "0x0020F07C",
+    "target": "0x0020F070",
+    "limit": "Only complete observed16B table prefix/pair+8 identity. No writable or data progress award."
+  },
+  "synthetic_fixture_evidence": {
+    "count": 175,
+    "executed_instructions": 4834,
+    "maximum_instructions": 44,
+    "input_sha256": "f2ff2710ef1c6abbadf29bee1e0174d165846ae3f8d7bf6d9f33c935a66bcba4",
+    "header_sha256_lf": "01d3063619613ed803513e3bcf306ec61ba211f470e4403b67ecbd93a0d0b0a0",
+    "native_checks": 94071,
+    "guard_tests": 7
+  },
+  "notes": [
+    "Root author and independent peer read all113 original instructions/C/header including original stores and delays. Both reproduced12fullgenuine links/0unresolved0exact, all175fixtures4834originalinstructions/max44, completeinput/goldenLFhash and separateTU94071nativechecks/7guards. Original table geometry and actualcaller proof limits retained.",
+    "Reuse shared resource record/signed virtual-word ABI and reviewed strictscalar decoder; LH lowword signextension plus byte/half stores are modeled explicitly. Real actualJR31/stop and complete ordinary/likely delays enforced. Finite authored buffers/enginecallback effects verify caller behavior only; no allocator/engine/VU/FCR/hardware completeness claim.",
+    "Two virtual target pairs forEF60/EFC8 have verified aligned pointers/zeroadjustment/hash only; enclosingtable and runtimecallers are not proven. F070 additionally has actual whole16B table prefix and prior reviewed EAA0 caller pair+8/word3 evidence. F008 entry oneactualJAL inside full60B EFC8 caller."
+  ]
+}

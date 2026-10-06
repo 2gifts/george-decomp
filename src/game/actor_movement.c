@@ -28,7 +28,7 @@ extern void func_002393F8(u32 word);
 extern void func_00272A58(void *object);
 extern void func_00196980(GeorgeGoalEntity *entity);
 extern void func_00192078(GeorgeGoalEntity *entity, u32 key, float adjustment);
-extern void func_0018B710(GeorgeGoalEntity *entity, const GeorgeMathVec3 *direction,
+extern s32 func_0018B710(GeorgeGoalEntity *entity, const GeorgeMathVec3 *direction,
                        const GeorgeMathVec3 *position);
 extern void func_00191DC8(GeorgeGoalEntity *entity, u32 word);
 extern void *func_00192748(GeorgeGoalEntity *entity, u32 index);

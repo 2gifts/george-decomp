@@ -1192,8 +1192,9 @@ unresolved relocations. Both functions remain reconstructed.
 The local `malloc_extend_top` entry at `0x0039B2A0` / 612 bytes is a binding for
 the malloc call. The author read that complete original helper; root checked
 its full hash, calls and binding metadata. The helper and the custom original
-lock/unlock wrappers receive no function-progress award. Other bodies in the
-complete source file remain unregistered.
+lock/unlock wrappers receive no function-progress award. The separately
+reviewed free/trim/realloc continuation below adds three bodies from the same
+unchanged source; other bodies remain unregistered.
 
 The writable 1,032-byte bin initializer at `0x00405A38` has separate source
 identity evidence. Genuine GNU ld resolves all 256 original self `R_MIPS_32`
@@ -1202,3 +1203,31 @@ bytes match. Six adjacent complete scalar/struct globals also match, including
 the target's 64-bit long counters. Root independently reproduced these data
 checks. They establish bindings only: no writable-data mapper, initialization
 edits, text-match award or readonly-data-progress award is used.
+
+The same pinned public-domain source now also reconstructs `_free_r` at
+`0x0039BC38` / 756 bytes, `_malloc_trim_r` at `0x0039BF30` / 364 bytes and
+`_realloc_r` at `0x0039C0A0` / 1,404 bytes: three complete functions totaling
+2,524 original bytes. Authentic `INTERNAL_NEWLIB`, `MALLOC_ALIGNMENT=16` and
+`DEFINE_FREE` / `DEFINE_REALLOC` select the unchanged active source. The
+trim symbol is the source's genuine reentrant macro name. All selected
+callee/global references are centrally bound from actual original calls and
+preserved address pairs; no per-function forced bindings are needed.
+
+The author and root independently read all 631 original instructions and the
+complete active source/macros. They checked null/free paths, backward and
+forward chunk coalescing, the last-remainder/bin links, source unsigned 64-bit
+trim arithmetic with 32-bit sbrk arguments, and realloc's exact 3/5/7/9-word
+copy ladder, adjacent growth, fallback, split and nested free order. Root
+reproduced all six full links and dependency sets, 22 genuine ABI words, real
+entry calls with whole containing-body byte proofs, 80 bounded branches and
+11 preserved global pairs. Actual `long` is eight bytes while size/pointers
+are four; the source's overflow, alias and call behavior is retained.
+
+All six complete linked comparisons are nonexact and have zero unresolved
+relocations. These three functions remain reconstructed; trailing original
+and compiled alignment is excluded according to their independent full body
+and symbol extents. Source/dependency guards pass, and a second link using
+only the registered central aliases reproduces each comparison. This is
+source/control/data identity evidence, without a native allocator behavioral
+harness or exhaustive malformed-heap/EE exception claim. Writable initializer
+evidence and the 612-byte local extend helper remain identity-only.

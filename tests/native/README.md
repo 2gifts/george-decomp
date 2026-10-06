@@ -1,5 +1,12 @@
 # Native semantic checks
 
+`property_lifecycle` checks six complete ownership/init callers with 64,188
+native word/call/event checks and 93 authored scoped fixtures. The harness and
+production source compile as separate translation units, reusing reviewed list C.
+The preserved VU call has a fixed caller-visible identity-store substitute only;
+authored post-call hooks and retained free storage test scalar observations, not
+heap/VU hardware fidelity. Two complete wrappers have unresolved reachability.
+
 The `property_pack` utility harness passes 54,214 bit-exact checks against
 101 bounded integer original-instruction fixtures, including real nested
 next-record execution, allocator/copy mutations, head and captured-successor
@@ -274,3 +281,10 @@ production property_hierarchy.c as a separate translation unit. The native
 substring adapter includes the unchanged tracked newlib source. Six guards
 check original body/call/return/memory scopes and reused opcode restrictions.
 See docs/property_hierarchy.md for captured successors and capacity overshoot.
+
+
+The resource_lifecycle harness compiles the production source separately and
+checks 175 authored original-instruction fixtures (94,071 checks). Seven scoped
+decoder guards reject unsupported memory, calls, operands, returns and delays.
+Engine/virtual effects are controlled caller observations; see
+[resource ownership notes](../../docs/resource_lifecycle.md).

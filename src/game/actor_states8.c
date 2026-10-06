@@ -37,7 +37,7 @@ extern void func_00245B08(void *);
 extern void func_002458E8(void *);
 extern void func_002393F8(u32);
 extern void func_0030C440(void *, const GeorgeMathVec4 *);
-extern void func_0018B710(GeorgeGoalEntity *, const GeorgeMathVec3 *, const GeorgeMathVec3 *);
+extern s32 func_0018B710(GeorgeGoalEntity *, const GeorgeMathVec3 *, const GeorgeMathVec3 *);
 extern u32 func_00272C10(void *);
 extern u32 func_00297640(u32);
 extern u32 func_002A7418(u32);
