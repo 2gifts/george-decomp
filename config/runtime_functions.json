@@ -591,6 +591,52 @@
           "evidence": "Entire compiler readonly constant section matches these original bytes exactly; original full HI16/LO16 accesses independently confirm the referenced constant/table base."
         }
       }
+    },
+    {
+      "name": "strcmp",
+      "address": "0x393a28",
+      "file_offset": "0x294a28",
+      "size": 332,
+      "source": "src/runtime/strcmp.S",
+      "source_kind": "assembly",
+      "status": "reconstructed",
+      "original_sha256": "3587aea3da3a8df8565c1d62d0dcf3a2cee9b0e416c7a638aebae02c609de997",
+      "upstream_symbol": "strcmp",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/machine/r5900/strcmp.S, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "fc9bf84277c79326306001daefaccc2c272795d300347bae2f56f59ff8f4d0ac",
+      "upstream_license": "Jeff Johnston/Cygnus Solutions 1999 permissive preserve-notice license; exact notice retained in source.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Complete independently named string algorithm matches unchanged upstream assembly. All original instructions outside the two DLI macro expansions and the induced initial branch displacement agree exactly; both complete 64-bit constant values agree. The pinned assembler emits shorter LUI-based DLI expansions, so full bytes and size differ. This is reconstructed licensed assembly only, not high-level C or an exact byte match.",
+      "boundary_evidence": "Entire entry through final jr and return delay slot reviewed; following function begins immediately after body."
+    },
+    {
+      "name": "strcpy",
+      "address": "0x393b74",
+      "file_offset": "0x294b74",
+      "size": 280,
+      "source": "src/runtime/strcpy.S",
+      "source_kind": "assembly",
+      "status": "reconstructed",
+      "original_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
+      "upstream_symbol": "strcpy",
+      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/machine/r5900/strcpy.S, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "759a01754e8231a089da1d6648e3c85e3b8e532c72555d32ee42f9195ce7cbc8",
+      "upstream_license": "Jeff Johnston/Cygnus Solutions 1999 permissive preserve-notice license; exact notice retained in source.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Complete independently named string algorithm matches unchanged upstream assembly. All original instructions outside the two DLI macro expansions and the induced initial branch displacement agree exactly; both complete 64-bit constant values agree. The pinned assembler emits shorter LUI-based DLI expansions, so full bytes and size differ. This is reconstructed licensed assembly only, not high-level C or an exact byte match.",
+      "boundary_evidence": "Entire entry through final jr and return delay slot reviewed; following function begins immediately after body."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

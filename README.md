@@ -21,12 +21,12 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C | 251 functions reviewed; 41 match (1,852 bytes) |
+| Recovered game C | 335 functions reviewed; 80 match (2,968 bytes) |
 | Reused upstream C | 5 match (128 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C matching total is **1,980 / 3,083,712 code bytes (0.064208%)**, including
+The C matching total is **3,096 / 3,083,712 code bytes (0.100398%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C progress.

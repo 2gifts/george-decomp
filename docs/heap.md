@@ -75,8 +75,8 @@ Only complete linked bytes and exact symbol sizes establish the ten matches;
 alignment padding and reconstructed bytes contribute no matching progress.
 
 Independent review of all24 bodies found a missing scan-predecessor cursor
-update in the first draft. That was corrected before publication. An ignored
-native32-bit harness then passed1,215 checks with zero failures, covering all
+update in the first draft. That was corrected before publication. A checked-in
+native 32-bit harness then passed 1,215 checks with zero failures, covering all
 six free-order permutations, coalescing and payload integrity, best-fit and
 equal-size tie order, alignment exponents0..8/35, every size-class redirect,
 signed stats queries, all allocation/free wrappers, override push/pop, strict

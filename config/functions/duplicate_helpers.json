@@ -1,0 +1,1389 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Whole-body source reuse within this project. These duplicates add no new algorithm identity; matching credit still requires an independent exact target comparison."
+  ],
+  "functions": [
+    {
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ],
+      "name": "func_00117888",
+      "address": "0x00117888",
+      "file_offset": "0x018888",
+      "size": 16,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_001100D0",
+        "source": "src/game/leaf.c",
+        "original_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00116CA8"
+      ],
+      "compiler_profile": "gcc323",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 16,
+        "compiled_size": 16,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3",
+        "compiled_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ],
+      "name": "func_00117898",
+      "address": "0x00117898",
+      "file_offset": "0x018898",
+      "size": 20,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_001100E0",
+        "source": "src/game/leaf.c",
+        "original_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00116CA8"
+      ],
+      "compiler_profile": "gcc323",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 20,
+        "compiled_size": 20,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae",
+        "compiled_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ],
+      "name": "func_0011FFF0",
+      "address": "0x0011FFF0",
+      "file_offset": "0x020FF0",
+      "size": 64,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_0011FFB0",
+        "source": "src/game/leaf.c",
+        "original_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "compiler_profile": "gcc323",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 64,
+        "compiled_size": 64,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045",
+        "compiled_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0020E5C0",
+      "address": "0x0020E5C0",
+      "file_offset": "0x10F5C0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AEE40",
+        "source": "src/game/heap.c",
+        "original_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_002264E8",
+        "func_002267D0"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270",
+        "compiled_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002233E0",
+      "address": "0x002233E0",
+      "file_offset": "0x1243E0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0022C120",
+      "address": "0x0022C120",
+      "file_offset": "0x12D120",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AEE40",
+        "source": "src/game/heap.c",
+        "original_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270",
+        "compiled_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_00279F88",
+      "address": "0x00279F88",
+      "file_offset": "0x17AF88",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00279CC0"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0027E5B0",
+      "address": "0x0027E5B0",
+      "file_offset": "0x17F5B0",
+      "size": 12,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "4376c9b99a880e602313a32604607610996a1a2c1a6863d258512c84c0c0334a",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE710",
+        "source": "src/game/heap.c",
+        "original_sha256": "4376c9b99a880e602313a32604607610996a1a2c1a6863d258512c84c0c0334a"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 12,
+        "compiled_size": 12,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "4376c9b99a880e602313a32604607610996a1a2c1a6863d258512c84c0c0334a",
+        "compiled_sha256": "4376c9b99a880e602313a32604607610996a1a2c1a6863d258512c84c0c0334a"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_00297410",
+      "address": "0x00297410",
+      "file_offset": "0x198410",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_00297720",
+      "address": "0x00297720",
+      "file_offset": "0x198720",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0029A168",
+      "address": "0x0029A168",
+      "file_offset": "0x19B168",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00104938",
+        "func_00115CC8",
+        "func_00166F58",
+        "func_001B2AC0",
+        "func_001B2B20"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0029B5F0",
+      "address": "0x0029B5F0",
+      "file_offset": "0x19C5F0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_0029B818",
+      "address": "0x0029B818",
+      "file_offset": "0x19C818",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A0218",
+      "address": "0x002A0218",
+      "file_offset": "0x1A1218",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A5058",
+      "address": "0x002A5058",
+      "file_offset": "0x1A6058",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A6520",
+      "address": "0x002A6520",
+      "file_offset": "0x1A7520",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_0026F390"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A65E8",
+      "address": "0x002A65E8",
+      "file_offset": "0x1A75E8",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A7170",
+      "address": "0x002A7170",
+      "file_offset": "0x1A8170",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A7528",
+      "address": "0x002A7528",
+      "file_offset": "0x1A8528",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A7BC0",
+      "address": "0x002A7BC0",
+      "file_offset": "0x1A8BC0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A83F0",
+      "address": "0x002A83F0",
+      "file_offset": "0x1A93F0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_002AFF08",
+        "func_002AFFB8"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002A8580",
+      "address": "0x002A8580",
+      "file_offset": "0x1A9580",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_0026F390"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002AC698",
+      "address": "0x002AC698",
+      "file_offset": "0x1AD698",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00295A78"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002AC758",
+      "address": "0x002AC758",
+      "file_offset": "0x1AD758",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00295A78"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002AF610",
+      "address": "0x002AF610",
+      "file_offset": "0x1B0610",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00165350",
+        "func_001656D8",
+        "func_001DC820",
+        "func_002117B8",
+        "func_00211C08",
+        "func_00214AE0",
+        "func_002187E0",
+        "func_002CFEB0"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B05C0",
+      "address": "0x002B05C0",
+      "file_offset": "0x1B15C0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B15A8",
+      "address": "0x002B15A8",
+      "file_offset": "0x1B25A8",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B5EF0",
+      "address": "0x002B5EF0",
+      "file_offset": "0x1B6EF0",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_00104938",
+        "func_00155438"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B6470",
+      "address": "0x002B6470",
+      "file_offset": "0x1B7470",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B6F08",
+      "address": "0x002B6F08",
+      "file_offset": "0x1B7F08",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002B8B48",
+      "address": "0x002B8B48",
+      "file_offset": "0x1B9B48",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [
+        "func_0023DE30"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    },
+    {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "name": "func_002BA280",
+      "address": "0x002BA280",
+      "file_offset": "0x1BB280",
+      "size": 28,
+      "source": "src/game/duplicate_helpers.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reused_complete_project_source_body",
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "link": true,
+      "reuse_kind": "project_exact_body_duplicate",
+      "template": {
+        "name": "func_002AE990",
+        "source": "src/game/heap.c",
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Entire original code body exactly equals the reviewed template, including every branch/call encoding; shared typed C macro reused without assembly fallback. Each new entry must independently compile/link in full at its own original address.",
+      "boundary_evidence": "Heuristic entry/endlabel independently checked: all consecutive original words and exact final delay slot agree; following alignment excluded. Forwarders additionally prove complete standalone stack frame, fixed direct call, return and restoration.",
+      "known_callers": [],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "compiled_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "review_evidence": "Root reviewed all distinct template instruction sequences and every standalone forwarder encoding; independent reuse agent rechecked every full original/template hash, boundary and body, then compiled/linked all32 entries at their own addresses to exact bytes/size with zero unresolved relocations."
+    }
+  ]
+}

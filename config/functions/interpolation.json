@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Reuse previously recovered heap entry points and shared guest scalar types. No original engine source identity assumed.",
+    "Full native32 harness passed1442 pool checks and30 interpolation checks. Native float checks use the host IEEE model; the source comparison graph follows original EE instructions."
+  ],
+  "functions": [
+    {
+      "name": "func_002ADC80",
+      "address": "0x002ADC80",
+      "file_offset": "0x001AEC80",
+      "size": 264,
+      "source": "src/game/interpolation.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3d8970abaec7ea360ecdf0e49cf114143df8c71a75bcdd515d53c6c0b00b2927",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "compiler_profile": "gcc323",
+      "link": true,
+      "evidence": "Interleaved-key component interpolation: first/last memcpy endpoints, linear interval scan, complete weighted blend; unordered comparisons and no-found paths preserve original behavior.",
+      "boundary_evidence": "Complete instruction sequence through final return delay slot independently reviewed; following zero alignment words excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 264,
+        "compiled_size": 264,
+        "different_bytes": 150,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3d8970abaec7ea360ecdf0e49cf114143df8c71a75bcdd515d53c6c0b00b2927",
+        "compiled_sha256": "0bc8171d915f08bd6725ee55199007a19a83d3d608446c6eae4de77f4f4924c9"
+      },
+      "review_evidence": "Root read every complete original instruction sequence and the reuse agent independently reviewed every nonmatching source body; native32 semantic tests pass. Exact status requires complete size/bytes and zero actual linked relocations."
+    }
+  ]
+}

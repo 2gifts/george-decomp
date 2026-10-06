@@ -279,3 +279,19 @@ and reload order, explicit empty sentinel check, and cleared removed-node links.
 The empty check agrees for valid lists but can differ on corrupt inputs. This
 reuse establishes no original AROS source identity or byte match. The APL applies
 to this dedicated source file.
+
+## Additional identified upstream string assembly
+
+`strcmp.S` and `strcpy.S` are unchanged Jeff Johnston/Cygnus Solutions 1999
+implementations from the pinned public newlib 1.8.1 tree. They are also
+byte-identical source files in the previously pinned PS2DEV newlib 1.10 patch.
+Their preserve-notice licenses remain in each file.
+
+Retail `strcmp` at `0x00393A28` is 332 bytes; `strcpy` at `0x00393B74` is
+280 bytes. Both match every upstream algorithm instruction outside two `DLI`
+macro expansions and the resulting initial branch displacement. The two 64-bit
+constants agree exactly. The pinned assembler expands those constants with
+shorter `LUI` sequences and produces 324 and 272 bytes respectively. They remain
+reconstructed assembly, earn no exact-match credit, and never count as
+high-level C recovery. These macro differences describe assembler behavior and
+do not identify the original compiler.

@@ -1,4 +1,5 @@
 #include "george/heap.h"
+#include "george/function_templates.h"
 
 extern u32 D_003FD200;
 extern GeorgeHeap *D_003FD204;
@@ -121,7 +122,7 @@ void func_002AE158(void *memory)
 GeorgeHeap *func_002AE6C0(void) { return &D_004D84B0; }
 void func_002AE6E8(GeorgeHeap *heap) { heap->flags |= 1; }
 void func_002AE6F8(GeorgeHeap *heap) { heap->flags &= 0xFFFFFFFE; }
-u32 func_002AE710(const GeorgeHeap *heap) { return heap->flags & 1; }
+GEORGE_DEFINE_FIELD1C_BIT0_GETTER(func_002AE710)
 
 u32 func_002AE730(const GeorgeHeap *heap, s32 mode)
 {
@@ -207,8 +208,8 @@ DEFINE_ALLOCATION(func_002AF058, (u32 size), D_003FD204, 0x28, 4)
 DEFINE_ALLOCATION(func_002AF140, (u32 size), D_003FD204, 0x18, 3)
 #undef DEFINE_ALLOCATION
 
-void func_002AE990(void *memory) { func_002AEE40(memory); }
-void func_002AEE40(void *memory) { func_002AE158(memory); }
+GEORGE_DEFINE_FREE_FORWARD(func_002AE990, func_002AEE40)
+GEORGE_DEFINE_FREE_FORWARD(func_002AEE40, func_002AE158)
 void func_002AF100(void *memory) { if (memory != 0) func_002AE158(memory); }
 void func_002AF120(void *memory) { if (memory != 0) func_002AE158(memory); }
-void func_002AF1E8(void *memory) { func_002AE158(memory); }
+GEORGE_DEFINE_FREE_FORWARD(func_002AF1E8, func_002AE158)

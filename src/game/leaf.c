@@ -1,4 +1,5 @@
 #include "george/types.h"
+#include "george/function_templates.h"
 
 /*
  * Reconstructed from SLUS_216.68. See config/recovered_functions.json for status.
@@ -8,16 +9,10 @@
  */
 
 /* Matched. 0x001100D0, 0x10 bytes: set bit 0 of the word at +0x18. */
-void func_001100D0(GeorgeFlags18 *object)
-{
-    object->field18 |= 1;
-}
+GEORGE_DEFINE_SET_BIT0(func_001100D0)
 
 /* Matched. 0x001100E0, 0x14 bytes: clear bit 0, preserving every other bit. */
-void func_001100E0(GeorgeFlags18 *object)
-{
-    object->field18 &= ~1u;
-}
+GEORGE_DEFINE_CLEAR_BIT0(func_001100E0)
 
 /* 0x001102F8, 0x34 bytes: adjust two flags, write low 3 bits, advance by 24. */
 u8 *func_001102F8(GeorgeFlags18 *object, u32 *output)
@@ -154,14 +149,5 @@ void func_0011FE00(GeorgeFade4C *object, u32 value)
 }
 
 /* Matched. 0x0011FFB0, 0x40 bytes: subtract a scaled step from a positive scalar. */
-void func_0011FFB0(GeorgeFade4C *object, float step)
-{
-    if (object->field18 != 0) {
-        float current = object->field1C;
-        if (0.0f < current) {
-            float scaled = step * object->field4C;
-            /* The original permits the subtraction to overshoot below zero. */
-            object->field1C = current - scaled;
-        }
-    }
-}
+/* The shared body preserves the original possible negative overshoot. */
+GEORGE_DEFINE_FADE_UPDATE(func_0011FFB0)

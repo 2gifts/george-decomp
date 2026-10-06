@@ -1,7 +1,7 @@
 # Intrusive list helpers
 
-Twelve routines recover700 original bytes. The two insertion helpers exactly
-match complete retail code under GCC2.9 (56 bytes); the other ten remain
+Twelve routines recover 700 original bytes. The two insertion helpers exactly
+match complete retail code under GCC 2.9 (56 bytes); the other ten remain
 reconstructed. Eight are independently reconstructed in `src/game/list.c`.
 Four reuse licensed AROS algorithms in the separate `src/game/list_aros.c`.
 
@@ -13,7 +13,7 @@ This is a layout correspondence, not evidence of Papaya's original source origin
 AROS AddHead, AddTail, RemHead and Remove were adapted from the official
 [AROS source at revision e8e543e6ca866e26671c8f586d545f80609ef3dd](https://github.com/aros-development-team/AROS/tree/e8e543e6ca866e26671c8f586d545f80609ef3dd/rom/exec).
 The dedicated adapter file retains the AROS notices and dated modifications and
-is under the AROS Public License1.1; its complete source is distributed here.
+is under the AROS Public License 1.1; its complete source is distributed here.
 `LICENSES/AROS-Public-License-1.1.txt` preserves that license. Changes adapt the
 observed structures/entry points, remove AROS library macros, retain original
 field reloads, compare the explicit tail sentinel when removing the head and
@@ -45,9 +45,9 @@ reloads around stores so overlapping sentinels work correctly.
 | `002ADB70` | 224 | gcc323 | 228 | No |
 | `002ADC50` | 48 | gcc323 | 44 | No |
 
-A focused native32-bit harness passed934 checks with no failures: empty and
+A checked-in native 32-bit harness passed 934 checks with no failures: empty and
 populated lists, mixed head/tail insertion, insertion beside nodes, cleared
-links after both removal forms, every0..3-node source/destination append/prepend
+links after both removal forms, every 0..3-node source/destination append/prepend
 combination, successor/root walks and all seven diagnostic return cases.
 Both pinned compiler profiles were compared once for this coherent batch;
 no assembly changes, relocation masking or padded comparisons establish matches.

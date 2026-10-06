@@ -1,0 +1,1839 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Twenty connected look, intersection, road and vehicle-entry state methods, including their movement/geometry helpers. Address names and partial layouts do not assert original names.",
+    "Complete 64-bit software-double operands and results are retained. Constants 400921FB60000000, 401921FB60000000 and 3FB99999A0000000 are exact float values extended to double.",
+    "EE MIN.S value selection is independently modeled with signed encodings. FCR cause flags are outside the C value model; pinned primary behavior evidence is documented.",
+    "Call prototypes omit stale registers. D0370 output mode uses full 32-bit stores; the caller subsequently reads its low byte. Indexed vectors retain observed 32-bit address arithmetic, with allocation capacities still unknown.",
+    "All registered bodies remain reconstructed until complete linked byte/length/relocation checks succeed. No inline assembly, encoding inserts or original code/data copies form these C bodies.",
+    "Native 32-bit harness passes 106 checks of callback mutations, aliased vectors, geometry indices, route sentinels/modes, timer states, software-double angles and MIN.S value-model boundary encodings.",
+    "Independent full-instruction review passed all 20 bodies and four table hashes, including owner/record reloads, interleaved vector aliases, full-word mode outputs, soft-double constants and resource virtual sequencing."
+  ],
+  "functions": [
+    {
+      "name": "func_001D17D8",
+      "address": "0x001D17D8",
+      "file_offset": "0x000D27D8",
+      "size": 68,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001D17D8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7e6aa0e7df6b9dc96bfb120e4f938e93f8ae4681b4b3efc5d2f4f057bd8672d6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Looks up road by complete word, then returns field 3C plus low 16(word)*0x 60 with 32-bit pointer arithmetic; null lookup returnsNULL.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 68,
+          "different_bytes": 30,
+          "compiled_sha256": "7c4f8c7f3b31a63ecdfbe0c46d8a082baf0a0d217bcfad0a194acff0c01d3a3b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 68,
+          "different_bytes": 6,
+          "compiled_sha256": "49114d4d1f7ee82b662355a5aa4425e718a3c9f972e04a5e3d61b6d9f88cefdc",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 68,
+          "different_bytes": 6,
+          "compiled_sha256": "bdf625f0e3a77a0a47847ea04545a0257b2f49b07164dede9df923c63c6e5b60",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001D1820",
+      "address": "0x001D1820",
+      "file_offset": "0x000D2820",
+      "size": 132,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001D1820",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a69a695c74071722c656963fe5537a07e1249e98f89903f09db888fc748cc3c8",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Captures output, complete word, low 8 index, full signed 32 mode, and independent f 12 scalar across lookup; nonnull road invokesCF7A0 with five integer args plusfloat and returns its word result.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 132,
+          "different_bytes": 78,
+          "compiled_sha256": "c4026821070735f92a798360d6108c45d7dc90194640674adec8a4c8f4450daf",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 128,
+          "different_bytes": 82,
+          "compiled_sha256": "bd1771da0080409b29c3af4f20b8d9a331e15f91cb5db1c50269f0183b0591df",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 128,
+          "different_bytes": 74,
+          "compiled_sha256": "b071729923821b44fba3d64621ef4c102a5f1fc514a3e04ea9a288e06a50625a",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001D18A8",
+      "address": "0x001D18A8",
+      "file_offset": "0x000D28A8",
+      "size": 192,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001D18A8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9331ff0547850b467da9ffe5efa2875f948c07ccdab44767dc1a96c137be1f66",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Uses low 16 road index and low 8 vector index, with stride 34 record/stride 12 vectors. Interleaves source loads/output stores, captures each scalar for negation only when full signed 32 reverse==1; lookup failure returns 0 withoutstores.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 192,
+          "different_bytes": 131,
+          "compiled_sha256": "9f91a6d5072dd5e12a2f1611e5536bcdc02f46e508444d6498b09b1bc62d5d7f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 192,
+          "different_bytes": 46,
+          "compiled_sha256": "30856b4bb55bfe54911855985ded5f1e33c1d9747e69a03e6348f5d935155918",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 192,
+          "different_bytes": 40,
+          "compiled_sha256": "957efa2b939b6215e1a4e2e874ffb7d75ca3caebdd97319bcfd727f160003608",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001D9DC8",
+      "address": "0x001D9DC8",
+      "file_offset": "0x000DADC8",
+      "size": 512,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001D9DC8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9a70822942f9c1d9d6a44c59e666c357264b757341465755bd8239bd6932287e",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Look member 0: initial/target angle at 1C; optional owner angle/rate write gated byword 2C. Captures owner and goal target afterfirst soft comparison before optional abs call; repeated conversions/soft abs, wrap by exactfloat-pi extendeddouble bits and final strict epsilon setword 14=1.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8D50",
+          "index": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 420,
+          "different_bytes": 422,
+          "compiled_sha256": "406086395040c344e44b668c429aa0fab4499d4e62ecb33f84237f88f97c80ed",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 455,
+          "compiled_sha256": "9303f8ef250897697e5a9e265bfa552e04f0451dc603d06679044c2dd4fa6882",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 454,
+          "compiled_sha256": "27c885692189c1afffac7efac299c11b280d119f04c95682f953ceccfd22af5b",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001D9FC8",
+      "address": "0x001D9FC8",
+      "file_offset": "0x000DAFC8",
+      "size": 512,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001D9FC8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "1fbe55cf6f4f339e56da8b92b034706fbac71e558f5579869e2d5de4432e2c75",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Look member 1: same fully reviewed soft-double angle completion using initial/targetfloat 18, setsword 14=2. Sharedmacro preserves repeated calls and captured owner.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8D50",
+          "index": 1
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 420,
+          "different_bytes": 422,
+          "compiled_sha256": "3654fb23000c14607bd600964b2880954e53d9c285aba40472d622ea13823279",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 455,
+          "compiled_sha256": "5ea91597afe01957df5de2ca32a05f90e699ef8f558f01401a0ea747929c4b0f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 454,
+          "compiled_sha256": "0a3ef863e9bc6c26df8ee11fac5f09eba54621f35a42e06a1a7edb61892350d4",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DA1C8",
+      "address": "0x001DA1C8",
+      "file_offset": "0x000DB1C8",
+      "size": 512,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DA1C8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "05f1bc1d8a4171b900bf3494b4e3e8886bcd15fd9779911bbb43b1a01a1d1969",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Look member 2: same reviewed soft-double angle completion using initial/targetfloat 20, setsword 14=3.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8D50",
+          "index": 2
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 420,
+          "different_bytes": 422,
+          "compiled_sha256": "61ade2b317fa34b54dc6a13ef0a6881a2700b5b38911e3e102503435b8246412",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 455,
+          "compiled_sha256": "3174b6b3bd4642feca5b1b62d93ac0a97e70b92efe7fbbe648ed8eb53f5b512d",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 454,
+          "compiled_sha256": "728af9c29f10c3891c41be9230988e0dc565f57ec20a3ceb3b076195f6d3e1cc",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DA3C8",
+      "address": "0x001DA3C8",
+      "file_offset": "0x000DB3C8",
+      "size": 512,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DA3C8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4313c77415c009ac1886cfbc272a698dfea0455cbf419ca5dd6f975426a3cee5",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Look member 3: initialfloat 18 ownerwrite but targetfloat 20 angle completion, setsword 10=1. Differences followactual loads rather than assuming all four targets equal.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8D50",
+          "index": 3
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 420,
+          "different_bytes": 422,
+          "compiled_sha256": "df601b9763769b9204c75bfa1b631625f1ec5f36d41aaa723cd130b7b96e928c",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 455,
+          "compiled_sha256": "760a06eb7c4b95abcd9ff1b372b14ee2d80bd82909bad503bf89c90d63ebf5be",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 440,
+          "different_bytes": 454,
+          "compiled_sha256": "656e7abbda821dedb2d11f8f50594808578d6fb22c725688a1a6326513f90be5",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DB968",
+      "address": "0x001DB968",
+      "file_offset": "0x000DC968",
+      "size": 576,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DB968",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "44c334b145f6a64d364a50a7b6c6d96efdd1e448a97d80ffb05e88c27a17f537",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Movement helper updates entity state using complete 64 mask 80000000000, reloads entity, snapshots target-position beforex/z/y stores to owner 90. Normalizer return squared storedmotion 18. Projection flag 20 without 40 uses entity 88/owner 54 dot; alternate vector blend scales byreciprocal squared length. Strict tiny orflag 80 zeroes localwords; otherwise normalizes/scales bymotion 1C*24. Callback-dependent local scalars reloaded beforemotion 00 x/z/y stores.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 548,
+          "different_bytes": 443,
+          "compiled_sha256": "3f47ee77397e8cc1bc12db6bbd035f31a88f6c348252b632084e909c9aa45a2b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 576,
+          "different_bytes": 399,
+          "compiled_sha256": "47ff3f6e8b2ee9d6e5eb5d54772a2e7627683cca546463c5f24364d4ca8fa02a",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 576,
+          "different_bytes": 397,
+          "compiled_sha256": "8db358157432759fa0e9a7bf8a6376d4e1dc7650b5cfb60a4c311ec8a355fd32",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DC200",
+      "address": "0x001DC200",
+      "file_offset": "0x000DD200",
+      "size": 616,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DC200",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "edddae49391b502f886a4fcec312e5a38bd7ae3fbe74650dd9a8f9cadbbbb1a9",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "One-step strict target thenorigin float anglewrap; EE signed-encoding min blend,+1; soft-double weight/start/delta conversions in order. Complete 64 soft abs/PI test wraps viaTAU and negative weight beforemultiply/add/dp-to-float; exactPI/TAU are floatconstants extended todouble.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 580,
+          "different_bytes": 518,
+          "compiled_sha256": "b1b6cbcc77446975ce732474c7031979f2e539020abafba85cec4f9970bc2d2f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 592,
+          "different_bytes": 369,
+          "compiled_sha256": "cbc6dd2f445bf1dc794d20bce300b469a686306f1c965d9c5339bd2ec0e3ec34",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 592,
+          "different_bytes": 369,
+          "compiled_sha256": "c353d1ad67e0998d428d689a547853e89d697e05d78650401e1031cd99071954",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DF728",
+      "address": "0x001DF728",
+      "file_offset": "0x000E0728",
+      "size": 432,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DF728",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5fe22fa4d703fafc0da04af06f377149bc17d7863a68f5a0604e1da350c2ee76",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Intersection member 0: lookup then six-argument path output. Returnlow 8 count stored 13; zero skipsrandom. Three independent signedrand%10001 values, two distinct anglecalls, exactconstant words 3A24B5BE/391D4951, zero yword, scalar 18, target components captured beforex/z/y stores; state 1/indexincrement.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E38",
+          "index": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 412,
+          "different_bytes": 339,
+          "compiled_sha256": "b7c6f9cce1495fe76a6e457e4c19db1a4e7bc71231abb64d59db01bfeb50175b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 412,
+          "different_bytes": 332,
+          "compiled_sha256": "e7782b69022f02ede684f12e74844aa453c5129f21024a5b99f3f917e779aebf",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 412,
+          "different_bytes": 329,
+          "compiled_sha256": "85331abd22a673c972a93872e6247fb9f18db6f28708d73b4ca2050c95ec636a",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DF8D8",
+      "address": "0x001DF8D8",
+      "file_offset": "0x000E08D8",
+      "size": 768,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DF8D8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ba8f68e54ba5398a65df1440359186dfd5ec1caec1a2f5274f28b9d43f6e781c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Intersection member 1: motion 20 EEmin(owner 60*45,+1), movementcall, strictdistance<1 gate. Advances indexedtarget whenbyteindex<count; exhausted path outputs include full 32 mode andword plusbyteindex. Fallback roadrecord address computed afterD17D8 callback, owner byte 21/20 reload betweenstores, flags 4 precedence over 8, then position/direction helpers andstate 2.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E38",
+          "index": 1
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 760,
+          "different_bytes": 637,
+          "compiled_sha256": "baa482484d7e65ea576d3583aa9decb8ed5d60d05179fa4a09419b9770384eb7",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 796,
+          "different_bytes": 662,
+          "compiled_sha256": "4441b6b7a671119762c02c4a706d7c26ad93394d8101778645e14357fda6d0c3",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 796,
+          "different_bytes": 662,
+          "compiled_sha256": "71b4c771f067b6f80abe796d3586477620e3946722047ddcb68f787d330e3343",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DFBD8",
+      "address": "0x001DFBD8",
+      "file_offset": "0x000E0BD8",
+      "size": 316,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DFBD8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7c3f2f445e9fc94640aa69df22429f019995f4bbe988fa8cd7be7b3e7990cdbc",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Intersection member 2: same EEclamp/movement; strictdistance<1 captures entity-targetdelta, reciprocal squared scale threshold 3727C5AC, and strict positive dot withgoalvector 50 setsstatus 11=1. NaN skips strictgates.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E38",
+          "index": 2
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 336,
+          "different_bytes": 268,
+          "compiled_sha256": "0e534223d1f5e92f4bc089b39e0fc7b4cf8bc37e9a4c1b9c7801df443d1af2cf",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 352,
+          "different_bytes": 292,
+          "compiled_sha256": "6c50b21c3b434e8eff4f868ce0eb4d82089afad6a33a2bd45b610e1410ce1cf9",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 352,
+          "different_bytes": 291,
+          "compiled_sha256": "a05704babbc990855d86fa5d9958d1c43e5e0cd01283924e6ae4c35732353908",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DFEB0",
+      "address": "0x001DFEB0",
+      "file_offset": "0x000E0EB0",
+      "size": 300,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DFEB0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9bf5a35d8c4101dd54bdefc31b69b5771bf8c8701f7e1c623141e8d297fa8269",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Road targethelper captures low 8index anddirection, increments indexmod 256 onlyforward. Direction helper thenowner 80 output thenposition helper withownerreloads. Success snapshots target+0.1*direction, setsstate 1/status 0/zeroword 54, reloadsowner before interleaved entityposition 48 copy; failurestatus 2.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 284,
+          "different_bytes": 240,
+          "compiled_sha256": "9f8b85e41df23fa64b08be26facfae20ad35fa2cf87daa37bd3ed6b3ff01a577",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 280,
+          "different_bytes": 250,
+          "compiled_sha256": "abcbeb847fa54f1e3068f2c8afd6c939ee4cfbb433cadafe3af430395400e667",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 280,
+          "different_bytes": 248,
+          "compiled_sha256": "958980e7a1417a5712d74a579b372b250c8e2b46fea115b4870d9a0d42ae268c",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001DFFE0",
+      "address": "0x001DFFE0",
+      "file_offset": "0x000E0FE0",
+      "size": 564,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001DFFE0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "849365219bdac81f533fca1af2e7ee1aebf38f15bca06d3e847528c3a302d1a0",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Road member 0: signedneighborword 18/1C, unsignedbyteindices withsigned count-2 threshold, blockedflags dependfull signedbyte mode 2/-2, sentinel-1 togglesdirection while<-1 setsowner 18/status 1 andreturns. Reloads neighbor afterlookup, ownerbetween potentiallyaliasingstores, andnewrecord/count afterword 14store. All continuingpaths invokeDFEB0.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E68",
+          "index": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 544,
+          "different_bytes": 427,
+          "compiled_sha256": "b214a04bb356901ca2feb60e16b279d28b8795d9610b3a146a4a32fb3bd17f59",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 560,
+          "different_bytes": 388,
+          "compiled_sha256": "efc9a1fe9ade84b69aae8a211561aafc29b21d5f537ebbde838066ea29420c64",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 560,
+          "different_bytes": 384,
+          "compiled_sha256": "b4efd03b7f7c21150bb93f90d26e0edc7c458268fb6c63450cab60c67059090d",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E0218",
+      "address": "0x001E0218",
+      "file_offset": "0x000E1218",
+      "size": 652,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E0218",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "981dea84521c99f6d560f3b018acd039ba4314bafc68af9193b92fc04eee6bc3",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Road member 1: entitystate 2/0 accumulates float 54; strict>1.2 followedbydistance<1 enterspause 2 with 5/1.2 seconds andwrappedcount. Otherpaths resetword 54/position 48. EEclamp/movement thenowner 18=FFFFFFFF, reloadowner beforeentitydelta; squared reciprocalscale thenordered dot>=0 or strictdistance<0.01 resetsstate 0.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E68",
+          "index": 1
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 624,
+          "different_bytes": 482,
+          "compiled_sha256": "0305aaeee2fc2e31c3399f7522914a6ac4c8edd07cad3ab5b5a8db89b7c1c1d7",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 636,
+          "different_bytes": 497,
+          "compiled_sha256": "5d0ecbfb612330616d1387d81bd18b4bdf24868c4394d66797defc23a8978480",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 636,
+          "different_bytes": 497,
+          "compiled_sha256": "49b734f07f8ae480cc29d48bd1c9ca008295ebbaf0f900271b7438c0aa4894b8",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E0630",
+      "address": "0x001E0630",
+      "file_offset": "0x000E1630",
+      "size": 168,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E0630",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "13ae271e3ffb268dc253bfaceb190be9b100e080515afa482ef49d054979c514",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Road member 2: three zerowords passedasstackvector to 177E48(two actualarguments), reloadowner aftercall, strictnegative float 54 timer. Count<2 resumesstate 1, otherwise resetsstate 0/count 0 andtoggles capturedowner directionbyte 21; timer 0.6. Zero/NaN skipphasechanges.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8E68",
+          "index": 2
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 176,
+          "different_bytes": 84,
+          "compiled_sha256": "4b4c035655990880b13df3e81e192598ab8608b4a1b1907b60391d57a79e7ae3",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 172,
+          "different_bytes": 43,
+          "compiled_sha256": "5b2995c2a7998b87d34b39fd9befde52adf5095a5f1bb357e07b9590013e5945",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 172,
+          "different_bytes": 42,
+          "compiled_sha256": "f20a44508cab2c345e02a4744b30092968c8ce1f0761e01be47a28568c33625c",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E8390",
+      "address": "0x001E8390",
+      "file_offset": "0x000E9390",
+      "size": 320,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E8390",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "632410960ca1e33d900775b52f5324bd9ec5f072cc11db064d0c35b68732e122",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Enter member 1: two separate adjusted-this table 38 vectorcalls with resource 14 reload; first resultvector loadedafter secondcall. Strictdot>1 status 4 doesnotexit. Signedbyte 40 optionallycallsfreshresource virtual 1A0, !=1 status 2. Ownerreload, EEclamp/movement continuesregardlessstatus; strictdistance<1 selectsstate 0/2 frombyte 3F.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8EE0",
+          "index": 1
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 344,
+          "different_bytes": 224,
+          "compiled_sha256": "2acd7a7cb099e6f10c7717990d61efd69e1e62919d4d37d4c1c35680a18efb96",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 372,
+          "different_bytes": 292,
+          "compiled_sha256": "710dfc9536a348964a774a88c0b8919da1d5ab8428b79ae6ba6d453f99cea60b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 372,
+          "different_bytes": 292,
+          "compiled_sha256": "01959c582ccfdc78f0b70749d7cf3c62c247fd4b17a8b28bec0db3c7029c6700",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E8608",
+      "address": "0x001E8608",
+      "file_offset": "0x000E9608",
+      "size": 156,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E8608",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c653d3dd5382cf86cbe1fdc8c31b10d447da18c05c0ba1bb0269c51aef902719",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Enter member 0: decrementindex 3F mod 256 beforeindexed array 18 vectorcopy, interleavedx/y/z loadsstores. Anglecall toDC178, ownerreload thenword 2C gatewritesangle 34/exactTAU30; alwayssetsstate 3D=1.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8EE0",
+          "index": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 160,
+          "different_bytes": 86,
+          "compiled_sha256": "f41c41ee7013c8670c661c6f5670d26762a7ac174912849ace8c0c6879405c48",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 160,
+          "different_bytes": 83,
+          "compiled_sha256": "375a7e6357187ab5c79f664b5967b4558cfc4319dc89fb5597c7e6d98954b2f4",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 160,
+          "different_bytes": 83,
+          "compiled_sha256": "8e7498d6a533e9c64be3ace8e537a4d2ade639f46939ff2b2cebf9ab8f113d2b",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E86A8",
+      "address": "0x001E86A8",
+      "file_offset": "0x000E96A8",
+      "size": 96,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E86A8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "077c7a305efa1a83fbb805a22d8d411c29bf0cf3c6d453711336151ca38c11f7",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Enter member 2: capturedgoalbyte 3C isboththird/fourth integerarguments to 1773F0. Successreloadowner setsflag 8/state 3; failurestatus 2.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8EE0",
+          "index": 2
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 100,
+          "different_bytes": 57,
+          "compiled_sha256": "e86c74f4d52b707f58c2abe7445142c577d256a780956a1068c3f1f68847b64f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 96,
+          "different_bytes": 12,
+          "compiled_sha256": "6c5c58859489dac0c99a66660ce97ac029c4076244117a169814c505020ff56f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 96,
+          "different_bytes": 12,
+          "compiled_sha256": "3ea3a8546f5a5eab71506be3b94d4fb69447550db97552ec124795bfa8e279d0",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    },
+    {
+      "name": "func_001E8708",
+      "address": "0x001E8708",
+      "file_offset": "0x000E9708",
+      "size": 152,
+      "source": "src/game/goal_methods3.c",
+      "source_name": "func_001E8708",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "30d38cb2757f709797aeb88c4c26d3c76c89daf5eca95b9b4995f04aa011538b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Enter member 3: initialwrongentitystate clearsownerflag 8/status 4 butcontinues, then reloadowner/entity. StateE plusentityword 750 nonzero invokesBAA68 withentity 364,resource 14,signedgoalbyte 42,zero. Aftercallreloadowner clearflag 8/status 1.",
+      "boundary_evidence": "Complete entry-to-return instruction paths and delay slots reviewed; padding after endlabel excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_003F8EE0",
+          "index": 3
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 152,
+          "different_bytes": 74,
+          "compiled_sha256": "28349f190e5ef6ed6ac3d33bcdfb799c0c867018ee0e53dd1cee30944f2786bd",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 152,
+          "different_bytes": 56,
+          "compiled_sha256": "a8bf72cefbe4953a176314dc09357cf2a407ec9df2482a1b1b112e4b84a69c9b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 152,
+          "different_bytes": 56,
+          "compiled_sha256": "b2813034ef56f3f6108bac76623d76a2b114d3ece9f89414323dbe1602ddd0fb",
+          "unresolved_relocations": []
+        }
+      ],
+      "compiler_gap": "Current GCC candidates compile and fully link, but fail complete byte/size equality. SAVE128 changes width legitimately; original save-slot order remains distinct in near-matching nonleaf helpers. MIN.S value model is independently expressed; no instruction encoding is inserted.",
+      "independent_review": "Complete original body reviewed independently; no concrete semantic defects found."
+    }
+  ],
+  "state_dispatch_proofs": {
+    "D_003F8D50": {
+      "address": "0x003F8D50",
+      "file_offset": "0x002F9D50",
+      "size": 32,
+      "original_section": ".data",
+      "original_sha256": "b7bf3a6916d012ff073be0af69047eea39a6f4c800bda29704b90e2256ebc9e0",
+      "caller": "func_001D9D10",
+      "entries": [
+        {
+          "index": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001D9DC8"
+        },
+        {
+          "index": 1,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001D9FC8"
+        },
+        {
+          "index": 2,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DA1C8"
+        },
+        {
+          "index": 3,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DA3C8"
+        }
+      ],
+      "evidence": "Reviewed mutable encoded member pairs and corresponding selected state writes; proof covers only this byte interval. Adjacent float tables or othergroups excluded."
+    },
+    "D_003F8E38": {
+      "address": "0x003F8E38",
+      "file_offset": "0x002F9E38",
+      "size": 24,
+      "original_section": ".data",
+      "original_sha256": "4d722411e7ae2b0bdf373a267f60955f9684490c78691a39c0b5b8be3d9c45de",
+      "caller": "func_001DF630",
+      "entries": [
+        {
+          "index": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DF728"
+        },
+        {
+          "index": 1,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DF8D8"
+        },
+        {
+          "index": 2,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DFBD8"
+        }
+      ],
+      "evidence": "Reviewed mutable encoded member pairs and corresponding selected state writes; proof covers only this byte interval. Adjacent float tables or othergroups excluded."
+    },
+    "D_003F8E68": {
+      "address": "0x003F8E68",
+      "file_offset": "0x002F9E68",
+      "size": 24,
+      "original_section": ".data",
+      "original_sha256": "a2e58855cbe0681762fdc2ce93f9448c2dbe8fda81bf494d5768e1010daacb2f",
+      "caller": "func_001DFDB8",
+      "entries": [
+        {
+          "index": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001DFFE0"
+        },
+        {
+          "index": 1,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E0218"
+        },
+        {
+          "index": 2,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E0630"
+        }
+      ],
+      "evidence": "Reviewed mutable encoded member pairs and corresponding selected state writes; proof covers only this byte interval. Adjacent float tables or othergroups excluded."
+    },
+    "D_003F8EE0": {
+      "address": "0x003F8EE0",
+      "file_offset": "0x002F9EE0",
+      "size": 32,
+      "original_section": ".data",
+      "original_sha256": "dcc62c01e4ea636808e68743467acf4eefeffda15f649942c12ac71be13452b1",
+      "caller": "func_001E82D8",
+      "entries": [
+        {
+          "index": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E8608"
+        },
+        {
+          "index": 1,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E8390"
+        },
+        {
+          "index": 2,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E86A8"
+        },
+        {
+          "index": 3,
+          "adjustment": 0,
+          "selector": -1,
+          "function": "func_001E8708"
+        }
+      ],
+      "evidence": "Reviewed mutable encoded member pairs and corresponding selected state writes; proof covers only this byte interval. Adjacent float tables or othergroups excluded."
+    }
+  },
+  "float_constant_audit": {
+    "method": "Literal words extracted from original lui/ori followed by mtc1; decimal C literals independently round-checked to the same binary32 word. Soft-double bit chains separately evaluated modulo64.",
+    "function_words": {
+      "func_001D17D8": [],
+      "func_001D1820": [],
+      "func_001D18A8": [],
+      "func_001D9DC8": [],
+      "func_001D9FC8": [],
+      "func_001DA1C8": [],
+      "func_001DA3C8": [],
+      "func_001DB968": [
+        "0x3727C5AC",
+        "0x3A83126F",
+        "0x3F800000"
+      ],
+      "func_001DC200": [
+        "0x3F800000",
+        "0x40490FDB",
+        "0x40C90FDB",
+        "0xC0490FDB"
+      ],
+      "func_001DF728": [
+        "0x391D4951",
+        "0x3A24B5BE",
+        "0x3DCCCCCD"
+      ],
+      "func_001DF8D8": [
+        "0x3DCCCCCD",
+        "0x3F800000",
+        "0x42340000"
+      ],
+      "func_001DFBD8": [
+        "0x3727C5AC",
+        "0x3F800000",
+        "0x42340000"
+      ],
+      "func_001DFEB0": [
+        "0x3DCCCCCD"
+      ],
+      "func_001DFFE0": [],
+      "func_001E0218": [
+        "0x3727C5AC",
+        "0x3C23D70A",
+        "0x3F800000",
+        "0x3F99999A",
+        "0x40A00000",
+        "0x42340000"
+      ],
+      "func_001E0630": [
+        "0x3F19999A"
+      ],
+      "func_001E8390": [
+        "0x3F800000",
+        "0x42340000"
+      ],
+      "func_001E8608": [
+        "0x40C90FDB"
+      ],
+      "func_001E86A8": [],
+      "func_001E8708": []
+    },
+    "binary32_values": {
+      "0x3727C5AC": "9.999999747378752e-06",
+      "0x391D4951": "0.00014999999257270247",
+      "0x3A24B5BE": "0.00062831852119416",
+      "0x3A83126F": "0.0010000000474974513",
+      "0x3C23D70A": "0.009999999776482582",
+      "0x3DCCCCCD": "0.10000000149011612",
+      "0x3F19999A": "0.6000000238418579",
+      "0x3F800000": "1.0",
+      "0x3F99999A": "1.2000000476837158",
+      "0x40490FDB": "3.1415927410125732",
+      "0x40A00000": "5.0",
+      "0x40C90FDB": "6.2831854820251465",
+      "0x42340000": "45.0",
+      "0xC0490FDB": "-3.1415927410125732"
+    },
+    "binary64_values": {
+      "PI_BITS": "0x400921FB60000000",
+      "TAU_BITS": "0x401921FB60000000",
+      "ANGLE_EPSILON_BITS": "0x3FB99999A0000000",
+      "NEGATIVE_ONE_BITS": "0xBFF0000000000000"
+    }
+  },
+  "minimum_behavior_source": {
+    "url": "https://github.com/PCSX2/pcsx2/blob/9fffbdbd59b962d63a2259b150f419ad3773e7b4/pcsx2/FPU.cpp#L97",
+    "revision": "9fffbdbd59b962d63a2259b150f419ad3773e7b4",
+    "file_sha256": "204dcb290f9f56e9112622ab313ef12d2192eda5b43d24efcf2dbc8ca3fa7344",
+    "functions": "fp_min lines97-100; MIN_S lines295-298",
+    "usage": "Behavior evidence, independently expressed C helper; not an unchanged source import."
+  },
+  "native_validation": {
+    "harness": "tests/native/goal_methods3.c",
+    "runner": "tests/native/run_goal_methods3.py",
+    "command": ".venv/Scripts/python.exe tests/native/run_goal_methods3.py",
+    "checks": 106,
+    "failures": 0,
+    "scope": "Observable recovered-C path semantics with stubs and host arithmetic; no original files and no claim to independently simulate all EE FPU flags/rounding."
+  },
+  "independent_review": {
+    "reviewer": "research_reuse",
+    "scope": "All 20 original complete bodies / 7,556 bytes and four dispatch intervals",
+    "result": "No concrete semantic defects found",
+    "audit_log": "build/reuse/goal_methods3_review.json"
+  }
+}
