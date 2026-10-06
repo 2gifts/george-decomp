@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Two complete connected record-producing routines,468 original bytes/117 instructions; reuse established GeorgeList/Node prefix and8B record layout, actual reviewed CRC/string-length C and next-record C unchanged in native tests. Numeric heap/copy bindings retained in production.",
+    "All6 standard candidates naturally link completely with zero remaining relocations and zero exact matches. Original156B constructor excludes following4B alignment; no unowned body/getter included.",
+    "Native54214 bit-exact checks against101 bounded integer controlled-call original-instruction fixtures/6068 original executed instructions/max152, including genuine nested execution of the reviewed next-record body, allocation failure/zero-size/wrapped-size gates, head/captured-next/live-header and copy/allocator mutations, output-size aliases, partial node ownership and untouched allocation tails. Six scoped decoder/control/memory guards pass. Parent independently reviewed full117 original/C/header/docs/tracer/native/guards, whole hashes/bounds/delays/padding/eight helpers/no whole-text entryJALs/no aligned nonexec entrypointers; six fresh actual comparisons,101 regenerated fixtures6068 instructions/max152/both header hashes and native54214/six guards pass. Added actualJR31 external-return and owned-delay checks preserve all fixtures. Registration approved; zero exact."
+  ],
+  "direct_call_evidence": [
+    {
+      "function": "func_002B9F38",
+      "instruction_address": "0x002B9FB4",
+      "target_address": "0x002AEC28"
+    },
+    {
+      "function": "func_002B9F38",
+      "instruction_address": "0x002B9FE0",
+      "target_address": "0x0029C648"
+    },
+    {
+      "function": "func_002B9F38",
+      "instruction_address": "0x002BA01C",
+      "target_address": "0x003934F8"
+    },
+    {
+      "function": "func_002B9F38",
+      "instruction_address": "0x002BA024",
+      "target_address": "0x0029A890"
+    },
+    {
+      "function": "func_002BA070",
+      "instruction_address": "0x002BA09C",
+      "target_address": "0x002AEC28"
+    },
+    {
+      "function": "func_002BA070",
+      "instruction_address": "0x002BA0B8",
+      "target_address": "0x00393B74"
+    },
+    {
+      "function": "func_002BA070",
+      "instruction_address": "0x002BA0C8",
+      "target_address": "0x002AEC28"
+    },
+    {
+      "function": "func_002BA070",
+      "instruction_address": "0x002BA0E0",
+      "target_address": "0x003934F8"
+    }
+  ],
+  "synthetic_fixture_evidence": {
+    "count": 101,
+    "executed_instructions": 6068,
+    "maximum_instructions": 152,
+    "input_sha256": "272bc0586655802dad361cea413798d27e2cdc2d7b1d0a2a59601dc860a5a9d8",
+    "header_sha256_crlf": "b9bf57584c8d8ec03d5dbf1751c4854886a34f7fa3ef394aaf446161120690f7",
+    "header_sha256_lf": "367dd2b80bd57f87a044131d628e84c3458e40706dcc33ae9111c4b27a347ff3",
+    "native_checks": 54214,
+    "guard_tests": 6
+  },
+  "functions": [
+    {
+      "name": "func_002B9F38",
+      "address": "0x002B9F38",
+      "file_offset": "0x001BAF38",
+      "size": 312,
+      "source": "src/game/property_pack.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0b0c56752e5add423162385ba3feca8a04fcc51a6a854b529690dd1851d35741",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 312,
+        "compiled_size": 328,
+        "different_bytes": 249,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          16,
+          18,
+          21,
+          22,
+          24
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "0b0c56752e5add423162385ba3feca8a04fcc51a6a854b529690dd1851d35741",
+        "compiled_sha256": "491ab26913f3b266e47d230c3e02ae352cad944cdc186fcefd9abc74296c66bf"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 332,
+            "different_bytes": 270,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0b0c56752e5add423162385ba3feca8a04fcc51a6a854b529690dd1851d35741",
+            "compiled_sha256": "6deee9cdbcb1d53e0ed3985d701b4eb320445946b90dd1b4d469d8b1e3502007"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 328,
+            "different_bytes": 257,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              10,
+              11,
+              16,
+              18,
+              19
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0b0c56752e5add423162385ba3feca8a04fcc51a6a854b529690dd1851d35741",
+            "compiled_sha256": "824c24646bb7e010ab3df127d3515bd6e5ce6a5b73efe9d18e9fc968393a27f5"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 328,
+            "different_bytes": 249,
+            "first_different_offsets": [
+              4,
+              8,
+              10,
+              16,
+              18,
+              21,
+              22,
+              24
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0b0c56752e5add423162385ba3feca8a04fcc51a6a854b529690dd1851d35741",
+            "compiled_sha256": "491ab26913f3b266e47d230c3e02ae352cad944cdc186fcefd9abc74296c66bf"
+          }
+        }
+      },
+      "entry_references": [],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x002B9F78",
+          "target_address": "0x002B9F88"
+        },
+        {
+          "instruction_address": "0x002B9F80",
+          "target_address": "0x002BA040"
+        },
+        {
+          "instruction_address": "0x002B9F90",
+          "target_address": "0x002B9FB4"
+        },
+        {
+          "instruction_address": "0x002B9FAC",
+          "target_address": "0x002B9F98"
+        },
+        {
+          "instruction_address": "0x002B9FC0",
+          "target_address": "0x002BA03C"
+        },
+        {
+          "instruction_address": "0x002B9FD0",
+          "target_address": "0x002BA038"
+        },
+        {
+          "instruction_address": "0x002B9FF4",
+          "target_address": "0x002BA000"
+        },
+        {
+          "instruction_address": "0x002BA030",
+          "target_address": "0x002B9FE0"
+        }
+      ],
+      "return_evidence": [
+        {
+          "instruction_address": "0x002BA068",
+          "delay_address": "0x002BA06C"
+        }
+      ],
+      "boundary_evidence": "All117 original instructions across both complete connected bodies, terminal JR/delays, every local branch and excluded zero alignment reviewed. No original table or float literal dependencies. Parent independent complete raw/source/controlflow/header/ABI audit passed; registration approved.",
+      "evidence": "Complete linked-node property serialization: output-size zero store before head read, exact shared list sentinel test, wrapped captured total/count, fresh head after allocation, next node captured across CRC/copy/query calls, lowbyte kind capture before flags store, original truncating u16 step versus full u32 copy count, captured last-record index and final original-size store.",
+      "independent_review": "Parent full117 original and complete C/header/docs/tracer/native/guards review passed without semantic defects; independent full hashes/returns/padding/branches/eight calls/no entryrefs, six fresh links and101 fixtures6068 instructions/both header hashes/native54214/six guards reproduce exactly."
+    },
+    {
+      "name": "func_002BA070",
+      "address": "0x002BA070",
+      "file_offset": "0x001BB070",
+      "size": 156,
+      "source": "src/game/property_pack.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b2248e8504f78631b5d585187febfe711ff51a8843bb0327730f2a60b2835677",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 156,
+        "compiled_size": 156,
+        "different_bytes": 28,
+        "first_different_offsets": [
+          4,
+          10,
+          16,
+          21,
+          22,
+          26,
+          32,
+          37
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b2248e8504f78631b5d585187febfe711ff51a8843bb0327730f2a60b2835677",
+        "compiled_sha256": "1c1b939444dc0fadb84d07c96730774f845f7f4b6a5b110f86e718ab37716a23"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 156,
+            "compiled_size": 160,
+            "different_bytes": 114,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b2248e8504f78631b5d585187febfe711ff51a8843bb0327730f2a60b2835677",
+            "compiled_sha256": "13e9b9873ff409f98dc5a820d33c77d64e0992bfde4a2d95bd456c1e01870b6e"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 156,
+            "compiled_size": 156,
+            "different_bytes": 36,
+            "first_different_offsets": [
+              4,
+              7,
+              10,
+              11,
+              16,
+              19,
+              21,
+              22
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b2248e8504f78631b5d585187febfe711ff51a8843bb0327730f2a60b2835677",
+            "compiled_sha256": "c293926b430428b7b91e7ba3b14c0bf2029d17d2da692ccf8a6aabbda81990c0"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 156,
+            "compiled_size": 156,
+            "different_bytes": 28,
+            "first_different_offsets": [
+              4,
+              10,
+              16,
+              21,
+              22,
+              26,
+              32,
+              37
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b2248e8504f78631b5d585187febfe711ff51a8843bb0327730f2a60b2835677",
+            "compiled_sha256": "1c1b939444dc0fadb84d07c96730774f845f7f4b6a5b110f86e718ab37716a23"
+          }
+        }
+      },
+      "entry_references": [],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x002BA0A8",
+          "target_address": "0x002BA0E8"
+        },
+        {
+          "instruction_address": "0x002BA0D0",
+          "target_address": "0x002BA0E8"
+        }
+      ],
+      "return_evidence": [
+        {
+          "instruction_address": "0x002BA104",
+          "delay_address": "0x002BA108"
+        }
+      ],
+      "boundary_evidence": "All117 original instructions across both complete connected bodies, terminal JR/delays, every local branch and excluded zero alignment reviewed. No original table or float literal dependencies. Parent independent complete raw/source/controlflow/header/ABI audit passed; registration approved.",
+      "evidence": "Complete148B node constructor: node allocation failure returns NULL, previous/next stores precede string-copy callback, full kind/length stores follow it, captured length requested for payload allocation, returned pointer assigned before failure gate, original memcpy uses captured allocation/arguments, payload failure retains partial node without invented cleanup.",
+      "independent_review": "Parent full117 original and complete C/header/docs/tracer/native/guards review passed without semantic defects; independent full hashes/returns/padding/branches/eight calls/no entryrefs, six fresh links and101 fixtures6068 instructions/both header hashes/native54214/six guards reproduce exactly."
+    }
+  ]
+}

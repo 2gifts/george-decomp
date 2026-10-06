@@ -1098,3 +1098,53 @@ included here as required for supporting documentation:
  *
  ***************************************************************/
 ```
+
+The 17 decimal-support and Bigint functions in
+[`mprec.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mprec.c)
+are now reused unchanged from the same pinned public newlib 1.8.1 revision.
+The source SHA256 is
+`67f94f948941463ddc14645368d3f104f7bd0de4ec3232248c7f303cfac49732`.
+Its full David Gay / AT&T 1991 notice remains in the source and the supporting
+documentation above. The existing private `mprec.h`, genuine reent layout and
+canonical target `float.h` are reused with their guarded provenance.
+
+These complete bodies recover 4,076 original bytes / 1,019 instructions:
+Bigint allocation/free, multiply-add, string accumulation, leading/trailing
+zero scans, small-integer conversion, limb multiplication, cached powers of
+five, shifts, comparison/difference, ULP construction, Bigint/double conversion,
+ratio and decimal power lookup. The author and root each read the full original
+instruction intervals and unchanged source. Root independently checked all
+17 original hashes/boundaries, 53 actual direct entry calls and their containing
+bodies, 29 helper calls, 96 bounded branches, real target ABI layouts and 51
+fresh complete linked comparisons. A tracked-layout reproduction checks the
+actual dependency hashes and reproduces every full comparison without patching
+source, instructions, relocations or initialization bytes.
+
+Four complete C functions match under authentic GCC 2.9: `_hi0bits` at
+`0x0039E770` / 132 bytes, `_lo0bits` at `0x0039E7F8` / 192 bytes, `__mcmp` at
+`0x0039ED50` / 104 bytes, and `_Bfree` at `0x0039E4F8` / 52 bytes. The free
+routine uses the supported `-fno-strict-aliasing` option to retain the original
+freelist reload after writing the freed node. These four full matches add
+480 bytes; the other thirteen actually linked bodies remain reconstructed.
+Exact runtime totals are now 44 C functions / 5,372 bytes and three separately
+reported assembly functions / 572 bytes.
+
+The former 304-byte heuristic interval at `0x0039F328` contains two independent
+functions. `_ratio` ends with its return/delay at `0x0039F3E0` / `0x0039F3E4`;
+`_mprec_log10` begins with a separate prologue at `0x0039F3E8` and ends at
+`0x0039F44C` / `0x0039F450`. Its excluded padding at `0x0039F454` precedes the
+independently called calloc entry. The complete log function is 108 original
+bytes; genuine compiled extents are 108 bytes under GCC 2.9 and 120 under GCC
+3.2.3. Both full compiled bodies are compared and remain reconstructed. Its
+original signed `dig < 24` table lookup preserves the source's absence of a
+lower-bound guard.
+
+Four whole readonly source sections have independent byte and pointer proofs:
+the 16-byte powers-of-five section at `0x00456D88` (12 initialized bytes plus
+four authentic padding bytes), the 200-byte powers-of-ten array at
+`0x00456D98`, and the 40-byte large/small exponent arrays at `0x00456E60` and
+`0x00456E88`. Both compilers emit all 296 bytes identically, with the verified
+alignment/flags and no data relocations. Real original instruction pairs bind
+each address. The powers-of-five and ten sections are mapped whole for their
+actual source references; these data identities receive no function or text
+matching award.

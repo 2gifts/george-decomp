@@ -1,5 +1,23 @@
 # Native semantic checks
 
+The `property_pack` utility harness passes 54,214 bit-exact checks against
+101 bounded integer original-instruction fixtures, including real nested
+next-record execution, allocator/copy mutations, head and captured-successor
+reloads, wrapped-size failure paths, output-size aliases and retained partial
+node ownership. Run `--harness property_pack`. The actual recovered CRC and
+next-record C are reused unchanged through native call-recording adapters; six
+scoped memory/call/return/delay guards pass. See `docs/property_pack.md` for
+callback, capacity and runtime-model limits.
+
+The `property_records` utility harness passes 21,951 checks against 163
+finite controlled-call original-instruction fixtures: all descriptor cases,
+first-match and zero-count paths, shifted payload/self-descriptor aliases,
+callback offset/flags/step mutations, packed colors and the alpha +16 gap,
+next-record flags/steps and reused byte-order passthrough. Run
+`--harness property_records`; the runner applies `-ffloat-store`. Seven scoped
+decoder/table/callback guards pass. See `docs/property_records.md` for memory
+preconditions, finite host limits and the complete code/data match gate.
+
 The `camera_basis` utility harness passes 88,568 checks against 473 finite
 controlled-call original-instruction fixtures, including all switch modes,
 vertical threshold neighbors, saved-local callback mutations, shifted matrix
@@ -225,3 +243,17 @@ The harness covers retained vectors/basis captures, repeated angular samples,
 request/record cleanup reloads, signed phase/timer gates and output/data aliases.
 Parent and research independently reproduced this result. See
 `docs/actor_states6.md` for host/EE arithmetic and caller precondition limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_states7.py` for 2,266
+asset-free checks of all 20 state34-38 methods and duration callbacks. The
+harness covers full animation identifiers/mask toggles, fresh matrix/object
+reloads, state34's two independent transitions, soft64 wrapped-angle crossings,
+duration/store aliases, and cleanup fields changed by callbacks. Parent and
+research independently reproduced the corrected six-store cleanup and all
+native checks. See `docs/actor_states7.md` for review roles and host/EE limits.
+
+The scalar rigid inverse harness passes 32,769 exact word checks for 512 finite
+original-instruction fixtures across every four-byte input/output overlap shift
+from -60 through +60 and disjoint output. Run it with --harness matrix_rigid.
+Three scoped guards cover code/memory, operands and return/delay transfers. See
+docs/matrix_rigid.md for finite host arithmetic and caller storage limits.

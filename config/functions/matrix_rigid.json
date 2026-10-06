@@ -1,0 +1,429 @@
+{
+  "functions": [
+    {
+      "name": "func_002A1098",
+      "address": "0x2a1098",
+      "file_offset": "0x1a2098",
+      "size": 268,
+      "original_sha256": "57d32e4be519e5d76c3d41cf749e2b7df1393f463fd9385e935fc67307d9e1b1",
+      "source": "src/game/matrix_rigid.c",
+      "source_name": "func_002A1098",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "profile_comparisons": {
+        "gcc323": {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 268,
+            "compiled_size": 256,
+            "different_bytes": 151,
+            "first_different_offsets": [
+              18,
+              26,
+              46,
+              54,
+              84,
+              87,
+              88,
+              90
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "57d32e4be519e5d76c3d41cf749e2b7df1393f463fd9385e935fc67307d9e1b1",
+            "compiled_sha256": "8eefdcaded38773d68936f67ade6ecabe7af2613cfeef142f95dbb2ec2c5add7"
+          }
+        },
+        "gcc29": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 268,
+            "compiled_size": 256,
+            "different_bytes": 190,
+            "first_different_offsets": [
+              2,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "57d32e4be519e5d76c3d41cf749e2b7df1393f463fd9385e935fc67307d9e1b1",
+            "compiled_sha256": "529648c8fada75c75f8b604279487feb197b98d53cebd4895523c848b053cf51"
+          }
+        },
+        "gcc29_save128": {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 268,
+            "compiled_size": 256,
+            "different_bytes": 190,
+            "first_different_offsets": [
+              2,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "57d32e4be519e5d76c3d41cf749e2b7df1393f463fd9385e935fc67307d9e1b1",
+            "compiled_sha256": "529648c8fada75c75f8b604279487feb197b98d53cebd4895523c848b053cf51"
+          }
+        }
+      },
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 268,
+        "compiled_size": 256,
+        "different_bytes": 151,
+        "first_different_offsets": [
+          18,
+          26,
+          46,
+          54,
+          84,
+          87,
+          88,
+          90
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "57d32e4be519e5d76c3d41cf749e2b7df1393f463fd9385e935fc67307d9e1b1",
+        "compiled_sha256": "8eefdcaded38773d68936f67ade6ecabe7af2613cfeef142f95dbb2ec2c5add7"
+      },
+      "review_status": "reconstructed_from_disassembly",
+      "entry_references": [
+        {
+          "instruction_address": "0x1230ec",
+          "caller": "func_00123090",
+          "caller_address": "0x123090",
+          "caller_size": 232,
+          "caller_original_sha256": "411d087129c0a4f19706d5b515b4978c27fcf969a84bc03a90e0dddb1ef23250",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x1234c4",
+          "caller": "func_00123488",
+          "caller_address": "0x123488",
+          "caller_size": 200,
+          "caller_original_sha256": "65cadc3b4244bf4848d440a0381e0fd87fce4e66010c115019ff1a05bdd0f71f",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x123768",
+          "caller": "func_00123750",
+          "caller_address": "0x123750",
+          "caller_size": 68,
+          "caller_original_sha256": "c9272471ae3744600e9ef568bb4ce06508ff53bb862eab64aa5c45ec090b3d12",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x12f07c",
+          "caller": "func_0012F038",
+          "caller_address": "0x12f038",
+          "caller_size": 212,
+          "caller_original_sha256": "8be1a06bb0b8feadeea45541936a2f8d023d7e537d567aefa3e6d3d5bbc2ac23",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x12f144",
+          "caller": "func_0012F110",
+          "caller_address": "0x12f110",
+          "caller_size": 140,
+          "caller_original_sha256": "83eb2c55e2e4182d7216ab12122aecd7547243bbbce08353f9435349817ccb65",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x133944",
+          "caller": "func_00133688",
+          "caller_address": "0x133688",
+          "caller_size": 1636,
+          "caller_original_sha256": "1e7e0fd3f853c1c9ec39dc0e43d3e014014239878acb2b037dd6cc9dd457538a",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x134948",
+          "caller": "func_00134930",
+          "caller_address": "0x134930",
+          "caller_size": 64,
+          "caller_original_sha256": "af668c4e6913459686df6f8a9ff5fabee65e1d757a2e6c7566a24ee083cf9a7a",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x135fc4",
+          "caller": "func_00135F90",
+          "caller_address": "0x135f90",
+          "caller_size": 140,
+          "caller_original_sha256": "930776b40dd6928ae12eb583ef54942589b133ee92cc76371eed94fda0e0ee15",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13ca78",
+          "caller": "func_0013CA10",
+          "caller_address": "0x13ca10",
+          "caller_size": 1796,
+          "caller_original_sha256": "695697b3de3dd5f25325e295c3f9da50a5e604de7e0368524b6dd0a40571a69c",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13ceb4",
+          "caller": "func_0013CA10",
+          "caller_address": "0x13ca10",
+          "caller_size": 1796,
+          "caller_original_sha256": "695697b3de3dd5f25325e295c3f9da50a5e604de7e0368524b6dd0a40571a69c",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13cff4",
+          "caller": "func_0013CA10",
+          "caller_address": "0x13ca10",
+          "caller_size": 1796,
+          "caller_original_sha256": "695697b3de3dd5f25325e295c3f9da50a5e604de7e0368524b6dd0a40571a69c",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13d398",
+          "caller": "func_0013D328",
+          "caller_address": "0x13d328",
+          "caller_size": 2148,
+          "caller_original_sha256": "e4cb31ef8e29a8a459ad3a6c48a25c3b49a2f51b307f475385ce1d30b237413c",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13df90",
+          "caller": "func_0013DF68",
+          "caller_address": "0x13df68",
+          "caller_size": 120,
+          "caller_original_sha256": "46a44967b20870a7f7c8a88332af2cee2a381df5fd71abc8836734c221f89b4f",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x13e048",
+          "caller": "func_0013E018",
+          "caller_address": "0x13e018",
+          "caller_size": 280,
+          "caller_original_sha256": "356de6da63c2bcab69b8edc8982c86f42882ffc13321649ebf169672cd6e1d53",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x140cb8",
+          "caller": "func_00140C08",
+          "caller_address": "0x140c08",
+          "caller_size": 680,
+          "caller_original_sha256": "654f476314d45bf21e6d14603902767f7e5df43469d96635d26229adccf54380",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x149120",
+          "caller": "func_00148E48",
+          "caller_address": "0x148e48",
+          "caller_size": 832,
+          "caller_original_sha256": "51837e3365d08e47e2fb1d7e19b4866056f373fe160cd082a6f35238367d8a0e",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x14b714",
+          "caller": "func_0014B6D8",
+          "caller_address": "0x14b6d8",
+          "caller_size": 200,
+          "caller_original_sha256": "f2b76ff5b73ecf7b44a71307a93c56a246c09d8612af9dc33584d174f1a795e8",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x1fe060",
+          "caller": "func_001FD818",
+          "caller_address": "0x1fd818",
+          "caller_size": 3760,
+          "caller_original_sha256": "affabd39a4481a5bb3d099b0e83a470f6715a94130797d4c44e79643f5224886",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x1ff160",
+          "caller": "func_001FEE30",
+          "caller_address": "0x1fee30",
+          "caller_size": 1032,
+          "caller_original_sha256": "98b88a2d692136206b858264f36edcf9d40fc4e2ed9efa57b7e6b6d6973839e3",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x200078",
+          "caller": "func_00200038",
+          "caller_address": "0x200038",
+          "caller_size": 140,
+          "caller_original_sha256": "548e26986b4a557b52f5ea9dfd35307e0ec12340523b585f1791cb0755cb067e",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x2072a8",
+          "caller": "func_00206AC0",
+          "caller_address": "0x206ac0",
+          "caller_size": 2756,
+          "caller_original_sha256": "43ab2931db93993cbf5ca2568e32795c39a5bc54b652e455a4e64216d145012d",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x208060",
+          "caller": "func_00207D30",
+          "caller_address": "0x207d30",
+          "caller_size": 1140,
+          "caller_original_sha256": "f3d8bb66493c2ccbd974996f207ac05d248a120c5214b8f373ea21b6cdf1ceb0",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x209118",
+          "caller": "func_002090D8",
+          "caller_address": "0x2090d8",
+          "caller_size": 140,
+          "caller_original_sha256": "d045fe1332141dcd5b64284b41236de8433fcebd104f5b177b6b6dea79ff030e",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x23646c",
+          "caller": "func_00236380",
+          "caller_address": "0x236380",
+          "caller_size": 356,
+          "caller_original_sha256": "c3369329821eadd24238d870e0e0d3a7ec50ab088d6a51a6d9705d656ff152d7",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x2392c4",
+          "caller": "func_00239238",
+          "caller_address": "0x239238",
+          "caller_size": 204,
+          "caller_original_sha256": "c04176e7835ef5db8a8901efce0aa24a465af9a92572d2e124a03ffda1243f55",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x270a80",
+          "caller": "func_00270A00",
+          "caller_address": "0x270a00",
+          "caller_size": 656,
+          "caller_original_sha256": "b813e91f569bcd9affe0b2de579a97ed0f551f251c2e8bee01f9081f1754eacb",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x273cc0",
+          "caller": "func_00273168",
+          "caller_address": "0x273168",
+          "caller_size": 3480,
+          "caller_original_sha256": "bb249725b48fc9a3c555bba0c7af2a7f0a0dfbe260eaade24f33ae2f6c59b0de",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x2748a8",
+          "caller": "func_00274168",
+          "caller_address": "0x274168",
+          "caller_size": 3208,
+          "caller_original_sha256": "9a0cae4480f40c7f8bf24ba1a9daf8333db883b8236b1f1740c83865cd6174e9",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x2748bc",
+          "caller": "func_00274168",
+          "caller_address": "0x274168",
+          "caller_size": 3208,
+          "caller_original_sha256": "9a0cae4480f40c7f8bf24ba1a9daf8333db883b8236b1f1740c83865cd6174e9",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x274c88",
+          "caller": "func_00274168",
+          "caller_address": "0x274168",
+          "caller_size": 3208,
+          "caller_original_sha256": "9a0cae4480f40c7f8bf24ba1a9daf8333db883b8236b1f1740c83865cd6174e9",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x27594c",
+          "caller": "func_00274DF0",
+          "caller_address": "0x274df0",
+          "caller_size": 3212,
+          "caller_original_sha256": "a20bd738e80161808e1b58eac36ae456b2ac97d1cf940dc2b9ddc106f0dd51e5",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x275f70",
+          "caller": "func_00275E70",
+          "caller_address": "0x275e70",
+          "caller_size": 604,
+          "caller_original_sha256": "149cfc8155b9a113604410f74754050424272c66cd328cf8e3d5031ef988c7aa",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x29a0c8",
+          "caller": "func_00299D68",
+          "caller_address": "0x299d68",
+          "caller_size": 920,
+          "caller_original_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+          "whole_containing_body_disassembly_equal": true
+        },
+        {
+          "instruction_address": "0x2a1a8c",
+          "caller": "func_002A1620",
+          "caller_address": "0x2a1620",
+          "caller_size": 1512,
+          "caller_original_sha256": "2ddfef411a96639e7570cfb9799294edb321a0a7dcc1795b275d1be2893831e2",
+          "whole_containing_body_disassembly_equal": true
+        }
+      ],
+      "boundary_evidence": "Complete268B/67 instructions including terminal JR/delay; four zero alignment bytes excluded. No calls, switch tables or local branches.",
+      "evidence": "Sequential live transpose stores, with each third basis component captured before its homogeneous zero. Fresh input basis/translation captures for each negated ordered dot; all final-row operands captured before output15=1. Output/input alias propagation retained."
+    }
+  ],
+  "schema_version": 1,
+  "notes": [
+    "One complete scalar rigid inverse,268 original bytes. Reuse existing64B matrix layout and strict finite decoder without new instruction forms.",
+    "Root and peer independently read all67 original instructions and full C/header/native/tracer. Root checked all34 actual JAL references and complete containing-body hashes. Peer reproduced all three genuine comparisons:256B candidates,151/190/190 differing bytes, zero unresolved and zero exact matches.",
+    "Root and peer independently regenerate512 finite overlap fixtures/34304 instructions and pass32769 native word checks. Three focused scoped guards pass. Host IEEE finite dyadic inputs omit EE FCR, nonfinite arithmetic, timing and complete runtime claims."
+  ],
+  "synthetic_fixture_evidence": {
+    "fixture_count": 512,
+    "executed_instructions": 34304,
+    "input_sha256": "2bccbc41a3ea40bc85fd861dee4ab6c2aa5a1b7c9f574c9fd30c741f27d51422",
+    "golden_header_sha256_crlf": "96d3d62ae1bcdaeca7dc0e4d8aa09503b051ffe6012f2aa43db41663d4c9213b",
+    "golden_header_sha256_lf": "b486b07a8ce3071323d54d0b7a0c39671cf16f2439d5b8027289db64aca1e77a"
+  }
+}
