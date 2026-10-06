@@ -934,3 +934,64 @@ reproduced both full linked comparisons before approving registration.
 The tracked-layout reproduction has zero unresolved relocations and exactly
 the same complete code/table hashes. Exact runtime totals remain 38 C
 functions / 4,828 bytes and three separate assembly functions / 572 bytes.
+
+Five further complete stdio functions recover 848 original code bytes from
+unchanged public newlib 1.8.1 source at the same pinned Git revision:
+[`sprintf.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/sprintf.c),
+[`fread.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fread.c),
+[`fwalk.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fwalk.c),
+[`fflush.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fflush.c)
+and the local callback in
+[`refill.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/refill.c).
+Their full source SHA256 values are respectively
+`c9b9e12b5f91e95a53b1d32aab4bf5cec68b29d2612fd01612e951adef37a7c2`,
+`aa3b9711739619c69010a7efcaac0fac4ffa47452e0234817f0f291724831d76`,
+`d0e051dab8bfa43ea17eb54d0b11a298a6871fe710d46260936002593b12a73f`,
+`734ccf4f8b90b2e690cc9bddd165260b450f3efa3048b4ca73f71a1818084513`
+and `5b62c3eab3818b89d7606b13265b2237514635b9c0d9f225dae5e3730b120cf7`.
+The original intervals are `sprintf` at `0x003952C8` / 128 bytes,
+`fread` at `0x00394808` / 276 bytes, `_fwalk` at `0x00394D30` / 148 bytes,
+`fflush` at `0x00394290` / 268 bytes and local `lflush` at `0x00395080` /
+28 bytes. All returns and delay instructions are included; neighboring
+functions and alignment words are excluded. The former heuristic `sprintf`
+interval included the separately proven eight-byte EOF callback, which is
+excluded here.
+
+The four larger complete bodies remain reconstructed. The authentic local
+`lflush` function matches all 28 bytes under both genuine compiler profiles,
+SHA256 `88550787cdb91a0be9a3859481501ee51adbf65f5bb3b4ea6f24d6784a4d55e9`.
+Its source preserves an original precedence bug:
+`(flags & (__SLBF | __SWR)) == __SLBF | __SWR` evaluates as
+`((flags & 9) == 1) | 8`, so it always calls `fflush`. The original upper
+instruction at `0x00395194` and lower `ADDIU` at `0x003951A0`, executed in
+the `_fwalk` call's delay slot, establish the callback argument and entry.
+The previous `puts` return/delay, the complete compiler local function symbol,
+following padding and independent refill entry corroborate its full extent.
+Only this local function is registered from `refill.c`; the remaining refill
+body differs from the public source in its ungetc-buffer release path and is
+not claimed as recovered.
+
+The unchanged `fread` source uses explicit `-Dmemcpy=func_003947D8` to bind
+its two copy calls to the observed custom 48-byte forward byte loop. Its
+original source and return contract remain unknown. Both genuine encoded
+calls occur in `fread`, and both overwrite the return register before reading
+it, so the renamed declaration's unused pointer result introduces no observed
+caller behavior. The custom copy itself is unregistered. The separate
+formatter called by `sprintf` also retains a proven numeric binding without
+claiming its source identity. The complete FILE, reent and linked-glue field
+layouts were checked with both authentic compilers against original offsets,
+including the 88-byte FILE stride and reent glue offset `0x1D8`.
+
+The imported source files and reused private `local.h` retain their complete
+Berkeley 1990 notices. This product includes software developed by the
+University of California, Berkeley and its contributors. The GNU limits
+header is the unchanged pinned `ee/gcc/glimits.h`; system headers retain the
+separate public PS2DEV archive's explicit newlib 1.10.0 provenance. Fresh
+tracked-layout dependency scans reproduce all reviewed hashes across 39
+distinct actual source/header files, and every selected dependency is guarded
+before compilation. Root independently reviewed all 212 original instructions,
+the complete source/private headers, actual callers and branch boundaries,
+callback materialization, discarded copy results, both target layouts and all
+ten fresh full links. The five tracked-layout links reproduce the approved
+complete hashes with no unresolved relocations. Exact runtime totals are now
+39 C functions / 4,856 bytes and three separate assembly functions / 572 bytes.

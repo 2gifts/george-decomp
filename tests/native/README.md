@@ -1,5 +1,13 @@
 # Native semantic checks
 
+The `camera_transform` utility harness passes 13,178 checks against 176 finite
+controlled-call original-instruction fixtures: allocation failure, sparse
+initialization callbacks, captured projection operands and fresh aspect,
+overlapping matrix/source outputs and 20 shifted translation aliases. Run
+`--harness camera_transform`; the scoped `-ffloat-store` flag applies. Five
+scoped decoder guards pass. See `docs/camera_transform.md` for controlled-call
+and hardware limits.
+
 The `geometry_bounds` utility harness passes 8,738 checks including 134 finite
 original-instruction synthetic fixtures, destructive affine inverse aliases,
 inclusive/unordered comparisons, signed count gates, wrapped allocation/address
@@ -173,3 +181,18 @@ short-circuit truth comparisons, copy-return forwarding and complete sparse
 rewind storage preservation. Run it with `--harness text_content`. See
 `docs/text_content.md` for original unused return-type uncertainty and runtime
 preconditions.
+
+The input-driven camera harness passes 13,122 checks, including 144 finite
+controlled-call original-instruction fixtures, held-mask priority, captured
+transform/fresh input callbacks, retained local vectors, sparse constructor and
+mode effects, one-step angle/timestep boundaries and shifted transform/input
+aliases. Run it with `--harness camera_motion`; the runner uses `-ffloat-store`.
+Its scoped decoder has eight guard tests. See `docs/camera_motion.md` for
+fixture hashes/regeneration, numeric call bindings and EE/host model limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_states4.py` for 2,438
+asset-free checks of all 20 state20-24 methods and the direction selector.
+The harness covers callbacks that change soft-angle inputs, retained vector
+outputs, phase fallthrough, duration/store aliases, shifted matrix output and
+full signed virtual adjustments. Parent and research independently reproduced
+this result. See `docs/actor_states4.md` for host/EE model limits.

@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "camera_transform": ["src/game/camera_transform.c"],
+    "camera_motion": ["src/game/camera_motion.c"],
     "text_content": ["src/game/text_content.c"],
     "text_numbers": ["src/game/text_numbers.c", "src/game/text_tokens.c", "tests/native/text_lookup_ctype.c"],
     "text_parser": ["src/game/text_parser.c", "src/game/text_tokens.c", "src/game/text_lookup.c", "tests/native/text_lookup_ctype.c"],
@@ -33,6 +35,8 @@ HARNESS_SOURCES = {
     "geometry": ["src/game/geometry.c", "src/game/vector_math.c"],
 }
 HARNESS_FLAGS = {
+    "camera_transform": ["-ffloat-store"],
+    "camera_motion": ["-ffloat-store"],
     "engine_angles": ["-ffloat-store"],
     "tree_updates": ["-DGEORGE_TREE_NATIVE_COUNTER"],
 }

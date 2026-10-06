@@ -8882,6 +8882,1695 @@
           "compiled_sha256": "70a65843b897e35415bea97e365a2dc5f3bdf4e0cc83ed131b267da369fdc6fd"
         }
       ]
+    },
+    {
+      "name": "sprintf",
+      "compiled_symbol": "sprintf",
+      "address": "0x3952c8",
+      "file_offset": "0x2962c8",
+      "size": 128,
+      "original_sha256": "79c1fbb9c60d1e455c60ea885d47ed32d37ea7452538537cf2feb3c2e8df847f",
+      "upstream_source_sha256": "c9b9e12b5f91e95a53b1d32aab4bf5cec68b29d2612fd01612e951adef37a7c2",
+      "source": "src/runtime/stdio/sprintf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "upstream_symbol": "sprintf",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/sprintf.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/sprintf.c",
+          "sha256": "c9b9e12b5f91e95a53b1d32aab4bf5cec68b29d2612fd01612e951adef37a7c2",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/sprintf.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/sprintf.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC3.2.3 compiler headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stdarg.h",
+          "sha256": "a43e740c99baa8b131033c467cbef49ebbf86761df76de321c0b23d893af1901",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC3.2.3 compiler headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "src/runtime/include/limits.h",
+          "sha256": "7e650381312eeb2f19e12746bd5fab3fe32cba6c57286bbe1f00739ac9ac233c",
+          "modified": false,
+          "upstream_path": "ee/gcc/glimits.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/glimits.h",
+          "upstream_license": "GNU GCC public compiler header; original GPL/compiler-header exception provenance retained in the pinned complete corresponding source package."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        }
+      ],
+      "evidence": "Complete unchanged sprintf source identity: temporary88-byte FILE with string/write flags0x208, original string base/pointer and INT_MAX capacity, authentic8-byte variadic pointer slots, proven vfprintf binding and fresh output cursor NUL store after formatting. Source identity of the separate formatter is not asserted.",
+      "internal_direct_calls": [
+        {
+          "address": "0x39532c",
+          "word": "0xc0e63e6",
+          "target": "0x398f98"
+        }
+      ],
+      "internal_branches": [],
+      "abi_proof": [
+        {
+          "compiler_profile": "gcc29",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        }
+      ],
+      "boundary_evidence": "Complete original JR and delay included; neighboring independent entries and alignment excluded. sprintf is128B and excludes following8B EOFread; local lflush is28B and excludes following padding at39509C and refill entry3950A0.",
+      "independent_review": "Root read all212 original instructions and all complete pinned sprintf/fread/fwalk/fflush/refill/local source, full hashes, genuine calls/branches, actual dependencies, both FILE/reent/glue layouts, callback LUI/JAL-delay materialization and all ten fresh complete links before approving registration.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 48,
+        "reference_addresses": [
+          "0x10164c",
+          "0x101da8",
+          "0x104804",
+          "0x105bec",
+          "0x105c18",
+          "0x105c3c",
+          "0x105c60",
+          "0x105c84",
+          "0x105ca8",
+          "0x105ccc",
+          "0x105cf0",
+          "0x105d14",
+          "0x10cefc",
+          "0x23aeb0",
+          "0x23b5b4",
+          "0x257084",
+          "0x2570b0",
+          "0x2570f0",
+          "0x26281c",
+          "0x26c54c",
+          "0x26daa8",
+          "0x270fa4",
+          "0x270fbc",
+          "0x271174",
+          "0x279064",
+          "0x2808d0",
+          "0x2a5354",
+          "0x2aa0f8",
+          "0x2aa128",
+          "0x2aa210",
+          "0x2addd8",
+          "0x2b1fec",
+          "0x2b2104",
+          "0x2b2138",
+          "0x2bf5b0",
+          "0x2cc074",
+          "0x2cc098",
+          "0x2cc13c",
+          "0x2cc160",
+          "0x2ccf28",
+          "0x2ccf4c",
+          "0x2d40c4",
+          "0x2d410c",
+          "0x2d6ee8",
+          "0x2d6f60",
+          "0x2d6fe8",
+          "0x2e14cc",
+          "0x2e1508"
+        ],
+        "return_address": "0x395340",
+        "delay_address": "0x395344"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 128,
+          "compiled_size": 128,
+          "different_bytes": 32,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "79c1fbb9c60d1e455c60ea885d47ed32d37ea7452538537cf2feb3c2e8df847f",
+          "compiled_sha256": "cbbb82132f2fea4d28999d97bd10cb4aa783028747e2eef10f7af190c19cdb8a"
+        }
+      ]
+    },
+    {
+      "name": "fread",
+      "compiled_symbol": "fread",
+      "address": "0x394808",
+      "file_offset": "0x295808",
+      "size": 276,
+      "original_sha256": "f1a4926245d684c21856939c34dcbe13c1d016cbb7eb030812f2a36dd2d30a49",
+      "upstream_source_sha256": "aa3b9711739619c69010a7efcaac0fac4ffa47452e0234817f0f291724831d76",
+      "source": "src/runtime/stdio/fread.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "upstream_symbol": "fread",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fread.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-Dmemcpy=func_003947D8",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/fread.c",
+          "sha256": "aa3b9711739619c69010a7efcaac0fac4ffa47452e0234817f0f291724831d76",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/fread.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fread.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        }
+      ],
+      "evidence": "Complete unchanged fread source identity:32-bit size/count product and zero-result guard, reentrant initialization, negative input count clamp, initial residual, both forward-copy sites, refill failure partial-element result and final count return. Explicit -Dmemcpy=func_003947D8 renames only the declaration/calls; both actual callers discard its return value. The custom48-byte copy has unknown original source and is unregistered.",
+      "internal_direct_calls": [
+        {
+          "address": "0x394890",
+          "word": "0xc0e51f6",
+          "target": "0x3947d8"
+        },
+        {
+          "address": "0x3948a8",
+          "word": "0xc0e5428",
+          "target": "0x3950a0"
+        },
+        {
+          "address": "0x3948d0",
+          "word": "0xc0e51f6",
+          "target": "0x3947d8"
+        }
+      ],
+      "internal_branches": [
+        {
+          "address": "0x394838",
+          "target": "0x394860"
+        },
+        {
+          "address": "0x394840",
+          "target": "0x3948f4"
+        },
+        {
+          "address": "0x394848",
+          "target": "0x394850"
+        },
+        {
+          "address": "0x394858",
+          "target": "0x3948f8"
+        },
+        {
+          "address": "0x394864",
+          "target": "0x39486c"
+        },
+        {
+          "address": "0x394878",
+          "target": "0x3948c8"
+        },
+        {
+          "address": "0x3948b0",
+          "target": "0x394848"
+        },
+        {
+          "address": "0x3948c0",
+          "target": "0x394888"
+        }
+      ],
+      "abi_proof": [
+        {
+          "compiler_profile": "gcc29",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        }
+      ],
+      "boundary_evidence": "Complete original JR and delay included; neighboring independent entries and alignment excluded. sprintf is128B and excludes following8B EOFread; local lflush is28B and excludes following padding at39509C and refill entry3950A0.",
+      "independent_review": "Root read all212 original instructions and all complete pinned sprintf/fread/fwalk/fflush/refill/local source, full hashes, genuine calls/branches, actual dependencies, both FILE/reent/glue layouts, callback LUI/JAL-delay materialization and all ten fresh complete links before approving registration.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 2,
+        "reference_addresses": [
+          "0x362b28",
+          "0x3959e4"
+        ],
+        "return_address": "0x394914",
+        "delay_address": "0x394918"
+      },
+      "copy_alias_proof": {
+        "address": "0x3947D8",
+        "size": 48,
+        "return_contract": "not observed; original does not preserve initial destination in v0",
+        "entry_references": [
+          {
+            "address": "0x394890",
+            "word": "0xc0e51f6",
+            "target": "0x3947d8"
+          },
+          {
+            "address": "0x3948d0",
+            "word": "0xc0e51f6",
+            "target": "0x3947d8"
+          }
+        ],
+        "evidence": "Exactly two encoded direct calls in whole original .text, both fread. After first call v0 overwritten by FILE._p load before any read; after second v0 overwritten with original count before return. Both complete caller paths ignore callee result. Literal byte loop preserves forward overlap behavior and unsigned count wrap; source alias redirects name only."
+      },
+      "link_symbols": {
+        "func_003947D8": "0x003947D8"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Dmemcpy=func_003947D8",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 276,
+          "compiled_size": 284,
+          "different_bytes": 188,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f1a4926245d684c21856939c34dcbe13c1d016cbb7eb030812f2a36dd2d30a49",
+          "compiled_sha256": "fa80bf161bc7b26f76846325038384e68b054b50e29f09e7853b2c162f4389f8"
+        }
+      ]
+    },
+    {
+      "name": "_fwalk",
+      "compiled_symbol": "_fwalk",
+      "address": "0x394d30",
+      "file_offset": "0x295d30",
+      "size": 148,
+      "original_sha256": "7d749d479c66121819ce86a4366aba38b057755a24154153f2583eeabd9d67b3",
+      "upstream_source_sha256": "d0e051dab8bfa43ea17eb54d0b11a298a6871fe710d46260936002593b12a73f",
+      "source": "src/runtime/stdio/fwalk.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "upstream_symbol": "_fwalk",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fwalk.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/fwalk.c",
+          "sha256": "d0e051dab8bfa43ea17eb54d0b11a298a6871fe710d46260936002593b12a73f",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/fwalk.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fwalk.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        }
+      ],
+      "evidence": "Complete unchanged _fwalk source identity: reent.__sglue offset0x1D8, twelve-byte linked glue records, signed stream count,88-byte FILE stride, nonzero flags gate, callback return bitwise accumulation and fresh next-glue loads after callbacks.",
+      "internal_direct_calls": [],
+      "internal_branches": [
+        {
+          "address": "0x394d54",
+          "target": "0x394da0"
+        },
+        {
+          "address": "0x394d64",
+          "target": "0x394d94"
+        },
+        {
+          "address": "0x394d74",
+          "target": "0x394d8c"
+        },
+        {
+          "address": "0x394d8c",
+          "target": "0x394d70"
+        },
+        {
+          "address": "0x394d98",
+          "target": "0x394d60"
+        }
+      ],
+      "abi_proof": [
+        {
+          "compiler_profile": "gcc29",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        }
+      ],
+      "boundary_evidence": "Complete original JR and delay included; neighboring independent entries and alignment excluded. sprintf is128B and excludes following8B EOFread; local lflush is28B and excludes following padding at39509C and refill entry3950A0.",
+      "independent_review": "Root read all212 original instructions and all complete pinned sprintf/fread/fwalk/fflush/refill/local source, full hashes, genuine calls/branches, actual dependencies, both FILE/reent/glue layouts, callback LUI/JAL-delay materialization and all ten fresh complete links before approving registration.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 3,
+        "reference_addresses": [
+          "0x3942b8",
+          "0x394754",
+          "0x39519c"
+        ],
+        "return_address": "0x394dbc",
+        "delay_address": "0x394dc0"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 148,
+          "different_bytes": 32,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7d749d479c66121819ce86a4366aba38b057755a24154153f2583eeabd9d67b3",
+          "compiled_sha256": "2d953abb62ed8a3755d5ff63fe92cc4d913e1da0341868147e25ecce2db63ac9"
+        }
+      ]
+    },
+    {
+      "name": "fflush",
+      "compiled_symbol": "fflush",
+      "address": "0x394290",
+      "file_offset": "0x295290",
+      "size": 268,
+      "original_sha256": "882ff60c2eba937df5ee3ac68a6a1dbb353d06faae08fbe3b3b377a90a127ce9",
+      "upstream_source_sha256": "734ccf4f8b90b2e690cc9bddd165260b450f3efa3048b4ca73f71a1818084513",
+      "source": "src/runtime/stdio/fflush.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "upstream_symbol": "fflush",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fflush.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/fflush.c",
+          "sha256": "734ccf4f8b90b2e690cc9bddd165260b450f3efa3048b4ca73f71a1818084513",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/fflush.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fflush.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        }
+      ],
+      "evidence": "Complete unchanged fflush source identity: initialization-before-null guard, null walk of all FILE records, write flag/base gate, captured pending length and output base, pointer/write-count stores before first write callback, repeated partial writes, nonpositive error/SERR path and final zero result.",
+      "internal_direct_calls": [
+        {
+          "address": "0x3942b8",
+          "word": "0xc0e534c",
+          "target": "0x394d30"
+        },
+        {
+          "address": "0x3942f4",
+          "word": "0xc0e516a",
+          "target": "0x3945a8"
+        }
+      ],
+      "internal_branches": [
+        {
+          "address": "0x3942a4",
+          "target": "0x3942c8"
+        },
+        {
+          "address": "0x3942c0",
+          "target": "0x394388"
+        },
+        {
+          "address": "0x3942cc",
+          "target": "0x3942e8"
+        },
+        {
+          "address": "0x3942ec",
+          "target": "0x394300"
+        },
+        {
+          "address": "0x394304",
+          "target": "0x394384"
+        },
+        {
+          "address": "0x394310",
+          "target": "0x394334"
+        },
+        {
+          "address": "0x394318",
+          "target": "0x394388"
+        },
+        {
+          "address": "0x39432c",
+          "target": "0x394384"
+        },
+        {
+          "address": "0x394340",
+          "target": "0x39434c"
+        },
+        {
+          "address": "0x39434c",
+          "target": "0x394380"
+        },
+        {
+          "address": "0x394370",
+          "target": "0x394320"
+        },
+        {
+          "address": "0x394378",
+          "target": "0x394358"
+        }
+      ],
+      "abi_proof": [
+        {
+          "compiler_profile": "gcc29",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        }
+      ],
+      "boundary_evidence": "Complete original JR and delay included; neighboring independent entries and alignment excluded. sprintf is128B and excludes following8B EOFread; local lflush is28B and excludes following padding at39509C and refill entry3950A0.",
+      "independent_review": "Root read all212 original instructions and all complete pinned sprintf/fread/fwalk/fflush/refill/local source, full hashes, genuine calls/branches, actual dependencies, both FILE/reent/glue layouts, callback LUI/JAL-delay materialization and all ten fresh complete links before approving registration.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "reference_count": 14,
+        "reference_addresses": [
+          "0x35893c",
+          "0x358948",
+          "0x362c30",
+          "0x362c88",
+          "0x394244",
+          "0x394994",
+          "0x3949e0",
+          "0x394cbc",
+          "0x395088",
+          "0x39511c",
+          "0x39df94",
+          "0x39e0dc",
+          "0x39e160",
+          "0x39e24c"
+        ],
+        "return_address": "0x394394",
+        "delay_address": "0x394398"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 268,
+          "compiled_size": 260,
+          "different_bytes": 184,
+          "first_different_offsets": [
+            4,
+            7,
+            10,
+            11,
+            16,
+            19,
+            26,
+            30
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "882ff60c2eba937df5ee3ac68a6a1dbb353d06faae08fbe3b3b377a90a127ce9",
+          "compiled_sha256": "6287426481bb3a7af94fbed92fdb905458191279acfdebc5cb1a9190eb85c46a"
+        }
+      ]
+    },
+    {
+      "name": "lflush",
+      "compiled_symbol": "lflush",
+      "address": "0x395080",
+      "file_offset": "0x296080",
+      "size": 28,
+      "original_sha256": "88550787cdb91a0be9a3859481501ee51adbf65f5bb3b4ea6f24d6784a4d55e9",
+      "upstream_source_sha256": "5b62c3eab3818b89d7606b13265b2237514635b9c0d9f225dae5e3730b120cf7",
+      "source": "src/runtime/stdio/refill.c",
+      "source_kind": "c",
+      "status": "matched",
+      "upstream_symbol": "lflush",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/refill.c",
+      "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/refill.c",
+          "sha256": "5b62c3eab3818b89d7606b13265b2237514635b9c0d9f225dae5e3730b120cf7",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/refill.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/refill.c",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 headers; source Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from the hash-verified public compiler release; original notices and applicable exceptions remain in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Berkeley1990 BSD notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 system headers in public PS2DEV20181019 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual dependency from existing hash-verified bootstrap; explicitly1.10.0 headers while imported C source pin is1.8.1."
+        }
+      ],
+      "evidence": "Complete authentic local lflush source preserves its unparenthesized equality/bitwise-OR precedence bug: ((flags &9)==1)|8 is always nonzero, so every callback unconditionally calls fflush. Original callback address materialization in _fwalk JAL delay slot establishes entry. Both genuine compiler profiles emit all28 original bytes exactly; neighboring puts/refill and padding remain separate.",
+      "internal_direct_calls": [
+        {
+          "address": "0x395088",
+          "word": "0xc0e50a4",
+          "target": "0x394290"
+        }
+      ],
+      "internal_branches": [],
+      "abi_proof": [
+        {
+          "compiler_profile": "gcc29",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        },
+        {
+          "compiler_profile": "gcc323",
+          "sizeof_FILE": 88,
+          "sizeof_size_t": 4,
+          "FILE_offsets": {
+            "_p": 0,
+            "_r": 4,
+            "_w": 8,
+            "_flags": 12,
+            "_bf._base": 16,
+            "_bf._size": 20,
+            "_lbfsize": 24,
+            "_cookie": 28,
+            "_read": 32,
+            "_write": 36,
+            "_ub._base": 48,
+            "_ub._size": 52,
+            "_up": 56,
+            "_ur": 60,
+            "_ubuf": 64,
+            "_data": 84
+          },
+          "reent_init_offset": 56,
+          "reent_glue_offset": 472,
+          "glue_offsets": {
+            "_next": 0,
+            "_niobs": 4,
+            "_iobs": 8
+          },
+          "static_asserts": "passed"
+        }
+      ],
+      "boundary_evidence": "Complete original JR and delay included; neighboring independent entries and alignment excluded. sprintf is128B and excludes following8B EOFread; local lflush is28B and excludes following padding at39509C and refill entry3950A0.",
+      "independent_review": "Root read all212 original instructions and all complete pinned sprintf/fread/fwalk/fflush/refill/local source, full hashes, genuine calls/branches, actual dependencies, both FILE/reent/glue layouts, callback LUI/JAL-delay materialization and all ten fresh complete links before approving registration.",
+      "entry_proof": {
+        "upper_address": "0x395194",
+        "upper_word": "0x3c050039",
+        "lower_address": "0x3951A0",
+        "lower_word": "0x24a55080",
+        "argument_register": "a1",
+        "dispatch_call": "0x39519C",
+        "dispatch_target": "0x394D30",
+        "evidence": "Lower ADDIU is actual _fwalk JAL delay slot, so materializes callback argument before dispatch; intervening LW only writesa0. Previous puts return/delay at395078/7C, then callback28B, then padding39509C and independentrefill entry3950A0."
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": true,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "88550787cdb91a0be9a3859481501ee51adbf65f5bb3b4ea6f24d6784a4d55e9",
+          "compiled_sha256": "88550787cdb91a0be9a3859481501ee51adbf65f5bb3b4ea6f24d6784a4d55e9"
+        }
+      ]
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

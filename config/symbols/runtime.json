@@ -461,6 +461,51 @@
       "address": "0x396068",
       "confidence": "identified",
       "evidence": "All60 original instructions agree with unchanged __sccl:256-byte table initialization, optional inversion, first closing bracket/literal hyphen handling, signed format bytes, earlyNUL returning fmt-1, V7 chained-range expansion including equal endpoint behavior, final close-bracket/return cursor. Original direct scanner JAL proves entry; complete actual linked body differs and remains reconstructed."
+    },
+    "sprintf": {
+      "address": "0x3952c8",
+      "confidence": "identified",
+      "evidence": "Complete unchanged sprintf source identity: temporary88-byte FILE with string/write flags0x208, original string base/pointer and INT_MAX capacity, authentic8-byte variadic pointer slots, proven vfprintf binding and fresh output cursor NUL store after formatting. Source identity of the separate formatter is not asserted."
+    },
+    "fread": {
+      "address": "0x394808",
+      "confidence": "identified",
+      "evidence": "Complete unchanged fread source identity:32-bit size/count product and zero-result guard, reentrant initialization, negative input count clamp, initial residual, both forward-copy sites, refill failure partial-element result and final count return. Explicit -Dmemcpy=func_003947D8 renames only the declaration/calls; both actual callers discard its return value. The custom48-byte copy has unknown original source and is unregistered."
+    },
+    "_fwalk": {
+      "address": "0x394d30",
+      "confidence": "identified",
+      "evidence": "Complete unchanged _fwalk source identity: reent.__sglue offset0x1D8, twelve-byte linked glue records, signed stream count,88-byte FILE stride, nonzero flags gate, callback return bitwise accumulation and fresh next-glue loads after callbacks."
+    },
+    "fflush": {
+      "address": "0x394290",
+      "confidence": "identified",
+      "evidence": "Complete unchanged fflush source identity: initialization-before-null guard, null walk of all FILE records, write flag/base gate, captured pending length and output base, pointer/write-count stores before first write callback, repeated partial writes, nonpositive error/SERR path and final zero result."
+    },
+    "lflush": {
+      "address": "0x395080",
+      "confidence": "identified",
+      "evidence": "Complete authentic local lflush source preserves its unparenthesized equality/bitwise-OR precedence bug: ((flags &9)==1)|8 is always nonzero, so every callback unconditionally calls fflush. Original callback address materialization in _fwalk JAL delay slot establishes entry. Both genuine compiler profiles emit all28 original bytes exactly; neighboring puts/refill and padding remain separate."
+    },
+    "vfprintf": {
+      "address": "0x398f98",
+      "confidence": "identified",
+      "evidence": "Actual complete caller JAL graph establishes this binding; custom byte-copy/formatter source identities are not asserted."
+    },
+    "func_003947D8": {
+      "address": "0x3947d8",
+      "confidence": "reconstructed",
+      "evidence": "Actual complete caller JAL graph establishes this binding; custom byte-copy/formatter source identities are not asserted."
+    },
+    "__srefill": {
+      "address": "0x3950a0",
+      "confidence": "identified",
+      "evidence": "Actual complete caller JAL graph establishes this binding; custom byte-copy/formatter source identities are not asserted."
+    },
+    "__sinit": {
+      "address": "0x3945a8",
+      "confidence": "identified",
+      "evidence": "Actual complete caller JAL graph establishes this binding; custom byte-copy/formatter source identities are not asserted."
     }
   }
 }

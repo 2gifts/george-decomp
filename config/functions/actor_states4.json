@@ -1,0 +1,2707 @@
+{
+  "functions": [
+    {
+      "name": "func_00187648",
+      "address": "0x00187648",
+      "file_offset": "0x00088648",
+      "size": 228,
+      "original_sha256": "4cc7085a18f561b9bb53396df3e168263486739f69437e30213a14b4418ec878",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00187648",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state20 update: captured phase/timer after control callback, strict unordered expiry, full64 flag gates, float predicate parameters and result-dependent requested state.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00187648",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 192,
+          "different_bytes": 186,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4cc7085a18f561b9bb53396df3e168263486739f69437e30213a14b4418ec878",
+          "compiled_sha256": "1de425b2bd09f89444de68bc3f1531798efbb9e8d1c3cf39bbc896c401ae27cf"
+        },
+        {
+          "name": "func_00187648",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 192,
+          "different_bytes": 170,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4cc7085a18f561b9bb53396df3e168263486739f69437e30213a14b4418ec878",
+          "compiled_sha256": "f971b04a75e96f8c280e6cd7aa4632a78af1f64739a5c567b25a5731f7705c19"
+        },
+        {
+          "name": "func_00187648",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 192,
+          "different_bytes": 169,
+          "first_different_offsets": [
+            4,
+            8,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4cc7085a18f561b9bb53396df3e168263486739f69437e30213a14b4418ec878",
+          "compiled_sha256": "51c7b85f878aa78d1a0d21125cbe7360f34cc4c3ba008efce4188c8364981af4"
+        }
+      ]
+    },
+    {
+      "name": "func_00187990",
+      "address": "0x00187990",
+      "file_offset": "0x00088990",
+      "size": 524,
+      "original_sha256": "12a859b2b2b9f65a11c2a1967ae3e5c2f8290fd0b75ac17a2f76adc405963396",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00187990",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state21 initializer: captured flag gate before phase store, result-controlled clear callback, paired requests with fresh objects, interleaved vector stores, unconditional timer zero after request-failure one, fresh generic effect gate.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00187990",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 524,
+          "compiled_size": 412,
+          "different_bytes": 433,
+          "first_different_offsets": [
+            0,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "12a859b2b2b9f65a11c2a1967ae3e5c2f8290fd0b75ac17a2f76adc405963396",
+          "compiled_sha256": "b4f9302dc3b36ad87ea4bab6011c2905079b738c9d8a0827aa46269330bdbfd5"
+        },
+        {
+          "name": "func_00187990",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 524,
+          "compiled_size": 420,
+          "different_bytes": 475,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "12a859b2b2b9f65a11c2a1967ae3e5c2f8290fd0b75ac17a2f76adc405963396",
+          "compiled_sha256": "025cef8033b35d250cdf5ce98d7e104073a6199fc852e8464e3135c8c40c3eef"
+        },
+        {
+          "name": "func_00187990",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 524,
+          "compiled_size": 420,
+          "different_bytes": 473,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            12,
+            14,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "12a859b2b2b9f65a11c2a1967ae3e5c2f8290fd0b75ac17a2f76adc405963396",
+          "compiled_sha256": "67b5ea4376114a8aa2e93c6f7612ecba07ade74bbcb38227dcc328066eccbe18"
+        }
+      ]
+    },
+    {
+      "name": "func_00187BA0",
+      "address": "0x00187BA0",
+      "file_offset": "0x00088BA0",
+      "size": 772,
+      "original_sha256": "357c11464343d916a429c67e0c7113b0401266176001552707e49490a786b105",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00187BA0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state21 update: only phase1 moves; repeated fresh negative-vector angle calls and wrapping branches, explicit full64 soft arithmetic, current-angle capture after sign comparison, strict positive difference threshold, fresh timer after vector callback and flag gate.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00187BA0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 772,
+          "compiled_size": 740,
+          "different_bytes": 578,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "357c11464343d916a429c67e0c7113b0401266176001552707e49490a786b105",
+          "compiled_sha256": "818c75d115d64345bad964702bf04f86946352e805ba5574dbb20651cfb8de2a"
+        },
+        {
+          "name": "func_00187BA0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 772,
+          "compiled_size": 720,
+          "different_bytes": 687,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "357c11464343d916a429c67e0c7113b0401266176001552707e49490a786b105",
+          "compiled_sha256": "5f5ef4d3374c46ab3bbff72f3510c26f537ce20960d0d6a1a2ce8f273897ea1e"
+        },
+        {
+          "name": "func_00187BA0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 772,
+          "compiled_size": 720,
+          "different_bytes": 687,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "357c11464343d916a429c67e0c7113b0401266176001552707e49490a786b105",
+          "compiled_sha256": "8250549a899ea1b3d225e7958cc55e68eb7a3fe3a2634d95b0d1d05222525255"
+        }
+      ]
+    },
+    {
+      "name": "func_00187EA8",
+      "address": "0x00187EA8",
+      "file_offset": "0x00088EA8",
+      "size": 1000,
+      "original_sha256": "5ad62e99f089ac0c7be09b04beb99ff4d67feeed9216eba6d09e0fc0a7dbdbe7",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00187EA8",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state22 initializer: text/flag capture before zero stores, existing effect registration/upper-bound template, captured registry object before text hash, emitted handle stores before start, type gates, paired request fallback, reference/object construction and captured matrix/object across calls.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00187EA8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 1000,
+          "compiled_size": 740,
+          "different_bytes": 894,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5ad62e99f089ac0c7be09b04beb99ff4d67feeed9216eba6d09e0fc0a7dbdbe7",
+          "compiled_sha256": "e9326572e45782c9f8e6ef1d58c216772941693a494535aeae8be0b97867d485"
+        },
+        {
+          "name": "func_00187EA8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 1000,
+          "compiled_size": 744,
+          "different_bytes": 893,
+          "first_different_offsets": [
+            0,
+            6,
+            8,
+            11,
+            12,
+            14,
+            15,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5ad62e99f089ac0c7be09b04beb99ff4d67feeed9216eba6d09e0fc0a7dbdbe7",
+          "compiled_sha256": "4e8bff025a47ce8a96481f514e9803cbbcb9a8be6a067196a67f00ba68fa3c4a"
+        },
+        {
+          "name": "func_00187EA8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 1000,
+          "compiled_size": 744,
+          "different_bytes": 890,
+          "first_different_offsets": [
+            0,
+            6,
+            8,
+            12,
+            14,
+            20,
+            22,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5ad62e99f089ac0c7be09b04beb99ff4d67feeed9216eba6d09e0fc0a7dbdbe7",
+          "compiled_sha256": "37c34d90c7e79c4f9154a09f054bc68f602f7cdf75b8a1a8484de93b7edb3c69"
+        }
+      ]
+    },
+    {
+      "name": "func_00188290",
+      "address": "0x00188290",
+      "file_offset": "0x00089290",
+      "size": 768,
+      "original_sha256": "f3eca41cc5350373d976d4d0fd2c219d844e1807acb3e549d661756118616ae5",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00188290",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state22 update: captured initial phase, fresh post-control timer; repeated request/control, scalar minimum strict comparisons, conditional handle release and ballistic calls, post-request phase increment, captured translated object and interleaved XYZ stores with Z read before W write.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00188290",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 768,
+          "compiled_size": 704,
+          "different_bytes": 662,
+          "first_different_offsets": [
+            0,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3eca41cc5350373d976d4d0fd2c219d844e1807acb3e549d661756118616ae5",
+          "compiled_sha256": "f21d8bee97c90e7eac54a1f7dd2aa4b907a2ef3b174bdad910a64be31a07bcac"
+        },
+        {
+          "name": "func_00188290",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 768,
+          "compiled_size": 676,
+          "different_bytes": 609,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            14,
+            15,
+            20,
+            22,
+            40
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3eca41cc5350373d976d4d0fd2c219d844e1807acb3e549d661756118616ae5",
+          "compiled_sha256": "fa0f6a54802495bb31b38368c8b683c743796889e71c439c70f864fd1894655a"
+        },
+        {
+          "name": "func_00188290",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 768,
+          "compiled_size": 676,
+          "different_bytes": 609,
+          "first_different_offsets": [
+            8,
+            12,
+            14,
+            15,
+            20,
+            22,
+            23,
+            40
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3eca41cc5350373d976d4d0fd2c219d844e1807acb3e549d661756118616ae5",
+          "compiled_sha256": "82324c7ebcf89d685080eabf5a663e321800efc6662ef18859d5f434788f67f5"
+        }
+      ]
+    },
+    {
+      "name": "func_00188590",
+      "address": "0x00188590",
+      "file_offset": "0x00089590",
+      "size": 636,
+      "original_sha256": "0b43efc5c3dba6cfe37efd89c2cc1d64af595de740ecf925cfd59394a993c60a",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00188590",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete636B state23 direction selector: full XYZ speed-square gate with callback even on stationary path; captured parent before map query, two normalized vectors, general cross-product arithmetic, fresh map projection reads captured before soft calls, dominant absolute projection and signed tie directions.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00188590",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 636,
+          "compiled_size": 628,
+          "different_bytes": 484,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0b43efc5c3dba6cfe37efd89c2cc1d64af595de740ecf925cfd59394a993c60a",
+          "compiled_sha256": "62f4c2d50a7d07c9505a642da0da3d102aaa5535be8ed5059d2d575ef1695603"
+        },
+        {
+          "name": "func_00188590",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 636,
+          "compiled_size": 612,
+          "different_bytes": 498,
+          "first_different_offsets": [
+            0,
+            16,
+            19,
+            20,
+            22,
+            23,
+            28,
+            30
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0b43efc5c3dba6cfe37efd89c2cc1d64af595de740ecf925cfd59394a993c60a",
+          "compiled_sha256": "9dc9f3f472736b31e829f2bfc828f2019d8db6bfc5128880200a985c3046d4f8"
+        },
+        {
+          "name": "func_00188590",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 636,
+          "compiled_size": 612,
+          "different_bytes": 496,
+          "first_different_offsets": [
+            0,
+            16,
+            20,
+            22,
+            23,
+            28,
+            30,
+            32
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0b43efc5c3dba6cfe37efd89c2cc1d64af595de740ecf925cfd59394a993c60a",
+          "compiled_sha256": "5265e1c2a2115531dbad778b5a8915d9f5114f3157126df755a235606d81a9aa"
+        }
+      ]
+    },
+    {
+      "name": "func_00188968",
+      "address": "0x00188968",
+      "file_offset": "0x00089968",
+      "size": 424,
+      "original_sha256": "6a470105b143055fbbdc6d5b23c161939f22b6089134f78fec1c85a2fb791999",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00188968",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state23 initializer: each angle occurrence queries twice, first Z read before second callback and second X afterward; captured reference before state/word stores, fresh full64 flag OR after owner callback.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00188968",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 424,
+          "compiled_size": 440,
+          "different_bytes": 334,
+          "first_different_offsets": [
+            6,
+            7,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6a470105b143055fbbdc6d5b23c161939f22b6089134f78fec1c85a2fb791999",
+          "compiled_sha256": "bf26880c8acf8de19a942aa6cb029455620e29a77039e0fcd9cad05b1324c00c"
+        },
+        {
+          "name": "func_00188968",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 424,
+          "compiled_size": 424,
+          "different_bytes": 55,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6a470105b143055fbbdc6d5b23c161939f22b6089134f78fec1c85a2fb791999",
+          "compiled_sha256": "9a41ba5429565f0c049a9d87eafb3913a5c4777808ad02327f82e37b525c9580"
+        },
+        {
+          "name": "func_00188968",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 424,
+          "compiled_size": 424,
+          "different_bytes": 53,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6a470105b143055fbbdc6d5b23c161939f22b6089134f78fec1c85a2fb791999",
+          "compiled_sha256": "a6db30f67bf6579e907d5260b4cbc35aa6bf2c26236528536a5c26a70f80692c"
+        }
+      ]
+    },
+    {
+      "name": "func_00188B10",
+      "address": "0x00188B10",
+      "file_offset": "0x00089B10",
+      "size": 1704,
+      "original_sha256": "96aea23c75fcd86d8b6b8f64ab5002b5696702b3dee824a5172b41daedf20062",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00188B10",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete1704B state23 update: captured selector before callbacks, explicit64 soft step/current/angle and repeated target reloads, phase captured before angle store, fresh selected-word/phase gates, all phases/default requests, phase200 falls through to movement after callback, fresh route/status/timer gates and complete adjusted state0 member dispatch.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00188B10",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 1704,
+          "compiled_size": 1516,
+          "different_bytes": 1522,
+          "first_different_offsets": [
+            4,
+            7,
+            14,
+            15,
+            16,
+            18,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "96aea23c75fcd86d8b6b8f64ab5002b5696702b3dee824a5172b41daedf20062",
+          "compiled_sha256": "0d89636a756c25cefd8e049be5ed93d1f45d8e8b4814901385710915da31aaf2"
+        },
+        {
+          "name": "func_00188B10",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 1704,
+          "compiled_size": 1564,
+          "different_bytes": 1538,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            9,
+            12,
+            14,
+            15,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "96aea23c75fcd86d8b6b8f64ab5002b5696702b3dee824a5172b41daedf20062",
+          "compiled_sha256": "241c78ea917922f6e306135bebd5efff2d4119a51e1d4877706255fcce4767d4"
+        },
+        {
+          "name": "func_00188B10",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 1704,
+          "compiled_size": 1564,
+          "different_bytes": 1533,
+          "first_different_offsets": [
+            4,
+            6,
+            9,
+            12,
+            14,
+            18,
+            26,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "96aea23c75fcd86d8b6b8f64ab5002b5696702b3dee824a5172b41daedf20062",
+          "compiled_sha256": "e47688f0f7476b36c6c14f9916b7a8e6efdab069d162af6bfd7a920a693a4058"
+        }
+      ]
+    },
+    {
+      "name": "func_00189310",
+      "address": "0x00189310",
+      "file_offset": "0x0008A310",
+      "size": 2148,
+      "original_sha256": "46b0f8d1e16b80935faf2d9ab438dc648dd78057995b2a39752ea8c9b471d804",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00189310",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete2148B state24 update: position/height snapshot before control callback, fresh associated object/step with elapsed passed in f12, signed halfword phase gates, callbacks narrowed only on halfword stores, two phase102 vector dispatches with retained output reloads, all repeated angle/soft paths, full length/elapsed gate and complete adjusted state3 member dispatch.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00189310",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 2148,
+          "compiled_size": 1348,
+          "different_bytes": 1990,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            11,
+            13,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "46b0f8d1e16b80935faf2d9ab438dc648dd78057995b2a39752ea8c9b471d804",
+          "compiled_sha256": "2d8c97ddd885b22cf01ce351cad840996fca8fb048b62060de7a47b5ccd59b83"
+        },
+        {
+          "name": "func_00189310",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 2148,
+          "compiled_size": 1320,
+          "different_bytes": 2007,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "46b0f8d1e16b80935faf2d9ab438dc648dd78057995b2a39752ea8c9b471d804",
+          "compiled_sha256": "7ef5b0d6fc0b7dcbc11f3a3412f4db8d31149f9666ca3e06e9783c76831759e4"
+        },
+        {
+          "name": "func_00189310",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 2148,
+          "compiled_size": 1320,
+          "different_bytes": 2005,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "46b0f8d1e16b80935faf2d9ab438dc648dd78057995b2a39752ea8c9b471d804",
+          "compiled_sha256": "e03f20cede6d51e03c3a44e3e4db6c87c5c20fc06de7a348b9a401208f2fdb2c"
+        }
+      ]
+    },
+    {
+      "name": "func_00195978",
+      "address": "0x00195978",
+      "file_offset": "0x00096978",
+      "size": 72,
+      "original_sha256": "da77c442c3db1d502474589b297b293da33300d874e7dc9b6f070a9b4f4cd8ac",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195978",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state20 duration callback: wrapped32 phase7F4 increment before duration callback, exact395A740E multiplication and timer7F0 store afterward.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195978",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 76,
+          "different_bytes": 43,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            34,
+            35,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da77c442c3db1d502474589b297b293da33300d874e7dc9b6f070a9b4f4cd8ac",
+          "compiled_sha256": "7f8451f8cd1dfb269a4e5221fc3bd69feba6604ccb7666efb0810feeac1e56b6"
+        },
+        {
+          "name": "func_00195978",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            48,
+            60,
+            63
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da77c442c3db1d502474589b297b293da33300d874e7dc9b6f070a9b4f4cd8ac",
+          "compiled_sha256": "c142cfe9b263b7d5c7ceacd56d4dff46aeab3fc9a9fb7beb487943dba0718a26"
+        },
+        {
+          "name": "func_00195978",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            48,
+            60
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "da77c442c3db1d502474589b297b293da33300d874e7dc9b6f070a9b4f4cd8ac",
+          "compiled_sha256": "fec71034eb6de3b970ae82cf9bf86ca5837344f7819a86fc0c58c025c9a732ba"
+        }
+      ]
+    },
+    {
+      "name": "func_001959C0",
+      "address": "0x001959C0",
+      "file_offset": "0x000969C0",
+      "size": 192,
+      "original_sha256": "0306208ad4c0b4d8bbf2d2cd71a138d997dee07f33afb2b330e5e5780a9559d2",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_001959C0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state20 initializer: word50 store precedes captured main gate, timer/phase zeros before paired requests, companion time loaded from cleared timer, fresh main/context callback and zero-result fallback.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_001959C0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 192,
+          "compiled_size": 192,
+          "different_bytes": 131,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0306208ad4c0b4d8bbf2d2cd71a138d997dee07f33afb2b330e5e5780a9559d2",
+          "compiled_sha256": "51ffc91fa72b50db2cef883e9e3c3f546b3ac0aa918618a63302545841ba2ef2"
+        },
+        {
+          "name": "func_001959C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 192,
+          "compiled_size": 180,
+          "different_bytes": 152,
+          "first_different_offsets": [
+            0,
+            8,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0306208ad4c0b4d8bbf2d2cd71a138d997dee07f33afb2b330e5e5780a9559d2",
+          "compiled_sha256": "1428cb32ead637dbaf9e501874c5bdfafc9c281ce938cbbec0cd4dff37a91153"
+        },
+        {
+          "name": "func_001959C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 192,
+          "compiled_size": 180,
+          "different_bytes": 151,
+          "first_different_offsets": [
+            0,
+            8,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0306208ad4c0b4d8bbf2d2cd71a138d997dee07f33afb2b330e5e5780a9559d2",
+          "compiled_sha256": "02ecdf4a63b814352851f6f3bbdd7742d58a8bfb8d76d7f82eb0ee89e31c99b4"
+        }
+      ]
+    },
+    {
+      "name": "func_00195A88",
+      "address": "0x00195A88",
+      "file_offset": "0x00096A88",
+      "size": 128,
+      "original_sha256": "fbc45d52aa6755b28707df315e67dc956e83a5a18413d32809ac265d5dfd8d23",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195A88",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state21 duration/motion callback: wrapped phase increment before duration call; fresh data captured before timer store, X captured before timer store, scalar division and X store before fresh Y/Z reads.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195A88",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 128,
+          "compiled_size": 120,
+          "different_bytes": 83,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            34,
+            35,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fbc45d52aa6755b28707df315e67dc956e83a5a18413d32809ac265d5dfd8d23",
+          "compiled_sha256": "b38f4d9da044982fc8926dd6deb42ee23c4e2b945af1a66716cc868b9b002f0d"
+        },
+        {
+          "name": "func_00195A88",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 128,
+          "compiled_size": 120,
+          "different_bytes": 70,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            45,
+            48,
+            49,
+            51,
+            52
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fbc45d52aa6755b28707df315e67dc956e83a5a18413d32809ac265d5dfd8d23",
+          "compiled_sha256": "10303d5fa503745eb4e30cea152419bf861e5313fb53d122e40d5caef352a18b"
+        },
+        {
+          "name": "func_00195A88",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 128,
+          "compiled_size": 120,
+          "different_bytes": 69,
+          "first_different_offsets": [
+            8,
+            12,
+            45,
+            48,
+            49,
+            51,
+            52,
+            54
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fbc45d52aa6755b28707df315e67dc956e83a5a18413d32809ac265d5dfd8d23",
+          "compiled_sha256": "a7d364e8f8cbfbdd20aed9d80bd35a31d8e0f90db370c0e71bc4526f6d049615"
+        }
+      ]
+    },
+    {
+      "name": "func_00195B08",
+      "address": "0x00195B08",
+      "file_offset": "0x00096B08",
+      "size": 40,
+      "original_sha256": "16c0ff1ef772d68e489c2effc3eee32278853ce71865a87804663fe4fa4bd820",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195B08",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state21 cleanup: cancel captured nonnull primary; no no-op body.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195B08",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 7,
+          "first_different_offsets": [
+            10,
+            12,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "16c0ff1ef772d68e489c2effc3eee32278853ce71865a87804663fe4fa4bd820",
+          "compiled_sha256": "fb87479aaf19ce86b2bae38913841d15d68d8fffe2d284c2fc9910581e07bb71"
+        },
+        {
+          "name": "func_00195B08",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 28,
+          "different_bytes": 33,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "16c0ff1ef772d68e489c2effc3eee32278853ce71865a87804663fe4fa4bd820",
+          "compiled_sha256": "54796f0c9602bf23fe3fc00145a526730c5114e4ace91185c3d5687874f7e6f8"
+        },
+        {
+          "name": "func_00195B08",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 28,
+          "different_bytes": 33,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "16c0ff1ef772d68e489c2effc3eee32278853ce71865a87804663fe4fa4bd820",
+          "compiled_sha256": "54796f0c9602bf23fe3fc00145a526730c5114e4ace91185c3d5687874f7e6f8"
+        }
+      ]
+    },
+    {
+      "name": "func_00195B30",
+      "address": "0x00195B30",
+      "file_offset": "0x00096B30",
+      "size": 72,
+      "original_sha256": "4ae21c65972294295f922c1ddba4b2552851c27bec366dc5b31a806410674da8",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195B30",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state22 duration callback: same fully reviewed increment-before-duration C template with phase818/timer81C.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195B30",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 76,
+          "different_bytes": 43,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            34,
+            35,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4ae21c65972294295f922c1ddba4b2552851c27bec366dc5b31a806410674da8",
+          "compiled_sha256": "fc52023c7993e647f5228ee678d5a126c24e68d1226b84804d1c71b65dae8534"
+        },
+        {
+          "name": "func_00195B30",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            48,
+            60,
+            63
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4ae21c65972294295f922c1ddba4b2552851c27bec366dc5b31a806410674da8",
+          "compiled_sha256": "c63811d017b44807e2149fb7eeb8ab3356ed0d5e810947253ef993059f0868f5"
+        },
+        {
+          "name": "func_00195B30",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            48,
+            60
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4ae21c65972294295f922c1ddba4b2552851c27bec366dc5b31a806410674da8",
+          "compiled_sha256": "ba9267049202351bd18f9f345bb6cfe106de129a278cad63f9104b8c749ef847"
+        }
+      ]
+    },
+    {
+      "name": "func_00195B78",
+      "address": "0x00195B78",
+      "file_offset": "0x00096B78",
+      "size": 96,
+      "original_sha256": "e299c807fb5e2501c6994b33f99d8d940ed1861928947579bbd89861cac32f43",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195B78",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state22 cleanup: unconditional cancellation including null, fresh handle reload between stop/free and clear, captured translated object release and clear afterward.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195B78",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 31,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e299c807fb5e2501c6994b33f99d8d940ed1861928947579bbd89861cac32f43",
+          "compiled_sha256": "13b1b0c951c6a49b2bdeb5b3f5450a848dc12e4d7164a60f0c92bdcfda79db31"
+        },
+        {
+          "name": "func_00195B78",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 9,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            63,
+            66,
+            67,
+            82,
+            83
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e299c807fb5e2501c6994b33f99d8d940ed1861928947579bbd89861cac32f43",
+          "compiled_sha256": "53b9fddf10639489edc1a73c93a26b9b9132015e43e6b23da1ec92234fb9c97e"
+        },
+        {
+          "name": "func_00195B78",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 9,
+          "first_different_offsets": [
+            4,
+            8,
+            63,
+            66,
+            67,
+            82,
+            83,
+            86
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e299c807fb5e2501c6994b33f99d8d940ed1861928947579bbd89861cac32f43",
+          "compiled_sha256": "1d51e3ed05084301b29451599e8cac9c8ec4512dfa47c1257f149a99ae8c590c"
+        }
+      ]
+    },
+    {
+      "name": "func_00195BE8",
+      "address": "0x00195BE8",
+      "file_offset": "0x00096BE8",
+      "size": 72,
+      "original_sha256": "1f2201284969ed8225f3c687a6b410e9a016f39cebc16c1c5a5a32fdb840a89d",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195BE8",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state23 duration callback: same fully reviewed increment-before-duration C template with phase828/timer82C.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195BE8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 76,
+          "different_bytes": 43,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            34,
+            35,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f2201284969ed8225f3c687a6b410e9a016f39cebc16c1c5a5a32fdb840a89d",
+          "compiled_sha256": "716c45e671573c90b4f1e7a3d1663d27e04e7ba17fa30659d8371bcad0ad04f2"
+        },
+        {
+          "name": "func_00195BE8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            48,
+            60,
+            63
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f2201284969ed8225f3c687a6b410e9a016f39cebc16c1c5a5a32fdb840a89d",
+          "compiled_sha256": "23e61a48fca74f4d5ff41a1597d05f30debcb3a3a219c05733e7d73a60db3ad4"
+        },
+        {
+          "name": "func_00195BE8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            48,
+            60
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f2201284969ed8225f3c687a6b410e9a016f39cebc16c1c5a5a32fdb840a89d",
+          "compiled_sha256": "25d2fefd9cd5670fd67a92ef7d0e630accf03085ca19fb71735578afde9a4de8"
+        }
+      ]
+    },
+    {
+      "name": "func_00195C30",
+      "address": "0x00195C30",
+      "file_offset": "0x00096C30",
+      "size": 144,
+      "original_sha256": "2cb4f7ab0414960358975c81533b1ff6830a5f76513a3b6bcb6b978fa87fe2e6",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195C30",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state23 cleanup: optional captured cancellation then fresh64 clear bit18, mask callback/control, fresh route reloaded between three calls, final route zero.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195C30",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 144,
+          "compiled_size": 144,
+          "different_bytes": 48,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2cb4f7ab0414960358975c81533b1ff6830a5f76513a3b6bcb6b978fa87fe2e6",
+          "compiled_sha256": "e851085f135093c4f28351f6bf32f5baefb5175c8662a701a0b669aacd08e124"
+        },
+        {
+          "name": "func_00195C30",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 144,
+          "compiled_size": 144,
+          "different_bytes": 14,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            48,
+            49,
+            50,
+            51,
+            52
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2cb4f7ab0414960358975c81533b1ff6830a5f76513a3b6bcb6b978fa87fe2e6",
+          "compiled_sha256": "a4e4fa843c4bf2681e5672d4ae68d379bf8d2fea6f7f5d05e60631104239b03d"
+        },
+        {
+          "name": "func_00195C30",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 144,
+          "compiled_size": 144,
+          "different_bytes": 14,
+          "first_different_offsets": [
+            4,
+            8,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2cb4f7ab0414960358975c81533b1ff6830a5f76513a3b6bcb6b978fa87fe2e6",
+          "compiled_sha256": "26025b1cd5b66ce38b5918915ad4c3dbd0a70c4881296a7cd1b947a3b727552b"
+        }
+      ]
+    },
+    {
+      "name": "func_00195CC0",
+      "address": "0x00195CC0",
+      "file_offset": "0x00096CC0",
+      "size": 72,
+      "original_sha256": "164c3c277058920b57b3046adcfda0bef0d8bafe656aa6d3310381a4530be0eb",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195CC0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state24 duration callback: unsigned halfword854 increments and narrows before duration callback, exact395A740E factor and timer858 afterward.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195CC0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 76,
+          "different_bytes": 43,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            34,
+            35,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "164c3c277058920b57b3046adcfda0bef0d8bafe656aa6d3310381a4530be0eb",
+          "compiled_sha256": "df5c31ac645954ab4a44b79b0a6a4cc121c8d1813862e064054f1bc4f1046a2a"
+        },
+        {
+          "name": "func_00195CC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            48,
+            60,
+            63
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "164c3c277058920b57b3046adcfda0bef0d8bafe656aa6d3310381a4530be0eb",
+          "compiled_sha256": "ed42965578119f9f89925687271969bb0e575b7bb125c863b17c197f0521c58d"
+        },
+        {
+          "name": "func_00195CC0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 4,
+          "first_different_offsets": [
+            8,
+            12,
+            48,
+            60
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "164c3c277058920b57b3046adcfda0bef0d8bafe656aa6d3310381a4530be0eb",
+          "compiled_sha256": "b24a2a8ec58754ca48d4e3a29fbd9c74afeec1132ca406188ff390b7b3b20f99"
+        }
+      ]
+    },
+    {
+      "name": "func_00195D08",
+      "address": "0x00195D08",
+      "file_offset": "0x00096D08",
+      "size": 68,
+      "original_sha256": "b0fa457bd4cb6bc094a696eb56d0107038e40beb310133086840f0f6ec30d5f9",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195D08",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state24 initializer: signed-adjusted control word1 callback before halfword856/854 zero stores.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195D08",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 68,
+          "compiled_size": 68,
+          "different_bytes": 19,
+          "first_different_offsets": [
+            10,
+            11,
+            14,
+            22,
+            23,
+            26,
+            30,
+            34
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b0fa457bd4cb6bc094a696eb56d0107038e40beb310133086840f0f6ec30d5f9",
+          "compiled_sha256": "54e843020fe16ad55cfab6ca82be5d3a03f4b693a7ed37b48e76307da3aa806b"
+        },
+        {
+          "name": "func_00195D08",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 68,
+          "compiled_size": 68,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            8,
+            11,
+            12,
+            44,
+            48,
+            54,
+            55,
+            58
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b0fa457bd4cb6bc094a696eb56d0107038e40beb310133086840f0f6ec30d5f9",
+          "compiled_sha256": "63b8ee14e7c28d1cfb8efa6abc12cca198d7abac3ae1689781a9b1633a88c41d"
+        },
+        {
+          "name": "func_00195D08",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 68,
+          "compiled_size": 68,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            8,
+            12,
+            44,
+            48,
+            54,
+            55,
+            58,
+            59
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b0fa457bd4cb6bc094a696eb56d0107038e40beb310133086840f0f6ec30d5f9",
+          "compiled_sha256": "c5441e5257e8a88ea5bd6582939fb14e15c205a5a03ae26858532f39530d3cfb"
+        }
+      ]
+    },
+    {
+      "name": "func_00195D50",
+      "address": "0x00195D50",
+      "file_offset": "0x00096D50",
+      "size": 52,
+      "original_sha256": "cd11c6fe50e21a181532db0f8c82091156a4bf103d1d4ed9d08c4c739c57623f",
+      "source": "src/game/actor_states4.c",
+      "source_name": "func_00195D50",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_and_independent_reviewed_reconstruction",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Complete state24 cleanup: captured associated detach then fresh unconditional main cancellation; associated pointer remains stored.",
+      "boundary_evidence": "Complete original entry through endlabel, including terminal return delay; alignment padding excluded.",
+      "candidate_comparisons": [
+        {
+          "name": "func_00195D50",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc323.o",
+          "identical": false,
+          "expected_size": 52,
+          "compiled_size": 52,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            26,
+            27,
+            36,
+            39,
+            40
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cd11c6fe50e21a181532db0f8c82091156a4bf103d1d4ed9d08c4c739c57623f",
+          "compiled_sha256": "a0baecdd1aad0728f6031891d82c79e01dcdc614739ac78cffdf4c00be55ec35"
+        },
+        {
+          "name": "func_00195D50",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_states4/gcc29.o",
+          "identical": false,
+          "expected_size": 52,
+          "compiled_size": 48,
+          "different_bytes": 24,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cd11c6fe50e21a181532db0f8c82091156a4bf103d1d4ed9d08c4c739c57623f",
+          "compiled_sha256": "4c4ba874061169166a0a874076dae69ecf2b7d88ea18fe255f2f7771676f85f7"
+        },
+        {
+          "name": "func_00195D50",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_states4/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 52,
+          "compiled_size": 48,
+          "different_bytes": 22,
+          "first_different_offsets": [
+            4,
+            8,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cd11c6fe50e21a181532db0f8c82091156a4bf103d1d4ed9d08c4c739c57623f",
+          "compiled_sha256": "a7ac28f011bbf95a15c56aa098ebd0fd493821abf3f1b6eb2c05716b4938b021"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "notes": [
+    "20 complete connected actor state20\u201324 methods and substantive selector/duration/cleanup helpers;9,212 original text bytes.",
+    "Numeric partial layouts, request/registry/vector APIs, signed member descriptors and independently recovered source templates reused. Author and research independently reviewed all full originals; parent reviewed complete source/header/native, large state23/state24 instruction paths and all hashes/bounds/reference/constant/link proofs. Native2,438 passed independently by parent and research.",
+    "All60 genuinely linked comparisons have zero unresolved references; no exact matches. Whole compiled bodies are compared without instruction rewriting, masking, inline assembly or padding."
+  ],
+  "dispatch_references": {
+    "D_003F83F0": {
+      "address": "0x003F83F0",
+      "record_stride": 28,
+      "canonical_proof": "config/functions/actor_movement.json:dispatch_proofs.D_003F83F0",
+      "original_sha256": "2a0498aa68168036e77973d91003be1a9be41b24dcf7cd730ee53fa495277548",
+      "selected_members": [
+        {
+          "state": 20,
+          "member_offset": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x001959C0",
+          "function": "func_001959C0"
+        },
+        {
+          "state": 20,
+          "member_offset": 16,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00187648",
+          "function": "func_00187648"
+        },
+        {
+          "state": 21,
+          "member_offset": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00187990",
+          "function": "func_00187990"
+        },
+        {
+          "state": 21,
+          "member_offset": 8,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00195B08",
+          "function": "func_00195B08"
+        },
+        {
+          "state": 21,
+          "member_offset": 16,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00187BA0",
+          "function": "func_00187BA0"
+        },
+        {
+          "state": 22,
+          "member_offset": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00187EA8",
+          "function": "func_00187EA8"
+        },
+        {
+          "state": 22,
+          "member_offset": 8,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00195B78",
+          "function": "func_00195B78"
+        },
+        {
+          "state": 22,
+          "member_offset": 16,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00188290",
+          "function": "func_00188290"
+        },
+        {
+          "state": 23,
+          "member_offset": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00188968",
+          "function": "func_00188968"
+        },
+        {
+          "state": 23,
+          "member_offset": 8,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00195C30",
+          "function": "func_00195C30"
+        },
+        {
+          "state": 23,
+          "member_offset": 16,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00188B10",
+          "function": "func_00188B10"
+        },
+        {
+          "state": 24,
+          "member_offset": 0,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00195D08",
+          "function": "func_00195D08"
+        },
+        {
+          "state": 24,
+          "member_offset": 8,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00195D50",
+          "function": "func_00195D50"
+        },
+        {
+          "state": 24,
+          "member_offset": 16,
+          "adjustment": 0,
+          "selector": -1,
+          "target": "0x00189310",
+          "function": "func_00189310"
+        }
+      ],
+      "evidence": "Existing42 actual state records reused solely as complete entry/ABI evidence; no additional data byte awards."
+    }
+  },
+  "direct_call_references": [
+    {
+      "caller": "func_00188B10",
+      "instruction_address": "0x00188B40",
+      "target": "func_00188590",
+      "original_word": "0x0C062164"
+    }
+  ],
+  "callback_references": [
+    {
+      "caller": "func_00187990",
+      "target": "func_00195A88",
+      "high_instruction": "0x00187A28",
+      "low_instruction": "0x00187A30",
+      "high_word": "0x3C030019",
+      "low_word": "0x24715A88",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00187990",
+      "target": "func_00195A88",
+      "high_instruction": "0x00187A84",
+      "low_instruction": "0x00187A8C",
+      "high_word": "0x3C030019",
+      "low_word": "0x24715A88",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00187EA8",
+      "target": "func_00195B30",
+      "high_instruction": "0x00188170",
+      "low_instruction": "0x00188178",
+      "high_word": "0x3C020019",
+      "low_word": "0x24505B30",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188290",
+      "target": "func_00195B30",
+      "high_instruction": "0x00188404",
+      "low_instruction": "0x0018840C",
+      "high_word": "0x3C030019",
+      "low_word": "0x24715B30",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188290",
+      "target": "func_00195B30",
+      "high_instruction": "0x0018845C",
+      "low_instruction": "0x00188464",
+      "high_word": "0x3C030019",
+      "low_word": "0x24715B30",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188B10",
+      "target": "func_00195BE8",
+      "high_instruction": "0x00188D3C",
+      "low_instruction": "0x00188D7C",
+      "high_word": "0x3C030019",
+      "low_word": "0x24705BE8",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188B10",
+      "target": "func_00195BE8",
+      "high_instruction": "0x00188D60",
+      "low_instruction": "0x00188D7C",
+      "high_word": "0x3C030019",
+      "low_word": "0x24705BE8",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188B10",
+      "target": "func_00195BE8",
+      "high_instruction": "0x00188D74",
+      "low_instruction": "0x00188D7C",
+      "high_word": "0x3C030019",
+      "low_word": "0x24705BE8",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188B10",
+      "target": "func_00195BE8",
+      "high_instruction": "0x00188EC4",
+      "low_instruction": "0x00188ECC",
+      "high_word": "0x3C020019",
+      "low_word": "0x24525BE8",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00188B10",
+      "target": "func_00195BE8",
+      "high_instruction": "0x00189064",
+      "low_instruction": "0x0018906C",
+      "high_word": "0x3C020019",
+      "low_word": "0x24505BE8",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00189310",
+      "target": "func_00195CC0",
+      "high_instruction": "0x0018941C",
+      "low_instruction": "0x00189424",
+      "high_word": "0x3C020019",
+      "low_word": "0x24505CC0",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_00189310",
+      "target": "func_00195CC0",
+      "high_instruction": "0x001897AC",
+      "low_instruction": "0x001897B4",
+      "high_word": "0x3C030019",
+      "low_word": "0x24705CC0",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    },
+    {
+      "caller": "func_001959C0",
+      "target": "func_00195978",
+      "high_instruction": "0x001959CC",
+      "low_instruction": "0x001959DC",
+      "high_word": "0x3C030019",
+      "low_word": "0x24715978",
+      "evidence": "Actual callback materialization in fully reviewed body; passed to existing request API."
+    }
+  ],
+  "binary32_constants": [
+    {
+      "literal": "-3.14159274101257324f",
+      "binary32": "0xC0490FDB"
+    },
+    {
+      "literal": "0.000208333338377997279f",
+      "binary32": "0x395A740E"
+    },
+    {
+      "literal": "0.00999999977648258209f",
+      "binary32": "0x3C23D70A"
+    },
+    {
+      "literal": "0.0f",
+      "binary32": "0x00000000"
+    },
+    {
+      "literal": "0.100000001490116119f",
+      "binary32": "0x3DCCCCCD"
+    },
+    {
+      "literal": "0.20000000298023224f",
+      "binary32": "0x3E4CCCCD"
+    },
+    {
+      "literal": "0.25f",
+      "binary32": "0x3E800000"
+    },
+    {
+      "literal": "1.0f",
+      "binary32": "0x3F800000"
+    },
+    {
+      "literal": "10.0f",
+      "binary32": "0x41200000"
+    },
+    {
+      "literal": "20.0f",
+      "binary32": "0x41A00000"
+    },
+    {
+      "literal": "3.14159274101257324f",
+      "binary32": "0x40490FDB"
+    },
+    {
+      "literal": "30.0f",
+      "binary32": "0x41F00000"
+    },
+    {
+      "literal": "4.0f",
+      "binary32": "0x40800000"
+    },
+    {
+      "literal": "5.0f",
+      "binary32": "0x40A00000"
+    },
+    {
+      "literal": "6.28318548202514648f",
+      "binary32": "0x40C90FDB"
+    }
+  ],
+  "binary64_constants": [
+    {
+      "bits": "0x400921FB60000000",
+      "role": "Full original positive PI comparison; immediate chain8012<<17|87ED then<<16|8000 then<<14."
+    },
+    {
+      "bits": "0x401921FB60000000",
+      "role": "Full original positive two-PI subtraction; same chain with8032."
+    },
+    {
+      "bits": "0xBFF0000000000000",
+      "role": "Full original negative one multiplier: BFF0<<48."
+    },
+    {
+      "bits": "0x4014000000000000",
+      "role": "Full original positive five:8028<<47."
+    },
+    {
+      "bits": "0xC014000000000000",
+      "role": "Full original negative five:C014<<48."
+    }
+  ],
+  "template_families": [
+    {
+      "functions": [
+        "func_00195978",
+        "func_00195B30",
+        "func_00195BE8"
+      ],
+      "template": "DURATION_CALLBACK",
+      "evidence": "All complete72B bodies reviewed; same wrapped32 increment-before-duration and exact float factor, with numeric phase/timer offsets."
+    },
+    {
+      "functions": [
+        "func_00188B10",
+        "func_00189310"
+      ],
+      "template": "actor_member",
+      "evidence": "Same complete selector/captured binding/fresh state adjustment representation as independently reviewed actor_movement dispatcher; full signed32 adjustment sum."
+    }
+  ],
+  "validation": {
+    "native_harness": "tests/native/actor_states4.c",
+    "native_runner": "tests/native/run_actor_states4.py",
+    "native_checks": 2438,
+    "native_result": "passed",
+    "individual_links": 60,
+    "exact_matches": 0,
+    "scope": "Host call mocks and independent state/finite angle/projection models, signed phase gates, unordered timer branches, wrapped duration phases, callback field/local output mutation, fresh objects and full signed member sums. EE FCR/all nonfinite arithmetic not asserted."
+  }
+}

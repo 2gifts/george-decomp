@@ -1,0 +1,915 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Five connected controller routines,1344 original bytes/336 instructions; two substantive updates plus constructor/mode setter/dispatcher. Reuse reviewed input state, matrix/vector types, EE maximum helper and original matrix-pair/normalize/heap call entries; existing destructor reused.",
+    "All15 standard candidates naturally link without remaining relocations. The complete8B coherent mode setter matches every profile and is registered matched; four substantive/connected entries remain reconstructed. Parent fresh link reproduction passed; canonical verifier retains complete-byte status gate.",
+    "Original matrix-pair callee152B complete body proves inverse=second and forward=third argument, primary matrix and fallback ABI evidence retained. Eight immediate float encodings/hashes and actual direct JAL caller references retained; no copied original code/data arrays.",
+    "Native13122 checks pass including144 synthetic finite controlled-call instruction fixtures, direct/dispatcher behavior, all priority masks, captured transform/postcall input and retained local-vector callback mutations, constructor failures, sparse fields, one-step angle/timestep endpoints and shifted transform/input overlaps. Eight decoder guards; finite float checks tolerance3e-6, raw untouched words exact.",
+    "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+  ],
+  "float_literal_evidence": [
+    {
+      "bits": "0x3C888889",
+      "scalar": 0.01666666753590107,
+      "little_endian_word_sha256": "8b28d83cb5ddc0a51f24f23094cbfa145fee5d22bd205753291d42ccfef0ccc9",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B59FC",
+            "0x002B5A00",
+            "0x002B5A04"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x00000000",
+      "scalar": 0.0,
+      "little_endian_word_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5A38"
+          ]
+        },
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5C94"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3F800000",
+      "scalar": 1.0,
+      "little_endian_word_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5A74",
+            "0x002B5A78"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3DF5C28F",
+      "scalar": 0.11999999731779099,
+      "little_endian_word_sha256": "7632daccb6cf9fee26fe90bbbd5005d3268efa78578beffbc8b3092ac0e23437",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5A8C",
+            "0x002B5A90",
+            "0x002B5A94"
+          ]
+        },
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5B68",
+            "0x002B5B6C",
+            "0x002B5B70"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3F400000",
+      "scalar": 0.75,
+      "little_endian_word_sha256": "9a8208635e00348ab64aac2b759e76391fd47089e9a749bbcec770d9eb5c6421",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5AE0",
+            "0x002B5AE4"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x40A00000",
+      "scalar": 5.0,
+      "little_endian_word_sha256": "fca31f1667a6aa1bba12fca4e4ea1becd503379d80da3213af07f6cc5702828d",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5B0C",
+            "0x002B5B10"
+          ]
+        },
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5C0C",
+            "0x002B5C10"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x40C90FDB",
+      "scalar": 6.2831854820251465,
+      "little_endian_word_sha256": "12d85026b5109a3119231704608d5991a63d8d397d2867a9fc522305810ddb76",
+      "materialization_sites": [
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5CAC",
+            "0x002B5CB0",
+            "0x002B5CB4"
+          ]
+        },
+        {
+          "function": "func_002B59F8",
+          "instruction_addresses": [
+            "0x002B5CC0",
+            "0x002B5CC4",
+            "0x002B5CC8"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3DCCCCCD",
+      "scalar": 0.10000000149011612,
+      "little_endian_word_sha256": "fb360f7241a770dc32cade9a1d1273c92b13bd4959b1c130931312b7fe95e63f",
+      "materialization_sites": [
+        {
+          "function": "func_002B5D08",
+          "instruction_addresses": [
+            "0x002B5D88",
+            "0x002B5D8C",
+            "0x002B5D90"
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix_pair_abi": {
+    "entry": "0x0029A308",
+    "file_offset": "0x0019B308",
+    "size": 152,
+    "original_sha256": "2af62388b49f7c1f9487f8535965b4c490a997020189a1259deb52661e68414d",
+    "forward_is_third_argument": true,
+    "inverse_is_second_argument": true,
+    "evidence_addresses": [
+      "0x0029A334",
+      "0x0029A348",
+      "0x0029A368",
+      "0x0029A380",
+      "0x0029A0C8",
+      "0x0029A0CC"
+    ]
+  },
+  "functions": [
+    {
+      "name": "func_002B59F8",
+      "address": "0x002B59F8",
+      "file_offset": "0x001B69F8",
+      "size": 784,
+      "source": "src/game/camera_motion.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4c6992f63f00efd52bc1de06d2defd97527b99a68705c0b590ddccf1945c1903",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 784,
+        "compiled_size": 816,
+        "different_bytes": 688,
+        "first_different_offsets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "4c6992f63f00efd52bc1de06d2defd97527b99a68705c0b590ddccf1945c1903",
+        "compiled_sha256": "5656c4c3f943c8661fa97a105b57267ea41a792760d258f2f93dd43370047b47"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 784,
+            "compiled_size": 804,
+            "different_bytes": 687,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "4c6992f63f00efd52bc1de06d2defd97527b99a68705c0b590ddccf1945c1903",
+            "compiled_sha256": "c24cf432ec3e20a7896380a1f6d69605dafda0b73d7dcdc15d1d79feb4721e53"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 784,
+            "compiled_size": 816,
+            "different_bytes": 688,
+            "first_different_offsets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "4c6992f63f00efd52bc1de06d2defd97527b99a68705c0b590ddccf1945c1903",
+            "compiled_sha256": "674b313a68d514931fe81969b4e90202f47a26d379188fdcc9b39c457e8c81c2"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 784,
+            "compiled_size": 816,
+            "different_bytes": 688,
+            "first_different_offsets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "4c6992f63f00efd52bc1de06d2defd97527b99a68705c0b590ddccf1945c1903",
+            "compiled_sha256": "5656c4c3f943c8661fa97a105b57267ea41a792760d258f2f93dd43370047b47"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002B5F34",
+          "caller": "func_002B5F18"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x002B5A6C",
+          "target_address": "0x002B5AD0"
+        },
+        {
+          "instruction_address": "0x002B5AC8",
+          "target_address": "0x002B5C04"
+        },
+        {
+          "instruction_address": "0x002B5AD4",
+          "target_address": "0x002B5AFC"
+        },
+        {
+          "instruction_address": "0x002B5AF4",
+          "target_address": "0x002B5C04"
+        },
+        {
+          "instruction_address": "0x002B5B00",
+          "target_address": "0x002B5B24"
+        },
+        {
+          "instruction_address": "0x002B5B1C",
+          "target_address": "0x002B5C04"
+        },
+        {
+          "instruction_address": "0x002B5B28",
+          "target_address": "0x002B5C04"
+        },
+        {
+          "instruction_address": "0x002B5CA4",
+          "target_address": "0x002B5CC0"
+        },
+        {
+          "instruction_address": "0x002B5CB8",
+          "target_address": "0x002B5CE0"
+        },
+        {
+          "instruction_address": "0x002B5CD8",
+          "target_address": "0x002B5CE0"
+        }
+      ],
+      "evidence": "Capture transform and clamp elapsed with reused EE MAX encoding model; fixed held-mask priority, horizontal matrix basis normalization, post-callback input reloads, captured transform, sequential scalar position/rate stores and one-step strict/unordered angle wrap preserved.",
+      "boundary_evidence": "All336 original instructions across complete five-function connected batch reviewed, primary29A308 matrix-pair ABI and constructor/update consumer calls audited, all local branch targets within complete bodies; JR delay slots included, excluded following padding zero. Coherent8-byte setter retained with controller; existing destructor2B5EF0 reused without second implementation.",
+      "independent_review": "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+    },
+    {
+      "name": "func_002B5D08",
+      "address": "0x002B5D08",
+      "file_offset": "0x001B6D08",
+      "size": 416,
+      "source": "src/game/camera_motion.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "537214b73f8c5fee3e3acb3dae4e403d585a9d75c6d6f4f6086b98ab23abd9f5",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 416,
+        "compiled_size": 416,
+        "different_bytes": 257,
+        "first_different_offsets": [
+          20,
+          28,
+          48,
+          50,
+          51,
+          56,
+          60,
+          64
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "537214b73f8c5fee3e3acb3dae4e403d585a9d75c6d6f4f6086b98ab23abd9f5",
+        "compiled_sha256": "c0c4d92f9c536ee86df062cd3fd2b9aa85b8ffdcd862248dd872193cf19291f2"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 416,
+            "compiled_size": 416,
+            "different_bytes": 292,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "537214b73f8c5fee3e3acb3dae4e403d585a9d75c6d6f4f6086b98ab23abd9f5",
+            "compiled_sha256": "47ecad851d97779975e411f85787049aa52335b9d6505e044e77573c166ff4bf"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 416,
+            "compiled_size": 416,
+            "different_bytes": 259,
+            "first_different_offsets": [
+              7,
+              20,
+              28,
+              31,
+              48,
+              50,
+              51,
+              56
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "537214b73f8c5fee3e3acb3dae4e403d585a9d75c6d6f4f6086b98ab23abd9f5",
+            "compiled_sha256": "320c82ef1588a079add8997c8e450943ba91173de2663e15e4e25be8ec463e77"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 416,
+            "compiled_size": 416,
+            "different_bytes": 257,
+            "first_different_offsets": [
+              20,
+              28,
+              48,
+              50,
+              51,
+              56,
+              60,
+              64
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "537214b73f8c5fee3e3acb3dae4e403d585a9d75c6d6f4f6086b98ab23abd9f5",
+            "compiled_sha256": "c0c4d92f9c536ee86df062cd3fd2b9aa85b8ffdcd862248dd872193cf19291f2"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x002B5F44",
+          "caller": "func_002B5F18"
+        }
+      ],
+      "local_branch_evidence": [],
+      "evidence": "Capture transform; two full forward-matrix rows normalized; post-callback input pointer reload, current-axis translation and captured signed angular rates before overlapping stores; forced speed0.1, unbounded elapsed and unwrapped yaw preserved.",
+      "boundary_evidence": "All336 original instructions across complete five-function connected batch reviewed, primary29A308 matrix-pair ABI and constructor/update consumer calls audited, all local branch targets within complete bodies; JR delay slots included, excluded following padding zero. Coherent8-byte setter retained with controller; existing destructor2B5EF0 reused without second implementation.",
+      "independent_review": "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+    },
+    {
+      "name": "func_002B5EA8",
+      "address": "0x002B5EA8",
+      "file_offset": "0x001B6EA8",
+      "size": 72,
+      "source": "src/game/camera_motion.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b6c8d43bfccdf942d3de61f71c91748c55f6f491d0499c0067a738c452e4f5d5",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 72,
+        "compiled_size": 68,
+        "different_bytes": 20,
+        "first_different_offsets": [
+          4,
+          20,
+          32,
+          35,
+          38,
+          39,
+          52,
+          54
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b6c8d43bfccdf942d3de61f71c91748c55f6f491d0499c0067a738c452e4f5d5",
+        "compiled_sha256": "570744df09245a0692d0a2fced598bfdee640c9c466e0b1cea6889ba8f64ad20"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 72,
+            "compiled_size": 68,
+            "different_bytes": 34,
+            "first_different_offsets": [
+              4,
+              7,
+              12,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b6c8d43bfccdf942d3de61f71c91748c55f6f491d0499c0067a738c452e4f5d5",
+            "compiled_sha256": "a5f74a246520a4d29bc78f7820c42659b5f8fd911ab7514e2d597733ddde7f7b"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 72,
+            "compiled_size": 68,
+            "different_bytes": 24,
+            "first_different_offsets": [
+              4,
+              7,
+              15,
+              20,
+              32,
+              35,
+              38,
+              39
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b6c8d43bfccdf942d3de61f71c91748c55f6f491d0499c0067a738c452e4f5d5",
+            "compiled_sha256": "c2a1e53645de52a172605326cff7f442f1a10b1542ebc16f53266f6d3d841595"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 72,
+            "compiled_size": 68,
+            "different_bytes": 20,
+            "first_different_offsets": [
+              4,
+              20,
+              32,
+              35,
+              38,
+              39,
+              52,
+              54
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b6c8d43bfccdf942d3de61f71c91748c55f6f491d0499c0067a738c452e4f5d5",
+            "compiled_sha256": "570744df09245a0692d0a2fced598bfdee640c9c466e0b1cea6889ba8f64ad20"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00101724",
+          "caller": "func_00101678"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00154E34",
+          "caller": "func_00154CD8"
+        }
+      ],
+      "local_branch_evidence": [],
+      "evidence": "Allocate exactly12 bytes through reviewed original heap binding; preserve incoming transform/input across allocation, NULL return/failure, success transform/input/mode stores in observed order.",
+      "boundary_evidence": "All336 original instructions across complete five-function connected batch reviewed, primary29A308 matrix-pair ABI and constructor/update consumer calls audited, all local branch targets within complete bodies; JR delay slots included, excluded following padding zero. Coherent8-byte setter retained with controller; existing destructor2B5EF0 reused without second implementation.",
+      "independent_review": "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+    },
+    {
+      "name": "func_002B5F10",
+      "address": "0x002B5F10",
+      "file_offset": "0x001B6F10",
+      "size": 8,
+      "source": "src/game/camera_motion.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+            "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+            "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+            "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00154EF8",
+          "caller": "func_00154CD8"
+        }
+      ],
+      "local_branch_evidence": [],
+      "evidence": "Coherent controller mode setter, sole mode word store in complete JR delay; all8 bytes exact under every standard profile, parent independent fresh-link reproduction passed; canonical verifier retains complete-byte gate.",
+      "boundary_evidence": "All336 original instructions across complete five-function connected batch reviewed, primary29A308 matrix-pair ABI and constructor/update consumer calls audited, all local branch targets within complete bodies; JR delay slots included, excluded following padding zero. Coherent8-byte setter retained with controller; existing destructor2B5EF0 reused without second implementation.",
+      "independent_review": "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+    },
+    {
+      "name": "func_002B5F18",
+      "address": "0x002B5F18",
+      "file_offset": "0x001B6F18",
+      "size": 64,
+      "source": "src/game/camera_motion.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "15bd5c335734f375546d2277799b192fc9ed84e97b8cd53661510a088fba4b35",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 64,
+        "compiled_size": 32,
+        "different_bytes": 59,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "15bd5c335734f375546d2277799b192fc9ed84e97b8cd53661510a088fba4b35",
+        "compiled_sha256": "50d3d1925e9f5d0d8e85174b159cf8be074ae3b61992ab8a7c145c4d4d45d916"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 60,
+            "different_bytes": 49,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "15bd5c335734f375546d2277799b192fc9ed84e97b8cd53661510a088fba4b35",
+            "compiled_sha256": "1ea12d59dd1112c3522dd430082a6fb6ce7384264ff984011b892605a8c5503b"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 32,
+            "different_bytes": 59,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "15bd5c335734f375546d2277799b192fc9ed84e97b8cd53661510a088fba4b35",
+            "compiled_sha256": "50d3d1925e9f5d0d8e85174b159cf8be074ae3b61992ab8a7c145c4d4d45d916"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 32,
+            "different_bytes": 59,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "15bd5c335734f375546d2277799b192fc9ed84e97b8cd53661510a088fba4b35",
+            "compiled_sha256": "50d3d1925e9f5d0d8e85174b159cf8be074ae3b61992ab8a7c145c4d4d45d916"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x00101B58",
+          "caller": "func_00101B18"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0015487C",
+          "caller": "func_00154498"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x002B5F20",
+          "target_address": "0x002B5F34"
+        },
+        {
+          "instruction_address": "0x002B5F2C",
+          "target_address": "0x002B5F44"
+        },
+        {
+          "instruction_address": "0x002B5F3C",
+          "target_address": "0x002B5F50"
+        }
+      ],
+      "evidence": "Only exact mode1 dispatches to second updater; zero and every other word dispatch to clamped first updater, original f12 scalar argument and callee addresses preserved; original callers ignore v0/f0.",
+      "boundary_evidence": "All336 original instructions across complete five-function connected batch reviewed, primary29A308 matrix-pair ABI and constructor/update consumer calls audited, all local branch targets within complete bodies; JR delay slots included, excluded following padding zero. Coherent8-byte setter retained with controller; existing destructor2B5EF0 reused without second implementation.",
+      "independent_review": "Parent independently reviewed all336 original instructions and full C/header/native/scoped-tracer/strict8guards/docs, all5 full hashes/terminal bounds/local branches, all7 actual direct JALs, all8 immediate float hashes/materialization sites, and complete152B matrix-pair ABI/caller argument and unused return evidence. All15 fresh actual links reproduce recorded comparisons including full8B setter match. Independently regenerated144 fixtures/15570 instructions/max149 byte-equal header SHA5fb336194622ef5b2a2c3c4eb40ffdfbc9c8a87ffe55191f7b38b6eb568ba0fd and input digest e72d875c7e31a89493d75473396aac2f698dfbece9680336c50eecb6d68b4365; independent native13122 passes with authentic documented -ffloat-store."
+    }
+  ]
+}
