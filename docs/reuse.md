@@ -1515,3 +1515,62 @@ reconstructed with zero unresolved relocations. Valid runtime objects,
 strings, buffers and va_list domains are assumed; formatter/OS/heap/EE
 implementation fidelity is outside this source-identity proof. The canonical checkpoint passed 280 tooling tests (one platform-specific
 skip) and reproduced the retail ELF SHA-256 in a hybrid build.
+
+## Double logarithms
+
+Unchanged pinned Sun 1993 `e_log.c` and `e_log10.c` identify the complete
+1,556-byte natural-log and 424-byte base-ten-log bodies. Both source files
+retain Sun's permission notice. Their raw source hashes and every actual
+compiler dependency are pinned in the runtime manifest. The existing fdlibm
+header and software-double helpers are reused.
+
+Author and parent independently read all 495 original instructions and both
+complete sources. They verified normalization, subnormal scaling, the
+close-to-one path, both seven-coefficient polynomial paths, compensated final
+expressions, 64 real helper calls, 27 branches, two incoming JALs and fifteen
+whole declared constant sections. Both genuine seven-word ABI probes confirm
+64-bit doubles/longs and 32-bit ints/pointers. The external formatter's complete
+interval is hash-validated; parent manual review covers its argument/result
+window, without awarding formatter source recovery.
+
+The retail negative-input path returns zero directly. An explicit genuine
+`-ffast-math` recipe reproduces that folding from unchanged source; default
+IEEE compilation differs there. This recipe does not establish general IEEE
+accuracy or hardware behavior. All twelve complete object comparisons across
+three recipes retain their actual relocations: the whole generated literal
+pools, 136 and 32 bytes, have no contiguous retail match. Strict linking rejects
+both functions. They are registered **reconstructed, `link:false`**, with no
+code/data matching award. The advertised assembler `--construct-floats` option
+leaves their generated code and data unchanged under both pinned compilers.
+
+The parent reproduced the entire isolated identity packet and repeated all
+four selected tracked-source objects using only central bindings. No source,
+constant-pool splitting, data placement or instruction patch is used to force
+a match. Native numerical accuracy and EE/FCR behavior remain unverified.
+
+## Character search and uppercase strings
+
+Three unchanged pinned newlib 1.8.1 sources recover `strpbrk` (124 bytes),
+`strrchr` (76 bytes) and `strupr` (124 bytes). Their default Cygnus Solutions
+1994/1997 permission notice is retained in `LICENSES/newlib-1.8.1.txt` section 9.
+This software was developed at Cygnus Solutions. Source/dependency hashes and
+the exact upstream revision are recorded in the runtime manifest.
+
+Author and parent read all 81 original instructions, complete sources and the
+eight-instruction published `toupper` helper. The search routines preserve
+empty strings/accept sets, signed character truncation, first/last occurrence
+and terminator searches. Uppercase conversion retains signed-byte ctype
+indexing, the actual `toupper` call and the saved initial pointer. The existing
+macro-only forced include selects function-call form without changing upstream
+source. The complete previous ctype section, including seven alignment bytes,
+matches retail under both compilers and receives no new data award.
+
+Six incoming transfers and their complete byte intervals, twelve branches,
+five stores and the actual `_ctype_+1` address construction are verified.
+Both genuine thirteen-word ABI probes confirm signed char, 32-bit ints,
+pointers and size_t, 64-bit long, and the observed classification bits.
+Parent fresh packet reproduction and all six central-only tracked-source
+whole links pass with zero unresolved relocations; none matches exactly.
+Readable NUL-terminated strings and writable uppercase storage are required.
+Portable ctype behavior is limited to its defined input domain; invalid signed
+indices, malformed buffers and side-effecting replacement helpers are unclaimed.

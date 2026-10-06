@@ -1,0 +1,3534 @@
+{
+  "functions": [
+    {
+      "name": "func_00166CA8",
+      "address": "0x00166CA8",
+      "file_offset": "0x00067CA8",
+      "size": 260,
+      "original_sha256": "977fda762c317e7c46aff2b4f71996a50909924afab73e18646531a364f8e3d9",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_00166CA8",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_00166CA8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 232,
+          "different_bytes": 194,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "977fda762c317e7c46aff2b4f71996a50909924afab73e18646531a364f8e3d9",
+          "compiled_sha256": "650167108071d880bbd138181ac2491ab2b3000cf0c7b08fb62dc25e586fd4fd"
+        },
+        {
+          "name": "func_00166CA8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 232,
+          "different_bytes": 189,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            12,
+            15,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "977fda762c317e7c46aff2b4f71996a50909924afab73e18646531a364f8e3d9",
+          "compiled_sha256": "73a8a89a1ab0b27fb489ac2a763cda48838eda7eb4dfc8441d97ae37d8f49e49"
+        },
+        {
+          "name": "func_00166CA8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 260,
+          "compiled_size": 232,
+          "different_bytes": 186,
+          "first_different_offsets": [
+            0,
+            4,
+            12,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "977fda762c317e7c46aff2b4f71996a50909924afab73e18646531a364f8e3d9",
+          "compiled_sha256": "46ab6e1f276114ffbb2f8aafb1c774bd935866840e51603c072e11b63e8b7816"
+        }
+      ],
+      "evidence": "Complete base initializer with retained input: script constructor, numeric configuration lookup, captured input translation passed as three independent FPU args, original matrix copy plus two identities, explicit fields, callback-fresh transform/configuration near and ratio stores, then reused camera matrix refresh.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x166cac",
+          "word": "0x7fb00050",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 80
+        },
+        {
+          "instruction_address": "0x166cb4",
+          "word": "0x7fb10040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 64
+        },
+        {
+          "instruction_address": "0x166cb8",
+          "word": "0x7fb20030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x166cc0",
+          "word": "0x7fb30020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x166cc4",
+          "word": "0xffbf0010",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x166cec",
+          "word": "0xae020004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x166cf0",
+          "word": "0xae0200e0",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 224
+        },
+        {
+          "instruction_address": "0x166cfc",
+          "word": "0xe7a00000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x166d08",
+          "word": "0xe7a10004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x166d1c",
+          "word": "0xe7a00008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 0,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x166d20",
+          "word": "0xae00000c",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 12
+        },
+        {
+          "instruction_address": "0x166d28",
+          "word": "0xae020008",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x166d44",
+          "word": "0xae0000d0",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 208
+        },
+        {
+          "instruction_address": "0x166d48",
+          "word": "0xae0000d4",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 212
+        },
+        {
+          "instruction_address": "0x166d4c",
+          "word": "0xae0000d8",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 216
+        },
+        {
+          "instruction_address": "0x166d50",
+          "word": "0xae0000dc",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 220
+        },
+        {
+          "instruction_address": "0x166d60",
+          "word": "0xe460003c",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 60
+        },
+        {
+          "instruction_address": "0x166d78",
+          "word": "0xe4800044",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 68
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x166da4",
+          "delay_address": "0x166da8",
+          "delay_word": "0x27bd0060"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x166cc8",
+          "target_address": "0x2d06e8",
+          "word": "0xc0b41ba",
+          "delay_word": "0x26130050"
+        },
+        {
+          "instruction_address": "0x166ce8",
+          "target_address": "0x23c298",
+          "word": "0xc08f0a6",
+          "delay_word": "0xae020004"
+        },
+        {
+          "instruction_address": "0x166d18",
+          "target_address": "0x29a100",
+          "word": "0xc0a6840",
+          "delay_word": "0xe7a00008"
+        },
+        {
+          "instruction_address": "0x166d2c",
+          "target_address": "0x2a1c08",
+          "word": "0xc0a8702",
+          "delay_word": "0x26040010"
+        },
+        {
+          "instruction_address": "0x166d34",
+          "target_address": "0x2a1c30",
+          "word": "0xc0a870c",
+          "delay_word": "0x260202d"
+        },
+        {
+          "instruction_address": "0x166d3c",
+          "target_address": "0x2a1c30",
+          "word": "0xc0a870c",
+          "delay_word": "0x240202d"
+        },
+        {
+          "instruction_address": "0x166d84",
+          "target_address": "0x29a308",
+          "word": "0xc0a68c2",
+          "delay_word": "0x240302d"
+        }
+      ],
+      "original_indirect_calls": [],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "caller": "func_001670A8",
+            "target": "func_00166CA8",
+            "instruction_address": "0x1670b4",
+            "word": "0xc059b2a",
+            "containing_geometry": {
+              "address": "0x001670A8",
+              "file_offset": "0x000680A8",
+              "size": 300,
+              "original_sha256": "200d90b477fcb12d98d665cd100c9c18cb4e5de1837eacb97ff89db0d3f7743c"
+            }
+          },
+          {
+            "caller": "func_00168D50",
+            "target": "func_00166CA8",
+            "instruction_address": "0x168d5c",
+            "word": "0xc059b2a",
+            "containing_geometry": {
+              "address": "0x00168D50",
+              "file_offset": "0x00069D50",
+              "size": 116,
+              "original_sha256": "699c5c998bc128875989bd0a09568f79df86ff668ef7cb1d607fe077fa0ceb74"
+            }
+          },
+          {
+            "caller": "func_00168EE0",
+            "target": "func_00166CA8",
+            "instruction_address": "0x168eec",
+            "word": "0xc059b2a",
+            "containing_geometry": {
+              "address": "0x00168EE0",
+              "file_offset": "0x00069EE0",
+              "size": 384,
+              "original_sha256": "e7eaca34141d600da72dbe9656292aa196f1ae6bbf413cccd04ab23a1279a6de"
+            }
+          },
+          {
+            "caller": "func_0016B948",
+            "target": "func_00166CA8",
+            "instruction_address": "0x16b954",
+            "word": "0xc059b2a",
+            "containing_geometry": {
+              "address": "0x0016B948",
+              "file_offset": "0x0006C948",
+              "size": 556,
+              "original_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2"
+            }
+          }
+        ],
+        "stored_dispatch_regions": [],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    },
+    {
+      "name": "func_00166DD0",
+      "address": "0x00166DD0",
+      "file_offset": "0x00067DD0",
+      "size": 228,
+      "original_sha256": "2f179326c0eb12530d4d67194d2f760e7a3de7d484f29fc671876ebcdb379154",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_00166DD0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_00166DD0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 228,
+          "different_bytes": 133,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f179326c0eb12530d4d67194d2f760e7a3de7d484f29fc671876ebcdb379154",
+          "compiled_sha256": "6d319b2aa993c529d9fbaa3d203723f1c3c4eafe1994b900a4e41f9e2cce3c75"
+        },
+        {
+          "name": "func_00166DD0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 228,
+          "different_bytes": 92,
+          "first_different_offsets": [
+            4,
+            7,
+            14,
+            15,
+            18,
+            19,
+            26,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f179326c0eb12530d4d67194d2f760e7a3de7d484f29fc671876ebcdb379154",
+          "compiled_sha256": "d20af62083eb03e43cc9c7c6a87e065fc32b3809b766c0b7ef7673274c398f33"
+        },
+        {
+          "name": "func_00166DD0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 228,
+          "compiled_size": 228,
+          "different_bytes": 88,
+          "first_different_offsets": [
+            4,
+            14,
+            18,
+            26,
+            28,
+            38,
+            48,
+            49
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f179326c0eb12530d4d67194d2f760e7a3de7d484f29fc671876ebcdb379154",
+          "compiled_sha256": "fb8d59b5c1a08b342e3d8add98feea1555b4757578509cad6a0f6de5ec0735be"
+        }
+      ],
+      "evidence": "Complete origin initializer: script constructor/configuration and zero-position transform allocation, three identity frames, zero fields and fresh transform/configuration scalar stores, final matrix refresh. Retains input pointer.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x166dd4",
+          "word": "0x7fb00030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x166ddc",
+          "word": "0x7fb10020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x166de0",
+          "word": "0x7fb20010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x166de4",
+          "word": "0xe7b40040",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 20,
+          "signed_offset": 64
+        },
+        {
+          "instruction_address": "0x166dec",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x166e14",
+          "word": "0xae020004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x166e28",
+          "word": "0xae0200e0",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 224
+        },
+        {
+          "instruction_address": "0x166e2c",
+          "word": "0xae00000c",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 12
+        },
+        {
+          "instruction_address": "0x166e38",
+          "word": "0xae020008",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x166e4c",
+          "word": "0xe61400d4",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 20,
+          "signed_offset": 212
+        },
+        {
+          "instruction_address": "0x166e50",
+          "word": "0xe61400d0",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 20,
+          "signed_offset": 208
+        },
+        {
+          "instruction_address": "0x166e54",
+          "word": "0xae0000d8",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 216
+        },
+        {
+          "instruction_address": "0x166e58",
+          "word": "0xae0000dc",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 220
+        },
+        {
+          "instruction_address": "0x166e68",
+          "word": "0xe460003c",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 60
+        },
+        {
+          "instruction_address": "0x166e80",
+          "word": "0xe4800044",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 68
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x166eac",
+          "delay_address": "0x166eb0",
+          "delay_word": "0x27bd0050"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x166df0",
+          "target_address": "0x2d06e8",
+          "word": "0xc0b41ba",
+          "delay_word": "0x26110090"
+        },
+        {
+          "instruction_address": "0x166e10",
+          "target_address": "0x23c298",
+          "word": "0xc08f0a6",
+          "delay_word": "0xae020004"
+        },
+        {
+          "instruction_address": "0x166e24",
+          "target_address": "0x29a100",
+          "word": "0xc0a6840",
+          "delay_word": "0xae0200e0"
+        },
+        {
+          "instruction_address": "0x166e34",
+          "target_address": "0x2a1c30",
+          "word": "0xc0a870c",
+          "delay_word": "0xae020008"
+        },
+        {
+          "instruction_address": "0x166e3c",
+          "target_address": "0x2a1c30",
+          "word": "0xc0a870c",
+          "delay_word": "0x240202d"
+        },
+        {
+          "instruction_address": "0x166e44",
+          "target_address": "0x2a1c30",
+          "word": "0xc0a870c",
+          "delay_word": "0x220202d"
+        },
+        {
+          "instruction_address": "0x166e8c",
+          "target_address": "0x29a308",
+          "word": "0xc0a68c2",
+          "delay_word": "0x220302d"
+        }
+      ],
+      "original_indirect_calls": [],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "caller": "func_001680C8",
+            "target": "func_00166DD0",
+            "instruction_address": "0x1680d4",
+            "word": "0xc059b74",
+            "containing_geometry": {
+              "address": "0x001680C8",
+              "file_offset": "0x000690C8",
+              "size": 124,
+              "original_sha256": "9ac00197f0d8207b7e9c6b0d3e58975cdace34f722fe78bbbf5d144ae7e34501"
+            }
+          },
+          {
+            "caller": "func_00168CD8",
+            "target": "func_00166DD0",
+            "instruction_address": "0x168ce4",
+            "word": "0xc059b74",
+            "containing_geometry": {
+              "address": "0x00168CD8",
+              "file_offset": "0x00069CD8",
+              "size": 116,
+              "original_sha256": "7aebe298ecf67c077fc24f8eaefd72e24ccf844cbfdc8e75cac0adf79ecfe466"
+            }
+          },
+          {
+            "caller": "func_0016B5E0",
+            "target": "func_00166DD0",
+            "instruction_address": "0x16b5ec",
+            "word": "0xc059b74",
+            "containing_geometry": {
+              "address": "0x0016B5E0",
+              "file_offset": "0x0006C5E0",
+              "size": 60,
+              "original_sha256": "b9594b40a501ae379ed423b809b55fe4c0c41ac83bdee18b9a8ff495003ef1bf"
+            }
+          },
+          {
+            "caller": "func_0016B720",
+            "target": "func_00166DD0",
+            "instruction_address": "0x16b72c",
+            "word": "0xc059b74",
+            "containing_geometry": {
+              "address": "0x0016B720",
+              "file_offset": "0x0006C720",
+              "size": 552,
+              "original_sha256": "7bb29571069cd90929ae65ef7e03d2eaf55d9af0400f96f636706f4ac0dda0df"
+            }
+          }
+        ],
+        "stored_dispatch_regions": [],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    },
+    {
+      "name": "func_00166EB8",
+      "address": "0x00166EB8",
+      "file_offset": "0x00067EB8",
+      "size": 156,
+      "original_sha256": "0f718544009e45bebb32e113577fe677e6fba413bd6813235b8b06d44c15d11d",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_00166EB8",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_00166EB8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 156,
+          "different_bytes": 53,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0f718544009e45bebb32e113577fe677e6fba413bd6813235b8b06d44c15d11d",
+          "compiled_sha256": "6fdc53353d1ebae2cdc0d8daf1d5b420da7e8d7d3bd74c751b2bf6ace83783d9"
+        },
+        {
+          "name": "func_00166EB8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 156,
+          "different_bytes": 17,
+          "first_different_offsets": [
+            4,
+            7,
+            15,
+            16,
+            40,
+            41,
+            42,
+            43
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0f718544009e45bebb32e113577fe677e6fba413bd6813235b8b06d44c15d11d",
+          "compiled_sha256": "e7866f332a1aa7a13a4450dd6bdd0c7ebfe486c8cd74f6c70fd8379d4632a19c"
+        },
+        {
+          "name": "func_00166EB8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 156,
+          "different_bytes": 13,
+          "first_different_offsets": [
+            4,
+            16,
+            40,
+            41,
+            42,
+            43,
+            44,
+            52
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0f718544009e45bebb32e113577fe677e6fba413bd6813235b8b06d44c15d11d",
+          "compiled_sha256": "ba2a1f7af72a3236d5ef0470e185b9a781993d68c6b6ab966fc41029fee03a81"
+        }
+      ],
+      "evidence": "Complete clone initializer: script setup, newly allocated zero-position transform, original 104-byte transform copy with fresh source+8 argument, component word after copy callback, three sequential 64-byte frame copies and interleaved D0/D4 source loads. Other fields remain untouched; retained input return.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x166ebc",
+          "word": "0x7fb00020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x166ec4",
+          "word": "0x7fb10010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x166ec8",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x166eec",
+          "word": "0xae020004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x166ef0",
+          "word": "0xae020008",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x166f10",
+          "word": "0xae02000c",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 12
+        },
+        {
+          "instruction_address": "0x166f38",
+          "word": "0xe60100d0",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 1,
+          "signed_offset": 208
+        },
+        {
+          "instruction_address": "0x166f44",
+          "word": "0xe60000d4",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 212
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x166f4c",
+          "delay_address": "0x166f50",
+          "delay_word": "0x27bd0030"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x166ecc",
+          "target_address": "0x2d06e8",
+          "word": "0xc0b41ba",
+          "delay_word": "0xa0882d"
+        },
+        {
+          "instruction_address": "0x166ee8",
+          "target_address": "0x29a100",
+          "word": "0xc0a6840",
+          "delay_word": "0xae020004"
+        },
+        {
+          "instruction_address": "0x166ef8",
+          "target_address": "0x29a260",
+          "word": "0xc0a6898",
+          "delay_word": "0x8e250008"
+        },
+        {
+          "instruction_address": "0x166f0c",
+          "target_address": "0x2a1c08",
+          "word": "0xc0a8702",
+          "delay_word": "0xae02000c"
+        },
+        {
+          "instruction_address": "0x166f18",
+          "target_address": "0x2a1c08",
+          "word": "0xc0a8702",
+          "delay_word": "0x26250050"
+        },
+        {
+          "instruction_address": "0x166f24",
+          "target_address": "0x2a1c08",
+          "word": "0xc0a8702",
+          "delay_word": "0x26250090"
+        }
+      ],
+      "original_indirect_calls": [],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "caller": "func_00168148",
+            "target": "func_00166EB8",
+            "instruction_address": "0x168154",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x00168148",
+              "file_offset": "0x00069148",
+              "size": 116,
+              "original_sha256": "d371f931fb7871f80935460900b7f37a51bef04e6825f422dcf30f5c63d89636"
+            }
+          },
+          {
+            "caller": "func_00168BC0",
+            "target": "func_00166EB8",
+            "instruction_address": "0x168bf0",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x00168BC0",
+              "file_offset": "0x00069BC0",
+              "size": 280,
+              "original_sha256": "8669733b881ce173a94765a0fa1770657b360109d0b6d61f6df5ba66fab8421e"
+            }
+          },
+          {
+            "caller": "func_00168DC8",
+            "target": "func_00166EB8",
+            "instruction_address": "0x168dd4",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x00168DC8",
+              "file_offset": "0x00069DC8",
+              "size": 64,
+              "original_sha256": "67951b2cde1b53423784cdffe053c212606849221251d832df928e6b796835f0"
+            }
+          },
+          {
+            "caller": "func_00168E08",
+            "target": "func_00166EB8",
+            "instruction_address": "0x168e14",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x00168E08",
+              "file_offset": "0x00069E08",
+              "size": 64,
+              "original_sha256": "67951b2cde1b53423784cdffe053c212606849221251d832df928e6b796835f0"
+            }
+          },
+          {
+            "caller": "func_0016B620",
+            "target": "func_00166EB8",
+            "instruction_address": "0x16b62c",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x0016B620",
+              "file_offset": "0x0006C620",
+              "size": 60,
+              "original_sha256": "4a3e304c40c634acc8c341817fb7a067ec5afaabee381692ac057df5bb173241"
+            }
+          },
+          {
+            "caller": "func_0016BB78",
+            "target": "func_00166EB8",
+            "instruction_address": "0x16bb84",
+            "word": "0xc059bae",
+            "containing_geometry": {
+              "address": "0x0016BB78",
+              "file_offset": "0x0006CB78",
+              "size": 548,
+              "original_sha256": "0d92b4097f1a06ba5ff31da78dbae709aee0889da39ac53f42c2858af029258e"
+            }
+          }
+        ],
+        "stored_dispatch_regions": [],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    },
+    {
+      "name": "func_00166F58",
+      "address": "0x00166F58",
+      "file_offset": "0x00067F58",
+      "size": 116,
+      "original_sha256": "8ae991708f5457034a6d61c3ebc9515a9820061977af8504c64c37154d537b2f",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_00166F58",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_00166F58",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 116,
+          "compiled_size": 120,
+          "different_bytes": 85,
+          "first_different_offsets": [
+            8,
+            10,
+            11,
+            16,
+            18,
+            19,
+            21,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8ae991708f5457034a6d61c3ebc9515a9820061977af8504c64c37154d537b2f",
+          "compiled_sha256": "a751694afd23c6c91a0eaf5237101baf4f161a95140cad90e88a5ad61383e84a"
+        },
+        {
+          "name": "func_00166F58",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 116,
+          "compiled_size": 112,
+          "different_bytes": 44,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8ae991708f5457034a6d61c3ebc9515a9820061977af8504c64c37154d537b2f",
+          "compiled_sha256": "4209ebae5e4bb5638635ed94089af683796d2fc3d6e89a9d2984fd6e4df79bb4"
+        },
+        {
+          "name": "func_00166F58",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 116,
+          "compiled_size": 112,
+          "different_bytes": 41,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8ae991708f5457034a6d61c3ebc9515a9820061977af8504c64c37154d537b2f",
+          "compiled_sha256": "cd1ad83f7b2d9f865f9296d7ee234ff97b8f56e5ed01a23b30e816ab0b9b6445"
+        }
+      ],
+      "evidence": "Complete cleanup: publish original B078 table, optional transform release, fresh component pointer and signed16 adjusted virtual release with full argument three, then shared script destruction using original full flags. No original class name inferred.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x166f7c",
+          "target_address": "0x166f8c",
+          "word": "0x10800003",
+          "delay_word": "0xa0882d"
+        },
+        {
+          "instruction_address": "0x166f90",
+          "target_address": "0x166fac",
+          "word": "0x10c00006",
+          "delay_word": "0x24050003"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x166f60",
+          "word": "0x7fb00020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x166f68",
+          "word": "0x7fb10010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x166f70",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x166f74",
+          "word": "0xae020004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 4
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x166fc4",
+          "delay_address": "0x166fc8",
+          "delay_word": "0x27bd0030"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x166f84",
+          "target_address": "0x29a168",
+          "word": "0xc0a685a",
+          "delay_word": "0x0"
+        },
+        {
+          "instruction_address": "0x166fb0",
+          "target_address": "0x2d0700",
+          "word": "0xc0b41c0",
+          "delay_word": "0x220282d"
+        }
+      ],
+      "original_indirect_calls": [
+        {
+          "instruction_address": "0x166fa4",
+          "source_register": 3,
+          "link_register": 31,
+          "delay_word": "0xc42021"
+        }
+      ],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "caller": "func_001681C0",
+            "target": "func_00166F58",
+            "instruction_address": "0x1681d4",
+            "word": "0xc059bd6",
+            "containing_geometry": {
+              "address": "0x001681C0",
+              "file_offset": "0x000691C0",
+              "size": 40,
+              "original_sha256": "4dc005b72ea6df3062af84e28070d21690bd93db778abe32a27f291d06f949ca"
+            }
+          },
+          {
+            "caller": "func_00168E48",
+            "target": "func_00166F58",
+            "instruction_address": "0x168e5c",
+            "word": "0xc059bd6",
+            "containing_geometry": {
+              "address": "0x00168E48",
+              "file_offset": "0x00069E48",
+              "size": 40,
+              "original_sha256": "e0b742ff09051b75b8f55c4588ea190a31881b39df5676691a896d9a8ed6169e"
+            }
+          },
+          {
+            "caller": "func_0016B660",
+            "target": "func_00166F58",
+            "instruction_address": "0x16b674",
+            "word": "0xc059bd6",
+            "containing_geometry": {
+              "address": "0x0016B660",
+              "file_offset": "0x0006C660",
+              "size": 40,
+              "original_sha256": "59a72dc0c4dcdbc88eff6f90b80567cc9dfe3837038c9e24c1126a1d71c03afd"
+            }
+          },
+          {
+            "caller": "func_0016C280",
+            "target": "func_00166F58",
+            "instruction_address": "0x16c294",
+            "word": "0xc059bd6",
+            "containing_geometry": {
+              "address": "0x0016C280",
+              "file_offset": "0x0006D280",
+              "size": 40,
+              "original_sha256": "9c68637c00f0904f22362601a1b83a8b49c4fad8ebbd98451fbd14d32e7f3af9"
+            }
+          }
+        ],
+        "stored_dispatch_regions": [],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    },
+    {
+      "name": "func_0016B948",
+      "address": "0x0016B948",
+      "file_offset": "0x0006C948",
+      "size": 556,
+      "original_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_0016B948",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_0016B948",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 556,
+          "compiled_size": 436,
+          "different_bytes": 477,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2",
+          "compiled_sha256": "be6d7c998563b33c73f216cf948ab64a22d37af90e814bd4e405867ce77f962c"
+        },
+        {
+          "name": "func_0016B948",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 556,
+          "compiled_size": 440,
+          "different_bytes": 450,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2",
+          "compiled_sha256": "69dfa165e5d2abde48a16c89706f29f6dff59a0f84c176e4bd71769b8753f726"
+        },
+        {
+          "name": "func_0016B948",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 556,
+          "compiled_size": 440,
+          "different_bytes": 449,
+          "first_different_offsets": [
+            4,
+            8,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2",
+          "compiled_sha256": "7a74bedbd4b518430dc0edda0bfb13169505d955a9fed0bbc1c0a131be9b68a2"
+        }
+      ],
+      "evidence": "Complete derived initializer: reused base initializer, published BD08 table, numeric resource pointer and sequential seven scalar reads/stores, fresh resource reload before second triplet, transform word two, two left-associated basis/translation points captured before first output, then independent transform reload for second output. Retained input return.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x16b94c",
+          "word": "0x7fb00030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x16b950",
+          "word": "0xffbf0020",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x16b960",
+          "word": "0xae00010c",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 268
+        },
+        {
+          "instruction_address": "0x16b96c",
+          "word": "0xae030004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 3,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16b97c",
+          "word": "0xae02010c",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 268
+        },
+        {
+          "instruction_address": "0x16b98c",
+          "word": "0xe6000108",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 264
+        },
+        {
+          "instruction_address": "0x16b994",
+          "word": "0xe60100f0",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 1,
+          "signed_offset": 240
+        },
+        {
+          "instruction_address": "0x16b99c",
+          "word": "0xe4600004",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16b9a4",
+          "word": "0xe4610008",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16b9b4",
+          "word": "0xe60100fc",
+          "opcode": 57,
+          "base_gpr": 16,
+          "source_register": 1,
+          "signed_offset": 252
+        },
+        {
+          "instruction_address": "0x16b9bc",
+          "word": "0xe4800004",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16b9c4",
+          "word": "0xe4810008",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16b9d0",
+          "word": "0xac620000",
+          "opcode": 43,
+          "base_gpr": 3,
+          "source_register": 2,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16ba24",
+          "word": "0xe7a20004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16ba2c",
+          "word": "0xe7a10008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16ba30",
+          "word": "0xe7a50000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16ba50",
+          "word": "0xe7a50000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16ba68",
+          "word": "0xe7a20004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16ba70",
+          "word": "0xe7a10008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16ba8c",
+          "word": "0xe7a50000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16baa0",
+          "word": "0xe7a20004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16baa4",
+          "word": "0xe7a10008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bac0",
+          "word": "0xe7ab0010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 11,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16bacc",
+          "word": "0xe7a20018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16bad0",
+          "word": "0xe7a10014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16bae0",
+          "word": "0xe7a70010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16bb04",
+          "word": "0xe7a20018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16bb08",
+          "word": "0xe7a10014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16bb1c",
+          "word": "0xe7a70010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16bb2c",
+          "word": "0xe7a20018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16bb30",
+          "word": "0xe7a10014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16bb34",
+          "word": "0xe4650004",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 5,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bb3c",
+          "word": "0xe4800004",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bb44",
+          "word": "0xe4810008",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bb58",
+          "word": "0xe4610010",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 1,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16bb60",
+          "word": "0xe4800004",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bb68",
+          "word": "0xe4810008",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 1,
+          "signed_offset": 8
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x16bb6c",
+          "delay_address": "0x16bb70",
+          "delay_word": "0x27bd0040"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x16b954",
+          "target_address": "0x166ca8",
+          "word": "0xc059b2a",
+          "delay_word": "0x80802d"
+        },
+        {
+          "instruction_address": "0x16b974",
+          "target_address": "0x23c298",
+          "word": "0xc08f0a6",
+          "delay_word": "0x2405ffff"
+        }
+      ],
+      "original_indirect_calls": [],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "caller": "func_0015F490",
+            "target": "func_0016B948",
+            "instruction_address": "0x15f64c",
+            "word": "0xc05ae52",
+            "containing_geometry": {
+              "address": "0x0015F490",
+              "file_offset": "0x00060490",
+              "size": 884,
+              "original_sha256": "b341c1cc09f1fdd97ac68886a8b6202871833c421ec14df493ebd1cd99dbfaaf"
+            }
+          }
+        ],
+        "stored_dispatch_regions": [],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    },
+    {
+      "name": "func_0016BDA0",
+      "address": "0x0016BDA0",
+      "file_offset": "0x0006CDA0",
+      "size": 756,
+      "original_sha256": "0194672f5a93348cae175c91ea679b3a1fa71a9cd053c4597632fadb476548c9",
+      "source": "src/game/actor_pose_controller.c",
+      "source_name": "func_0016BDA0",
+      "status": "reconstructed",
+      "link": true,
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_0016BDA0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc323.o",
+          "identical": false,
+          "expected_size": 756,
+          "compiled_size": 624,
+          "different_bytes": 657,
+          "first_different_offsets": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            12,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0194672f5a93348cae175c91ea679b3a1fa71a9cd053c4597632fadb476548c9",
+          "compiled_sha256": "1035993c555cb66f6a9bb83cb833d54743bd22958b237f9f1df726be43736d4d"
+        },
+        {
+          "name": "func_0016BDA0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/actor_pose_controller/gcc29.o",
+          "identical": false,
+          "expected_size": 756,
+          "compiled_size": 640,
+          "different_bytes": 635,
+          "first_different_offsets": [
+            0,
+            5,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0194672f5a93348cae175c91ea679b3a1fa71a9cd053c4597632fadb476548c9",
+          "compiled_sha256": "43370119bfd946dafb3f08b23b670ea0c966ff5e8217328d36968b9f2e32b542"
+        },
+        {
+          "name": "func_0016BDA0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/actor_pose_controller/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 756,
+          "compiled_size": 640,
+          "different_bytes": 635,
+          "first_different_offsets": [
+            0,
+            5,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0194672f5a93348cae175c91ea679b3a1fa71a9cd053c4597632fadb476548c9",
+          "compiled_sha256": "43370119bfd946dafb3f08b23b670ea0c966ff5e8217328d36968b9f2e32b542"
+        }
+      ],
+      "evidence": "Complete duration update: full D8 word gate, fresh resource between triplets and duration, ordered positive-duration interpolation without a clamp, all point inputs before potentially aliased output writes, independent transform reload between points, explicit XYZ/W1 frame translation then callback-fresh final camera matrix update.",
+      "boundary_evidence": "Validated ELF complete interval equals every original.S byte through terminal JR and delay; zero alignment excluded.",
+      "excluded_zero_alignment_bytes": 4,
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x16bdb0",
+          "target_address": "0x16c088",
+          "word": "0x144000b5",
+          "delay_word": "0x46006446"
+        },
+        {
+          "instruction_address": "0x16bf5c",
+          "target_address": "0x16bff8",
+          "word": "0x45000026",
+          "delay_word": "0xe7a20004"
+        },
+        {
+          "instruction_address": "0x16bff0",
+          "target_address": "0x16c010",
+          "word": "0x10000007",
+          "delay_word": "0xe7a50034"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction_address": "0x16bda8",
+          "word": "0xffbf0040",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 64
+        },
+        {
+          "instruction_address": "0x16bdd8",
+          "word": "0xe52000f0",
+          "opcode": 57,
+          "base_gpr": 9,
+          "source_register": 0,
+          "signed_offset": 240
+        },
+        {
+          "instruction_address": "0x16bde4",
+          "word": "0xe4600004",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bdec",
+          "word": "0xe4610008",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bdfc",
+          "word": "0xe52100fc",
+          "opcode": 57,
+          "base_gpr": 9,
+          "source_register": 1,
+          "signed_offset": 252
+        },
+        {
+          "instruction_address": "0x16be04",
+          "word": "0xe4800004",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16be0c",
+          "word": "0xe4810008",
+          "opcode": 57,
+          "base_gpr": 4,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16be20",
+          "word": "0xe5300108",
+          "opcode": 57,
+          "base_gpr": 9,
+          "source_register": 16,
+          "signed_offset": 264
+        },
+        {
+          "instruction_address": "0x16be60",
+          "word": "0xe7a50010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16be64",
+          "word": "0xe7a30014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 3,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16be68",
+          "word": "0xe7a20018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16be7c",
+          "word": "0xe7a50010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16be8c",
+          "word": "0xe7a30014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 3,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16be90",
+          "word": "0xe7a20018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16bec8",
+          "word": "0xe7ae0014",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 14,
+          "signed_offset": 20
+        },
+        {
+          "instruction_address": "0x16bed0",
+          "word": "0xe7af0018",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 15,
+          "signed_offset": 24
+        },
+        {
+          "instruction_address": "0x16bed8",
+          "word": "0xe7ad0010",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 13,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16befc",
+          "word": "0xe7a70000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16bf0c",
+          "word": "0xe7a20008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bf10",
+          "word": "0xe7a10004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bf24",
+          "word": "0xe7a70000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16bf34",
+          "word": "0xe7a20008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bf38",
+          "word": "0xe7a10004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 1,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bf48",
+          "word": "0xe7a90000",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 9,
+          "signed_offset": 0
+        },
+        {
+          "instruction_address": "0x16bf58",
+          "word": "0xe7a70008",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16bf60",
+          "word": "0xe7a20004",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16bfac",
+          "word": "0xe7a50020",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x16bfb0",
+          "word": "0xe7a60028",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 6,
+          "signed_offset": 40
+        },
+        {
+          "instruction_address": "0x16bfb4",
+          "word": "0xe7a40024",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 4,
+          "signed_offset": 36
+        },
+        {
+          "instruction_address": "0x16bfe8",
+          "word": "0xe7a20030",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x16bfec",
+          "word": "0xe7a40038",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 4,
+          "signed_offset": 56
+        },
+        {
+          "instruction_address": "0x16bff4",
+          "word": "0xe7a50034",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 5,
+          "signed_offset": 52
+        },
+        {
+          "instruction_address": "0x16bff8",
+          "word": "0xe7a90020",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 9,
+          "signed_offset": 32
+        },
+        {
+          "instruction_address": "0x16bffc",
+          "word": "0xe7a20024",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 36
+        },
+        {
+          "instruction_address": "0x16c000",
+          "word": "0xe7a70028",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 40
+        },
+        {
+          "instruction_address": "0x16c004",
+          "word": "0xe7ad0030",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 13,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x16c008",
+          "word": "0xe7ae0034",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 14,
+          "signed_offset": 52
+        },
+        {
+          "instruction_address": "0x16c00c",
+          "word": "0xe7af0038",
+          "opcode": 57,
+          "base_gpr": 29,
+          "source_register": 15,
+          "signed_offset": 56
+        },
+        {
+          "instruction_address": "0x16c01c",
+          "word": "0xe4410004",
+          "opcode": 57,
+          "base_gpr": 2,
+          "source_register": 1,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16c024",
+          "word": "0xe4600004",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16c02c",
+          "word": "0xe4610008",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16c03c",
+          "word": "0xe4410010",
+          "opcode": 57,
+          "base_gpr": 2,
+          "source_register": 1,
+          "signed_offset": 16
+        },
+        {
+          "instruction_address": "0x16c044",
+          "word": "0xe4600004",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 4
+        },
+        {
+          "instruction_address": "0x16c04c",
+          "word": "0xe4610008",
+          "opcode": 57,
+          "base_gpr": 3,
+          "source_register": 1,
+          "signed_offset": 8
+        },
+        {
+          "instruction_address": "0x16c06c",
+          "word": "0xe4a10030",
+          "opcode": 57,
+          "base_gpr": 5,
+          "source_register": 1,
+          "signed_offset": 48
+        },
+        {
+          "instruction_address": "0x16c070",
+          "word": "0xe4a00034",
+          "opcode": 57,
+          "base_gpr": 5,
+          "source_register": 0,
+          "signed_offset": 52
+        },
+        {
+          "instruction_address": "0x16c074",
+          "word": "0xe4a30038",
+          "opcode": 57,
+          "base_gpr": 5,
+          "source_register": 3,
+          "signed_offset": 56
+        },
+        {
+          "instruction_address": "0x16c078",
+          "word": "0xe4a2003c",
+          "opcode": 57,
+          "base_gpr": 5,
+          "source_register": 2,
+          "signed_offset": 60
+        }
+      ],
+      "original_returns": [
+        {
+          "instruction_address": "0x16c08c",
+          "delay_address": "0x16c090",
+          "delay_word": "0x27bd0050"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x16c080",
+          "target_address": "0x29a308",
+          "word": "0xc0a68c2",
+          "delay_word": "0x25260090"
+        }
+      ],
+      "original_indirect_calls": [],
+      "source_header_fingerprints": {
+        "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+        "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+      },
+      "entry_evidence": {
+        "direct_references": [],
+        "stored_dispatch_regions": [
+          {
+            "region": {
+              "address": "0x42bd08",
+              "file_offset": "0x32cd08",
+              "size": 88,
+              "original_sha256": "fa08b3f80685c05200b1c0f2a56473069f1dbd409fb3328961d31dc2704ad394",
+              "evidence": "Reuses the complete bounded dispatch region already proven for actor_controller; no new data award or class name.",
+              "pairs": [
+                {
+                  "address": "0x42bd08",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x0"
+                },
+                {
+                  "address": "0x42bd10",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c280"
+                },
+                {
+                  "address": "0x42bd18",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x2d0990"
+                },
+                {
+                  "address": "0x42bd20",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c238"
+                },
+                {
+                  "address": "0x42bd28",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c098"
+                },
+                {
+                  "address": "0x42bd30",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16bda0"
+                },
+                {
+                  "address": "0x42bd38",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c2a8"
+                },
+                {
+                  "address": "0x42bd40",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c2b0"
+                },
+                {
+                  "address": "0x42bd48",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c2b8"
+                },
+                {
+                  "address": "0x42bd50",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16c1f8"
+                },
+                {
+                  "address": "0x42bd58",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x0"
+                }
+              ],
+              "selected_members": [
+                {
+                  "address": "0x42bd30",
+                  "adjustment": 0,
+                  "reserved": 0,
+                  "target": "0x16bda0"
+                }
+              ],
+              "boundary_evidence": "Zero header and terminator plus immediately following complete NUL bad_alloc string establish original 88-byte region."
+            },
+            "member": {
+              "address": "0x42bd30",
+              "adjustment": 0,
+              "reserved": 0,
+              "target": "0x16bda0"
+            }
+          }
+        ],
+        "whole_body_identical_other_entries": [],
+        "scan_limit": "All recognized complete intervals full-hash compared in scope. Actual JAL or actual member in materialized bounded table required. Adjacent B720 and BB78 explicitly excluded without established concrete entry."
+      }
+    }
+  ],
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "direct_call_references": [
+    {
+      "caller": "func_0015F490",
+      "target": "func_0016B948",
+      "instruction_address": "0x15f64c",
+      "word": "0xc05ae52",
+      "containing_geometry": {
+        "address": "0x0015F490",
+        "file_offset": "0x00060490",
+        "size": 884,
+        "original_sha256": "b341c1cc09f1fdd97ac68886a8b6202871833c421ec14df493ebd1cd99dbfaaf"
+      }
+    },
+    {
+      "caller": "func_001670A8",
+      "target": "func_00166CA8",
+      "instruction_address": "0x1670b4",
+      "word": "0xc059b2a",
+      "containing_geometry": {
+        "address": "0x001670A8",
+        "file_offset": "0x000680A8",
+        "size": 300,
+        "original_sha256": "200d90b477fcb12d98d665cd100c9c18cb4e5de1837eacb97ff89db0d3f7743c"
+      }
+    },
+    {
+      "caller": "func_001680C8",
+      "target": "func_00166DD0",
+      "instruction_address": "0x1680d4",
+      "word": "0xc059b74",
+      "containing_geometry": {
+        "address": "0x001680C8",
+        "file_offset": "0x000690C8",
+        "size": 124,
+        "original_sha256": "9ac00197f0d8207b7e9c6b0d3e58975cdace34f722fe78bbbf5d144ae7e34501"
+      }
+    },
+    {
+      "caller": "func_00168148",
+      "target": "func_00166EB8",
+      "instruction_address": "0x168154",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x00168148",
+        "file_offset": "0x00069148",
+        "size": 116,
+        "original_sha256": "d371f931fb7871f80935460900b7f37a51bef04e6825f422dcf30f5c63d89636"
+      }
+    },
+    {
+      "caller": "func_001681C0",
+      "target": "func_00166F58",
+      "instruction_address": "0x1681d4",
+      "word": "0xc059bd6",
+      "containing_geometry": {
+        "address": "0x001681C0",
+        "file_offset": "0x000691C0",
+        "size": 40,
+        "original_sha256": "4dc005b72ea6df3062af84e28070d21690bd93db778abe32a27f291d06f949ca"
+      }
+    },
+    {
+      "caller": "func_00168BC0",
+      "target": "func_00166EB8",
+      "instruction_address": "0x168bf0",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x00168BC0",
+        "file_offset": "0x00069BC0",
+        "size": 280,
+        "original_sha256": "8669733b881ce173a94765a0fa1770657b360109d0b6d61f6df5ba66fab8421e"
+      }
+    },
+    {
+      "caller": "func_00168CD8",
+      "target": "func_00166DD0",
+      "instruction_address": "0x168ce4",
+      "word": "0xc059b74",
+      "containing_geometry": {
+        "address": "0x00168CD8",
+        "file_offset": "0x00069CD8",
+        "size": 116,
+        "original_sha256": "7aebe298ecf67c077fc24f8eaefd72e24ccf844cbfdc8e75cac0adf79ecfe466"
+      }
+    },
+    {
+      "caller": "func_00168D50",
+      "target": "func_00166CA8",
+      "instruction_address": "0x168d5c",
+      "word": "0xc059b2a",
+      "containing_geometry": {
+        "address": "0x00168D50",
+        "file_offset": "0x00069D50",
+        "size": 116,
+        "original_sha256": "699c5c998bc128875989bd0a09568f79df86ff668ef7cb1d607fe077fa0ceb74"
+      }
+    },
+    {
+      "caller": "func_00168DC8",
+      "target": "func_00166EB8",
+      "instruction_address": "0x168dd4",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x00168DC8",
+        "file_offset": "0x00069DC8",
+        "size": 64,
+        "original_sha256": "67951b2cde1b53423784cdffe053c212606849221251d832df928e6b796835f0"
+      }
+    },
+    {
+      "caller": "func_00168E08",
+      "target": "func_00166EB8",
+      "instruction_address": "0x168e14",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x00168E08",
+        "file_offset": "0x00069E08",
+        "size": 64,
+        "original_sha256": "67951b2cde1b53423784cdffe053c212606849221251d832df928e6b796835f0"
+      }
+    },
+    {
+      "caller": "func_00168E48",
+      "target": "func_00166F58",
+      "instruction_address": "0x168e5c",
+      "word": "0xc059bd6",
+      "containing_geometry": {
+        "address": "0x00168E48",
+        "file_offset": "0x00069E48",
+        "size": 40,
+        "original_sha256": "e0b742ff09051b75b8f55c4588ea190a31881b39df5676691a896d9a8ed6169e"
+      }
+    },
+    {
+      "caller": "func_00168EE0",
+      "target": "func_00166CA8",
+      "instruction_address": "0x168eec",
+      "word": "0xc059b2a",
+      "containing_geometry": {
+        "address": "0x00168EE0",
+        "file_offset": "0x00069EE0",
+        "size": 384,
+        "original_sha256": "e7eaca34141d600da72dbe9656292aa196f1ae6bbf413cccd04ab23a1279a6de"
+      }
+    },
+    {
+      "caller": "func_0016B5E0",
+      "target": "func_00166DD0",
+      "instruction_address": "0x16b5ec",
+      "word": "0xc059b74",
+      "containing_geometry": {
+        "address": "0x0016B5E0",
+        "file_offset": "0x0006C5E0",
+        "size": 60,
+        "original_sha256": "b9594b40a501ae379ed423b809b55fe4c0c41ac83bdee18b9a8ff495003ef1bf"
+      }
+    },
+    {
+      "caller": "func_0016B620",
+      "target": "func_00166EB8",
+      "instruction_address": "0x16b62c",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x0016B620",
+        "file_offset": "0x0006C620",
+        "size": 60,
+        "original_sha256": "4a3e304c40c634acc8c341817fb7a067ec5afaabee381692ac057df5bb173241"
+      }
+    },
+    {
+      "caller": "func_0016B660",
+      "target": "func_00166F58",
+      "instruction_address": "0x16b674",
+      "word": "0xc059bd6",
+      "containing_geometry": {
+        "address": "0x0016B660",
+        "file_offset": "0x0006C660",
+        "size": 40,
+        "original_sha256": "59a72dc0c4dcdbc88eff6f90b80567cc9dfe3837038c9e24c1126a1d71c03afd"
+      }
+    },
+    {
+      "caller": "func_0016B720",
+      "target": "func_00166DD0",
+      "instruction_address": "0x16b72c",
+      "word": "0xc059b74",
+      "containing_geometry": {
+        "address": "0x0016B720",
+        "file_offset": "0x0006C720",
+        "size": 552,
+        "original_sha256": "7bb29571069cd90929ae65ef7e03d2eaf55d9af0400f96f636706f4ac0dda0df"
+      }
+    },
+    {
+      "caller": "func_0016B948",
+      "target": "func_00166CA8",
+      "instruction_address": "0x16b954",
+      "word": "0xc059b2a",
+      "containing_geometry": {
+        "address": "0x0016B948",
+        "file_offset": "0x0006C948",
+        "size": 556,
+        "original_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2"
+      }
+    },
+    {
+      "caller": "func_0016BB78",
+      "target": "func_00166EB8",
+      "instruction_address": "0x16bb84",
+      "word": "0xc059bae",
+      "containing_geometry": {
+        "address": "0x0016BB78",
+        "file_offset": "0x0006CB78",
+        "size": 548,
+        "original_sha256": "0d92b4097f1a06ba5ff31da78dbae709aee0889da39ac53f42c2858af029258e"
+      }
+    },
+    {
+      "caller": "func_0016C280",
+      "target": "func_00166F58",
+      "instruction_address": "0x16c294",
+      "word": "0xc059bd6",
+      "containing_geometry": {
+        "address": "0x0016C280",
+        "file_offset": "0x0006D280",
+        "size": 40,
+        "original_sha256": "9c68637c00f0904f22362601a1b83a8b49c4fad8ebbd98451fbd14d32e7f3af9"
+      }
+    }
+  ],
+  "callback_references": [],
+  "bounded_dispatch_regions": [
+    {
+      "address": "0x42bd08",
+      "file_offset": "0x32cd08",
+      "size": 88,
+      "original_sha256": "fa08b3f80685c05200b1c0f2a56473069f1dbd409fb3328961d31dc2704ad394",
+      "evidence": "Reuses the complete bounded dispatch region already proven for actor_controller; no new data award or class name.",
+      "pairs": [
+        {
+          "address": "0x42bd08",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x0"
+        },
+        {
+          "address": "0x42bd10",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c280"
+        },
+        {
+          "address": "0x42bd18",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x2d0990"
+        },
+        {
+          "address": "0x42bd20",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c238"
+        },
+        {
+          "address": "0x42bd28",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c098"
+        },
+        {
+          "address": "0x42bd30",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16bda0"
+        },
+        {
+          "address": "0x42bd38",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c2a8"
+        },
+        {
+          "address": "0x42bd40",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c2b0"
+        },
+        {
+          "address": "0x42bd48",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c2b8"
+        },
+        {
+          "address": "0x42bd50",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16c1f8"
+        },
+        {
+          "address": "0x42bd58",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x0"
+        }
+      ],
+      "selected_members": [
+        {
+          "address": "0x42bd30",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x16bda0"
+        }
+      ],
+      "boundary_evidence": "Zero header and terminator plus immediately following complete NUL bad_alloc string establish original 88-byte region."
+    },
+    {
+      "address": "0x42b078",
+      "file_offset": "0x32c078",
+      "size": 88,
+      "original_sha256": "2c93b849fec14dd7731dbe5ff47d32062e9fe1e5a9ac6e0b4feefeb0822d5c91",
+      "evidence": "Observed bounded base dispatch region published by all three selected constructors and cleanup; no selected function occurs in it. No data recovery award.",
+      "pairs": [
+        {
+          "address": "0x42b078",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x0"
+        },
+        {
+          "address": "0x42b080",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x371d40"
+        },
+        {
+          "address": "0x42b088",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x2d0990"
+        },
+        {
+          "address": "0x42b090",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x2d0978"
+        },
+        {
+          "address": "0x42b098",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x2cfb38"
+        },
+        {
+          "address": "0x42b0a0",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x371d40"
+        },
+        {
+          "address": "0x42b0a8",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x371d40"
+        },
+        {
+          "address": "0x42b0b0",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x371d40"
+        },
+        {
+          "address": "0x42b0b8",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x166fe8"
+        },
+        {
+          "address": "0x42b0c0",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x166db0"
+        },
+        {
+          "address": "0x42b0c8",
+          "adjustment": 0,
+          "reserved": 0,
+          "target": "0x0"
+        }
+      ],
+      "boundary_evidence": "Zero header/terminator then NUL bad_alloc at42B0D0; full88bytes explicitly hashed, not an assumed original class type."
+    }
+  ],
+  "dispatch_materializations": [
+    {
+      "caller": "func_0016B948",
+      "containing_geometry": {
+        "address": "0x0016B948",
+        "file_offset": "0x0006C948",
+        "size": 556,
+        "original_sha256": "56a8c75bd75df5710769c36708c786c39463fed78540c415a4cf2dbb82544fc2"
+      },
+      "high_instruction": "0x16b95c",
+      "low_instruction": "0x16b964",
+      "high_word": "0x3c030043",
+      "low_word": "0x2463bd08",
+      "target_address": "0x42bd08",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x16b960",
+          "word": "0xae00010c",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x16b968",
+          "word": "0x3c040043",
+          "written_gpr": 4
+        }
+      ],
+      "store_instruction": "0x16b96c",
+      "store_word": "0xae030004",
+      "store_base_gpr": 16,
+      "signed_offset": 4
+    },
+    {
+      "caller": "func_0016C280",
+      "containing_geometry": {
+        "address": "0x0016C280",
+        "file_offset": "0x0006D280",
+        "size": 40,
+        "original_sha256": "9c68637c00f0904f22362601a1b83a8b49c4fad8ebbd98451fbd14d32e7f3af9"
+      },
+      "high_instruction": "0x16c284",
+      "low_instruction": "0x16c290",
+      "high_word": "0x3c020043",
+      "low_word": "0x2442bd08",
+      "target_address": "0x42bd08",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x16c288",
+          "word": "0xffbf0000",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x16c28c",
+          "word": "0x80182d",
+          "written_gpr": 3
+        },
+        {
+          "instruction_address": "0x16c294",
+          "word": "0xc059bd6",
+          "written_gpr": 31
+        }
+      ],
+      "store_instruction": "0x16c298",
+      "store_word": "0xac620004",
+      "store_base_gpr": 3,
+      "signed_offset": 4
+    },
+    {
+      "caller": "func_00166CA8",
+      "containing_geometry": {
+        "address": "0x00166CA8",
+        "file_offset": "0x00067CA8",
+        "size": 260,
+        "original_sha256": "977fda762c317e7c46aff2b4f71996a50909924afab73e18646531a364f8e3d9"
+      },
+      "high_instruction": "0x166cd4",
+      "low_instruction": "0x166cdc",
+      "high_word": "0x3c020043",
+      "low_word": "0x2442b078",
+      "target_address": "0x42b078",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x166cd8",
+          "word": "0x3c040043",
+          "written_gpr": 4
+        },
+        {
+          "instruction_address": "0x166ce0",
+          "word": "0x2484b048",
+          "written_gpr": 4
+        },
+        {
+          "instruction_address": "0x166ce4",
+          "word": "0x2405ffff",
+          "written_gpr": 5
+        },
+        {
+          "instruction_address": "0x166ce8",
+          "word": "0xc08f0a6",
+          "written_gpr": 31
+        }
+      ],
+      "store_instruction": "0x166cec",
+      "store_word": "0xae020004",
+      "store_base_gpr": 16,
+      "signed_offset": 4
+    },
+    {
+      "caller": "func_00166DD0",
+      "containing_geometry": {
+        "address": "0x00166DD0",
+        "file_offset": "0x00067DD0",
+        "size": 228,
+        "original_sha256": "2f179326c0eb12530d4d67194d2f760e7a3de7d484f29fc671876ebcdb379154"
+      },
+      "high_instruction": "0x166dfc",
+      "low_instruction": "0x166e04",
+      "high_word": "0x3c020043",
+      "low_word": "0x2442b078",
+      "target_address": "0x42b078",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x166e00",
+          "word": "0x3c040043",
+          "written_gpr": 4
+        },
+        {
+          "instruction_address": "0x166e08",
+          "word": "0x2405ffff",
+          "written_gpr": 5
+        },
+        {
+          "instruction_address": "0x166e0c",
+          "word": "0x2484b048",
+          "written_gpr": 4
+        },
+        {
+          "instruction_address": "0x166e10",
+          "word": "0xc08f0a6",
+          "written_gpr": 31
+        }
+      ],
+      "store_instruction": "0x166e14",
+      "store_word": "0xae020004",
+      "store_base_gpr": 16,
+      "signed_offset": 4
+    },
+    {
+      "caller": "func_00166EB8",
+      "containing_geometry": {
+        "address": "0x00166EB8",
+        "file_offset": "0x00067EB8",
+        "size": 156,
+        "original_sha256": "0f718544009e45bebb32e113577fe677e6fba413bd6813235b8b06d44c15d11d"
+      },
+      "high_instruction": "0x166ed8",
+      "low_instruction": "0x166edc",
+      "high_word": "0x3c020043",
+      "low_word": "0x2442b078",
+      "target_address": "0x42b078",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x166ee0",
+          "word": "0x46006346",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x166ee4",
+          "word": "0x46006386",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x166ee8",
+          "word": "0xc0a6840",
+          "written_gpr": 31
+        }
+      ],
+      "store_instruction": "0x166eec",
+      "store_word": "0xae020004",
+      "store_base_gpr": 16,
+      "signed_offset": 4
+    },
+    {
+      "caller": "func_00166F58",
+      "containing_geometry": {
+        "address": "0x00166F58",
+        "file_offset": "0x00067F58",
+        "size": 116,
+        "original_sha256": "8ae991708f5457034a6d61c3ebc9515a9820061977af8504c64c37154d537b2f"
+      },
+      "high_instruction": "0x166f5c",
+      "low_instruction": "0x166f64",
+      "high_word": "0x3c020043",
+      "low_word": "0x2442b078",
+      "target_address": "0x42b078",
+      "preserved_instructions": [
+        {
+          "instruction_address": "0x166f60",
+          "word": "0x7fb00020",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x166f68",
+          "word": "0x7fb10010",
+          "written_gpr": null
+        },
+        {
+          "instruction_address": "0x166f6c",
+          "word": "0x80802d",
+          "written_gpr": 16
+        },
+        {
+          "instruction_address": "0x166f70",
+          "word": "0xffbf0000",
+          "written_gpr": null
+        }
+      ],
+      "store_instruction": "0x166f74",
+      "store_word": "0xae020004",
+      "store_base_gpr": 16,
+      "signed_offset": 4
+    }
+  ],
+  "binary32_constants": [
+    {
+      "literal": "0.0f",
+      "binary32": "0x00000000"
+    },
+    {
+      "literal": "1.0f",
+      "binary32": "0x3F800000"
+    }
+  ],
+  "binary32_instruction_sites": [
+    {
+      "function": "func_00166DD0",
+      "instruction_address": "0x166df8",
+      "word": "0x4480a000",
+      "binary32": "0x00000000",
+      "immediate_instructions": []
+    },
+    {
+      "function": "func_00166EB8",
+      "instruction_address": "0x166ed4",
+      "word": "0x44806000",
+      "binary32": "0x00000000",
+      "immediate_instructions": []
+    },
+    {
+      "function": "func_0016BDA0",
+      "instruction_address": "0x16bdd0",
+      "word": "0x44801000",
+      "binary32": "0x00000000",
+      "immediate_instructions": []
+    },
+    {
+      "function": "func_0016BDA0",
+      "instruction_address": "0x16c068",
+      "word": "0x44811000",
+      "binary32": "0x3F800000",
+      "immediate_instructions": [
+        {
+          "address": "0x16c064",
+          "word": "0x3c013f80"
+        }
+      ]
+    }
+  ],
+  "abi_evidence": [
+    {
+      "function": "func_0029A100",
+      "complete_callee_geometry": {
+        "address": "0x0029A100",
+        "file_offset": "0x0019B100",
+        "size": 104,
+        "original_sha256": "87a5822090d2a395276533b5a26389fb83456cab5888f61ad5f6165d90b999a4"
+      },
+      "evidence": "Reuses published complete camera_transform C and observed CameraTransform0x68 prefix. Three separate float arguments f12/f13/f14; real pointer return. Native controlled allocator records coordinates and returns authored storage."
+    },
+    {
+      "function": "func_0029A308",
+      "complete_callee_geometry": {
+        "address": "0x0029A308",
+        "file_offset": "0x0019B308",
+        "size": 152,
+        "original_sha256": "2af62388b49f7c1f9487f8535965b4c490a997020189a1259deb52661e68414d"
+      },
+      "evidence": "Reuses published complete C: transform prefix plus two integer matrix pointers. Actual BDA0 final arguments preserved; native fixture records inputs and intentionally does not assert full engine matrix update."
+    },
+    {
+      "function": "func_0029A260",
+      "complete_callee_geometry": {
+        "address": "0x0029A260",
+        "file_offset": "0x0019B260",
+        "size": 164,
+        "original_sha256": "75d9bfdfdded2be68d38e5cfabdfdcd6a9e3139cde39894dd149463629ca84ec"
+      },
+      "evidence": "Author read complete41instruction supporting body: copies0x68bytes with three captured32byte groups then last8bytes, aligned LD/SD or unaligned LDL/LDR/SDL/SDR path. Native fixture copies the same groups and supports its actual overlap sequencing; no generic memcpy overlap contract inferred."
+    },
+    {
+      "function": "func_002A1C08",
+      "complete_callee_geometry": {
+        "address": "0x002A1C08",
+        "file_offset": "0x001A2C08",
+        "size": 40,
+        "original_sha256": "2b2dc926834e438d8e5d1553fa8c0612c2192a79166a879536a98ab923837a85"
+      },
+      "evidence": "Reuses reviewed complete64byte matrix copy. Author re-read all ten original instructions: four128bitloads precede allstores. Native memmove therefore preserves values for the tested shifted overlap."
+    },
+    {
+      "function": "func_002A1C30",
+      "complete_callee_geometry": {
+        "address": "0x002A1C30",
+        "file_offset": "0x001A2C30",
+        "size": 48,
+        "original_sha256": "25bcf411ca6fc1ef61f5e9f2aff947370166309a93b50637355770e30b5829b6"
+      },
+      "evidence": "Reuses reviewed matrix identity callback, three integer matrixpointer sites in origin initializer and two in input initializer. Native authored identity implementation models observed values only."
+    },
+    {
+      "function": "func_0023C298",
+      "complete_callee_geometry": {
+        "address": "0x0023C298",
+        "file_offset": "0x0013D298",
+        "size": 104,
+        "original_sha256": "d3a89434f26bf2263ba52d6cad7bcf7a84b9017c8f5899fd14e8f60f38e4b16b"
+      },
+      "evidence": "Author read complete26instruction supporting lookup body: name and signedmode, numeric hash/search gate and pointerreturn from record+10 or null. Original selected constructors assume valid returned configuration; no invented caller nullcheck."
+    },
+    {
+      "function": "func_002D06E8",
+      "complete_callee_geometry": {
+        "address": "0x002D06E8",
+        "file_offset": "0x001D16E8",
+        "size": 24,
+        "original_sha256": "893137482a2646a98eba2bc4a463e800836cf4ee2b5aef52eadad8b0805ffcec"
+      },
+      "evidence": "Reuses published complete ScriptObject constructor: clears00, publishes04 and returns retained pointer. Selected calls ignore return; no speculative replacement object."
+    },
+    {
+      "function": "func_002D0700",
+      "complete_callee_geometry": {
+        "address": "0x002D0700",
+        "file_offset": "0x001D1700",
+        "size": 80,
+        "original_sha256": "77006e85929d4457e4ae6eda19c2a2bb397e4fef81c63c5b25ca582eb2fab48b"
+      },
+      "evidence": "Reuses published complete ScriptObject destruction with full mode and low-bit allocation release. Selected cleanup retains original argument width."
+    },
+    {
+      "function": "func_0029A168",
+      "complete_callee_geometry": {
+        "address": "0x0029A168",
+        "file_offset": "0x0019B168",
+        "size": 28,
+        "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607"
+      },
+      "evidence": "Reuses published exact whole-body heap-release duplicate. Native records pointer and permits callback mutation so component+0C must be loaded afterward."
+    },
+    {
+      "function": "func_0015F490",
+      "complete_callee_geometry": {
+        "address": "0x0015F490",
+        "file_offset": "0x00060490",
+        "size": 884,
+        "original_sha256": "b341c1cc09f1fdd97ac68886a8b6202871833c421ec14df493ebd1cd99dbfaaf"
+      },
+      "evidence": "Only constructor input/return window manually reviewed; complete containing raw/assembly geometry proved without claiming all supporting caller semantics. Actual allocation0x110 then a1froms2, a0newstorage in JAL delay, retained return stored globalmanager+60."
+    }
+  ],
+  "constructor_call_abi": {
+    "caller": "func_0015F490",
+    "containing_geometry": {
+      "address": "0x0015F490",
+      "file_offset": "0x00060490",
+      "size": 884,
+      "original_sha256": "b341c1cc09f1fdd97ac68886a8b6202871833c421ec14df493ebd1cd99dbfaaf"
+    },
+    "instructions": [
+      {
+        "instruction_address": "0x15f63c",
+        "word": "0x8e708368"
+      },
+      {
+        "instruction_address": "0x15f640",
+        "word": "0xc0abb98"
+      },
+      {
+        "instruction_address": "0x15f644",
+        "word": "0x24040110"
+      },
+      {
+        "instruction_address": "0x15f648",
+        "word": "0x240282d"
+      },
+      {
+        "instruction_address": "0x15f64c",
+        "word": "0xc05ae52"
+      },
+      {
+        "instruction_address": "0x15f650",
+        "word": "0x40202d"
+      },
+      {
+        "instruction_address": "0x15f654",
+        "word": "0xae020060"
+      }
+    ],
+    "evidence": "Input matrix pointer is preserveds2; actual caller allocates0x110 and publishes returned retained controller."
+  },
+  "input_position_abi": {
+    "function": "func_00166CA8",
+    "instructions": [
+      {
+        "instruction_address": "0x166cf4",
+        "word": "0x26220030"
+      },
+      {
+        "instruction_address": "0x166cf8",
+        "word": "0xc6200030"
+      },
+      {
+        "instruction_address": "0x166cfc",
+        "word": "0xe7a00000"
+      },
+      {
+        "instruction_address": "0x166d00",
+        "word": "0x46000306"
+      },
+      {
+        "instruction_address": "0x166d04",
+        "word": "0xc4410004"
+      },
+      {
+        "instruction_address": "0x166d08",
+        "word": "0xe7a10004"
+      },
+      {
+        "instruction_address": "0x166d0c",
+        "word": "0x46000b46"
+      },
+      {
+        "instruction_address": "0x166d10",
+        "word": "0xc4400008"
+      },
+      {
+        "instruction_address": "0x166d14",
+        "word": "0x46000386"
+      },
+      {
+        "instruction_address": "0x166d18",
+        "word": "0xc0a6840"
+      },
+      {
+        "instruction_address": "0x166d1c",
+        "word": "0xe7a00008"
+      }
+    ],
+    "evidence": "Input matrixtranslation30/34/38 read after lookup, passed separately f12/f13/f14. Callback can mutate input before capture; native fixture verifies17/18/19 captures."
+  },
+  "clone_capture_evidence": {
+    "function": "func_00166EB8",
+    "instructions": [
+      {
+        "instruction_address": "0x166ef0",
+        "word": "0xae020008"
+      },
+      {
+        "instruction_address": "0x166ef4",
+        "word": "0x40202d"
+      },
+      {
+        "instruction_address": "0x166ef8",
+        "word": "0xc0a6898"
+      },
+      {
+        "instruction_address": "0x166efc",
+        "word": "0x8e250008"
+      },
+      {
+        "instruction_address": "0x166f00",
+        "word": "0x8e22000c"
+      },
+      {
+        "instruction_address": "0x166f04",
+        "word": "0x26040010"
+      },
+      {
+        "instruction_address": "0x166f08",
+        "word": "0x26250010"
+      },
+      {
+        "instruction_address": "0x166f0c",
+        "word": "0xc0a8702"
+      },
+      {
+        "instruction_address": "0x166f10",
+        "word": "0xae02000c"
+      },
+      {
+        "instruction_address": "0x166f14",
+        "word": "0x26040050"
+      },
+      {
+        "instruction_address": "0x166f18",
+        "word": "0xc0a8702"
+      },
+      {
+        "instruction_address": "0x166f1c",
+        "word": "0x26250050"
+      },
+      {
+        "instruction_address": "0x166f20",
+        "word": "0x26040090"
+      },
+      {
+        "instruction_address": "0x166f24",
+        "word": "0xc0a8702"
+      },
+      {
+        "instruction_address": "0x166f28",
+        "word": "0x26250090"
+      },
+      {
+        "instruction_address": "0x166f2c",
+        "word": "0xc62100d0"
+      },
+      {
+        "instruction_address": "0x166f30",
+        "word": "0x200102d"
+      },
+      {
+        "instruction_address": "0x166f34",
+        "word": "0xdfbf0000"
+      },
+      {
+        "instruction_address": "0x166f38",
+        "word": "0xe60100d0"
+      },
+      {
+        "instruction_address": "0x166f3c",
+        "word": "0xc62000d4"
+      },
+      {
+        "instruction_address": "0x166f40",
+        "word": "0x7bb10010"
+      },
+      {
+        "instruction_address": "0x166f44",
+        "word": "0xe60000d4"
+      }
+    ],
+    "evidence": "Source transform+8 is fresh after allocation, component+0C fresh after transformcopy, then sequential threeframes andD0/D4. Native copy callback and firstmatrix callback mutate later fields, and shifted source matrix alias is tested."
+  },
+  "output_reload_evidence": {
+    "function": "func_0016BDA0",
+    "instructions": [
+      {
+        "instruction_address": "0x16c010",
+        "word": "0x8d220008"
+      },
+      {
+        "instruction_address": "0x16c014",
+        "word": "0xc7a10030"
+      },
+      {
+        "instruction_address": "0x16c018",
+        "word": "0x24430004"
+      },
+      {
+        "instruction_address": "0x16c01c",
+        "word": "0xe4410004"
+      },
+      {
+        "instruction_address": "0x16c020",
+        "word": "0xc7a00034"
+      },
+      {
+        "instruction_address": "0x16c024",
+        "word": "0xe4600004"
+      },
+      {
+        "instruction_address": "0x16c028",
+        "word": "0xc7a10038"
+      },
+      {
+        "instruction_address": "0x16c02c",
+        "word": "0xe4610008"
+      },
+      {
+        "instruction_address": "0x16c030",
+        "word": "0x8d220008"
+      },
+      {
+        "instruction_address": "0x16c034",
+        "word": "0xc7a10020"
+      },
+      {
+        "instruction_address": "0x16c038",
+        "word": "0x24430010"
+      },
+      {
+        "instruction_address": "0x16c03c",
+        "word": "0xe4410010"
+      },
+      {
+        "instruction_address": "0x16c040",
+        "word": "0xc7a00024"
+      },
+      {
+        "instruction_address": "0x16c044",
+        "word": "0xe4600004"
+      },
+      {
+        "instruction_address": "0x16c048",
+        "word": "0xc7a10028"
+      },
+      {
+        "instruction_address": "0x16c04c",
+        "word": "0xe4610008"
+      },
+      {
+        "instruction_address": "0x16c050",
+        "word": "0x25250050"
+      },
+      {
+        "instruction_address": "0x16c054",
+        "word": "0x27a20020"
+      },
+      {
+        "instruction_address": "0x16c058",
+        "word": "0xc7a10020"
+      },
+      {
+        "instruction_address": "0x16c05c",
+        "word": "0xc4430008"
+      },
+      {
+        "instruction_address": "0x16c060",
+        "word": "0xc4400004"
+      },
+      {
+        "instruction_address": "0x16c064",
+        "word": "0x3c013f80"
+      },
+      {
+        "instruction_address": "0x16c068",
+        "word": "0x44811000"
+      },
+      {
+        "instruction_address": "0x16c06c",
+        "word": "0xe4a10030"
+      },
+      {
+        "instruction_address": "0x16c070",
+        "word": "0xe4a00034"
+      },
+      {
+        "instruction_address": "0x16c074",
+        "word": "0xe4a30038"
+      },
+      {
+        "instruction_address": "0x16c078",
+        "word": "0xe4a2003c"
+      },
+      {
+        "instruction_address": "0x16c07c",
+        "word": "0x8d240008"
+      },
+      {
+        "instruction_address": "0x16c080",
+        "word": "0xc0a68c2"
+      },
+      {
+        "instruction_address": "0x16c084",
+        "word": "0x25260090"
+      }
+    ],
+    "evidence": "FirstoutputXYZ stores precede transform+8reload for secondoutput. Finaltransform+8reload follows frameXYZ/W1 stores. Native firstoutputX alias redirects storedtransformpointer to a distinct camera, whose secondoutput/finalcallback are asserted."
+  },
+  "configuration_name_strings": [
+    {
+      "address": "0x42b048",
+      "file_offset": "0x32c048",
+      "size": 11,
+      "original_sha256": "d2520a96dec7f0b26b43c000b8ee6e931bf40d5936ac9ff940df8967a8ef5af1",
+      "evidence": "Complete original NUL-terminated string, including terminator; hash evidence only, no source asset import."
+    },
+    {
+      "address": "0x42b960",
+      "file_offset": "0x32c960",
+      "size": 12,
+      "original_sha256": "97253fcbefa66c0525e60bcda3797e7abe89d67e2b94c1b723cc184c9ffda77d",
+      "evidence": "Complete original NUL-terminated string, including terminator; hash evidence only, no source asset import."
+    }
+  ],
+  "proof_fingerprints": {
+    "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+    "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7",
+    "tests/native/actor_pose_controller.c": "383bffafb159f134a50a103460581874b773d142046e55f0b9672c0ea0f58090",
+    "tests/native/run_actor_pose_controller.py": "348567cd78f0c33c8bc4411092149ed779bd201ba4039385f9971fa4f3364ab7",
+    "build/actor_pose_controller/probe.py": "ca4ff51b2a26183ba887878e8f1309e2e8a4c49f2e763ef8ecf581da77a85c3a",
+    "build/actor_pose_controller/finalize_draft.py": "7256022988fced21728a85fde020c5cbd39d9ce44fd3ca118ae6d0b9eaa30247",
+    ".local/actor_pose_controller_scope.py": "d1d3d1679e3ea39448b120350442510224e89cc9328e2f86aa4ece827d803a5a"
+  },
+  "source_header_fingerprints": {
+    "src/game/actor_pose_controller.c": "db53653bc3932a58ddffe793b617a0450ddce9c7d50de5cf5e8e6756e51e598b",
+    "include/george/actor_pose_controller.h": "0eb86d42c5947220fae79753ff791bc3337aa9f1d27193a44298ef80e1cac5b7"
+  },
+  "validation": {
+    "native_harness": "tests/native/actor_pose_controller.c",
+    "native_runner": "tests/native/run_actor_pose_controller.py",
+    "native_checks": 4978,
+    "native_result": "passed",
+    "individual_links": 18,
+    "candidate_exact_matches": 0,
+    "scope": "Six complete productionC bodies and authored controlled callbacks. Ordinary hostfloatingpoint; genuine unbounded durationratio and strictNaNgate paths. Matrix and camera refresh callbacks limited to reviewed data/capture observations; no EE FCR/nonfinite engine bit equivalence claimed."
+  },
+  "notes": [
+    "Six complete pose-controller constructor/update/cleanup bodies,2072bytes/518instructions. All18 natural whole compiler links resolve, no exact fullmatches or assembly/masking/padding substitutes.",
+    "Author read all selected originals and narrow supporting copy/lookup bodies. Reuses published camera transform, script object, matrix and signed member models. No new classname or data awards.",
+    "Author, disc peer and parent read all518 selected originals and complete production C/header/native/runner/scout/proof scripts. Both independent reviewers reproduced all18 genuine complete links, full manifest/symbol/scope dictionaries and4978 warning-free native checks. Complete supporting lookup/copy/camera/script semantic reads are attributed to author/peer/prior published reviews; parent verified their complete raw geometry/hash and narrow ABI proofs. Actual constructor caller read is limited to its argument/return window. All six are centrally registered as reconstructed with no exact awards; native host arithmetic, callbacks, aligned overlaps and original output contracts remain limited."
+  ]
+}

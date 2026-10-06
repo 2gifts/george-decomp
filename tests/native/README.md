@@ -375,3 +375,20 @@ executes both new source files and the published arena initializer/no-op.
 It passes 246,561 checks across 886 finite authored fixtures, including complete
 record/global/descriptor words and captured allocation/free events. Nine decoder
 guards pass; incoming release reachability remains unresolved. See `docs/arena_ownership.md`.
+
+Actor controller: `python tests/native/run_actor_controller.py` executes all
+fourteen complete production bodies and passes 1,488 warning-free checks.
+Callback/global replacement, wheel inputs, contact count, steering and timer
+transitions retain scoped host/matrix/curve contracts. See `docs/actor_controller.md`.
+
+Pose controller: `python tests/native/run_actor_pose_controller.py` executes
+all six complete production bodies and passes 4,978 warning-free checks.
+Sequential cloning, constructor callbacks, signed adjusted cleanup, unclamped
+duration ratios and transform-pointer aliases are covered. See `docs/actor_pose_controller.md`.
+
+Resource manager: `python tests/native/run_utilities.py --harness resource_manager`
+executes four production bodies and reused pool source across 561 authored
+fixtures, passing 2,447,135 checks. Nine decoder guards and 49,081 original
+instructions cover switch/provider/allocation/accounting paths and full buffer
+aliases. Controlled filesystem/queue/heap/map contracts remain limited. See
+`docs/resource_manager.md`.

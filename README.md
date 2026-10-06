@@ -21,7 +21,7 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C | 1060 functions reviewed; 247 match (5,324 bytes) |
+| Recovered game C | 1084 functions reviewed; 247 match (5,324 bytes) |
 | Reused upstream C | 47 match (5,468 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
@@ -87,6 +87,12 @@ licenses; the project's tooling license applies only to original tooling.
 recovered lifecycle and control routines. [Render records and arena ownership](docs/arena_ownership.md)
 document allocation inputs, partial record fields, callback-visible writes and
 the exact startup wrapper. These batches retain their native validation limits.
+
+[Controller setup and update](docs/actor_controller.md) and
+[pose-controller construction and interpolation](docs/actor_pose_controller.md)
+recover camera points, wheel configuration, command transitions and script
+callbacks. [Resource resolution and accounting](docs/resource_manager.md)
+cover providers, allocation, queued requests, map publication and shared counters.
 
 ## Contributing
 

@@ -1,0 +1,3143 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Four complete source routines/1556B/389instructions independently reviewed and centrally registered as reconstructed. Nine natural compact whole links and one authentic GCC323 factory+whole28B switch link resolve with zero unresolved and zero exact; original three no-mapping attempts and both unsupported compiler-flag attempts retained.",
+    "Author/research peer full supporting and containing-caller manual reads attributed accurately; parent allselected C/original/scoped validation/proof reviewed. Complete packet/native/guards/fresh raw/link/data reproductions pass. No new helper/data recovery awards, source qualifiers changed, mapper exceptions, instruction patches or partial match claims."
+  ],
+  "functions": [
+    {
+      "name": "func_00224AB8",
+      "address": "0x00224AB8",
+      "file_offset": "0x00125AB8",
+      "size": 1040,
+      "original_sha256": "5f6af7b33312128a081e7df5a9841d67454db47e99ea5bee733cd8df670d5540",
+      "original_assembly": "build/functions/func_00224AB8.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00224EC0",
+      "terminal_delay": "0x00224EC4",
+      "following_entry": "0x00224EC8",
+      "source": "src/game/resource_manager.c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_fresh_link_and_data_review_passed",
+      "link": true,
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "link_error": "Unmapped local data/constant section: .rodata",
+          "comparison": null
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "link_error": "Unmapped local data/constant section: .rodata",
+          "comparison": null
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "link_error": "Unmapped local data/constant section: .rodata",
+          "comparison": null
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x226c1c",
+          "word": "0xc0892ae",
+          "delay_word": "0x200202d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00226BC0",
+            "address": "0x226bc0",
+            "size": 160,
+            "file_offset": "0x127bc0",
+            "sha256": "2006e6d967473b240b0e1118ea1e5d452a798bc3c06ae7697a6d5125c8127457",
+            "terminal_jr": "0x226c58",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0020",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x226c60"
+          }
+        }
+      ],
+      "entry_reachability": "verified_actual_direct_jal_references",
+      "preceding_complete_body": {
+        "name": "func_002249E8",
+        "address": "0x2249e8",
+        "size": 208,
+        "file_offset": "0x1259e8",
+        "sha256": "bd6aadf2430aa7ab65b70f3e154d80085aaf2f2cfb2e73d29b915facc3af9eaa",
+        "terminal_jr": "0x224ab0",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0030",
+        "excluded_alignment_bytes": 0,
+        "next_entry": "0x224ab8"
+      },
+      "local_branch_evidence": [
+        {
+          "instruction": "0x00224B00",
+          "target": "0x00224C38",
+          "word": "0x1040004D",
+          "delay_word": "0xAFA00014",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B24",
+          "target": "0x00224C24",
+          "word": "0x1460003F",
+          "delay_word": "0x8FC3960C",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B40",
+          "target": "0x00224BC8",
+          "word": "0x14620021",
+          "delay_word": "0x8E530004",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B50",
+          "target": "0x00224BEC",
+          "word": "0x10400026",
+          "delay_word": "0x2E020007",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B58",
+          "target": "0x00224BEC",
+          "word": "0x10400024",
+          "delay_word": "0x3C020044",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B78",
+          "target": "0x00224BA4",
+          "word": "0x1000000A",
+          "delay_word": "0x0000282D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B80",
+          "target": "0x00224BA4",
+          "word": "0x10000008",
+          "delay_word": "0x24050001",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B88",
+          "target": "0x00224BA4",
+          "word": "0x10000006",
+          "delay_word": "0x24050002",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B90",
+          "target": "0x00224BA4",
+          "word": "0x10000004",
+          "delay_word": "0x24050005",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224B98",
+          "target": "0x00224BA4",
+          "word": "0x10000002",
+          "delay_word": "0x24050004",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224BB8",
+          "target": "0x00224BEC",
+          "word": "0x1040000C",
+          "delay_word": "0x0000282D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224BC0",
+          "target": "0x00224BF4",
+          "word": "0x1000000C",
+          "delay_word": "0x2CA20002",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224BC8",
+          "target": "0x00224BF0",
+          "word": "0x56030009",
+          "delay_word": "0x24050002",
+          "likely": true
+        },
+        {
+          "instruction": "0x00224BE4",
+          "target": "0x00224BF0",
+          "word": "0x14400002",
+          "delay_word": "0x0000282D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224BF4",
+          "target": "0x00224C20",
+          "word": "0x1040000A",
+          "delay_word": "0x8FC2960C",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C0C",
+          "target": "0x00224CA4",
+          "word": "0x10640025",
+          "delay_word": "0x8C420010",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C18",
+          "target": "0x00224C38",
+          "word": "0x10000007",
+          "delay_word": "0xAFA20014",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C30",
+          "target": "0x00224B08",
+          "word": "0x1440FFB5",
+          "delay_word": "0x03C0302D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C38",
+          "target": "0x00224DA8",
+          "word": "0x54A0005B",
+          "delay_word": "0x92430003",
+          "likely": true
+        },
+        {
+          "instruction": "0x00224C64",
+          "target": "0x00224CD8",
+          "word": "0x1100001C",
+          "delay_word": "0x30640040",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C74",
+          "target": "0x00224CD8",
+          "word": "0x14620018",
+          "delay_word": "0x2603007F",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C88",
+          "target": "0x00224CB0",
+          "word": "0x10800009",
+          "delay_word": "0x00628024",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224C9C",
+          "target": "0x00224D34",
+          "word": "0x10000025",
+          "delay_word": "0x0040282D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224CA8",
+          "target": "0x00224C38",
+          "word": "0x1000FFE3",
+          "delay_word": "0xAFA20014",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224CB8",
+          "target": "0x00224D38",
+          "word": "0x1440001F",
+          "delay_word": "0x00A0102D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224CD0",
+          "target": "0x00224D34",
+          "word": "0x10000018",
+          "delay_word": "0xACC30FBC",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224CD8",
+          "target": "0x00224D1C",
+          "word": "0x10800010",
+          "delay_word": "0x24E3007F",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224CF4",
+          "target": "0x00224D1C",
+          "word": "0x10400009",
+          "delay_word": "0x00031080",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224D04",
+          "target": "0x00224D1C",
+          "word": "0x10800005",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224D1C",
+          "target": "0x00224D38",
+          "word": "0x14A00006",
+          "delay_word": "0x00A0102D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224D2C",
+          "target": "0x00224D3C",
+          "word": "0x10000003",
+          "delay_word": "0xAE420010",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DA0",
+          "target": "0x00224E3C",
+          "word": "0x10000026",
+          "delay_word": "0x8E450004",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DAC",
+          "target": "0x00224DE4",
+          "word": "0x1062000D",
+          "delay_word": "0x0000202D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DB4",
+          "target": "0x00224DD4",
+          "word": "0x10600007",
+          "delay_word": "0x24020003",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DBC",
+          "target": "0x00224DF4",
+          "word": "0x1062000D",
+          "delay_word": "0x24020006",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DC4",
+          "target": "0x00224E04",
+          "word": "0x1062000F",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DCC",
+          "target": "0x00224E10",
+          "word": "0x10000010",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DDC",
+          "target": "0x00224E10",
+          "word": "0x1000000C",
+          "delay_word": "0x0040202D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DEC",
+          "target": "0x00224E10",
+          "word": "0x10000008",
+          "delay_word": "0x0040202D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224DFC",
+          "target": "0x00224E10",
+          "word": "0x10000004",
+          "delay_word": "0x0040202D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224E10",
+          "target": "0x00224E8C",
+          "word": "0x1080001E",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224E7C",
+          "target": "0x00224E98",
+          "word": "0x54400006",
+          "delay_word": "0xACA30000",
+          "likely": true
+        },
+        {
+          "instruction": "0x00224E84",
+          "target": "0x00224E9C",
+          "word": "0x10000005",
+          "delay_word": "0x7BB000B0",
+          "likely": false
+        }
+      ],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x00224B48",
+          "target": "0x00229FC8",
+          "word": "0x0C08A7F2",
+          "delay_word": "0x8E240010"
+        },
+        {
+          "instruction": "0x00224BB0",
+          "target": "0x00229FF0",
+          "word": "0x0C08A7FC",
+          "delay_word": "0x02A0402D"
+        },
+        {
+          "instruction": "0x00224BDC",
+          "target": "0x00229020",
+          "word": "0x0C08A408",
+          "delay_word": "0x02A0382D"
+        },
+        {
+          "instruction": "0x00224C94",
+          "target": "0x002AD700",
+          "word": "0x0C0AB5C0",
+          "delay_word": "0x24060001"
+        },
+        {
+          "instruction": "0x00224D10",
+          "target": "0x002AD700",
+          "word": "0x0C0AB5C0",
+          "delay_word": "0x24060001"
+        },
+        {
+          "instruction": "0x00224D24",
+          "target": "0x0020E598",
+          "word": "0x0C083966",
+          "delay_word": "0x0200202D"
+        },
+        {
+          "instruction": "0x00224D44",
+          "target": "0x00224678",
+          "word": "0x0C08919E",
+          "delay_word": "0x0240302D"
+        },
+        {
+          "instruction": "0x00224D88",
+          "target": "0x0021ABD8",
+          "word": "0x0C086AF6",
+          "delay_word": "0x8E48000C"
+        },
+        {
+          "instruction": "0x00224DD4",
+          "target": "0x00217F78",
+          "word": "0x0C085FDE",
+          "delay_word": "0x8E440004"
+        },
+        {
+          "instruction": "0x00224DE4",
+          "target": "0x00218020",
+          "word": "0x0C086008",
+          "delay_word": "0x8E440004"
+        },
+        {
+          "instruction": "0x00224DF4",
+          "target": "0x00217FB0",
+          "word": "0x0C085FEC",
+          "delay_word": "0x8E440004"
+        },
+        {
+          "instruction": "0x00224E04",
+          "target": "0x00217FE8",
+          "word": "0x0C085FFA",
+          "delay_word": "0x8E440004"
+        },
+        {
+          "instruction": "0x00224E40",
+          "target": "0x0021A0B8",
+          "word": "0x0C08682E",
+          "delay_word": "0x8C440078"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x00224AC0",
+          "word": "0x7FB20090",
+          "base_gpr": 29,
+          "source_gpr": 18,
+          "signed_offset": 144,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AC8",
+          "word": "0x7FB60050",
+          "base_gpr": 29,
+          "source_gpr": 22,
+          "signed_offset": 80,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AD0",
+          "word": "0x7FBE0030",
+          "base_gpr": 29,
+          "source_gpr": 30,
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AD8",
+          "word": "0x7FB000B0",
+          "base_gpr": 29,
+          "source_gpr": 16,
+          "signed_offset": 176,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AE0",
+          "word": "0x7FB100A0",
+          "base_gpr": 29,
+          "source_gpr": 17,
+          "signed_offset": 160,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AE4",
+          "word": "0x7FB30080",
+          "base_gpr": 29,
+          "source_gpr": 19,
+          "signed_offset": 128,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AE8",
+          "word": "0x7FB40070",
+          "base_gpr": 29,
+          "source_gpr": 20,
+          "signed_offset": 112,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AEC",
+          "word": "0x7FB50060",
+          "base_gpr": 29,
+          "source_gpr": 21,
+          "signed_offset": 96,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AF0",
+          "word": "0x7FB70040",
+          "base_gpr": 29,
+          "source_gpr": 23,
+          "signed_offset": 64,
+          "size": 16
+        },
+        {
+          "instruction": "0x00224AF4",
+          "word": "0xFFBF0020",
+          "base_gpr": 29,
+          "source_gpr": 31,
+          "signed_offset": 32,
+          "size": 8
+        },
+        {
+          "instruction": "0x00224B04",
+          "word": "0xAFA00014",
+          "base_gpr": 29,
+          "source_gpr": 0,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224C1C",
+          "word": "0xAFA20014",
+          "base_gpr": 29,
+          "source_gpr": 2,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224C4C",
+          "word": "0xAE420008",
+          "base_gpr": 18,
+          "source_gpr": 2,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224CAC",
+          "word": "0xAFA20014",
+          "base_gpr": 29,
+          "source_gpr": 2,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224CCC",
+          "word": "0xACC20FB8",
+          "base_gpr": 6,
+          "source_gpr": 2,
+          "signed_offset": 4024,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224CD4",
+          "word": "0xACC30FBC",
+          "base_gpr": 6,
+          "source_gpr": 3,
+          "signed_offset": 4028,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224D30",
+          "word": "0xAE420010",
+          "base_gpr": 18,
+          "source_gpr": 2,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224D38",
+          "word": "0xAE420010",
+          "base_gpr": 18,
+          "source_gpr": 2,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224D5C",
+          "word": "0xAE430014",
+          "base_gpr": 18,
+          "source_gpr": 3,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224D78",
+          "word": "0xAFA20000",
+          "base_gpr": 29,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224E20",
+          "word": "0xAE440010",
+          "base_gpr": 18,
+          "source_gpr": 4,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224E2C",
+          "word": "0xA2420002",
+          "base_gpr": 18,
+          "source_gpr": 2,
+          "signed_offset": 2,
+          "size": 1
+        },
+        {
+          "instruction": "0x00224E5C",
+          "word": "0xAC620000",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224E80",
+          "word": "0xACA30000",
+          "base_gpr": 5,
+          "source_gpr": 3,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224E94",
+          "word": "0xA2420002",
+          "base_gpr": 18,
+          "source_gpr": 2,
+          "signed_offset": 2,
+          "size": 1
+        }
+      ],
+      "evidence": "Complete resource resolution/allocation/publication routine. Capture provider, kind and key before resolving; retain seven-case original switch; reload manager/provider for auxiliary metadata, current allocator after result-size publication, captured rounded allocation size through pool/heap calls, record fields after accounting/queue calls, and manager before map count/unsigned peak updates. Override pool failure and cursor exhaustion do not fall back to heap; ordinary pool failure does. Original nine-lane queued request uses callback225D38 and exact field1C==1 stack argument. Fallback lookup succeeds only for kinds0/1/3/6, publishes flag10 and counts; unsupported/missing lookup sets flag08 only. Void result, no incidental v0 meaning.",
+      "independent_review": "Parent and research peer read all389 selected original instructions and entire production C/header/shared template/scoped tracer/native/guards/proof scripts. Fresh nine compact links and seven complete packet dictionaries reproduced;561 fixtures49081 original instructions,2447135 warning-free native checks and nine guards passed. Peer full supporting/caller original reads are explicitly attributed; parent independently verifies complete helper/caller geometry/hash and actual entry/ABI windows. Existing code-derived readonly mapper additionally resolves authentic GCC323 whole28B switch with real GNUld. Full code and whole data remain nonexact, and both gate any matching award.",
+      "source_header_template_fingerprints": {
+        "src/game/resource_manager.c": "6e4080c60b0ff9611147602d4f8d60215b6e66e5716f4aeaae9836af6b12be41",
+        "src/game/resource_accounting_template.h": "a44507684d0255f5d7eaa74ead9264c62b12f5b607965938a58720ad4c9ab23b",
+        "include/george/resource_manager.h": "289c0136c72bdc135712f70dd1ae4cbc3c0a1f4b6d317b1b317b0cfb478e7721"
+      },
+      "original_unmapped_recipe_blocker": "Natural readonly switch R_MIPS_32 relocations target local code section. No approved mapping supplied: all actual attempts explicitly reject unmapped .rodata. Current mapper can support separately proved function-local case-label data; this packet does not establish its final identity (GCC29 full section32B versus retail28B). No final complete comparison or exact claim. Explicit -fno-jump-tables recipes both rejected by pinned compilers; source switch unchanged.",
+      "link_codegen_readonly": {
+        ".rodata": {
+          "address": "0x0043B0E0",
+          "file_offset": "0x0033C0E0",
+          "size": 28,
+          "original_sha256": "432edbed9f952c1a4eaabbf1f6fcfc33c6b122edbed52ab78a85dd8991aaf911",
+          "code_bindings": [
+            {
+              "hi_offset": "0xA4",
+              "lo_offset": "0xAC",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI224B5C/ADDIU224B64 materialize the complete readonly seven-case table; intervening SLL writes GPR3 and preserves GPR2. All seven original destinations are owned by complete1040B factory. Existing guarded code-derived table mapping resolves authentic seven R_MIPS_32 selected-code pointers without source/linker/code/data patches. Actual whole28B linked data differs in eight bytes and full1000/1040B code differs in790 bytes; both whole outputs must agree for any exact award."
+        }
+      },
+      "supplementary_complete_link": {
+        "schema_version": 1,
+        "source": "src/game/resource_manager.c",
+        "compiler_profile": "gcc323",
+        "compile_flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "input_object_sha256": "832abd3a6f6fe2af7df9340a3313532baf9bd3327b72b4ee7ea186d84591435d",
+        "original_function": {
+          "address": "0x224ab8",
+          "file_offset": "0x125ab8",
+          "size": 1040,
+          "sha256": "5f6af7b33312128a081e7df5a9841d67454db47e99ea5bee733cd8df670d5540"
+        },
+        "original_table": {
+          "address": "0x43b0e0",
+          "file_offset": "0x33c0e0",
+          "size": 28,
+          "sha256": "432edbed9f952c1a4eaabbf1f6fcfc33c6b122edbed52ab78a85dd8991aaf911",
+          "section": ".rodata",
+          "section_flags": 2,
+          "targets": [
+            "0x224b80",
+            "0x224b90",
+            "0x224b98",
+            "0x224ba0",
+            "0x224b78",
+            "0x224bec",
+            "0x224b88"
+          ]
+        },
+        "input_section_sha256": "a594de40765bfe6b42dd59bde996eecd20d797777287a29c2d9b548d9137cee1",
+        "input_relocations": [
+          {
+            "offset": 0,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 188,
+            "relative_offset": 188,
+            "linked_target": 2247540,
+            "original_target": 2247552
+          },
+          {
+            "offset": 4,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 196,
+            "relative_offset": 196,
+            "linked_target": 2247548,
+            "original_target": 2247568
+          },
+          {
+            "offset": 8,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 204,
+            "relative_offset": 204,
+            "linked_target": 2247556,
+            "original_target": 2247576
+          },
+          {
+            "offset": 12,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 212,
+            "relative_offset": 212,
+            "linked_target": 2247564,
+            "original_target": 2247584
+          },
+          {
+            "offset": 16,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 220,
+            "relative_offset": 220,
+            "linked_target": 2247572,
+            "original_target": 2247544
+          },
+          {
+            "offset": 20,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 360,
+            "relative_offset": 360,
+            "linked_target": 2247712,
+            "original_target": 2247660
+          },
+          {
+            "offset": 24,
+            "type": 2,
+            "symbol": "",
+            "symbol_index": 8,
+            "addend": 228,
+            "relative_offset": 228,
+            "linked_target": 2247580,
+            "original_target": 2247560
+          }
+        ],
+        "linked_table_sha256": "ecbddfbb4e18cdbf6f9aa07820b5b0b603b6918f624473bce5b161920f4bca98",
+        "linked_targets": [
+          "0x224b74",
+          "0x224b7c",
+          "0x224b84",
+          "0x224b8c",
+          "0x224b94",
+          "0x224c20",
+          "0x224b9c"
+        ],
+        "complete_code_comparison": {
+          "identical": false,
+          "expected_size": 1040,
+          "compiled_size": 1000,
+          "different_bytes": 790,
+          "first_different_offsets": [
+            0,
+            6,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "5f6af7b33312128a081e7df5a9841d67454db47e99ea5bee733cd8df670d5540",
+          "compiled_sha256": "1d722f7876464f06a8cc2cd7ab0f48e444f0827a3ab01e66cf4bd3d080734b3d"
+        },
+        "complete_table_comparison": {
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            21,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "432edbed9f952c1a4eaabbf1f6fcfc33c6b122edbed52ab78a85dd8991aaf911",
+          "compiled_sha256": "ecbddfbb4e18cdbf6f9aa07820b5b0b603b6918f624473bce5b161920f4bca98"
+        },
+        "combined_identical": false,
+        "remaining_relocations": [],
+        "limitations": [
+          "Frozen 19-file packet and production source unchanged. Existing mapper used without exceptions or byte patches. Complete original readonly28B geometry and authentic seven selected-code pointers proved. Actual GNU ld output compared in full, with both code and table required for any exact award. GCC29 full32B geometry remains outside this trial."
+        ]
+      },
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 1040,
+        "compiled_size": 1000,
+        "different_bytes": 790,
+        "first_different_offsets": [
+          0,
+          6,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "5f6af7b33312128a081e7df5a9841d67454db47e99ea5bee733cd8df670d5540",
+        "compiled_sha256": "1d722f7876464f06a8cc2cd7ab0f48e444f0827a3ab01e66cf4bd3d080734b3d",
+        "code_identical": false,
+        "generated_data_identical": false
+      }
+    },
+    {
+      "name": "func_00225C28",
+      "address": "0x00225C28",
+      "file_offset": "0x00126C28",
+      "size": 92,
+      "original_sha256": "138664a65e7e9f79531fdc79236e7dea3ebe5f0abfb5395342bb99d919f1152b",
+      "original_assembly": "build/functions/func_00225C28.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00225C7C",
+      "terminal_delay": "0x00225C80",
+      "following_entry": "0x00225C88",
+      "source": "src/game/resource_manager.c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_fresh_link_and_data_review_passed",
+      "link": true,
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 92,
+            "compiled_size": 88,
+            "different_bytes": 52,
+            "first_different_offsets": [
+              7,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "138664a65e7e9f79531fdc79236e7dea3ebe5f0abfb5395342bb99d919f1152b",
+            "compiled_sha256": "57756ab7092815ff4fde8c7be939cf0bc416f24a261dc68f439f6d27a8a3f50d"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 92,
+            "compiled_size": 88,
+            "different_bytes": 65,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "138664a65e7e9f79531fdc79236e7dea3ebe5f0abfb5395342bb99d919f1152b",
+            "compiled_sha256": "42615a2aa96802ab88d10741f09e9726762ee5d4fe4fa57dc40292083cabce00"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 92,
+            "compiled_size": 88,
+            "different_bytes": 63,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "138664a65e7e9f79531fdc79236e7dea3ebe5f0abfb5395342bb99d919f1152b",
+            "compiled_sha256": "2aa2ba7321ecd2cc5b116c3f9ff27a29759e010910413968441ec0ba07fe14a3"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x226828",
+          "word": "0xc08970a",
+          "delay_word": "0x92250003",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_002267D0",
+            "address": "0x2267d0",
+            "size": 380,
+            "file_offset": "0x1277d0",
+            "sha256": "9a5b368b5f8e51dbd1004de01f1e52901b5941a57d30c5b333497b37f025b61a",
+            "terminal_jr": "0x226944",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x226950"
+          }
+        }
+      ],
+      "entry_reachability": "verified_actual_direct_jal_references",
+      "preceding_complete_body": {
+        "name": "func_00225BC8",
+        "address": "0x225bc8",
+        "size": 96,
+        "file_offset": "0x126bc8",
+        "sha256": "2cd865549141b6e25b195ce1c5ae6eb2500e5e52c28cfa79cdbb2d4ae47367b7",
+        "terminal_jr": "0x225c20",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x2c420001",
+        "excluded_alignment_bytes": 0,
+        "next_entry": "0x225c28"
+      },
+      "local_branch_evidence": [
+        {
+          "instruction": "0x00225C54",
+          "target": "0x00225C70",
+          "word": "0x10400006",
+          "delay_word": "0x8E23960C",
+          "likely": false
+        }
+      ],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x00225C4C",
+          "target": "0x0021A190",
+          "word": "0x0C086864",
+          "delay_word": "0x8C440078"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x00225C2C",
+          "word": "0x7FB10010",
+          "base_gpr": 29,
+          "source_gpr": 17,
+          "signed_offset": 16,
+          "size": 16
+        },
+        {
+          "instruction": "0x00225C34",
+          "word": "0x7FB00020",
+          "base_gpr": 29,
+          "source_gpr": 16,
+          "signed_offset": 32,
+          "size": 16
+        },
+        {
+          "instruction": "0x00225C40",
+          "word": "0xFFBF0000",
+          "base_gpr": 29,
+          "source_gpr": 31,
+          "signed_offset": 0,
+          "size": 8
+        },
+        {
+          "instruction": "0x00225C6C",
+          "word": "0xAC620000",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        }
+      ],
+      "evidence": "Capture low32 kind<<2 and selected map before actual deletion. On any nonzero genuine helper result, reload global manager and decrement corresponding low32 count98. Peak remains untouched, result unused by complete destructor caller. No underflow, kind or manager guard invented.",
+      "independent_review": "Parent and research peer read all389 selected original instructions and entire production C/header/shared template/scoped tracer/native/guards/proof scripts. Fresh nine compact links and seven complete packet dictionaries reproduced;561 fixtures49081 original instructions,2447135 warning-free native checks and nine guards passed. Peer full supporting/caller original reads are explicitly attributed; parent independently verifies complete helper/caller geometry/hash and actual entry/ABI windows. Existing code-derived readonly mapper additionally resolves authentic GCC323 whole28B switch with real GNUld. Full code and whole data remain nonexact, and both gate any matching award.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 92,
+        "compiled_size": 88,
+        "different_bytes": 52,
+        "first_different_offsets": [
+          7,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "138664a65e7e9f79531fdc79236e7dea3ebe5f0abfb5395342bb99d919f1152b",
+        "compiled_sha256": "57756ab7092815ff4fde8c7be939cf0bc416f24a261dc68f439f6d27a8a3f50d"
+      },
+      "source_header_template_fingerprints": {
+        "src/game/resource_manager.c": "6e4080c60b0ff9611147602d4f8d60215b6e66e5716f4aeaae9836af6b12be41",
+        "src/game/resource_accounting_template.h": "a44507684d0255f5d7eaa74ead9264c62b12f5b607965938a58720ad4c9ab23b",
+        "include/george/resource_manager.h": "289c0136c72bdc135712f70dd1ae4cbc3c0a1f4b6d317b1b317b0cfb478e7721"
+      }
+    },
+    {
+      "name": "func_00224750",
+      "address": "0x00224750",
+      "file_offset": "0x00125750",
+      "size": 212,
+      "original_sha256": "7c2f4de6b250263d0a620755d2769cf749b1de29fecc0d3b23d518ecf2c3eb36",
+      "original_assembly": "build/functions/func_00224750.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0022481C",
+      "terminal_delay": "0x00224820",
+      "following_entry": "0x00224828",
+      "source": "src/game/resource_manager.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_fresh_link_and_data_review_passed",
+      "link": true,
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 196,
+            "different_bytes": 176,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "7c2f4de6b250263d0a620755d2769cf749b1de29fecc0d3b23d518ecf2c3eb36",
+            "compiled_sha256": "30dbc6b4ebecffe34e2b6aaecf309c06abcd4b8d21f999bdb6078e75425b6682"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 212,
+            "different_bytes": 131,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "7c2f4de6b250263d0a620755d2769cf749b1de29fecc0d3b23d518ecf2c3eb36",
+            "compiled_sha256": "d7de800c968399c03eb3eb58f1e1f8bdec0f65dfc711d265e0c8ff3d6e6254df"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 212,
+            "different_bytes": 131,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "7c2f4de6b250263d0a620755d2769cf749b1de29fecc0d3b23d518ecf2c3eb36",
+            "compiled_sha256": "d7de800c968399c03eb3eb58f1e1f8bdec0f65dfc711d265e0c8ff3d6e6254df"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x226854",
+          "word": "0xc0891d4",
+          "delay_word": "0x220302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_002267D0",
+            "address": "0x2267d0",
+            "size": 380,
+            "file_offset": "0x1277d0",
+            "sha256": "9a5b368b5f8e51dbd1004de01f1e52901b5941a57d30c5b333497b37f025b61a",
+            "terminal_jr": "0x226944",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x226950"
+          }
+        },
+        {
+          "instruction": "0x22698c",
+          "word": "0xc0891d4",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00226950",
+            "address": "0x226950",
+            "size": 396,
+            "file_offset": "0x127950",
+            "sha256": "4812f8b6d7cfb4f6abb8c52a932c7153b9ef4dec245315bab5f7cac99d2dc32b",
+            "terminal_jr": "0x226ad4",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0020",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x226ae0"
+          }
+        }
+      ],
+      "entry_reachability": "verified_actual_direct_jal_references",
+      "preceding_complete_body": {
+        "name": "func_00224678",
+        "address": "0x224678",
+        "size": 212,
+        "file_offset": "0x125678",
+        "sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+        "terminal_jr": "0x224744",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x0",
+        "excluded_alignment_bytes": 4,
+        "next_entry": "0x224750"
+      },
+      "local_branch_evidence": [
+        {
+          "instruction": "0x00224754",
+          "target": "0x00224800",
+          "word": "0x1080002A",
+          "delay_word": "0x00C0382D",
+          "likely": false
+        },
+        {
+          "instruction": "0x002247CC",
+          "target": "0x002247E0",
+          "word": "0x14400004",
+          "delay_word": "0x0000402D",
+          "likely": false
+        },
+        {
+          "instruction": "0x002247E0",
+          "target": "0x002247F8",
+          "word": "0x51000005",
+          "delay_word": "0x8C620024",
+          "likely": true
+        },
+        {
+          "instruction": "0x002247F0",
+          "target": "0x00224800",
+          "word": "0x10000003",
+          "delay_word": "0xAC620028",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224800",
+          "target": "0x0022481C",
+          "word": "0x11200006",
+          "delay_word": "0x3C030040",
+          "likely": false
+        }
+      ],
+      "direct_call_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x00224770",
+          "word": "0xAC620030",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 48,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224794",
+          "word": "0xAC620000",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002247B4",
+          "word": "0xAC820000",
+          "base_gpr": 4,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002247F4",
+          "word": "0xAC620028",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 40,
+          "size": 4
+        },
+        {
+          "instruction": "0x002247FC",
+          "word": "0xAC620024",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 36,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224818",
+          "word": "0xAC820034",
+          "base_gpr": 4,
+          "source_gpr": 2,
+          "signed_offset": 52,
+          "size": 4
+        }
+      ],
+      "evidence": "Subtract resource accounting. Shared ordinary C template preserves independent first/second full-word nonzero gates, low32 byte/count wrap, record/global reloads between stores, and inclusive unsigned raw payload bounds for count28 versus count24; no high-nibble mask added.",
+      "independent_review": "Parent and research peer read all389 selected original instructions and entire production C/header/shared template/scoped tracer/native/guards/proof scripts. Fresh nine compact links and seven complete packet dictionaries reproduced;561 fixtures49081 original instructions,2447135 warning-free native checks and nine guards passed. Peer full supporting/caller original reads are explicitly attributed; parent independently verifies complete helper/caller geometry/hash and actual entry/ABI windows. Existing code-derived readonly mapper additionally resolves authentic GCC323 whole28B switch with real GNUld. Full code and whole data remain nonexact, and both gate any matching award.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 212,
+        "compiled_size": 212,
+        "different_bytes": 131,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "7c2f4de6b250263d0a620755d2769cf749b1de29fecc0d3b23d518ecf2c3eb36",
+        "compiled_sha256": "d7de800c968399c03eb3eb58f1e1f8bdec0f65dfc711d265e0c8ff3d6e6254df"
+      },
+      "source_header_template_fingerprints": {
+        "src/game/resource_manager.c": "6e4080c60b0ff9611147602d4f8d60215b6e66e5716f4aeaae9836af6b12be41",
+        "src/game/resource_accounting_template.h": "a44507684d0255f5d7eaa74ead9264c62b12f5b607965938a58720ad4c9ab23b",
+        "include/george/resource_manager.h": "289c0136c72bdc135712f70dd1ae4cbc3c0a1f4b6d317b1b317b0cfb478e7721"
+      }
+    },
+    {
+      "name": "func_00224678",
+      "address": "0x00224678",
+      "file_offset": "0x00125678",
+      "size": 212,
+      "original_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+      "original_assembly": "build/functions/func_00224678.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00224744",
+      "terminal_delay": "0x00224748",
+      "following_entry": "0x00224750",
+      "source": "src/game/resource_manager.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_fresh_link_and_data_review_passed",
+      "link": true,
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 196,
+            "different_bytes": 172,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+            "compiled_sha256": "72dae2986d30ecff4c8a2ad56d9cbcfd7dc4278779d9cb829552cfb7e97fc4b7"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 212,
+            "different_bytes": 124,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+            "compiled_sha256": "96474b29b98d0616784b3f8a383414e7c20c9d7607e379d6f467064d3e1ecd0f"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 212,
+            "compiled_size": 212,
+            "different_bytes": 124,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+            "compiled_sha256": "96474b29b98d0616784b3f8a383414e7c20c9d7607e379d6f467064d3e1ecd0f"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x20eb04",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020EAA0",
+            "address": "0x20eaa0",
+            "size": 356,
+            "file_offset": "0x10faa0",
+            "sha256": "c8b50ed93c1ac2285714d10e025d1b385ab9e0ef4b705f1b4798913fbecc6abe",
+            "terminal_jr": "0x20ebfc",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20ec08"
+          }
+        },
+        {
+          "instruction": "0x20ebdc",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020EAA0",
+            "address": "0x20eaa0",
+            "size": 356,
+            "file_offset": "0x10faa0",
+            "sha256": "c8b50ed93c1ac2285714d10e025d1b385ab9e0ef4b705f1b4798913fbecc6abe",
+            "terminal_jr": "0x20ebfc",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20ec08"
+          }
+        },
+        {
+          "instruction": "0x20f75c",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020F6F8",
+            "address": "0x20f6f8",
+            "size": 348,
+            "file_offset": "0x1106f8",
+            "sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+            "terminal_jr": "0x20f84c",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20f858"
+          }
+        },
+        {
+          "instruction": "0x20f82c",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020F6F8",
+            "address": "0x20f6f8",
+            "size": 348,
+            "file_offset": "0x1106f8",
+            "sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+            "terminal_jr": "0x20f84c",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20f858"
+          }
+        },
+        {
+          "instruction": "0x20faec",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020FA88",
+            "address": "0x20fa88",
+            "size": 396,
+            "file_offset": "0x110a88",
+            "sha256": "65670ca794010ff35596a71fd04afd8aa4cdcd2b36c17845c7b17c07c85b7294",
+            "terminal_jr": "0x20fc0c",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20fc18"
+          }
+        },
+        {
+          "instruction": "0x20fbec",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020FA88",
+            "address": "0x20fa88",
+            "size": 396,
+            "file_offset": "0x110a88",
+            "sha256": "65670ca794010ff35596a71fd04afd8aa4cdcd2b36c17845c7b17c07c85b7294",
+            "terminal_jr": "0x20fc0c",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20fc18"
+          }
+        },
+        {
+          "instruction": "0x20fdac",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020FD48",
+            "address": "0x20fd48",
+            "size": 340,
+            "file_offset": "0x110d48",
+            "sha256": "1970eea535f7d5f5538cd07bb2d7b955d32c9ebeb8b4a4350834f9d49f2a9fbe",
+            "terminal_jr": "0x20fe94",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20fea0"
+          }
+        },
+        {
+          "instruction": "0x20fe74",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0020FD48",
+            "address": "0x20fd48",
+            "size": 340,
+            "file_offset": "0x110d48",
+            "sha256": "1970eea535f7d5f5538cd07bb2d7b955d32c9ebeb8b4a4350834f9d49f2a9fbe",
+            "terminal_jr": "0x20fe94",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x20fea0"
+          }
+        },
+        {
+          "instruction": "0x2100dc",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00210078",
+            "address": "0x210078",
+            "size": 352,
+            "file_offset": "0x111078",
+            "sha256": "88d492f319ba1b9c60fc8f68ff2476f575b0742580a19df19d75f9f45595babd",
+            "terminal_jr": "0x2101d0",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x2101d8"
+          }
+        },
+        {
+          "instruction": "0x2101b0",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00210078",
+            "address": "0x210078",
+            "size": 352,
+            "file_offset": "0x111078",
+            "sha256": "88d492f319ba1b9c60fc8f68ff2476f575b0742580a19df19d75f9f45595babd",
+            "terminal_jr": "0x2101d0",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x2101d8"
+          }
+        },
+        {
+          "instruction": "0x224d44",
+          "word": "0xc08919e",
+          "delay_word": "0x240302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00224AB8",
+            "address": "0x224ab8",
+            "size": 1040,
+            "file_offset": "0x125ab8",
+            "sha256": "5f6af7b33312128a081e7df5a9841d67454db47e99ea5bee733cd8df670d5540",
+            "terminal_jr": "0x224ec0",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd00c0",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x224ec8"
+          }
+        },
+        {
+          "instruction": "0x277550",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_002774E8",
+            "address": "0x2774e8",
+            "size": 328,
+            "file_offset": "0x1784e8",
+            "sha256": "270120c33fbebe7209730bec54cdc7eb1a5367e0e69ba69038a17cd2f1b95445",
+            "terminal_jr": "0x277628",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0060",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x277630"
+          }
+        },
+        {
+          "instruction": "0x277604",
+          "word": "0xc08919e",
+          "delay_word": "0x220302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_002774E8",
+            "address": "0x2774e8",
+            "size": 328,
+            "file_offset": "0x1784e8",
+            "sha256": "270120c33fbebe7209730bec54cdc7eb1a5367e0e69ba69038a17cd2f1b95445",
+            "terminal_jr": "0x277628",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0060",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x277630"
+          }
+        },
+        {
+          "instruction": "0x2779ac",
+          "word": "0xc08919e",
+          "delay_word": "0x0",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00277948",
+            "address": "0x277948",
+            "size": 340,
+            "file_offset": "0x178948",
+            "sha256": "bff4df964aec7610be87a594e25345e78fe2f854b181be5adef01e8d3dd79a77",
+            "terminal_jr": "0x277a94",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x277aa0"
+          }
+        },
+        {
+          "instruction": "0x277a74",
+          "word": "0xc08919e",
+          "delay_word": "0x200302d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00277948",
+            "address": "0x277948",
+            "size": 340,
+            "file_offset": "0x178948",
+            "sha256": "bff4df964aec7610be87a594e25345e78fe2f854b181be5adef01e8d3dd79a77",
+            "terminal_jr": "0x277a94",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x277aa0"
+          }
+        }
+      ],
+      "entry_reachability": "verified_actual_direct_jal_references",
+      "preceding_complete_body": {
+        "name": "func_00224590",
+        "address": "0x224590",
+        "size": 228,
+        "file_offset": "0x125590",
+        "sha256": "cfb9b113b6eba164fd71bd146b3fdd8a7426ade46ca9566a38d95fb44f45a963",
+        "terminal_jr": "0x22466c",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0020",
+        "excluded_alignment_bytes": 4,
+        "next_entry": "0x224678"
+      },
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0022467C",
+          "target": "0x00224728",
+          "word": "0x1080002A",
+          "delay_word": "0x00C0382D",
+          "likely": false
+        },
+        {
+          "instruction": "0x002246F4",
+          "target": "0x00224708",
+          "word": "0x14400004",
+          "delay_word": "0x0000402D",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224708",
+          "target": "0x00224720",
+          "word": "0x51000005",
+          "delay_word": "0x8C620024",
+          "likely": true
+        },
+        {
+          "instruction": "0x00224718",
+          "target": "0x00224728",
+          "word": "0x10000003",
+          "delay_word": "0xAC620028",
+          "likely": false
+        },
+        {
+          "instruction": "0x00224728",
+          "target": "0x00224744",
+          "word": "0x11200006",
+          "delay_word": "0x3C030040",
+          "likely": false
+        }
+      ],
+      "direct_call_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x00224698",
+          "word": "0xAC620030",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 48,
+          "size": 4
+        },
+        {
+          "instruction": "0x002246BC",
+          "word": "0xAC620000",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002246DC",
+          "word": "0xAC820000",
+          "base_gpr": 4,
+          "source_gpr": 2,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0022471C",
+          "word": "0xAC620028",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 40,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224724",
+          "word": "0xAC620024",
+          "base_gpr": 3,
+          "source_gpr": 2,
+          "signed_offset": 36,
+          "size": 4
+        },
+        {
+          "instruction": "0x00224740",
+          "word": "0xAC820034",
+          "base_gpr": 4,
+          "source_gpr": 2,
+          "signed_offset": 52,
+          "size": 4
+        }
+      ],
+      "evidence": "Add resource accounting using the exact same C template and a separate genuine function symbol. Entire 212B original differs from subtraction at only six independently decoded arithmetic sites; every branch/reload/field layout otherwise identical. No transferred match or fake body.",
+      "independent_review": "Parent and research peer read all389 selected original instructions and entire production C/header/shared template/scoped tracer/native/guards/proof scripts. Fresh nine compact links and seven complete packet dictionaries reproduced;561 fixtures49081 original instructions,2447135 warning-free native checks and nine guards passed. Peer full supporting/caller original reads are explicitly attributed; parent independently verifies complete helper/caller geometry/hash and actual entry/ABI windows. Existing code-derived readonly mapper additionally resolves authentic GCC323 whole28B switch with real GNUld. Full code and whole data remain nonexact, and both gate any matching award.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 212,
+        "compiled_size": 212,
+        "different_bytes": 124,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+        "compiled_sha256": "96474b29b98d0616784b3f8a383414e7c20c9d7607e379d6f467064d3e1ecd0f"
+      },
+      "source_header_template_fingerprints": {
+        "src/game/resource_manager.c": "6e4080c60b0ff9611147602d4f8d60215b6e66e5716f4aeaae9836af6b12be41",
+        "src/game/resource_accounting_template.h": "a44507684d0255f5d7eaa74ead9264c62b12f5b607965938a58720ad4c9ab23b",
+        "include/george/resource_manager.h": "289c0136c72bdc135712f70dd1ae4cbc3c0a1f4b6d317b1b317b0cfb478e7721"
+      }
+    }
+  ],
+  "switch_evidence": {
+    "address": "0x43b0e0",
+    "file_offset": "0x33c0e0",
+    "size": 28,
+    "section": ".rodata",
+    "section_flags": 2,
+    "sha256": "432edbed9f952c1a4eaabbf1f6fcfc33c6b122edbed52ab78a85dd8991aaf911",
+    "targets": [
+      "0x224b80",
+      "0x224b90",
+      "0x224b98",
+      "0x224ba0",
+      "0x224b78",
+      "0x224bec",
+      "0x224b88"
+    ]
+  },
+  "global_geometry": {
+    "address": "0x003F960C",
+    "size": 4,
+    "section": ".data",
+    "section_flags": 3,
+    "initializer_identity_claim": false
+  },
+  "global_load_evidence": [
+    {
+      "instruction": "0x00224AF8",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224B08",
+      "word": "0x8CC2960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224B28",
+      "word": "0x8FC3960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224BF8",
+      "word": "0x8FC2960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224C20",
+      "word": "0x8FC3960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224C58",
+      "word": "0x8FC2960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224D6C",
+      "word": "0x8FC3960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224D98",
+      "word": "0x8FC2960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224E38",
+      "word": "0x8FC2960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224E48",
+      "word": "0x8FC3960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224E60",
+      "word": "0x8FC4960C",
+      "base_gpr": 30,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00225C38",
+      "word": "0x8E22960C",
+      "base_gpr": 17,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00225C58",
+      "word": "0x8E23960C",
+      "base_gpr": 17,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224764",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224778",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224798",
+      "word": "0x8CC4960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x002247B8",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x0022480C",
+      "word": "0x8C64960C",
+      "base_gpr": 3,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x0022468C",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x002246A0",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x002246C0",
+      "word": "0x8CC4960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x002246E0",
+      "word": "0x8CC3960C",
+      "base_gpr": 6,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    },
+    {
+      "instruction": "0x00224734",
+      "word": "0x8C64960C",
+      "base_gpr": 3,
+      "address": "0x003F960C",
+      "evidence": "Signed lower960C with observed LUI40, including captured callee-saved30/17 through fully reviewed helper preservation; source retains every fresh global load."
+    }
+  ],
+  "actual_callee_evidence": [
+    {
+      "instruction": "0x00224B48",
+      "target": "0x00229FC8",
+      "word": "0x0C08A7F2",
+      "delay_word": "0x8E240010"
+    },
+    {
+      "instruction": "0x00224BB0",
+      "target": "0x00229FF0",
+      "word": "0x0C08A7FC",
+      "delay_word": "0x02A0402D"
+    },
+    {
+      "instruction": "0x00224BDC",
+      "target": "0x00229020",
+      "word": "0x0C08A408",
+      "delay_word": "0x02A0382D"
+    },
+    {
+      "instruction": "0x00224C94",
+      "target": "0x002AD700",
+      "word": "0x0C0AB5C0",
+      "delay_word": "0x24060001"
+    },
+    {
+      "instruction": "0x00224D10",
+      "target": "0x002AD700",
+      "word": "0x0C0AB5C0",
+      "delay_word": "0x24060001"
+    },
+    {
+      "instruction": "0x00224D24",
+      "target": "0x0020E598",
+      "word": "0x0C083966",
+      "delay_word": "0x0200202D"
+    },
+    {
+      "instruction": "0x00224D44",
+      "target": "0x00224678",
+      "word": "0x0C08919E",
+      "delay_word": "0x0240302D"
+    },
+    {
+      "instruction": "0x00224D88",
+      "target": "0x0021ABD8",
+      "word": "0x0C086AF6",
+      "delay_word": "0x8E48000C"
+    },
+    {
+      "instruction": "0x00224DD4",
+      "target": "0x00217F78",
+      "word": "0x0C085FDE",
+      "delay_word": "0x8E440004"
+    },
+    {
+      "instruction": "0x00224DE4",
+      "target": "0x00218020",
+      "word": "0x0C086008",
+      "delay_word": "0x8E440004"
+    },
+    {
+      "instruction": "0x00224DF4",
+      "target": "0x00217FB0",
+      "word": "0x0C085FEC",
+      "delay_word": "0x8E440004"
+    },
+    {
+      "instruction": "0x00224E04",
+      "target": "0x00217FE8",
+      "word": "0x0C085FFA",
+      "delay_word": "0x8E440004"
+    },
+    {
+      "instruction": "0x00224E40",
+      "target": "0x0021A0B8",
+      "word": "0x0C08682E",
+      "delay_word": "0x8C440078"
+    },
+    {
+      "instruction": "0x00225C4C",
+      "target": "0x0021A190",
+      "word": "0x0C086864",
+      "delay_word": "0x8C440078"
+    }
+  ],
+  "complete_store_inventory": [
+    {
+      "instruction": "0x00224AC0",
+      "word": "0x7FB20090",
+      "base_gpr": 29,
+      "source_gpr": 18,
+      "signed_offset": 144,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AC8",
+      "word": "0x7FB60050",
+      "base_gpr": 29,
+      "source_gpr": 22,
+      "signed_offset": 80,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AD0",
+      "word": "0x7FBE0030",
+      "base_gpr": 29,
+      "source_gpr": 30,
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AD8",
+      "word": "0x7FB000B0",
+      "base_gpr": 29,
+      "source_gpr": 16,
+      "signed_offset": 176,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AE0",
+      "word": "0x7FB100A0",
+      "base_gpr": 29,
+      "source_gpr": 17,
+      "signed_offset": 160,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AE4",
+      "word": "0x7FB30080",
+      "base_gpr": 29,
+      "source_gpr": 19,
+      "signed_offset": 128,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AE8",
+      "word": "0x7FB40070",
+      "base_gpr": 29,
+      "source_gpr": 20,
+      "signed_offset": 112,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AEC",
+      "word": "0x7FB50060",
+      "base_gpr": 29,
+      "source_gpr": 21,
+      "signed_offset": 96,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AF0",
+      "word": "0x7FB70040",
+      "base_gpr": 29,
+      "source_gpr": 23,
+      "signed_offset": 64,
+      "size": 16
+    },
+    {
+      "instruction": "0x00224AF4",
+      "word": "0xFFBF0020",
+      "base_gpr": 29,
+      "source_gpr": 31,
+      "signed_offset": 32,
+      "size": 8
+    },
+    {
+      "instruction": "0x00224B04",
+      "word": "0xAFA00014",
+      "base_gpr": 29,
+      "source_gpr": 0,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224C1C",
+      "word": "0xAFA20014",
+      "base_gpr": 29,
+      "source_gpr": 2,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224C4C",
+      "word": "0xAE420008",
+      "base_gpr": 18,
+      "source_gpr": 2,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224CAC",
+      "word": "0xAFA20014",
+      "base_gpr": 29,
+      "source_gpr": 2,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224CCC",
+      "word": "0xACC20FB8",
+      "base_gpr": 6,
+      "source_gpr": 2,
+      "signed_offset": 4024,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224CD4",
+      "word": "0xACC30FBC",
+      "base_gpr": 6,
+      "source_gpr": 3,
+      "signed_offset": 4028,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224D30",
+      "word": "0xAE420010",
+      "base_gpr": 18,
+      "source_gpr": 2,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224D38",
+      "word": "0xAE420010",
+      "base_gpr": 18,
+      "source_gpr": 2,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224D5C",
+      "word": "0xAE430014",
+      "base_gpr": 18,
+      "source_gpr": 3,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224D78",
+      "word": "0xAFA20000",
+      "base_gpr": 29,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224E20",
+      "word": "0xAE440010",
+      "base_gpr": 18,
+      "source_gpr": 4,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224E2C",
+      "word": "0xA2420002",
+      "base_gpr": 18,
+      "source_gpr": 2,
+      "signed_offset": 2,
+      "size": 1
+    },
+    {
+      "instruction": "0x00224E5C",
+      "word": "0xAC620000",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224E80",
+      "word": "0xACA30000",
+      "base_gpr": 5,
+      "source_gpr": 3,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224E94",
+      "word": "0xA2420002",
+      "base_gpr": 18,
+      "source_gpr": 2,
+      "signed_offset": 2,
+      "size": 1
+    },
+    {
+      "instruction": "0x00225C2C",
+      "word": "0x7FB10010",
+      "base_gpr": 29,
+      "source_gpr": 17,
+      "signed_offset": 16,
+      "size": 16
+    },
+    {
+      "instruction": "0x00225C34",
+      "word": "0x7FB00020",
+      "base_gpr": 29,
+      "source_gpr": 16,
+      "signed_offset": 32,
+      "size": 16
+    },
+    {
+      "instruction": "0x00225C40",
+      "word": "0xFFBF0000",
+      "base_gpr": 29,
+      "source_gpr": 31,
+      "signed_offset": 0,
+      "size": 8
+    },
+    {
+      "instruction": "0x00225C6C",
+      "word": "0xAC620000",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224770",
+      "word": "0xAC620030",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 48,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224794",
+      "word": "0xAC620000",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x002247B4",
+      "word": "0xAC820000",
+      "base_gpr": 4,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x002247F4",
+      "word": "0xAC620028",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 40,
+      "size": 4
+    },
+    {
+      "instruction": "0x002247FC",
+      "word": "0xAC620024",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 36,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224818",
+      "word": "0xAC820034",
+      "base_gpr": 4,
+      "source_gpr": 2,
+      "signed_offset": 52,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224698",
+      "word": "0xAC620030",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 48,
+      "size": 4
+    },
+    {
+      "instruction": "0x002246BC",
+      "word": "0xAC620000",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x002246DC",
+      "word": "0xAC820000",
+      "base_gpr": 4,
+      "source_gpr": 2,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0022471C",
+      "word": "0xAC620028",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 40,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224724",
+      "word": "0xAC620024",
+      "base_gpr": 3,
+      "source_gpr": 2,
+      "signed_offset": 36,
+      "size": 4
+    },
+    {
+      "instruction": "0x00224740",
+      "word": "0xAC820034",
+      "base_gpr": 4,
+      "source_gpr": 2,
+      "signed_offset": 52,
+      "size": 4
+    }
+  ],
+  "accounting_pair_six_arithmetic_differences": [
+    {
+      "relative_offset": 28,
+      "add_instruction": "0x00224694",
+      "subtract_instruction": "0x0022476C",
+      "add_word": "0x00441021",
+      "subtract_word": "0x00441023"
+    },
+    {
+      "relative_offset": 64,
+      "add_instruction": "0x002246B8",
+      "subtract_instruction": "0x00224790",
+      "add_word": "0x00451021",
+      "subtract_word": "0x00451023"
+    },
+    {
+      "relative_offset": 96,
+      "add_instruction": "0x002246D8",
+      "subtract_instruction": "0x002247B0",
+      "add_word": "0x24420001",
+      "subtract_word": "0x2442FFFF"
+    },
+    {
+      "relative_offset": 156,
+      "add_instruction": "0x00224714",
+      "subtract_instruction": "0x002247EC",
+      "add_word": "0x24420001",
+      "subtract_word": "0x2442FFFF"
+    },
+    {
+      "relative_offset": 168,
+      "add_instruction": "0x00224720",
+      "subtract_instruction": "0x002247F8",
+      "add_word": "0x24420001",
+      "subtract_word": "0x2442FFFF"
+    },
+    {
+      "relative_offset": 196,
+      "add_instruction": "0x0022473C",
+      "subtract_instruction": "0x00224814",
+      "add_word": "0x00451021",
+      "subtract_word": "0x00451023"
+    }
+  ],
+  "callback_request_abi": {
+    "callback_address": "0x00225D38",
+    "high": "0x00224D50",
+    "lower": "0x00224D60",
+    "high_word": "0x3C0A0022",
+    "lower_word": "0x254A5D38",
+    "stack_argument_store": "0x00224D78",
+    "request_jal": "0x00224D88",
+    "callee_stack_load": "0x0021AC24",
+    "callee_callback_store": "0x0021AC58",
+    "callee_special_store": "0x0021AC68",
+    "callee_body": {
+      "address": "0x0021ABD8",
+      "file_offset": "0x0011BBD8",
+      "size": 252,
+      "original_sha256": "7ba244dc33d905d3ab4079340fe81431145dd09a242c5b7203a9eb43148863a8",
+      "original_assembly": "build/functions/func_0021ABD8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0021ACCC",
+      "terminal_delay": "0x0021ACD0",
+      "following_entry": "0x0021ACD8"
+    },
+    "callback_body": {
+      "address": "0x00225D38",
+      "file_offset": "0x00126D38",
+      "size": 56,
+      "original_sha256": "73a4b64a5bc7a03adbc1cfa33e2b9fc78a04eb4d87bf67a1985a928a6e2793f5",
+      "original_assembly": "build/functions/func_00225D38.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00225D68",
+      "terminal_delay": "0x00225D6C",
+      "following_entry": "0x00225D70"
+    },
+    "evidence": "Eight full GPR lanes4..11 plus ninth low32 stack argument (field1C==1). Callee captures incoming lane8/9/10/11 and stack17 before genuine32B pool allocation; callback stored at queued record+14 and context+18, not invoked here. Complete callback consumes one record pointer and then invokes published26FB0."
+  },
+  "compiled_switch_evidence": {
+    "gcc29": {
+      "function_size": 976,
+      "complete_unlinked_code_sha256": "4effb5691e04f4ef7ba2232ebdeef6120c5e068bc45e4e0448dbf922ad26c6ff",
+      "readonly_section_size": 32,
+      "readonly_section_sha256": "d5a3edab2230ce05fc23f96b781e977220f29b08f95cb6f3a658d86397eb59a2",
+      "readonly_relocations": [
+        {
+          "offset": 0,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 172
+        },
+        {
+          "offset": 4,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 180
+        },
+        {
+          "offset": 8,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 188
+        },
+        {
+          "offset": 12,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 196
+        },
+        {
+          "offset": 16,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 204
+        },
+        {
+          "offset": 20,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 324
+        },
+        {
+          "offset": 24,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 212
+        }
+      ],
+      "whole_link_comparison": null,
+      "limitation": "These are complete object/code/data identities, not relocated-data proof or a final code match. Mapper unchanged; no code/table patches or invented placements."
+    },
+    "gcc29_save128": {
+      "function_size": 976,
+      "complete_unlinked_code_sha256": "392f37a25d2299312635fcf1eeaa38e94e0c292ee31576c91815fe2f40d64039",
+      "readonly_section_size": 32,
+      "readonly_section_sha256": "d5a3edab2230ce05fc23f96b781e977220f29b08f95cb6f3a658d86397eb59a2",
+      "readonly_relocations": [
+        {
+          "offset": 0,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 172
+        },
+        {
+          "offset": 4,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 180
+        },
+        {
+          "offset": 8,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 188
+        },
+        {
+          "offset": 12,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 196
+        },
+        {
+          "offset": 16,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 204
+        },
+        {
+          "offset": 20,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 324
+        },
+        {
+          "offset": 24,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 212
+        }
+      ],
+      "whole_link_comparison": null,
+      "limitation": "These are complete object/code/data identities, not relocated-data proof or a final code match. Mapper unchanged; no code/table patches or invented placements."
+    },
+    "gcc323": {
+      "function_size": 1000,
+      "complete_unlinked_code_sha256": "09424e8a0da9ffde95845bafc0fcaf0f15de6629aa6cfcf891e021a2d0ae592e",
+      "readonly_section_size": 28,
+      "readonly_section_sha256": "a594de40765bfe6b42dd59bde996eecd20d797777287a29c2d9b548d9137cee1",
+      "readonly_relocations": [
+        {
+          "offset": 0,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 188
+        },
+        {
+          "offset": 4,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 196
+        },
+        {
+          "offset": 8,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 204
+        },
+        {
+          "offset": 12,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 212
+        },
+        {
+          "offset": 16,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 220
+        },
+        {
+          "offset": 20,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 360
+        },
+        {
+          "offset": 24,
+          "type": "R_MIPS_32",
+          "target_section": ".text.func_00224AB8",
+          "symbol_value": 0,
+          "addend": 228
+        }
+      ],
+      "whole_link_comparison": null,
+      "limitation": "These are complete object/code/data identities, not relocated-data proof or a final code match. Mapper unchanged; no code/table patches or invented placements."
+    }
+  },
+  "no_jump_tables_attempts": {
+    "gcc323_no_jump_tables": {
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-jump-tables",
+        "-fno-reorder-blocks"
+      ],
+      "compile_returncode": 1,
+      "stdout": "",
+      "stderr": "cc1.exe: unrecognized option `-fno-jump-tables'\n",
+      "comparison": null
+    },
+    "gcc29_no_jump_tables": {
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-jump-tables"
+      ],
+      "compile_returncode": 1,
+      "stdout": "",
+      "stderr": "cc1.exe: Invalid option `-fno-jump-tables'\n",
+      "comparison": null
+    }
+  },
+  "supporting_original_bodies": [
+    {
+      "address": "0x0020E598",
+      "file_offset": "0x0010F598",
+      "size": 40,
+      "original_sha256": "702ca665965cfdec98b3d8eb51f938922cd0c8b897f3a323961b86c32295147e",
+      "original_assembly": "build/functions/func_0020E598.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x0020E5B8",
+      "terminal_delay": "0x0020E5BC",
+      "following_entry": "0x0020E5C0",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00217F78",
+      "file_offset": "0x00118F78",
+      "size": 52,
+      "original_sha256": "1272d5ce296bfb6d595d423fe55584a28e7b970de83e5028c74ed0aa1f301edd",
+      "original_assembly": "build/functions/func_00217F78.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00217FA4",
+      "terminal_delay": "0x00217FA8",
+      "following_entry": "0x00217FB0",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00217FB0",
+      "file_offset": "0x00118FB0",
+      "size": 52,
+      "original_sha256": "d23514fbac29e459ac32f823b13ab7d7625cc7ed3fb42ab0230d076c7244d57f",
+      "original_assembly": "build/functions/func_00217FB0.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00217FDC",
+      "terminal_delay": "0x00217FE0",
+      "following_entry": "0x00217FE8",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00217FE8",
+      "file_offset": "0x00118FE8",
+      "size": 52,
+      "original_sha256": "df91ff96b7cb67b52eec4745eb204f86aaccdc0ac94f2efbfc367283275618c4",
+      "original_assembly": "build/functions/func_00217FE8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00218014",
+      "terminal_delay": "0x00218018",
+      "following_entry": "0x00218020",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00218020",
+      "file_offset": "0x00119020",
+      "size": 52,
+      "original_sha256": "5bdb7aa615bb484754eb6fcb45dd740e08c7bd56d12190ee27308ade32f3a885",
+      "original_assembly": "build/functions/func_00218020.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0021804C",
+      "terminal_delay": "0x00218050",
+      "following_entry": "0x00218058",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x0021A0B8",
+      "file_offset": "0x0011B0B8",
+      "size": 212,
+      "original_sha256": "095ad94246d00e22ca3b119278bd73545174c44a0cfa7bf0137bc62e991d955d",
+      "original_assembly": "build/functions/func_0021A0B8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0021A184",
+      "terminal_delay": "0x0021A188",
+      "following_entry": "0x0021A190",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x0021A190",
+      "file_offset": "0x0011B190",
+      "size": 168,
+      "original_sha256": "7eea39cb277fdb25a2451ea281f2131159e37e625943859d9438cd3b2e36c6a2",
+      "original_assembly": "build/functions/func_0021A190.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x0021A230",
+      "terminal_delay": "0x0021A234",
+      "following_entry": "0x0021A238",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x0021ABD8",
+      "file_offset": "0x0011BBD8",
+      "size": 252,
+      "original_sha256": "7ba244dc33d905d3ab4079340fe81431145dd09a242c5b7203a9eb43148863a8",
+      "original_assembly": "build/functions/func_0021ABD8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0021ACCC",
+      "terminal_delay": "0x0021ACD0",
+      "following_entry": "0x0021ACD8",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00224678",
+      "file_offset": "0x00125678",
+      "size": 212,
+      "original_sha256": "5a734dcd97167b1523d2f3737fca6125b710acfff25daa6dd9edd637e3610a8c",
+      "original_assembly": "build/functions/func_00224678.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00224744",
+      "terminal_delay": "0x00224748",
+      "following_entry": "0x00224750",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00229020",
+      "file_offset": "0x0012A020",
+      "size": 152,
+      "original_sha256": "d03b8ec24bc9db71d74e06a740eb23c674dc05d6d12244efc0f8e122b2287b18",
+      "original_assembly": "build/functions/func_00229020.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002290B0",
+      "terminal_delay": "0x002290B4",
+      "following_entry": "0x002290B8",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00229FC8",
+      "file_offset": "0x0012AFC8",
+      "size": 36,
+      "original_sha256": "9279723f5f634013eb44e3c307c4a3126703ec9b4e17b7bfe085fe60c8fdf4e0",
+      "original_assembly": "build/functions/func_00229FC8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00229FE4",
+      "terminal_delay": "0x00229FE8",
+      "following_entry": "0x00229FF0",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00229FF0",
+      "file_offset": "0x0012AFF0",
+      "size": 204,
+      "original_sha256": "dd3fec892a6f2ba146bda005b9caf3c84e3265d436cdd0df1b5304db23cde08b",
+      "original_assembly": "build/functions/func_00229FF0.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x0022A0B4",
+      "terminal_delay": "0x0022A0B8",
+      "following_entry": "0x0022A0C0",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x002AD700",
+      "file_offset": "0x001AE700",
+      "size": 72,
+      "original_sha256": "b74ceedd2a7ce70436df01d863594ffa24062de56e94cad0d149a635de56010a",
+      "original_assembly": "build/functions/func_002AD700.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002AD740",
+      "terminal_delay": "0x002AD744",
+      "following_entry": "0x002AD748",
+      "role": "Complete immediate callee original read; numeric ABI retained, only query/pool actually execute in scoped tests."
+    },
+    {
+      "address": "0x00225D38",
+      "file_offset": "0x00126D38",
+      "size": 56,
+      "original_sha256": "73a4b64a5bc7a03adbc1cfa33e2b9fc78a04eb4d87bf67a1985a928a6e2793f5",
+      "original_assembly": "build/functions/func_00225D38.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00225D68",
+      "terminal_delay": "0x00225D6C",
+      "following_entry": "0x00225D70",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002A8228",
+      "file_offset": "0x001A9228",
+      "size": 8,
+      "original_sha256": "d430ccf7ceed0c0fefa4ad20220c871f71332db7879e0c34fa183e9c06ae23d4",
+      "original_assembly": "build/functions/func_002A8228.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002A8228",
+      "terminal_delay": "0x002A822C",
+      "following_entry": "0x002A8230",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002A8250",
+      "file_offset": "0x001A9250",
+      "size": 184,
+      "original_sha256": "8041e09621f9a37e7550730ff43b0446900863feb715785aa8fcfe1f805eb2fa",
+      "original_assembly": "build/functions/func_002A8250.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002A8300",
+      "terminal_delay": "0x002A8304",
+      "following_entry": "0x002A8308",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002AF9A0",
+      "file_offset": "0x001B09A0",
+      "size": 252,
+      "original_sha256": "ece7048037b67ecf3fba257fa079d6c51cc499a5d5d3e1087e389b0d39f2f191",
+      "original_assembly": "build/functions/func_002AF9A0.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x002AFA94",
+      "terminal_delay": "0x002AFA98",
+      "following_entry": "0x002AFAA0",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002193A0",
+      "file_offset": "0x0011A3A0",
+      "size": 120,
+      "original_sha256": "c7ed2851d37949e834d0fc10b66c018dc0b5daa613287e02bb2042ca371840c6",
+      "original_assembly": "build/functions/func_002193A0.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00219410",
+      "terminal_delay": "0x00219414",
+      "following_entry": "0x00219418",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x00224308",
+      "file_offset": "0x00125308",
+      "size": 340,
+      "original_sha256": "55c53db380132b00bb1d45aced7a6dfef81f2b03900fa6e8f8a55451dc10e6c8",
+      "original_assembly": "build/functions/func_00224308.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00224454",
+      "terminal_delay": "0x00224458",
+      "following_entry": "0x00224460",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002241C8",
+      "file_offset": "0x001251C8",
+      "size": 320,
+      "original_sha256": "0dacf52159695194f60983e68689826e9cca2f8e1703a718a32932414a85ed63",
+      "original_assembly": "build/functions/func_002241C8.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00224300",
+      "terminal_delay": "0x00224304",
+      "following_entry": "0x00224308",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x002ADF60",
+      "file_offset": "0x001AEF60",
+      "size": 504,
+      "original_sha256": "8467adb39ab03bf11a1b98428ca34a384e56d91fb5eef4ea0be1966852bd44ad",
+      "original_assembly": "build/functions/func_002ADF60.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002AE150",
+      "terminal_delay": "0x002AE154",
+      "following_entry": "0x002AE158",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    },
+    {
+      "address": "0x00226FB0",
+      "file_offset": "0x00127FB0",
+      "size": 92,
+      "original_sha256": "33c68a82425df8323563ae46f7af3eda19086ebcafac8d0754f3c013dd09e2f8",
+      "original_assembly": "build/functions/func_00226FB0.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00227004",
+      "terminal_delay": "0x00227008",
+      "following_entry": "0x00227010",
+      "role": "Complete supporting ABI/layout/helper original read; excluded from new count and registration."
+    }
+  ],
+  "shared_source_reuse": [
+    {
+      "path": "src/game/resource_base.c",
+      "sha256": "9449107b1e4c55078f70976e4cec3ca9b5175ceca03ca5f2289332dcdb28c3d9"
+    },
+    {
+      "path": "include/george/resource_base.h",
+      "sha256": "a74b72d8d0302412eef462f0d03a7739a93847cf308f89eb34ad805b05608087"
+    },
+    {
+      "path": "include/george/resource_geometry.h",
+      "sha256": "4383287b1fb7f397c497e38419a6ba8f65a3f31cff0917174fa782d81d8edb8a"
+    },
+    {
+      "path": "include/george/deimos_tables.h",
+      "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+    },
+    {
+      "path": "src/game/pool_slots.c",
+      "sha256": "3875e6aea60473190e876f52d80c72d0a83212fd3859d2aaffdd01da541ee57b"
+    },
+    {
+      "path": "include/george/pool_slots.h",
+      "sha256": "180f13eaf46a9279be5b05d615310d051a57a72c9db5d98c82d1795faf2d7c48"
+    },
+    {
+      "path": "tools/trace_resource_base.py",
+      "sha256": "89f1703fdec23b816a613e6536e95b222d3d0213e8a37ba8aa56b06f0312b556"
+    },
+    {
+      "path": "tools/trace_camera_motion.py",
+      "sha256": "41e31873a0e353b20c5f6d4c4701c4037c426ac27cfea7a0287262780cd5af23"
+    },
+    {
+      "path": "tools/trace_geometry.py",
+      "sha256": "884a01e61948a38e4bc78e992b9cac91a93f0e38dcae67610b591fad43194f73"
+    }
+  ],
+  "synthetic_fixture_evidence": {
+    "fixtures": 561,
+    "executed_original_instructions": 49081,
+    "maximum_instructions": 212,
+    "input_sha256": "f785aa7b768488392dab9a41208d1fd2ac277c45288722ec3435fe8660dab410",
+    "header_sha256_lf": "c141035f3de3625bacefca310e366005ec16b152afefa821c0d4920baef919af",
+    "header_sha256_crlf": "9755cdcdbb49c1750011ecc36eb37c8427f67d2fc8fe3aece9044138e40cfd39",
+    "native_checks": 2447135,
+    "guard_tests": 9,
+    "complete_buffer_words_per_fixture": 4096,
+    "event_words": 20,
+    "observation_call_count": 12,
+    "scope": "Complete four original bodies/query/pool primitive execute. Production manager C separateTU and published pool C bridge execute. Bounded helper observation contracts do not execute filesystem/queue/map/heap graphs or claim all mutated schedules occur in retail. Covers exact switch permutations, failures, captured keys/provider/size, fresh globals/counters/kinds, independent accounting gates, inclusive unsigned endpoints, low32 wrap/rounding/index gates, pool-frozen/exhausted state, override-failure nofallback, cursor equality/exhaustion, field1C exact1, count/peak boundaries, nested accounting and shifted record/manager field aliases. Full4096 buffer words/global/counters/events compared; no upperGPR/EEtiming/MMI/OS/pointer safety proof."
+  }
+}

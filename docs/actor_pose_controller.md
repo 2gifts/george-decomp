@@ -1,0 +1,90 @@
+# Pose-controller construction and update
+
+Six complete numeric routines recover **2,072 original instruction bytes**, or
+**518 instructions**. They reuse the reviewed camera-transform prefix, script
+object, matrix APIs and signed member-call representation. The controller stays
+opaque; observed `+8` is a camera-transform pointer, not an actor entity.
+Original class names remain unresolved.
+
+| Address | Bytes | Observed behavior |
+| --- | ---: | --- |
+| `00166CA8` | 260 | Input-matrix initializer, pose allocation and matrix refresh |
+| `00166DD0` | 228 | Origin initializer with three identity matrices |
+| `00166EB8` | 156 | Transform/component/frame clone with sequential source reads |
+| `00166F58` | 116 | Optional transform release, adjusted component release and script cleanup |
+| `0016B948` | 556 | Derived configuration and two transformed output points |
+| `0016BDA0` | 756 | Duration interpolation, two point publications and matrix refresh |
+
+The full bodies equal the validated executable and every original assembly
+word through the final return delay instruction. Zero alignment is excluded.
+Nineteen actual incoming JALs prove entries for the first five functions, with
+complete containing-body byte hashes. The update is a real zero-adjusted member
+at `0042BD30` in the bounded 88-byte region at `0042BD08`. The packet retains its
+whole hash, pair contents and genuine table materializations by `0016B948` and
+`0016C280`, including the latter's delay-slot publication and link-register write.
+The base table at `0042B078` has its own bounded 88-byte hash and four real stores.
+No additional data award follows. Adjacent constructors `0016B720` and
+`0016BB78` remain excluded because their concrete entry references are unresolved.
+
+Initializers retain their input pointer across callbacks. The matrix variant
+reads input translation only after configuration lookup, then passes three
+independent float arguments to the recovered camera constructor. Configuration
+and transform pointers are reloaded after identity callbacks. The clone captures
+the allocated destination transform, reads the source transform after allocation,
+then reads the source component after the transform-copy callback. Its three
+matrix copies remain sequential, followed by interleaved `+D0` and `+D4` reads.
+Fields omitted by the original clone stay untouched.
+
+Cleanup reads the component after transform release, preserving callback
+replacement. It applies the original signed 16-bit this adjustment and passes
+full argument three to the virtual release. The final script destructor receives
+the original full flags.
+
+The two output points are left-associated translation/basis sums. The update
+reloads its resource between the first and second scalar triplets and before the
+duration read. A strictly positive duration selects `elapsed / duration`
+interpolation; the original does not clamp this ratio. Zero, negative and
+unordered durations copy the computed points directly. Point components are
+captured before the first potentially aliased output. The transform pointer is
+reloaded for the second output and once more after explicit matrix XYZ/W stores.
+
+The isolated native harness passes **4,978 checks**:
+
+```powershell
+.venv/Scripts/python.exe tests/native/run_actor_pose_controller.py
+```
+
+It executes all six production C bodies with authored controlled callbacks.
+Checks cover input mutation before float capture, fresh configuration/transform
+replacement after identities, clone callback sequencing, aligned shifted matrix
+overlap, untouched clone fields, full cleanup modes and signed adjustment,
+derived scalar bindings, randomized basis sums, positive/zero/negative/NaN
+duration gates, extrapolation, negative elapsed values and the disabled update
+path. A focused alias fixture makes the first output X replace the controller's
+stored transform pointer, then checks the second point and final callback target.
+
+The real transform copy reads three 32-byte groups before each group write, then
+copies the last eight bytes. Its native fixture preserves that grouping. The
+reviewed matrix-copy body reads all four 128-bit source groups before storing;
+native overlap fixtures retain its 16-byte alignment contract. Camera allocation
+and refresh remain controlled observations in this harness, rather than tests of
+the engine's camera algorithm. Host floating-point execution does not establish
+EE FCR, saturation or bit-exact nonfinite engine behavior. Original valid-pointer
+configuration and output contracts are retained.
+
+All **18 genuine complete compiler/link comparisons** under GCC 3.2.3, GCC 2.9
+and guarded GCC 2.9 SAVE128 resolve at original addresses with zero unresolved
+relocations. None matches a complete original symbol; all six remain
+**reconstructed**. No assembly fallback, byte masking, adjusted padding or helper
+code award is used.
+
+The isolated packet is `build/actor_pose_controller/manifest.json` and
+`symbols.json`, generated by `finalize_draft.py`; comparisons come from
+`probe.py`. It records all five bounded branches, 130 decoded stores including
+delays, two binary32 constants at four immediate sites, actual constructor input
+and return windows, callback captures, table stores and complete configuration
+string hashes. Source, header, native, runner and proof-script fingerprints
+identify the frozen inputs. The author read all selected original instructions
+and the narrow supporting copy/lookup bodies. Independent parent and peer review
+passed complete selected original/source/native/proof inputs and fresh entire
+packet reproduction. All six are centrally registered as reconstructed.
