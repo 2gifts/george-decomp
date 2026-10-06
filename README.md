@@ -21,12 +21,12 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C | 733 functions reviewed; 223 match (4,704 bytes) |
+| Recovered game C | 777 functions reviewed; 224 match (4,740 bytes) |
 | Reused upstream C | 38 match (4,828 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C matching total is **9,532 / 3,083,712 code bytes (0.309108%)**, including
+The C matching total is **9,568 / 3,083,712 code bytes (0.310275%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C progress.
