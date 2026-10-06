@@ -364,3 +364,14 @@ executes 628 authored fixtures and 337,948 checks with separate production C.
 Eight strict decoder guards pass. Whole buffers/descriptors, four output aliases,
 zero-call events and numeric wrap are checked; all five incoming entries remain
 unresolved. See `docs/arena_extensions.md` for scope and model limits.
+
+Actor construction: `python tests/native/run_actor_construction.py` executes
+all five complete production functions and passes 6,146 checks. Supporting
+collision, curve, matrix and engine callbacks are controlled observations;
+host arithmetic does not establish EE/VU/FCR behavior. See `docs/actor_construction.md`.
+
+Arena ownership: `python tests/native/run_utilities.py --harness arena_ownership`
+executes both new source files and the published arena initializer/no-op.
+It passes 246,561 checks across 886 finite authored fixtures, including complete
+record/global/descriptor words and captured allocation/free events. Nine decoder
+guards pass; incoming release reachability remains unresolved. See `docs/arena_ownership.md`.

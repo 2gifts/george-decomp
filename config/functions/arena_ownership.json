@@ -1,0 +1,1629 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Fivecompleteutilityownershipentries,368B/92originalinstructions; separate two-source grouping and frozenpublishedheap/arena dependencies reused without edits.",
+    "15naturalwholefunctionGNUlinks0unresolved;only genuine28Bstartupwrapper exactgcc323. Four substantive functions reconstructed; duplicateinitializerstores naturallyoptimized, no source distortion/masking/patching/truncation/assemblyfallback.",
+    "FouractualJALrefs/caller fullbodies preserved. Arena-releaseBA8incomingunresolved; broadsamebodyLUIcandidate explicitlyrejected as overwritten high constructingreadonlyname448BA8. No inventedcomputed root/return/f12 parameter.",
+    "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+  ],
+  "functions": [
+    {
+      "name": "func_002B8A68",
+      "address": "0x002B8A68",
+      "file_offset": "0x001B9A68",
+      "size": 136,
+      "original_sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+      "original_assembly": "build/functions/func_002B8A68.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002B8AE8",
+      "terminal_delay": "0x002B8AEC",
+      "following_entry": "0x002B8AF0",
+      "source": "src/game/render_records.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 136,
+        "compiled_size": 136,
+        "different_bytes": 12,
+        "first_different_offsets": [
+          4,
+          8,
+          40,
+          48,
+          100,
+          102,
+          103,
+          104
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+        "compiled_sha256": "db3f5197352a025b738a2836622b4350adda7652fcd64a6834db76eb9d9b7def"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 136,
+            "compiled_size": 140,
+            "different_bytes": 105,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+            "compiled_sha256": "7c24c87d5ddf66da8950f1db771c93edce43e7ba6913b4204956e6312794a665"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 136,
+            "compiled_size": 136,
+            "different_bytes": 16,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              11,
+              40,
+              43,
+              48,
+              100
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+            "compiled_sha256": "8b890f59312d22b2f04e1c1044aed0bc3b4eb62e09a5f47c80c25025ea96d7fe"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 136,
+            "compiled_size": 136,
+            "different_bytes": 12,
+            "first_different_offsets": [
+              4,
+              8,
+              40,
+              48,
+              100,
+              102,
+              103,
+              104
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+            "compiled_sha256": "db3f5197352a025b738a2836622b4350adda7652fcd64a6834db76eb9d9b7def"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x23da9c",
+          "word": "0xc0ae29a",
+          "delay_word": "0x8c440000",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_0023D998",
+            "address": "0x23d998",
+            "size": 304,
+            "file_offset": "0x13e998",
+            "sha256": "02e25225351d4806625499f9404d1738ad0056bfb2571eb863dc96b302838c38",
+            "terminal_jr": "0x23dac0",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0040",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x23dac8"
+          }
+        }
+      ],
+      "entry_reachability": "verified_direct_jal_reference",
+      "entry_reachability_evidence": {
+        "entry": "0x002B8A68",
+        "direct_j_or_jal": [
+          "0x0023DA9C"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      },
+      "preceding_complete_body": {
+        "name": "func_002B8A50",
+        "address": "0x2b8a50",
+        "size": 24,
+        "file_offset": "0x1b9a50",
+        "sha256": "18a05a0bed9cabe8ad6a2acf92083c2b08710d7efa94c17179de0b2c914cee49",
+        "terminal_jr": "0x2b8a60",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x8c820000",
+        "excluded_alignment_bytes": 0,
+        "next_entry": "0x2b8a68"
+      },
+      "local_branch_evidence": [
+        {
+          "instruction": "0x002B8AA8",
+          "target": "0x002B8AC8",
+          "word": "0x12000007",
+          "delay_word": "0x0220282D",
+          "likely": false
+        }
+      ],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x002B8A9C",
+          "target": "0x002AEC28",
+          "word": "0x0C0ABB0A",
+          "delay_word": "0x24040030"
+        },
+        {
+          "instruction": "0x002B8AC0",
+          "target": "0x002B8AF0",
+          "word": "0x0C0AE2BC",
+          "delay_word": "0x0200202D"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002B8A6C",
+          "word": "0x7FB10020",
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 32,
+          "size": 16,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8A70",
+          "word": "0x7FB20010",
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 16,
+          "size": 16,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8A78",
+          "word": "0xE7B60050",
+          "base_gpr": 29,
+          "source_register": 22,
+          "signed_offset": 80,
+          "size": 4,
+          "source_kind": "FPR"
+        },
+        {
+          "instruction": "0x002B8A80",
+          "word": "0xE7B50048",
+          "base_gpr": 29,
+          "source_register": 21,
+          "signed_offset": 72,
+          "size": 4,
+          "source_kind": "FPR"
+        },
+        {
+          "instruction": "0x002B8A88",
+          "word": "0xE7B40040",
+          "base_gpr": 29,
+          "source_register": 20,
+          "signed_offset": 64,
+          "size": 4,
+          "source_kind": "FPR"
+        },
+        {
+          "instruction": "0x002B8A90",
+          "word": "0x7FB00030",
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 48,
+          "size": 16,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8A98",
+          "word": "0xFFBF0000",
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "size": 8,
+          "source_kind": "GPR"
+        }
+      ],
+      "evidence": "Capture two opaque integer words and three incoming scalar floats before actual48B allocator call. Null allocation skips initializer and returns capturedNULL. Nonnull calls original full2B8AF0 with original inputs restored into GPR5/6 andf12/f13/f14, returns captured allocation regardless of incidental initializerv0. Sole external caller23D998 genuinely supplies resourceword/zero andthree0.0 floats then stores pointer at a record+10; source does not assume zeros or invent integer/floating lane conversions.",
+      "independent_review": "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+    },
+    {
+      "name": "func_002B8AF0",
+      "address": "0x002B8AF0",
+      "file_offset": "0x001B9AF0",
+      "size": 88,
+      "original_sha256": "3ecb75f5924e2e8f1ee3d6e107c814ed3d7a1da37c8c18947d0b22789ad31872",
+      "original_assembly": "build/functions/func_002B8AF0.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002B8B40",
+      "terminal_delay": "0x002B8B44",
+      "following_entry": "0x002B8B48",
+      "source": "src/game/render_records.c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 88,
+        "compiled_size": 64,
+        "different_bytes": 65,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3ecb75f5924e2e8f1ee3d6e107c814ed3d7a1da37c8c18947d0b22789ad31872",
+        "compiled_sha256": "c409d83777a5179d7798b39ceb3c0b6ab3e1c481610d73e98edcade9c6e47605"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 88,
+            "compiled_size": 64,
+            "different_bytes": 65,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3ecb75f5924e2e8f1ee3d6e107c814ed3d7a1da37c8c18947d0b22789ad31872",
+            "compiled_sha256": "c409d83777a5179d7798b39ceb3c0b6ab3e1c481610d73e98edcade9c6e47605"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 88,
+            "compiled_size": 64,
+            "different_bytes": 65,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3ecb75f5924e2e8f1ee3d6e107c814ed3d7a1da37c8c18947d0b22789ad31872",
+            "compiled_sha256": "c409d83777a5179d7798b39ceb3c0b6ab3e1c481610d73e98edcade9c6e47605"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 88,
+            "compiled_size": 64,
+            "different_bytes": 65,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3ecb75f5924e2e8f1ee3d6e107c814ed3d7a1da37c8c18947d0b22789ad31872",
+            "compiled_sha256": "c409d83777a5179d7798b39ceb3c0b6ab3e1c481610d73e98edcade9c6e47605"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x2b8ac0",
+          "word": "0xc0ae2bc",
+          "delay_word": "0x200202d",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_002B8A68",
+            "address": "0x2b8a68",
+            "size": 136,
+            "file_offset": "0x1b9a68",
+            "sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+            "terminal_jr": "0x2b8ae8",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0060",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x2b8af0"
+          }
+        }
+      ],
+      "entry_reachability": "verified_direct_jal_reference",
+      "entry_reachability_evidence": {
+        "entry": "0x002B8AF0",
+        "direct_j_or_jal": [
+          "0x002B8AC0"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      },
+      "preceding_complete_body": {
+        "name": "func_002B8A68",
+        "address": "0x2b8a68",
+        "size": 136,
+        "file_offset": "0x1b9a68",
+        "sha256": "0c9d6ec8c4a52b67400288934d2e9f450582f0a6661864bbb02095c41fc04303",
+        "terminal_jr": "0x2b8ae8",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0060",
+        "excluded_alignment_bytes": 0,
+        "next_entry": "0x2b8af0"
+      },
+      "local_branch_evidence": [],
+      "direct_call_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002B8AF0",
+          "word": "0xE48C0004",
+          "base_gpr": 4,
+          "source_register": 12,
+          "signed_offset": 4,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 4
+        },
+        {
+          "instruction": "0x002B8AF8",
+          "word": "0xE46D0004",
+          "base_gpr": 3,
+          "source_register": 13,
+          "signed_offset": 4,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 8,
+          "base_construction": "0x002B8AF4"
+        },
+        {
+          "instruction": "0x002B8AFC",
+          "word": "0xE46E0008",
+          "base_gpr": 3,
+          "source_register": 14,
+          "signed_offset": 8,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 12,
+          "base_construction": "0x002B8AF4"
+        },
+        {
+          "instruction": "0x002B8B00",
+          "word": "0xAC850020",
+          "base_gpr": 4,
+          "source_register": 5,
+          "signed_offset": 32,
+          "size": 4,
+          "source_kind": "GPR",
+          "effective_record_offset": 32
+        },
+        {
+          "instruction": "0x002B8B04",
+          "word": "0xAC860024",
+          "base_gpr": 4,
+          "source_register": 6,
+          "signed_offset": 36,
+          "size": 4,
+          "source_kind": "GPR",
+          "effective_record_offset": 36
+        },
+        {
+          "instruction": "0x002B8B08",
+          "word": "0xE48C0004",
+          "base_gpr": 4,
+          "source_register": 12,
+          "signed_offset": 4,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 4
+        },
+        {
+          "instruction": "0x002B8B0C",
+          "word": "0xAC800000",
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 0,
+          "size": 4,
+          "source_kind": "GPR",
+          "effective_record_offset": 0
+        },
+        {
+          "instruction": "0x002B8B10",
+          "word": "0xE46E0008",
+          "base_gpr": 3,
+          "source_register": 14,
+          "signed_offset": 8,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 12,
+          "base_construction": "0x002B8AF4"
+        },
+        {
+          "instruction": "0x002B8B14",
+          "word": "0xE46D0004",
+          "base_gpr": 3,
+          "source_register": 13,
+          "signed_offset": 4,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 8,
+          "base_construction": "0x002B8AF4"
+        },
+        {
+          "instruction": "0x002B8B20",
+          "word": "0xAC82001C",
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 28,
+          "size": 4,
+          "source_kind": "GPR",
+          "effective_record_offset": 28
+        },
+        {
+          "instruction": "0x002B8B34",
+          "word": "0xE4800010",
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 16,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 16
+        },
+        {
+          "instruction": "0x002B8B38",
+          "word": "0xE4600008",
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 8,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 24,
+          "base_construction": "0x002B8B24"
+        },
+        {
+          "instruction": "0x002B8B3C",
+          "word": "0xE4600004",
+          "base_gpr": 3,
+          "source_register": 0,
+          "signed_offset": 4,
+          "size": 4,
+          "source_kind": "FPR",
+          "effective_record_offset": 20,
+          "base_construction": "0x002B8B24"
+        },
+        {
+          "instruction": "0x002B8B44",
+          "word": "0xAC800028",
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 40,
+          "size": 4,
+          "source_kind": "GPR",
+          "effective_record_offset": 40
+        }
+      ],
+      "evidence": "Observed partial48B record: retain x/y/z stores before opaque20/24 words, duplicate x thenfield00zero, duplicatez/y, rawword1C80808080 andfloat1.0 stores10/18/14, finalword28zero in JR31delay. All11 first words explicitly written; reserved2C remains untouched. Full source keeps duplicate statements; compilers naturally optimize them, producing64B rather than88B, honestly nonexact. No aggregate zeroing, invented field semantics orGPU behavior.",
+      "independent_review": "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+    },
+    {
+      "name": "func_002B8B68",
+      "address": "0x002B8B68",
+      "file_offset": "0x001B9B68",
+      "size": 64,
+      "original_sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+      "original_assembly": "build/functions/func_002B8B68.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002B8BA0",
+      "terminal_delay": "0x002B8BA4",
+      "following_entry": "0x002B8BA8",
+      "source": "src/game/arena_ownership.c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 64,
+        "compiled_size": 60,
+        "different_bytes": 48,
+        "first_different_offsets": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+        "compiled_sha256": "da65e799d4dc6f470c77fc1fd54862145bc122eb853cdb9b3d79871a1a24f126"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 60,
+            "different_bytes": 48,
+            "first_different_offsets": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+            "compiled_sha256": "da65e799d4dc6f470c77fc1fd54862145bc122eb853cdb9b3d79871a1a24f126"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 56,
+            "different_bytes": 54,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+            "compiled_sha256": "9c33995c7072dbd43e11f7a95f51461540ec96f9ce0fb0d8d24793267b17f281"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 56,
+            "different_bytes": 54,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+            "compiled_sha256": "9c33995c7072dbd43e11f7a95f51461540ec96f9ce0fb0d8d24793267b17f281"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x154cf0",
+          "word": "0xc0ae2da",
+          "delay_word": "0x34845800",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00154CD8",
+            "address": "0x154cd8",
+            "size": 572,
+            "file_offset": "0x55cd8",
+            "sha256": "9122b97e6ad4208fe6e0b52550ae6b7f160f9e930f587415e4f13908658bd570",
+            "terminal_jr": "0x154f0c",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0030",
+            "excluded_alignment_bytes": 4,
+            "next_entry": "0x154f18"
+          }
+        }
+      ],
+      "entry_reachability": "verified_direct_jal_reference",
+      "entry_reachability_evidence": {
+        "entry": "0x002B8B68",
+        "direct_j_or_jal": [
+          "0x00154CF0"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": [
+          {
+            "function": "func_002CDFF0",
+            "lui_address": "0x002CE0EC",
+            "lower_address": "0x002CE19C",
+            "kind": "addiu"
+          }
+        ]
+      },
+      "preceding_complete_body": {
+        "name": "func_002B8B48",
+        "address": "0x2b8b48",
+        "size": 28,
+        "file_offset": "0x1b9b48",
+        "sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+        "terminal_jr": "0x2b8b5c",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0010",
+        "excluded_alignment_bytes": 4,
+        "next_entry": "0x2b8b68"
+      },
+      "local_branch_evidence": [],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x002B8B7C",
+          "target": "0x002AEC28",
+          "word": "0x0C0ABB0A",
+          "delay_word": "0xAE02D3E4"
+        },
+        {
+          "instruction": "0x002B8B90",
+          "target": "0x002B8EA8",
+          "word": "0x0C0AE3AA",
+          "delay_word": "0xAC62D3E0"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002B8B70",
+          "word": "0x7FB00010",
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 16,
+          "size": 16,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8B78",
+          "word": "0xFFBF0000",
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "size": 8,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8B80",
+          "word": "0xAE02D3E4",
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": -11292,
+          "size": 4,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8B94",
+          "word": "0xAC62D3E0",
+          "base_gpr": 3,
+          "source_register": 2,
+          "signed_offset": -11296,
+          "size": 4,
+          "source_kind": "GPR"
+        }
+      ],
+      "evidence": "Store originalcapacity toD3FD3E4 before actual allocator in JALdelay. Capture returnedbase then freshcapacity reload, publishD3FD3E0 in setupJALdelay and call genuine publishedarena initializer with capturedbase/freshcapacity. No allocation/null/failure guard or descriptor reset variation invented. Sole caller154CD8 passes0x25800 andignoresreturn.",
+      "independent_review": "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+    },
+    {
+      "name": "func_002B8BA8",
+      "address": "0x002B8BA8",
+      "file_offset": "0x001B9BA8",
+      "size": 52,
+      "original_sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+      "original_assembly": "build/functions/func_002B8BA8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x002B8BD4",
+      "terminal_delay": "0x002B8BD8",
+      "following_entry": "0x002B8BE0",
+      "source": "src/game/arena_ownership.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_complete_original_source_native_and_fresh_link_review_passed",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 52,
+        "compiled_size": 52,
+        "different_bytes": 26,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+        "compiled_sha256": "42c9f9aa9a72bc20c6a1ebde1fa19b19335145e621a63c74aa06befed1bdfdd5"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 56,
+            "different_bytes": 42,
+            "first_different_offsets": [
+              4,
+              7,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+            "compiled_sha256": "a8e0d6a9ff349306d7682acdd79b3d3ab8e3b1caef7c5d7917b363d1ce547f71"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 52,
+            "different_bytes": 26,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+            "compiled_sha256": "42c9f9aa9a72bc20c6a1ebde1fa19b19335145e621a63c74aa06befed1bdfdd5"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 52,
+            "different_bytes": 26,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+            "compiled_sha256": "42c9f9aa9a72bc20c6a1ebde1fa19b19335145e621a63c74aa06befed1bdfdd5"
+          }
+        }
+      },
+      "entry_references": [],
+      "entry_reachability": "unresolved_no_verified_incoming_reference",
+      "entry_reachability_evidence": {
+        "entry": "0x002B8BA8",
+        "direct_j_or_jal": [],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": [
+          {
+            "function": "func_002CDFF0",
+            "lui_address": "0x002CE0EC",
+            "lower_address": "0x002CE228",
+            "kind": "addiu"
+          }
+        ]
+      },
+      "preceding_complete_body": {
+        "name": "func_002B8B68",
+        "address": "0x2b8b68",
+        "size": 64,
+        "file_offset": "0x1b9b68",
+        "sha256": "685436fc990ff89aa3a5c136674b9fefbb424018d79f0ca10406112c5302c862",
+        "terminal_jr": "0x2b8ba0",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0020",
+        "excluded_alignment_bytes": 0,
+        "next_entry": "0x2b8ba8"
+      },
+      "local_branch_evidence": [],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x002B8BB8",
+          "target": "0x002AEE40",
+          "word": "0x0C0ABB90",
+          "delay_word": "0x8E04D3E0"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002B8BAC",
+          "word": "0x7FB00010",
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 16,
+          "size": 16,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8BB4",
+          "word": "0xFFBF0000",
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "size": 8,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8BC0",
+          "word": "0xAE00D3E0",
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": -11296,
+          "size": 4,
+          "source_kind": "GPR"
+        },
+        {
+          "instruction": "0x002B8BD0",
+          "word": "0xAC40D3E4",
+          "base_gpr": 2,
+          "source_register": 0,
+          "signed_offset": -11292,
+          "size": 4,
+          "source_kind": "GPR"
+        }
+      ],
+      "evidence": "Capture currentowner pointer in actual freeJALdelay, call existing genuine free binding unconditionally, then clearowner pointer beforecapacity. Preserve callback-visible changes to separatearena descriptor; no arena reset/free safety guard invented. No verified incoming reference; void result and reachability unclaimed.",
+      "independent_review": "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+    },
+    {
+      "name": "func_002B8BE0",
+      "address": "0x002B8BE0",
+      "file_offset": "0x001B9BE0",
+      "size": 28,
+      "original_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216",
+      "original_assembly": "build/functions/func_002B8BE0.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x002B8BF4",
+      "terminal_delay": "0x002B8BF8",
+      "following_entry": "0x002B8C00",
+      "source": "src/game/arena_ownership.c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "matched_full_linked_bytes_and_independent_review_passed",
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216",
+        "compiled_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 28,
+            "compiled_size": 28,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216",
+            "compiled_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 28,
+            "compiled_size": 8,
+            "different_bytes": 26,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216",
+            "compiled_sha256": "887f72beae5ee6068ee372b3c0156315eede10a0ce52c60f301266f1994192a2"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 28,
+            "compiled_size": 8,
+            "different_bytes": 26,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "280b33e1207f5b6831c751cfd8aef79e67560141dd393972dc545a0b625dc216",
+            "compiled_sha256": "887f72beae5ee6068ee372b3c0156315eede10a0ce52c60f301266f1994192a2"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x100464",
+          "word": "0xc0ae2f8",
+          "delay_word": "0xc60c2180",
+          "kind": "JAL",
+          "caller": {
+            "name": "func_00100370",
+            "address": "0x100370",
+            "size": 304,
+            "file_offset": "0x1370",
+            "sha256": "3913e38a43690293cc5e88c45e1735e0eaf3a15bf7a13dd1d5a06005bb1b2c10",
+            "terminal_jr": "0x100498",
+            "terminal_word": "0x3e00008",
+            "terminal_delay_word": "0x27bd0050",
+            "excluded_alignment_bytes": 0,
+            "next_entry": "0x1004a0"
+          }
+        }
+      ],
+      "entry_reachability": "verified_direct_jal_reference",
+      "entry_reachability_evidence": {
+        "entry": "0x002B8BE0",
+        "direct_j_or_jal": [
+          "0x00100464"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      },
+      "preceding_complete_body": {
+        "name": "func_002B8BA8",
+        "address": "0x2b8ba8",
+        "size": 52,
+        "file_offset": "0x1b9ba8",
+        "sha256": "02d499880d362cd17e8bc9f197d8e564685408c1befdb53eec8c9fdda55caedb",
+        "terminal_jr": "0x2b8bd4",
+        "terminal_word": "0x3e00008",
+        "terminal_delay_word": "0x27bd0020",
+        "excluded_alignment_bytes": 4,
+        "next_entry": "0x2b8be0"
+      },
+      "local_branch_evidence": [],
+      "direct_call_evidence": [
+        {
+          "instruction": "0x002B8BE8",
+          "target": "0x002B8EE8",
+          "word": "0x0C0AE3BA",
+          "delay_word": "0x00000000"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002B8BE4",
+          "word": "0xFFBF0000",
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "size": 8,
+          "source_kind": "GPR"
+        }
+      ],
+      "evidence": "Genuine28B startupwrapper invokes alreadypublished8B no-op. Sole caller100370 materializes f12 before call, but complete wrapper/no-op neither read it noruseitsmeaning, so no invented floating parameter. Caller ignoresv0. Full natural28B matchesgcc323;gcc29 honestlytailcalls8B andremainsnonmatching.",
+      "independent_review": "Author, research peer and parent completed all92 selected original instructions, full production C/headers/native/decoder/guards/proof scripts and all3 incoming caller bodies. Supporting published allocator/free/arena helpers were reviewed independently. Both independent reviewers reproduced all15 genuine whole links, entire metadata packet,886fixtures/43026original instructions,246561 warning-free native checks and9guards. BA8 incoming reachability and finite controlled-hook limits remain explicit."
+    }
+  ],
+  "direct_call_evidence": [
+    {
+      "instruction": "0x002B8A9C",
+      "target": "0x002AEC28",
+      "word": "0x0C0ABB0A",
+      "delay_word": "0x24040030"
+    },
+    {
+      "instruction": "0x002B8AC0",
+      "target": "0x002B8AF0",
+      "word": "0x0C0AE2BC",
+      "delay_word": "0x0200202D"
+    },
+    {
+      "instruction": "0x002B8B7C",
+      "target": "0x002AEC28",
+      "word": "0x0C0ABB0A",
+      "delay_word": "0xAE02D3E4"
+    },
+    {
+      "instruction": "0x002B8B90",
+      "target": "0x002B8EA8",
+      "word": "0x0C0AE3AA",
+      "delay_word": "0xAC62D3E0"
+    },
+    {
+      "instruction": "0x002B8BB8",
+      "target": "0x002AEE40",
+      "word": "0x0C0ABB90",
+      "delay_word": "0x8E04D3E0"
+    },
+    {
+      "instruction": "0x002B8BE8",
+      "target": "0x002B8EE8",
+      "word": "0x0C0AE3BA",
+      "delay_word": "0x00000000"
+    }
+  ],
+  "existing_helper_evidence": [
+    {
+      "address": "0x002AEC28",
+      "file_offset": "0x001AFC28",
+      "size": 168,
+      "original_sha256": "7eb1f8e7148efccc58f5df48fc3aa7b3dacab610be344bd07ebeed1b4f428fc3",
+      "original_assembly": "build/functions/func_002AEC28.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002AECC8",
+      "terminal_delay": "0x002AECCC",
+      "following_entry": "0x002AECD0",
+      "role": "Published genuine168B allocationgraph binding read fully; size/pointer resultABI andSQ/LQ callee-saved register16/17/18 preservation established. Controlled observation hookonly in scoped/native tests."
+    },
+    {
+      "address": "0x002AEE40",
+      "file_offset": "0x001AFE40",
+      "size": 28,
+      "original_sha256": "1982b0f91e1e2578e28850f9b802b0d16b979b453136bad0f2feea34f67ce270",
+      "original_assembly": "build/functions/func_002AEE40.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x002AEE54",
+      "terminal_delay": "0x002AEE58",
+      "following_entry": "0x002AEE60",
+      "role": "Published28B unconditionalheapfree forwarder; caller passescapturedpointer. Controlled observation hookonly; no genericfreeNULL/malformed pointer safety."
+    },
+    {
+      "address": "0x002B8EA8",
+      "file_offset": "0x001B9EA8",
+      "size": 64,
+      "original_sha256": "37af228b708f5ec09c9681144b3088788f97a24333310d7d5c0871f985d4f13b",
+      "original_assembly": "build/functions/func_002B8EA8.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002B8EE0",
+      "terminal_delay": "0x002B8EE4",
+      "following_entry": "0x002B8EE8",
+      "role": "Published64B completearena initializer original+productionC execute naturally in trace/native including actualresetcallback store andgenuine no-op."
+    },
+    {
+      "address": "0x002B8EE8",
+      "file_offset": "0x001B9EE8",
+      "size": 8,
+      "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "original_assembly": "build/functions/func_002B8EE8.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x002B8EE8",
+      "terminal_delay": "0x002B8EEC",
+      "following_entry": "0x002B8EF0",
+      "role": "Published8B complete no-op original+productionC execute; no callback parameter/read invented."
+    },
+    {
+      "address": "0x002B8B48",
+      "file_offset": "0x001B9B48",
+      "size": 28,
+      "original_sha256": "dbf51a451ea893e332af3ffde953e73502f050f95fc9b4cd3ef9a342f3002607",
+      "original_assembly": "build/functions/func_002B8B48.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x002B8B5C",
+      "terminal_delay": "0x002B8B60",
+      "following_entry": "0x002B8B68",
+      "role": "Existingpublished28B recordfree forwarder reusesexistingheap binding; excluded fromnewscope/count/source."
+    },
+    {
+      "address": "0x0023D998",
+      "file_offset": "0x0013E998",
+      "size": 304,
+      "original_sha256": "02e25225351d4806625499f9404d1738ad0056bfb2571eb863dc96b302838c38",
+      "original_assembly": "build/functions/func_0023D998.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x0023DAC0",
+      "terminal_delay": "0x0023DAC4",
+      "following_entry": "0x0023DAC8",
+      "role": "Complete304B actualcaller read for2GPR/3float capture+returnedpointer consumption."
+    },
+    {
+      "address": "0x00154CD8",
+      "file_offset": "0x00055CD8",
+      "size": 572,
+      "original_sha256": "9122b97e6ad4208fe6e0b52550ae6b7f160f9e930f587415e4f13908658bd570",
+      "original_assembly": "build/functions/func_00154CD8.s",
+      "excluded_alignment_bytes": 4,
+      "terminal_jr": "0x00154F0C",
+      "terminal_delay": "0x00154F10",
+      "following_entry": "0x00154F18",
+      "role": "Complete572B actualcaller read forcapacity0x25800 andignoredv0."
+    },
+    {
+      "address": "0x00100370",
+      "file_offset": "0x00001370",
+      "size": 304,
+      "original_sha256": "3913e38a43690293cc5e88c45e1735e0eaf3a15bf7a13dd1d5a06005bb1b2c10",
+      "original_assembly": "build/functions/func_00100370.s",
+      "excluded_alignment_bytes": 0,
+      "terminal_jr": "0x00100498",
+      "terminal_delay": "0x0010049C",
+      "following_entry": "0x001004A0",
+      "role": "Complete304B actualstartupcaller read; live f12 ignored bycompletewrapper/noop."
+    }
+  ],
+  "global_geometry": [
+    {
+      "name": "D_003FD3E0",
+      "address": "0x003FD3E0",
+      "size": 4,
+      "section": ".data",
+      "section_type": "SHT_PROGBITS",
+      "section_flags": 3,
+      "initializer_identity_claim": false
+    },
+    {
+      "name": "D_003FD3E4",
+      "address": "0x003FD3E4",
+      "size": 4,
+      "section": ".data",
+      "section_type": "SHT_PROGBITS",
+      "section_flags": 3,
+      "initializer_identity_claim": false
+    },
+    {
+      "name": "D_0046A0D8",
+      "address": "0x0046A0D8",
+      "size": 24,
+      "section": ".bss",
+      "section_type": "SHT_NOBITS",
+      "section_flags": 3,
+      "initializer_identity_claim": false
+    }
+  ],
+  "global_materializations": [
+    {
+      "high": "0x002B8B74",
+      "lower": "0x002B8B80",
+      "high_word": "0x3C100040",
+      "lower_word": "0xAE02D3E4",
+      "address": "0x003FD3E4",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    },
+    {
+      "high": "0x002B8B74",
+      "lower": "0x002B8B84",
+      "high_word": "0x3C100040",
+      "lower_word": "0x8E05D3E4",
+      "address": "0x003FD3E4",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    },
+    {
+      "high": "0x002B8B88",
+      "lower": "0x002B8B94",
+      "high_word": "0x3C030040",
+      "lower_word": "0xAC62D3E0",
+      "address": "0x003FD3E0",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    },
+    {
+      "high": "0x002B8BB0",
+      "lower": "0x002B8BBC",
+      "high_word": "0x3C100040",
+      "lower_word": "0x8E04D3E0",
+      "address": "0x003FD3E0",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    },
+    {
+      "high": "0x002B8BB0",
+      "lower": "0x002B8BC0",
+      "high_word": "0x3C100040",
+      "lower_word": "0xAE00D3E0",
+      "address": "0x003FD3E0",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    },
+    {
+      "high": "0x002B8BC4",
+      "lower": "0x002B8BD0",
+      "high_word": "0x3C020040",
+      "lower_word": "0xAC40D3E4",
+      "address": "0x003FD3E4",
+      "evidence": "Actual signed-carry load/store address; register3 immediatepair or callee-saved16 retained across genuine allocator/free whose completeSQ/LQ preservation reviewed."
+    }
+  ],
+  "instruction_built_literals": [
+    {
+      "bits": "0x80808080",
+      "high": "0x002B8B18",
+      "lower": "0x002B8B1C",
+      "sha256": "8d65a89d33fc69d31f85fd8ed396d6dd5672cd59f80bd2ced560d4bbaeb43222",
+      "kind": "Opaque recordword1C; packed color name only an inference, noGPU meaning claimed."
+    },
+    {
+      "bits": "0x3F800000",
+      "high": "0x002B8B28",
+      "mtc1": "0x002B8B2C",
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "kind": "Actual float1.0 materialized inFPR0 andstored10/18/14; no readonlytable/data copied."
+    }
+  ],
+  "entry_reachability_evidence": {
+    "scope": "Whole2949800-byte.text direct J/JAL scan; all aligned virtual-address words in file-backed allocated non-executing sections; complete same-inferred-body earlier-LUI plus ADDIU/ORI candidate scan, including different destination registers and signed ADDIU carry. Candidates are deliberately not filtered for overwrite/controlflow; they would not by themselves prove incoming computed calls.",
+    "sections": [
+      ".rendata",
+      ".data",
+      ".descriptors",
+      ".rodata",
+      ".gcc_except_table",
+      ".sdata"
+    ],
+    "limitations": "Does not exclude code pointers assembled by other arithmetic/data paths, crossing function boundaries, unaligned data fields, external dynamic initialization or computed/table dispatch. Complete body boundaries/semantic recovery are independently reviewed; runtime reachability remains unresolved without a verified incoming reference.",
+    "entries": {
+      "func_002B8A68": {
+        "entry": "0x002B8A68",
+        "direct_j_or_jal": [
+          "0x0023DA9C"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      },
+      "func_002B8AF0": {
+        "entry": "0x002B8AF0",
+        "direct_j_or_jal": [
+          "0x002B8AC0"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      },
+      "func_002B8B68": {
+        "entry": "0x002B8B68",
+        "direct_j_or_jal": [
+          "0x00154CF0"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": [
+          {
+            "function": "func_002CDFF0",
+            "lui_address": "0x002CE0EC",
+            "lower_address": "0x002CE19C",
+            "kind": "addiu"
+          }
+        ]
+      },
+      "func_002B8BA8": {
+        "entry": "0x002B8BA8",
+        "direct_j_or_jal": [],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": [
+          {
+            "function": "func_002CDFF0",
+            "lui_address": "0x002CE0EC",
+            "lower_address": "0x002CE228",
+            "kind": "addiu"
+          }
+        ]
+      },
+      "func_002B8BE0": {
+        "entry": "0x002B8BE0",
+        "direct_j_or_jal": [
+          "0x00100464"
+        ],
+        "aligned_allocated_nonexec_pointer_words": [],
+        "simple_same_body_lui_lower_candidates": []
+      }
+    }
+  },
+  "rejected_broad_candidates": [
+    {
+      "candidate_entry": "0x002B8B68",
+      "earlier_high": "0x002CE0EC",
+      "overwriting_high": "0x002CE194",
+      "lower": "0x002CE19C",
+      "earlier_word": "0x3C04002C",
+      "overwriting_word": "0x3C040045",
+      "lower_word": "0x24848B68",
+      "actual_constructed_address": "0x00448B68",
+      "containing_body": {
+        "address": "0x002CDFF0",
+        "file_offset": "0x001CEFF0",
+        "size": 724,
+        "original_sha256": "8ea7d70c82e484a1b1707bbf5c3bfa91dc4e653128e47e90ffb7727faf78a13b",
+        "original_assembly": "build/functions/func_002CDFF0.s",
+        "excluded_alignment_bytes": 4,
+        "terminal_jr": "0x002CE2BC",
+        "terminal_delay": "0x002CE2C0",
+        "following_entry": "0x002CE2C8"
+      },
+      "evidence": "Earlier LUI2C register4 is overwritten by actual LUI45 before lower4. This is readonlyname pointer construction to448B68/448BA8, not an incomingcode pointer. No root inferred from broad candidate."
+    },
+    {
+      "candidate_entry": "0x002B8BA8",
+      "earlier_high": "0x002CE0EC",
+      "overwriting_high": "0x002CE220",
+      "lower": "0x002CE228",
+      "earlier_word": "0x3C04002C",
+      "overwriting_word": "0x3C040045",
+      "lower_word": "0x24848BA8",
+      "actual_constructed_address": "0x00448BA8",
+      "containing_body": {
+        "address": "0x002CDFF0",
+        "file_offset": "0x001CEFF0",
+        "size": 724,
+        "original_sha256": "8ea7d70c82e484a1b1707bbf5c3bfa91dc4e653128e47e90ffb7727faf78a13b",
+        "original_assembly": "build/functions/func_002CDFF0.s",
+        "excluded_alignment_bytes": 4,
+        "terminal_jr": "0x002CE2BC",
+        "terminal_delay": "0x002CE2C0",
+        "following_entry": "0x002CE2C8"
+      },
+      "evidence": "Earlier LUI2C register4 is overwritten by actual LUI45 before lower4. This is readonlyname pointer construction to448B68/448BA8, not an incomingcode pointer. No root inferred from broad candidate."
+    }
+  ],
+  "shared_source_reuse": [
+    {
+      "path": "src/game/heap.c",
+      "sha256": "ad31b7b1b8f76abda8f91f1695179e3e7a239d30bb5e20aaa034f296cbe6c089"
+    },
+    {
+      "path": "include/george/heap.h",
+      "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+    },
+    {
+      "path": "src/game/arena_buffers.c",
+      "sha256": "d3ced8f0e6186d48c6120e034b9b114a16dbd588ccb5c45ce906e9780ae25ddd"
+    },
+    {
+      "path": "src/game/arena_buffers_template.h",
+      "sha256": "93250fa2b33b0f6e7127807c0de1eab16f20ec2b4a6e58aed7966f26c9630df5"
+    },
+    {
+      "path": "include/george/arena_buffers.h",
+      "sha256": "b1c775b111bbb3c27668bd949f002cbe2202312631875d8c86a1fd54b30c8229"
+    },
+    {
+      "path": "tools/trace_arena_buffers.py",
+      "sha256": "ce4f788c156840dea81d778c5c16dabeee0b4a1d7f5cf439b715854e6a1ed48a"
+    },
+    {
+      "path": "tools/trace_camera_motion.py",
+      "sha256": "41e31873a0e353b20c5f6d4c4701c4037c426ac27cfea7a0287262780cd5af23"
+    },
+    {
+      "path": "tools/trace_geometry.py",
+      "sha256": "884a01e61948a38e4bc78e992b9cac91a93f0e38dcae67610b591fad43194f73"
+    }
+  ],
+  "synthetic_fixture_evidence": {
+    "fixtures": 886,
+    "executed_original_instructions": 43026,
+    "maximum_instructions": 69,
+    "input_sha256": "096b06249be211f965b7719ebaad96791ca2f47b4342d46813a482d82755078c",
+    "header_sha256_lf": "d6d57da7f91cb403b38c900330f0e0bc19920aea65ba5c0a4fe9a4f7434057eb",
+    "header_sha256_crlf": "d47cdc17133920196ced52684dc934abd8d63aed3792ce738b21a7cf83534cfe",
+    "native_checks": 246561,
+    "guard_tests": 9,
+    "complete_word_comparisons_per_fixture": 264,
+    "event_word_count": 10,
+    "scope": "All5selected+2publishedhelper original bodies execute.886 authored finite fixtures cover captured2GPR/3floatinputs, negativezero/subnormal/largestfinite/rawcopymoves, shiftedrecordoutputs andopaqueargumentaliases, allocationfailure/nonnull, nestedselectedfree/startup calls, callbackglobalcapacity/base/arena mutations, originalcapacityfreshreload/unclearedreserved2C andpostfree clearorder. Losslessheader holds complete256-word5Ainitialfill+exactchangedwordpatches(max13),8globalwords,tenwordevents; native compares all256+2+6words. ActualproductionC in separateTUs, publishedarena init/noop execute; allocation/free hooks observationonly, neverclaimheap graph/MMI/OS/EEFCR/nonfinite/upperregister/timing or malformedpointer safety."
+  }
+}
