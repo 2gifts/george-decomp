@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import os
+import struct
 import subprocess
 from pathlib import Path
 
@@ -140,6 +141,64 @@ def mapped_data(function, original, sections):
     return mappings
 
 
+def mapped_bss(function, original, sections):
+    """Prove zero storage from original NOBITS geometry and actual code pointers."""
+    from link_match import MAX_NOBITS_SIZE
+    proofs = function.get("link_bss", {})
+    if not isinstance(proofs, dict):
+        raise ValueError("NOBITS proofs must be a dictionary")
+    result = {}
+    function_offset, function_size = number(function["file_offset"]), number(function["size"])
+    for name, proof in proofs.items():
+        required = {"address", "size", "zero_sha256", "original_section", "code_bindings"}
+        if not isinstance(proof, dict) or not required <= set(proof) or set(proof) - required - {"evidence"}:
+            raise ValueError("NOBITS requires complete memory geometry and code binding proof; file offsets are forbidden")
+        address, size = number(proof["address"]), number(proof["size"])
+        digest = proof["zero_sha256"]
+        if (type(address) is not int or type(size) is not int or not 0 <= address <= 0xFFFFFFFF
+                or not 0 < size <= MAX_NOBITS_SIZE or address + size > 0x100000000
+                or digest != hashlib.sha256(bytes(size)).hexdigest()):
+            raise ValueError("Invalid NOBITS zero initialization proof")
+        if not any(section["name"] == proof["original_section"]
+                   and section["type"] == "SHT_NOBITS" and section["flags"] == 3
+                   and section["address"] <= address and address + size <= section["address"] + section["size"]
+                   for section in sections):
+            raise ValueError("Mapped zero storage is not inside original allocated writable NOBITS")
+        pointers = proof["code_bindings"]
+        if not isinstance(pointers, list) or not pointers:
+            raise ValueError("NOBITS mapping requires original code pointer bindings")
+        seen = set()
+        for pointer in pointers:
+            if not isinstance(pointer, dict) or set(pointer) != {"hi_offset", "lo_offset", "relative_offset"}:
+                raise ValueError("Unsupported original NOBITS code binding proof")
+            hi, lo, relative = (number(pointer[key]) for key in ("hi_offset", "lo_offset", "relative_offset"))
+            if (any(type(value) is not int for value in (hi, lo, relative)) or hi & 3 or lo & 3
+                    or not 0 <= hi < lo <= function_size - 4 or lo - hi not in (4, 8)
+                    or not 0 <= relative < size
+                    or function_offset < 0 or function_offset + function_size > len(original)
+                    or (hi, lo) in seen):
+                raise ValueError("Original NOBITS code binding lies outside complete function/storage")
+            seen.add((hi, lo))
+            upper, lower = (struct.unpack_from("<I", original, function_offset + offset)[0] for offset in (hi, lo))
+            register = upper >> 16 & 31
+            if (upper >> 26 != 15 or (upper >> 21 & 31) or not register
+                    or lower >> 26 != 9 or (lower >> 21 & 31) != register or not (lower >> 16 & 31)):
+                raise ValueError("NOBITS original binding requires LUI and same-base ADDIU")
+            if lo - hi == 8:
+                middle = struct.unpack_from("<I", original, function_offset + hi + 4)[0]
+                opcode = middle >> 26
+                branch = (opcode in (2, 4, 5, 6, 7, 20, 21, 22, 23)
+                          or (opcode == 1 and (middle >> 16 & 31) in (0, 1, 2, 3)))
+                if middle and middle != 0x03E00008 and not branch:
+                    raise ValueError("Original NOBITS HI/LO proof crosses an unproven register write")
+            immediate = lower & 0xFFFF
+            target = (((upper & 0xFFFF) << 16) + (immediate - 0x10000 if immediate & 0x8000 else immediate)) & 0xFFFFFFFF
+            if target != address + relative:
+                raise ValueError("Original code pointer differs from NOBITS mapping")
+        result[name] = {"address": address, "size": size, "zero_sha256": digest}
+    return result
+
+
 def compiler_configuration(args):
     path = ROOT / "config/compiler_profiles.json"
     data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {
@@ -235,6 +294,9 @@ def main():
                               "size": section["sh_size"]} for section in elf.iter_sections()
                              if section["sh_type"] == "SHT_PROGBITS" and section["sh_flags"] & 2
                              and not section["sh_flags"] & 5]
+        nobits_sections = [{"name": section.name, "address": section["sh_addr"], "size": section["sh_size"],
+                            "type": section["sh_type"], "flags": section["sh_flags"]}
+                           for section in elf.iter_sections() if section["sh_type"] == "SHT_NOBITS"]
     for function in functions:
         validate_target_function(function, sections)
     configuration = compiler_configuration(args)
@@ -253,7 +315,8 @@ def main():
             compiler_profiles[profile_name] = prepare_compiler(configuration["profiles"][profile_name])
         setup = compiler_profiles[profile_name]
         profile = setup["profile"]
-        use_linker = bool(function.get("link", False) or function.get("link_symbols") or function.get("link_data"))
+        use_linker = bool(function.get("link", False) or function.get("link_symbols")
+                          or function.get("link_data") or function.get("link_bss"))
         chosen_flags = list(function.get("compile_flags", DEFAULT_FLAGS))
         if use_linker and "-ffunction-sections" not in chosen_flags:
             chosen_flags.append("-ffunction-sections")
@@ -283,12 +346,14 @@ def main():
         actual, relocations = compiled[key][symbol]
         linked_path = None
         mapping_report = []
+        bss_report = []
         if use_linker:
             from link_match import link_function
             mappings = mapped_data(function, original, readonly_sections)
+            bss_mappings = mapped_bss(function, original, nobits_sections)
             linked = link_function(ROOT / compiled_paths[key], symbol, number(function["address"]),
                                    symbol_bindings(function), ROOT / "build/linked" / function["name"],
-                                   mapped_sections=mappings)
+                                   mapped_sections=mappings, mapped_nobits=bss_mappings)
             for mapped in linked["mapped_sections"]:
                 expected_mapping = mappings[mapped["name"]]
                 if (mapped["data"] != expected_mapping["expected_bytes"]
@@ -296,6 +361,11 @@ def main():
                         or mapped["sha256"] != expected_mapping["expected_sha256"]):
                     raise ValueError(f"Linked mapped data changed: {mapped['name']}")
                 mapping_report.append({k: mapped[k] for k in ("name", "address", "size", "sha256")})
+            for mapped in linked["mapped_nobits"]:
+                expected_mapping = bss_mappings[mapped["name"]]
+                if any(mapped[key] != expected_mapping[key] for key in ("address", "size", "zero_sha256")):
+                    raise ValueError(f"Linked NOBITS geometry changed: {mapped['name']}")
+                bss_report.append({key: mapped[key] for key in ("name", "address", "size", "zero_sha256")})
             actual, relocations = linked["code"], linked["remaining_relocations"]
             linked_path = linked["linked_path"].relative_to(ROOT).as_posix()
         comparison = compare_function(expected, actual, relocations)
@@ -308,7 +378,7 @@ def main():
                         "object": compiled_paths[key], "compiled_symbol": symbol,
                         "linked_elf": linked_path,
                         "compiler_profile": profile_name, "compiler": setup["version"],
-                        "compiler_sha256": setup["sha256"], "mapped_data": mapping_report,
+                        "compiler_sha256": setup["sha256"], "mapped_data": mapping_report, "mapped_nobits": bss_report,
                         "compile_flags": list(flags), **comparison})
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)

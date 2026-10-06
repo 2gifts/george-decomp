@@ -17,7 +17,7 @@ unrelated semantics. Scanner candidates alone do not establish function names.
 
 These ten earlier verified functions were independently compiled or assembled,
 and their complete function bytes compared with the retail executable again.
-The GNU floating-point runtime batch below adds seventeen further verified C
+The GNU floating-point runtime batch below adds twenty-four further verified C
 functions from unchanged upstream source.
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
@@ -35,8 +35,8 @@ functions from unchanged upstream source.
 
 The 572 bytes of reused assembly remain separate from high-level C
 decompilation progress. The 504 bytes of compiled `fabsf`, `atoi`, `matherr`,
-`__errno`, `_localeconv_r`, `sinf`, and `tanf`, plus the 2,564 bytes of the GNU
-floating-point runtime batch below, total 3,068 bytes from 24 verified C functions.
+`__errno`, `_localeconv_r`, `sinf`, and `tanf`, plus the 3,264 bytes of the GNU
+floating-point runtime batch below, total 3,768 bytes from 31 verified C functions.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -450,7 +450,7 @@ sixteen complete constant identities from the pinned source files.
 
 ## GNU EE software floating-point runtime
 
-Seventeen directly referenced runtime functions now reproduce 2,564 complete
+Twenty-four complete runtime functions now reproduce 3,264 complete
 retail code bytes from one unchanged upstream C file, `src/runtime/fp_bit.c`.
 The source is pinned to the public GNU EE toolchain commit
 [`b595ded606227e93b8c4a447446c1d2ac093827d`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c).
@@ -482,16 +482,23 @@ integer/precision conversions without a floating-point exception-state API.
 | `litodp` | `0x003732A0` | 184 | Double |
 | `dptoli` | `0x00373358` | 148 | Double |
 | `dptoul` | `0x003733F0` | 160 | Double |
+| `__negdf2` | `0x00373490` | 56 | Double |
 | `__make_dp` | `0x003734C8` | 44 | Double |
 | `dptofp` | `0x003734F8` | 84 | Double |
 | `__pack_f` | `0x00373CA8` | 268 | Single |
 | `__unpack_f` | `0x00373DB8` | 144 | Single |
+| `fpadd` | `0x00374080` | 88 | Single |
+| `fpsub` | `0x003740D8` | 100 | Single |
 | `__fpcmp_parts_f` | `0x00374498` | 276 | Single |
+| `fpcmp` | `0x003745B0` | 76 | Single |
+| `sitofp` | `0x00374600` | 184 | Single |
+| `fptosi` | `0x003746B8` | 140 | Single |
 | `fptoui` | `0x00374748` | 152 | Single |
+| `__negsf2` | `0x003747E0` | 56 | Single |
 | `__make_fp` | `0x00374818` | 44 | Single |
 | `fptodp` | `0x00374848` | 64 | Single |
 
-Every entry has real original decoded direct `JAL` references. Each unchanged
+Seventeen entries have real original decoded direct `JAL` references. Each unchanged
 source symbol is compiled with the pinned `gcc29` profile, independently sized
 by its ELF `STT_FUNC` symbol, and genuinely linked at its original address with
 the established runtime bindings. The complete resulting bytes, including all
@@ -502,19 +509,30 @@ they do not identify the compiler used for every game translation unit.
 
 The preliminary disassembly heuristic merges some adjacent library functions.
 For example, its 216-byte region at `0x003733F0` contains the complete 160-byte
-`dptoul` followed by a separate 56-byte negate helper. Only `dptoul` is currently
-registered there. `__fpcmp_parts_f` occupies 276 bytes of the heuristic's larger
+`dptoul` followed by a separate 56-byte negate helper. Both independent
+functions are now registered with their own complete extents.
+`__fpcmp_parts_f` occupies 276 bytes of the heuristic's larger
 region at `0x00374498`. The manifest records the independently compiled
 complete function extents, decoded call entry proofs, original full hashes,
 and disjoint bounds; heuristic file length is not used as a function size.
+The seven functions without direct call references are established by complete
+independently compiled symbols, fresh original stack frames, matching entire
+linked bodies and source call graphs, adjacent independent function boundaries,
+and valid preceding/final return delays. Every local branch stays inside its
+function; zero alignment bytes are excluded explicitly. The negate helpers
+are bounded by the independently verified unsigned conversion and make
+functions. The single compare and signed conversion sequence sits between
+the exact parts comparator and unsigned conversion. The single add/subtract
+frames follow the observed parts-adder return at `0x00374074` with its delay
+at `0x00374078`, excluding zero padding at `0x0037407C`, and precede the
+multiply frame at `0x00374140`. Absence of a direct caller is recorded openly.
 
 Both double arithmetic wrappers call the same file-local parts adder at
 `0x00372A28`. Their per-function binding records that address and its proven
 position between the exact unpack and pack calls. That helper remains
-uncounted. The whole imported source also compiles other routines; their mere
-presence in an object does not award recovery or matching progress. Seven
-further exact symbol-sized candidates without direct call references remain
-outside the manifest pending independent boundary and entry review. The
+unmatched and is now represented in the reconstructed core batch below.
+The whole imported source also compiles other routines; their mere
+presence in an object does not award recovery or matching progress. The
 current batch needs no mapped constant sections or writable-data exception.
 
 Root independently checked all seventeen original complete-body hashes,
@@ -522,3 +540,54 @@ terminal returns and delay extents, every recorded direct-call entry, the
 unchanged source hash and complete linked comparisons. The full verifier
 reproduced all seventeen matches, and the hybrid build retained the retail
 executable SHA256 after their substitution.
+
+The six remaining authentic parts-addition, multiply and divide cores add
+3,032 represented original bytes from the same unchanged source. They are
+fully linked with no unresolved references, and all remain reconstructed.
+
+| Recovered label | Upstream compiled symbol | Original address | Complete original bytes | Linked comparison |
+| --- | --- | --- | ---: | --- |
+| `_fpadd_parts_d` | `_fpadd_parts` | `0x00372A28` | 576 | Same size, 120 differing bytes |
+| `dpmul` | `dpmul` | `0x00372D28` | 680 | Same size, 2 differing bytes |
+| `dpdiv` | `dpdiv` | `0x00372FD0` | 360 | Same size, 15 differing bytes |
+| `_fpadd_parts_f` | `_fpadd_parts` | `0x00373E48` | 564 | Compiled 572 bytes, 401 differing bytes |
+| `fpmul` | `fpmul` | `0x00374140` | 500 | Same size, 2 differing bytes |
+| `fpdiv` | `fpdiv` | `0x00374338` | 352 | Same size, 15 differing bytes |
+
+Every complete original graph was reviewed against the source: ordered NaN,
+infinity and zero classification, sticky mantissa shifts, signed-zero rules,
+cancellation and carry normalization, multiplication high/low products and
+128-bit carry combination, XOR signs, exponent offsets, long division,
+round-to-even guards and sticky remainders. Calls use the exact pack/unpack
+functions and the independently identified low64 multiplication helper.
+The single parts-adder ends at return `0x00374074` and delay `0x00374078`;
+the following zero alignment word and adjacent add/subtract/multiply/divide
+functions are excluded. The single multiply similarly excludes padding at
+`0x00374334`. `_d`/`_f` distinguish recovered labels for two file-local source
+copies; the unchanged source symbol remains `_fpadd_parts`.
+
+The cores reference the source's static zero-initialized NaN record. The
+double object has one complete 24-byte NOBITS section, bound to original
+memory `0x0048F290`; the single object has one complete 16-byte section at
+`0x0048F2A8`. Their exact 24-byte spacing and every original `LUI`/`ADDIU`
+pointer are checked, and both complete extents lie inside retail writable
+NOBITS `.bss`. The full zero-initialization digests are recorded in
+`link_bss` metadata. These memory sections have no initialized original file
+bytes and therefore have no fake file offsets or byte-identity data award.
+The [strict separate NOBITS linking path](linking.md) retains source symbols
+and genuinely links the whole unchanged sections with GNU `NOLOAD`, checking
+all geometry and referenced addends. No initialized bytes are fabricated,
+and the earlier read-only mapping rejection guards remain intact.
+
+The two-byte multiply differences are address temporary register choices:
+retail loads the NaN address upper half into `v0` before constructing `a0`,
+while the candidate constructs it directly in `a0`. The already supported
+GNU `-mdebuga` option was tested because it controls a related backend
+address-folding path, but it did not alter these bodies. No source changes,
+assembler rewrites or masked matches were substituted for full equality.
+
+Root independently verified the 24 complete fp-bit exact comparison records,
+the six core body hashes and return extents, unchanged upstream source hash,
+all recorded direct-call entries, each original NaN-record pointer pair and
+both complete NOBITS extents and zero digests. The 14 dedicated storage-linking
+tests passed alongside the existing tooling suite.

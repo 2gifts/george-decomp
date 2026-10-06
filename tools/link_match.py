@@ -3,6 +3,8 @@
 Explicit bindings refer to existing retail functions or globals. Optional local
 read-only mappings require exact expected bytes, their SHA-256, and fixed retail
 addresses; the caller separately proves those against the original executable.
+Separate local NOBITS mappings require complete zero-initialized section
+geometry; they never permit initialized writable data or relax read-only guards.
 No instruction or relocation bytes are masked, and unresolved references fail.
 """
 
@@ -29,6 +31,7 @@ SECTION = re.compile(r"\.[A-Za-z0-9_.$-]+\Z")
 SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 READONLY_FLAGS = 2 | 0x10 | 0x20 | 0x10000000  # ALLOC, MERGE, STRINGS, MIPS_GPREL.
 SELF_POINTER_POLICY = "self_r_mips_32"
+MAX_NOBITS_SIZE = 65536
 
 
 class LinkError(ValueError):
@@ -204,7 +207,50 @@ def _mapped_addends(relocations, symbols, mapped, code):
         raise LinkError("Unpaired HI16 relocation to mapped read-only data")
 
 
-def _inspect_function(object_path, symbol, address, bindings, mapped_sections=None):
+def _nobits_sections(values, elf, occupied_ranges):
+    """Retain only complete explicitly proven compiler-local zero storage."""
+    if values is None:
+        values = {}
+    if not isinstance(values, dict):
+        raise LinkError("NOBITS mappings must be a dictionary keyed by exact input section name")
+    result = {}
+    ranges = list(occupied_ranges)
+    for name, proof in values.items():
+        if not isinstance(name, str) or not SECTION.fullmatch(name) or not (name == ".bss" or name.startswith(".bss.")):
+            raise LinkError(f"Unsupported NOBITS section name: {name!r}")
+        if not isinstance(proof, dict) or set(proof) != {"address", "size", "zero_sha256"}:
+            raise LinkError("NOBITS mapping requires complete address/size/zero_sha256 proof only")
+        address = _address(proof["address"], f"NOBITS {name} address")
+        size, digest = proof["size"], proof["zero_sha256"]
+        if (type(size) is not int or not 0 < size <= MAX_NOBITS_SIZE or address + size > 0x100000000
+                or not isinstance(digest, str) or not SHA256.fullmatch(digest)
+                or hashlib.sha256(bytes(size)).hexdigest() != digest):
+            raise LinkError("Invalid complete NOBITS size/zero initialization digest")
+        matches = [(index, section) for index, section in enumerate(elf.iter_sections()) if section.name == name]
+        if len(matches) != 1:
+            raise LinkError(f"Missing or ambiguous NOBITS input section: {name}")
+        index, section = matches[0]
+        if (section["sh_type"] != "SHT_NOBITS" or section["sh_flags"] != 3
+                or section["sh_addr"] != 0 or section["sh_size"] != size
+                or section["sh_entsize"] != 0):
+            raise LinkError("NOBITS mapping requires a complete allocated writable NOBITS section")
+        alignment = section["sh_addralign"]
+        if alignment < 1 or alignment & (alignment - 1) or address % alignment:
+            raise LinkError("NOBITS section address conflicts with alignment")
+        for table in elf.iter_sections():
+            if isinstance(table, RelocationSection) and table["sh_info"] == index and table["sh_size"]:
+                raise LinkError("NOBITS storage cannot have data relocations")
+        ranges.append((address, address + size, name))
+        result[index] = {"name": name, "address": address, "size": size, "zero_sha256": digest,
+                         "alignment": alignment, "input_relocations": [],
+                         "output_section": f".george_nobits_{len(result)}"}
+    for previous, current in zip(sorted(ranges), sorted(ranges)[1:]):
+        if previous[1] > current[0]:
+            raise LinkError(f"NOBITS mapped address overlap: {previous[2]} and {current[2]}")
+    return result
+
+
+def _inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None):
     """Validate a target and plan symbol-only normalization, without invoking ld.
 
     Defined functions in other dedicated sections are changed to SHN_ABS in a
@@ -255,6 +301,11 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
             raise LinkError("Selected code section exceeds 32-bit address space")
         mapped = _mapped_sections(mapped_sections, elf, address, section["sh_size"], symbols,
                                   elf.get_section_index(".symtab"))
+        readonly = dict(mapped)
+        occupied = [(address, address + section["sh_size"], "selected code section")]
+        occupied.extend((item["address"], item["address"] + item["size"], item["name"]) for item in mapped.values())
+        nobits = _nobits_sections(mapped_nobits, elf, occupied)
+        mapped.update(nobits)
         used_mappings = set()
         if any(index != target_index and item["st_info"]["type"] == "STT_FUNC"
                and item["st_shndx"] == section_index for index, item in enumerate(symbols)):
@@ -309,6 +360,8 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
                         or value + item["st_size"] > mapping["size"]
                         or (item["st_info"]["type"] == "STT_SECTION" and value != 0)):
                     raise LinkError(f"Invalid symbol bounds/type in mapped read-only section: {name!r}")
+                if location in nobits and item["st_info"]["bind"] != "STB_LOCAL":
+                    raise LinkError("NOBITS mapping accepts only bounded compiler-local data symbols")
                 mapped_address = mapping["address"] + value
                 if name in bindings and bindings[name] != mapped_address:
                     raise LinkError(f"Binding {name} conflicts with fixed mapped section address")
@@ -377,13 +430,13 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
                 "object_sha256": object_hash,
                 "symbol_table_offset": symtab["sh_offset"], "symbol_patches": patches,
                 "assignments": assignments, "resolved_bindings": resolved, "input_relocations": relocations,
-                "mapped_sections": list(mapped.values())}
+                "mapped_sections": list(readonly.values()), "mapped_nobits": list(nobits.values())}
 
 
-def inspect_function(object_path, symbol, address, bindings, mapped_sections=None):
+def inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None):
     """Plan strict original-address linking; malformed ELF input is rejected."""
     try:
-        return _inspect_function(object_path, symbol, address, bindings, mapped_sections)
+        return _inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits)
     except (ELFError, struct.error) as error:
         raise LinkError(f"Malformed input ELF: {error}") from error
 
@@ -403,7 +456,7 @@ def _linker(binutils):
 
 
 def link_function(object_path, symbol, address, bindings, output_dir, binutils=DEFAULT_BINUTILS,
-                  mapped_sections=None):
+                  mapped_sections=None, mapped_nobits=None):
     """Return exact linked bytes and audit artifacts, or raise LinkError.
 
     The return dict contains code, remaining_relocations, linked_path,
@@ -416,9 +469,12 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     the whole data proof is then checked against actual GNU ld output. Returned
     mapped_sections includes actual linked data, address, size and SHA-256 for
     the caller's independent comparison against the original read-only data.
+    Separate mapped_nobits={section_name:{address,size,zero_sha256}} retains a
+    complete compiler-local zero-initialized NOBITS section with GNU NOLOAD.
+    The caller independently proves its original memory geometry and bindings.
     """
     object_path = Path(object_path).resolve()
-    plan = inspect_function(object_path, symbol, address, bindings, mapped_sections)
+    plan = inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits)
     linker = _linker(binutils)
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -440,6 +496,8 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     lines.extend(["SECTIONS {", f'  .text 0x{address:08X} : {{ KEEP(*("{plan["section"]}")) }}'])
     for mapping in plan["mapped_sections"]:
         lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
+    for mapping in plan["mapped_nobits"]:
+        lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} (NOLOAD) : {{ KEEP(*("{mapping["name"]}")) }}')
     lines.extend(["  /DISCARD/ : { *(*) }", "}"])
     script.write_text("\n".join(lines) + "\n", encoding="ascii")
     linked = work / "function.elf"
@@ -448,7 +506,7 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     process = subprocess.run(command, capture_output=True, text=True)
     if process.returncode:
         raise LinkError("GNU PS2 link failed:\n" + (process.stderr + process.stdout)[-6000:])
-    remaining, linked_mappings = [], []
+    remaining, linked_mappings, linked_nobits = [], [], []
     with linked.open("rb") as stream:
         elf = ELFFile(stream)
         _format(elf, "ET_EXEC")
@@ -471,7 +529,15 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
                 raise LinkError(f"Linked mapped section differs from fixed original proof: {mapping['name']}")
             actual = section.data()
             linked_mappings.append({**mapping, "data": actual, "sha256": hashlib.sha256(actual).hexdigest()})
-        expected_allocated = {".text", *(mapping["output_section"] for mapping in plan["mapped_sections"])}
+        for mapping in plan["mapped_nobits"]:
+            section = elf.get_section_by_name(mapping["output_section"])
+            if (section is None or section["sh_type"] != "SHT_NOBITS" or section["sh_flags"] != 3
+                    or section["sh_addr"] != mapping["address"] or section["sh_size"] != mapping["size"]
+                    or section["sh_addralign"] != mapping["alignment"] or section["sh_entsize"] != 0):
+                raise LinkError(f"Linked NOBITS storage differs from complete original proof: {mapping['name']}")
+            linked_nobits.append(dict(mapping))
+        expected_allocated = {".text", *(mapping["output_section"] for mapping in plan["mapped_sections"]),
+                              *(mapping["output_section"] for mapping in plan["mapped_nobits"])}
         if any(section["sh_flags"] & 2 and section.name not in expected_allocated for section in elf.iter_sections()):
             raise LinkError("Unexpected allocated output section")
         for section in elf.iter_sections():
@@ -484,4 +550,4 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     return {"code": code, "remaining_relocations": remaining, "linked_path": linked, "script_path": script,
             "object_path": normalized, "address": address, "size": plan["size"],
             "resolved_bindings": plan["resolved_bindings"], "input_relocations": plan["input_relocations"],
-            "mapped_sections": linked_mappings}
+            "mapped_sections": linked_mappings, "mapped_nobits": linked_nobits}

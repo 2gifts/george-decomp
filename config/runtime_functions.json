@@ -2917,6 +2917,1040 @@
           "compiled_sha256": "90845880ee36da0bf73f680d9b4e167faf8111964a7ee813b753d3b79c66513a"
         }
       ]
+    },
+    {
+      "name": "__negdf2",
+      "address": "0x00373490",
+      "file_offset": "0x00274490",
+      "size": 56,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "5e9349f97f079d2421dc020f5914fd1720f89f38b8c9f2776cb55e7828570ff5",
+      "upstream_symbol": "__negdf2",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 56,
+        "previous": {
+          "name": "dptoul",
+          "address": "0x3733f0",
+          "size": 160,
+          "return_address": "0x373488",
+          "delay_address": "0x37348c",
+          "padding_bytes": 0
+        },
+        "next": {
+          "name": "__make_dp",
+          "address": "0x3734c8",
+          "padding_bytes": 0
+        },
+        "return_address": "0x3734c0",
+        "delay_address": "0x3734c4"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": true,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "5e9349f97f079d2421dc020f5914fd1720f89f38b8c9f2776cb55e7828570ff5",
+          "compiled_sha256": "5e9349f97f079d2421dc020f5914fd1720f89f38b8c9f2776cb55e7828570ff5"
+        }
+      ]
+    },
+    {
+      "name": "fpadd",
+      "address": "0x00374080",
+      "file_offset": "0x00275080",
+      "size": 88,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "fab9fd944b0f02605435faaab826dc1eb98e754d3ae6f51370aa166e1c40f81e",
+      "upstream_symbol": "fpadd",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 88,
+        "previous": {
+          "name": "_fpadd_parts(single)",
+          "address": "0x373e48",
+          "size": 564,
+          "return_address": "0x374074",
+          "delay_address": "0x374078",
+          "padding_bytes": 4
+        },
+        "next": {
+          "name": "fpsub",
+          "address": "0x3740d8",
+          "padding_bytes": 0
+        },
+        "return_address": "0x3740d0",
+        "delay_address": "0x3740d4"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 88,
+          "compiled_size": 88,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "fab9fd944b0f02605435faaab826dc1eb98e754d3ae6f51370aa166e1c40f81e",
+          "compiled_sha256": "fab9fd944b0f02605435faaab826dc1eb98e754d3ae6f51370aa166e1c40f81e"
+        }
+      ],
+      "link_symbols": {
+        "_fpadd_parts": {
+          "address": "0x00373E48",
+          "evidence": "Complete exact single add/sub wrappers both call this file-local parts adder between exact unpack and pack functions. Its full classification/sign/normalization graph agrees with unchanged upstream source. Helper extent ends at JR374074/delay374078 and excludes zero alignment37407C; helper itself is not yet counted as matched."
+        }
+      }
+    },
+    {
+      "name": "fpsub",
+      "address": "0x003740D8",
+      "file_offset": "0x002750D8",
+      "size": 100,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "d79e88551bd0a6f69e4ef8fc5831acf79e104a154c77ecccdd41b1641781df68",
+      "upstream_symbol": "fpsub",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 100,
+        "previous": {
+          "name": "fpadd",
+          "address": "0x374080",
+          "size": 88,
+          "return_address": "0x3740d0",
+          "delay_address": "0x3740d4",
+          "padding_bytes": 0
+        },
+        "next": {
+          "name": "fpmul",
+          "address": "0x374140",
+          "padding_bytes": 4
+        },
+        "return_address": "0x374134",
+        "delay_address": "0x374138"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 100,
+          "compiled_size": 100,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "d79e88551bd0a6f69e4ef8fc5831acf79e104a154c77ecccdd41b1641781df68",
+          "compiled_sha256": "d79e88551bd0a6f69e4ef8fc5831acf79e104a154c77ecccdd41b1641781df68"
+        }
+      ],
+      "link_symbols": {
+        "_fpadd_parts": {
+          "address": "0x00373E48",
+          "evidence": "Complete exact single add/sub wrappers both call this file-local parts adder between exact unpack and pack functions. Its full classification/sign/normalization graph agrees with unchanged upstream source. Helper extent ends at JR374074/delay374078 and excludes zero alignment37407C; helper itself is not yet counted as matched."
+        }
+      }
+    },
+    {
+      "name": "fpcmp",
+      "address": "0x003745B0",
+      "file_offset": "0x002755B0",
+      "size": 76,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "77f09084829783f37609aa9ea5b78bb3a642acbb322b65b1217609b731887d40",
+      "upstream_symbol": "fpcmp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 76,
+        "previous": {
+          "name": "__fpcmp_parts_f",
+          "address": "0x374498",
+          "size": 276,
+          "return_address": "0x3745a4",
+          "delay_address": "0x3745a8",
+          "padding_bytes": 4
+        },
+        "next": {
+          "name": "sitofp",
+          "address": "0x374600",
+          "padding_bytes": 4
+        },
+        "return_address": "0x3745f4",
+        "delay_address": "0x3745f8"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 76,
+          "compiled_size": 76,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "77f09084829783f37609aa9ea5b78bb3a642acbb322b65b1217609b731887d40",
+          "compiled_sha256": "77f09084829783f37609aa9ea5b78bb3a642acbb322b65b1217609b731887d40"
+        }
+      ]
+    },
+    {
+      "name": "sitofp",
+      "address": "0x00374600",
+      "file_offset": "0x00275600",
+      "size": 184,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "a27e36ea4790be5b01736d44f87213a75432ff0df827f97df073f29e7af8b1e7",
+      "upstream_symbol": "sitofp",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 184,
+        "previous": {
+          "name": "fpcmp",
+          "address": "0x3745b0",
+          "size": 76,
+          "return_address": "0x3745f4",
+          "delay_address": "0x3745f8",
+          "padding_bytes": 4
+        },
+        "next": {
+          "name": "fptosi",
+          "address": "0x3746b8",
+          "padding_bytes": 0
+        },
+        "return_address": "0x3746b0",
+        "delay_address": "0x3746b4"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 184,
+          "compiled_size": 184,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "a27e36ea4790be5b01736d44f87213a75432ff0df827f97df073f29e7af8b1e7",
+          "compiled_sha256": "a27e36ea4790be5b01736d44f87213a75432ff0df827f97df073f29e7af8b1e7"
+        }
+      ]
+    },
+    {
+      "name": "fptosi",
+      "address": "0x003746B8",
+      "file_offset": "0x002756B8",
+      "size": 140,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "db5215c54fe66e64c648ca34722a8faa8df8a3eabcd190335eaa1de1103cb076",
+      "upstream_symbol": "fptosi",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 140,
+        "previous": {
+          "name": "sitofp",
+          "address": "0x374600",
+          "size": 184,
+          "return_address": "0x3746b0",
+          "delay_address": "0x3746b4",
+          "padding_bytes": 0
+        },
+        "next": {
+          "name": "fptoui",
+          "address": "0x374748",
+          "padding_bytes": 4
+        },
+        "return_address": "0x37473c",
+        "delay_address": "0x374740"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 140,
+          "compiled_size": 140,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "db5215c54fe66e64c648ca34722a8faa8df8a3eabcd190335eaa1de1103cb076",
+          "compiled_sha256": "db5215c54fe66e64c648ca34722a8faa8df8a3eabcd190335eaa1de1103cb076"
+        }
+      ]
+    },
+    {
+      "name": "__negsf2",
+      "address": "0x003747E0",
+      "file_offset": "0x002757E0",
+      "size": 56,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "8970d5101a863d6b0d50b2016f8ef69d5e60502016971b68bf94d2b5bce77f88",
+      "upstream_symbol": "__negsf2",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete independently compiled authentic GNU EE fp-bit.c symbol body, genuinely linked with established runtime bindings, matches every retail byte including relocations and return delay. Unchanged pinned source and original license/runtime exception preserved. No instruction/data edits or wildcard comparison.",
+      "boundary_evidence": "Original heuristic merged adjacent runtime functions. This entry is established independently by its complete compiled STT_FUNC symbol extent, fresh stack frame, source-defined role, complete exact linked body, preceding and following independent source-symbol boundaries, valid preceding and final JR/return delays, no inter-function branch flow, disjoint bounds and explicitly excluded zero padding. Direct JAL reference is absent and is not claimed.",
+      "entry_proof": {
+        "kind": "independent_upstream_function_symbol_and_original_boundaries",
+        "direct_jal_references": 0,
+        "independent_compiled_symbol_size": 56,
+        "previous": {
+          "name": "fptoui",
+          "address": "0x374748",
+          "size": 152,
+          "return_address": "0x3747d8",
+          "delay_address": "0x3747dc",
+          "padding_bytes": 0
+        },
+        "next": {
+          "name": "__make_fp",
+          "address": "0x374818",
+          "padding_bytes": 0
+        },
+        "return_address": "0x374810",
+        "delay_address": "0x374814"
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": true,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "8970d5101a863d6b0d50b2016f8ef69d5e60502016971b68bf94d2b5bce77f88",
+          "compiled_sha256": "8970d5101a863d6b0d50b2016f8ef69d5e60502016971b68bf94d2b5bce77f88"
+        }
+      ]
+    },
+    {
+      "name": "_fpadd_parts_d",
+      "address": "0x372a28",
+      "file_offset": "0x273a28",
+      "size": 576,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "94f1771b2cd5f20d3fac264f1c462f31b4ad30d144d52603fdceec6bfb9fe93a",
+      "upstream_symbol": "_fpadd_parts",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Complete parts addition graph: ordered NaN/infinity/zero handling, signed-zero AND and24-byte copy, difference64 cutoff, repeated sticky shifts of smaller mantissa, signed subtraction/addition, absolute magnitude, cancellation normalization, guard-width masks and carry normalization. Original24-byte static NaN record is independently proven in zero storage. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": false,
+          "expected_size": 576,
+          "compiled_size": 576,
+          "different_bytes": 120,
+          "first_different_offsets": [
+            48,
+            76,
+            78,
+            79,
+            80,
+            82,
+            83,
+            84
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "94f1771b2cd5f20d3fac264f1c462f31b4ad30d144d52603fdceec6bfb9fe93a",
+          "compiled_sha256": "433d98c90361305d87f0d8999c0a6fa232096d221e22de56ea5f19a0cc9fd58a"
+        }
+      ],
+      "compiled_symbol": "_fpadd_parts",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f290",
+          "size": 24,
+          "zero_sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x4c",
+              "lo_offset": "0x54",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x372a28"
+      }
+    },
+    {
+      "name": "dpmul",
+      "address": "0x372d28",
+      "file_offset": "0x273d28",
+      "size": 680,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
+      "upstream_symbol": "dpmul",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Complete double multiplication graph: two exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, four muldi3 low32/upper32 products with 128-bit carry combination, exponent sum+4, normalization loops carrying high/low mantissa bits, guard0xFF tie0x80 rounding and low-half sticky condition, then exact pack. All680 bytes genuinely linked; two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": false,
+          "expected_size": 680,
+          "compiled_size": 680,
+          "different_bytes": 2,
+          "first_different_offsets": [
+            158,
+            166
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
+          "compiled_sha256": "877193ebce8587ee83a86a374c2b6c1a332e5bdbbf30c86739cbd86b78014c02"
+        }
+      ],
+      "compiled_symbol": "dpmul",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f290",
+          "size": 24,
+          "zero_sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x9c",
+              "lo_offset": "0xa4",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x372a28"
+      }
+    },
+    {
+      "name": "dpdiv",
+      "address": "0x372fd0",
+      "file_offset": "0x273fd0",
+      "size": 360,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
+      "upstream_symbol": "dpdiv",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS"
+      ],
+      "link": true,
+      "evidence": "Complete double division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<60, guard0xFF tie0x80 rounding/sticky remainder and exact pack. Complete360-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS"
+          ],
+          "identical": false,
+          "expected_size": 360,
+          "compiled_size": 360,
+          "different_bytes": 15,
+          "first_different_offsets": [
+            124,
+            125,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
+          "compiled_sha256": "1ae145981cc5f4540e8de4f66b585884d692dfbd8bbbfdc52c0223553abdcd44"
+        }
+      ],
+      "compiled_symbol": "dpdiv",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f290",
+          "size": 24,
+          "zero_sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x84",
+              "lo_offset": "0x8c",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x372a28"
+      }
+    },
+    {
+      "name": "_fpadd_parts_f",
+      "address": "0x373e48",
+      "file_offset": "0x274e48",
+      "size": 564,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "6bfddf7352c9e446fa9cccf5ba482803f0be435a1f686b3bba05a6d5a05bb7b5",
+      "upstream_symbol": "_fpadd_parts",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete single parts addition graph: ordered NaN/infinity/zero handling, signed-zero AND and16-byte copy, difference32 cutoff, repeated sticky shifts, signed mantissa subtraction/addition, magnitude/cancellation normalization, 0x3FFFFFFE masks and carry normalization. Return374074/delay374078 excludes following zero37407C. Original16-byte static NaN record independently proven in zero storage. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": false,
+          "expected_size": 564,
+          "compiled_size": 572,
+          "different_bytes": 401,
+          "first_different_offsets": [
+            48,
+            76,
+            78,
+            79,
+            80,
+            82,
+            83,
+            84
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6bfddf7352c9e446fa9cccf5ba482803f0be435a1f686b3bba05a6d5a05bb7b5",
+          "compiled_sha256": "9f60bda6c975e4398fbf22c28f341d4c8395b053cfcf37d65f6baadeb6c62f03"
+        }
+      ],
+      "compiled_symbol": "_fpadd_parts",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f2a8",
+          "size": 16,
+          "zero_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x4c",
+              "lo_offset": "0x54",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x373e48"
+      }
+    },
+    {
+      "name": "fpmul",
+      "address": "0x374140",
+      "file_offset": "0x275140",
+      "size": 500,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
+      "upstream_symbol": "fpmul",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete single multiplication graph: exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, signed64 product of32-bit fractions, high/low product words, exponent sum+2, bit-carry normalization, guard0x7F tie0x40 rounding and low-half sticky condition, then exact pack. Original500-byte extent excludes following zero374334. Two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": false,
+          "expected_size": 500,
+          "compiled_size": 500,
+          "different_bytes": 2,
+          "first_different_offsets": [
+            130,
+            138
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
+          "compiled_sha256": "2245b17e811c9f78ae3dd3d545912de8fe952cf20cf946046a4a769aab03f2ad"
+        }
+      ],
+      "compiled_symbol": "fpmul",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f2a8",
+          "size": 16,
+          "zero_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x80",
+              "lo_offset": "0x88",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x373e48"
+      }
+    },
+    {
+      "name": "fpdiv",
+      "address": "0x374338",
+      "file_offset": "0x275338",
+      "size": 352,
+      "source": "src/runtime/fp_bit.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
+      "upstream_symbol": "fpdiv",
+      "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/fp-bit.c",
+      "upstream_license": "GPL-2.0-or-later with original unlimited-link runtime permission and GCC linking exception; both original notices retained in unchanged source and LICENSES/GCC-fp-bit-exception.txt, full GPL in LICENSES/GPL-2.0.txt.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DUS_SOFTWARE_GOFAST",
+        "-DFLOAT_BIT_ORDER_MISMATCH",
+        "-DNO_DENORMALS",
+        "-DFLOAT"
+      ],
+      "link": true,
+      "evidence": "Complete single division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<30, guard0x7F tie0x40 rounding/sticky remainder and exact pack. Complete352-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT"
+          ],
+          "identical": false,
+          "expected_size": 352,
+          "compiled_size": 352,
+          "different_bytes": 15,
+          "first_different_offsets": [
+            124,
+            125,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
+          "compiled_sha256": "c9b72053f63cdc23521d31195bc2161f6935c60bedb7a55f672b904f5e8e7c6f"
+        }
+      ],
+      "compiled_symbol": "fpdiv",
+      "link_bss": {
+        ".bss": {
+          "address": "0x48f2a8",
+          "size": 16,
+          "zero_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+          "original_section": ".bss",
+          "code_bindings": [
+            {
+              "hi_offset": "0x84",
+              "lo_offset": "0x8c",
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Actual original LUI/ADDIU pair loads this complete source static zero-initialized NaN record. Both record extents fit retail writable NOBITS .bss; single follows double by exactly24bytes."
+        }
+      },
+      "link_symbols": {
+        "_fpadd_parts": "0x373e48"
+      }
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

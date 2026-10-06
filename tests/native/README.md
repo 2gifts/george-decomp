@@ -82,6 +82,23 @@ Run it with `--harness rotation`. Its 74 finite synthetic alias fixtures
 reproduce from `tools/trace_rotation.py`; see `docs/rotation.md` for the bounded
 reference and EE precision/FCR limits.
 
+The scalar matrix harness passes 3,245 checks for callback captures, shifted
+input/output aliases, live position reloads and axis builders. Run it with
+`--harness matrix_scalar`. Sixty synthetic instruction-derived fixtures check
+all initialized words; regeneration and limits are in `docs/matrix_scalar.md`.
+
 Run `tests/native/run_goal_methods5.py` for the route/reference batch's 169
 checks, including persistent scoring flags, signed route modes, NaN timers,
 wide member adjustments and callback mutations. See `docs/goal_methods5.md`.
+
+The byte-order harness passes 146,760 checks for exhaustive halfwords, raw word
+encodings, finite float bit conversion, fixed counts, untouched storage, shifted
+forward overlaps and wrapped products. Run it with `--harness byte_order`.
+Float argument/return and float-store tests avoid nonfinite encodings because
+the native x87 ABI can quiet signaling NaNs. See `docs/byte_order.md`.
+
+The cache-transfer harness passes 12,540 checks for key hits/holes, every cursor
+slot, strict unsigned overlap endpoints, zero lengths, wrapped rounding and
+callback-mutated globals. Run it with `--harness cache_transfer`. Its controlled
+copy substitute records the original numeric destination and argument sequence
+without emulating or dereferencing physical memory. See `docs/cache_transfer.md`.

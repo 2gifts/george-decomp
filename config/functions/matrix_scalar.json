@@ -1,0 +1,1156 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Nine complete independently instruction-reviewed scalar matrix C bodies cover1684 original bytes. All27 original-address comparisons fully link; row-dot148B and transpose64B match under pinned GCC29.",
+    "Existing matrix/vector types and custom engine trig entries are reused. The two axis-angle builders share one inline ordinary C expression preserving distinct trailing stores. No VU-macro or full EE exceptional arithmetic claim is included.",
+    "Native32-bit harness passes3245 checks, including60 finite instruction-derived synthetic fixtures, untouched memory, all shifted row-dot/transpose aliases, callbacks changing axis angle/components, post-matrix position aliases, three-axis callback order and identity."
+  ],
+  "functions": [
+    {
+      "name": "func_002A1CE0",
+      "address": "0x002A1CE0",
+      "file_offset": "0x001A2CE0",
+      "size": 148,
+      "source": "src/game/matrix_scalar.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 148,
+        "compiled_size": 148,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366",
+        "compiled_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 148,
+            "compiled_size": 132,
+            "different_bytes": 102,
+            "first_different_offsets": [
+              2,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              17
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366",
+            "compiled_sha256": "572fa7d8d02604faa2a58ae9a2151fc8ecfa450c32a0bf7d0a65023604fb6dee"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 148,
+            "compiled_size": 148,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366",
+            "compiled_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 148,
+            "compiled_size": 148,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366",
+            "compiled_sha256": "4e020f3e6817fbb150dd8558d4581422a4559de20dc5b006045c57282a0fb366"
+          }
+        }
+      },
+      "evidence": "Three scalar row dots with fresh input/matrix loads after each output store; shifted aliases retained.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A1D70; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A1FD8",
+      "address": "0x002A1FD8",
+      "file_offset": "0x001A2FD8",
+      "size": 256,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a026a82f940b4f521010e5d254ad25b3e7f51c6f6937280246db000b34336792",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 256,
+        "compiled_size": 256,
+        "different_bytes": 151,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          10,
+          13,
+          14,
+          21,
+          22
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "a026a82f940b4f521010e5d254ad25b3e7f51c6f6937280246db000b34336792",
+        "compiled_sha256": "daa86b5654ac9b4a5803fb4cf30b6809abbfb8cbd4861a9400ae11d24e42579c"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 256,
+            "compiled_size": 256,
+            "different_bytes": 180,
+            "first_different_offsets": [
+              6,
+              7,
+              11,
+              13,
+              14,
+              16,
+              18,
+              19
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "a026a82f940b4f521010e5d254ad25b3e7f51c6f6937280246db000b34336792",
+            "compiled_sha256": "0804249b743fee85c811e3bf0d19b5cdbb5d20cf9159b741a1cc6931263ed0e3"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 256,
+            "compiled_size": 256,
+            "different_bytes": 152,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              13,
+              14
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "a026a82f940b4f521010e5d254ad25b3e7f51c6f6937280246db000b34336792",
+            "compiled_sha256": "15a392168da0685d1472ffd7dd405c828e73a4c3eeeaa00039336448f94d9491"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 256,
+            "compiled_size": 256,
+            "different_bytes": 151,
+            "first_different_offsets": [
+              4,
+              6,
+              8,
+              10,
+              13,
+              14,
+              21,
+              22
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "a026a82f940b4f521010e5d254ad25b3e7f51c6f6937280246db000b34336792",
+            "compiled_sha256": "daa86b5654ac9b4a5803fb4cf30b6809abbfb8cbd4861a9400ae11d24e42579c"
+          }
+        }
+      },
+      "evidence": "Axis-angle matrix with cosine then fresh angle for sine; axis components captured after callbacks and before stores. Inline source helper shared with translated builder; observed trailing identity-store order retained.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A20D4; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A20D8",
+      "address": "0x002A20D8",
+      "file_offset": "0x001A30D8",
+      "size": 292,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b1885cb67c8741c73a0d42a7c5ddfd552394af58e510a2bfbaa5dbeb60c414ed",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 292,
+        "compiled_size": 292,
+        "different_bytes": 161,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          13,
+          14,
+          16,
+          18,
+          29
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b1885cb67c8741c73a0d42a7c5ddfd552394af58e510a2bfbaa5dbeb60c414ed",
+        "compiled_sha256": "5d081d8bdb9d62eff68d314af20da003ecc2415e7b497f90de9b5349487e48e1"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 292,
+            "compiled_size": 292,
+            "different_bytes": 191,
+            "first_different_offsets": [
+              6,
+              7,
+              10,
+              11,
+              13,
+              14,
+              18,
+              19
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b1885cb67c8741c73a0d42a7c5ddfd552394af58e510a2bfbaa5dbeb60c414ed",
+            "compiled_sha256": "250c1838d24c7bb20868d2accb5bee23494b254630074aa34e8f15e9333be8ca"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 292,
+            "compiled_size": 292,
+            "different_bytes": 166,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              11,
+              13,
+              14,
+              16
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b1885cb67c8741c73a0d42a7c5ddfd552394af58e510a2bfbaa5dbeb60c414ed",
+            "compiled_sha256": "aac329b8670dfe2acbee9c72fa30971d1bfb81b86c8994823a0a87125211c982"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 292,
+            "compiled_size": 292,
+            "different_bytes": 161,
+            "first_different_offsets": [
+              4,
+              6,
+              8,
+              13,
+              14,
+              16,
+              18,
+              29
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b1885cb67c8741c73a0d42a7c5ddfd552394af58e510a2bfbaa5dbeb60c414ed",
+            "compiled_sha256": "5d081d8bdb9d62eff68d314af20da003ecc2415e7b497f90de9b5349487e48e1"
+          }
+        }
+      },
+      "evidence": "Shared captured-axis row arithmetic; original trailing zero/one store order, then interleaved position loads/stores after all matrix writes.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A21F8; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2278",
+      "address": "0x002A2278",
+      "file_offset": "0x001A3278",
+      "size": 180,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ee9cd49e3e857347d884376b562e2bd9cacb1af4793d599f1ff1149007b74c43",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 180,
+        "compiled_size": 180,
+        "different_bytes": 44,
+        "first_different_offsets": [
+          18,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "ee9cd49e3e857347d884376b562e2bd9cacb1af4793d599f1ff1149007b74c43",
+        "compiled_sha256": "7bf4064587d0fec09ee9f703c62114bf5acb7883af61369af58d777647555c8f"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 180,
+            "compiled_size": 180,
+            "different_bytes": 98,
+            "first_different_offsets": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ee9cd49e3e857347d884376b562e2bd9cacb1af4793d599f1ff1149007b74c43",
+            "compiled_sha256": "aa1e9585f64b365751eb86bde73891dd60fa9d43b81daa668eee3f00e0038878"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 180,
+            "compiled_size": 180,
+            "different_bytes": 44,
+            "first_different_offsets": [
+              18,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ee9cd49e3e857347d884376b562e2bd9cacb1af4793d599f1ff1149007b74c43",
+            "compiled_sha256": "7bf4064587d0fec09ee9f703c62114bf5acb7883af61369af58d777647555c8f"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 180,
+            "compiled_size": 180,
+            "different_bytes": 44,
+            "first_different_offsets": [
+              18,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ee9cd49e3e857347d884376b562e2bd9cacb1af4793d599f1ff1149007b74c43",
+            "compiled_sha256": "7bf4064587d0fec09ee9f703c62114bf5acb7883af61369af58d777647555c8f"
+          }
+        }
+      },
+      "evidence": "Four ordered scalar translation combinations, all completed before trailing output stores; preserves full fourth component.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A2328; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2330",
+      "address": "0x002A2330",
+      "file_offset": "0x001A3330",
+      "size": 64,
+      "source": "src/game/matrix_scalar.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 64,
+        "compiled_size": 64,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244",
+        "compiled_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 64,
+            "compiled_size": 60,
+            "different_bytes": 49,
+            "first_different_offsets": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244",
+            "compiled_sha256": "b280ce7e90e07ab362ece99312840ff7921956903684a73d622765af049a4c91"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 64,
+            "compiled_size": 64,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244",
+            "compiled_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 64,
+            "compiled_size": 64,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244",
+            "compiled_sha256": "55eb3ad9decfbda1ae1e64da36c903573e4961fd97d0fe3c0e68b76610f71244"
+          }
+        }
+      },
+      "evidence": "Four-row transpose loop interleaves every load/store; in-place and shifted aliases propagate exactly.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A236C; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2370",
+      "address": "0x002A2370",
+      "file_offset": "0x001A3370",
+      "size": 144,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d7b504d09eb3948a1450acaa1ee42d5b6ef0ff88d6f242fecd46389209ffdd9c",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 144,
+        "compiled_size": 144,
+        "different_bytes": 43,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "d7b504d09eb3948a1450acaa1ee42d5b6ef0ff88d6f242fecd46389209ffdd9c",
+        "compiled_sha256": "8bd231617e50228d96a6bcb402803992dcb6a46272a4982572edd87d1c54c80a"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 68,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "d7b504d09eb3948a1450acaa1ee42d5b6ef0ff88d6f242fecd46389209ffdd9c",
+            "compiled_sha256": "9dc13cb8050f3a994376d4125cf7f5719dd34f063a6764b7715c438057b53781"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 43,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "d7b504d09eb3948a1450acaa1ee42d5b6ef0ff88d6f242fecd46389209ffdd9c",
+            "compiled_sha256": "8bd231617e50228d96a6bcb402803992dcb6a46272a4982572edd87d1c54c80a"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 44,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "d7b504d09eb3948a1450acaa1ee42d5b6ef0ff88d6f242fecd46389209ffdd9c",
+            "compiled_sha256": "d4345dbfa5bc973b67d3a0a1a60d4be46e31f8539a02ac8cea6f6098e9cbd2d9"
+          }
+        }
+      },
+      "evidence": "Z-axis matrix with original cosine/sine order and output store order.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A23FC; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2400",
+      "address": "0x002A2400",
+      "file_offset": "0x001A3400",
+      "size": 144,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b99f545b420d536fdf6366a8eda826ceba2d772250a79d488c02d11e22215be5",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 144,
+        "compiled_size": 144,
+        "different_bytes": 43,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b99f545b420d536fdf6366a8eda826ceba2d772250a79d488c02d11e22215be5",
+        "compiled_sha256": "ad14e0758187ea733ac752943ffa4db895a6b14e69dade01ac272d36bdcf176b"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 69,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b99f545b420d536fdf6366a8eda826ceba2d772250a79d488c02d11e22215be5",
+            "compiled_sha256": "7944de5c2ef43aab441ec99d9a08148892b4bab0fadf0cb40728ca7c95a487b1"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 43,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b99f545b420d536fdf6366a8eda826ceba2d772250a79d488c02d11e22215be5",
+            "compiled_sha256": "ad14e0758187ea733ac752943ffa4db895a6b14e69dade01ac272d36bdcf176b"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 44,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b99f545b420d536fdf6366a8eda826ceba2d772250a79d488c02d11e22215be5",
+            "compiled_sha256": "c7e79f34f975cd25ebf13a2957eb81332af8e1b47e4d004f0bfda32bf04cfe1e"
+          }
+        }
+      },
+      "evidence": "Y-axis matrix with original cosine/sine order and output store order.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A248C; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2490",
+      "address": "0x002A2490",
+      "file_offset": "0x001A3490",
+      "size": 144,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "29d90b9aef081bf843b89d44bef31f5bae6a57aadf1b89cee99ffa25b9644a89",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 144,
+        "compiled_size": 144,
+        "different_bytes": 43,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "29d90b9aef081bf843b89d44bef31f5bae6a57aadf1b89cee99ffa25b9644a89",
+        "compiled_sha256": "d3ba69304bdddd4d81dce75fb63452e30c7626c3f1fbaee8207cf25870dd6ee0"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 67,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "29d90b9aef081bf843b89d44bef31f5bae6a57aadf1b89cee99ffa25b9644a89",
+            "compiled_sha256": "6b90e25ff1923b998fd90ce02b294297126bd149ef68b6f81451de8a468c4b61"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 43,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "29d90b9aef081bf843b89d44bef31f5bae6a57aadf1b89cee99ffa25b9644a89",
+            "compiled_sha256": "d3ba69304bdddd4d81dce75fb63452e30c7626c3f1fbaee8207cf25870dd6ee0"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 44,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "29d90b9aef081bf843b89d44bef31f5bae6a57aadf1b89cee99ffa25b9644a89",
+            "compiled_sha256": "27b58ad5656d7e5d9b9f071ba029e2b2e97a6ef9b9df013ce5f0ecce5abfcced"
+          }
+        }
+      },
+      "evidence": "X-axis matrix with original cosine/sine order and output store order.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A251C; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A2520",
+      "address": "0x002A2520",
+      "file_offset": "0x001A3520",
+      "size": 312,
+      "source": "src/game/matrix_scalar.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0470276c61757f8ebc1ce598b6e42463472bc012f788e677f96ca66ef8c5f43e",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 312,
+        "compiled_size": 312,
+        "different_bytes": 86,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "0470276c61757f8ebc1ce598b6e42463472bc012f788e677f96ca66ef8c5f43e",
+        "compiled_sha256": "8d1aef6567e551cf394bdce075b08d255276019800d6539bb7dbc7437dea1b2b"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 312,
+            "different_bytes": 167,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0470276c61757f8ebc1ce598b6e42463472bc012f788e677f96ca66ef8c5f43e",
+            "compiled_sha256": "1db8c9c3a777bbb3fcd228351aca2f77accc0019c156825dba6b31d8ab4a4017"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 312,
+            "different_bytes": 87,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0470276c61757f8ebc1ce598b6e42463472bc012f788e677f96ca66ef8c5f43e",
+            "compiled_sha256": "d21c12f7345e95bec4b7a1fa25c60eb1310d45b57c7e187e9bf5b36be1d36d58"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 312,
+            "compiled_size": 312,
+            "different_bytes": 86,
+            "first_different_offsets": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "0470276c61757f8ebc1ce598b6e42463472bc012f788e677f96ca66ef8c5f43e",
+            "compiled_sha256": "8d1aef6567e551cf394bdce075b08d255276019800d6539bb7dbc7437dea1b2b"
+          }
+        }
+      },
+      "evidence": "Full-angle three-axis builder: six original C,S,C,S,C,S calls and all original product groups/signs; captured scalars and output order preserved.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A2654; following alignment padding excluded."
+    }
+  ]
+}

@@ -166,12 +166,12 @@
     "dpmul": {
       "address": "0x372d28",
       "confidence": "corroborated",
-      "evidence": "Complete double fmod exceptional source path calls same soft-double helper twice for x*y."
+      "evidence": "Complete double multiplication graph: two exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, four muldi3 low32/upper32 products with 128-bit carry combination, exponent sum+4, normalization loops carrying high/low mantissa bits, guard0xFF tie0x80 rounding and low-half sticky condition, then exact pack. All680 bytes genuinely linked; two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
     },
     "dpdiv": {
       "address": "0x372fd0",
       "confidence": "corroborated",
-      "evidence": "Complete double fmod exceptional source path divides its two independently computed x*y results by this helper."
+      "evidence": "Complete double division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<60, guard0xFF tie0x80 rounding/sticky remainder and exact pack. Complete360-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
     },
     "dpsub": {
       "address": "0x00372CC0",
@@ -326,6 +326,61 @@
       "address": "0x00374818",
       "confidence": "matched",
       "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation, direct JAL entry proof and complete independent linked byte equality (44 bytes)."
+    },
+    "__negdf2": {
+      "address": "0x00373490",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c double implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 56-byte extent despite missing direct call references."
+    },
+    "fpadd": {
+      "address": "0x00374080",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 88-byte extent despite missing direct call references."
+    },
+    "fpsub": {
+      "address": "0x003740D8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 100-byte extent despite missing direct call references."
+    },
+    "fpcmp": {
+      "address": "0x003745B0",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 76-byte extent despite missing direct call references."
+    },
+    "sitofp": {
+      "address": "0x00374600",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 184-byte extent despite missing direct call references."
+    },
+    "fptosi": {
+      "address": "0x003746B8",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 140-byte extent despite missing direct call references."
+    },
+    "__negsf2": {
+      "address": "0x003747E0",
+      "confidence": "matched",
+      "evidence": "Authentic unchanged GNU EE fp-bit.c single implementation. Complete independently compiled/linked symbol body and adjacent original source-function boundaries establish exact 56-byte extent despite missing direct call references."
+    },
+    "_fpadd_parts_d": {
+      "address": "0x372a28",
+      "confidence": "corroborated",
+      "evidence": "Complete parts addition graph: ordered NaN/infinity/zero handling, signed-zero AND and24-byte copy, difference64 cutoff, repeated sticky shifts of smaller mantissa, signed subtraction/addition, absolute magnitude, cancellation normalization, guard-width masks and carry normalization. Original24-byte static NaN record is independently proven in zero storage. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
+    },
+    "_fpadd_parts_f": {
+      "address": "0x373e48",
+      "confidence": "corroborated",
+      "evidence": "Complete single parts addition graph: ordered NaN/infinity/zero handling, signed-zero AND and16-byte copy, difference32 cutoff, repeated sticky shifts, signed mantissa subtraction/addition, magnitude/cancellation normalization, 0x3FFFFFFE masks and carry normalization. Return374074/delay374078 excludes following zero37407C. Original16-byte static NaN record independently proven in zero storage. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
+    },
+    "fpmul": {
+      "address": "0x374140",
+      "confidence": "corroborated",
+      "evidence": "Complete single multiplication graph: exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, signed64 product of32-bit fractions, high/low product words, exponent sum+2, bit-carry normalization, guard0x7F tie0x40 rounding and low-half sticky condition, then exact pack. Original500-byte extent excludes following zero374334. Two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
+    },
+    "fpdiv": {
+      "address": "0x374338",
+      "confidence": "corroborated",
+      "evidence": "Complete single division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<30, guard0x7F tie0x40 rounding/sticky remainder and exact pack. Complete352-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
     }
   }
 }
