@@ -392,3 +392,15 @@ fixtures, passing 2,447,135 checks. Nine decoder guards and 49,081 original
 instructions cover switch/provider/allocation/accounting paths and full buffer
 aliases. Controlled filesystem/queue/heap/map contracts remain limited. See
 `docs/resource_manager.md`.
+
+Rail-camera state: `python tests/native/run_actor_camera_state.py` executes all
+fifteen production bodies on defined paths, with reused vector normalization,
+and passes 3,625 warning-free checks. The original indeterminate-stack jitter
+branch is explicitly unexecuted; no numerical or equal-stack-placement claim.
+See `docs/actor_camera_state.md`.
+
+Resource registry: `python tests/native/run_utilities.py --harness resource_registry`
+executes thirteen production functions and the published accessor across
+414 authored fixtures, passing 424,710 checks. Nine decoder guards and
+24,495 original instructions cover pooled mutations, aliases, sentinel walks
+and indexed/linear lookup. See `docs/resource_registry.md`.

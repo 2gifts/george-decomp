@@ -6,6 +6,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "resource_registry": ["src/game/resource_registry.c", "src/game/accessors.c"],
     "resource_manager": ["src/game/resource_manager.c"],
     "arena_ownership": ["src/game/render_records.c", "src/game/arena_ownership.c", "src/game/arena_buffers.c"],
     "arena_extensions": ["src/game/arena_extensions.c"],

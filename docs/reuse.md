@@ -1574,3 +1574,56 @@ whole links pass with zero unresolved relocations; none matches exactly.
 Readable NUL-terminated strings and writable uppercase storage are required.
 Portable ctype behavior is limited to its defined input domain; invalid signed
 indices, malformed buffers and side-effecting replacement helpers are unclaimed.
+
+
+## Multibyte decoding and stream output
+
+Four complete functions reuse unchanged sources from the same pinned newlib
+1.8.1 revision: `_mbtowc_r` (828 bytes), `_puts_r` (132), `puts` (40), and
+`__srget` (72). The multibyte source and its `mbctype.h` retain the default
+Cygnus Solutions notice in `LICENSES/newlib-1.8.1.txt` section 9. This software
+was developed at Cygnus Solutions. The stream sources retain their 1990
+Berkeley notices and section 1 terms. This software was developed by the
+University of California, Berkeley. All four raw files and actual dependencies
+have exact source SHA256 pins; no upstream source is edited.
+
+Author, disc peer and parent read all 268 selected instructions and complete
+sources. Full control, stores, real entry references, authentic declarations
+and eight preserved code/data address constructions agree. The `puts` and
+`__srget` boundaries were independently split from scanner intervals that
+joined a following function; only their complete 40/72-byte source bodies count.
+Six actual incoming calls have complete containing-body geometry and hashes;
+large callers are reviewed at argument windows without a full caller semantic
+claim. The parent also read the full 48-byte strlen and 360-byte refill helpers.
+
+Both independent reviewers reproduce the complete ten-dictionary proof packet,
+including scope, and two genuine 24-word ABI probes. Int/pointers/size_t/wchar_t
+are four bytes, long eight, FILE 88, each enum four; both original 12-by-9 JIS
+tables are 432 bytes. Ten explicit rows and two implicit zero rows are preserved.
+Their entire writable sections match as identity evidence, with no mapping,
+qualifier change or data award. All eight JIS actions, state/output writes,
+locale selection and signed/unsigned character ranges are accounted for.
+
+Six complete stream links have zero unresolved relocations and remain
+reconstructed. The entire eight-byte newline section matches its original
+readonly region. The multibyte function remains `link:false`: genuine
+GCC 2.9/3.2.3 readonly sections are 64/56 bytes and retain all eight actual local
+case pointers, while its compiled functions are 836/756 bytes versus 828 retail.
+The strict relocation blocker and sixteen unrelocated code relocations remain
+recorded; no final linked equality or partial pool mapping is claimed.
+
+SJIS/EUC retain their original reads before null/length checks. Undefined null
+or insufficient-readable-buffer paths receive no invented safety behavior.
+The implicit-int strlen declaration under `-fno-builtin` differs from the
+original unsigned length observation; accessible PS2 string lengths preserve
+locale routing, while malformed/huge-string fidelity remains unclaimed.
+Readable strings and valid writable wchar/state/FILE/reent objects are required.
+The parent repeated all six tracked-source links, both honestly blocked main
+objects and six complete comparison/dependency/source/ABI/data/binding packets
+using only central symbols. Native OS, encoding safety, thread synchronization
+and EE exception fidelity are outside this source-identity proof.
+
+Canonical checkpoint verification and the hybrid build passed, together with
+307 tooling tests (one platform-specific symlink skip). The hybrid executable
+retains retail SHA-256 `01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8`;
+remaining original assembly contributes no additional C matching credit.

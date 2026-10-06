@@ -52672,6 +52672,2997 @@
         }
       ],
       "review_status": "author_parent_complete_original_source_and_fresh_whole_link_review_passed"
+    },
+    {
+      "name": "_mbtowc_r",
+      "address": "0x3963a8",
+      "file_offset": "0x2973a8",
+      "size": 828,
+      "original_sha256": "3d53dcaf17fae59aff6df0e6b433e06a7dad7eab4ea5253424e7b2e157a608f8",
+      "original_assembly": "build/functions/func_003963A8.s",
+      "boundary_evidence": {
+        "terminal_jr": "0x3966dc",
+        "terminal_delay_word": "0x27bd0070",
+        "preceding_independent_jr": "0x3963a0",
+        "preceding_delay_word": "0x27bd0040",
+        "excluded_alignment_bytes": 4,
+        "following_entry": "0x3966e8",
+        "following_entry_word": "0x27bdffd0",
+        "following_frame_instruction": "0x3966e8",
+        "following_frame_word": "0x27bdffd0",
+        "scanner_interval_size": 828,
+        "independently_split": false,
+        "actual_incoming_caller_intervals_only": true
+      },
+      "entry_call_evidence": [
+        {
+          "instruction": "0x3955d0",
+          "word": "0xc0e58ea",
+          "delay_word": "0x8fa80278",
+          "caller": {
+            "address": "0x395558",
+            "file_offset": "0x296558",
+            "size": 2832,
+            "sha256": "596133af5a46b17597fce2760fe3835701a12fe65bbff6751945e7a2950144c9",
+            "terminal_jr": "0x396060",
+            "terminal_delay_word": "0x27bd0320",
+            "heuristic_complete_size": 2832,
+            "independently_split": false,
+            "following_instruction": "0x80a60000",
+            "original_assembly": "func_00395558.s"
+          }
+        },
+        {
+          "instruction": "0x3990e0",
+          "word": "0xc0e58ea",
+          "delay_word": "0x8fa801ac",
+          "caller": {
+            "address": "0x399068",
+            "file_offset": "0x29a068",
+            "size": 4164,
+            "sha256": "91164f998c5d2ebb18fbac81292dee795a907af7812d430c99a31a160f01f287",
+            "terminal_jr": "0x39a0a4",
+            "terminal_delay_word": "0x27bd0260",
+            "heuristic_complete_size": 4164,
+            "independently_split": false,
+            "following_instruction": "0x0",
+            "original_assembly": "func_00399068.s"
+          }
+        },
+        {
+          "instruction": "0x39a408",
+          "word": "0xc0e58ea",
+          "delay_word": "0x8fa8006c",
+          "caller": {
+            "address": "0x39a398",
+            "file_offset": "0x29b398",
+            "size": 3844,
+            "sha256": "6d0c8375e4adc02a0ef4d44698a0beaab6a5f10de57017c42215cd44a7d76a5f",
+            "terminal_jr": "0x39b294",
+            "terminal_delay_word": "0x27bd0120",
+            "heuristic_complete_size": 3844,
+            "independently_split": false,
+            "following_instruction": "0x0",
+            "original_assembly": "func_0039A398.s"
+          }
+        }
+      ],
+      "direct_calls": [
+        {
+          "instruction": "0x3963f4",
+          "word": "0xc0a5414",
+          "delay_word": "0x0",
+          "target": "0x295050",
+          "upstream_symbol": "strlen"
+        },
+        {
+          "instruction": "0x39640c",
+          "word": "0xc0e4e8a",
+          "delay_word": "0x24a566a0",
+          "target": "0x393a28",
+          "upstream_symbol": "strcmp"
+        },
+        {
+          "instruction": "0x396484",
+          "word": "0xc0e4e8a",
+          "delay_word": "0x24a566a8",
+          "target": "0x393a28",
+          "upstream_symbol": "strcmp"
+        },
+        {
+          "instruction": "0x3964dc",
+          "word": "0xc0e4e8a",
+          "delay_word": "0x24a566b0",
+          "target": "0x393a28",
+          "upstream_symbol": "strcmp"
+        }
+      ],
+      "branches": [
+        {
+          "instruction": "0x3963d8",
+          "word": "0x12000003",
+          "delay_word": "0xa5980b",
+          "target": "0x3963e8",
+          "likely": false
+        },
+        {
+          "instruction": "0x3963e0",
+          "word": "0x128000b8",
+          "delay_word": "0x2402ffff",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3963ec",
+          "word": "0x108000af",
+          "delay_word": "0x0",
+          "target": "0x3966ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x396400",
+          "word": "0x144000aa",
+          "delay_word": "0x3c050045",
+          "target": "0x3966ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x396414",
+          "word": "0x5440001a",
+          "delay_word": "0x3c050045",
+          "target": "0x396480",
+          "likely": true
+        },
+        {
+          "instruction": "0x396420",
+          "word": "0x120000a8",
+          "delay_word": "0x102d",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396430",
+          "word": "0x14400005",
+          "delay_word": "0x2e820002",
+          "target": "0x396448",
+          "likely": false
+        },
+        {
+          "instruction": "0x396440",
+          "word": "0x1040009a",
+          "delay_word": "0x2e820002",
+          "target": "0x3966ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x396448",
+          "word": "0x10400003",
+          "delay_word": "0x92060001",
+          "target": "0x396458",
+          "likely": false
+        },
+        {
+          "instruction": "0x396450",
+          "word": "0x1000009c",
+          "delay_word": "0x2402ffff",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396460",
+          "word": "0x14400019",
+          "delay_word": "0x31a00",
+          "target": "0x3964c8",
+          "likely": false
+        },
+        {
+          "instruction": "0x396470",
+          "word": "0x14400016",
+          "delay_word": "0x24020002",
+          "target": "0x3964cc",
+          "likely": false
+        },
+        {
+          "instruction": "0x396478",
+          "word": "0x10000092",
+          "delay_word": "0x2402ffff",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39648c",
+          "word": "0x54400012",
+          "delay_word": "0x3c050045",
+          "target": "0x3964d8",
+          "likely": true
+        },
+        {
+          "instruction": "0x396498",
+          "word": "0x1200008a",
+          "delay_word": "0x102d",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964a8",
+          "word": "0x10400080",
+          "delay_word": "0x2e820002",
+          "target": "0x3966ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964b0",
+          "word": "0x1440ffe7",
+          "delay_word": "0x92060001",
+          "target": "0x396450",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964c0",
+          "word": "0x1040ffe3",
+          "delay_word": "0x31a00",
+          "target": "0x396450",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964d0",
+          "word": "0x1000007c",
+          "delay_word": "0xae630000",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964e4",
+          "word": "0x14400071",
+          "delay_word": "0x0",
+          "target": "0x3966ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x3964ec",
+          "word": "0x56000004",
+          "delay_word": "0x8e420000",
+          "target": "0x396500",
+          "likely": true
+        },
+        {
+          "instruction": "0x3964f8",
+          "word": "0x10000072",
+          "delay_word": "0x24020001",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39650c",
+          "word": "0x1280ffd0",
+          "delay_word": "0x2480a",
+          "target": "0x396450",
+          "likely": false
+        },
+        {
+          "instruction": "0x396520",
+          "word": "0x10830024",
+          "delay_word": "0x40402d",
+          "target": "0x3965b4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39652c",
+          "word": "0x1040000d",
+          "delay_word": "0x2402001b",
+          "target": "0x396564",
+          "likely": false
+        },
+        {
+          "instruction": "0x396534",
+          "word": "0x10820019",
+          "delay_word": "0x2882001c",
+          "target": "0x39659c",
+          "likely": false
+        },
+        {
+          "instruction": "0x39653c",
+          "word": "0x10400005",
+          "delay_word": "0x24020024",
+          "target": "0x396554",
+          "likely": false
+        },
+        {
+          "instruction": "0x396544",
+          "word": "0x10800021",
+          "delay_word": "0x2482ffdf",
+          "target": "0x3965cc",
+          "likely": false
+        },
+        {
+          "instruction": "0x39654c",
+          "word": "0x10000021",
+          "delay_word": "0x2403005d",
+          "target": "0x3965d4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396554",
+          "word": "0x10820013",
+          "delay_word": "0x2482ffdf",
+          "target": "0x3965a4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39655c",
+          "word": "0x1000001d",
+          "delay_word": "0x2403005d",
+          "target": "0x3965d4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396568",
+          "word": "0x10820014",
+          "delay_word": "0x28820043",
+          "target": "0x3965bc",
+          "likely": false
+        },
+        {
+          "instruction": "0x396570",
+          "word": "0x10400005",
+          "delay_word": "0x24020040",
+          "target": "0x396588",
+          "likely": false
+        },
+        {
+          "instruction": "0x396578",
+          "word": "0x1082000c",
+          "delay_word": "0x2482ffdf",
+          "target": "0x3965ac",
+          "likely": false
+        },
+        {
+          "instruction": "0x396580",
+          "word": "0x10000014",
+          "delay_word": "0x2403005d",
+          "target": "0x3965d4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39658c",
+          "word": "0x1082000d",
+          "delay_word": "0x2482ffdf",
+          "target": "0x3965c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396594",
+          "word": "0x1000000f",
+          "delay_word": "0x2403005d",
+          "target": "0x3965d4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39659c",
+          "word": "0x10000011",
+          "delay_word": "0x202d",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965a4",
+          "word": "0x1000000f",
+          "delay_word": "0x24040001",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965ac",
+          "word": "0x1000000d",
+          "delay_word": "0x24040003",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965b4",
+          "word": "0x1000000b",
+          "delay_word": "0x24040002",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965bc",
+          "word": "0x10000009",
+          "delay_word": "0x24040004",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965c4",
+          "word": "0x10000007",
+          "delay_word": "0x24040005",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3965cc",
+          "word": "0x10000005",
+          "delay_word": "0x24040006",
+          "target": "0x3965e4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396614",
+          "word": "0x1040ff8e",
+          "delay_word": "0x8c890000",
+          "target": "0x396450",
+          "likely": false
+        },
+        {
+          "instruction": "0x396640",
+          "word": "0x10000020",
+          "delay_word": "0xae600000",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396654",
+          "word": "0x1000001b",
+          "delay_word": "0xae630000",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x396660",
+          "word": "0x10000005",
+          "delay_word": "0x24c20001",
+          "target": "0x396678",
+          "likely": false
+        },
+        {
+          "instruction": "0x396688",
+          "word": "0x1000000e",
+          "delay_word": "0xae630000",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x39669c",
+          "word": "0x1440ff9e",
+          "delay_word": "0x2061021",
+          "target": "0x396518",
+          "likely": false
+        },
+        {
+          "instruction": "0x3966a4",
+          "word": "0x10000007",
+          "delay_word": "0x2402ffff",
+          "target": "0x3966c4",
+          "likely": false
+        },
+        {
+          "instruction": "0x3966ac",
+          "word": "0x52000005",
+          "delay_word": "0x102d",
+          "target": "0x3966c4",
+          "likely": true
+        }
+      ],
+      "stores": [
+        {
+          "instruction": "0x3963ac",
+          "word": "0x7fb30030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 48
+        },
+        {
+          "instruction": "0x3963b0",
+          "word": "0x7fb00060",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 96
+        },
+        {
+          "instruction": "0x3963b8",
+          "word": "0x7fb10050",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 80
+        },
+        {
+          "instruction": "0x3963c0",
+          "word": "0x7fb20040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 64
+        },
+        {
+          "instruction": "0x3963c8",
+          "word": "0x7fb40020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 20,
+          "signed_offset": 32
+        },
+        {
+          "instruction": "0x3963d0",
+          "word": "0xffbf0010",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 16
+        },
+        {
+          "instruction": "0x3964d4",
+          "word": "0xae630000",
+          "opcode": 43,
+          "base_gpr": 19,
+          "source_register": 3,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x3964f4",
+          "word": "0xae400000",
+          "opcode": 43,
+          "base_gpr": 18,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x396638",
+          "word": "0xae400000",
+          "opcode": 43,
+          "base_gpr": 18,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x396644",
+          "word": "0xae600000",
+          "opcode": 43,
+          "base_gpr": 19,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x396648",
+          "word": "0xae400000",
+          "opcode": 43,
+          "base_gpr": 18,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x396658",
+          "word": "0xae630000",
+          "opcode": 43,
+          "base_gpr": 19,
+          "source_register": 3,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x39665c",
+          "word": "0xae400000",
+          "opcode": 43,
+          "base_gpr": 18,
+          "source_register": 0,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x396670",
+          "word": "0xae430000",
+          "opcode": 43,
+          "base_gpr": 18,
+          "source_register": 3,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x39668c",
+          "word": "0xae630000",
+          "opcode": 43,
+          "base_gpr": 19,
+          "source_register": 3,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x3966b8",
+          "word": "0xae620000",
+          "opcode": 43,
+          "base_gpr": 19,
+          "source_register": 2,
+          "signed_offset": 0
+        }
+      ],
+      "returns": [
+        {
+          "instruction": "0x3966dc",
+          "word": "0x3e00008",
+          "delay_word": "0x27bd0070"
+        }
+      ],
+      "control_flow_identity": "Complete MB_CAPABLE five-GPR multibyte decoder. Null output chooses local dummy; s nonnull/nzero rejection precedes fresh current_locale34 reads. Locale length<=1 or unknown uses unsigned-byte C fallback. SJIS and EUCJP preserve first-byte reads before null checks and second-byte reads before n<=1, both lead/trail ranges and 16-bit wchar assembly. JIS preserves state==0 versus nonzero, nine character classes, both complete12x9 enum tables, all eight action cases, state/output store ordering, pointer differences and byte limits. No null/short-readable-buffer guard inserted into undefined upstream load paths.",
+      "compiler_symbol_evidence": {
+        "gcc29": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 836,
+          "section": ".text._mbtowc_r",
+          "section_size": 840,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "strlen",
+            "strcmp"
+          ]
+        },
+        "gcc323": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 756,
+          "section": ".text._mbtowc_r",
+          "section_size": 760,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "strlen",
+            "strcmp"
+          ]
+        }
+      },
+      "source": "src/runtime/stdlib/mbtowc_r.c",
+      "source_kind": "c",
+      "compiled_symbol": "_mbtowc_r",
+      "upstream_symbol": "_mbtowc_r",
+      "status": "reconstructed",
+      "link": false,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-I",
+        "src/runtime/stdio",
+        "-I",
+        "src/runtime/stdlib",
+        "-DMB_CAPABLE"
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mbtowc_r.c",
+      "upstream_license": "Newlib 1.8.1 default Cygnus Solutions notice, LICENSES/newlib-1.8.1.txt section9; Cygnus documentation acknowledgement required.",
+      "upstream_source_sha256": "8cdf73cb3224611fd52f01bbf1dea0ddf9bcac151c31a0847800b166eb0ce6d4",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/mbtowc_r.c",
+          "sha256": "8cdf73cb3224611fd52f01bbf1dea0ddf9bcac151c31a0847800b166eb0ce6d4",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mbtowc_r.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mbtowc_r.c",
+          "upstream_license": "Newlib 1.8.1 default Cygnus Solutions notice, LICENSES/newlib-1.8.1.txt section9; Cygnus documentation acknowledgement required."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/locale.h",
+          "sha256": "2471ca67778d63cd525d7d4f73fe6d257b92dc3b6971444b4e30fd9d211254d5",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/mbctype.h",
+          "sha256": "ba6083366b9d9aae12bdf8dfef9d94f626c71d859bc59a6d716e8fd90550fe34",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mbctype.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mbctype.h",
+          "upstream_license": "Newlib 1.8.1 default Cygnus Solutions notice, LICENSES/newlib-1.8.1.txt section9; Cygnus documentation acknowledgement required."
+        }
+      ],
+      "source_modified": false,
+      "reviewed": true,
+      "independent_review": "Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "entry_evidence": {
+        "reachability": "actual_encoded_jal",
+        "references": [
+          {
+            "instruction": "0x3955d0",
+            "word": "0xc0e58ea",
+            "delay_word": "0x8fa80278",
+            "caller": {
+              "address": "0x395558",
+              "file_offset": "0x296558",
+              "size": 2832,
+              "sha256": "596133af5a46b17597fce2760fe3835701a12fe65bbff6751945e7a2950144c9",
+              "terminal_jr": "0x396060",
+              "terminal_delay_word": "0x27bd0320",
+              "heuristic_complete_size": 2832,
+              "independently_split": false,
+              "following_instruction": "0x80a60000",
+              "original_assembly": "func_00395558.s"
+            }
+          },
+          {
+            "instruction": "0x3990e0",
+            "word": "0xc0e58ea",
+            "delay_word": "0x8fa801ac",
+            "caller": {
+              "address": "0x399068",
+              "file_offset": "0x29a068",
+              "size": 4164,
+              "sha256": "91164f998c5d2ebb18fbac81292dee795a907af7812d430c99a31a160f01f287",
+              "terminal_jr": "0x39a0a4",
+              "terminal_delay_word": "0x27bd0260",
+              "heuristic_complete_size": 4164,
+              "independently_split": false,
+              "following_instruction": "0x0",
+              "original_assembly": "func_00399068.s"
+            }
+          },
+          {
+            "instruction": "0x39a408",
+            "word": "0xc0e58ea",
+            "delay_word": "0x8fa8006c",
+            "caller": {
+              "address": "0x39a398",
+              "file_offset": "0x29b398",
+              "size": 3844,
+              "sha256": "6d0c8375e4adc02a0ef4d44698a0beaab6a5f10de57017c42215cd44a7d76a5f",
+              "terminal_jr": "0x39b294",
+              "terminal_delay_word": "0x27bd0120",
+              "heuristic_complete_size": 3844,
+              "independently_split": false,
+              "following_instruction": "0x0",
+              "original_assembly": "func_0039A398.s"
+            }
+          }
+        ],
+        "limit": "Whole original independently bounded source function; merged scanner intervals retained explicitly as diagnostic geometry only."
+      },
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 828,
+        "compiled_size": 836,
+        "different_bytes": 624,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          10,
+          11,
+          16,
+          18,
+          19
+        ],
+        "unresolved_relocations": [
+          76,
+          96,
+          100,
+          104,
+          220,
+          224,
+          228,
+          312,
+          316,
+          320,
+          376,
+          380,
+          384,
+          388,
+          644,
+          652
+        ],
+        "expected_sha256": "3d53dcaf17fae59aff6df0e6b433e06a7dad7eab4ea5253424e7b2e157a608f8",
+        "compiled_sha256": "1434f0180946cf228153f78943f89d1c98b6b0e1ce1feb8ac5eb690dd8fe71fb"
+      },
+      "profile_comparisons": [
+        {
+          "name": "_mbtowc_r",
+          "address": "0x3963a8",
+          "size": 828,
+          "source": "build/reuse/runtime_next/mbtowc_r.c",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next",
+            "-DMB_CAPABLE"
+          ],
+          "object": "build/reuse/runtime_next/mbtowc_r_gcc29.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 836,
+            "section": ".text._mbtowc_r",
+            "section_size": 840,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "strlen",
+              "strcmp"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".data.JIS_state_table",
+              "type": "SHT_PROGBITS",
+              "size": 432,
+              "flags": 3,
+              "alignment": 8,
+              "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                },
+                {
+                  "name": "JIS_state_table",
+                  "value": 0,
+                  "size": 432,
+                  "type": "STT_OBJECT"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x405698",
+                "file_offset": "0x306698",
+                "size": 432,
+                "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+                "section": ".data",
+                "section_flags": 3,
+                "mapping": false,
+                "award": false
+              }
+            },
+            {
+              "name": ".data.JIS_action_table",
+              "type": "SHT_PROGBITS",
+              "size": 432,
+              "flags": 3,
+              "alignment": 8,
+              "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                },
+                {
+                  "name": "JIS_action_table",
+                  "value": 0,
+                  "size": 432,
+                  "type": "STT_OBJECT"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x405848",
+                "file_offset": "0x306848",
+                "size": 432,
+                "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+                "section": ".data",
+                "section_flags": 3,
+                "mapping": false,
+                "award": false
+              }
+            },
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 64,
+              "flags": 2,
+              "alignment": 16,
+              "sha256": "b96c81c6c1ef2e71bce8e98a8285827f35e9348d46d598c339ede3b7107ea247",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [
+                {
+                  "offset": 32,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 36,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 40,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 44,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 48,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 52,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 56,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 60,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                }
+              ]
+            }
+          ],
+          "warnings": "",
+          "link_blocker": "Unmapped local data/constant section: .rodata",
+          "unlinked_comparison": {
+            "identical": false,
+            "expected_size": 828,
+            "compiled_size": 836,
+            "different_bytes": 624,
+            "first_different_offsets": [
+              4,
+              7,
+              8,
+              10,
+              11,
+              16,
+              18,
+              19
+            ],
+            "unresolved_relocations": [
+              76,
+              96,
+              100,
+              104,
+              220,
+              224,
+              228,
+              312,
+              316,
+              320,
+              376,
+              380,
+              384,
+              388,
+              644,
+              652
+            ],
+            "expected_sha256": "3d53dcaf17fae59aff6df0e6b433e06a7dad7eab4ea5253424e7b2e157a608f8",
+            "compiled_sha256": "1434f0180946cf228153f78943f89d1c98b6b0e1ce1feb8ac5eb690dd8fe71fb"
+          }
+        },
+        {
+          "name": "_mbtowc_r",
+          "address": "0x3963a8",
+          "size": 828,
+          "source": "build/reuse/runtime_next/mbtowc_r.c",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next",
+            "-DMB_CAPABLE"
+          ],
+          "object": "build/reuse/runtime_next/mbtowc_r_gcc323.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 756,
+            "section": ".text._mbtowc_r",
+            "section_size": 760,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "strlen",
+              "strcmp"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".data.JIS_state_table",
+              "type": "SHT_PROGBITS",
+              "size": 432,
+              "flags": 3,
+              "alignment": 8,
+              "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                },
+                {
+                  "name": "JIS_state_table",
+                  "value": 0,
+                  "size": 432,
+                  "type": "STT_OBJECT"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x405698",
+                "file_offset": "0x306698",
+                "size": 432,
+                "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+                "section": ".data",
+                "section_flags": 3,
+                "mapping": false,
+                "award": false
+              }
+            },
+            {
+              "name": ".data.JIS_action_table",
+              "type": "SHT_PROGBITS",
+              "size": 432,
+              "flags": 3,
+              "alignment": 8,
+              "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                },
+                {
+                  "name": "JIS_action_table",
+                  "value": 0,
+                  "size": 432,
+                  "type": "STT_OBJECT"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x405848",
+                "file_offset": "0x306848",
+                "size": 432,
+                "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+                "section": ".data",
+                "section_flags": 3,
+                "mapping": false,
+                "award": false
+              }
+            },
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 56,
+              "flags": 2,
+              "alignment": 8,
+              "sha256": "6306bfb00ce3f0f5a0871959603863d1ac9814d6e8ba83c5fd8ab0394db1ba80",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [
+                {
+                  "offset": 24,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 28,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 32,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 36,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 40,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 44,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 48,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                },
+                {
+                  "offset": 52,
+                  "type": 2,
+                  "symbol": "",
+                  "symbol_section": ".text._mbtowc_r",
+                  "symbol_value": 0
+                }
+              ]
+            }
+          ],
+          "warnings": "",
+          "link_blocker": "Unmapped local data/constant section: .rodata",
+          "unlinked_comparison": {
+            "identical": false,
+            "expected_size": 828,
+            "compiled_size": 756,
+            "different_bytes": 689,
+            "first_different_offsets": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "unresolved_relocations": [
+              136,
+              160,
+              152,
+              164,
+              296,
+              172,
+              300,
+              368,
+              308,
+              372,
+              500,
+              508,
+              516,
+              524,
+              552,
+              560
+            ],
+            "expected_sha256": "3d53dcaf17fae59aff6df0e6b433e06a7dad7eab4ea5253424e7b2e157a608f8",
+            "compiled_sha256": "bc3549ae2ca179ffa915b2d4955ab67fab3cf20c29aeee697906248bdf962ddf"
+          }
+        }
+      ],
+      "evidence": "Complete MB_CAPABLE five-GPR multibyte decoder. Null output chooses local dummy; s nonnull/nzero rejection precedes fresh current_locale34 reads. Locale length<=1 or unknown uses unsigned-byte C fallback. SJIS and EUCJP preserve first-byte reads before null checks and second-byte reads before n<=1, both lead/trail ranges and 16-bit wchar assembly. JIS preserves state==0 versus nonzero, nine character classes, both complete12x9 enum tables, all eight action cases, state/output store ordering, pointer differences and byte limits. No null/short-readable-buffer guard inserted into undefined upstream load paths. Unchanged licensed pinned source and complete source-symbol/raw/body/ABI/control proof. No root approval or central registration yet. All candidates reconstructed; no native runtime/OS/encoding safety claim. Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "comparison_kind": "unlinked_object_with_unresolved_relocations",
+      "link_blocker": "Unmapped local data/constant section: .rodata",
+      "data_identity_only": {
+        "writable_original_jis_tables": [
+          {
+            "symbol": "JIS_state_table",
+            "address": "0x405698",
+            "file_offset": "0x306698",
+            "size": 432,
+            "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+            "section": ".data",
+            "section_flags": 3,
+            "source_enumeration_full_identity": true,
+            "initialized_rows": 10,
+            "implicit_zero_rows": 2,
+            "mapping_status": "Writable initialized table identity only; no mapped-data or code award."
+          },
+          {
+            "symbol": "JIS_action_table",
+            "address": "0x405848",
+            "file_offset": "0x306848",
+            "size": 432,
+            "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+            "section": ".data",
+            "section_flags": 3,
+            "source_enumeration_full_identity": true,
+            "initialized_rows": 10,
+            "implicit_zero_rows": 2,
+            "mapping_status": "Writable initialized table identity only; no mapped-data or code award."
+          }
+        ],
+        "compiled_allocated_sections": [
+          {
+            "name": ".data.JIS_state_table",
+            "type": "SHT_PROGBITS",
+            "size": 432,
+            "flags": 3,
+            "alignment": 8,
+            "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+            "symbols": [
+              {
+                "name": "",
+                "value": 0,
+                "size": 0,
+                "type": "STT_SECTION"
+              },
+              {
+                "name": "JIS_state_table",
+                "value": 0,
+                "size": 432,
+                "type": "STT_OBJECT"
+              }
+            ],
+            "relocations": [],
+            "original_identity": {
+              "address": "0x405698",
+              "file_offset": "0x306698",
+              "size": 432,
+              "sha256": "ad3f5e49cc4a9f2b10bc6cbeb3ee37ce84d9a051a32df6766537d7a05e4cadb7",
+              "section": ".data",
+              "section_flags": 3,
+              "mapping": false,
+              "award": false
+            }
+          },
+          {
+            "name": ".data.JIS_action_table",
+            "type": "SHT_PROGBITS",
+            "size": 432,
+            "flags": 3,
+            "alignment": 8,
+            "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+            "symbols": [
+              {
+                "name": "",
+                "value": 0,
+                "size": 0,
+                "type": "STT_SECTION"
+              },
+              {
+                "name": "JIS_action_table",
+                "value": 0,
+                "size": 432,
+                "type": "STT_OBJECT"
+              }
+            ],
+            "relocations": [],
+            "original_identity": {
+              "address": "0x405848",
+              "file_offset": "0x306848",
+              "size": 432,
+              "sha256": "16d4e678a803b004d4ce61135d40c8c791f0941d894acaeffbb877c1c1c6d2d3",
+              "section": ".data",
+              "section_flags": 3,
+              "mapping": false,
+              "award": false
+            }
+          },
+          {
+            "name": ".rodata",
+            "type": "SHT_PROGBITS",
+            "size": 64,
+            "flags": 2,
+            "alignment": 16,
+            "sha256": "b96c81c6c1ef2e71bce8e98a8285827f35e9348d46d598c339ede3b7107ea247",
+            "symbols": [
+              {
+                "name": "",
+                "value": 0,
+                "size": 0,
+                "type": "STT_SECTION"
+              }
+            ],
+            "relocations": [
+              {
+                "offset": 32,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 36,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 40,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 44,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 48,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 52,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 56,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              },
+              {
+                "offset": 60,
+                "type": 2,
+                "symbol": "",
+                "symbol_section": ".text._mbtowc_r",
+                "symbol_value": 0
+              }
+            ]
+          }
+        ],
+        "original_action_switch": {
+          "address": "0x4566c0",
+          "size": 32,
+          "sha256": "bf6c382acb11649ec0abff1e30943b2879f95c17018d356deb22f11825ffc0a9",
+          "section": ".rodata",
+          "flags": 2,
+          "targets": [
+            "0x396648",
+            "0x39665c",
+            "0x396668",
+            "0x396690",
+            "0x396690",
+            "0x396694",
+            "0x396638",
+            "0x396450"
+          ]
+        },
+        "mapping_supplied": false,
+        "exact_code_or_data_award": false
+      },
+      "compile_semantic_limits": [
+        "SJIS/EUC undefined NULL/insufficient-readable-byte paths retain the original precheck loads and are not given safety behavior. Valid writable wchar/state/readable strings/FILE/reent domains assumed. No mutation/state/static-table thread safety claim.",
+        "Main candidate -fno-builtin compile observes implicit strlen returnint, while original sltiu suggests unsigned prototype/builtin knowledge. Library size/length domains bounded by actual accessible PS2 memory preserve intended locale routing; no full malformed/huge-string fidelity claim. Current candidate unlinked differences include this genuine source/build distinction.",
+        "Readonly main64B gcc29/56B gcc323 sections retain full genuine local case pointers; no main mapping supplied. Both writable initialized432B tables exact identity-only; no data/C matching credit.",
+        "Puts helper whole8B newline pool matches readonly original geometry; wrapper itself has no data requirement. Six complete genuine links are nonexact. Main compiled836/756 symbols are not original828B boundaries."
+      ],
+      "review_status": "author_discpeer_parent_complete_original_source_dependency_abi_and_fresh_reproduction_passed"
+    },
+    {
+      "name": "_puts_r",
+      "address": "0x394fd0",
+      "file_offset": "0x295fd0",
+      "size": 132,
+      "original_sha256": "6e108c8f32d708ec283403eba59d1495d7c9f0789e845f6b240016737a640675",
+      "original_assembly": "build/functions/func_00394FD0.s",
+      "boundary_evidence": {
+        "terminal_jr": "0x39504c",
+        "terminal_delay_word": "0x27bd0050",
+        "preceding_independent_jr": "0x394fc4",
+        "preceding_delay_word": "0x27bd0090",
+        "excluded_alignment_bytes": 4,
+        "following_entry": "0x395058",
+        "following_entry_word": "0x80282d",
+        "following_frame_instruction": "0x395060",
+        "following_frame_word": "0x27bdfff0",
+        "scanner_interval_size": 132,
+        "independently_split": false,
+        "actual_incoming_caller_intervals_only": true
+      },
+      "entry_call_evidence": [
+        {
+          "instruction": "0x39506c",
+          "word": "0xc0e53f4",
+          "delay_word": "0x0",
+          "caller": {
+            "address": "0x395058",
+            "file_offset": "0x296058",
+            "size": 40,
+            "sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+            "terminal_jr": "0x395078",
+            "terminal_delay_word": "0x27bd0010",
+            "heuristic_complete_size": 68,
+            "independently_split": true,
+            "following_instruction": "0x27bdfff0",
+            "original_assembly": "func_00395058.s"
+          }
+        }
+      ],
+      "direct_calls": [
+        {
+          "instruction": "0x394fe8",
+          "word": "0xc0a5414",
+          "delay_word": "0x220202d",
+          "target": "0x295050",
+          "upstream_symbol": "strlen"
+        },
+        {
+          "instruction": "0x395028",
+          "word": "0xc0e7782",
+          "delay_word": "0xafa20014",
+          "target": "0x39de08",
+          "upstream_symbol": "__sfvwrite"
+        }
+      ],
+      "branches": [],
+      "stores": [
+        {
+          "instruction": "0x394fd4",
+          "word": "0x7fb00040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 64
+        },
+        {
+          "instruction": "0x394fd8",
+          "word": "0x7fb10030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 48
+        },
+        {
+          "instruction": "0x394fe4",
+          "word": "0xffbf0020",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 32
+        },
+        {
+          "instruction": "0x39500c",
+          "word": "0xafb10010",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 16
+        },
+        {
+          "instruction": "0x395010",
+          "word": "0xafa30018",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 3,
+          "signed_offset": 24
+        },
+        {
+          "instruction": "0x395018",
+          "word": "0xafa6001c",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 6,
+          "signed_offset": 28
+        },
+        {
+          "instruction": "0x39501c",
+          "word": "0xafa90008",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 9,
+          "signed_offset": 8
+        },
+        {
+          "instruction": "0x395020",
+          "word": "0xafa80000",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 8,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x395024",
+          "word": "0xafa70004",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 7,
+          "signed_offset": 4
+        },
+        {
+          "instruction": "0x39502c",
+          "word": "0xafa20014",
+          "opcode": 43,
+          "base_gpr": 29,
+          "source_register": 2,
+          "signed_offset": 20
+        }
+      ],
+      "returns": [
+        {
+          "instruction": "0x39504c",
+          "word": "0x3e00008",
+          "delay_word": "0x27bd0050"
+        }
+      ],
+      "control_flow_identity": "Exact source two-GPR stream writer: capture strlen of input, form two genuine iov entries for string and one newline, total length+1 low32, select captured reent stdout8, return EOF(-1) on any nonzero sfvwrite result and newline10 otherwise. Real source writes no string terminator.",
+      "compiler_symbol_evidence": {
+        "gcc29": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 132,
+          "section": ".text._puts_r",
+          "section_size": 136,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "strlen",
+            "__sfvwrite",
+            "_impure_ptr"
+          ]
+        },
+        "gcc323": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 132,
+          "section": ".text._puts_r",
+          "section_size": 136,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "strlen",
+            "__sfvwrite",
+            "_impure_ptr"
+          ]
+        }
+      },
+      "source": "src/runtime/stdio/puts.c",
+      "source_kind": "c",
+      "compiled_symbol": "_puts_r",
+      "upstream_symbol": "_puts_r",
+      "status": "reconstructed",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-I",
+        "src/runtime/stdio",
+        "-I",
+        "src/runtime/stdio"
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/puts.c",
+      "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required.",
+      "upstream_source_sha256": "1613ed8741d59435e6896fb14a40c5ed0db06aa1c3d4f10db8ba236d7b1daddd",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/puts.c",
+          "sha256": "1613ed8741d59435e6896fb14a40c5ed0db06aa1c3d4f10db8ba236d7b1daddd",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/puts.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/puts.c",
+          "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdio/fvwrite.h",
+          "sha256": "56bdebcc58d89a26db62cc3f95773d7474a4dc5a355730c426d679cbde78c387",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/fvwrite.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fvwrite.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        }
+      ],
+      "source_modified": false,
+      "reviewed": true,
+      "independent_review": "Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "entry_evidence": {
+        "reachability": "actual_encoded_jal",
+        "references": [
+          {
+            "instruction": "0x39506c",
+            "word": "0xc0e53f4",
+            "delay_word": "0x0",
+            "caller": {
+              "address": "0x395058",
+              "file_offset": "0x296058",
+              "size": 40,
+              "sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+              "terminal_jr": "0x395078",
+              "terminal_delay_word": "0x27bd0010",
+              "heuristic_complete_size": 68,
+              "independently_split": true,
+              "following_instruction": "0x27bdfff0",
+              "original_assembly": "func_00395058.s"
+            }
+          }
+        ],
+        "limit": "Whole original independently bounded source function; merged scanner intervals retained explicitly as diagnostic geometry only."
+      },
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 132,
+        "compiled_size": 132,
+        "different_bytes": 42,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "6e108c8f32d708ec283403eba59d1495d7c9f0789e845f6b240016737a640675",
+        "compiled_sha256": "ebff42c3ae55c1a19ab0d5c42a546800892da583cfd4838a372c4bc56b452cfb"
+      },
+      "profile_comparisons": [
+        {
+          "name": "_puts_r",
+          "address": "0x394fd0",
+          "size": 132,
+          "source": "build/reuse/runtime_next/puts.c",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/puts_gcc29.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 132,
+            "section": ".text._puts_r",
+            "section_size": 136,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "strlen",
+              "__sfvwrite",
+              "_impure_ptr"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 8,
+              "flags": 2,
+              "alignment": 8,
+              "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x456228",
+                "file_offset": "0x357228",
+                "size": 8,
+                "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+                "section": ".rodata",
+                "section_flags": 2
+              }
+            }
+          ],
+          "warnings": "",
+          "resolved_bindings": {
+            "strlen": 2707536,
+            "__sfvwrite": 3792392
+          },
+          "identical": false,
+          "expected_size": 132,
+          "compiled_size": 132,
+          "different_bytes": 42,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e108c8f32d708ec283403eba59d1495d7c9f0789e845f6b240016737a640675",
+          "compiled_sha256": "ebff42c3ae55c1a19ab0d5c42a546800892da583cfd4838a372c4bc56b452cfb"
+        },
+        {
+          "name": "_puts_r",
+          "address": "0x394fd0",
+          "size": 132,
+          "source": "build/reuse/runtime_next/puts.c",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/puts_gcc323.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 132,
+            "section": ".text._puts_r",
+            "section_size": 136,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "strlen",
+              "__sfvwrite",
+              "_impure_ptr"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 8,
+              "flags": 2,
+              "alignment": 8,
+              "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x456228",
+                "file_offset": "0x357228",
+                "size": 8,
+                "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+                "section": ".rodata",
+                "section_flags": 2
+              }
+            }
+          ],
+          "warnings": "",
+          "resolved_bindings": {
+            "strlen": 2707536,
+            "__sfvwrite": 3792392
+          },
+          "identical": false,
+          "expected_size": 132,
+          "compiled_size": 132,
+          "different_bytes": 71,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "6e108c8f32d708ec283403eba59d1495d7c9f0789e845f6b240016737a640675",
+          "compiled_sha256": "676b8fdb9c6a5b16107109beeed1f4f19fa3006b688fe835e3c6e5828c9b697c"
+        }
+      ],
+      "evidence": "Exact source two-GPR stream writer: capture strlen of input, form two genuine iov entries for string and one newline, total length+1 low32, select captured reent stdout8, return EOF(-1) on any nonzero sfvwrite result and newline10 otherwise. Real source writes no string terminator. Unchanged licensed pinned source and complete source-symbol/raw/body/ABI/control proof. No root approval or central registration yet. All candidates reconstructed; no native runtime/OS/encoding safety claim. Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "link_data": {
+        ".rodata": {
+          "address": "0x456228",
+          "file_offset": "0x357228",
+          "size": 8,
+          "original_sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+          "evidence": "Whole unchanged compiler-generated8B newline readonly section equals complete original8B at456228, proved by actual394FF0LUI/394FF8ADDIU and complete linker output. Full data is matched, code remains reconstructed; no table/string fragments or writable mappings."
+        }
+      },
+      "review_status": "author_discpeer_parent_complete_original_source_dependency_abi_and_fresh_reproduction_passed"
+    },
+    {
+      "name": "puts",
+      "address": "0x395058",
+      "file_offset": "0x296058",
+      "size": 40,
+      "original_sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+      "original_assembly": "build/functions/func_00395058.s",
+      "boundary_evidence": {
+        "terminal_jr": "0x395078",
+        "terminal_delay_word": "0x27bd0010",
+        "preceding_independent_jr": "0x39504c",
+        "preceding_delay_word": "0x27bd0050",
+        "excluded_alignment_bytes": 0,
+        "following_entry": "0x395080",
+        "following_entry_word": "0x27bdfff0",
+        "following_frame_instruction": "0x395080",
+        "following_frame_word": "0x27bdfff0",
+        "scanner_interval_size": 68,
+        "independently_split": true,
+        "actual_incoming_caller_intervals_only": true
+      },
+      "entry_call_evidence": [
+        {
+          "instruction": "0x2d5a78",
+          "word": "0xc0e5416",
+          "delay_word": "0x2484a278",
+          "caller": {
+            "address": "0x2d4f68",
+            "file_offset": "0x1d5f68",
+            "size": 7860,
+            "sha256": "8cd146e361b0122c857407f862655f7a79e1f8445cbcae0f55de42ce88a4dc55",
+            "terminal_jr": "0x2d6e14",
+            "terminal_delay_word": "0x3ace821",
+            "heuristic_complete_size": 7860,
+            "independently_split": false,
+            "following_instruction": "0x0",
+            "original_assembly": "func_002D4F68.s"
+          }
+        }
+      ],
+      "direct_calls": [
+        {
+          "instruction": "0x39506c",
+          "word": "0xc0e53f4",
+          "delay_word": "0x0",
+          "target": "0x394fd0",
+          "upstream_symbol": "_puts_r"
+        }
+      ],
+      "branches": [],
+      "stores": [
+        {
+          "instruction": "0x395068",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0
+        }
+      ],
+      "returns": [
+        {
+          "instruction": "0x395078",
+          "word": "0x3e00008",
+          "delay_word": "0x27bd0010"
+        }
+      ],
+      "control_flow_identity": "Complete public wrapper captures input into a1, loads actual _impure_ptr, calls genuine _puts_r, returns its result. Entire40B symbol ends before independent28B registered lflush prologue; scanner68B merged extent not treated as this function.",
+      "compiler_symbol_evidence": {
+        "gcc29": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 40,
+          "section": ".text.puts",
+          "section_size": 40,
+          "trailing_zero_alignment_bytes": 0,
+          "undefined": [
+            "strlen",
+            "__sfvwrite",
+            "_impure_ptr"
+          ]
+        },
+        "gcc323": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 36,
+          "section": ".text.puts",
+          "section_size": 40,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "strlen",
+            "__sfvwrite",
+            "_impure_ptr"
+          ]
+        }
+      },
+      "source": "src/runtime/stdio/puts.c",
+      "source_kind": "c",
+      "compiled_symbol": "puts",
+      "upstream_symbol": "puts",
+      "status": "reconstructed",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-I",
+        "src/runtime/stdio",
+        "-I",
+        "src/runtime/stdio"
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/puts.c",
+      "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required.",
+      "upstream_source_sha256": "1613ed8741d59435e6896fb14a40c5ed0db06aa1c3d4f10db8ba236d7b1daddd",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/puts.c",
+          "sha256": "1613ed8741d59435e6896fb14a40c5ed0db06aa1c3d4f10db8ba236d7b1daddd",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/puts.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/puts.c",
+          "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdio/fvwrite.h",
+          "sha256": "56bdebcc58d89a26db62cc3f95773d7474a4dc5a355730c426d679cbde78c387",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/fvwrite.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/fvwrite.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        }
+      ],
+      "source_modified": false,
+      "reviewed": true,
+      "independent_review": "Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "entry_evidence": {
+        "reachability": "actual_encoded_jal",
+        "references": [
+          {
+            "instruction": "0x2d5a78",
+            "word": "0xc0e5416",
+            "delay_word": "0x2484a278",
+            "caller": {
+              "address": "0x2d4f68",
+              "file_offset": "0x1d5f68",
+              "size": 7860,
+              "sha256": "8cd146e361b0122c857407f862655f7a79e1f8445cbcae0f55de42ce88a4dc55",
+              "terminal_jr": "0x2d6e14",
+              "terminal_delay_word": "0x3ace821",
+              "heuristic_complete_size": 7860,
+              "independently_split": false,
+              "following_instruction": "0x0",
+              "original_assembly": "func_002D4F68.s"
+            }
+          }
+        ],
+        "limit": "Whole original independently bounded source function; merged scanner intervals retained explicitly as diagnostic geometry only."
+      },
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 40,
+        "compiled_size": 40,
+        "different_bytes": 9,
+        "first_different_offsets": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+        "compiled_sha256": "5a6be25d19770bc9f10d3de9a7ab62beb50883a211b8764d61ea1b57abf7ba3e"
+      },
+      "profile_comparisons": [
+        {
+          "name": "puts",
+          "address": "0x395058",
+          "size": 40,
+          "source": "build/reuse/runtime_next/puts.c",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/puts_gcc29.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 40,
+            "section": ".text.puts",
+            "section_size": 40,
+            "trailing_zero_alignment_bytes": 0,
+            "undefined": [
+              "strlen",
+              "__sfvwrite",
+              "_impure_ptr"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 8,
+              "flags": 2,
+              "alignment": 8,
+              "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x456228",
+                "file_offset": "0x357228",
+                "size": 8,
+                "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+                "section": ".rodata",
+                "section_flags": 2
+              }
+            }
+          ],
+          "warnings": "",
+          "resolved_bindings": {
+            "_impure_ptr": 4216468,
+            "_puts_r": 3755984
+          },
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 9,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+          "compiled_sha256": "5a6be25d19770bc9f10d3de9a7ab62beb50883a211b8764d61ea1b57abf7ba3e"
+        },
+        {
+          "name": "puts",
+          "address": "0x395058",
+          "size": 40,
+          "source": "build/reuse/runtime_next/puts.c",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/puts_gcc323.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 36,
+            "section": ".text.puts",
+            "section_size": 40,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "strlen",
+              "__sfvwrite",
+              "_impure_ptr"
+            ]
+          },
+          "allocated_data": [
+            {
+              "name": ".rodata",
+              "type": "SHT_PROGBITS",
+              "size": 8,
+              "flags": 2,
+              "alignment": 8,
+              "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+              "symbols": [
+                {
+                  "name": "",
+                  "value": 0,
+                  "size": 0,
+                  "type": "STT_SECTION"
+                }
+              ],
+              "relocations": [],
+              "original_identity": {
+                "address": "0x456228",
+                "file_offset": "0x357228",
+                "size": 8,
+                "sha256": "a111f275cc2e7588000001d300a31e76336d15b9d314cd1a1d8f3d3556975eed",
+                "section": ".rodata",
+                "section_flags": 2
+              }
+            }
+          ],
+          "warnings": "",
+          "resolved_bindings": {
+            "_puts_r": 3755984,
+            "_impure_ptr": 4216468
+          },
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 36,
+          "different_bytes": 32,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c48ab8d959a9fc3932b94fdb72fdbc91499dcb475cc6bcc33973197cac6e9505",
+          "compiled_sha256": "04ba94a74036cc3b9308a27cc352307ee62f4f476248a0c48dd07fb29538d65f"
+        }
+      ],
+      "evidence": "Complete public wrapper captures input into a1, loads actual _impure_ptr, calls genuine _puts_r, returns its result. Entire40B symbol ends before independent28B registered lflush prologue; scanner68B merged extent not treated as this function. Unchanged licensed pinned source and complete source-symbol/raw/body/ABI/control proof. No root approval or central registration yet. All candidates reconstructed; no native runtime/OS/encoding safety claim. Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "review_status": "author_discpeer_parent_complete_original_source_dependency_abi_and_fresh_reproduction_passed"
+    },
+    {
+      "name": "__srget",
+      "address": "0x395208",
+      "file_offset": "0x296208",
+      "size": 72,
+      "original_sha256": "507ce16cb92e67110ba312a22b920c4a829be44e4b278d40784c8a09b3ace3f2",
+      "original_assembly": "build/functions/func_00395208.s",
+      "boundary_evidence": {
+        "terminal_jr": "0x395248",
+        "terminal_delay_word": "0x27bd0020",
+        "preceding_independent_jr": "0x395200",
+        "preceding_delay_word": "0x27bd0020",
+        "excluded_alignment_bytes": 0,
+        "following_entry": "0x395250",
+        "following_entry_word": "0x27bdff20",
+        "following_frame_instruction": "0x395250",
+        "following_frame_word": "0x27bdff20",
+        "scanner_interval_size": 192,
+        "independently_split": true,
+        "actual_incoming_caller_intervals_only": true
+      },
+      "entry_call_evidence": [
+        {
+          "instruction": "0x362adc",
+          "word": "0xc0e5482",
+          "delay_word": "0x0",
+          "caller": {
+            "address": "0x362ab0",
+            "file_offset": "0x263ab0",
+            "size": 152,
+            "sha256": "5c87a09a8c1aa44f16138c2ac373ba0ea7a5cfff9069d14ae778905e42c114bc",
+            "terminal_jr": "0x362b40",
+            "terminal_delay_word": "0x27bd0020",
+            "heuristic_complete_size": 152,
+            "independently_split": false,
+            "following_instruction": "0x27bdffd0",
+            "original_assembly": "func_00362AB0.s"
+          }
+        }
+      ],
+      "direct_calls": [
+        {
+          "instruction": "0x395214",
+          "word": "0xc0e5428",
+          "delay_word": "0x80802d",
+          "target": "0x3950a0",
+          "upstream_symbol": "__srefill"
+        }
+      ],
+      "branches": [
+        {
+          "instruction": "0x39521c",
+          "word": "0x14400008",
+          "delay_word": "0x2402ffff",
+          "target": "0x395240",
+          "likely": false
+        }
+      ],
+      "stores": [
+        {
+          "instruction": "0x39520c",
+          "word": "0x7fb00010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 16
+        },
+        {
+          "instruction": "0x395210",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0
+        },
+        {
+          "instruction": "0x395230",
+          "word": "0xae020004",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 4
+        },
+        {
+          "instruction": "0x39523c",
+          "word": "0xae030000",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 3,
+          "signed_offset": 0
+        }
+      ],
+      "returns": [
+        {
+          "instruction": "0x395248",
+          "word": "0x3e00008",
+          "delay_word": "0x27bd0020"
+        }
+      ],
+      "control_flow_identity": "Complete buffer-empty get helper calls actual srefill on original FILE, returns EOF on any nonzero result; success reloads FILE r4 then decrements it, reads unsigned byte at p0, advances pointer0, and returns that byte. Original72B independent return/delay precedes separate snprintf prologue;192B heuristic is not its boundary.",
+      "compiler_symbol_evidence": {
+        "gcc29": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 72,
+          "section": ".text.__srget",
+          "section_size": 72,
+          "trailing_zero_alignment_bytes": 0,
+          "undefined": [
+            "__srefill"
+          ]
+        },
+        "gcc323": {
+          "binding": "STB_GLOBAL",
+          "type": "STT_FUNC",
+          "symbol_size": 76,
+          "section": ".text.__srget",
+          "section_size": 80,
+          "trailing_zero_alignment_bytes": 4,
+          "undefined": [
+            "__srefill"
+          ]
+        }
+      },
+      "source": "src/runtime/stdio/rget.c",
+      "source_kind": "c",
+      "compiled_symbol": "__srget",
+      "upstream_symbol": "__srget",
+      "status": "reconstructed",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-I",
+        "src/runtime/stdio",
+        "-I",
+        "src/runtime/stdio"
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/rget.c",
+      "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required.",
+      "upstream_source_sha256": "31a21af67d8e0ad6b53b9d45554d57a60ca5e1d06df77b376fea399b3a5f3f64",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdio/rget.c",
+          "sha256": "31a21af67d8e0ad6b53b9d45554d57a60ca5e1d06df77b376fea399b3a5f3f64",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/rget.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/rget.c",
+          "upstream_license": "Full Berkeley 1990 source notice, LICENSES/newlib-1.8.1.txt section1; University of California, Berkeley documentation acknowledgement required."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdio.h",
+          "sha256": "1e39d39272346bf8221f5964315791741ee83f9f9cab7b81f55b3b8c6a9942d0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stdarg.h",
+          "sha256": "84945e1a49c2c9aeee025705c53d94f1b91999bd30e2cafa639d800cad852966",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/va-mips.h",
+          "sha256": "af46841480f84b4620ca62c3f955cce20aac166928db5cdf17109ed71de41ce6",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdio/local.h",
+          "sha256": "d69cf9d9fe667582362041c0049d7ddd5a2b3fce34a7bf705aaa3ee38670e367",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdio/local.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/local.h",
+          "upstream_license": "Unchanged pinned authentic public newlib1.8.1 header; full source notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/unistd.h",
+          "sha256": "19f31553182c4d649dd0d6301ffdbb5b4d7903b28373dd070a553798b41f524f",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/unistd.h",
+          "sha256": "7c04c7670c636da9e9bc0d2f0f57c3e8b1578bf60d6b3a6289ac8d7d73873a0c",
+          "modified": false,
+          "upstream_revision": "Newlib1.10.0/GNU GCC3.2.3 headers from public PS2DEV2018-10-19 archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "source_modified": false,
+      "reviewed": true,
+      "independent_review": "Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "entry_evidence": {
+        "reachability": "actual_encoded_jal",
+        "references": [
+          {
+            "instruction": "0x362adc",
+            "word": "0xc0e5482",
+            "delay_word": "0x0",
+            "caller": {
+              "address": "0x362ab0",
+              "file_offset": "0x263ab0",
+              "size": 152,
+              "sha256": "5c87a09a8c1aa44f16138c2ac373ba0ea7a5cfff9069d14ae778905e42c114bc",
+              "terminal_jr": "0x362b40",
+              "terminal_delay_word": "0x27bd0020",
+              "heuristic_complete_size": 152,
+              "independently_split": false,
+              "following_instruction": "0x27bdffd0",
+              "original_assembly": "func_00362AB0.s"
+            }
+          }
+        ],
+        "limit": "Whole original independently bounded source function; merged scanner intervals retained explicitly as diagnostic geometry only."
+      },
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 72,
+        "compiled_size": 72,
+        "different_bytes": 6,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          58,
+          59,
+          62
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "507ce16cb92e67110ba312a22b920c4a829be44e4b278d40784c8a09b3ace3f2",
+        "compiled_sha256": "f62aac539531d52decae1e55b60306e14d7274256e8d47276fdc9b9e9d0116f2"
+      },
+      "profile_comparisons": [
+        {
+          "name": "__srget",
+          "address": "0x395208",
+          "size": 72,
+          "source": "build/reuse/runtime_next/rget.c",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/rget_gcc29.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 72,
+            "section": ".text.__srget",
+            "section_size": 72,
+            "trailing_zero_alignment_bytes": 0,
+            "undefined": [
+              "__srefill"
+            ]
+          },
+          "allocated_data": [],
+          "warnings": "",
+          "resolved_bindings": {
+            "__srefill": 3756192
+          },
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 72,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            58,
+            59,
+            62
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "507ce16cb92e67110ba312a22b920c4a829be44e4b278d40784c8a09b3ace3f2",
+          "compiled_sha256": "f62aac539531d52decae1e55b60306e14d7274256e8d47276fdc9b9e9d0116f2"
+        },
+        {
+          "name": "__srget",
+          "address": "0x395208",
+          "size": 72,
+          "source": "build/reuse/runtime_next/rget.c",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-I",
+            "src/runtime/stdio",
+            "-I",
+            "build/reuse/runtime_next"
+          ],
+          "object": "build/reuse/runtime_next/rget_gcc323.o",
+          "object_geometry": {
+            "binding": "STB_GLOBAL",
+            "type": "STT_FUNC",
+            "symbol_size": 76,
+            "section": ".text.__srget",
+            "section_size": 80,
+            "trailing_zero_alignment_bytes": 4,
+            "undefined": [
+              "__srefill"
+            ]
+          },
+          "allocated_data": [],
+          "warnings": "",
+          "resolved_bindings": {
+            "__srefill": 3756192
+          },
+          "identical": false,
+          "expected_size": 72,
+          "compiled_size": 76,
+          "different_bytes": 20,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            20,
+            46,
+            56,
+            57,
+            58
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "507ce16cb92e67110ba312a22b920c4a829be44e4b278d40784c8a09b3ace3f2",
+          "compiled_sha256": "911044b9b1f2a8029bdce3f3f6cd633a89a39b332d77ed71edafaea8fc5fe140"
+        }
+      ],
+      "evidence": "Complete buffer-empty get helper calls actual srefill on original FILE, returns EOF on any nonzero result; success reloads FILE r4 then decrements it, reads unsigned byte at p0, advances pointer0, and returns that byte. Original72B independent return/delay precedes separate snprintf prologue;192B heuristic is not its boundary. Unchanged licensed pinned source and complete source-symbol/raw/body/ABI/control proof. No root approval or central registration yet. All candidates reconstructed; no native runtime/OS/encoding safety claim. Author, discpeer and parent read all268 selected original instructions and complete three unchanged licensed C sources/full mbctypeheader. Independent fresh reviews reproduce entire scout/source/dependency/control/ABI/data/symbol/comparison packet. Six natural whole stream links zero unresolved/zero exact; two main objects retain honest readonly relocation blocker and sixteen actual objectrelocations. Allsix real incoming calls/fullcallergeometry/hash verified without inflated fullcaller manual claim. Parent complete strlen/refillsupport102instructions read. Authentic FILE/reent/iov/enum/long/wchar layouts, two24wordABIs, whole8B newline and both432B writable tables verified. Tables identityonly/unmapped; no data award. Original SJIS/EUC precheck loads and malformed/huge-string/build-prototype limits remain explicit; no native OS/runtime/encoding/thread/EE fidelity claim.",
+      "review_status": "author_discpeer_parent_complete_original_source_dependency_abi_and_fresh_reproduction_passed"
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",
