@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "binary": {
+    "path": "orig/SLUS_216.68",
+    "sha256": "01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8"
+  },
+  "notes": [
+    "Names, complete classes, original source signatures, and original compiler configuration remain unknown.",
+    "Widths and accessed field offsets are checked in include/george/types.h; types represent observed object prefixes only.",
+    "Reconstructed denotes reviewed high-level behavior without a byte match. Matched denotes exact compiled instruction bytes for the recorded toolchain and flags, excluding function padding.",
+    "The chosen flags demonstrate reproducible leaf matches; they do not identify the original whole-game build configuration.",
+    "Host IEEE floating-point behavior may differ from the Emotion Engine on exceptional values, denormals, rounding and overflow. Do not enable fast-math or fused contraction.",
+    "Unsigned-to-signed 16-bit narrowing uses the supported PS2 compiler two's-complement conversion; signed halfword loads are preserved.",
+    "No third-party decompilation source was copied into these routines.",
+    "The reset routine uses a separate candidate profile with first-pass scheduling disabled; compile_flags are recorded per function and verified independently."
+  ],
+  "compiler": {
+    "executable": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-gcc.exe",
+    "version": "3.2.3",
+    "flags": [
+      "-O2",
+      "-G0",
+      "-mfp64",
+      "-fno-builtin",
+      "-fno-strict-aliasing",
+      "-fno-reorder-blocks"
+    ]
+  },
+  "functions": [
+    {
+      "name": "func_001100D0",
+      "address": "0x001100D0",
+      "file_offset": "0x000110D0",
+      "size": 16,
+      "source": "src/game/leaf.c",
+      "source_name": "func_001100D0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3",
+      "evidence": "lw/ori 1/sw at +0x18; sets bit 0.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 16,
+      "compiled_sha256": "971538f11e06dffa7dacc85d0b8f819de653962d3857b49acaf6a1e2502504e3",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_001100E0",
+      "address": "0x001100E0",
+      "file_offset": "0x000110E0",
+      "size": 20,
+      "source": "src/game/leaf.c",
+      "source_name": "func_001100E0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae",
+      "evidence": "lw/and -2/sw at +0x18; clears bit 0.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 20,
+      "compiled_sha256": "d17b416f992329a11a42641b72371bbce9179c9fa0356fa34dc5578d947970ae",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_001102F8",
+      "address": "0x001102F8",
+      "file_offset": "0x000112F8",
+      "size": 52,
+      "source": "src/game/leaf.c",
+      "source_name": "func_001102F8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4f6bf9437184cb778dfb3a45eb257df8326afced21ced0c351c01bf0e8400561",
+      "evidence": "Tests bits 0 and 2, conditionally clears bit 0, stores low 3 bits to output+0, returns output+0x18.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 52,
+      "compiled_sha256": "ca309cb28f5580b5b4878c33be090b9ddc2d66bda3168d7b6b394852ae8bca72",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_00111FA0",
+      "address": "0x00111FA0",
+      "file_offset": "0x00012FA0",
+      "size": 24,
+      "source": "src/game/leaf.c",
+      "source_name": "func_00111FA0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "1813e52bf3b2692919f3e7e3e449f5558e0bced9570a6e9746c984b9a57508ce",
+      "evidence": "Branch-likely loads f0 from +0x44 only if word +0x3C is nonzero; otherwise returns positive zero.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 24,
+      "compiled_sha256": "1813e52bf3b2692919f3e7e3e449f5558e0bced9570a6e9746c984b9a57508ce",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_001134E8",
+      "address": "0x001134E8",
+      "file_offset": "0x000144E8",
+      "size": 48,
+      "source": "src/game/leaf.c",
+      "source_name": "func_001134E8",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f6ac346a6aa7ad785694518075dac2de47967a51fd8c4d9ce607f38028e8a4b8",
+      "evidence": "lhu+sh copies low 16 bits to +0x40; word +8 copied to +0x44; cvt.s.w treats input+4 as signed int before 1.0f/div.s stored at +0x48; returns original input.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 48,
+      "compiled_sha256": "f6ac346a6aa7ad785694518075dac2de47967a51fd8c4d9ce607f38028e8a4b8",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ],
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      }
+    },
+    {
+      "name": "func_00113518",
+      "address": "0x00113518",
+      "file_offset": "0x00014518",
+      "size": 32,
+      "source": "src/game/leaf.c",
+      "source_name": "func_00113518",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e9aa7da0ee79ca989c633da41b12a5aa81ad6de8a6b85b733a9f81a7a483d7d2",
+      "evidence": "lh from +0x40 sign extends to 32-bit output+0; words +0x30 and +0x44 copied to output+4 and +8; returns original output.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 32,
+      "compiled_sha256": "e9aa7da0ee79ca989c633da41b12a5aa81ad6de8a6b85b733a9f81a7a483d7d2",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011C078",
+      "address": "0x0011C078",
+      "file_offset": "0x0001D078",
+      "size": 84,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011C078",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "4851c5b94ad01e26c83622b5d1cbf3cf154a252c65aafd87a4a61335be570fff",
+      "evidence": "If word+0x30 is nonzero, returns 1.0f-(float+0x34/float+0x50); else if word+0x2C nonzero returns ratio; else 1.0f.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 76,
+      "compiled_sha256": "df13405d1fa1108498724d112357cfd03233328a69e15318cb6bcc504afc5087",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011C108",
+      "address": "0x0011C108",
+      "file_offset": "0x0001D108",
+      "size": 20,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011C108",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fca655f0f46cc2b0d58a7e8c8b6db2230a315a81b83269303d64eaccf7f26887",
+      "evidence": "Four zero stores to +0x34, +0x28, +0x30, +0x2C; float zero has positive-zero bits.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 20,
+      "compiled_sha256": "fca655f0f46cc2b0d58a7e8c8b6db2230a315a81b83269303d64eaccf7f26887",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-fno-schedule-insns"
+      ],
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-fno-schedule-insns"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted.",
+        "profile_note": "Candidate per-function scheduling profile; original translation-unit build flags remain unidentified."
+      }
+    },
+    {
+      "name": "func_0011C120",
+      "address": "0x0011C120",
+      "file_offset": "0x0001D120",
+      "size": 60,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011C120",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e6a227165fab41f4e205fabd620bb57e292f061e4af94d7dc0f9f0f7809b3337",
+      "evidence": "Sets word+0x2C=1 and +0x30=0; compares current float+0x34 to zero; uses float+0x50 for zero case, otherwise +0x50-current.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 56,
+      "compiled_sha256": "4b723764510d3223ce731942bd4671cf03ae2b29fbe29c4bfb5193777987c9dd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011C160",
+      "address": "0x0011C160",
+      "file_offset": "0x0001D160",
+      "size": 92,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011C160",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "87d4a65a0087aff3528dd8569c18fc7a0b739ed6359ed8aa2358b2a21e28a152",
+      "evidence": "Returns if +0x28 is zero or both +0x2C/+0x30 zero; subtracts f12 from float+0x34; strictly negative result resets scalar and flags; only prior nonzero +0x2C clears +0x28.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 92,
+      "compiled_sha256": "f08c02434c75ae15d90f93f83f90d5e57f689d71d504345b3952ffedfaa442cb",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011F0E8",
+      "address": "0x0011F0E8",
+      "file_offset": "0x000200E8",
+      "size": 64,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011F0E8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0d374055ee0d0370a3c3b84090e4195957eaedc85e5424a6d243497d5eee5de7",
+      "evidence": "Input word normalized to halfword+0x18 (0 or 1), with complementary +0x1C/+0x20 float endpoints; returns input+4.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 68,
+      "compiled_sha256": "4cfd2c86167d68852a7c66a068877bfeb707d344dd3e1d68dcdd2198684cdf5a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011FE00",
+      "address": "0x0011FE00",
+      "file_offset": "0x00020E00",
+      "size": 68,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011FE00",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5b3ed22144f58a9d251705dac34d3a6be8d3761fa0f1cdecb83303cafefff5b6",
+      "evidence": "Three independent equal comparisons of a1 against words+0x40,+0x44,+0x48; first sets +0x18=1, second clears it, third writes float+0x1C=1.0f.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 68,
+      "compiled_sha256": "5b3ed22144f58a9d251705dac34d3a6be8d3761fa0f1cdecb83303cafefff5b6",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    },
+    {
+      "name": "func_0011FFB0",
+      "address": "0x0011FFB0",
+      "file_offset": "0x00020FB0",
+      "size": 64,
+      "source": "src/game/leaf.c",
+      "source_name": "func_0011FFB0",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045",
+      "evidence": "If word+0x18 nonzero and float+0x1C strictly positive, stores current-(f12*float+0x4C) using separate single multiply/subtract; no lower clamp.",
+      "boundary_evidence": "Selected heuristic start manually reviewed; range includes final return delay slot and excludes nops following endlabel.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 64,
+      "compiled_sha256": "31fa3284a666fcb92471ea5063f06d06ddd786ff42d9ab9e47acead114fc4045",
+      "match_evidence": {
+        "compiler": "ee-gcc 3.2.3 (ps2dev Windows 2018-10-19 build)",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks"
+        ],
+        "comparison": "All function symbol bytes equal original range; no .text relocations; no trailing padding counted."
+      },
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks"
+      ]
+    }
+  ]
+}

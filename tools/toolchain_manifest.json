@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-06",
+  "target": "George of the Jungle and the Search for the Secret (USA), PS2",
+  "original_compiler_status": "unidentified",
+  "binutils": {
+    "project": "https://github.com/decompals/binutils-mips-ps2-decompals",
+    "release": "v0.10",
+    "underlying_version": "GNU Binutils 2.40",
+    "license": "GPL-3.0-or-later",
+    "archive_url": "https://github.com/decompals/binutils-mips-ps2-decompals/releases/download/v0.10/binutils-mips-ps2-decompals-windows-x86-64.zip",
+    "archive_sha256": "2bb5904ee174e04f1600cc70ffdb3dc36b0efa4d1892ea446be588ba8dc6198c",
+    "hash_provenance": "Matched SHA-256 digest returned by official GitHub release assets API",
+    "release_api": "https://api.github.com/repos/decompals/binutils-mips-ps2-decompals/releases/tags/v0.10",
+    "assembler_flags": [
+      "-EL",
+      "-march=r5900",
+      "-mabi=eabi",
+      "-G0",
+      "-no-pad-sections"
+    ],
+    "binaries": [
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-addr2line.exe",
+        "sha256": "6091f1b2e9ad485571aee999dc1416e11586712ae45efc7229e83c934555a81f"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-ar.exe",
+        "sha256": "7a4cf10f5d94addb61b178b2cd04a691e18b5dfda560c4ecae6c8e7cfbdfd4fd"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-as.exe",
+        "sha256": "0bc51ced2206339904c2da7c32da5cd3715fd43cf2dfcf8a79b78a40edbb0bb5"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-c++filt.exe",
+        "sha256": "a59de89a10f3af9c4279dc3abcd2a2a3ea9b5524f2409c137c54c44df29596f3"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-elfedit.exe",
+        "sha256": "ed863356f8e3d70e8a6d9d4e7dd9f6395369a23cf2e4dca478e5cca6ae920a52"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-ld.exe",
+        "sha256": "e2152fdb1a6f1f960d9a7ae551541edb8a8cb4e72bc2067975b161a595295096"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-nm.exe",
+        "sha256": "782b78d9edbd98d9392d6d441a7cf430084cea0d29d0e8ad9c7239abb154a0d3"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-objcopy.exe",
+        "sha256": "25b662d515cc3d71a2400a7e3eec86e3e49bea62c15eca33dfc4494ccf6f536d"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-objdump.exe",
+        "sha256": "a63de135cc19bec7710fbdf26b07abaea124dc90d8ae929d124b215aa217b5e6"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-ranlib.exe",
+        "sha256": "8d8488e9e3874030ed0eadfca33b0242f56fccdcdb255c3590a82ceb8fe6f9e5"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-readelf.exe",
+        "sha256": "2346439dd20c35a4e2e9ec6936ef8a3d0eed73425b35412c222a0023e55c34be"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-size.exe",
+        "sha256": "1463e862eca12e705e3f684718bb4de7a5e8b8ebba442ead79e813cad5b7bf59"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-strings.exe",
+        "sha256": "f6027c72c910214786ed3d4e480a3e012e72b7aab32cbc918106250ffed3f9df"
+      },
+      {
+        "path": "tools/vendor/binutils-v0.10/mips-ps2-decompals-strip.exe",
+        "sha256": "a6d279e4602990a9bdf91486300b342fd12508eb6c634fc72685a1760516e052"
+      }
+    ]
+  },
+  "candidate_compiler": {
+    "project": "https://github.com/ps2dev/ps2toolchain",
+    "release": "2018-10-19",
+    "version": "ee-gcc.exe (GCC) 3.2.3",
+    "license": "GPL-2.0-or-later (GCC; bundled components retain their own licenses)",
+    "source_release_url": "https://github.com/ps2dev/ps2toolchain/tree/2018-10-19",
+    "archive_url": "https://github.com/ps2dev/ps2toolchain/releases/download/2018-10-19/ps2toolchain-20181019.7z",
+    "archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+    "hash_provenance": "Locally computed SHA-256 of official release asset; upstream API reports no digest for this older release",
+    "extracted_roots": [
+      "MinGW/bin",
+      "MinGW/msys/1.0/local/ps2dev/ee"
+    ],
+    "environment_path_prepend": [
+      "tools/vendor/ps2dev-20181019/MinGW/bin",
+      "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin"
+    ],
+    "compiler_flags": [
+      "-O2",
+      "-G0",
+      "-fno-builtin",
+      "-fno-common",
+      "-S"
+    ],
+    "probe": "Four small C leaf functions compiled and assembled successfully as ELF32 little-endian MIPS eabi64 objects; no claim this compiler produced the original game",
+    "binaries": [
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-gcc.exe",
+        "sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/cc1.exe",
+        "sha256": "d141c8240c91a7d0635870f24e633a66936d35ee59891f3f7359b105def20b11"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/cc1plus.exe",
+        "sha256": "ef5163e992a79af83454b274d4049bf96be4eefa9489a337a2e5754fdcdf8381"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/cpp0.exe",
+        "sha256": "094a9fca01460e4504f0586465d1b3b71d9aabfdfe4707faf7c48a72fdc55afc"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/bin/libgcc_s_dw2-1.dll",
+        "sha256": "63843b68b9887080c6d6abe74abd4382312c2082d92b5f527ba13fd90ea5c956"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/bin/libintl-8.dll",
+        "sha256": "be737f7371a032bb98c7284ed5be201978eab348747697f8c153dfd88726f00e"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/bin/libiconv-2.dll",
+        "sha256": "0fe721b904780119fba8cc0dce1dd2080da3d87ce57de882d097b595815e4267"
+      },
+      {
+        "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/bin/ee-as.exe",
+        "sha256": "d666aced8e6b3f7ccf09652d64fa8d988d3c8c10ce21c4e66c5bc1e6db2f3c0b"
+      }
+    ],
+    "assembler_version": "GNU assembler 2.14 20030612, target ee"
+  },
+  "publication": "Downloaded tools and probe outputs remain local in ignored tools/vendor; this manifest contains metadata and hashes only"
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "memcmp",
+      "address": "0x393464",
+      "file_offset": "0x294464",
+      "size": 148,
+      "source": "src/runtime/memcmp.S",
+      "source_kind": "assembly",
+      "status": "reused_matching_assembly",
+      "original_sha256": "bf494cd2dc04684d637f04e73ee264f6b14a735246e9efc8c0c5cbc425cd71e4",
+      "upstream_symbol": "memcmp",
+      "upstream_revision": "newlib-1.10.0 PS2 patch Git blob f1971c9a39b37c9d28f80444638aee383d4e48ff",
+      "upstream_license": "Cygnus Solutions 1999 permissive preserve-notice license",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Unique exact relocation-free archive symbol match in official PS2DEV 2018-10-19 runtime; independently rebuilt from openly licensed upstream source using homebrew GCC 3.2.3 and its ee-as 2.14, then symbol-sized bytes compared exactly with retail ELF. Does not identify original game compiler."
+    },
+    {
+      "name": "memcpy",
+      "address": "0x3934f8",
+      "file_offset": "0x2944f8",
+      "size": 172,
+      "source": "src/runtime/memcpy.S",
+      "source_kind": "assembly",
+      "status": "reused_matching_assembly",
+      "original_sha256": "7c116ebc771ee9e0804922e129661cda7500dd0dbeeff6caa9f46dbb8237d402",
+      "upstream_symbol": "memcpy",
+      "upstream_revision": "newlib-1.10.0 PS2 patch Git blob f1971c9a39b37c9d28f80444638aee383d4e48ff",
+      "upstream_license": "Cygnus Solutions 1999 permissive preserve-notice license",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Unique exact relocation-free archive symbol match in official PS2DEV 2018-10-19 runtime; independently rebuilt from openly licensed upstream source using homebrew GCC 3.2.3 and its ee-as 2.14, then symbol-sized bytes compared exactly with retail ELF. Does not identify original game compiler."
+    },
+    {
+      "name": "memmove",
+      "address": "0x3935a4",
+      "file_offset": "0x2945a4",
+      "size": 252,
+      "source": "src/runtime/memmove.S",
+      "source_kind": "assembly",
+      "status": "reused_matching_assembly",
+      "original_sha256": "45149b85e0e784fd7a27fdb8e795bc236a996fe0363f5d5e2d3906ee85a70928",
+      "upstream_symbol": "memmove",
+      "upstream_revision": "newlib-1.10.0 PS2 patch Git blob f1971c9a39b37c9d28f80444638aee383d4e48ff",
+      "upstream_license": "Cygnus Solutions 1999 permissive preserve-notice license",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Unique exact relocation-free archive symbol match in official PS2DEV 2018-10-19 runtime; independently rebuilt from openly licensed upstream source using homebrew GCC 3.2.3 and its ee-as 2.14, then symbol-sized bytes compared exactly with retail ELF. Does not identify original game compiler."
+    },
+    {
+      "name": "fabsf",
+      "address": "0x37dd58",
+      "file_offset": "0x27ed58",
+      "size": 28,
+      "source": "src/runtime/fabsf.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "ecfcb2ea6f0c2db812964eae3d31ba652f2d58855fc77bfee3be63d7c352be61",
+      "upstream_symbol": "fabsf",
+      "upstream_revision": "newlib-1.10.0, newlib/libm/math/sf_fabs.c",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Unique exact relocation-free archive symbol match in official PS2DEV 2018-10-19 runtime; independently rebuilt from openly licensed upstream source using homebrew GCC 3.2.3 and its ee-as 2.14, then symbol-sized bytes compared exactly with retail ELF. Does not identify original game compiler."
+    }
+  ],
+  "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately."
+}
