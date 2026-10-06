@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Two complete connected camera target/cache and fallback basis routines,1312 original bytes/328 instructions. Reuse existing transform prefix/vector/matrix layouts and reviewed normalize entry; original numeric trig/atan/inverse and full64 software call bindings retained.",
+    "All6 standard candidates naturally link completely with zero remaining relocations and zero fullmatches. Actual C switch retained; no mapper changes, generated-body fallback or compiler tuning grid.",
+    "Native88568 checks against473 finite controlled-call original-instruction fixtures/98863 executed instructions/max225: callbacks, all switch modes/unsigned gates, vertical threshold/negative conversion, shifted forward/inverse/source aliases, retained first length and fresh post-output mode/callee loads. Six scoped full64/opcode/table/unknown-call guards pass. Parent independent full review and registration approved.",
+    "Parent independently reviewed all 328 original instructions and complete C/header/tracer/native/guards/docs; confirmed both full hashes/bounds, three real entry JALs, float materializations, full64 threshold and complete20B switch. Six fresh genuine link dictionaries exactly equal;473 regenerated fixtures/98,863 instructions/both header hashes,88,568 native checks and six guards pass. Both remain reconstructed, zero full matches."
+  ],
+  "float_literal_evidence": [
+    {
+      "bits": "0xBE4CCCCD",
+      "scalar": -0.20000000298023224,
+      "little_endian_word_sha256": "62b63b02d96af87993dc5e31bd2bfd1ef752fed635f3258b65068f7091e5252e",
+      "materialization_sites": [
+        {
+          "function": "func_00299BE0",
+          "instruction_addresses": [
+            "0x00299CD4",
+            "0x00299CD8",
+            "0x00299CDC"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3F800000",
+      "scalar": 1.0,
+      "little_endian_word_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "materialization_sites": [
+        {
+          "function": "func_00299D68",
+          "instruction_addresses": [
+            "0x00299E4C",
+            "0x00299E50"
+          ]
+        },
+        {
+          "function": "func_00299D68",
+          "instruction_addresses": [
+            "0x00299E64",
+            "0x00299E68"
+          ]
+        },
+        {
+          "function": "func_00299D68",
+          "instruction_addresses": [
+            "0x00299EA4",
+            "0x00299EA8"
+          ]
+        }
+      ]
+    },
+    {
+      "bits": "0x3F000000",
+      "scalar": 0.5,
+      "little_endian_word_sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+      "materialization_sites": [
+        {
+          "function": "func_00299D68",
+          "instruction_addresses": [
+            "0x0029A0A0",
+            "0x0029A0A4"
+          ]
+        }
+      ]
+    }
+  ],
+  "soft_double_literal_evidence": [
+    {
+      "bits": "0x3FEFAE1480000000",
+      "little_endian_word_sha256": "79e0637b2549c386ae7ee63a5dab585ce58041451378d96b01ed3aaa7656dd37",
+      "instruction_addresses": [
+        "0x00299E2C",
+        "0x00299E30",
+        "0x00299E34",
+        "0x00299E38"
+      ],
+      "value": 0.9900000095367432,
+      "evidence": "BothDSLL operations preserve all64 bits; complete second argument to original compare373250 at00299E3C/40."
+    }
+  ],
+  "jump_table_evidence": [
+    {
+      "address": "0x004455A0",
+      "file_offset": "0x003465A0",
+      "size": 20,
+      "original_sha256": "1af4994c85ca60c5868e1399b54e143dfc1e3cf03f82a7af29aa5ee36468aed3",
+      "section": ".rodata",
+      "section_flags": 2,
+      "index_guard": "Unsigned mode <5 at00299C00/00299C04; original five table words loaded00299C18 and indirectJR00299C1C.",
+      "targets": [
+        "0x00299C24",
+        "0x00299CA8",
+        "0x00299D48",
+        "0x00299D40",
+        "0x00299D48"
+      ]
+    }
+  ],
+  "synthetic_fixture_evidence": {
+    "count": 473,
+    "executed_instructions": 98863,
+    "maximum_instructions": 225,
+    "input_sha256": "9e87b5252d84a747e6d5d6760aff3cb1a89849f9b4e86524ff23df43faa27ea1",
+    "header_sha256_crlf": "e76fdf8dddc573e2240c74d25481f0a5e6906303821d83b81c1b427677fb5c05",
+    "header_sha256_lf": "624cc1cfbd357ce63d545e58e03342ab9b5e88e8e4843b0cfcc88dfb112c1891",
+    "native_checks": 88568,
+    "guard_tests": 6
+  },
+  "functions": [
+    {
+      "name": "func_00299BE0",
+      "address": "0x00299BE0",
+      "file_offset": "0x0019ABE0",
+      "size": 392,
+      "source": "src/game/camera_basis.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "cff0d379f06ab549451ec8fa87cd632aa4e856ef8fa75a7362374f4915a9af39",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 392,
+        "compiled_size": 328,
+        "different_bytes": 295,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "cff0d379f06ab549451ec8fa87cd632aa4e856ef8fa75a7362374f4915a9af39",
+        "compiled_sha256": "199f5b3520f1850e199c7c8da44d234fd76a9ac04939e6bd4b73f6aae73ea75b"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 392,
+            "compiled_size": 328,
+            "different_bytes": 314,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cff0d379f06ab549451ec8fa87cd632aa4e856ef8fa75a7362374f4915a9af39",
+            "compiled_sha256": "4175ea01803a296f35569fc3801c2e9ec890a38d31b21dad52b9683d4de3b85b"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 392,
+            "compiled_size": 328,
+            "different_bytes": 294,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              12,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cff0d379f06ab549451ec8fa87cd632aa4e856ef8fa75a7362374f4915a9af39",
+            "compiled_sha256": "f8d5638e128e805eee425ec17bd2ab4bc0db07a99999e8d57b7be34fc250b063"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 392,
+            "compiled_size": 328,
+            "different_bytes": 295,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "cff0d379f06ab549451ec8fa87cd632aa4e856ef8fa75a7362374f4915a9af39",
+            "compiled_sha256": "199f5b3520f1850e199c7c8da44d234fd76a9ac04939e6bd4b73f6aae73ea75b"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0029A22C",
+          "caller": "func_0029A188"
+        },
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0029A324",
+          "caller": "func_0029A308"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00299C04",
+          "target_address": "0x00299D48"
+        },
+        {
+          "instruction_address": "0x00299CA0",
+          "target_address": "0x00299D34"
+        },
+        {
+          "instruction_address": "0x00299D38",
+          "target_address": "0x00299D48"
+        },
+        {
+          "instruction_address": "0x00299D40",
+          "target_address": "0x00299D4C"
+        }
+      ],
+      "boundary_evidence": "All328 original instructions across both complete bodies, terminal JR/delays, local branches and following zero padding reviewed; five original switch targets stay within299BE0. Natural C switch retained; all6 complete natural links have zero unresolved relocations and zero exact matches.",
+      "evidence": "Original mode0/1 four ordered trig calls with fresh per-call angle inputs and post-call radius/position captures, exact-.2F order, targetX/Y/Z stores; mode3 returns1, every other mode returns0, original20B five-case table fully proven."
+    },
+    {
+      "name": "func_00299D68",
+      "address": "0x00299D68",
+      "file_offset": "0x0019AD68",
+      "size": 920,
+      "source": "src/game/camera_basis.c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+      "link": true,
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 920,
+        "compiled_size": 840,
+        "different_bytes": 768,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          8,
+          10,
+          13,
+          14,
+          16
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+        "compiled_sha256": "ff0772294e8d5213e9461bc7b683456cb56393147589ac683870c83a36b377aa"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 920,
+            "compiled_size": 848,
+            "different_bytes": 759,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+            "compiled_sha256": "9bba955e5b555d06f26b62ef2e05ab9d057583464ea017ff4e45083f9abaa7ee"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 920,
+            "compiled_size": 840,
+            "different_bytes": 772,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+            "compiled_sha256": "f6be1b2de9d7bf046747c4fd2e43be62a84216049116b432e4d703bb150426a0"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 920,
+            "compiled_size": 840,
+            "different_bytes": 768,
+            "first_different_offsets": [
+              0,
+              4,
+              6,
+              8,
+              10,
+              13,
+              14,
+              16
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "b8683812370f5c5418b0dd38390b28f723c097ce19e8508ad4886169191e7b83",
+            "compiled_sha256": "ff0772294e8d5213e9461bc7b683456cb56393147589ac683870c83a36b377aa"
+          }
+        }
+      },
+      "entry_references": [
+        {
+          "kind": "direct_jal",
+          "instruction_address": "0x0029A380",
+          "caller": "func_0029A308"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction_address": "0x00299E18",
+          "target_address": "0x00299E2C"
+        },
+        {
+          "instruction_address": "0x00299E44",
+          "target_address": "0x00299E64"
+        },
+        {
+          "instruction_address": "0x00299E5C",
+          "target_address": "0x00299E78"
+        },
+        {
+          "instruction_address": "0x0029A078",
+          "target_address": "0x0029A0C8"
+        }
+      ],
+      "boundary_evidence": "All328 original instructions across both complete bodies, terminal JR/delays, local branches and following zero padding reviewed; five original switch targets stay within299BE0. Natural C switch retained; all6 complete natural links have zero unresolved relocations and zero exact matches.",
+      "evidence": "Complete normalized camera basis with full64 numeric software calls/threshold, original arithmetic/cross/add order, captured initial length, saved-local mutations across normalize callbacks, sparse forward store order and live target reloads, fresh post-output mode2 check, angle calls and original inverse binding."
+    }
+  ]
+}

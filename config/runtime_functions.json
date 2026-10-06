@@ -10571,6 +10571,3676 @@
           "compiled_sha256": "88550787cdb91a0be9a3859481501ee51adbf65f5bb3b4ea6f24d6784a4d55e9"
         }
       ]
+    },
+    {
+      "name": "qsort",
+      "compiled_symbol": "qsort",
+      "upstream_symbol": "qsort",
+      "address": "0x00396788",
+      "file_offset": "0x00297788",
+      "size": 2524,
+      "source": "src/runtime/qsort.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "2512c55c0283be6bca118d713daf759f40994e7d57bc484a07c91c7876960a42",
+      "upstream_source_sha256": "7368f5037292be52f4ac2486a704b8c1863faeba2fc16462e4258bd34e907bad",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/qsort.c",
+      "upstream_license": "Berkeley1992/1993 four-clause permission notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/include"
+      ],
+      "link": true,
+      "link_symbols": {
+        "qsort": "0x00396788"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/runtime/qsort.c",
+          "sha256": "7368f5037292be52f4ac2486a704b8c1863faeba2fc16462e4258bd34e907bad",
+          "modified": false,
+          "upstream_path": "ee/newlib/libc/stdlib/qsort.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/qsort.c",
+          "upstream_license": "Berkeley1992/1993 four-clause permission notice retained verbatim. This product includes software developed by the University of California, Berkeley and its contributors."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "GNU EE GCC2.9 public headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1",
+          "evidence": "Actual header from hash-verified public compiler release, preserving original notices in complete corresponding source."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6",
+          "evidence": "Actual unchanged header from existing hash-verified bootstrap; C source version1.8.1 is distinct and explicit."
+        }
+      ],
+      "entry_proof": {
+        "kind": "direct_jal",
+        "references": [
+          {
+            "instruction_address": "0x100e50",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00100E30"
+          },
+          {
+            "instruction_address": "0x101e04",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00101B18"
+          },
+          {
+            "instruction_address": "0x198138",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00197E68"
+          },
+          {
+            "instruction_address": "0x1c00d8",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001BFF18"
+          },
+          {
+            "instruction_address": "0x1c2bc8",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001C2970"
+          },
+          {
+            "instruction_address": "0x1c2e80",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001C2C00"
+          },
+          {
+            "instruction_address": "0x1c31a4",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001C2EB8"
+          },
+          {
+            "instruction_address": "0x1c34dc",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001C31E0"
+          },
+          {
+            "instruction_address": "0x1c379c",
+            "original_word": "0xc0e59e2",
+            "caller": "func_001C3518"
+          },
+          {
+            "instruction_address": "0x214200",
+            "original_word": "0xc0e59e2",
+            "caller": "func_002140A0"
+          },
+          {
+            "instruction_address": "0x214280",
+            "original_word": "0xc0e59e2",
+            "caller": "func_002140A0"
+          },
+          {
+            "instruction_address": "0x2144d4",
+            "original_word": "0xc0e59e2",
+            "caller": "func_002140A0"
+          },
+          {
+            "instruction_address": "0x214e4c",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00214DB8"
+          },
+          {
+            "instruction_address": "0x21a710",
+            "original_word": "0xc0e59e2",
+            "caller": "func_0021A6A0"
+          },
+          {
+            "instruction_address": "0x21ad04",
+            "original_word": "0xc0e59e2",
+            "caller": "func_0021ACD8"
+          },
+          {
+            "instruction_address": "0x21e344",
+            "original_word": "0xc0e59e2",
+            "caller": "func_0021E320"
+          },
+          {
+            "instruction_address": "0x22585c",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00225838"
+          },
+          {
+            "instruction_address": "0x2262c0",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00226178"
+          },
+          {
+            "instruction_address": "0x22bd90",
+            "original_word": "0xc0e59e2",
+            "caller": "func_0022BCB0"
+          },
+          {
+            "instruction_address": "0x2ab3e4",
+            "original_word": "0xc0e59e2",
+            "caller": "func_002AB3C8"
+          },
+          {
+            "instruction_address": "0x397100",
+            "original_word": "0xc0e59e2",
+            "caller": "func_00396788"
+          }
+        ]
+      },
+      "boundary_evidence": "Complete631-instruction original body through JR39715C/delay397160; padding397164 excluded and following397168 independent entry retained. All98 branch destinations lie inside this complete interval.",
+      "control_flow_identity": [
+        "3967C4-3967E4: base and element-size 8-byte alignment select swaptype2; size8 selects0, other aligned sizes1.",
+        "3967E8-3968EC: n<7 insertion sort, comparator(pl-es,pl)>0; swaptype0 one64-bit exchange;1 eight-byte do loop;2 byte do loop.",
+        "3968F0-396B34: middle pivot; n>7 median(first,middle,last); n>40 three median triples spaced (n/8)*es then overall median. All four med3 comparator decision trees agree.",
+        "396B38-396BEC: same three swap representations exchange chosen pivot with a; pa=pb=a+es, pc=pd=a+(n-1)*es.",
+        "396BEC-396E98: two inclusive scanning loops call cmp(pb,a)<=0 and cmp(pc,a)>=0; equals set swap_cnt and swap/advance pa,pd; crossed pb,pc break; other swap advances pb and decrements pc.",
+        "396E9C-396FA4: swap_cnt0 executes complete second insertion sort fallback.",
+        "396FA8-3970D8: signed first min(pa-a,pb-pa) and source-usual unsigned second min(pd-pc,pn-pd-es); complete byte/long vecswap loops.",
+        "3970DC-397104: r=pb-pa>es left qsort(a,r/es,es,cmp); actual single recursive JAL397100.",
+        "39710C-397130: r=pd-pc>es sets a=pn-r,n=r/es and loops3967C4; final full epilogue through397160; padding397164 excluded."
+      ],
+      "internal_branches": [
+        {
+          "instruction_address": "0x3967c8",
+          "target": "0x3967e4",
+          "word": "0x14400006"
+        },
+        {
+          "instruction_address": "0x3967d4",
+          "target": "0x3967e4",
+          "word": "0x54400003"
+        },
+        {
+          "instruction_address": "0x3967f0",
+          "target": "0x3968f0",
+          "word": "0x1040003f"
+        },
+        {
+          "instruction_address": "0x396808",
+          "target": "0x397134",
+          "word": "0x1040024a"
+        },
+        {
+          "instruction_address": "0x396828",
+          "target": "0x3968b4",
+          "word": "0x10000022"
+        },
+        {
+          "instruction_address": "0x396830",
+          "target": "0x39684c",
+          "word": "0x14800006"
+        },
+        {
+          "instruction_address": "0x396844",
+          "target": "0x3968b0",
+          "word": "0x1000001a"
+        },
+        {
+          "instruction_address": "0x39684c",
+          "target": "0x396888",
+          "word": "0x12a0000e"
+        },
+        {
+          "instruction_address": "0x396878",
+          "target": "0x396860",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x396880",
+          "target": "0x3968b4",
+          "word": "0x1000000c"
+        },
+        {
+          "instruction_address": "0x3968a8",
+          "target": "0x396890",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x3968b8",
+          "target": "0x3968d4",
+          "word": "0x10400006"
+        },
+        {
+          "instruction_address": "0x3968cc",
+          "target": "0x396830",
+          "word": "0x5c40ffd8"
+        },
+        {
+          "instruction_address": "0x3968e0",
+          "target": "0x396828",
+          "word": "0x1440ffd1"
+        },
+        {
+          "instruction_address": "0x3968e8",
+          "target": "0x397138",
+          "word": "0x10000213"
+        },
+        {
+          "instruction_address": "0x396908",
+          "target": "0x396b38",
+          "word": "0x1460008b"
+        },
+        {
+          "instruction_address": "0x396924",
+          "target": "0x396ac0",
+          "word": "0x14400066"
+        },
+        {
+          "instruction_address": "0x396950",
+          "target": "0x396984",
+          "word": "0x441000c"
+        },
+        {
+          "instruction_address": "0x396960",
+          "target": "0x3969b4",
+          "word": "0x4400014"
+        },
+        {
+          "instruction_address": "0x39697c",
+          "target": "0x3969b8",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x39698c",
+          "target": "0x3969b8",
+          "word": "0x5c40000a"
+        },
+        {
+          "instruction_address": "0x3969ac",
+          "target": "0x3969b8",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x3969d0",
+          "target": "0x396a04",
+          "word": "0x441000c"
+        },
+        {
+          "instruction_address": "0x3969e0",
+          "target": "0x396a34",
+          "word": "0x4400014"
+        },
+        {
+          "instruction_address": "0x3969fc",
+          "target": "0x396a38",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x396a0c",
+          "target": "0x396a38",
+          "word": "0x5c40000a"
+        },
+        {
+          "instruction_address": "0x396a2c",
+          "target": "0x396a38",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x396a54",
+          "target": "0x396a88",
+          "word": "0x441000c"
+        },
+        {
+          "instruction_address": "0x396a64",
+          "target": "0x396ab8",
+          "word": "0x4400014"
+        },
+        {
+          "instruction_address": "0x396a80",
+          "target": "0x396abc",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x396a90",
+          "target": "0x396abc",
+          "word": "0x5c40000a"
+        },
+        {
+          "instruction_address": "0x396ab0",
+          "target": "0x396abc",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x396acc",
+          "target": "0x396b00",
+          "word": "0x441000c"
+        },
+        {
+          "instruction_address": "0x396adc",
+          "target": "0x396b30",
+          "word": "0x4400014"
+        },
+        {
+          "instruction_address": "0x396af8",
+          "target": "0x396b34",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x396b08",
+          "target": "0x396b34",
+          "word": "0x5c40000a"
+        },
+        {
+          "instruction_address": "0x396b28",
+          "target": "0x396b34",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x396b3c",
+          "target": "0x396b60",
+          "word": "0x14400008"
+        },
+        {
+          "instruction_address": "0x396b58",
+          "target": "0x396be8",
+          "word": "0x10000023"
+        },
+        {
+          "instruction_address": "0x396b64",
+          "target": "0x396bb0",
+          "word": "0x10400012"
+        },
+        {
+          "instruction_address": "0x396ba0",
+          "target": "0x396b88",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x396ba8",
+          "target": "0x396bec",
+          "word": "0x10000010"
+        },
+        {
+          "instruction_address": "0x396be0",
+          "target": "0x396bc8",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x396c1c",
+          "target": "0x396ce0",
+          "word": "0x10000030"
+        },
+        {
+          "instruction_address": "0x396c28",
+          "target": "0x396cdc",
+          "word": "0x14a0002c"
+        },
+        {
+          "instruction_address": "0x396c38",
+          "target": "0x396c58",
+          "word": "0x14600007"
+        },
+        {
+          "instruction_address": "0x396c50",
+          "target": "0x396cd8",
+          "word": "0x10000021"
+        },
+        {
+          "instruction_address": "0x396c5c",
+          "target": "0x396ca0",
+          "word": "0x10800010"
+        },
+        {
+          "instruction_address": "0x396c90",
+          "target": "0x396c78",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396c98",
+          "target": "0x396cdc",
+          "word": "0x10000010"
+        },
+        {
+          "instruction_address": "0x396cd0",
+          "target": "0x396cb8",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396ce4",
+          "target": "0x396d04",
+          "word": "0x14400007"
+        },
+        {
+          "instruction_address": "0x396cfc",
+          "target": "0x396c28",
+          "word": "0x18a0ffca"
+        },
+        {
+          "instruction_address": "0x396d10",
+          "target": "0x396dc0",
+          "word": "0x1000002b"
+        },
+        {
+          "instruction_address": "0x396d18",
+          "target": "0x396dbc",
+          "word": "0x14a00028"
+        },
+        {
+          "instruction_address": "0x396d28",
+          "target": "0x396d48",
+          "word": "0x14600007"
+        },
+        {
+          "instruction_address": "0x396d40",
+          "target": "0x396db8",
+          "word": "0x1000001d"
+        },
+        {
+          "instruction_address": "0x396d48",
+          "target": "0x396d88",
+          "word": "0x1120000f"
+        },
+        {
+          "instruction_address": "0x396d78",
+          "target": "0x396d60",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396d80",
+          "target": "0x396dbc",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x396db0",
+          "target": "0x396d98",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396dc4",
+          "target": "0x396e9c",
+          "word": "0x14400035"
+        },
+        {
+          "instruction_address": "0x396ddc",
+          "target": "0x396d18",
+          "word": "0x4a1ffce"
+        },
+        {
+          "instruction_address": "0x396de8",
+          "target": "0x396e0c",
+          "word": "0x14800008"
+        },
+        {
+          "instruction_address": "0x396e04",
+          "target": "0x396e88",
+          "word": "0x10000020"
+        },
+        {
+          "instruction_address": "0x396e0c",
+          "target": "0x396e50",
+          "word": "0x10400010"
+        },
+        {
+          "instruction_address": "0x396e40",
+          "target": "0x396e28",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396e48",
+          "target": "0x396e8c",
+          "word": "0x10000010"
+        },
+        {
+          "instruction_address": "0x396e80",
+          "target": "0x396e68",
+          "word": "0x1cc0fff9"
+        },
+        {
+          "instruction_address": "0x396e94",
+          "target": "0x396ce0",
+          "word": "0x1000ff92"
+        },
+        {
+          "instruction_address": "0x396ea0",
+          "target": "0x396fa8",
+          "word": "0x14800041"
+        },
+        {
+          "instruction_address": "0x396ebc",
+          "target": "0x397134",
+          "word": "0x1040009d"
+        },
+        {
+          "instruction_address": "0x396ee0",
+          "target": "0x396f6c",
+          "word": "0x10000022"
+        },
+        {
+          "instruction_address": "0x396ee8",
+          "target": "0x396f04",
+          "word": "0x14800006"
+        },
+        {
+          "instruction_address": "0x396efc",
+          "target": "0x396f68",
+          "word": "0x1000001a"
+        },
+        {
+          "instruction_address": "0x396f04",
+          "target": "0x396f40",
+          "word": "0x12a0000e"
+        },
+        {
+          "instruction_address": "0x396f30",
+          "target": "0x396f18",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x396f38",
+          "target": "0x396f6c",
+          "word": "0x1000000c"
+        },
+        {
+          "instruction_address": "0x396f60",
+          "target": "0x396f48",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x396f70",
+          "target": "0x396f8c",
+          "word": "0x10400006"
+        },
+        {
+          "instruction_address": "0x396f84",
+          "target": "0x396ee8",
+          "word": "0x5c40ffd8"
+        },
+        {
+          "instruction_address": "0x396f98",
+          "target": "0x396ee0",
+          "word": "0x1440ffd1"
+        },
+        {
+          "instruction_address": "0x396fa0",
+          "target": "0x397138",
+          "word": "0x10000065"
+        },
+        {
+          "instruction_address": "0x396fc4",
+          "target": "0x397048",
+          "word": "0x18a00020"
+        },
+        {
+          "instruction_address": "0x396fd4",
+          "target": "0x397018",
+          "word": "0x10400010"
+        },
+        {
+          "instruction_address": "0x397008",
+          "target": "0x396ff0",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x397010",
+          "target": "0x39704c",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x397040",
+          "target": "0x397028",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x397058",
+          "target": "0x3970d8",
+          "word": "0x18a0001f"
+        },
+        {
+          "instruction_address": "0x397064",
+          "target": "0x3970a8",
+          "word": "0x10400010"
+        },
+        {
+          "instruction_address": "0x397098",
+          "target": "0x397080",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x3970a0",
+          "target": "0x3970dc",
+          "word": "0x1000000e"
+        },
+        {
+          "instruction_address": "0x3970d0",
+          "target": "0x3970b8",
+          "word": "0x1ca0fff9"
+        },
+        {
+          "instruction_address": "0x3970e0",
+          "target": "0x39710c",
+          "word": "0x5040000a"
+        },
+        {
+          "instruction_address": "0x3970ec",
+          "target": "0x3970f4",
+          "word": "0x52400001"
+        },
+        {
+          "instruction_address": "0x397110",
+          "target": "0x397138",
+          "word": "0x10400009"
+        },
+        {
+          "instruction_address": "0x39711c",
+          "target": "0x397124",
+          "word": "0x52400001"
+        },
+        {
+          "instruction_address": "0x39712c",
+          "target": "0x3967c4",
+          "word": "0x1000fda5"
+        }
+      ],
+      "evidence": "Complete unchanged Bentley/McIlroy quicksort identity: 8-byte aligned/single-long/byte swaps, n<7 insertion, n>7 median-of-three, n>40 ninther, both equal-key partition scans, zero-swap insertion fallback, two vecswaps, left recursion and right tail iteration. Original21 encoded calls include actual recursion397100. Long8/int4/pointer4 ABI is genuine under both public compilers. Source is reconstructed, with no exact-byte or runtime-data award.",
+      "independent_review": "Root independently read all631 original instructions and full pinned unchanged upstream source/notice; verified source revision/hash,98 branches,21 real JALs and containing bodies, both actual-M dependency sets and two fresh full link comparison dictionaries before approving registration.",
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 2524,
+          "compiled_size": 2596,
+          "different_bytes": 1963,
+          "first_different_offsets": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            8,
+            11,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2512c55c0283be6bca118d713daf759f40994e7d57bc484a07c91c7876960a42",
+          "compiled_sha256": "e6d4b886c3b2b659909a3eb138398a579fe2c68553ef17b3c042fa5d803f9b33"
+        }
+      ]
+    },
+    {
+      "name": "_strtod_r",
+      "compiled_symbol": "_strtod_r",
+      "upstream_symbol": "_strtod_r",
+      "address": "0x00397208",
+      "file_offset": "0x00298208",
+      "size": 3832,
+      "source": "src/runtime/stdlib/strtod.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "c696c52c72639999d2c50b01c7852744865dbe2265adabb014ca53e4e844ca2e",
+      "upstream_source_sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+      "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-D__infinity=stdlib_infinity",
+        "-I",
+        "src/runtime/include"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/strtod.c",
+          "sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/strtod.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Authentic public newlib1.8.1 sys/reent.h, unchanged; original header and public distribution notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/mprec.h",
+          "sha256": "5b97ce36307d50b8f90a3595e4836be1e41e016b8b3b381ebf9ddcd8395c09da",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mprec.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mprec.h",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/ieeefp.h",
+          "sha256": "01b35fc8fa1c8305a4960f41ed33f2210a7e635c42e0ad6bbb47d271aa4aafd8",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3",
+          "modified": false,
+          "upstream_revision": "Canonical target float.h from public GNU EE GCC3.2.3 in PS2DEV20181019 archive",
+          "upstream_path": "MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "link": false,
+      "candidate_comparisons": [
+        {
+          "name": "_strtod_r",
+          "compiler_profile": "gcc29",
+          "comparison_kind": "unlinked_object_with_actual_relocations",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 3832,
+          "compiled_size": 3788,
+          "different_bytes": 2943,
+          "first_different_offsets": [
+            0,
+            1,
+            5,
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [
+            92,
+            100,
+            1056,
+            1084,
+            1120,
+            1132,
+            1128,
+            1144,
+            1168,
+            1180,
+            1192,
+            1244,
+            1252,
+            1300,
+            1308,
+            1316,
+            1344,
+            1352,
+            1356,
+            1392,
+            1396,
+            1408,
+            1448,
+            1456,
+            1460,
+            1500,
+            1504,
+            1548,
+            1552,
+            1580,
+            1616,
+            1620,
+            1664,
+            1792,
+            1800,
+            1804,
+            1852,
+            1856,
+            1884,
+            1920,
+            1924,
+            1952,
+            1968,
+            1988,
+            2000,
+            2016,
+            2060,
+            2072,
+            2104,
+            2140,
+            2156,
+            2352,
+            2364,
+            2380,
+            2404,
+            2424,
+            2520,
+            2556,
+            2580,
+            2604,
+            2680,
+            2692,
+            2704,
+            2844,
+            2868,
+            2876,
+            2884,
+            2904,
+            2916,
+            2928,
+            2940,
+            2984,
+            2992,
+            3004,
+            3040,
+            3044,
+            3048,
+            3064,
+            3068,
+            3072,
+            3096,
+            3100,
+            3104,
+            3124,
+            3136,
+            3148,
+            3160,
+            3176,
+            3208,
+            3228,
+            3244,
+            3424,
+            3444,
+            3460,
+            3480,
+            3504,
+            3528,
+            3552,
+            3572,
+            3596,
+            3648,
+            3660,
+            3672,
+            3684,
+            3696,
+            3732
+          ],
+          "expected_sha256": "c696c52c72639999d2c50b01c7852744865dbe2265adabb014ca53e4e844ca2e",
+          "compiled_sha256": "b3a2c25af53bf39d8e62d5a8b4ad8c9317e45ed08100b545ca0f6d33462c2bc6"
+        },
+        {
+          "name": "_strtod_r",
+          "compiler_profile": "gcc323",
+          "comparison_kind": "unlinked_object_with_actual_relocations",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 3832,
+          "compiled_size": 4016,
+          "different_bytes": 3551,
+          "first_different_offsets": [
+            0,
+            5,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [
+            92,
+            96,
+            180,
+            472,
+            528,
+            536,
+            548,
+            568,
+            580,
+            632,
+            640,
+            652,
+            696,
+            704,
+            724,
+            784,
+            792,
+            804,
+            848,
+            864,
+            872,
+            884,
+            896,
+            908,
+            920,
+            956,
+            960,
+            980,
+            1028,
+            1032,
+            1068,
+            1168,
+            1196,
+            1232,
+            1252,
+            1268,
+            1412,
+            1432,
+            1448,
+            1472,
+            1496,
+            1520,
+            1544,
+            1564,
+            1588,
+            1612,
+            1632,
+            1656,
+            1680,
+            1748,
+            1772,
+            1780,
+            1788,
+            1812,
+            1824,
+            1836,
+            1848,
+            1896,
+            1908,
+            1920,
+            1932,
+            1956,
+            1964,
+            1976,
+            2012,
+            2016,
+            2020,
+            2036,
+            2040,
+            2044,
+            2068,
+            2072,
+            2076,
+            2144,
+            2156,
+            2168,
+            2424,
+            2448,
+            2532,
+            2544,
+            2560,
+            2588,
+            2600,
+            2816,
+            2832,
+            2932,
+            2940,
+            2952,
+            3008,
+            3012,
+            3032,
+            3060,
+            3068,
+            3092,
+            3108,
+            3128,
+            3140,
+            3156,
+            3224,
+            3232,
+            3244,
+            3264,
+            3276,
+            3296
+          ],
+          "expected_sha256": "c696c52c72639999d2c50b01c7852744865dbe2265adabb014ca53e4e844ca2e",
+          "compiled_sha256": "4c9cac098459d9bdf568c113b7a4c5685e9e8aa1d9a279790c4a62efde5cf208"
+        }
+      ],
+      "independent_review": "Root independently read all958 original main instructions and full pinned strtod.c/mprec.h, validated74 helper calls,141 local branches,184-byte original table/all46 semantic targets, source/header SHA identities, genuine compiler ABI/dependency sets and four fresh wrapper links. The actual208-byte source object readonly section remains an honest linking blocker for the main function.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "references": [
+          {
+            "instruction_address": "0x398118",
+            "original_word": "0xc0e5c82"
+          }
+        ]
+      },
+      "control_flow_identity": [
+        "397250-3972D4: original signed-character 46-entry switch accepts whitespace9..13/32, sign43/45, zero0; empty/sign-only restores initial input. Leading-zero loop preserves nz0.",
+        "3972D8-39748C: first9 digits use32-bit ULong y, next7 use64-bit unsigned long z; full trailing-fraction nz/nf accumulation and up-to16 significant digit rules.",
+        "397490-3975CC: exponent e/E, signed +/- parsing, zero skip, full64 exponent accumulation, more-than8 exponent digits clamps9999999, malformed exponent restores e marker; no-digits restore original unless zeros consumed.",
+        "3975D0-397774: k=min(nd,16), first ULong conversion plus2^32 if signedhelpernegative, unsigned64 z conversion correction, y*tens[k-9]+z; nd<=15 exact quick scaling usingTen_pmax22.",
+        "397778-3978BC: exponent positive nibble/tens plus powers16/32/64/128/256, overflow308 guard, exponent subtract53*mask before lastmultiply, finite limit restore/saturate maxdouble; errno34 at reent0 and source bd0 cleanup.",
+        "3978C0-3979F0: negative exponent nibble division, powers bounded5, underflow retry2*rv0, minsubnormal bits1 or zero errno34.",
+        "3979F4-397A28 and397E9C-398050: s2b exactly(ptr,s0,nd0,nd,y); fullBigint copy fromoffset12 length8+4*wds16, d2b/i2b, bb2/bd2/bb5/bd5/bs2 exponent balance, denormaladjustment andmincommonshift; pow5mult/multiply/free/lshift then diff, sign12 cleared, cmp.",
+        "39804C-397B58: error belowhalfULP special power-of-two shift; exactlyhalf ties boundary exponent increment/decrement, lowwordLSB round-even, +/-ulp and underflowcheck.",
+        "397B5C-397C34: ratio(delta,bs) <=2 adjustment, dsign, minsubnormal underflow, power-of-two half-radix threshold, elsehalf ratio and signedadjustment.",
+        "397C38-397D8C: maxexponent scaled overflow adjustment/saturation and denormal aadj integer-round correction, actual53-bit exponent constants and originalsoft helpers.",
+        "397D90-397E68: same exponent can stop; full64 long L conversion then aadj-L; .4999999/.5000001/.24999995 conservative tolerance constants exactly literalbits.",
+        "397E70-397E98 and398070-3980A8: continue freesfour thenrebuild; retfree freesfive includingbd0 in sourceorder. Endptr optional store occurs before sign-negation via softdouble subtraction; completeepilogue3832B."
+      ],
+      "internal_branches": [
+        {
+          "instruction_address": "0x397258",
+          "target": "0x3972a4",
+          "word": "0x10400012"
+        },
+        {
+          "instruction_address": "0x397288",
+          "target": "0x3972a4",
+          "word": "0x54400006"
+        },
+        {
+          "instruction_address": "0x397290",
+          "target": "0x3980ac",
+          "word": "0x10000386"
+        },
+        {
+          "instruction_address": "0x397298",
+          "target": "0x397250",
+          "word": "0x1000ffed"
+        },
+        {
+          "instruction_address": "0x3972a8",
+          "target": "0x3972d8",
+          "word": "0x1462000b"
+        },
+        {
+          "instruction_address": "0x3972c8",
+          "target": "0x3972b8",
+          "word": "0x1064fffb"
+        },
+        {
+          "instruction_address": "0x3972d0",
+          "target": "0x3980ac",
+          "word": "0x10600376"
+        },
+        {
+          "instruction_address": "0x3972f4",
+          "target": "0x397368",
+          "word": "0x1440001c"
+        },
+        {
+          "instruction_address": "0x397300",
+          "target": "0x39736c",
+          "word": "0x1040001a"
+        },
+        {
+          "instruction_address": "0x397310",
+          "target": "0x39732c",
+          "word": "0x10400006"
+        },
+        {
+          "instruction_address": "0x397324",
+          "target": "0x397348",
+          "word": "0x10000008"
+        },
+        {
+          "instruction_address": "0x397330",
+          "target": "0x397348",
+          "word": "0x10400005"
+        },
+        {
+          "instruction_address": "0x397354",
+          "target": "0x397368",
+          "word": "0x14400004"
+        },
+        {
+          "instruction_address": "0x397360",
+          "target": "0x397310",
+          "word": "0x1440ffeb"
+        },
+        {
+          "instruction_address": "0x39736c",
+          "target": "0x39748c",
+          "word": "0x14820047"
+        },
+        {
+          "instruction_address": "0x397378",
+          "target": "0x39747c",
+          "word": "0x16800040"
+        },
+        {
+          "instruction_address": "0x397384",
+          "target": "0x3973ac",
+          "word": "0x54820009"
+        },
+        {
+          "instruction_address": "0x3973a0",
+          "target": "0x397390",
+          "word": "0x1082fffb"
+        },
+        {
+          "instruction_address": "0x3973b0",
+          "target": "0x397490",
+          "word": "0x10400037"
+        },
+        {
+          "instruction_address": "0x3973cc",
+          "target": "0x397474",
+          "word": "0x10800029"
+        },
+        {
+          "instruction_address": "0x3973dc",
+          "target": "0x39742c",
+          "word": "0x10400013"
+        },
+        {
+          "instruction_address": "0x3973f4",
+          "target": "0x39740c",
+          "word": "0x10400005"
+        },
+        {
+          "instruction_address": "0x397404",
+          "target": "0x397420",
+          "word": "0x10000006"
+        },
+        {
+          "instruction_address": "0x397410",
+          "target": "0x397420",
+          "word": "0x10400003"
+        },
+        {
+          "instruction_address": "0x397424",
+          "target": "0x3973f0",
+          "word": "0x14e0fff2"
+        },
+        {
+          "instruction_address": "0x397434",
+          "target": "0x397458",
+          "word": "0x10400008"
+        },
+        {
+          "instruction_address": "0x397450",
+          "target": "0x397470",
+          "word": "0x10000007"
+        },
+        {
+          "instruction_address": "0x39745c",
+          "target": "0x397470",
+          "word": "0x10400004"
+        },
+        {
+          "instruction_address": "0x397484",
+          "target": "0x3973c8",
+          "word": "0x1440ffd0"
+        },
+        {
+          "instruction_address": "0x397490",
+          "target": "0x3974a4",
+          "word": "0x10820004"
+        },
+        {
+          "instruction_address": "0x39749c",
+          "target": "0x3975bc",
+          "word": "0x14820047"
+        },
+        {
+          "instruction_address": "0x3974a4",
+          "target": "0x3974c4",
+          "word": "0x56800007"
+        },
+        {
+          "instruction_address": "0x3974ac",
+          "target": "0x3974c4",
+          "word": "0x54c00005"
+        },
+        {
+          "instruction_address": "0x3974b4",
+          "target": "0x3974c4",
+          "word": "0x55400003"
+        },
+        {
+          "instruction_address": "0x3974bc",
+          "target": "0x3980ac",
+          "word": "0x100002fb"
+        },
+        {
+          "instruction_address": "0x3974d0",
+          "target": "0x3974e8",
+          "word": "0x10820005"
+        },
+        {
+          "instruction_address": "0x3974dc",
+          "target": "0x3974f4",
+          "word": "0x14820005"
+        },
+        {
+          "instruction_address": "0x3974f8",
+          "target": "0x3975b8",
+          "word": "0x1040002f"
+        },
+        {
+          "instruction_address": "0x397500",
+          "target": "0x39752c",
+          "word": "0x5482000a"
+        },
+        {
+          "instruction_address": "0x397520",
+          "target": "0x397510",
+          "word": "0x5082fffb"
+        },
+        {
+          "instruction_address": "0x397530",
+          "target": "0x3975b0",
+          "word": "0x1040001f"
+        },
+        {
+          "instruction_address": "0x39754c",
+          "target": "0x39758c",
+          "word": "0x1440000f"
+        },
+        {
+          "instruction_address": "0x397558",
+          "target": "0x397588",
+          "word": "0x1040000b"
+        },
+        {
+          "instruction_address": "0x397580",
+          "target": "0x397554",
+          "word": "0x1060fff4"
+        },
+        {
+          "instruction_address": "0x3975a8",
+          "target": "0x3975bc",
+          "word": "0x10000004"
+        },
+        {
+          "instruction_address": "0x3975b0",
+          "target": "0x3975bc",
+          "word": "0x10000002"
+        },
+        {
+          "instruction_address": "0x3975bc",
+          "target": "0x3975d0",
+          "word": "0x16800004"
+        },
+        {
+          "instruction_address": "0x3975c8",
+          "target": "0x3980ac",
+          "word": "0x100002b8"
+        },
+        {
+          "instruction_address": "0x3975fc",
+          "target": "0x397618",
+          "word": "0x4e10006"
+        },
+        {
+          "instruction_address": "0x39761c",
+          "target": "0x397688",
+          "word": "0x1440001a"
+        },
+        {
+          "instruction_address": "0x397644",
+          "target": "0x39765c",
+          "word": "0x6400005"
+        },
+        {
+          "instruction_address": "0x397654",
+          "target": "0x39767c",
+          "word": "0x10000009"
+        },
+        {
+          "instruction_address": "0x39768c",
+          "target": "0x397774",
+          "word": "0x10400039"
+        },
+        {
+          "instruction_address": "0x397698",
+          "target": "0x3980b0",
+          "word": "0x10400285"
+        },
+        {
+          "instruction_address": "0x3976a0",
+          "target": "0x397738",
+          "word": "0x18400025"
+        },
+        {
+          "instruction_address": "0x3976a8",
+          "target": "0x3976d0",
+          "word": "0x10400009"
+        },
+        {
+          "instruction_address": "0x3976c8",
+          "target": "0x397728",
+          "word": "0x10000017"
+        },
+        {
+          "instruction_address": "0x3976e4",
+          "target": "0x397778",
+          "word": "0x14400024"
+        },
+        {
+          "instruction_address": "0x397730",
+          "target": "0x3980ac",
+          "word": "0x1000025e"
+        },
+        {
+          "instruction_address": "0x397740",
+          "target": "0x397778",
+          "word": "0x1440000d"
+        },
+        {
+          "instruction_address": "0x39776c",
+          "target": "0x3980ac",
+          "word": "0x1000024f"
+        },
+        {
+          "instruction_address": "0x39777c",
+          "target": "0x3978c0",
+          "word": "0x1a000050"
+        },
+        {
+          "instruction_address": "0x397784",
+          "target": "0x3977a8",
+          "word": "0x10e00008"
+        },
+        {
+          "instruction_address": "0x3977b0",
+          "target": "0x3979f4",
+          "word": "0x12000090"
+        },
+        {
+          "instruction_address": "0x3977b8",
+          "target": "0x3977e0",
+          "word": "0x54400009"
+        },
+        {
+          "instruction_address": "0x3977d0",
+          "target": "0x398070",
+          "word": "0x14400227"
+        },
+        {
+          "instruction_address": "0x3977d8",
+          "target": "0x3980b0",
+          "word": "0x10000235"
+        },
+        {
+          "instruction_address": "0x3977e0",
+          "target": "0x3979f4",
+          "word": "0x12000084"
+        },
+        {
+          "instruction_address": "0x3977ec",
+          "target": "0x397828",
+          "word": "0x1440000e"
+        },
+        {
+          "instruction_address": "0x3977fc",
+          "target": "0x397818",
+          "word": "0x50400006"
+        },
+        {
+          "instruction_address": "0x397820",
+          "target": "0x3977f8",
+          "word": "0x1040fff5"
+        },
+        {
+          "instruction_address": "0x397874",
+          "target": "0x3977c4",
+          "word": "0x1440ffd3"
+        },
+        {
+          "instruction_address": "0x397884",
+          "target": "0x3978ac",
+          "word": "0x10400009"
+        },
+        {
+          "instruction_address": "0x3978a4",
+          "target": "0x3979f4",
+          "word": "0x10000053"
+        },
+        {
+          "instruction_address": "0x3978b8",
+          "target": "0x3979f4",
+          "word": "0x1000004e"
+        },
+        {
+          "instruction_address": "0x3978c0",
+          "target": "0x3979f8",
+          "word": "0x601004d"
+        },
+        {
+          "instruction_address": "0x3978d0",
+          "target": "0x3978f4",
+          "word": "0x10e00008"
+        },
+        {
+          "instruction_address": "0x3978fc",
+          "target": "0x3979f4",
+          "word": "0x1200003d"
+        },
+        {
+          "instruction_address": "0x397908",
+          "target": "0x3979bc",
+          "word": "0x1040002c"
+        },
+        {
+          "instruction_address": "0x397914",
+          "target": "0x397950",
+          "word": "0x1440000e"
+        },
+        {
+          "instruction_address": "0x397924",
+          "target": "0x397940",
+          "word": "0x50400006"
+        },
+        {
+          "instruction_address": "0x397948",
+          "target": "0x397920",
+          "word": "0x1040fff5"
+        },
+        {
+          "instruction_address": "0x397984",
+          "target": "0x3979f8",
+          "word": "0x1440001c"
+        },
+        {
+          "instruction_address": "0x3979b4",
+          "target": "0x3979f4",
+          "word": "0x1440000f"
+        },
+        {
+          "instruction_address": "0x3979c8",
+          "target": "0x398070",
+          "word": "0x146001a9"
+        },
+        {
+          "instruction_address": "0x3979d0",
+          "target": "0x3980b0",
+          "word": "0x100001b7"
+        },
+        {
+          "instruction_address": "0x3979ec",
+          "target": "0x398070",
+          "word": "0x100001a0"
+        },
+        {
+          "instruction_address": "0x397a24",
+          "target": "0x397e9c",
+          "word": "0x1000011d"
+        },
+        {
+          "instruction_address": "0x397a4c",
+          "target": "0x397ac8",
+          "word": "0x1c40001e"
+        },
+        {
+          "instruction_address": "0x397a54",
+          "target": "0x398074",
+          "word": "0x10000187"
+        },
+        {
+          "instruction_address": "0x397a5c",
+          "target": "0x397b5c",
+          "word": "0x14e0003f"
+        },
+        {
+          "instruction_address": "0x397a64",
+          "target": "0x397ab4",
+          "word": "0x12800013"
+        },
+        {
+          "instruction_address": "0x397a78",
+          "target": "0x397b0c",
+          "word": "0x14430024"
+        },
+        {
+          "instruction_address": "0x397aac",
+          "target": "0x398070",
+          "word": "0x10000170"
+        },
+        {
+          "instruction_address": "0x397ac0",
+          "target": "0x397b0c",
+          "word": "0x14400012"
+        },
+        {
+          "instruction_address": "0x397b04",
+          "target": "0x398070",
+          "word": "0x1000015a"
+        },
+        {
+          "instruction_address": "0x397b18",
+          "target": "0x398074",
+          "word": "0x10400156"
+        },
+        {
+          "instruction_address": "0x397b20",
+          "target": "0x3979d8",
+          "word": "0x1680ffad"
+        },
+        {
+          "instruction_address": "0x397b4c",
+          "target": "0x3979bc",
+          "word": "0x1040ff9b"
+        },
+        {
+          "instruction_address": "0x397b54",
+          "target": "0x398074",
+          "word": "0x10000147"
+        },
+        {
+          "instruction_address": "0x397b78",
+          "target": "0x397c0c",
+          "word": "0x1c400024"
+        },
+        {
+          "instruction_address": "0x397b80",
+          "target": "0x397b98",
+          "word": "0x12800005"
+        },
+        {
+          "instruction_address": "0x397b90",
+          "target": "0x397c38",
+          "word": "0x10000029"
+        },
+        {
+          "instruction_address": "0x397ba4",
+          "target": "0x397bcc",
+          "word": "0x10400009"
+        },
+        {
+          "instruction_address": "0x397bac",
+          "target": "0x3979c0",
+          "word": "0x1222ff84"
+        },
+        {
+          "instruction_address": "0x397bc4",
+          "target": "0x397c38",
+          "word": "0x1000001c"
+        },
+        {
+          "instruction_address": "0x397bdc",
+          "target": "0x397bf4",
+          "word": "0x4410005"
+        },
+        {
+          "instruction_address": "0x397bec",
+          "target": "0x397c2c",
+          "word": "0x1000000f"
+        },
+        {
+          "instruction_address": "0x397c04",
+          "target": "0x397c28",
+          "word": "0x10000008"
+        },
+        {
+          "instruction_address": "0x397c20",
+          "target": "0x397c38",
+          "word": "0x16800005"
+        },
+        {
+          "instruction_address": "0x397c50",
+          "target": "0x397d0c",
+          "word": "0x1482002e"
+        },
+        {
+          "instruction_address": "0x397cb0",
+          "target": "0x397cf8",
+          "word": "0x10600011"
+        },
+        {
+          "instruction_address": "0x397cd4",
+          "target": "0x3977c0",
+          "word": "0x12c2feba"
+        },
+        {
+          "instruction_address": "0x397cf0",
+          "target": "0x397e6c",
+          "word": "0x1000005e"
+        },
+        {
+          "instruction_address": "0x397d04",
+          "target": "0x397d90",
+          "word": "0x10000022"
+        },
+        {
+          "instruction_address": "0x397d14",
+          "target": "0x397d6c",
+          "word": "0x14400015"
+        },
+        {
+          "instruction_address": "0x397d2c",
+          "target": "0x397d6c",
+          "word": "0x440000f"
+        },
+        {
+          "instruction_address": "0x397d54",
+          "target": "0x397d6c",
+          "word": "0x16800005"
+        },
+        {
+          "instruction_address": "0x397da8",
+          "target": "0x397e70",
+          "word": "0x14520031"
+        },
+        {
+          "instruction_address": "0x397dcc",
+          "target": "0x397de8",
+          "word": "0x16800006"
+        },
+        {
+          "instruction_address": "0x397de0",
+          "target": "0x397e40",
+          "word": "0x10400017"
+        },
+        {
+          "instruction_address": "0x397e0c",
+          "target": "0x398074",
+          "word": "0x4400099"
+        },
+        {
+          "instruction_address": "0x397e30",
+          "target": "0x398070",
+          "word": "0x1c40008f"
+        },
+        {
+          "instruction_address": "0x397e38",
+          "target": "0x397e70",
+          "word": "0x1000000d"
+        },
+        {
+          "instruction_address": "0x397e64",
+          "target": "0x398074",
+          "word": "0x4420083"
+        },
+        {
+          "instruction_address": "0x397ef8",
+          "target": "0x397f10",
+          "word": "0x4400005"
+        },
+        {
+          "instruction_address": "0x397f08",
+          "target": "0x397f24",
+          "word": "0x10000006"
+        },
+        {
+          "instruction_address": "0x397f28",
+          "target": "0x397f34",
+          "word": "0x4820002"
+        },
+        {
+          "instruction_address": "0x397f44",
+          "target": "0x397f54",
+          "word": "0x10600003"
+        },
+        {
+          "instruction_address": "0x397f4c",
+          "target": "0x397f5c",
+          "word": "0x10000003"
+        },
+        {
+          "instruction_address": "0x397f78",
+          "target": "0x397f8c",
+          "word": "0x18e00004"
+        },
+        {
+          "instruction_address": "0x397f8c",
+          "target": "0x397fc0",
+          "word": "0x18c0000c"
+        },
+        {
+          "instruction_address": "0x397fc0",
+          "target": "0x397fd8",
+          "word": "0x1a400005"
+        },
+        {
+          "instruction_address": "0x397fd8",
+          "target": "0x397ff0",
+          "word": "0x1ac00005"
+        },
+        {
+          "instruction_address": "0x397ff0",
+          "target": "0x398008",
+          "word": "0x1a000005"
+        },
+        {
+          "instruction_address": "0x398008",
+          "target": "0x398020",
+          "word": "0x1a800005"
+        },
+        {
+          "instruction_address": "0x39804c",
+          "target": "0x397a5c",
+          "word": "0x4e1fe83"
+        },
+        {
+          "instruction_address": "0x398054",
+          "target": "0x398074",
+          "word": "0x16800007"
+        },
+        {
+          "instruction_address": "0x398068",
+          "target": "0x397a30",
+          "word": "0x1040fe71"
+        },
+        {
+          "instruction_address": "0x3980b0",
+          "target": "0x3980b8",
+          "word": "0x54800001"
+        },
+        {
+          "instruction_address": "0x3980bc",
+          "target": "0x3980d0",
+          "word": "0x10e00004"
+        }
+      ],
+      "original_direct_calls": [
+        {
+          "instruction_address": "0x3975ec",
+          "original_word": "0xc0dcca8",
+          "target": "0x3732a0",
+          "binding_names": [
+            "litodp"
+          ]
+        },
+        {
+          "instruction_address": "0x39760c",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x39763c",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x39764c",
+          "original_word": "0xc0dc540",
+          "target": "0x371500",
+          "binding_names": [
+            "__floatdidf"
+          ]
+        },
+        {
+          "instruction_address": "0x397664",
+          "original_word": "0xc0dc540",
+          "target": "0x371500",
+          "binding_names": [
+            "__floatdidf"
+          ]
+        },
+        {
+          "instruction_address": "0x397670",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x39767c",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x397708",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397728",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397764",
+          "original_word": "0xc0dcbf4",
+          "target": "0x372fd0",
+          "binding_names": [
+            "dpdiv"
+          ]
+        },
+        {
+          "instruction_address": "0x39779c",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397808",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397854",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x3978e8",
+          "original_word": "0xc0dcbf4",
+          "target": "0x372fd0",
+          "binding_names": [
+            "dpdiv"
+          ]
+        },
+        {
+          "instruction_address": "0x397930",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x39796c",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x39797c",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397990",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x39799c",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x3979ac",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x3979d8",
+          "original_word": "0xc0e7bd2",
+          "target": "0x39ef48",
+          "binding_names": [
+            "_ulp"
+          ]
+        },
+        {
+          "instruction_address": "0x3979e4",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x397a04",
+          "original_word": "0xc0e798e",
+          "target": "0x39e638",
+          "binding_names": [
+            "_s2b"
+          ]
+        },
+        {
+          "instruction_address": "0x397a34",
+          "original_word": "0xc0e7afe",
+          "target": "0x39ebf8",
+          "binding_names": [
+            "_lshift"
+          ]
+        },
+        {
+          "instruction_address": "0x397a44",
+          "original_word": "0xc0e7b54",
+          "target": "0x39ed50",
+          "binding_names": [
+            "__mcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397b28",
+          "original_word": "0xc0e7bd2",
+          "target": "0x39ef48",
+          "binding_names": [
+            "_ulp"
+          ]
+        },
+        {
+          "instruction_address": "0x397b34",
+          "original_word": "0xc0dcb30",
+          "target": "0x372cc0",
+          "binding_names": [
+            "func_00372CC0",
+            "dpsub"
+          ]
+        },
+        {
+          "instruction_address": "0x397b44",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397b5c",
+          "original_word": "0xc0e7cca",
+          "target": "0x39f328",
+          "binding_names": [
+            "_ratio"
+          ]
+        },
+        {
+          "instruction_address": "0x397b70",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397bd4",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397bfc",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397c14",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397c2c",
+          "original_word": "0xc0dcb30",
+          "target": "0x372cc0",
+          "binding_names": [
+            "func_00372CC0",
+            "dpsub"
+          ]
+        },
+        {
+          "instruction_address": "0x397c78",
+          "original_word": "0xc0e7bd2",
+          "target": "0x39ef48",
+          "binding_names": [
+            "_ulp"
+          ]
+        },
+        {
+          "instruction_address": "0x397c84",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397c90",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x397d24",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397d3c",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x397d44",
+          "original_word": "0xc0dccd6",
+          "target": "0x373358",
+          "binding_names": [
+            "dptoli"
+          ]
+        },
+        {
+          "instruction_address": "0x397d4c",
+          "original_word": "0xc0dcca8",
+          "target": "0x3732a0",
+          "binding_names": [
+            "litodp"
+          ]
+        },
+        {
+          "instruction_address": "0x397d60",
+          "original_word": "0xc0dcb30",
+          "target": "0x372cc0",
+          "binding_names": [
+            "func_00372CC0",
+            "dpsub"
+          ]
+        },
+        {
+          "instruction_address": "0x397d6c",
+          "original_word": "0xc0e7bd2",
+          "target": "0x39ef48",
+          "binding_names": [
+            "_ulp"
+          ]
+        },
+        {
+          "instruction_address": "0x397d78",
+          "original_word": "0xc0dcb4a",
+          "target": "0x372d28",
+          "binding_names": [
+            "func_00372D28",
+            "dpmul"
+          ]
+        },
+        {
+          "instruction_address": "0x397d84",
+          "original_word": "0xc0dcb1a",
+          "target": "0x372c68",
+          "binding_names": [
+            "func_00372C68",
+            "dpadd"
+          ]
+        },
+        {
+          "instruction_address": "0x397db0",
+          "original_word": "0xc0e7d46",
+          "target": "0x39f518",
+          "binding_names": [
+            "__fixdfdi"
+          ]
+        },
+        {
+          "instruction_address": "0x397db8",
+          "original_word": "0xc0dc540",
+          "target": "0x371500",
+          "binding_names": [
+            "__floatdidf"
+          ]
+        },
+        {
+          "instruction_address": "0x397dc4",
+          "original_word": "0xc0dcb30",
+          "target": "0x372cc0",
+          "binding_names": [
+            "func_00372CC0",
+            "dpsub"
+          ]
+        },
+        {
+          "instruction_address": "0x397e04",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397e28",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397e5c",
+          "original_word": "0xc0dcc94",
+          "target": "0x373250",
+          "binding_names": [
+            "func_00373250",
+            "dpcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x397e70",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x397e7c",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x397e88",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x397e94",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x397ea4",
+          "original_word": "0xc0e7914",
+          "target": "0x39e450",
+          "binding_names": [
+            "_Balloc"
+          ]
+        },
+        {
+          "instruction_address": "0x397ec4",
+          "original_word": "0xc0e4d3e",
+          "target": "0x3934f8",
+          "binding_names": [
+            "func_003934F8"
+          ]
+        },
+        {
+          "instruction_address": "0x397ed8",
+          "original_word": "0xc0e7c6a",
+          "target": "0x39f1a8",
+          "binding_names": [
+            "_d2b"
+          ]
+        },
+        {
+          "instruction_address": "0x397ee8",
+          "original_word": "0xc0e7a2e",
+          "target": "0x39e8b8",
+          "binding_names": [
+            "_i2b"
+          ]
+        },
+        {
+          "instruction_address": "0x397f94",
+          "original_word": "0xc0e7abe",
+          "target": "0x39eaf8",
+          "binding_names": [
+            "_pow5mult"
+          ]
+        },
+        {
+          "instruction_address": "0x397fa8",
+          "original_word": "0xc0e7a3c",
+          "target": "0x39e8f0",
+          "binding_names": [
+            "_multiply"
+          ]
+        },
+        {
+          "instruction_address": "0x397fb8",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x397fcc",
+          "original_word": "0xc0e7afe",
+          "target": "0x39ebf8",
+          "binding_names": [
+            "_lshift"
+          ]
+        },
+        {
+          "instruction_address": "0x397fe4",
+          "original_word": "0xc0e7abe",
+          "target": "0x39eaf8",
+          "binding_names": [
+            "_pow5mult"
+          ]
+        },
+        {
+          "instruction_address": "0x397ffc",
+          "original_word": "0xc0e7afe",
+          "target": "0x39ebf8",
+          "binding_names": [
+            "_lshift"
+          ]
+        },
+        {
+          "instruction_address": "0x398014",
+          "original_word": "0xc0e7afe",
+          "target": "0x39ebf8",
+          "binding_names": [
+            "_lshift"
+          ]
+        },
+        {
+          "instruction_address": "0x398028",
+          "original_word": "0xc0e7b6e",
+          "target": "0x39edb8",
+          "binding_names": [
+            "__mdiff"
+          ]
+        },
+        {
+          "instruction_address": "0x398040",
+          "original_word": "0xc0e7b54",
+          "target": "0x39ed50",
+          "binding_names": [
+            "__mcmp"
+          ]
+        },
+        {
+          "instruction_address": "0x398074",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x398080",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x39808c",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x398098",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x3980a4",
+          "original_word": "0xc0e793e",
+          "target": "0x39e4f8",
+          "binding_names": [
+            "_Bfree"
+          ]
+        },
+        {
+          "instruction_address": "0x3980c8",
+          "original_word": "0xc0dcb30",
+          "target": "0x372cc0",
+          "binding_names": [
+            "func_00372CC0",
+            "dpsub"
+          ]
+        }
+      ],
+      "unlinked_relocations": [
+        {
+          "offset": 92,
+          "type": 5,
+          "symbol": ""
+        },
+        {
+          "offset": 100,
+          "type": 6,
+          "symbol": ""
+        },
+        {
+          "offset": 1056,
+          "type": 4,
+          "symbol": "litodp"
+        },
+        {
+          "offset": 1084,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 1120,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1132,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1128,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1144,
+          "type": 4,
+          "symbol": "__floatdidf"
+        },
+        {
+          "offset": 1168,
+          "type": 4,
+          "symbol": "__floatdidf"
+        },
+        {
+          "offset": 1180,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 1192,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 1244,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1252,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1300,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1308,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1316,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1344,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1352,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1356,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1392,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1396,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1408,
+          "type": 4,
+          "symbol": "dpdiv"
+        },
+        {
+          "offset": 1448,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1456,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1460,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1500,
+          "type": 5,
+          "symbol": "stdlib_infinity"
+        },
+        {
+          "offset": 1504,
+          "type": 6,
+          "symbol": "stdlib_infinity"
+        },
+        {
+          "offset": 1548,
+          "type": 5,
+          "symbol": "__mprec_bigtens"
+        },
+        {
+          "offset": 1552,
+          "type": 6,
+          "symbol": "__mprec_bigtens"
+        },
+        {
+          "offset": 1580,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1616,
+          "type": 5,
+          "symbol": "__mprec_bigtens"
+        },
+        {
+          "offset": 1620,
+          "type": 6,
+          "symbol": "__mprec_bigtens"
+        },
+        {
+          "offset": 1664,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1792,
+          "type": 5,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1800,
+          "type": 6,
+          "symbol": "__mprec_tens"
+        },
+        {
+          "offset": 1804,
+          "type": 4,
+          "symbol": "dpdiv"
+        },
+        {
+          "offset": 1852,
+          "type": 5,
+          "symbol": "__mprec_tinytens"
+        },
+        {
+          "offset": 1856,
+          "type": 6,
+          "symbol": "__mprec_tinytens"
+        },
+        {
+          "offset": 1884,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1920,
+          "type": 5,
+          "symbol": "__mprec_tinytens"
+        },
+        {
+          "offset": 1924,
+          "type": 6,
+          "symbol": "__mprec_tinytens"
+        },
+        {
+          "offset": 1952,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 1968,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 1988,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 2000,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 2016,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 2060,
+          "type": 4,
+          "symbol": "_ulp"
+        },
+        {
+          "offset": 2072,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 2104,
+          "type": 4,
+          "symbol": "_s2b"
+        },
+        {
+          "offset": 2140,
+          "type": 4,
+          "symbol": "_lshift"
+        },
+        {
+          "offset": 2156,
+          "type": 4,
+          "symbol": "__mcmp"
+        },
+        {
+          "offset": 2352,
+          "type": 4,
+          "symbol": "_ulp"
+        },
+        {
+          "offset": 2364,
+          "type": 4,
+          "symbol": "dpsub"
+        },
+        {
+          "offset": 2380,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 2404,
+          "type": 4,
+          "symbol": "_ratio"
+        },
+        {
+          "offset": 2424,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 2520,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 2556,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 2580,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 2604,
+          "type": 4,
+          "symbol": "dpsub"
+        },
+        {
+          "offset": 2680,
+          "type": 4,
+          "symbol": "_ulp"
+        },
+        {
+          "offset": 2692,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 2704,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 2844,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 2868,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 2876,
+          "type": 4,
+          "symbol": "dptoli"
+        },
+        {
+          "offset": 2884,
+          "type": 4,
+          "symbol": "litodp"
+        },
+        {
+          "offset": 2904,
+          "type": 4,
+          "symbol": "dpsub"
+        },
+        {
+          "offset": 2916,
+          "type": 4,
+          "symbol": "_ulp"
+        },
+        {
+          "offset": 2928,
+          "type": 4,
+          "symbol": "dpmul"
+        },
+        {
+          "offset": 2940,
+          "type": 4,
+          "symbol": "dpadd"
+        },
+        {
+          "offset": 2984,
+          "type": 4,
+          "symbol": "__fixdfdi"
+        },
+        {
+          "offset": 2992,
+          "type": 4,
+          "symbol": "__floatdidf"
+        },
+        {
+          "offset": 3004,
+          "type": 4,
+          "symbol": "dpsub"
+        },
+        {
+          "offset": 3040,
+          "type": 5,
+          "symbol": ""
+        },
+        {
+          "offset": 3044,
+          "type": 6,
+          "symbol": ""
+        },
+        {
+          "offset": 3048,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 3064,
+          "type": 5,
+          "symbol": ""
+        },
+        {
+          "offset": 3068,
+          "type": 6,
+          "symbol": ""
+        },
+        {
+          "offset": 3072,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 3096,
+          "type": 5,
+          "symbol": ""
+        },
+        {
+          "offset": 3100,
+          "type": 6,
+          "symbol": ""
+        },
+        {
+          "offset": 3104,
+          "type": 4,
+          "symbol": "dpcmp"
+        },
+        {
+          "offset": 3124,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3136,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3148,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3160,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3176,
+          "type": 4,
+          "symbol": "_Balloc"
+        },
+        {
+          "offset": 3208,
+          "type": 4,
+          "symbol": "memcpy"
+        },
+        {
+          "offset": 3228,
+          "type": 4,
+          "symbol": "_d2b"
+        },
+        {
+          "offset": 3244,
+          "type": 4,
+          "symbol": "_i2b"
+        },
+        {
+          "offset": 3424,
+          "type": 4,
+          "symbol": "_pow5mult"
+        },
+        {
+          "offset": 3444,
+          "type": 4,
+          "symbol": "_multiply"
+        },
+        {
+          "offset": 3460,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3480,
+          "type": 4,
+          "symbol": "_lshift"
+        },
+        {
+          "offset": 3504,
+          "type": 4,
+          "symbol": "_pow5mult"
+        },
+        {
+          "offset": 3528,
+          "type": 4,
+          "symbol": "_lshift"
+        },
+        {
+          "offset": 3552,
+          "type": 4,
+          "symbol": "_lshift"
+        },
+        {
+          "offset": 3572,
+          "type": 4,
+          "symbol": "__mdiff"
+        },
+        {
+          "offset": 3596,
+          "type": 4,
+          "symbol": "__mcmp"
+        },
+        {
+          "offset": 3648,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3660,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3672,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3684,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3696,
+          "type": 4,
+          "symbol": "_Bfree"
+        },
+        {
+          "offset": 3732,
+          "type": 4,
+          "symbol": "dpsub"
+        }
+      ],
+      "link_blocker": "Whole .rodata208B table+24B constant input cannot map to original table184B at4566E0. Original constants inline; separate equal constant24B at453A88 is not contiguous. No section splitting or patches.",
+      "boundary_evidence": "Complete958-instruction body including JR3980F8/delay3980FC; following398100 begins the separately proven strtod wrapper.",
+      "evidence": "Unchanged full David Gay source identity includes digit accumulation, exponent parsing/scaling, Bigint refinement, IEEE rounding/overflow/underflow, all helper calls, complete original character switch and tolerance constants. Registered as reconstructed with link:false: actual unlinked ET_REL code retains real relocations. No mapped section or per-function binding is supplied. Source object whole208-byte readonly section cannot fit the original184-byte table; no code/data patch, split, exact-byte or data award."
+    },
+    {
+      "name": "strtod",
+      "compiled_symbol": "strtod",
+      "upstream_symbol": "strtod",
+      "address": "0x00398100",
+      "file_offset": "0x00299100",
+      "size": 44,
+      "source": "src/runtime/stdlib/strtod.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "07196206d36339b6a0683aff6c5d5cac9d249f94519786d3f1c015e9b72b530b",
+      "upstream_source_sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+      "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-D__infinity=stdlib_infinity",
+        "-I",
+        "src/runtime/include"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/strtod.c",
+          "sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/strtod.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Authentic public newlib1.8.1 sys/reent.h, unchanged; original header and public distribution notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/mprec.h",
+          "sha256": "5b97ce36307d50b8f90a3595e4836be1e41e016b8b3b381ebf9ddcd8395c09da",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mprec.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mprec.h",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/ieeefp.h",
+          "sha256": "01b35fc8fa1c8305a4960f41ed33f2210a7e635c42e0ad6bbb47d271aa4aafd8",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3",
+          "modified": false,
+          "upstream_revision": "Canonical target float.h from public GNU EE GCC3.2.3 in PS2DEV20181019 archive",
+          "upstream_path": "MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "link": true,
+      "candidate_comparisons": [
+        {
+          "name": "strtod",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 44,
+          "compiled_size": 44,
+          "different_bytes": 13,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "07196206d36339b6a0683aff6c5d5cac9d249f94519786d3f1c015e9b72b530b",
+          "compiled_sha256": "73c3d8ca15cc34d33def3327f3f7cb66787865d776f5c1ab42fdfc91c5809256"
+        },
+        {
+          "name": "strtod",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": false,
+          "expected_size": 44,
+          "compiled_size": 44,
+          "different_bytes": 20,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "07196206d36339b6a0683aff6c5d5cac9d249f94519786d3f1c015e9b72b530b",
+          "compiled_sha256": "3543245a2a334ad1708dc5693958a3910128b3960c14b91ee62bc448ca09ff10"
+        }
+      ],
+      "independent_review": "Root independently read all958 original main instructions and full pinned strtod.c/mprec.h, validated74 helper calls,141 local branches,184-byte original table/all46 semantic targets, source/header SHA identities, genuine compiler ABI/dependency sets and four fresh wrapper links. The actual208-byte source object readonly section remains an honest linking blocker for the main function.",
+      "entry_proof": {
+        "kind": "direct_jal",
+        "references": [
+          {
+            "address": "0x2e7a40",
+            "word": "0xc0e6040"
+          },
+          {
+            "address": "0x396308",
+            "word": "0xc0e6040"
+          },
+          {
+            "address": "0x398138",
+            "word": "0xc0e6040"
+          }
+        ],
+        "evidence": "Authentic unchanged complete compiled STT_FUNC symbol size matches original terminal return and delay. Heuristic39810084B grouped both complete44/36B wrappers+4B padding; split uses real preceding/following original prologues and source symbols. No overlap or padding counted."
+      },
+      "boundary_evidence": "Complete source symbol and original JR/delay end 0x398128; alignment word 0x39812c excluded. Independent preceding/following source-symbol boundaries resolve former heuristic grouped84-byte interval.",
+      "evidence": "Unchanged public source forwards _impure_ptr plus both original arguments to _strtod_r; complete44-byte body fully linked with zero unresolved relocations and remains reconstructed."
+    },
+    {
+      "name": "strtodf",
+      "compiled_symbol": "strtodf",
+      "upstream_symbol": "strtodf",
+      "address": "0x00398130",
+      "file_offset": "0x00299130",
+      "size": 36,
+      "source": "src/runtime/stdlib/strtod.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0",
+      "upstream_source_sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+      "upstream_revision": "Public GNU EE newlib1.8.1, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+      "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md.",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-I",
+        "src/runtime/stdlib/compat",
+        "-D__infinity=stdlib_infinity",
+        "-I",
+        "src/runtime/include"
+      ],
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/strtod.c",
+          "sha256": "fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/strtod.c",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/include/sys/reent.h",
+          "upstream_license": "Authentic public newlib1.8.1 sys/reent.h, unchanged; original header and public distribution notices retained."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/time.h",
+          "sha256": "79b319dde72f9aea7d4251995a056177bc8a014f50828be14db7f868e1392e04",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "modified": false,
+          "upstream_revision": "Public GNU EE GCC2.9 headers; Git b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_url": "https://github.com/2gifts/george-decomp/releases/tag/gcc29-windows-v1"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/mprec.h",
+          "sha256": "5b97ce36307d50b8f90a3595e4836be1e41e016b8b3b381ebf9ddcd8395c09da",
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/mprec.h",
+          "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mprec.h",
+          "upstream_license": "David M. Gay / AT&T 1991 permissive notice retained in unchanged strtod.c and mprec.h and reproduced in full in docs/reuse.md."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/ieeefp.h",
+          "sha256": "01b35fc8fa1c8305a4960f41ed33f2210a7e635c42e0ad6bbb47d271aa4aafd8",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3",
+          "modified": false,
+          "upstream_revision": "Canonical target float.h from public GNU EE GCC3.2.3 in PS2DEV20181019 archive",
+          "upstream_path": "MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e",
+          "modified": false,
+          "upstream_revision": "newlib1.10.0 or GNU GCC3.2.3 headers in PS2DEV20181019 public archive",
+          "upstream_url": "https://github.com/ps2dev/ps2toolchain/releases/tag/2018-10-19",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "link": true,
+      "candidate_comparisons": [
+        {
+          "name": "strtodf",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": true,
+          "expected_size": 36,
+          "compiled_size": 36,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0",
+          "compiled_sha256": "f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0"
+        },
+        {
+          "name": "strtodf",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-I",
+            "src/runtime/stdlib/compat",
+            "-D__infinity=stdlib_infinity",
+            "-I",
+            "src/runtime/include"
+          ],
+          "identical": true,
+          "expected_size": 36,
+          "compiled_size": 36,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0",
+          "compiled_sha256": "f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0"
+        }
+      ],
+      "independent_review": "Root independently read all958 original main instructions and full pinned strtod.c/mprec.h, validated74 helper calls,141 local branches,184-byte original table/all46 semantic targets, source/header SHA identities, genuine compiler ABI/dependency sets and four fresh wrapper links. The actual208-byte source object readonly section remains an honest linking blocker for the main function.",
+      "entry_proof": {
+        "kind": "authentic_complete_source_symbol_and_adjacent_boundaries",
+        "references": [],
+        "evidence": "Authentic unchanged complete compiled STT_FUNC symbol size matches original terminal return and delay. Heuristic39810084B grouped both complete44/36B wrappers+4B padding; split uses real preceding/following original prologues and source symbols. No overlap or padding counted."
+      },
+      "boundary_evidence": "Complete source symbol and original JR/delay end 0x398150; alignment word 0x398154 excluded. Independent preceding/following source-symbol boundaries resolve former heuristic grouped84-byte interval.",
+      "evidence": "Unchanged public source calls strtod then dptofp; complete36-byte authentic compiled STT_FUNC extent matches original code, return and delay exactly under both genuine compilers. Independently bounded preceding strtod wrapper and following398158 entry establish extent despite no direct caller."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",

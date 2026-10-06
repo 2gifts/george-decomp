@@ -506,6 +506,106 @@
       "address": "0x3945a8",
       "confidence": "identified",
       "evidence": "Actual complete caller JAL graph establishes this binding; custom byte-copy/formatter source identities are not asserted."
+    },
+    "qsort": {
+      "address": "0x00396788",
+      "confidence": "identified",
+      "evidence": "Complete unchanged Bentley/McIlroy quicksort identity: 8-byte aligned/single-long/byte swaps, n<7 insertion, n>7 median-of-three, n>40 ninther, both equal-key partition scans, zero-swap insertion fallback, two vecswaps, left recursion and right tail iteration. Original21 encoded calls include actual recursion397100. Long8/int4/pointer4 ABI is genuine under both public compilers. Source is reconstructed, with no exact-byte or runtime-data award."
+    },
+    "_strtod_r": {
+      "address": "0x00397208",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "strtod": {
+      "address": "0x00398100",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "__mprec_tens": {
+      "address": "0x00456D98",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "stdlib_infinity": {
+      "address": "0x00456D38",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "__mprec_bigtens": {
+      "address": "0x00456E60",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "__mprec_tinytens": {
+      "address": "0x00456E88",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_ulp": {
+      "address": "0x0039EF48",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_s2b": {
+      "address": "0x0039E638",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_lshift": {
+      "address": "0x0039EBF8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "__mcmp": {
+      "address": "0x0039ED50",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_ratio": {
+      "address": "0x0039F328",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_Bfree": {
+      "address": "0x0039E4F8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_Balloc": {
+      "address": "0x0039E450",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_d2b": {
+      "address": "0x0039F1A8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_i2b": {
+      "address": "0x0039E8B8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_pow5mult": {
+      "address": "0x0039EAF8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "_multiply": {
+      "address": "0x0039E8F0",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "__mdiff": {
+      "address": "0x0039EDB8",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
+    },
+    "strtodf": {
+      "address": "0x00398130",
+      "confidence": "identified",
+      "evidence": "Full original _strtod_r958-instruction source/helper call graph and actual LUI/load table pointers; source ABI and exact targets independently reviewed by root. Binding identifies source role only; unregistered helper source is not claimed recovered."
     }
   }
 }

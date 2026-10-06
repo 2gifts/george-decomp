@@ -995,3 +995,106 @@ callback materialization, discarded copy results, both target layouts and all
 ten fresh full links. The five tracked-layout links reproduce the approved
 complete hashes with no unresolved relocations. Exact runtime totals are now
 39 C functions / 4,856 bytes and three separate assembly functions / 572 bytes.
+
+The complete `qsort` body at `0x00396788` / 2,524 bytes reuses unchanged
+[`qsort.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/qsort.c)
+from that public newlib 1.8.1 revision. The source SHA256 is
+`7368f5037292be52f4ac2486a704b8c1863faeba2fc16462e4258bd34e907bad`.
+The original full body SHA256 is
+`2512c55c0283be6bca118d713daf759f40994e7d57bc484a07c91c7876960a42`.
+All 631 original instructions agree with the Bentley/McIlroy algorithm,
+including its three swap representations, short-array insertion sort,
+median-of-three and larger-array ninther pivots, equal-key partitions,
+zero-swap insertion fallback, vector swaps, left recursion and right tail
+iteration. The actual target has eight-byte `long`, four-byte `int` and
+four-byte pointers, which matters for both the aligned swaps and arithmetic.
+All 21 encoded callers include the original recursive call; all 98 direct
+branch destinations remain inside the complete body. Its final return and
+delay instruction end at `0x00397160`; padding at `0x00397164` is excluded.
+
+Root independently reviewed the full original body, pinned source and notice,
+caller/branch/boundary evidence, both compiler dependency sets and two fresh
+full links before approving import. A tracked-layout reproduction uses the
+same eight authentic source/header dependencies and guarded hashes. GCC 2.9
+produces 2,596 bytes with 1,963 differing bytes and zero unresolved relocations;
+GCC 3.2.3 produces 2,476 bytes with 2,230 differing bytes. This complete source
+recovery remains reconstructed and adds no exact-byte award. The Berkeley
+1992/1993 notice remains intact in the source. This product includes software
+developed by the University of California, Berkeley and its contributors.
+
+The complete David Gay string-conversion source is reused unchanged from
+[`strtod.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/strtod.c)
+and its private
+[`mprec.h`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/mprec.h)
+at that public newlib 1.8.1 revision. Their source SHA256 values are
+`fe27824e57ec2080b4cb81d87eb90cc3ddf74d6fae8d55b2d28c3b5bf9a46dc8`
+and `5b97ce36307d50b8f90a3595e4836be1e41e016b8b3b381ebf9ddcd8395c09da`.
+The isolated compatibility directory contains the unchanged pinned 1.8.1
+`sys/reent.h` and the unchanged canonical target `float.h` from the public
+PS2DEV 2018 archive. Each actual dependency is fingerprinted before compilation.
+Both authentic compilers establish `int` = four bytes, `long` = eight bytes,
+pointers = four bytes, `ULong` = four bytes and the original 24-byte Bigint
+layout. The older reent header supplies that genuine `Long`/`ULong` contract;
+the remaining archive system headers have explicit newlib 1.10.0 provenance.
+
+The original `_strtod_r` at `0x00397208` is 3,832 bytes / 958 instructions,
+SHA256 `c696c52c72639999d2c50b01c7852744865dbe2265adabb014ca53e4e844ca2e`.
+Its whole algorithm agrees with the pinned source: whitespace/sign parsing,
+digit accumulation, malformed and clamped exponents, quick and long scaling,
+Bigint refinement, half-ULP ties, overflow/underflow and final end-pointer/sign
+handling. All 74 original helper calls, 141 bounded branches, 46 switch
+destinations and tolerance constants were checked against the full source.
+Root independently reviewed every original instruction and the complete
+source, private header, authentic ABI and dependency sets.
+
+The main body remains reconstructed with `link:false`. GCC 2.9 emits a
+3,788-byte unlinked function retaining 106 actual relocations; GCC 3.2.3 emits
+4,016 bytes retaining 104. These object comparisons are explicitly unlinked
+and confer no exact-byte award. The actual input readonly section is 208 bytes:
+a 184-byte character table followed by 24 bytes of tolerance constants.
+The original table at `0x004566E0` is only 184 bytes; its following bytes have
+a different identity. The original tolerance constants occur inline in code,
+and an equal separate 24-byte pool at `0x00453A88` does not establish contiguous
+section geometry. No source/object section is split or patched, and no mapped
+data or per-function binding forces the main body to link. Its helper-role
+bindings identify the original call graph without claiming those helpers'
+source recovery.
+
+The separately bounded wrappers add 80 bytes. `strtod` at `0x00398100` is
+44 bytes and remains reconstructed after actual full linking with zero
+unresolved relocations. `strtodf` at `0x00398130` matches its complete 36 bytes
+under both compilers, SHA256
+`f795a10a201d741b444dd9c96e5cec9f9ca75ee7262fe6d6427c28f11d9021c0`.
+Its unchanged source calls `strtod` followed by the proven double-to-float
+helper. Authentic complete compiled symbol extents, original returns and delay
+instructions, and independently bounded preceding/following entries establish
+the unreferenced float wrapper's extent. The former 84-byte heuristic region
+combined both wrappers and alignment; padding at `0x0039812C` and `0x00398154`
+is excluded. Root independently reproduced all four genuine wrapper links,
+and fresh tracked-layout dependency/link checks reproduce the approved hashes.
+These three entries recover 3,912 original bytes; exact runtime totals are now
+40 C functions / 4,892 bytes and three separate assembly functions / 572 bytes.
+
+The full AT&T notice below is retained in both unchanged source files and is
+included here as required for supporting documentation:
+
+```text
+/****************************************************************
+ *
+ * The author of this software is David M. Gay.
+ *
+ * Copyright (c) 1991 by AT&T.
+ *
+ * Permission to use, copy, modify, and distribute this software for any
+ * purpose without fee is hereby granted, provided that this entire notice
+ * is included in all copies of any software which is or includes a copy
+ * or modification of this software and in all copies of the supporting
+ * documentation for such software.
+ *
+ * THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
+ * WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR AT&T MAKES ANY
+ * REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
+ * OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+ *
+ ***************************************************************/
+```

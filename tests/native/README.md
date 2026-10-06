@@ -1,5 +1,13 @@
 # Native semantic checks
 
+The `camera_basis` utility harness passes 88,568 checks against 473 finite
+controlled-call original-instruction fixtures, including all switch modes,
+vertical threshold neighbors, saved-local callback mutations, shifted matrix
+output/source aliases, fresh mode reloads and retained first length. Run with
+`--harness camera_basis`; the runner applies `-ffloat-store`. Six scoped decoder
+guards check full64 shifts/moves, signed branches and the complete readonly
+switch-table identity. See `docs/camera_basis.md` for model and hardware limits.
+
 The `camera_transform` utility harness passes 13,178 checks against 176 finite
 controlled-call original-instruction fixtures: allocation failure, sparse
 initialization callbacks, captured projection operands and fresh aspect,
@@ -196,3 +204,24 @@ The harness covers callbacks that change soft-angle inputs, retained vector
 outputs, phase fallthrough, duration/store aliases, shifted matrix output and
 full signed virtual adjustments. Parent and research independently reproduced
 this result. See `docs/actor_states4.md` for host/EE model limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_states5.py` for 1,692
+asset-free checks of all 19 state25-29 methods. The harness covers retained query
+outputs, request/control reloads, signed phase/timer/threshold gates, bit38,
+wrapped duration callbacks, output/data aliases and full signed virtual
+adjustment. Parent and research independently reproduced this result. See
+`docs/actor_states5.md` for host/EE arithmetic model limits.
+
+The geometry classification harness passes 94,656 checks against independent
+finite corner/support models, strict face boundaries, crossing eligibility,
+frame projections and full soft-call ordering with input-changing callbacks.
+Run it with `--harness geometry_classify`. Parent and independent peer reviewed
+all five complete routines and reproduced the native checks and fifteen links.
+See `docs/geometry_classify.md` for the two-body reuse proof and host/EE limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_states6.py` for 964
+asset-free checks of all 18 state30-33 methods and interaction record helpers.
+The harness covers retained vectors/basis captures, repeated angular samples,
+request/record cleanup reloads, signed phase/timer gates and output/data aliases.
+Parent and research independently reproduced this result. See
+`docs/actor_states6.md` for host/EE arithmetic and caller precondition limits.
