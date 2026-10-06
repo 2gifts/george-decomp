@@ -1,5 +1,7 @@
 # Native semantic checks
 
+Property management: `run_utilities.py --harness property_management` runs 61,865 native32 checks against 91 authored complete-original scalar fixtures (7,626 instructions), including actual constructor/list/length helpers and the original misaligned copy branch. Allocator/free/VU output contracts, retained dead storage and explicit helper hooks preserve the documented model limits. Seven scoped decoder guards pass; no original code/table arrays are tracked. Production management and ownership sources compile as separate translation units.
+
 `property_updates` exercises the five callback/deferred-destruction/cache routines
 with the existing ownership source as a separate translation unit. The 272
 authored original-instruction fixtures compare every memory word and callback
@@ -312,3 +314,19 @@ The harness covers full dispatch groups and flags, callback/argument aliases,
 five effect branches, duration reloads, ray outputs and live collision float
 arguments. Peer and parent independently reproduced this result and reviewed
 all complete originals. See `docs/actor_actions.md` for ABI and host/EE limits.
+
+Run `.venv/Scripts/python.exe tests/native/run_actor_substates.py` for 851
+asset-free checks of all eleven registered actor substate/lifecycle methods.
+The harness covers complete dispatch and phase groups, callback captures and
+reloads, shifted vector aliases, signed mask narrowing, registry insertion,
+linked successors and reference-count wrapping. Peer and parent independently
+reproduced the corrected Z-before-W alias regression and all checks. See
+`docs/actor_substates.md` for entry/ABI evidence and host/EE limits.
+
+
+Resource groups: run `python tests/native/run_utilities.py --harness resource_groups`.
+The 220 authored fixtures compare full buffers/events/calls/results with strict
+original-code traces and execute all five connected helper C bodies. 173,269 checks
+and eight decoder guards pass. Only proved pointer fields are translated; aligned
+storage preserves low 16 pointer aliases. Original engine/heap/EE timing is outside
+the controlled model. Complete scope and contracts: `docs/resource_groups.md`.

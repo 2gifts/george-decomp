@@ -1293,3 +1293,51 @@ bodies remain reconstructed with zero unresolved relocations and no new exact
 code award. No native OS or allocator behavioral harness, complete enclosing
 function claim for heuristic caller intervals, or exhaustive malformed-input
 or EE exception claim is made.
+
+Five connected stdio helpers now reuse unchanged public newlib 1.8.1
+[`stdio.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/stdio.c)
+and
+[`flags.c`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdio/flags.c)
+from the same pinned public revision:
+
+| Function | Original address | Bytes | Status |
+| --- | --- | ---: | --- |
+| `__sread` | `0x003953E8` | 100 | Reconstructed |
+| `__swrite` | `0x00395450` | 128 | Reconstructed |
+| `__sseek` | `0x003954D0` | 104 | Reconstructed |
+| `__sclose` | `0x00395538` | 32 | Matched |
+| `__sflags` | `0x0039DD60` | 168 | Reconstructed |
+
+The complete Berkeley 1990 notices remain in both sources, with the full
+distribution notice in `LICENSES/newlib-1.8.1.txt`, section 1. This software
+was developed by the University of California, Berkeley. Existing unchanged
+private `local.h` and `sys/reent.h`, and the actual bootstrap headers, are
+reused with source and dependency fingerprint guards.
+
+Author and root independently read all 133 original instructions, the full
+unchanged sources and 22 original constructor instructions. Eight original
+function-address materializations store the four callbacks in the actual
+`FILE` fields; the mode parser also has a genuine encoded call from `fopen`.
+The successful-fd branch in that caller executes the read-callback LUI in its
+delay slot and bypasses the failure path, which wipes the register and exits.
+This path proof avoids treating the two routes as one linear materialization.
+Both genuine 34-word ABI probes establish the 88-byte `FILE`, signed halfword
+file descriptor, four-byte cached offset and eight-byte `long`, `off_t` and
+`fpos_t`. The target headers leave `O_BINARY` and `O_TEXT` undefined.
+
+The callbacks preserve the append seek before write, fresh `FILE` reloads
+after that seek, full-width seek result and failure sentinel, and the distinct
+cached offset narrowing. The flags parser preserves the original short
+circuit reads, invalid-mode error store, access/create/append flags and final
+output store. Original terminal returns, delay slots and separate callback
+prologues establish the full intervals; the heuristic scanner grouping under
+`sscanf` is rejected. The source compiler also emits four separate complete
+`STT_FUNC` symbols from `stdio.c` and one from `flags.c`.
+
+After import, ten fresh tracked-layout links using only the central bindings
+reproduce all original comparison scores and actual dependency sets, with
+zero unresolved relocations. Both compilers match every byte of the complete
+32-byte `__sclose`; the other four complete bodies remain reconstructed. The
+five functions total 532 original bytes. This is source, control and entry
+identity plus the stated complete match, without a native OS harness,
+complete enclosing caller or dispatch claim, or EE precision/exception claim.

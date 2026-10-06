@@ -1,0 +1,2910 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_0020F128",
+      "address": "0x20f128",
+      "file_offset": "0x110128",
+      "size": 536,
+      "original_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_0020F128",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [
+        {
+          "instruction": "0x20f160",
+          "word": "0xc0adb70",
+          "opcode": 3,
+          "target": "0x2b6dc0",
+          "delay_word": "0xa82d"
+        },
+        {
+          "instruction": "0x20f170",
+          "word": "0xc0adc22",
+          "opcode": 3,
+          "target": "0x2b7088",
+          "delay_word": "0x3a0302d"
+        },
+        {
+          "instruction": "0x20f184",
+          "word": "0xc0adc38",
+          "opcode": 3,
+          "target": "0x2b70e0",
+          "delay_word": "0x280202d"
+        },
+        {
+          "instruction": "0x20f1c0",
+          "word": "0xc083f52",
+          "opcode": 3,
+          "target": "0x20fd48",
+          "delay_word": "0x282d"
+        },
+        {
+          "instruction": "0x20f1f0",
+          "word": "0xc089b8e",
+          "opcode": 3,
+          "target": "0x226e38",
+          "delay_word": "0x24150001"
+        },
+        {
+          "instruction": "0x20f258",
+          "word": "0xc083f52",
+          "opcode": 3,
+          "target": "0x20fd48",
+          "delay_word": "0x282d"
+        },
+        {
+          "instruction": "0x20f288",
+          "word": "0xc089b8e",
+          "opcode": 3,
+          "target": "0x226e38",
+          "delay_word": "0x24150001"
+        },
+        {
+          "instruction": "0x20f2c8",
+          "word": "0xc083d10",
+          "opcode": 3,
+          "target": "0x20f440",
+          "delay_word": "0x202d"
+        },
+        {
+          "instruction": "0x20f2e8",
+          "word": "0xc0adb70",
+          "opcode": 3,
+          "target": "0x2b6dc0",
+          "delay_word": "0x280202d"
+        },
+        {
+          "instruction": "0x20f2f8",
+          "word": "0xc083d10",
+          "opcode": 3,
+          "target": "0x20f440",
+          "delay_word": "0x3484ffff"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x20f154",
+          "word": "0x14a00060",
+          "target": "0x20f2d8"
+        },
+        {
+          "instruction": "0x20f190",
+          "word": "0x10600021",
+          "target": "0x20f218"
+        },
+        {
+          "instruction": "0x20f19c",
+          "word": "0x1040001e",
+          "target": "0x20f218"
+        },
+        {
+          "instruction": "0x20f1b4",
+          "word": "0x50800012",
+          "target": "0x20f200"
+        },
+        {
+          "instruction": "0x20f1cc",
+          "word": "0x1080000c",
+          "target": "0x20f200"
+        },
+        {
+          "instruction": "0x20f1dc",
+          "word": "0x54400009",
+          "target": "0x20f204"
+        },
+        {
+          "instruction": "0x20f1f8",
+          "word": "0x10000002",
+          "target": "0x20f204"
+        },
+        {
+          "instruction": "0x20f210",
+          "word": "0x1440ffe7",
+          "target": "0x20f1b0"
+        },
+        {
+          "instruction": "0x20f21c",
+          "word": "0x10400024",
+          "target": "0x20f2b0"
+        },
+        {
+          "instruction": "0x20f234",
+          "word": "0x1060001e",
+          "target": "0x20f2b0"
+        },
+        {
+          "instruction": "0x20f24c",
+          "word": "0x50800012",
+          "target": "0x20f298"
+        },
+        {
+          "instruction": "0x20f264",
+          "word": "0x1080000c",
+          "target": "0x20f298"
+        },
+        {
+          "instruction": "0x20f274",
+          "word": "0x54400009",
+          "target": "0x20f29c"
+        },
+        {
+          "instruction": "0x20f290",
+          "word": "0x10000002",
+          "target": "0x20f29c"
+        },
+        {
+          "instruction": "0x20f2a8",
+          "word": "0x1440ffe7",
+          "target": "0x20f248"
+        },
+        {
+          "instruction": "0x20f2bc",
+          "word": "0x56a00016",
+          "target": "0x20f318"
+        },
+        {
+          "instruction": "0x20f2d0",
+          "word": "0x10000011",
+          "target": "0x20f318"
+        },
+        {
+          "instruction": "0x20f2e0",
+          "word": "0x5040000d",
+          "target": "0x20f318"
+        },
+        {
+          "instruction": "0x20f304",
+          "word": "0x10400004",
+          "target": "0x20f318"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x20f12c",
+          "word": "0x7fb00140",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 320,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f130",
+          "word": "0x7fb10130",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 304,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f138",
+          "word": "0x7fb20120",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 288,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f13c",
+          "word": "0x7fb30110",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 272,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f140",
+          "word": "0x7fb500f0",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 21,
+          "signed_offset": 240,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f144",
+          "word": "0x7fb600e0",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 22,
+          "signed_offset": 224,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f148",
+          "word": "0x7fb700d0",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 23,
+          "signed_offset": 208,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f14c",
+          "word": "0xffbf00c0",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 192,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f150",
+          "word": "0x7fb40100",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 20,
+          "signed_offset": 256,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f17c",
+          "word": "0xa6020024",
+          "opcode": 41,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 36,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f194",
+          "word": "0xa6020026",
+          "opcode": 41,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 38,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f1b8",
+          "word": "0xae200000",
+          "opcode": 43,
+          "base_gpr": 17,
+          "source_register": 0,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f1d0",
+          "word": "0xae240000",
+          "opcode": 43,
+          "base_gpr": 17,
+          "source_register": 4,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f22c",
+          "word": "0xae820000",
+          "opcode": 43,
+          "base_gpr": 20,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f250",
+          "word": "0xae200000",
+          "opcode": 43,
+          "base_gpr": 17,
+          "source_register": 0,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f268",
+          "word": "0xae240000",
+          "opcode": 43,
+          "base_gpr": 17,
+          "source_register": 4,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f2b8",
+          "word": "0xa2020002",
+          "opcode": 40,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 2,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f314",
+          "word": "0xae820000",
+          "opcode": 43,
+          "base_gpr": 20,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 0,
+        "direct_references": [],
+        "aligned_readonly_absolute_references": [
+          {
+            "address": "0x43a474",
+            "target": "0x20f128",
+            "section": ".rodata",
+            "flags": 2,
+            "evidence_limit": "Aligned allocated nonexec absolute reference only; enclosing container or dispatch reachability is not asserted."
+          }
+        ],
+        "reachability": "aligned_readonly_reference_complete_body_boundary_dispatch_unresolved",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Capturedholder retained across relocation/enumeration/childcallbacks. count24 published beforesecondaryenumeration, freshloopcounts andgroupword1C, nullslots cleared, childpublication precedesreadiness/registration, pendingaccumulates. Secondary countsets capturedholderflag40 at originaltwo locations; groupflag4 precedes optionalcompletion. Mode!=0 onlyactsif freshflag4.",
+      "candidate_comparisons": [
+        {
+          "name": "func_0020F128",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 536,
+          "compiled_size": 536,
+          "different_bytes": 396,
+          "first_different_offsets": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233",
+          "compiled_sha256": "fb8f574b49c7fade635a03c975711e807d49cc0a617f2918f0bcad06ddd03815"
+        },
+        {
+          "name": "func_0020F128",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 536,
+          "compiled_size": 524,
+          "different_bytes": 400,
+          "first_different_offsets": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233",
+          "compiled_sha256": "203f80754b55f10a86d51f33bf5a895e6a2a5ee481d08ca899b04439953e7813"
+        },
+        {
+          "name": "func_0020F128",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 536,
+          "compiled_size": 524,
+          "different_bytes": 390,
+          "first_different_offsets": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233",
+          "compiled_sha256": "edb31bcb2c3879495be78a62a26cc105bb9a4920c2c8fc1817cb07df564a2b40"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_0020F340",
+      "address": "0x20f340",
+      "file_offset": "0x110340",
+      "size": 256,
+      "original_sha256": "9b403f949bc8916f1d0b36e010874daec16088ba93a8162dd0f3b9ad23be81b9",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_0020F340",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [
+        {
+          "instruction": "0x20f384",
+          "word": "0xc089b5e",
+          "opcode": 3,
+          "target": "0x226d78",
+          "delay_word": "0x0"
+        },
+        {
+          "instruction": "0x20f3e4",
+          "word": "0xc089b5e",
+          "opcode": 3,
+          "target": "0x226d78",
+          "delay_word": "0x0"
+        },
+        {
+          "instruction": "0x20f420",
+          "word": "0xc089eda",
+          "opcode": 3,
+          "target": "0x227b68",
+          "delay_word": "0x8e440010"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x20f35c",
+          "word": "0x10400015",
+          "target": "0x20f3b4"
+        },
+        {
+          "instruction": "0x20f36c",
+          "word": "0x5080000d",
+          "target": "0x20f3a4"
+        },
+        {
+          "instruction": "0x20f37c",
+          "word": "0x10400005",
+          "target": "0x20f394"
+        },
+        {
+          "instruction": "0x20f38c",
+          "word": "0x10000005",
+          "target": "0x20f3a4"
+        },
+        {
+          "instruction": "0x20f3ac",
+          "word": "0x1440ffee",
+          "target": "0x20f368"
+        },
+        {
+          "instruction": "0x20f3b8",
+          "word": "0x10400017",
+          "target": "0x20f418"
+        },
+        {
+          "instruction": "0x20f3cc",
+          "word": "0x5080000d",
+          "target": "0x20f404"
+        },
+        {
+          "instruction": "0x20f3dc",
+          "word": "0x10400005",
+          "target": "0x20f3f4"
+        },
+        {
+          "instruction": "0x20f3ec",
+          "word": "0x10000005",
+          "target": "0x20f404"
+        },
+        {
+          "instruction": "0x20f40c",
+          "word": "0x1440ffee",
+          "target": "0x20f3c8"
+        },
+        {
+          "instruction": "0x20f418",
+          "word": "0x10400004",
+          "target": "0x20f42c"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x20f344",
+          "word": "0x7fb00030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 48,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f348",
+          "word": "0x7fb20010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 16,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f34c",
+          "word": "0x7fb10020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 32,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f354",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f39c",
+          "word": "0xa4820000",
+          "opcode": 41,
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f3fc",
+          "word": "0xa4820000",
+          "opcode": 41,
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 0,
+        "direct_references": [],
+        "aligned_readonly_absolute_references": [
+          {
+            "address": "0x43a484",
+            "target": "0x20f340",
+            "section": ".rodata",
+            "flags": 2,
+            "evidence_limit": "Aligned allocated nonexec absolute reference only; enclosing container or dispatch reachability is not asserted."
+          }
+        ],
+        "reachability": "aligned_readonly_reference_complete_body_boundary_dispatch_unresolved",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "First then secondary arrays reloadfreshu16counts aftereach childactivation. Captured childflag80 calls originalactivation; otherwiseu16count increments withlow16wrap. Fresh secondarycount gate calls holdernotification, no inventedarray/countclears.",
+      "candidate_comparisons": [
+        {
+          "name": "func_0020F340",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 256,
+          "compiled_size": 300,
+          "different_bytes": 250,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "9b403f949bc8916f1d0b36e010874daec16088ba93a8162dd0f3b9ad23be81b9",
+          "compiled_sha256": "8c46696aab44a3a1f4c7e238042f8f28eb9a768447e0c2a750b5286c7f8ed856"
+        },
+        {
+          "name": "func_0020F340",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 256,
+          "compiled_size": 276,
+          "different_bytes": 209,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "9b403f949bc8916f1d0b36e010874daec16088ba93a8162dd0f3b9ad23be81b9",
+          "compiled_sha256": "243f096abe4849f421f71b2d9a35953ae689a2cf88f252efca66be684be43222"
+        },
+        {
+          "name": "func_0020F340",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 256,
+          "compiled_size": 276,
+          "different_bytes": 207,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "9b403f949bc8916f1d0b36e010874daec16088ba93a8162dd0f3b9ad23be81b9",
+          "compiled_sha256": "d3137e4e9b4e538698f2fdb42e5807335554f7e8884eceec4221ddd314207c8f"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_0020F440",
+      "address": "0x20f440",
+      "file_offset": "0x110440",
+      "size": 408,
+      "original_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_0020F440",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [
+        {
+          "instruction": "0x20f490",
+          "word": "0xc0adbca",
+          "opcode": 3,
+          "target": "0x2b6f28",
+          "delay_word": "0x8c460010"
+        },
+        {
+          "instruction": "0x20f4a8",
+          "word": "0xc0adbca",
+          "opcode": 3,
+          "target": "0x2b6f28",
+          "delay_word": "0x220282d"
+        },
+        {
+          "instruction": "0x20f520",
+          "word": "0xc0adbd2",
+          "opcode": 3,
+          "target": "0x2b6f48",
+          "delay_word": "0x8c460010"
+        },
+        {
+          "instruction": "0x20f538",
+          "word": "0xc0adbd2",
+          "opcode": 3,
+          "target": "0x2b6f48",
+          "delay_word": "0x220282d"
+        },
+        {
+          "instruction": "0x20f59c",
+          "word": "0xc089eda",
+          "opcode": 3,
+          "target": "0x227b68",
+          "delay_word": "0x8e040010"
+        },
+        {
+          "instruction": "0x20f5b4",
+          "word": "0xc089bd0",
+          "opcode": 3,
+          "target": "0x226f40",
+          "delay_word": "0x0"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x20f464",
+          "word": "0x10400020",
+          "target": "0x20f4e8"
+        },
+        {
+          "instruction": "0x20f46c",
+          "word": "0x1040001e",
+          "target": "0x20f4e8"
+        },
+        {
+          "instruction": "0x20f474",
+          "word": "0x10000015",
+          "target": "0x20f4cc"
+        },
+        {
+          "instruction": "0x20f498",
+          "word": "0x10000006",
+          "target": "0x20f4b4"
+        },
+        {
+          "instruction": "0x20f4bc",
+          "word": "0x1040000a",
+          "target": "0x20f4e8"
+        },
+        {
+          "instruction": "0x20f4cc",
+          "word": "0x5040fff4",
+          "target": "0x20f4a0"
+        },
+        {
+          "instruction": "0x20f4dc",
+          "word": "0x1440ffe8",
+          "target": "0x20f480"
+        },
+        {
+          "instruction": "0x20f4ec",
+          "word": "0x10400022",
+          "target": "0x20f578"
+        },
+        {
+          "instruction": "0x20f4f4",
+          "word": "0x52400032",
+          "target": "0x20f5c0"
+        },
+        {
+          "instruction": "0x20f4fc",
+          "word": "0x1040001e",
+          "target": "0x20f578"
+        },
+        {
+          "instruction": "0x20f504",
+          "word": "0x10000015",
+          "target": "0x20f55c"
+        },
+        {
+          "instruction": "0x20f528",
+          "word": "0x10000006",
+          "target": "0x20f544"
+        },
+        {
+          "instruction": "0x20f54c",
+          "word": "0x1040000a",
+          "target": "0x20f578"
+        },
+        {
+          "instruction": "0x20f55c",
+          "word": "0x5040fff4",
+          "target": "0x20f530"
+        },
+        {
+          "instruction": "0x20f56c",
+          "word": "0x1440ffe8",
+          "target": "0x20f510"
+        },
+        {
+          "instruction": "0x20f578",
+          "word": "0x52400011",
+          "target": "0x20f5c0"
+        },
+        {
+          "instruction": "0x20f588",
+          "word": "0x12620006",
+          "target": "0x20f5a4"
+        },
+        {
+          "instruction": "0x20f594",
+          "word": "0x10400003",
+          "target": "0x20f5a4"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x20f444",
+          "word": "0x7fb00040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 64,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f448",
+          "word": "0x7fb20020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 32,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f450",
+          "word": "0x7fb30010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 16,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f458",
+          "word": "0x7fb10030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 48,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f45c",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f5b0",
+          "word": "0xa2020002",
+          "opcode": 40,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 2,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "direct_references": [
+          {
+            "instruction": "0x20f2c8",
+            "target": "0x20f440",
+            "word": "0xc083d10",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          },
+          {
+            "instruction": "0x20f2f8",
+            "target": "0x20f440",
+            "word": "0xc083d10",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "First then secondary publication loopsstopat firstnonnullunreadychild, as direct originalbranchesprove. Nullslot uses freshfallbackpointer, readychild reloads currentarray payload pointer before helper. No laterpublication orcompletion on unready. ResultFFFFFFFF suppresses holdernotification only; readygate stores freshflags|20 beforeoriginalcompletioncall.",
+      "candidate_comparisons": [
+        {
+          "name": "func_0020F440",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 408,
+          "compiled_size": 336,
+          "different_bytes": 343,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c",
+          "compiled_sha256": "85da9fd1cdcbc85192c146818947caa8b6fbab9731b99e596eb75ccd83dc88c2"
+        },
+        {
+          "name": "func_0020F440",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 408,
+          "compiled_size": 392,
+          "different_bytes": 338,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c",
+          "compiled_sha256": "ed17e06eff16c2c3265a29f83ae0561c6374e93cd705fecdf944f1e07b758179"
+        },
+        {
+          "name": "func_0020F440",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 408,
+          "compiled_size": 392,
+          "different_bytes": 333,
+          "first_different_offsets": [
+            0,
+            6,
+            8,
+            10,
+            13,
+            14,
+            18,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c",
+          "compiled_sha256": "578a3fa5b03c7267eede2f8b1506d4ab8b014929cae66f0f72b5686212750956"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_0020F5D8",
+      "address": "0x20f5d8",
+      "file_offset": "0x1105d8",
+      "size": 288,
+      "original_sha256": "8fe363ae7627ec8bc6702f49203b39d2b23c41f1b12aab5412ef9bdb25310232",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_0020F5D8",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [
+        {
+          "instruction": "0x20f600",
+          "word": "0xc089ee6",
+          "opcode": 3,
+          "target": "0x227b98",
+          "delay_word": "0x8e240010"
+        },
+        {
+          "instruction": "0x20f660",
+          "word": "0xc089bb6",
+          "opcode": 3,
+          "target": "0x226ed8",
+          "delay_word": "0x220282d"
+        },
+        {
+          "instruction": "0x20f6c0",
+          "word": "0xc089bb6",
+          "opcode": 3,
+          "target": "0x226ed8",
+          "delay_word": "0x220282d"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x20f5f8",
+          "word": "0x50400004",
+          "target": "0x20f60c"
+        },
+        {
+          "instruction": "0x20f610",
+          "word": "0x10400003",
+          "target": "0x20f620"
+        },
+        {
+          "instruction": "0x20f624",
+          "word": "0x10400015",
+          "target": "0x20f67c"
+        },
+        {
+          "instruction": "0x20f634",
+          "word": "0x50c0000d",
+          "target": "0x20f66c"
+        },
+        {
+          "instruction": "0x20f654",
+          "word": "0x52600005",
+          "target": "0x20f66c"
+        },
+        {
+          "instruction": "0x20f674",
+          "word": "0x1440ffee",
+          "target": "0x20f630"
+        },
+        {
+          "instruction": "0x20f680",
+          "word": "0x10400016",
+          "target": "0x20f6dc"
+        },
+        {
+          "instruction": "0x20f694",
+          "word": "0x50c0000d",
+          "target": "0x20f6cc"
+        },
+        {
+          "instruction": "0x20f6b4",
+          "word": "0x52600005",
+          "target": "0x20f6cc"
+        },
+        {
+          "instruction": "0x20f6d4",
+          "word": "0x1440ffee",
+          "target": "0x20f690"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x20f5dc",
+          "word": "0x7fb10030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 48,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f5e0",
+          "word": "0x7fb00040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 64,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f5e8",
+          "word": "0x7fb20020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 32,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f5ec",
+          "word": "0x7fb30010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 16,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f5f0",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "is_stack_store": true
+        }
+      ],
+      "original_indirect_calls": [
+        {
+          "instruction": "0x20f64c",
+          "word": "0x40f809",
+          "source_register": 2,
+          "link_register": 31,
+          "delay_word": "0xc42021"
+        },
+        {
+          "instruction": "0x20f6ac",
+          "word": "0x40f809",
+          "source_register": 2,
+          "link_register": 31,
+          "delay_word": "0xc42021"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "direct_references": [
+          {
+            "instruction": "0x20f998",
+            "target": "0x20f5d8",
+            "word": "0xc083d76",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F990.s",
+            "containing_interval_address": "0x20f990",
+            "containing_interval_size": 28,
+            "containing_interval_sha256": "dba454d80b234c4a0ad639f4bf09f32d51af61634c9972bfa48ec7bba0b16cdc"
+          },
+          {
+            "instruction": "0x20f9e0",
+            "target": "0x20f5d8",
+            "word": "0xc083d76",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F9B0.s",
+            "containing_interval_address": "0x20f9b0",
+            "containing_interval_size": 88,
+            "containing_interval_sha256": "5ea6f857b8fe02755c8a524ab561f59b50211d2e31f5dc5205da85f7ee13ec88"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Initialsecondary gate calls originalholderrelease beforecapturedflags determine pending. Arrays reloadfreshcounts; capturednonnullchild invokes signedadjustedvirtualpair+10 first, then pendingdetach reloads currentarrayslot aftervirtualcallback. Savedpending retained throughout bothloops.",
+      "candidate_comparisons": [
+        {
+          "name": "func_0020F5D8",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 288,
+          "compiled_size": 276,
+          "different_bytes": 228,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8fe363ae7627ec8bc6702f49203b39d2b23c41f1b12aab5412ef9bdb25310232",
+          "compiled_sha256": "1cb15ad5301bc2b5e4dd3d153772ed7199ed1b44e3b038f4829ba3b642f44deb"
+        },
+        {
+          "name": "func_0020F5D8",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 288,
+          "compiled_size": 304,
+          "different_bytes": 253,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            10,
+            11,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8fe363ae7627ec8bc6702f49203b39d2b23c41f1b12aab5412ef9bdb25310232",
+          "compiled_sha256": "bfab2e2e0de54ac54ab7458f19e06e352346f5d201d868ec383cb32df018a036"
+        },
+        {
+          "name": "func_0020F5D8",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 288,
+          "compiled_size": 304,
+          "different_bytes": 252,
+          "first_different_offsets": [
+            0,
+            4,
+            8,
+            10,
+            11,
+            16,
+            18,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "8fe363ae7627ec8bc6702f49203b39d2b23c41f1b12aab5412ef9bdb25310232",
+          "compiled_sha256": "b82ae689f61e27bdc9ddac04a9c6ce4c30490bb2338e7898dcc9d52bc8233e3e"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_0020F6F8",
+      "address": "0x20f6f8",
+      "file_offset": "0x1106f8",
+      "size": 348,
+      "original_sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_0020F6F8",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [
+        {
+          "instruction": "0x20f71c",
+          "word": "0xc0897a0",
+          "opcode": 3,
+          "target": "0x225e80",
+          "delay_word": "0x24050002"
+        },
+        {
+          "instruction": "0x20f75c",
+          "word": "0xc08919e",
+          "opcode": 3,
+          "target": "0x224678",
+          "delay_word": "0x0"
+        },
+        {
+          "instruction": "0x20f778",
+          "word": "0xc089b5e",
+          "opcode": 3,
+          "target": "0x226d78",
+          "delay_word": "0x200202d"
+        },
+        {
+          "instruction": "0x20f79c",
+          "word": "0xc0abb98",
+          "opcode": 3,
+          "target": "0x2aee60",
+          "delay_word": "0x240400e8"
+        },
+        {
+          "instruction": "0x20f7b8",
+          "word": "0xc089af0",
+          "opcode": 3,
+          "target": "0x226bc0",
+          "delay_word": "0x240382d"
+        },
+        {
+          "instruction": "0x20f82c",
+          "word": "0xc08919e",
+          "opcode": 3,
+          "target": "0x224678",
+          "delay_word": "0x200302d"
+        }
+      ],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x20f728",
+          "word": "0x1200001c",
+          "target": "0x20f79c"
+        },
+        {
+          "instruction": "0x20f730",
+          "word": "0x1240000e",
+          "target": "0x20f76c"
+        },
+        {
+          "instruction": "0x20f73c",
+          "word": "0x1440003e",
+          "target": "0x20f838"
+        },
+        {
+          "instruction": "0x20f764",
+          "word": "0x10000034",
+          "target": "0x20f838"
+        },
+        {
+          "instruction": "0x20f770",
+          "word": "0x10400005",
+          "target": "0x20f788"
+        },
+        {
+          "instruction": "0x20f780",
+          "word": "0x1000002d",
+          "target": "0x20f838"
+        },
+        {
+          "instruction": "0x20f794",
+          "word": "0x10000028",
+          "target": "0x20f838"
+        },
+        {
+          "instruction": "0x20f7d8",
+          "word": "0x10400004",
+          "target": "0x20f7ec"
+        },
+        {
+          "instruction": "0x20f7f4",
+          "word": "0x1040000a",
+          "target": "0x20f820"
+        },
+        {
+          "instruction": "0x20f7fc",
+          "word": "0x12000006",
+          "target": "0x20f818"
+        },
+        {
+          "instruction": "0x20f818",
+          "word": "0x10000006",
+          "target": "0x20f834"
+        },
+        {
+          "instruction": "0x20f820",
+          "word": "0x12400004",
+          "target": "0x20f834"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x20f6fc",
+          "word": "0x7fb10030",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 17,
+          "signed_offset": 48,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f700",
+          "word": "0x7fb20020",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 18,
+          "signed_offset": 32,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f708",
+          "word": "0x7fb30010",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 19,
+          "signed_offset": 16,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f710",
+          "word": "0x7fb00040",
+          "opcode": 31,
+          "base_gpr": 29,
+          "source_register": 16,
+          "signed_offset": 64,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f718",
+          "word": "0xffbf0000",
+          "opcode": 63,
+          "base_gpr": 29,
+          "source_register": 31,
+          "signed_offset": 0,
+          "is_stack_store": true
+        },
+        {
+          "instruction": "0x20f758",
+          "word": "0xa2020002",
+          "opcode": 40,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 2,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f790",
+          "word": "0xa6020000",
+          "opcode": 41,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f7cc",
+          "word": "0xa6000024",
+          "opcode": 41,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 36,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f7d0",
+          "word": "0xae030020",
+          "opcode": 43,
+          "base_gpr": 16,
+          "source_register": 3,
+          "signed_offset": 32,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f7dc",
+          "word": "0xa6000026",
+          "opcode": 41,
+          "base_gpr": 16,
+          "source_register": 0,
+          "signed_offset": 38,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x20f7e8",
+          "word": "0xa2020002",
+          "opcode": 40,
+          "base_gpr": 16,
+          "source_register": 2,
+          "signed_offset": 2,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [
+        {
+          "instruction": "0x20f810",
+          "word": "0x60f809",
+          "source_register": 3,
+          "link_register": 31,
+          "delay_word": "0x2042021"
+        }
+      ],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "direct_references": [
+          {
+            "instruction": "0x20e9e4",
+            "target": "0x20f6f8",
+            "word": "0xc083dbe",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020E920.s",
+            "containing_interval_address": "0x20e920",
+            "containing_interval_size": 384,
+            "containing_interval_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349"
+          },
+          {
+            "instruction": "0x213ad8",
+            "target": "0x20f6f8",
+            "word": "0xc083dbe",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_00213A58.s",
+            "containing_interval_address": "0x213a58",
+            "containing_interval_size": 208,
+            "containing_interval_sha256": "b8e6f00fc8834d420df65b0111a3be168e031bac6d90c648af891016c0baeaef"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Lookupkind2, existingmode/flag40 requestgate, flag80activation andlow16refcountwrap. NewE8 allocationnonnull contract then baseconstructor; capturedflag10, SHcount24 zero, SWtable20, SHcount26 zero, conditionalfreshflags|26. Freshflag8 invokes realtablepair+8 withmode3 thenreturnsNULL; otherwisemode!=0requests1/0 andreturnsretainedgroup.",
+      "candidate_comparisons": [
+        {
+          "name": "func_0020F6F8",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 348,
+          "compiled_size": 328,
+          "different_bytes": 265,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+          "compiled_sha256": "a7fd66a2aefe16d08810346f7102057332e53a6fdd171b924b12e656e4146ce4"
+        },
+        {
+          "name": "func_0020F6F8",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 348,
+          "compiled_size": 332,
+          "different_bytes": 243,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+          "compiled_sha256": "55d709f9c92834f04b13eee972d38f2ff8e1fe81e443abaed625a452b43ebdaf"
+        },
+        {
+          "name": "func_0020F6F8",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 348,
+          "compiled_size": 332,
+          "different_bytes": 238,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            10,
+            13,
+            14,
+            16,
+            21
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cbe5f5da62e015bb800605be582e21af4fcd005258fbb3eacb130164137dd26c",
+          "compiled_sha256": "14bbed5c0394b449e4c2148802b239ce183b2050a7c389d65809f481b46c7ca3"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_002B6DC0",
+      "address": "0x2b6dc0",
+      "file_offset": "0x1b7dc0",
+      "size": 56,
+      "original_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_002B6DC0",
+      "source_kind": "c",
+      "link": true,
+      "status": "matched",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x2b6dc4",
+          "word": "0x10400002",
+          "target": "0x2b6dd0"
+        },
+        {
+          "instruction": "0x2b6dd4",
+          "word": "0x10400002",
+          "target": "0x2b6de0"
+        },
+        {
+          "instruction": "0x2b6de4",
+          "word": "0x10400002",
+          "target": "0x2b6df0"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x2b6dcc",
+          "word": "0xac820020",
+          "opcode": 43,
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 32,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x2b6ddc",
+          "word": "0xac820024",
+          "opcode": 43,
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 36,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x2b6dec",
+          "word": "0xac820008",
+          "opcode": 43,
+          "base_gpr": 4,
+          "source_register": 2,
+          "signed_offset": 8,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 3,
+        "direct_references": [
+          {
+            "instruction": "0x155fb0",
+            "target": "0x2b6dc0",
+            "word": "0xc0adb70",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_00155F88.s",
+            "containing_interval_address": "0x155f88",
+            "containing_interval_size": 252,
+            "containing_interval_sha256": "1667f503ee7262bd8b9255d7c20d4fd51d1260f293c669245debb4fd68d05e1d"
+          },
+          {
+            "instruction": "0x20f160",
+            "target": "0x2b6dc0",
+            "word": "0xc0adb70",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          },
+          {
+            "instruction": "0x20f2e8",
+            "target": "0x2b6dc0",
+            "word": "0xc0adb70",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Observedoffset20,offset24,offset8 eachfreshloaded in that order; nonzero relative32word becomes unsigned32base+offset. Repeatedcalls retained; no inventedalready-relocatedguard.",
+      "candidate_comparisons": [
+        {
+          "name": "func_002B6DC0",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            9,
+            14,
+            25,
+            30,
+            41,
+            46
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a",
+          "compiled_sha256": "eece9c9bfed9533fd595f871e4289b9e7e46ecf0e9676cf384e8ddf16e7a313b"
+        },
+        {
+          "name": "func_002B6DC0",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a",
+          "compiled_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a"
+        },
+        {
+          "name": "func_002B6DC0",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": true,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a",
+          "compiled_sha256": "c6e517eb8e3b2e069814f2108fc113cd9a5d34fada519de0343826bdab2c0e2a"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_002B7088",
+      "address": "0x2b7088",
+      "file_offset": "0x1b8088",
+      "size": 84,
+      "original_sha256": "e0f1ffa2a58c73a531c8c6702252b66ac7e6920177ba8b330ea0c6630ccbbdcc",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_002B7088",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x2b7094",
+          "word": "0x1040000f",
+          "target": "0x2b70d4"
+        },
+        {
+          "instruction": "0x2b709c",
+          "word": "0x10a0000d",
+          "target": "0x2b70d4"
+        },
+        {
+          "instruction": "0x2b70c0",
+          "word": "0x10400004",
+          "target": "0x2b70d4"
+        },
+        {
+          "instruction": "0x2b70cc",
+          "word": "0x5440fff6",
+          "target": "0x2b70a8"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x2b70b4",
+          "word": "0xacc20000",
+          "opcode": 43,
+          "base_gpr": 6,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "direct_references": [
+          {
+            "instruction": "0x20f170",
+            "target": "0x2b7088",
+            "word": "0xc0adc22",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Capturedentry pointer andlimit with initialu16countgate. Each capturedpayload published tooutput before nextfreshholdercount reload; output mayalias source/header. Entrystride24/outputstride4, unsignedindex/limitloop return copiedcount.",
+      "candidate_comparisons": [
+        {
+          "name": "func_002B7088",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 76,
+          "different_bytes": 64,
+          "first_different_offsets": [
+            5,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e0f1ffa2a58c73a531c8c6702252b66ac7e6920177ba8b330ea0c6630ccbbdcc",
+          "compiled_sha256": "5c010b9833c785ddea1cb109f842eb2e5c37e629753f88784be7d82ac948a802"
+        },
+        {
+          "name": "func_002B7088",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 80,
+          "different_bytes": 59,
+          "first_different_offsets": [
+            5,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e0f1ffa2a58c73a531c8c6702252b66ac7e6920177ba8b330ea0c6630ccbbdcc",
+          "compiled_sha256": "e1be26508c01c2698a7be4f37bc904448fc6a513ab0c3edf521dd57252245d8d"
+        },
+        {
+          "name": "func_002B7088",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 80,
+          "different_bytes": 59,
+          "first_different_offsets": [
+            5,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e0f1ffa2a58c73a531c8c6702252b66ac7e6920177ba8b330ea0c6630ccbbdcc",
+          "compiled_sha256": "e1be26508c01c2698a7be4f37bc904448fc6a513ab0c3edf521dd57252245d8d"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_002B70E0",
+      "address": "0x2b70e0",
+      "file_offset": "0x1b80e0",
+      "size": 108,
+      "original_sha256": "b883c5bcd0497031c70f72fe8bb73ef360e6f8a10000c217692ba7f461656649",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_002B70E0",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [],
+      "local_branch_evidence": [
+        {
+          "instruction": "0x2b70ec",
+          "word": "0x10c00015",
+          "target": "0x2b7144"
+        },
+        {
+          "instruction": "0x2b70f4",
+          "word": "0x10800013",
+          "target": "0x2b7144"
+        },
+        {
+          "instruction": "0x2b70fc",
+          "word": "0x10400008",
+          "target": "0x2b7120"
+        },
+        {
+          "instruction": "0x2b7118",
+          "word": "0x1460fffb",
+          "target": "0x2b7108"
+        },
+        {
+          "instruction": "0x2b7120",
+          "word": "0x18e00008",
+          "target": "0x2b7144"
+        },
+        {
+          "instruction": "0x2b713c",
+          "word": "0x1460fffa",
+          "target": "0x2b7128"
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x2b7130",
+          "word": "0xaca20000",
+          "opcode": 43,
+          "base_gpr": 5,
+          "source_register": 2,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x2b7134",
+          "word": "0xac800004",
+          "opcode": 43,
+          "base_gpr": 4,
+          "source_register": 0,
+          "signed_offset": 4,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 1,
+        "direct_references": [
+          {
+            "instruction": "0x20f184",
+            "target": "0x2b70e0",
+            "word": "0xc0adc38",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F128.s",
+            "containing_interval_address": "0x20f128",
+            "containing_interval_size": 536,
+            "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Capturedu16count, entrypointer20 andsecondarypointer24; ifbothnonnull sumsentryunsignedbyte1D overstride24. Bound65535*255<2^24 establishes originals signedpositivecopygate equivalence. Each secondarypayload4 published before clearing sameinputslot, thenadvances8/output4; aliaspropagation preserved.",
+      "candidate_comparisons": [
+        {
+          "name": "func_002B70E0",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 120,
+          "different_bytes": 85,
+          "first_different_offsets": [
+            0,
+            2,
+            3,
+            5,
+            8,
+            10,
+            12,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b883c5bcd0497031c70f72fe8bb73ef360e6f8a10000c217692ba7f461656649",
+          "compiled_sha256": "5afe14779d266f174dfbd370030fd68d046bb1f9e809734df0f46824a1e5a7f1"
+        },
+        {
+          "name": "func_002B70E0",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 120,
+          "different_bytes": 75,
+          "first_different_offsets": [
+            2,
+            5,
+            12,
+            20,
+            28,
+            30,
+            31,
+            33
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b883c5bcd0497031c70f72fe8bb73ef360e6f8a10000c217692ba7f461656649",
+          "compiled_sha256": "316cbd9eaef090dcce7d73f260c2722b6a71216cc6b2ec5f063fa38cb58b0520"
+        },
+        {
+          "name": "func_002B70E0",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 120,
+          "different_bytes": 75,
+          "first_different_offsets": [
+            2,
+            5,
+            12,
+            20,
+            28,
+            30,
+            31,
+            33
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b883c5bcd0497031c70f72fe8bb73ef360e6f8a10000c217692ba7f461656649",
+          "compiled_sha256": "316cbd9eaef090dcce7d73f260c2722b6a71216cc6b2ec5f063fa38cb58b0520"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_002B6F28",
+      "address": "0x2b6f28",
+      "file_offset": "0x1b7f28",
+      "size": 28,
+      "original_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_002B6F28",
+      "source_kind": "c",
+      "link": true,
+      "status": "matched",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [],
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x2b6f38",
+          "word": "0xac460000",
+          "opcode": 43,
+          "base_gpr": 2,
+          "source_register": 6,
+          "signed_offset": 0,
+          "is_stack_store": false
+        },
+        {
+          "instruction": "0x2b6f40",
+          "word": "0xacc00010",
+          "opcode": 43,
+          "base_gpr": 6,
+          "source_register": 0,
+          "signed_offset": 16,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 3,
+        "direct_references": [
+          {
+            "instruction": "0x20f490",
+            "target": "0x2b6f28",
+            "word": "0xc0adbca",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F440.s",
+            "containing_interval_address": "0x20f440",
+            "containing_interval_size": 408,
+            "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+          },
+          {
+            "instruction": "0x20f4a8",
+            "target": "0x2b6f28",
+            "word": "0xc0adbca",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F440.s",
+            "containing_interval_address": "0x20f440",
+            "containing_interval_size": 408,
+            "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+          },
+          {
+            "instruction": "0x20f950",
+            "target": "0x2b6f28",
+            "word": "0xc0adbca",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F8D0.s",
+            "containing_interval_address": "0x20f8d0",
+            "containing_interval_size": 188,
+            "containing_interval_sha256": "4c8825a0905d8ffd04817ab6fde20f8426724a75bae196fc5f84d9ee16ce2eef"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Unsigned32 firstentry20+index*24; storecapturedpayload toentry0 beforeclearing capturedpayloadword10 in originalJRdelay. Both alias-sensitive stores preserved.",
+      "candidate_comparisons": [
+        {
+          "name": "func_002B6F28",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 7,
+          "first_different_offsets": [
+            2,
+            6,
+            9,
+            10,
+            13,
+            14,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db",
+          "compiled_sha256": "a135a67db790fe419791097e1b1c314515db9ca5258c470b731bc8311aaf5b32"
+        },
+        {
+          "name": "func_002B6F28",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db",
+          "compiled_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db"
+        },
+        {
+          "name": "func_002B6F28",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": true,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db",
+          "compiled_sha256": "30d463546d01045adfe0c065b606291f3c2bb48aa8139d7d839d7e34c89de7db"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    },
+    {
+      "name": "func_002B6F48",
+      "address": "0x2b6f48",
+      "file_offset": "0x1b7f48",
+      "size": 20,
+      "original_sha256": "2f80980f9e85be9ccda795ab9a50c2c924bfdeb93a11aead730043b10408fe97",
+      "source": "src/game/resource_groups.c",
+      "source_name": "func_002B6F48",
+      "source_kind": "c",
+      "link": true,
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "parent_and_two_independent_complete_original_and_source_reviews_passed",
+      "source_header_fingerprints": {
+        "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+        "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+      },
+      "boundary_evidence": "Complete independent original entry through terminalJR31 and actualdelay; everyoriginalassemblybyte equals validatedELF; trailingalignment excluded. No arbitrarysource/runtimeinteriorslice.",
+      "original_direct_transfers": [],
+      "local_branch_evidence": [],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x2b6f58",
+          "word": "0xaca60004",
+          "opcode": 43,
+          "base_gpr": 5,
+          "source_register": 6,
+          "signed_offset": 4,
+          "is_stack_store": false
+        }
+      ],
+      "original_indirect_calls": [],
+      "entry_evidence": {
+        "encoded_direct_calls": 2,
+        "direct_references": [
+          {
+            "instruction": "0x20f520",
+            "target": "0x2b6f48",
+            "word": "0xc0adbd2",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F440.s",
+            "containing_interval_address": "0x20f440",
+            "containing_interval_size": 408,
+            "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+          },
+          {
+            "instruction": "0x20f538",
+            "target": "0x2b6f48",
+            "word": "0xc0adbd2",
+            "opcode": 3,
+            "containing_assembly_interval": "build/functions/func_0020F440.s",
+            "containing_interval_address": "0x20f440",
+            "containing_interval_size": 408,
+            "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+          }
+        ],
+        "aligned_readonly_absolute_references": [],
+        "reachability": "proven_encoded_direct_caller",
+        "limit": "Complete original body and separately linked source symbol established. Alignedreferences alone do not establish enclosing table extent or dispatch; no class identity asserted."
+      },
+      "control_flow_identity": "Unsigned32 secondaryentry24+(index<<3), payloadstoreoffset4 in originalJRdelay. No inventedrangeguard.",
+      "candidate_comparisons": [
+        {
+          "name": "func_002B6F48",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 20,
+          "compiled_size": 20,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f80980f9e85be9ccda795ab9a50c2c924bfdeb93a11aead730043b10408fe97",
+          "compiled_sha256": "74891ee19449e11396321fcc55e4a44fa6d25636726a7edbcaa09f38f0cb3269"
+        },
+        {
+          "name": "func_002B6F48",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 20,
+          "compiled_size": 20,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f80980f9e85be9ccda795ab9a50c2c924bfdeb93a11aead730043b10408fe97",
+          "compiled_sha256": "74891ee19449e11396321fcc55e4a44fa6d25636726a7edbcaa09f38f0cb3269"
+        },
+        {
+          "name": "func_002B6F48",
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 20,
+          "compiled_size": 20,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2f80980f9e85be9ccda795ab9a50c2c924bfdeb93a11aead730043b10408fe97",
+          "compiled_sha256": "74891ee19449e11396321fcc55e4a44fa6d25636726a7edbcaa09f38f0cb3269"
+        }
+      ],
+      "independent_review": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+      "evidence": "Complete original source/order/alias/ABI reconstruction and genuine whole naturalcompilerlinks. Eight nonexactbodies reconstructed; two completehelper C matches total84B. Original readonlyprefix/reference identities countedonlyas provenance; no hardware orunrecoveredenginecalleeclaim."
+    }
+  ],
+  "direct_call_references": [
+    {
+      "instruction": "0x155fb0",
+      "target": "0x2b6dc0",
+      "word": "0xc0adb70",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_00155F88.s",
+      "containing_interval_address": "0x155f88",
+      "containing_interval_size": 252,
+      "containing_interval_sha256": "1667f503ee7262bd8b9255d7c20d4fd51d1260f293c669245debb4fd68d05e1d"
+    },
+    {
+      "instruction": "0x20e9e4",
+      "target": "0x20f6f8",
+      "word": "0xc083dbe",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020E920.s",
+      "containing_interval_address": "0x20e920",
+      "containing_interval_size": 384,
+      "containing_interval_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349"
+    },
+    {
+      "instruction": "0x20f160",
+      "target": "0x2b6dc0",
+      "word": "0xc0adb70",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f170",
+      "target": "0x2b7088",
+      "word": "0xc0adc22",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f184",
+      "target": "0x2b70e0",
+      "word": "0xc0adc38",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f2c8",
+      "target": "0x20f440",
+      "word": "0xc083d10",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f2e8",
+      "target": "0x2b6dc0",
+      "word": "0xc0adb70",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f2f8",
+      "target": "0x20f440",
+      "word": "0xc083d10",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F128.s",
+      "containing_interval_address": "0x20f128",
+      "containing_interval_size": 536,
+      "containing_interval_sha256": "c729d8ca765dde11760aad351d7820513edd479eb766e78e523d1c07c8ead233"
+    },
+    {
+      "instruction": "0x20f490",
+      "target": "0x2b6f28",
+      "word": "0xc0adbca",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F440.s",
+      "containing_interval_address": "0x20f440",
+      "containing_interval_size": 408,
+      "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+    },
+    {
+      "instruction": "0x20f4a8",
+      "target": "0x2b6f28",
+      "word": "0xc0adbca",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F440.s",
+      "containing_interval_address": "0x20f440",
+      "containing_interval_size": 408,
+      "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+    },
+    {
+      "instruction": "0x20f520",
+      "target": "0x2b6f48",
+      "word": "0xc0adbd2",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F440.s",
+      "containing_interval_address": "0x20f440",
+      "containing_interval_size": 408,
+      "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+    },
+    {
+      "instruction": "0x20f538",
+      "target": "0x2b6f48",
+      "word": "0xc0adbd2",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F440.s",
+      "containing_interval_address": "0x20f440",
+      "containing_interval_size": 408,
+      "containing_interval_sha256": "66767eead1136976986204cdab700e687e8db02fd8b9fee436af66628e67b72c"
+    },
+    {
+      "instruction": "0x20f950",
+      "target": "0x2b6f28",
+      "word": "0xc0adbca",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F8D0.s",
+      "containing_interval_address": "0x20f8d0",
+      "containing_interval_size": 188,
+      "containing_interval_sha256": "4c8825a0905d8ffd04817ab6fde20f8426724a75bae196fc5f84d9ee16ce2eef"
+    },
+    {
+      "instruction": "0x20f998",
+      "target": "0x20f5d8",
+      "word": "0xc083d76",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F990.s",
+      "containing_interval_address": "0x20f990",
+      "containing_interval_size": 28,
+      "containing_interval_sha256": "dba454d80b234c4a0ad639f4bf09f32d51af61634c9972bfa48ec7bba0b16cdc"
+    },
+    {
+      "instruction": "0x20f9e0",
+      "target": "0x20f5d8",
+      "word": "0xc083d76",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_0020F9B0.s",
+      "containing_interval_address": "0x20f9b0",
+      "containing_interval_size": 88,
+      "containing_interval_sha256": "5ea6f857b8fe02755c8a524ab561f59b50211d2e31f5dc5205da85f7ee13ec88"
+    },
+    {
+      "instruction": "0x213ad8",
+      "target": "0x20f6f8",
+      "word": "0xc083dbe",
+      "opcode": 3,
+      "containing_assembly_interval": "build/functions/func_00213A58.s",
+      "containing_interval_address": "0x213a58",
+      "containing_interval_size": 208,
+      "containing_interval_sha256": "b8e6f00fc8834d420df65b0111a3be168e031bac6d90c648af891016c0baeaef"
+    }
+  ],
+  "aligned_readonly_absolute_references": [
+    {
+      "address": "0x43a474",
+      "target": "0x20f128",
+      "section": ".rodata",
+      "flags": 2,
+      "evidence_limit": "Aligned allocated nonexec absolute reference only; enclosing container or dispatch reachability is not asserted."
+    },
+    {
+      "address": "0x43a484",
+      "target": "0x20f340",
+      "section": ".rodata",
+      "flags": 2,
+      "evidence_limit": "Aligned allocated nonexec absolute reference only; enclosing container or dispatch reachability is not asserted."
+    }
+  ],
+  "readonly_table_prefix": {
+    "address": "0x0043A458",
+    "size": 16,
+    "original_sha256": "06986c747b09f427fb8efc89ec51179d0529db337d018816f972a2ea66af3d5d",
+    "high_instruction": "0x0020F7C0",
+    "lower_instruction": "0x0020F7C8",
+    "store_instruction": "0x0020F7D0",
+    "second_pair_adjustment": 0,
+    "second_pair_word3_target": "0x0020F9B0",
+    "evidence_limit": "Whole16B prefix and actual +8 signed adjustment/word3 invocation withmode3 proven. Complete enclosing virtual table and unrecovered callee behavior not asserted."
+  },
+  "source_header_fingerprints": {
+    "src/game/resource_groups.c": "49f2def370a87775c0640fcbd537a7dc7bcb809f0d592218a23d7fb6b59c01b3",
+    "include/george/resource_groups.h": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+  },
+  "review_roles": "Root authored all10 complete original/C/header bodies after reading all533 original instructions. Independent reuse peer read all533 instructions/full source/header and explicitly inventoried all55 stores includingstack/delays, 83 bounded branches,16 actual incoming J/JALs with whole containing assembly-byte intervals and two aligned-only readonlyreferences. Peer found both20F440 premature-publication loops needed original early break; root corrected both. Peer re-reviewed finalsource and independently reproduced30 genuine complete linked comparisons,0unresolved, with exact56B2B6DC0 and28B2B6F28 under ordinarygcc29. Disc independent full533-body/model review and fresh 220fixture/173269nativechecks/8guards passed as separately reported; parent subsequently read full native/guards and reproduced220 fixtures,173269 checks,eight guards and all30 corrected whole links.",
+  "review_stage": "Parent and two independent complete-body reviews passed; final corrected links/model/native/guards reproduced. Registered; canonical checkpoint pending.",
+  "validation": {
+    "individual_links": 30,
+    "unresolved_relocations": 0,
+    "exact_matches": 2,
+    "exact_bytes": 84,
+    "native_fixtures": 220,
+    "native_checks": 173269,
+    "decoder_guard_tests": 8,
+    "model_review_evidence": "Independent disc audit .local/resource_groups_peer/audit.json; parent full native/guard read and fresh root model/native/link reproduction .local/resource_groups_root. All model/metadata approval complete.",
+    "native_runner": "tests/native/run_utilities.py --harness resource_groups",
+    "fixture_input_sha256": "fa12eff4402a8a74355e5c0e1289c9893dc1985c1a4d6371ffd8e458f8790607",
+    "native_instruction_count": 22913,
+    "maximum_fixture_instructions": 466
+  },
+  "model_preconditions": {
+    "observed_prefix_size": "0xA8",
+    "actual_allocation_size": "0xE8",
+    "capacity": 16,
+    "contracts": "Observednumeric fields only; allocatedtailA8..E8 unexamined. Nonnullallocation/holder/referencedpayload and validvirtualtables; bothcallerarray/outputcapacities<=16. Freshloopcounts remain withinstorage despite authoredcallbackmutations. Realfivehelpers execute intrace/native; externalenginehooks caller-only, no callee/hardwareclaims. Counts preservelow16wrap, offsets preserve32bitwrap withinvalidmemorydomain."
+  },
+  "mandatory_peer_correction": {
+    "function": "func_0020F440",
+    "kind": "early_exit_both_publication_loops",
+    "first_gate": [
+      {
+        "instruction": "0x20f4dc",
+        "word": "0x1440ffe8"
+      },
+      {
+        "instruction": "0x20f4e0",
+        "word": "0x111880"
+      },
+      {
+        "instruction": "0x20f4e4",
+        "word": "0x902d"
+      },
+      {
+        "instruction": "0x20f4e8",
+        "word": "0x96020026"
+      }
+    ],
+    "second_gate": [
+      {
+        "instruction": "0x20f56c",
+        "word": "0x1440ffe8"
+      },
+      {
+        "instruction": "0x20f570",
+        "word": "0x111880"
+      },
+      {
+        "instruction": "0x20f574",
+        "word": "0x902d"
+      },
+      {
+        "instruction": "0x20f578",
+        "word": "0x52400011"
+      }
+    ],
+    "evidence": "Each nonnull child with readiness bit20 clear falls through s2=0 directly after the corresponding loop, without visiting later slots. Source needs ready=0;break in both else paths. Peer directly checked the validated ELF words; root notified before native/proof finalization."
+  }
+}

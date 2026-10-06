@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "resource_groups": ["src/game/resource_groups.c"],
+    "property_management": ["src/game/property_management.c", "src/game/property_lifecycle.c"],
     "property_updates": ["src/game/property_updates.c", "src/game/property_lifecycle.c"],
     "resource_lifecycle": ["src/game/resource_lifecycle.c"],
     "property_lifecycle": ["src/game/property_lifecycle.c"],
