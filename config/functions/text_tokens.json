@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Two complete quote/token helpers total 1400 original instruction bytes. All three standard compiler recipes naturally link both complete targets without remaining relocations; neither is an exact full-byte match.",
+    "Canonical pinned GCC 2.9 recipe uses reviewed authentic 128-bit callee-save attributes. This does not identify the original compiler.",
+    "Reuse recovered length declaration/binding 00295050 and inspected original bounded comparison 00393E48. No unidentified third-party implementation or original delimiter/quote data is copied into recovered source.",
+    "Native 32-bit controlled-call harness passed 22855 checks with 172 instruction-derived synthetic aliases and independent expected examples. Six focused decoder tests passed; normalized LB/DADDU/BEQ regression retained identical golden SHA d104ae3ac61e36381a6948fbac45a01ecd98c4ee2c9a0885fca3bc01774ed493.",
+    "Parent independently reviewed all 350 original instructions, both source bodies/header and scoped trace added opcodes, and reran 22855 native checks without source defects.",
+    "Original valid-buffer/no-capacity/terminating-read preconditions retained. Missing quote in 002B3190 advances beyond NUL; forward output aliases can overwrite the terminator and escape valid buffers. No fabricated guards or hardware/library-vector emulation claims.",
+    "Readonly quote lookup 004476C8 at file 003486C8, 3 B SHA f9983e1fd65410ec3b362179db67f7a566de4bd42e94b65592304cfaa31e52dc. Each mode visits exactly 5 writable pointer cells in .data at 003FD258/003FD270/003FD288; spacing does not prove any sixth read."
+  ],
+  "functions": [
+    {
+      "name": "func_002B3190",
+      "address": "0x002B3190",
+      "file_offset": "0x001B4190",
+      "size": 720,
+      "source": "src/game/text_tokens.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a99e99ef284e7427b7fe6b6d0f4144bb4ee01bd2958e6eb25e2994c0c2ae60e6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "evidence": "Leading unsigned wrapped base/length gate and captured pre-increment LF; five fresh delimiter cells before quote scan, old length with post-call reloaded pointer; line/CR handling and missing-quote advance beyond NUL; output-first entry capture and input-first/output-last cursor stores. All four parser call sites establish five-GPR ABI.",
+      "boundary_evidence": "Complete original body, all branches/calls and final return delay slot independently reviewed; excluded alignment padding independently checked zero.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 720,
+        "compiled_size": 680,
+        "different_bytes": 513,
+        "first_different_offsets": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "a99e99ef284e7427b7fe6b6d0f4144bb4ee01bd2958e6eb25e2994c0c2ae60e6",
+        "compiled_sha256": "4067b8959cec86159d9aff6e48cae061e32420261d4d49cc4160ef50602031ee"
+      }
+    },
+    {
+      "name": "func_002B3EE0",
+      "address": "0x002B3EE0",
+      "file_offset": "0x001B4EE0",
+      "size": 680,
+      "source": "src/game/text_tokens.c",
+      "compiler_profile": "gcc29",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fdaad3ca63cfb501669e0edfd24451a63577209a2a3cfb55f5c70d78eeea340e",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "evidence": "Both output starts cleared before source read; destructive name/value terminator aliases observed through fresh loads; separator trimming continues after opening quote; empty/unclosed/missing values and nullable next-source pointer preserved. Adjacent complete callers establish three-GPR ABI.",
+      "boundary_evidence": "Complete original body, all branches/calls and final return delay slot independently reviewed; excluded alignment padding independently checked zero.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 680,
+        "compiled_size": 568,
+        "different_bytes": 547,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "fdaad3ca63cfb501669e0edfd24451a63577209a2a3cfb55f5c70d78eeea340e",
+        "compiled_sha256": "7b5aaa610a3e2acadb793f592fcf66b9286b00c59dc2b64132953c77d44436ee"
+      }
+    }
+  ]
+}

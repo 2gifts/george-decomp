@@ -15,7 +15,7 @@ extern u32 func_001D0370(GeorgeGoalRoadGeometry *road, u32 word, u32 next,
                           s32 mode, GeorgeMathVec3 *output, u32 *output_mode,
                           u32 *output_word, u8 *output_index);
 extern void func_0018FD00(GeorgeGoalEntity *entity, GoalBits64 flags, s32 mode);
-extern void func_00177E48(GeorgeGoalEntity *entity, const GeorgeMathVec3 *motion);
+extern s32 func_00177E48(GeorgeGoalEntity *entity, const GeorgeMathVec3 *motion);
 extern s32 func_001773F0(GeorgeGoalEntity *entity, u32 object, u32 value0, u32 value1);
 extern void func_001BAA68(u32 object, u32 word, s32 byte, s32 mode);
 extern void func_002A3390(GeorgeMathVec3 *output, const GeorgeMathVec3 *current,

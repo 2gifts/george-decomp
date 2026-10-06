@@ -1,5 +1,11 @@
 # Native semantic checks
 
+The `geometry_bounds` utility harness passes 8,738 checks including 134 finite
+original-instruction synthetic fixtures, destructive affine inverse aliases,
+inclusive/unordered comparisons, signed count gates, wrapped allocation/address
+math, closest-output aliases and captured dimensions across mutable callbacks.
+Run `.venv/Scripts/python.exe tests/native/run_utilities.py --harness geometry_bounds`.
+
 Run the 32-bit goal state-update harness from the repository root:
 
 ```powershell
@@ -102,3 +108,10 @@ slot, strict unsigned overlap endpoints, zero lengths, wrapped rounding and
 callback-mutated globals. Run it with `--harness cache_transfer`. Its controlled
 copy substitute records the original numeric destination and argument sequence
 without emulating or dereferencing physical memory. See `docs/cache_transfer.md`.
+
+The text-token harness passes 22,855 checks for quote/delimiter behavior, leading
+bounds, high bytes, counter wrap, complete-buffer aliases, shared pointer cells
+and callback-mutated delimiter pointers/source/counter. Run it with
+`--harness text_tokens`. Its 172 synthetic byte fixtures regenerate through
+`tools/trace_text_tokens.py`; controlled length/compare substitutes do not model
+the original vectorized library. See `docs/text_tokens.md` for buffer limits.

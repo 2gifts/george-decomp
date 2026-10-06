@@ -124,9 +124,9 @@
       "upstream_source_sha256": "abe4161ebc4a20df1e7dc050c4d741baad2cea2f7d1d3bb654cb252e923028bf"
     },
     "__muldi3": {
-      "address": "0x371ce0",
-      "confidence": "corroborated",
-      "evidence": "Original _strtol_r calls this for acc*base; complete helper forms low64 product from32-bit low multiplication and high-word cross products."
+      "address": "0x00371CE0",
+      "confidence": "matched",
+      "evidence": "Complete low64 multiplication combines unsigned low32 product with both high-word cross-products using authentic GNU longlong.h multiplication. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (96 bytes); decoded original JAL instructions independently establish the entry."
     },
     "__udivdi3": {
       "address": "0x371d48",
@@ -381,6 +381,26 @@
       "address": "0x374338",
       "confidence": "corroborated",
       "evidence": "Complete single division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<30, guard0x7F tie0x40 rounding/sticky remainder and exact pack. Complete352-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison."
+    },
+    "__fixunsdfdi": {
+      "address": "0x00371318",
+      "confidence": "matched",
+      "evidence": "Complete double-to-unsigned64 conversion handles the negative input guard, divides by 2^32 to obtain the high word, subtracts the reconstructed high-word contribution and corrects the low part according to its sign. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (236 bytes); decoded original JAL instructions independently establish the entry."
+    },
+    "__fixdfdi": {
+      "address": "0x0039F518",
+      "confidence": "matched",
+      "evidence": "Complete double-to-signed64 wrapper compares against zero, calls the unsigned helper for the magnitude and negates negative results. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (92 bytes); decoded original JAL instructions independently establish the entry."
+    },
+    "__fixunssfdi": {
+      "address": "0x00371408",
+      "confidence": "matched",
+      "evidence": "Complete float-to-unsigned64 conversion first promotes to double and then follows the same high-word/low-word correction graph. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (244 bytes); decoded original JAL instructions independently establish the entry."
+    },
+    "__floatdidf": {
+      "address": "0x00371500",
+      "confidence": "matched",
+      "evidence": "Complete signed64-to-double conversion scales the signed upper32 contribution by 2^16 twice and adds the unsigned lower32 contribution. Complete unchanged pinned GNU EE libgcc2.c function and genuine full linked equality (152 bytes); decoded original JAL instructions independently establish the entry."
     }
   }
 }

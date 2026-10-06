@@ -74,12 +74,13 @@ u32 func_001D0370(GeorgeGoalRoadGeometry *road, u32 word, u32 next, s32 mode,
 }
 void func_0018FD00(GeorgeGoalEntity *actor, GoalBits64 flags, s32 mode)
 { ++state_calls; state_mask=flags; CHECK(mode==0); actor->field0C=0x20; }
-void func_00177E48(GeorgeGoalEntity *actor, const GeorgeMathVec3 *vector)
+s32 func_00177E48(GeorgeGoalEntity *actor, const GeorgeMathVec3 *vector)
 {
     ++motion_calls; CHECK(actor == (mutate_motion ? other_entity : entity));
     sent_motion=*vector;
     if (active_motion) active_motion->field18=motion_distance;
     if (mutate_motion && active_goal) active_goal->links.unknown00=(u32)other_owner;
+    return 1;
 }
 s32 func_001773F0(GeorgeGoalEntity *actor, u32 object, u32 first, u32 second)
 {

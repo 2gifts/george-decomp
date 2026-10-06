@@ -18,7 +18,8 @@ unrelated semantics. Scanner candidates alone do not establish function names.
 These ten earlier verified functions were independently compiled or assembled,
 and their complete function bytes compared with the retail executable again.
 The GNU floating-point runtime batch below adds twenty-four further verified C
-functions from unchanged upstream source.
+functions, and the GNU integer conversion batch adds five, all from unchanged
+upstream source.
 
 | Symbol | Retail address | Bytes | Reused source | Source form | Verification |
 | --- | --- | ---: | --- | --- | --- |
@@ -36,7 +37,8 @@ functions from unchanged upstream source.
 The 572 bytes of reused assembly remain separate from high-level C
 decompilation progress. The 504 bytes of compiled `fabsf`, `atoi`, `matherr`,
 `__errno`, `_localeconv_r`, `sinf`, and `tanf`, plus the 3,264 bytes of the GNU
-floating-point runtime batch below, total 3,768 bytes from 31 verified C functions.
+floating-point runtime batch and 820 bytes of the GNU integer conversion batch
+below, total 4,588 bytes from 36 verified C functions.
 Function addresses, file offsets, byte hashes, provenance, flags, and source
 classification are recorded in `config/runtime_functions.json`.
 
@@ -230,8 +232,8 @@ Modern binutils v0.10 is useful for ELF inspection and later baseline assembly.
 
 ## Scope of the evidence
 
-These exact runtime matches establish reusable implementations of ten specific
-functions. They do not identify the compiler used for Papaya's game code, prove
+These exact runtime matches establish reusable implementations of the specific
+functions documented here. They do not identify the compiler used for Papaya's game code, prove
 that all newlib/SDK code is the same version, or establish a shared game engine
 with any other decompilation. The original compiler remains unidentified.
 
@@ -591,3 +593,65 @@ the six core body hashes and return extents, unchanged upstream source hash,
 all recorded direct-call entries, each original NaN-record pointer pair and
 both complete NOBITS extents and zero digests. The 14 dedicated storage-linking
 tests passed alongside the existing tooling suite.
+
+## GNU integer multiplication and conversions
+
+Five complete functions from unchanged GNU EE GCC `libgcc2.c` add 820 exact
+high-level C bytes. The source comes from the same pinned public GNU repository,
+[revision `b595ded606227e93b8c4a447446c1d2ac093827d`](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c).
+The imported LF source has SHA256
+`629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47`.
+The preliminary vendor working copy had CRLF line endings and a different
+file hash; the registered source is byte-for-byte equal to the pinned Git blob.
+
+| Symbol | Original address | Complete bytes | Original direct JAL references |
+| --- | --- | ---: | ---: |
+| `__muldi3` | `0x00371CE0` | 96 | 18 |
+| `__fixunsdfdi` | `0x00371318` | 236 | 3 |
+| `__fixdfdi` | `0x0039F518` | 92 | 1 |
+| `__fixunssfdi` | `0x00371408` | 244 | 10 |
+| `__floatdidf` | `0x00371500` | 152 | 7 |
+
+Each uses the existing `gcc29` profile and its authentic `L_` routine selector,
+`IN_LIBGCC2`, `__GCC_FLOAT_NOT_NEEDED` and `inhibit_libc` build defines. The
+source's GNU mode types explicitly represent SI32, DI64, SF32 and DF64 values;
+host C type sizes are not substituted for their runtime ABI. Complete source
+and header notices remain intact. `LICENSES/GCC-libgcc2-exception.txt` preserves
+the source's original GPL notice and GCC linking exception, and
+`LICENSES/GPL-2.0.txt` supplies the complete GPL. The exception belongs to this
+source; the imported public GNU headers retain their own license notices.
+
+`src/runtime/gcc/provenance.json` pins the whole source and fifteen required
+unchanged GNU header files, including the target configuration headers,
+machine-mode definitions and `longlong.h`. Two small configuration aggregators,
+`tconfig.h` and `tm.h`, are copied from the genuine pinned GNU configure output
+for `mips64r5900-sky-elf`; their generated status, exact bytes and recipe are
+recorded separately. These include target headers without changing the backend.
+The per-function manifest records explicit include paths and build flags, so
+the runtime imports compile from their tracked layout.
+
+Independent complete linked comparisons from that layout reproduce all five
+retail bodies, with no unresolved references, constant-section mappings,
+instruction rewrites or byte masking. External calls use the reviewed soft
+floating-point pack/arithmetic/conversion runtime and the other independently
+matched functions in this batch. The multiplication source computes the low64
+product from low32 multiplication and both high-word cross-products. The
+unsigned conversions derive a high word using division by `2^32`, subtract its
+converted contribution and correct the low part according to its sign; the
+single input is first promoted to double. The signed conversion handles the
+sign around the unsigned helper. Integer-to-double conversion combines the
+signed upper32 contribution, scaled twice by `2^16`, with the unsigned lower32.
+
+Every entry has decoded original direct-call evidence, a complete independent
+compiled function symbol, its full original SHA256 and terminal return/delay
+extent. The original heuristic grouped an unrelated `J 0x00370388` and its NOP
+after `__muldi3`; those eight bytes are excluded from its complete 96-byte body.
+All five original extents are disjoint from already registered functions.
+
+Root independently reviewed all five complete original bodies (205 instructions,
+820 bytes), their genuine source algorithms and helper ABIs, eighteen exact
+source/header/configuration hashes, all thirty-nine direct JAL entry references,
+full function hashes and terminal delays. Every internal original JAL target
+agrees with the established runtime binding set, and all five actual linked
+comparison records are exact. The complete global verifier remains the
+checkpoint authority for reproducing these matches from the tracked layout.

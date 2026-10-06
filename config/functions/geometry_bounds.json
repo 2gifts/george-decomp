@@ -1,0 +1,1687 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Thirteen complete independently reviewed source functions cover2056 original bytes; two complete small entries match36B. The related free wrapper2A0218 is already recovered in duplicate_helpers.c and is reused without double counting.",
+    "Native8738 checks include134 finite original-instruction synthetic fixtures, full memory/destructive inverse aliases, ordered/NaN boundaries, signed counts, wrapped allocation/address math, closest-output aliases and captured dimensions across mutable normalizer callbacks.",
+    "Independent agent reviewed every complete instruction/source interval, all full hashes/bounds and39 fresh linked comparisons; regenerated134 fixtures SHA69a1644b19ee24cf2422c8d62de1ad3fb9e97d5d2c996b0d888b2032d80e90a3 and reran8738 checks. Host tests exclude full EE exceptional arithmetic/FCR/timing."
+  ],
+  "functions": [
+    {
+      "name": "func_0029E7F0",
+      "address": "0x0029E7F0",
+      "file_offset": "0x0019F7F0",
+      "size": 228,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "17cab0ac1972f182b64a94558f02ce9d9f8d16072a59c9c233111a5e8fff464b",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 228,
+        "compiled_size": 208,
+        "different_bytes": 166,
+        "first_different_offsets": [
+          6,
+          8,
+          12,
+          14,
+          15,
+          20,
+          24,
+          26
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "17cab0ac1972f182b64a94558f02ce9d9f8d16072a59c9c233111a5e8fff464b",
+        "compiled_sha256": "47c140eda8756835bd6a7ac302eeed6d4fe15d4600dcc916fb754ff067f75953"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 212,
+            "different_bytes": 175,
+            "first_different_offsets": [
+              4,
+              6,
+              8,
+              10,
+              11,
+              12,
+              14,
+              15
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "17cab0ac1972f182b64a94558f02ce9d9f8d16072a59c9c233111a5e8fff464b",
+            "compiled_sha256": "d3aebe35424a439ca52d913d2c0b795f94c7d013fbdeaf505e46faa3b7d5586f"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 208,
+            "different_bytes": 167,
+            "first_different_offsets": [
+              6,
+              8,
+              11,
+              12,
+              14,
+              15,
+              20,
+              24
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "17cab0ac1972f182b64a94558f02ce9d9f8d16072a59c9c233111a5e8fff464b",
+            "compiled_sha256": "399e213349f9de5639e73dc3f22a6bd89dab76c160ad54810638c8fe5d55afea"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 228,
+            "compiled_size": 208,
+            "different_bytes": 166,
+            "first_different_offsets": [
+              6,
+              8,
+              12,
+              14,
+              15,
+              20,
+              24,
+              26
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "17cab0ac1972f182b64a94558f02ce9d9f8d16072a59c9c233111a5e8fff464b",
+            "compiled_sha256": "47c140eda8756835bd6a7ac302eeed6d4fe15d4600dcc916fb754ff067f75953"
+          }
+        }
+      },
+      "evidence": "Captured dimensions/center before output writes and all three normalizer callbacks, ordered half-width/axis stores, untouched position.w.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x0029E8D0; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0048",
+      "address": "0x002A0048",
+      "file_offset": "0x001A1048",
+      "size": 84,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2d6bb53153d0dd016b9e42d9447b0cd6132ff37a99219ed8be72aab418b5e8ba",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 84,
+        "compiled_size": 80,
+        "different_bytes": 60,
+        "first_different_offsets": [
+          0,
+          6,
+          10,
+          12,
+          14,
+          15,
+          16,
+          18
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2d6bb53153d0dd016b9e42d9447b0cd6132ff37a99219ed8be72aab418b5e8ba",
+        "compiled_sha256": "8b495514084fe9802b3721b4fde022dc2357dbb7ddc8894fbee8545a80920754"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 84,
+            "compiled_size": 80,
+            "different_bytes": 60,
+            "first_different_offsets": [
+              0,
+              6,
+              10,
+              12,
+              14,
+              15,
+              16,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2d6bb53153d0dd016b9e42d9447b0cd6132ff37a99219ed8be72aab418b5e8ba",
+            "compiled_sha256": "8b495514084fe9802b3721b4fde022dc2357dbb7ddc8894fbee8545a80920754"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 84,
+            "compiled_size": 80,
+            "different_bytes": 60,
+            "first_different_offsets": [
+              0,
+              6,
+              10,
+              12,
+              14,
+              15,
+              16,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2d6bb53153d0dd016b9e42d9447b0cd6132ff37a99219ed8be72aab418b5e8ba",
+            "compiled_sha256": "8b495514084fe9802b3721b4fde022dc2357dbb7ddc8894fbee8545a80920754"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 84,
+            "compiled_size": 80,
+            "different_bytes": 60,
+            "first_different_offsets": [
+              0,
+              6,
+              10,
+              12,
+              14,
+              15,
+              16,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2d6bb53153d0dd016b9e42d9447b0cd6132ff37a99219ed8be72aab418b5e8ba",
+            "compiled_sha256": "8b495514084fe9802b3721b4fde022dc2357dbb7ddc8894fbee8545a80920754"
+          }
+        }
+      },
+      "evidence": "Captured negative amount and lower XYZ/upper X before ordered stores, then upper Y/Z updates.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0098; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A00A0",
+      "address": "0x002A00A0",
+      "file_offset": "0x001A10A0",
+      "size": 152,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "24504abbb373f1ef9b9f92d87a52e678c2460be57aa8a5863a18d26afeaada39",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 152,
+        "compiled_size": 144,
+        "different_bytes": 57,
+        "first_different_offsets": [
+          16,
+          18,
+          20,
+          22,
+          23,
+          24,
+          26,
+          27
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "24504abbb373f1ef9b9f92d87a52e678c2460be57aa8a5863a18d26afeaada39",
+        "compiled_sha256": "b64262f1009de7aded5eb29a828a0337d72c8a8c50964b2527a4983f243eaa44"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 152,
+            "compiled_size": 152,
+            "different_bytes": 97,
+            "first_different_offsets": [
+              16,
+              18,
+              20,
+              22,
+              23,
+              24,
+              26,
+              27
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "24504abbb373f1ef9b9f92d87a52e678c2460be57aa8a5863a18d26afeaada39",
+            "compiled_sha256": "bd3da4faf3625566935b1373e7a065e47fdb5ea384b653f8ce4842978d150dbb"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 152,
+            "compiled_size": 144,
+            "different_bytes": 57,
+            "first_different_offsets": [
+              16,
+              18,
+              20,
+              22,
+              23,
+              24,
+              26,
+              27
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "24504abbb373f1ef9b9f92d87a52e678c2460be57aa8a5863a18d26afeaada39",
+            "compiled_sha256": "b64262f1009de7aded5eb29a828a0337d72c8a8c50964b2527a4983f243eaa44"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 152,
+            "compiled_size": 144,
+            "different_bytes": 57,
+            "first_different_offsets": [
+              16,
+              18,
+              20,
+              22,
+              23,
+              24,
+              26,
+              27
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "24504abbb373f1ef9b9f92d87a52e678c2460be57aa8a5863a18d26afeaada39",
+            "compiled_sha256": "b64262f1009de7aded5eb29a828a0337d72c8a8c50964b2527a4983f243eaa44"
+          }
+        }
+      },
+      "evidence": "Inclusive point bounds using strict less-than exclusions, retaining unordered comparison behavior.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0134; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0138",
+      "address": "0x002A0138",
+      "file_offset": "0x001A1138",
+      "size": 160,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "8e41ad5dd40fcc16fb5bbd13009e417b5b1136cc3e2f464d96c71984a335246b",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 160,
+        "compiled_size": 160,
+        "different_bytes": 97,
+        "first_different_offsets": [
+          0,
+          2,
+          4,
+          6,
+          9,
+          10,
+          16,
+          20
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "8e41ad5dd40fcc16fb5bbd13009e417b5b1136cc3e2f464d96c71984a335246b",
+        "compiled_sha256": "cdc9086228cf7d88a97481cf0080fbc0eb5d506c18ce1ccb6a298ea8d8968c6f"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 160,
+            "compiled_size": 160,
+            "different_bytes": 97,
+            "first_different_offsets": [
+              0,
+              2,
+              4,
+              6,
+              9,
+              10,
+              16,
+              20
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e41ad5dd40fcc16fb5bbd13009e417b5b1136cc3e2f464d96c71984a335246b",
+            "compiled_sha256": "cdc9086228cf7d88a97481cf0080fbc0eb5d506c18ce1ccb6a298ea8d8968c6f"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 160,
+            "compiled_size": 156,
+            "different_bytes": 102,
+            "first_different_offsets": [
+              0,
+              2,
+              4,
+              6,
+              9,
+              10,
+              20,
+              22
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e41ad5dd40fcc16fb5bbd13009e417b5b1136cc3e2f464d96c71984a335246b",
+            "compiled_sha256": "4f173c76ea7eb32001c0e753a57fb739fa8f3963906cc8f149df2aaaeeea5ce2"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 160,
+            "compiled_size": 156,
+            "different_bytes": 102,
+            "first_different_offsets": [
+              0,
+              2,
+              4,
+              6,
+              9,
+              10,
+              20,
+              22
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "8e41ad5dd40fcc16fb5bbd13009e417b5b1136cc3e2f464d96c71984a335246b",
+            "compiled_sha256": "4f173c76ea7eb32001c0e753a57fb739fa8f3963906cc8f149df2aaaeeea5ce2"
+          }
+        }
+      },
+      "evidence": "Inclusive overlap using strict separating-axis exclusions, retaining unordered comparisons.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A01D4; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A01D8",
+      "address": "0x002A01D8",
+      "file_offset": "0x001A11D8",
+      "size": 8,
+      "source": "src/game/geometry_bounds.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061",
+        "compiled_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061",
+            "compiled_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061",
+            "compiled_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 8,
+            "compiled_size": 8,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061",
+            "compiled_sha256": "008d26890102af179c703d77fae42cb7b3f424a11b8db552383dd8e5313f4061"
+          }
+        }
+      },
+      "evidence": "Complete zero-return leaf; original role unknown without invented predicate semantics.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A01DC; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A01E0",
+      "address": "0x002A01E0",
+      "file_offset": "0x001A11E0",
+      "size": 52,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "37c31958ff5fd6487022b3a6ddc25fafb736c62d9251d169f8a0460fad10173e",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 52,
+        "compiled_size": 52,
+        "different_bytes": 6,
+        "first_different_offsets": [
+          4,
+          7,
+          12,
+          38,
+          39,
+          42
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "37c31958ff5fd6487022b3a6ddc25fafb736c62d9251d169f8a0460fad10173e",
+        "compiled_sha256": "3fdf6b4abbe4286fb82b0574dfa47e329bf26eb4bb2f948d163f5b0349f97e02"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 52,
+            "different_bytes": 12,
+            "first_different_offsets": [
+              4,
+              7,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "37c31958ff5fd6487022b3a6ddc25fafb736c62d9251d169f8a0460fad10173e",
+            "compiled_sha256": "e6557ed530d1b3292e2fc509390f4ad824e6b55ab584b7616ba47180a0118705"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 52,
+            "different_bytes": 6,
+            "first_different_offsets": [
+              4,
+              7,
+              12,
+              38,
+              39,
+              42
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "37c31958ff5fd6487022b3a6ddc25fafb736c62d9251d169f8a0460fad10173e",
+            "compiled_sha256": "3fdf6b4abbe4286fb82b0574dfa47e329bf26eb4bb2f948d163f5b0349f97e02"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 52,
+            "compiled_size": 52,
+            "different_bytes": 6,
+            "first_different_offsets": [
+              4,
+              12,
+              38,
+              39,
+              42,
+              43
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "37c31958ff5fd6487022b3a6ddc25fafb736c62d9251d169f8a0460fad10173e",
+            "compiled_sha256": "289cc9f53beafa83b3ce0060cfb2c833ca27209d36ac6d974cd33ea6610623a0"
+          }
+        }
+      },
+      "evidence": "Wrapped word shift OR4 allocation via already recovered heap allocator, nullable count store, original capacity preconditions.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0210; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0238",
+      "address": "0x002A0238",
+      "file_offset": "0x001A1238",
+      "size": 16,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "61de8b7fe0bf95b72ec4e200f59d658a630678a73cc480b100f5ea73d8874e85",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 16,
+        "compiled_size": 16,
+        "different_bytes": 8,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "61de8b7fe0bf95b72ec4e200f59d658a630678a73cc480b100f5ea73d8874e85",
+        "compiled_sha256": "80ea06337c7ae6f172fda063b901f3acb5f5b5e8e6db9a090c8e5abf068959c1"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 16,
+            "compiled_size": 16,
+            "different_bytes": 9,
+            "first_different_offsets": [
+              1,
+              4,
+              5,
+              6,
+              7,
+              12,
+              13,
+              14
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "61de8b7fe0bf95b72ec4e200f59d658a630678a73cc480b100f5ea73d8874e85",
+            "compiled_sha256": "21a5c32ad2e498011e950c09847d04ceecf362604ca220911fa0abb8a9279abc"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 16,
+            "compiled_size": 16,
+            "different_bytes": 8,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "61de8b7fe0bf95b72ec4e200f59d658a630678a73cc480b100f5ea73d8874e85",
+            "compiled_sha256": "80ea06337c7ae6f172fda063b901f3acb5f5b5e8e6db9a090c8e5abf068959c1"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 16,
+            "compiled_size": 16,
+            "different_bytes": 8,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "61de8b7fe0bf95b72ec4e200f59d658a630678a73cc480b100f5ea73d8874e85",
+            "compiled_sha256": "80ea06337c7ae6f172fda063b901f3acb5f5b5e8e6db9a090c8e5abf068959c1"
+          }
+        }
+      },
+      "evidence": "Wrapped word shift/add plane record address, offset4/stride16.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0244; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0248",
+      "address": "0x002A0248",
+      "file_offset": "0x001A1248",
+      "size": 148,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2f9711210f4369eefa479e80095332069eddb2fcb616f17f6fdfa4f54f16270e",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 148,
+        "compiled_size": 164,
+        "different_bytes": 125,
+        "first_different_offsets": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2f9711210f4369eefa479e80095332069eddb2fcb616f17f6fdfa4f54f16270e",
+        "compiled_sha256": "8ad652c87ad36cca578e279b750aae9802db1e0ba1ae2932b80f57d301a9d914"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 148,
+            "compiled_size": 168,
+            "different_bytes": 135,
+            "first_different_offsets": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10,
+              11
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2f9711210f4369eefa479e80095332069eddb2fcb616f17f6fdfa4f54f16270e",
+            "compiled_sha256": "e8a275d8cd8412bded2f3198d2953c06c9aa41ffa8b72a4e81d67b08419f9198"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 148,
+            "compiled_size": 164,
+            "different_bytes": 125,
+            "first_different_offsets": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2f9711210f4369eefa479e80095332069eddb2fcb616f17f6fdfa4f54f16270e",
+            "compiled_sha256": "8ad652c87ad36cca578e279b750aae9802db1e0ba1ae2932b80f57d301a9d914"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 148,
+            "compiled_size": 164,
+            "different_bytes": 125,
+            "first_different_offsets": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "2f9711210f4369eefa479e80095332069eddb2fcb616f17f6fdfa4f54f16270e",
+            "compiled_sha256": "8ad652c87ad36cca578e279b750aae9802db1e0ba1ae2932b80f57d301a9d914"
+          }
+        }
+      },
+      "evidence": "Unsigned point/plane counts, header captured after nonzero outer count, per-point XYZ, ordered dot plus W, reject nonnegative.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A02D8; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A02E0",
+      "address": "0x002A02E0",
+      "file_offset": "0x001A12E0",
+      "size": 144,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ebc80a93e7ca17c89e6f958088fd38888f62b1e7921895951723fb3432a919ad",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 144,
+        "compiled_size": 144,
+        "different_bytes": 35,
+        "first_different_offsets": [
+          2,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "ebc80a93e7ca17c89e6f958088fd38888f62b1e7921895951723fb3432a919ad",
+        "compiled_sha256": "8dfbf1e3b6dd960076bbd84c1be13462a0478fffb20b527a1a7e78e5e0b3ab87"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 152,
+            "different_bytes": 120,
+            "first_different_offsets": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ebc80a93e7ca17c89e6f958088fd38888f62b1e7921895951723fb3432a919ad",
+            "compiled_sha256": "9c8b1ffaade6fdf8e13c07bb7f9147b2d83708db0aff61a03e5f24dcf2b46b10"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 35,
+            "first_different_offsets": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ebc80a93e7ca17c89e6f958088fd38888f62b1e7921895951723fb3432a919ad",
+            "compiled_sha256": "8dfbf1e3b6dd960076bbd84c1be13462a0478fffb20b527a1a7e78e5e0b3ab87"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 144,
+            "compiled_size": 144,
+            "different_bytes": 35,
+            "first_different_offsets": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "ebc80a93e7ca17c89e6f958088fd38888f62b1e7921895951723fb3432a919ad",
+            "compiled_sha256": "8dfbf1e3b6dd960076bbd84c1be13462a0478fffb20b527a1a7e78e5e0b3ab87"
+          }
+        }
+      },
+      "evidence": "Captured sphere/radius and unsigned count, ordered dot plus W, radius rejection and inclusive negative-radius intersect flag.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A036C; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0370",
+      "address": "0x002A0370",
+      "file_offset": "0x001A1370",
+      "size": 28,
+      "source": "src/game/geometry_bounds.c",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb",
+        "compiled_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": true,
+            "expected_size": 28,
+            "compiled_size": 28,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb",
+            "compiled_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 28,
+            "compiled_size": 8,
+            "different_bytes": 27,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb",
+            "compiled_sha256": "f16b60fbcbdea62cf68f803c0d71c1f5dea79540a7d5c9d7e75fa330fbb729b4"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 28,
+            "compiled_size": 8,
+            "different_bytes": 27,
+            "first_different_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              7
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "fb5b699e63bdde411664fd19de73e2b0a4587b7a11e3a8dd0f47c6ac33991dcb",
+            "compiled_sha256": "f16b60fbcbdea62cf68f803c0d71c1f5dea79540a7d5c9d7e75fa330fbb729b4"
+          }
+        }
+      },
+      "evidence": "Complete frame-builder wrapper at original address, reusing helper and bounds offsets; GCC323 naturally retains full call body.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0388; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0390",
+      "address": "0x002A0390",
+      "file_offset": "0x001A1390",
+      "size": 124,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c692840bddce91a60300ea770ac1bd7e95307dfcb40dcb15c3884e013e20f881",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 124,
+        "compiled_size": 132,
+        "different_bytes": 82,
+        "first_different_offsets": [
+          16,
+          32,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "c692840bddce91a60300ea770ac1bd7e95307dfcb40dcb15c3884e013e20f881",
+        "compiled_sha256": "74cf355ed20addf2c4804982c607ed39020c1c30a8c8c596cbd659664d956c4c"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 124,
+            "compiled_size": 148,
+            "different_bytes": 123,
+            "first_different_offsets": [
+              0,
+              3,
+              4,
+              5,
+              8,
+              10,
+              11,
+              12
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "c692840bddce91a60300ea770ac1bd7e95307dfcb40dcb15c3884e013e20f881",
+            "compiled_sha256": "36ebe49402c704ddd10a08cb34c49d877cdf216f99b5e43f787848634d253a0c"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 124,
+            "compiled_size": 132,
+            "different_bytes": 82,
+            "first_different_offsets": [
+              16,
+              32,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "c692840bddce91a60300ea770ac1bd7e95307dfcb40dcb15c3884e013e20f881",
+            "compiled_sha256": "74cf355ed20addf2c4804982c607ed39020c1c30a8c8c596cbd659664d956c4c"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 124,
+            "compiled_size": 132,
+            "different_bytes": 82,
+            "first_different_offsets": [
+              16,
+              32,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "c692840bddce91a60300ea770ac1bd7e95307dfcb40dcb15c3884e013e20f881",
+            "compiled_sha256": "74cf355ed20addf2c4804982c607ed39020c1c30a8c8c596cbd659664d956c4c"
+          }
+        }
+      },
+      "evidence": "Signed count, zero failure/negative success, captured point, ordered dot minus W and strict binary32 tolerance1e-5.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0408; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0410",
+      "address": "0x002A0410",
+      "file_offset": "0x001A1410",
+      "size": 280,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3fcd7dc6a8d192f6201d56af57b77db32dd1a72d89d02f680c9fd05dd3b107fa",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 280,
+        "compiled_size": 284,
+        "different_bytes": 119,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          13,
+          14,
+          16,
+          18,
+          24
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3fcd7dc6a8d192f6201d56af57b77db32dd1a72d89d02f680c9fd05dd3b107fa",
+        "compiled_sha256": "30c832cf9c0878883e0cb3a316d8c5b6d03485246ea8ede794e2adbaeb3eaf70"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 280,
+            "compiled_size": 316,
+            "different_bytes": 257,
+            "first_different_offsets": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              11,
+              13
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3fcd7dc6a8d192f6201d56af57b77db32dd1a72d89d02f680c9fd05dd3b107fa",
+            "compiled_sha256": "e904f8aed5b23d4d563fa93bc71733bc171f4d1e155fadc57121ffc6ac1ce813"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 280,
+            "compiled_size": 284,
+            "different_bytes": 125,
+            "first_different_offsets": [
+              4,
+              6,
+              7,
+              8,
+              11,
+              13,
+              14,
+              16
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3fcd7dc6a8d192f6201d56af57b77db32dd1a72d89d02f680c9fd05dd3b107fa",
+            "compiled_sha256": "09cd434ef14bab183b3be0acbc7a1603b3a24a957bd079efaf78974eb91f2210"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 280,
+            "compiled_size": 284,
+            "different_bytes": 119,
+            "first_different_offsets": [
+              4,
+              6,
+              8,
+              13,
+              14,
+              16,
+              18,
+              24
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "3fcd7dc6a8d192f6201d56af57b77db32dd1a72d89d02f680c9fd05dd3b107fa",
+            "compiled_sha256": "30c832cf9c0878883e0cb3a316d8c5b6d03485246ea8ede794e2adbaeb3eaf70"
+          }
+        }
+      },
+      "evidence": "Signed count and initial closest store, live point/plane loads after closest stores, double conversion/comparison/subtraction absolute path.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A0524; following alignment padding excluded."
+    },
+    {
+      "name": "func_002A0E20",
+      "address": "0x002A0E20",
+      "file_offset": "0x001A1E20",
+      "size": 632,
+      "source": "src/game/geometry_bounds.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "353d994153c14661958c6ad0f4ff458a8486e183f411ec76444299019e3480dc",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 632,
+        "compiled_size": 632,
+        "different_bytes": 389,
+        "first_different_offsets": [
+          2,
+          6,
+          18,
+          22,
+          24,
+          25,
+          26,
+          27
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "353d994153c14661958c6ad0f4ff458a8486e183f411ec76444299019e3480dc",
+        "compiled_sha256": "ae20950d3522beec4d1e565a8ccefeb62ecbd40858343fa349733abe57786518"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 632,
+            "compiled_size": 632,
+            "different_bytes": 389,
+            "first_different_offsets": [
+              2,
+              6,
+              18,
+              22,
+              24,
+              25,
+              26,
+              27
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "353d994153c14661958c6ad0f4ff458a8486e183f411ec76444299019e3480dc",
+            "compiled_sha256": "ae20950d3522beec4d1e565a8ccefeb62ecbd40858343fa349733abe57786518"
+          }
+        },
+        "gcc29": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 632,
+            "compiled_size": 628,
+            "different_bytes": 393,
+            "first_different_offsets": [
+              28,
+              29,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "353d994153c14661958c6ad0f4ff458a8486e183f411ec76444299019e3480dc",
+            "compiled_sha256": "ead6c43b00e83df5ba5aded92d73e1e83189f6743e365db05151387737f370d9"
+          }
+        },
+        "gcc29_save128": {
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "comparison": {
+            "identical": false,
+            "expected_size": 632,
+            "compiled_size": 628,
+            "different_bytes": 393,
+            "first_different_offsets": [
+              28,
+              29,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "unresolved_relocations": [],
+            "expected_sha256": "353d994153c14661958c6ad0f4ff458a8486e183f411ec76444299019e3480dc",
+            "compiled_sha256": "ead6c43b00e83df5ba5aded92d73e1e83189f6743e365db05151387737f370d9"
+          }
+        }
+      },
+      "evidence": "Affine inverse: interleaved cofactor stores/input reloads, selected retained cofactors for determinant, zero fallback1e7, captured scaled coefficients, live translation after prior output stores.",
+      "boundary_evidence": "Complete original entry through final return delay at 0x002A1094; following alignment padding excluded."
+    }
+  ],
+  "native_validation": {
+    "source": "tests/native/geometry_bounds.c",
+    "command": ".venv/Scripts/python.exe tests/native/run_utilities.py --harness geometry_bounds",
+    "passing_checks": 8738
+  }
+}

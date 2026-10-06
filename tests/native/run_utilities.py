@@ -6,6 +6,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 HARNESS_SOURCES = {
+    "text_tokens": ["src/game/text_tokens.c"],
+    "geometry_bounds": ["src/game/geometry_bounds.c"],
     "cache_transfer": ["src/game/cache_transfer.c"],
     "matrix_scalar": ["src/game/matrix_scalar.c"],
     "byte_order": ["src/game/byte_order.c"],
