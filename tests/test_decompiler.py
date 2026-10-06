@@ -58,7 +58,7 @@ endlabel func_00100000
 
     def test_generated_output_stays_inside_ignored_directories(self):
         with tempfile.TemporaryDirectory() as folder, patch.object(candidate, "ROOT", Path(folder)):
-            root = Path(folder)
+            root = Path(folder).resolve()
             self.assertEqual(candidate.checked_output(root / "build/draft"), root / "build/draft")
             self.assertEqual(candidate.checked_output(root / ".local/draft"), root / ".local/draft")
             for destination in (root / "src/draft", root.parent / "outside-draft"):
