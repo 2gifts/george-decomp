@@ -1,6 +1,7 @@
 #ifndef GEORGE_DEIMOS_H
 #define GEORGE_DEIMOS_H
 
+#include "george/compiler.h"
 #include "george/types.h"
 
 /* Names describe observed use; original class names are still unknown. */
@@ -83,24 +84,28 @@ DEIMOS_OFFSET(GeorgeDeimosCallable, field18, 0x18);
 #undef DEIMOS_OFFSET
 #undef DEIMOS_SIZE
 
-void func_002CD0B8(GeorgeDeimosPoolNode *node);
-void func_002CC9B8(GeorgeDeimosPoolNode *node);
-void func_002CD130(GeorgeDeimosPoolNode *node);
-GeorgeDeimosPoolNode *func_002CD248(void);
-GeorgeDeimosPoolNode *func_002CD2B0(void);
-GeorgeDeimosPoolNode *func_002CD348(GeorgeDeimosHashTable *secondary);
-GeorgeDeimosPoolNode *func_002CD528(u32 payload);
-GeorgeDeimosPoolNode *func_002CD5A0(u32 size);
-GeorgeDeimosPoolNode *func_002CD630(const char *text);
-GeorgeDeimosPoolNode *func_002CD6E0(u32 field00, u32 field04, const u32 *data, u32 count, u32 field18);
-GeorgeDeimosPoolNode *func_002CD810(u32 field00, u32 field04, u32 field10, u32 field14);
-GeorgeDeimosValue *func_002CD990(GeorgeDeimosHashTable *table, u32 key);
-void func_002CDA20(GeorgeDeimosHashTable *table, GeorgeDeimosVisitor callback, void *context);
-void func_002CDB88(u32 key, GeorgeDeimosValue *value, const u32 *preserved_keys);
-void func_002CDC00(GeorgeDeimosHashTable *table, const u32 *preserved_keys);
-void *func_002CDF90(void);
-void func_002D0560(void *unused, s32 destination);
-void func_002CF298(void *unused, s32 destination);
-void func_002D05E0(void *unused, s32 destination);
+void func_002CD0B8(GeorgeDeimosPoolNode *node) GEORGE_SAVE128;
+void func_002CC9B8(GeorgeDeimosPoolNode *node) GEORGE_SAVE128;
+void func_002CD130(GeorgeDeimosPoolNode *node) GEORGE_SAVE128;
+void func_002CCB10(GeorgeDeimosPoolNode *table, u32 key, const GeorgeDeimosValue *value) GEORGE_SAVE128;
+void func_002CDCA0(u32 key, const GeorgeDeimosValue *value) GEORGE_SAVE128;
+GeorgeDeimosValue *func_002CDD60(u32 key) GEORGE_SAVE128;
+void func_002CDDB0(GeorgeDeimosVisitor callback, void *context) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD248(void) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD2B0(void) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD348(GeorgeDeimosHashTable *secondary) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD528(u32 payload) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD5A0(u32 size) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD630(const char *text) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD6E0(u32 field00, u32 field04, const u32 *data, u32 count, u32 field18) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002CD810(u32 field00, u32 field04, u32 field10, u32 field14) GEORGE_SAVE128;
+GeorgeDeimosValue *func_002CD990(GeorgeDeimosHashTable *table, u32 key) GEORGE_SAVE128;
+void func_002CDA20(GeorgeDeimosHashTable *table, GeorgeDeimosVisitor callback, void *context) GEORGE_SAVE128;
+void func_002CDB88(u32 key, GeorgeDeimosValue *value, const u32 *preserved_keys) GEORGE_SAVE128;
+void func_002CDC00(GeorgeDeimosHashTable *table, const u32 *preserved_keys) GEORGE_SAVE128;
+void *func_002CDF90(void) GEORGE_SAVE128;
+void func_002D0560(s32 unused, s32 destination) GEORGE_SAVE128;
+void func_002CF298(s32 unused, s32 destination) GEORGE_SAVE128;
+void func_002D05E0(s32 unused, s32 destination) GEORGE_SAVE128;
 
 #endif

@@ -445,7 +445,7 @@
         "-fno-reorder-blocks",
         "-ffunction-sections"
       ],
-      "evidence": "Default restart parameter zero; only positive argc reads argument 0 float and converts it to signed32 via retail cvt.w.s $f1,$f0/mfc1. Allocates 0x14 and constructs with that integer. Registered as 'gen_restartplan' (arity -1) by 0x001D2B60 using string 0x00433880 at call 0x001D31CC. Constructor result (including null) is submitted to queue at reloaded actor+0x188; destination!=-1 clears subtype then tag and preserves payload.",
+      "evidence": "Default restart parameter zero; only positive argc reads argument 0 float and converts it to signed32 via EE trunc.w.s $f1,$f0/mfc1 (raw opcode 0x46000064). Allocates 0x14 and constructs with that integer. Registered as 'gen_restartplan' (arity -1) by 0x001D2B60 using string 0x00433880 at call 0x001D31CC. Constructor result (including null) is submitted to queue at reloaded actor+0x188; destination!=-1 clears subtype then tag and preserves payload.",
       "boundary_evidence": "Complete entry-to-return body and branch paths reviewed; includes return delay slot and excludes alignment NOPs.",
       "link": true,
       "script_binding": {
@@ -816,7 +816,7 @@
       "size": 40,
       "source": "src/game/script_gameplay.c",
       "source_name": "func_001D89D8",
-      "status": "reconstructed",
+      "status": "matched",
       "reviewed": true,
       "review_status": "reconstructed_from_disassembly",
       "original_sha256": "5bf1b07e3c197ac361fced72c3bfab197ef2a2f4bfce407586260a8c3f70a237",
@@ -826,12 +826,14 @@
         "-mfp64",
         "-fno-builtin",
         "-fno-strict-aliasing",
-        "-fno-reorder-blocks",
-        "-ffunction-sections"
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
       ],
-      "evidence": "Appends an intrusive node: empty queue writes tail then head; nonempty queue writes old_tail.field04, reloads tail, writes goal.field08, then updates tail. Reload is needed for overlapping layouts.",
+      "evidence": "Intrusive queue append preserves the tail reload after the first store for aliasing. Empty-queue stores have independent fields; their source order reproduces the original branch-likely delay-slot choice. Pinned GCC2.9 recipe produces all40 original function bytes exactly, with no relocations or instruction edits.",
       "boundary_evidence": "Complete entry-to-return body and branch paths reviewed; includes return delay slot and excludes alignment NOPs.",
-      "link": false
+      "link": false,
+      "compiler_profile": "gcc29",
+      "matched_sha256": "5bf1b07e3c197ac361fced72c3bfab197ef2a2f4bfce407586260a8c3f70a237"
     }
   ]
 }

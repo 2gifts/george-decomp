@@ -1,0 +1,2046 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "These 26 script-referenced constructors plus two shared initializers are reconstructed C; no original class names are asserted.",
+    "Source reuses observed gameplay goal/actor and math vector layouts plus the recovered Deimos retain helper. Macros share only instruction-proven repeated constructor patterns.",
+    "Opaque bytes are deliberately left untouched. Pointees with byte +5 and owner halfword +24 are separate partial types; their original classes and lifetime contracts remain unknown.",
+    "The +0C addresses are dispatch-table bindings containing matching nearby method entry addresses. No original table data is claimed as new C recovery.",
+    "All metadata sizes and SHA256 fingerprints describe original instructions, including return delay slots and excluding alignment padding.",
+    "m2c 708d2d2 research drafts were reviewed against every original instruction; omitted owner arguments and stale extra GPR arguments were corrected using callee and caller evidence.",
+    "Candidate compiler identity remains unproved. Status becomes matched only after the complete linked function bytes are identical.",
+    "All 28 routines compiled and linked with both gcc323 and gcc29 candidate profiles using the common O2/G0/mfp64/no-builtin/no-strict-aliasing/function-sections options; gcc323 also used no-reorder-blocks. No exact matches. Both candidates emit sd/ld callee saves where retail constructors use sq/lq; GCC2.9 narrows many body scheduling differences without resolving ABI identity.",
+    "Independent instruction and partial-layout review passed the six exceptional constructors/initializers 1E84D0, 1DF028, 1DC5A0, 1E0C38, 1E5AA8, and 1DC538; this semantic review does not assert compiler matching.",
+    "GEORGE_SAVE128 annotations are applied only to the 26 observed nonleaf constructor declarations and expand to nothing in the default recipe. An additional GCC2.9 probe with -DGEORGE_USE_SAVE128 produces genuine sq/lq without backend changes or inline assembly; zero new exact matches because save-slot order and scheduling still differ."
+  ],
+  "functions": [
+    {
+      "name": "func_001D9920",
+      "address": "0x001D9920",
+      "file_offset": "0x000DA920",
+      "size": 80,
+      "source": "src/game/goals.c",
+      "source_name": "func_001D9920",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "13a02b555f55155a8d370fc74705a16f46f636fe876520a8ffd2b78788bcb036",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Same observed scalar/status construction as 1D9A80 with distinct table 0x00436818.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436818"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D57F0",
+          "command": "act_attackcomponent",
+          "string_address": "0x004337C8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D30B8",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 48,
+          "compiled_sha256": "e666d5adb6176bcd9a181bcc227638e9d0f48ae0ca5ed920e22606e33fe6f97b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "7233f8d99998398e97f3541687bc2f024a275c96da2a9e72d8b7d215a289ef78",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "ff7e5b8fd4b74998137fa8a6c88c080ff13f6154a34363e3bb4934d52786b7e6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001D9A80",
+      "address": "0x001D9A80",
+      "file_offset": "0x000DAA80",
+      "size": 80,
+      "source": "src/game/goals.c",
+      "source_name": "func_001D9A80",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e0b3a9467cfc3aaf366005a71279d7358214163e7d9ac4128e9c47dfdeabc613",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Preserves float f12 across base call; writes float +14, table +0C, byte +18=2 and byte +19=0. Other action fields remain untouched.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004368A0"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D4E48",
+          "command": "act_conjure",
+          "string_address": "0x00433798",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3064",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 48,
+          "compiled_sha256": "1738f41fb342e6ff46e7be17bc0c1cdd1cf0e7923d8da2cc5eed08a59201e96c",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "dc66a4dc3eb03fbb926e30f87149febd102c872e8261acb5b01fc10c384bef72",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "712a407488879c8c3a131b402de1365ab375da6e072abd4972b03cc0317dd431",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DA5E8",
+      "address": "0x001DA5E8",
+      "file_offset": "0x000DB5E8",
+      "size": 100,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DA5E8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6dcbb0b54b95a195b257fe8bf33eaeef1c3bc72441ec58e37b215e38d95d7d9a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Three independent EABI float inputs f12/f13/f14 survive the base call and are stored at +1C/+20/+24, followed by table +0C.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436900"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5D68",
+          "command": "gen_lookaround",
+          "string_address": "0x00433858",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3194",
+          "argc": 3,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 100,
+          "different_bytes": 49,
+          "compiled_sha256": "a77a4dcf2c50f6f6422885524f8c83ebd169ec2ad30117ec0f3da54ba7a71a15",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 22,
+          "compiled_sha256": "a455f186935ed0350056be8710bd40dba1b3b7e38d2b45d6842d5bf0e6f14abe",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 22,
+          "compiled_sha256": "d17e46a9ce092f2192ef39cc71428d60321fb22a44ce451f15d1f568620b1ac5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DB930",
+      "address": "0x001DB930",
+      "file_offset": "0x000DC930",
+      "size": 52,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DB930",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "64bb6c2d234affe0935d157a3c0674b468120cd58c3111773519b3928b8ddecf",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Constructs shared base then replaces table +0C with face-front table 0x004369A0; corresponding callback requests the 0x10-byte base allocation.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004369A0"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6AB8",
+          "command": "act_facefront",
+          "string_address": "0x004337A8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3080",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "df1fcb701750fcfac6924b94d7a200a1366972bc9cc4faa25de723df0f74e21c",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 19,
+          "compiled_sha256": "1e9f947d446a3a1d4bd89a512685b53f7702e4454696649ecd7e80ab1f0aeefc",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 17,
+          "compiled_sha256": "ba126d381891efeef027029bcb3df5d26b2e0c46d7915188a399a822d663f969",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DC538",
+      "address": "0x001DC538",
+      "file_offset": "0x000DD538",
+      "size": 68,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DC538",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d13340213612ceecf83d90fb2dfdc27ba9573ee5f9e4f46672db75e71bd1b6c8",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Initializes six words in store order 00/04/08/0C/14/10, float +24 and +20 to 1.0, +18 to exact 1e9f (0x4E6E6B28), and +1C to the independent f12 input. Callers do not consume a return value.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [],
+      "script_callers": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 68,
+          "different_bytes": 40,
+          "compiled_sha256": "33c1572150cf2b8afb450157a649ba4188d30334c7ce8a8a6ed6634f6c6c906c",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 42,
+          "compiled_sha256": "98fb4f6e8f131c022b4d6c2a3c5923628e1ca52642efe7f1b35bd12928e97ce2",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 42,
+          "compiled_sha256": "98fb4f6e8f131c022b4d6c2a3c5923628e1ca52642efe7f1b35bd12928e97ce2",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": [
+        {
+          "address": "0x001DC53C",
+          "bits": "0x3F800000",
+          "value": 1.0
+        },
+        {
+          "address": "0x001DC55C",
+          "bits": "0x4E6E6B28",
+          "value": 1000000000.0
+        }
+      ]
+    },
+    {
+      "name": "func_001DC5A0",
+      "address": "0x001DC5A0",
+      "file_offset": "0x000DD5A0",
+      "size": 84,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DC5A0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6080724dec1f673275c709c5d183507e7b8af9a0d5a568effea119ae1b714f54",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization narrows signed input to halfword +10, clears halfword +12, and assigns table +0C. Sets +12=1 only when the original full signed input is positive, independent of the narrowed +10 value.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436A70"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5E28",
+          "command": "gen_restartplan",
+          "string_address": "0x00433880",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D31CC",
+          "argc": -1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 84,
+          "different_bytes": 28,
+          "compiled_sha256": "79b898087c94c10a196b16d426bf096b65b534975788b4e077ac4bba2d3dab12",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 22,
+          "compiled_sha256": "395370673f459391571cdb99105509046a727bb5a399dd728731e6792ed1e6b3",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 20,
+          "compiled_sha256": "52f51d9e7b05d6f0395514197d561e424d712b9f9d54c49d2af55dbc06071112",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DC650",
+      "address": "0x001DC650",
+      "file_offset": "0x000DD650",
+      "size": 72,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DC650",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b4c2928950292c582fecbc611bd49279d9ad67e633a3724a210a849861781e0f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization stores signed input bits at +14, table +0C, then clears word +10.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436AF8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5ED8",
+          "command": "gen_setmood",
+          "string_address": "0x00433890",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D31E8",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 72,
+          "different_bytes": 34,
+          "compiled_sha256": "2f04ed6712828ba77e4aa0e5ba56ba4ce35124ba617b4e2f9b239e371180c1de",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 24,
+          "compiled_sha256": "a9d4eb5c555f18259d4a5d6a4f0cf23455701877da2a9973057b15fb801bbdd1",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 22,
+          "compiled_sha256": "14f9f912165cbf0c3ac95c7e3dc973923a78d21353981dbcc718e79f31a72ee4",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DC6F8",
+      "address": "0x001DC6F8",
+      "file_offset": "0x000DD6F8",
+      "size": 72,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DC6F8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "67625f7567488113beaede52a93117fca998f7cfda9184f6be787571ae98ff81",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Float f12 preserved across base call; writes float +10, table +0C, and zero word +14.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436B48"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D60C0",
+          "command": "gen_wait",
+          "string_address": "0x004338C0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D323C",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 72,
+          "different_bytes": 39,
+          "compiled_sha256": "22de607779e2b41e67dc12716fb7f0ede29251d981f5e94474b1fa1f16b03dde",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 22,
+          "compiled_sha256": "f111898dc7d56a9f2ed026732e69b12c702d7dccc7271b4ac3cff72c92477eba",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 22,
+          "compiled_sha256": "3bcdd4b3d49e6d2de774761721e0d65bd4aaed8af3182208b16e7a753784dabb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DC7A8",
+      "address": "0x001DC7A8",
+      "file_offset": "0x000DD7A8",
+      "size": 52,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DC7A8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b575de0b39a82fb2a54bade4b361729bc7f7fe9ce8a2589e01ffa99ce7c0bf46",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Constructs shared base then replaces table +0C with set-position-home table 0x00436B98; corresponding callback requests the 0x10-byte base allocation.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436B98"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6948",
+          "command": "mov_setposhome",
+          "string_address": "0x004336C8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2F2C",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "78463c41a8d0f151050e4b30e2e285810f2f345c4de3d35928f321532da60fbc",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 19,
+          "compiled_sha256": "2641bed9b4150e903bf77d0cd8db8ade98c4772af7743480c0046b848ed67a8b",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 17,
+          "compiled_sha256": "4123e6a2b0ee9854cf3e7807aa5a05c37962568d8745229fbe830ad379c57077",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DF028",
+      "address": "0x001DF028",
+      "file_offset": "0x000E0028",
+      "size": 116,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DF028",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2bb81d0d00c01f06bd45c5b0cb3f33aec522cf53d791b9703060ed15ad67de79",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base call clears bytes +48/+49, assigns table +0C, clears +46/+47 and words +50/+54/+60/+64/+10. Reloads owner from +0 and copies owner word +4 to +14 before allocating a five-element, 0x18-byte container via 2AF5A0; stores returned pointer at +40.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436BF8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6A30",
+          "command": "mov_drivesection",
+          "string_address": "0x00433750",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2FF0",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 120,
+          "different_bytes": 61,
+          "compiled_sha256": "20f69e64e14048a6faa3f081f507cecc0db0b55391363b86e53dfdbb8fa9885e",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 116,
+          "different_bytes": 29,
+          "compiled_sha256": "7a1f73e8de8dd3eed955582b61598a859119a0ec8ee5db704dbb6b9a6ea0116f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 116,
+          "different_bytes": 27,
+          "compiled_sha256": "71e4495e0c5f8e89a9d97db06c2462e072b1499f4733286ffa56657254f22527",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001DFD38",
+      "address": "0x001DFD38",
+      "file_offset": "0x000E0D38",
+      "size": 112,
+      "source": "src/game/goals.c",
+      "source_name": "func_001DFD38",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "41707720b5d6983cfda16a8500ba688697751f2c204958e807e2df3aab44a92a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base/table initialization followed by timer initialization at +1C with f12 input. Clears embedded timer words at object +28/+30/+2C in that order, overwrites timer float at object +3C with 0.75f, then sets byte +14 to 0xFF.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436C48"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D4968",
+          "command": "mov_walkintersection",
+          "string_address": "0x00433700",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2F80",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 108,
+          "different_bytes": 74,
+          "compiled_sha256": "e1d344ff8af2e4ed657dd45c8d5fb36daa1d8b24e0f1498bd64be8d6a406db85",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 108,
+          "different_bytes": 64,
+          "compiled_sha256": "acf30c20059668563b32e7b92d64c95011d2af25fc232bf03872e7389bc1e902",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 108,
+          "different_bytes": 62,
+          "compiled_sha256": "ff4e6cc864831139854d1b8f40d3e1b85ec07e32624d850b004a8d5d4e679669",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001DFD78",
+          "bits": "0x3F400000",
+          "value": 0.75
+        }
+      ]
+    },
+    {
+      "name": "func_001E04C8",
+      "address": "0x001E04C8",
+      "file_offset": "0x000E14C8",
+      "size": 104,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E04C8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ca85a2ad0b70c98d14d00414f5a23d2984af026a89a09339a7e44ff1892b1ef7",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base/table initialization followed by timer initialization at +14 with f12 input. Clears embedded timer words at object +20/+28/+24 in that order and overwrites timer float at object +34 with 0.75f.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436C98"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D4A00",
+          "command": "mov_walkroad",
+          "string_address": "0x00433718",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2F9C",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 100,
+          "different_bytes": 66,
+          "compiled_sha256": "002289c8fa726e397f0ffeaebfee63914fa4db99668ae15a1a7e7bf3ec3cdd10",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 58,
+          "compiled_sha256": "0db0e49c8179735d3bb5fddd734dc31435f41e96aec6ca941a42efab6a630775",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 56,
+          "compiled_sha256": "f982dd7aaa19a3ac909db5eadee5f47283fa73497f8fdf6c693beaacfe2ed4a7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001E0508",
+          "bits": "0x3F400000",
+          "value": 0.75
+        }
+      ]
+    },
+    {
+      "name": "func_001E0C38",
+      "address": "0x001E0C38",
+      "file_offset": "0x000E1C38",
+      "size": 168,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E0C38",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b6b211a6f4e65434761d06d5029c5e37fcaef05c7b8165db9ff277e2dc6c5050",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Five EABI integer inputs in $6..$10: four words stored at +10/+14/+18/+1C, fifth narrowed to byte +9C. Then table +0C, words +94=1/+98=FFFFFFFF, byte +9E=3, word +90=1, bytes +9D/+9F=0. Intermediate opaque bytes are not initialized.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436CE8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D66D0",
+          "command": "mov_idle",
+          "string_address": "0x004335E8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2DF8",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 168,
+          "different_bytes": 88,
+          "compiled_sha256": "7b554fa1df4da4b71736cab8f6dbf12e65e418301520c61d1d2797a5abf5bb92",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 172,
+          "different_bytes": 98,
+          "compiled_sha256": "cbb68263ccb35754d087705a081e831f4375728121f37b239f50fff4d44c08f1",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 172,
+          "different_bytes": 89,
+          "compiled_sha256": "26b3479d09bb90f1af3f27e8abb09115a3ecc185fcb3d1f05fdb645937f2e7c7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E0EC8",
+      "address": "0x001E0EC8",
+      "file_offset": "0x000E1EC8",
+      "size": 80,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E0EC8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e3c05d5be36a7ae8a5a1c145ffcd6f41a7d231c53a2c6d43829ee94444289877",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Same observed scalar/status construction as 1D9A80 with distinct table 0x00436DC0.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436DC0"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D52D8",
+          "command": "act_spinattack",
+          "string_address": "0x00433800",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D310C",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 48,
+          "compiled_sha256": "915bc574e42b387570019dad2ce61b86683ced5bf2faae3abec4e0947ee12f12",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "3588089362b93427a0ecc2ece192f4ff3c2f4f48effa469380a81309df1d2bdc",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "e0a019ad15bd60566a72c291b4056b02bada301f9af94d8b861812bdf06108f3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1078",
+      "address": "0x001E1078",
+      "file_offset": "0x000E2078",
+      "size": 80,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E1078",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "cb5821723fca7e18ab97a728fa6855c4301f4fef8f4ed651ebe361f2736c71da",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Same observed scalar/status construction as 1D9A80 with distinct table 0x00436E48.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00436E48"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5378",
+          "command": "act_getstunned",
+          "string_address": "0x00433810",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3128",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 48,
+          "compiled_sha256": "7a8e38d94d50693ee2e04372a63c311cd657ecd7a9297e88e634431d1338cd6f",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "c0cf335ef7f02dee5768c56ad47c662502591329ebc554de0b6038b66536a106",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 20,
+          "compiled_sha256": "600a060b446e26ef16881d009caaceba4b12ba55315df10481e73cd69690c3e4",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1DF0",
+      "address": "0x001E1DF0",
+      "file_offset": "0x000E2DF0",
+      "size": 68,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E1DF0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ddb174ea2d7c58dff7a1d885e06cea0246677d3946dc00aa4dfc49594c09613f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base owner is the supplied owner argument; preserves distinct full actor argument at +10 followed by table +0C.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437118"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6B40",
+          "command": "gen_reevaluategoals",
+          "string_address": "0x00433868",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D31B0",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 68,
+          "different_bytes": 34,
+          "compiled_sha256": "91cdf48ce00cdfe404406db292b39301ea7193c7e0f64aa5fb1b1d6729ec8f2a",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 24,
+          "compiled_sha256": "926bf8de2e87a04c2c0fa70a273445715a05da0e97a3b88d23c898fd75ca2f08",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 22,
+          "compiled_sha256": "445a8f20f65f3667d87f10ad6b587993a7a047cad63824e78189714626125f3f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1E78",
+      "address": "0x001E1E78",
+      "file_offset": "0x000E2E78",
+      "size": 72,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E1E78",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "17207a4d3a4c56d7889f03d0b4a8eb1c406fbc47cb8c85e0abcb8c4f6dd02c74",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization stores script word +14, table +0C, then clears word +10.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437168"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D3BB8",
+          "command": "mov_interact",
+          "string_address": "0x004335F8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2E14",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 72,
+          "different_bytes": 34,
+          "compiled_sha256": "c3d792c1432eb7e0449a241b639d75be8fcfe2a519494823694db929546c90be",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 24,
+          "compiled_sha256": "d658dc67e9ccece9922a1cd369e66b90d38e2951092d4ae5a7cf5235ffc976aa",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 22,
+          "compiled_sha256": "72f36d7bc63c49dee2efe482b23f2e850db85825d312925d1b19c9104870073a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E1F48",
+      "address": "0x001E1F48",
+      "file_offset": "0x000E2F48",
+      "size": 76,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E1F48",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0136ba8f7b12560223f206408f986dde17c4fefbdc42f0aec77b4b8bea2a367a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base initialization, stores script word +10 and table +0C, then calls already recovered Deimos retain helper 2CD0B8 with the word interpreted as a pool-node pointer. Returns original storage after the external call.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004371B8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5F88",
+          "command": "gen_scriptcall",
+          "string_address": "0x004338A0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3204",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 76,
+          "different_bytes": 41,
+          "compiled_sha256": "99a8ff941edcbc231834666e8f0fb203bef80258097508476145b0a0d1dfba00",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 26,
+          "compiled_sha256": "3b94c9dfb4f00f786e9ee57a88e2775ee5fd931528cab59939f7ef9ce9e42bd3",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 24,
+          "compiled_sha256": "6a0627fd4af4293958fc46ca6b93243ce5490e0745223f46eed2527a60582206",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E5988",
+      "address": "0x001E5988",
+      "file_offset": "0x000E6988",
+      "size": 84,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E5988",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2de6704aeda46540dd929f3ff4a19f0b44a5b570d6a48fd1f7191a45aef343be",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base initialization, script words +10/+14, then table +0C.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437340"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6020",
+          "command": "gen_playvo",
+          "string_address": "0x004338B0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3220",
+          "argc": 2,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 84,
+          "different_bytes": 44,
+          "compiled_sha256": "1a74399c421f874f6080298c0158150059bdbe1ad51f4087636df19737014387",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 34,
+          "compiled_sha256": "dab615f5b55949ed7dc7d3655b4b13aad12a85f2ded7463d6df45ac0a51c1d4e",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 30,
+          "compiled_sha256": "c6861a37c0d6fee3e2223c863a39b9b58f8fc642f3523f289347dbd122785484",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E5A58",
+      "address": "0x001E5A58",
+      "file_offset": "0x000E6A58",
+      "size": 80,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E5A58",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "fa7e69c5aae697de7dfe70c64d2a02425e499f5073ab08a16320f8cd238a09b0",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization stores object word +10 and table +0C, then increments separate object byte +5 modulo 256. Position fields are untouched.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437390"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D44D0",
+          "command": "mov_setpos",
+          "string_address": "0x00433688",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2ED8",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 43,
+          "compiled_sha256": "c4f96a3c7a7a91323ddf7254f16b4ea8da06e2b9c5d3f29b70f95d6555455152",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 25,
+          "compiled_sha256": "47ec5cf9256cbc898b652513ecc5c2726fd8c3ea4083192c4bdfb78c7ab0acb1",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 80,
+          "different_bytes": 23,
+          "compiled_sha256": "15f9694b78e52113dc8145fefab8163908807cfbc3c63d4206290843e314f238",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E5AA8",
+      "address": "0x001E5AA8",
+      "file_offset": "0x000E6AA8",
+      "size": 96,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E5AA8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5fcd995c5428b146eca9feb34e7eebc86c982befbe5cde5f5cde454d1a0d039b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization clears word +10 and assigns the same set-position table as 1E5A58, then copies three floats from the source vector to +14/+18/+1C sequentially. Individual reads and stores preserve overlap behavior.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437390"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D44D0",
+          "command": "mov_setpos",
+          "string_address": "0x00433688",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2ED8",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 92,
+          "different_bytes": 65,
+          "compiled_sha256": "dac1a7f70f7ec94463ebd375061d21f2176bdd20d64e0b5ea9e7d9a29c2b8e5c",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 92,
+          "different_bytes": 54,
+          "compiled_sha256": "d749adb1b47ae13611d09e24f6d7e59aee76e14b01a138531c349dc37a639202",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 92,
+          "different_bytes": 51,
+          "compiled_sha256": "c3299e864ee64d59e334d07ef594e21117e6e321980db50633bea92227e13142",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E6828",
+      "address": "0x001E6828",
+      "file_offset": "0x000E7828",
+      "size": 68,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E6828",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c671f1f796d89a7289675a06185cc55289032111dff852c539747644c71f3919",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "After base initialization stores script word +14 and assigns table +0C; +10 and other position fields remain untouched.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004374C8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D48D0",
+          "command": "mov_setposinteract",
+          "string_address": "0x004336D8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2F48",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 68,
+          "different_bytes": 34,
+          "compiled_sha256": "0ec3adcb274a246f3460670f769a8894cee291830eeb875740c9aa5fd763d1f7",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 24,
+          "compiled_sha256": "c210c0b2312bce06167b786d867278348ea376a4c0d63c2f4cc1f1a687f36d22",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 22,
+          "compiled_sha256": "67cae032be22a83023109ccc73e792e289b5c97603c91eb0a9848f20ce78ba5a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E84D0",
+      "address": "0x001E84D0",
+      "file_offset": "0x000E94D0",
+      "size": 176,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E84D0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "0aba99c392c96859abdbbc61d38457eae5f0a623cd14aeb414f915b947a46b80",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base initialization; stores object word +10 and table +0C; increments separate object byte +5 modulo 256; narrows three integers to bytes +40/+41/+42; clears word +14 and bytes +3D/+3E/+3F; initializes embedded timer +44 with 0.5f; reloads owner from +0 after timer call and ORs owner halfword +24 with 0x40.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004375A0"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D3A68",
+          "command": "mov_entervehicle",
+          "string_address": "0x004335C0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2DC0",
+          "argc": 4,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 176,
+          "different_bytes": 79,
+          "compiled_sha256": "af603853a5b0eda0247720101aa1636e9b45e97ea9669d5b6133539f2d9b9e92",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 176,
+          "different_bytes": 58,
+          "compiled_sha256": "7b47554696680956c0c88282245aa1f4ce7922ad29ac551cbe41eaf0c0385676",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 176,
+          "different_bytes": 50,
+          "compiled_sha256": "31a723ca74201c3c90908710acc3eb5c6a8ab449db86f1609b726633f6e9ec4b",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed",
+      "original_float_constants": [
+        {
+          "address": "0x001E8514",
+          "bits": "0x3F000000",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "name": "func_001E87C0",
+      "address": "0x001E87C0",
+      "file_offset": "0x000E97C0",
+      "size": 88,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E87C0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "407961735eed03561d4b1228c2ac24313773de24cb2a5923a4d20978fb76a7b2",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Full actor argument is preserved at +10, owner passed to base is actor+34, script word stored at +14, and table assigned at +0C.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437628"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D3B20",
+          "command": "mov_exitvehicle",
+          "string_address": "0x004335D8",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2DDC",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 88,
+          "different_bytes": 51,
+          "compiled_sha256": "857653355da9c3be1ff8171ffa1ffc532d6be806fc259971e651a5e185c7e152",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 88,
+          "different_bytes": 40,
+          "compiled_sha256": "515a237659157e604b57f489a30a0a5a19fa254721892e32a957939786971b0d",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 88,
+          "different_bytes": 37,
+          "compiled_sha256": "f0548156753eb6f40cef47cf7d405cab0c47fcf7beb0e0c649bd30a698088dc5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E8950",
+      "address": "0x001E8950",
+      "file_offset": "0x000E9950",
+      "size": 52,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E8950",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "056a9a022b47c40c9c5f9f910828cf2de4fa9df4db25bc0413fb18c966716e6e",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Constructs shared base then replaces table +0C with stop-vehicle table 0x00437678; the callback requests precisely the 0x10-byte base allocation.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437678"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6648",
+          "command": "mov_stopvehicle",
+          "string_address": "0x004336F0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D2F64",
+          "argc": 0,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "0fe2ca87ce39f1ae6e92ae073d8de275ed2b3240c5eeea3908f490d51cea77b9",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 19,
+          "compiled_sha256": "0f85aa1e662cffb6f54a14c48981313d31b722461fd8fac5f91c9fc05cd17c37",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 52,
+          "different_bytes": 17,
+          "compiled_sha256": "f93d52f8a5ffda75e7959d4e4929f5a1f4294f56ce1fcb97aca51f0a9bf0781b",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E8D98",
+      "address": "0x001E8D98",
+      "file_offset": "0x000E9D98",
+      "size": 72,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E8D98",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "1310e9dc41cf1fb18f767ec3f49cfcdd37da6f1a2f4e52c709e3d017d6f3df7a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Full actor argument is preserved at +10; base receives actor+34, then table +0C is assigned.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_00437788"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D6BC8",
+          "command": "car_honkhorn",
+          "string_address": "0x004338D0",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3258",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 72,
+          "different_bytes": 41,
+          "compiled_sha256": "558f9c5155d230efbc13e7fdbd7dbebb756c67b2f28aec10bc08f7ad2e583fa1",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 31,
+          "compiled_sha256": "05c36ccd23671404308f02141710cda69acbbfff9fde584c6023b9b9b9ab7eb5",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 72,
+          "different_bytes": 29,
+          "compiled_sha256": "512a149788ab31ab39752d8417a493740cec0b03004edb30d9cf8e9a28080317",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_001E8E40",
+      "address": "0x001E8E40",
+      "file_offset": "0x000E9E40",
+      "size": 68,
+      "source": "src/game/goals.c",
+      "source_name": "func_001E8E40",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "40dc4ecc5f1f29c9bbc48f1a74419eb1cc42c895b8c958d2ff4b8a2177e4654d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Base initialization followed by script word +10 and table +0C; +14 is untouched.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_004377D8"
+      ],
+      "script_callers": [
+        {
+          "callback": "func_001D5CD0",
+          "command": "gen_ignoreavoidance",
+          "string_address": "0x00433840",
+          "registration_function": "func_001D2B60",
+          "call_address": "0x001D3178",
+          "argc": 1,
+          "context": 0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 68,
+          "different_bytes": 34,
+          "compiled_sha256": "b4bd9fb4687fafb70971c3dd1f88d9b9781ee54a0612b5f21c80409bb9f9b636",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 24,
+          "compiled_sha256": "1a21882213e19c1b0484949af3c9b72603caaee01dc7ff7b0ddb17970ac2a685",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 68,
+          "different_bytes": 22,
+          "compiled_sha256": "58661db6595becf9487e23aa5f4b46c91f91f1e657198abecfd2ad9978fa4756",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    },
+    {
+      "name": "func_0020D2A0",
+      "address": "0x0020D2A0",
+      "file_offset": "0x0010E2A0",
+      "size": 32,
+      "source": "src/game/goals.c",
+      "source_name": "func_0020D2A0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5d77ebe0561658ac4bbee47190acb45816a5115582de8d92c3a951182aa8c874",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "evidence": "Stores owner address at +0, clears intrusive links +4 then +8, assigns base dispatch table 0x0043A2B0 at +0C, and returns original storage.",
+      "boundary_evidence": "Full entry-to-return body and paths reviewed; includes return delay slot, excludes trailing alignment NOPs.",
+      "link": true,
+      "dispatch_tables": [
+        "D_0043A2B0"
+      ],
+      "script_callers": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 32,
+          "different_bytes": 9,
+          "compiled_sha256": "61977c5aae3837bf20e29617d49f51ad4e35bed9a42a951cec55531aa5081a53",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 16,
+          "compiled_sha256": "f73485a03ea3703cb79f2d3c2442a95f92ee0d5899583fd9f826d89ea7f56e6a",
+          "unresolved_relocations": []
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 16,
+          "compiled_sha256": "f73485a03ea3703cb79f2d3c2442a95f92ee0d5899583fd9f826d89ea7f56e6a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "profile_note": "Supported original backend register_precision opt-in reproduces 128-bit callee save width; slot order and scheduling still differ."
+        }
+      ],
+      "original_float_constants": []
+    }
+  ]
+}

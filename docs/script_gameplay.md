@@ -73,7 +73,7 @@ storage to a separate constructor. Other tags submit null. Set-mood skips
 allocation and queue submission while actor word `148` has bit `400` set, but
 still clears an optional result. Restart-plan uses zero when argument count is
 nonpositive; otherwise it converts its first float to signed 32-bit. Its cast
-and set-mood's cast compile to the same `cvt.w.s` / `mfc1` operation present in
+and set-mood's cast compile to the same `trunc.w.s` / `mfc1` operation present in
 retail. Portable host behavior for nonfinite or out-of-range inputs is not
 claimed.
 

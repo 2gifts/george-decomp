@@ -9,7 +9,7 @@ extern void func_002CC938(const char *format, ...);
 extern float func_0037B238(float dividend, float divisor);
 
 /* DVDist: table arguments, x/y/z hash lookups, and an EE scalar square root. */
-void func_002CF298(void *unused, s32 destination)
+void func_002CF298(s32 unused, s32 destination)
 {
     GeorgeDeimosHashTable *table;
     GeorgeDeimosValue *x_value;
@@ -50,7 +50,7 @@ void func_002CF298(void *unused, s32 destination)
 }
 
 /* DFMod: if the logger returns after a type error, calculation still follows. */
-void func_002D05E0(void *unused, s32 destination)
+void func_002D05E0(s32 unused, s32 destination)
 {
     float result;
     (void)unused;

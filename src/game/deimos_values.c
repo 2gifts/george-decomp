@@ -158,7 +158,7 @@ void *func_002CDF90(void)
 }
 
 /* Tag 2 denotes a float in the observed script callbacks. */
-void func_002D0560(void *unused, s32 destination)
+void func_002D0560(s32 unused, s32 destination)
 {
     float seconds = (float)D_0048180C * 0.001f;
     (void)unused;

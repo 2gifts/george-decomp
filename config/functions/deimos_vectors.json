@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Reuse shared Deimos tagged values and vector types. No upstream game source copied.",
+    "Address names retained; conversion keys confirmed by independently reconstructed CRC32."
+  ],
+  "functions": [
+    {
+      "name": "func_002CFFC0",
+      "address": "0x002CFFC0",
+      "file_offset": "0x001D0FC0",
+      "size": 220,
+      "source": "src/game/deimos_vectors.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "04ede412a0b095b1df19ca929fe65c241b8f72c82c14aace2e3ac276aa3a37b0",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Construct a local17-bucket table from a key/type/payload word stream. Signed type0 creates tag1; type1 creates tag2; unsupported types do not consume the payload word. Zero key terminates.",
+      "boundary_evidence": "Reviewed branch targets, return and delay slot; post-endlabel padding excluded."
+    },
+    {
+      "name": "func_002D00A0",
+      "address": "0x002D00A0",
+      "file_offset": "0x001D10A0",
+      "size": 216,
+      "source": "src/game/deimos_vectors.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c188168b14a2dc1a80ce7f9d8381d3ce16c39139f6325644a8fc71aaea65c3f8",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Look up x,y,z and angle keys before loading payloads; capture all three vector scalars before output stores; optional missing angle yields positive zero, present angle multiplies exact float0x3C8EFA36.",
+      "boundary_evidence": "Reviewed branch targets, return and delay slot; post-endlabel padding excluded."
+    },
+    {
+      "name": "func_002D0178",
+      "address": "0x002D0178",
+      "file_offset": "0x001D1178",
+      "size": 220,
+      "source": "src/game/deimos_vectors.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "50e9df58b4dfc7099ded0493c256fe462a2ca1cfe3411d99fdb66f6e0b4281e4",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Create a table with no secondary; assign x,y,z then raw angle as tag2 values, reload vector components after each setter call.",
+      "boundary_evidence": "Reviewed branch targets, return and delay slot; post-endlabel padding excluded."
+    },
+    {
+      "name": "func_002CFE18",
+      "address": "0x002CFE18",
+      "file_offset": "0x001D0E18",
+      "size": 56,
+      "source": "src/game/deimos_vectors.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e006518f9df906a64c1bbf9418669e7af1e6aaec4a9a39c0ac93da731c72cefd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "If shared node is nonnull, release its reference then clear the global pointer.",
+      "boundary_evidence": "Reviewed branch targets, return and delay slot; post-endlabel padding excluded."
+    }
+  ]
+}

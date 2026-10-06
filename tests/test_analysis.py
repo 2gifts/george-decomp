@@ -237,7 +237,8 @@ class CompilerProfileTests(unittest.TestCase):
             root = Path(folder)
             (root / "config").mkdir()
             data = {"default_profile": "default", "profiles": {
-                "default": {"compiler": "old.exe", "compiler_sha256": "old", "path_entries": ["old"]},
+                "default": {"compiler": "old.exe", "compiler_sha256": "old", "path_entries": ["old"],
+                            "binary_manifest": {"path": "old.json", "group": "compiler"}},
                 "other": {"compiler": "other.exe", "compiler_sha256": "other"}}}
             (root / "config/compiler_profiles.json").write_text(json.dumps(data), encoding="utf-8")
             args = SimpleNamespace(compiler=root / "custom.exe", dll_path=root / "dll")
@@ -246,6 +247,7 @@ class CompilerProfileTests(unittest.TestCase):
             self.assertEqual(result["profiles"]["other"], data["profiles"]["other"])
             self.assertEqual(result["profiles"]["default"]["compiler"], str(args.compiler.resolve()))
             self.assertNotIn("compiler_sha256", result["profiles"]["default"])
+            self.assertNotIn("binary_manifest", result["profiles"]["default"])
             self.assertEqual(result["profiles"]["default"]["path_entries"], [str(args.dll_path.resolve())])
 
     def test_dependencies_verified_before_running_compiler(self):
@@ -268,6 +270,19 @@ class CompilerProfileTests(unittest.TestCase):
             (root / "compiler.exe").write_bytes(b"driver")
             profile = {"compiler": "compiler.exe", "assembler_provenance": {
                 "path": "assembler.exe", "sha256": hashlib.sha256(b"assembler").hexdigest()}}
+            with patch.object(verify, "ROOT", root), patch.object(verify.subprocess, "run") as run:
+                with self.assertRaisesRegex(ValueError, "dependency fingerprint"):
+                    verify.prepare_compiler(profile)
+                run.assert_not_called()
+
+    def test_manifest_children_verified_before_running_compiler(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "compiler.exe").write_bytes(b"driver")
+            manifest = {"compiler": {"binaries": [
+                {"path": "frontend.exe", "sha256": hashlib.sha256(b"frontend").hexdigest()}]}}
+            (root / "tools.json").write_text(json.dumps(manifest), encoding="utf-8")
+            profile = {"compiler": "compiler.exe", "binary_manifest": {"path": "tools.json", "group": "compiler"}}
             with patch.object(verify, "ROOT", root), patch.object(verify.subprocess, "run") as run:
                 with self.assertRaisesRegex(ValueError, "dependency fingerprint"):
                     verify.prepare_compiler(profile)

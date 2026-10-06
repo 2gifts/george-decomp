@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Reuse the ring layout already proved by deferred Deimos call handling. Original class name unknown.",
+    "Cursor retreat uses explicit unsigned32-bit guest-address arithmetic, preserving valid begin-wrap behavior without forming out-of-array C pointers.",
+    "No additional index/count guards or failure recovery."
+  ],
+  "functions": [
+    {
+      "name": "func_002AF208",
+      "address": "0x002AF208",
+      "file_offset": "0x001B0208",
+      "size": 80,
+      "source": "src/game/ring.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "8df46a38ed085555c9416e774966ba68738917d0f205fd112d30e972a2282306",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Return an indexed element by advancing and wrapping the read cursor; empty returns null; no index-to-count guard.",
+      "boundary_evidence": "Each branch and return delay slot reviewed; alignment excluded."
+    },
+    {
+      "name": "func_002AF258",
+      "address": "0x002AF258",
+      "file_offset": "0x001B0258",
+      "size": 252,
+      "source": "src/game/ring.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ce705cbeddc3ec4b56741e599b32bbd56346e6b9c68260e3d67468311971ea03",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Remove selected element by shifting later elements with memcpy, preserving cached stop pointer and reloaded ring metadata; retreat write cursor with unsigned address wrap and decrement count.",
+      "boundary_evidence": "Each branch and return delay slot reviewed; alignment excluded."
+    },
+    {
+      "name": "func_002AF358",
+      "address": "0x002AF358",
+      "file_offset": "0x001B0358",
+      "size": 60,
+      "source": "src/game/ring.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e80f706982744edc4eff7cc433740b1539fa5c0d5eaf443332c55c1796d6bd79",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Peek front element with memcpy; empty returns0, successful copy1; queue state unmodified except aliased output effects.",
+      "boundary_evidence": "Each branch and return delay slot reviewed; alignment excluded."
+    },
+    {
+      "name": "func_002AF398",
+      "address": "0x002AF398",
+      "file_offset": "0x001B0398",
+      "size": 88,
+      "source": "src/game/ring.c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f80f380461d63c1eb64dad1e8743d47012e82b685e493b4df20e2c575df8b63e",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Peek back element with unsigned address retreat/wrap and memcpy; empty returns0, successful copy1.",
+      "boundary_evidence": "Each branch and return delay slot reviewed; alignment excluded."
+    }
+  ]
+}

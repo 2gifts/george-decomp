@@ -37,6 +37,13 @@ endlabel func_00100000
         self.assertEqual(changes[0]["address"], "0x00100000")
         self.assertEqual(len(digest), 64)
 
+    def test_proven_ee_truncation_alias_is_logged(self):
+        source = self.SOURCE.replace("04000046", "64000046").replace("c1 0x4", ".word 0x46000064 # cvt.w.s")
+        original = self.ORIGINAL[:4] + bytes.fromhex("64000046") + self.ORIGINAL[8:]
+        normalized, changes, _, _ = self.check(source=source, original=original)
+        self.assertIn("trunc.w.s   $f1, $f0", normalized)
+        self.assertEqual(changes[0]["to"], "trunc.w.s $f1, $f0")
+
     def test_altered_word_or_address_is_rejected(self):
         for source in (self.SOURCE.replace("04000046", "00000000"),
                        self.SOURCE.replace("00100004", "00100008")):

@@ -1,6 +1,7 @@
 #ifndef GEORGE_SCRIPT_OBJECT_H
 #define GEORGE_SCRIPT_OBJECT_H
 
+#include "george/compiler.h"
 #include "george/deimos.h"
 
 /* Observed old EE C++ dispatch entries: signed this adjustment and function. */
@@ -34,9 +35,9 @@ typedef char script_vtable_initialize_offset[(offsetof(GeorgeScriptVTable, initi
 typedef char script_vtable_parent_offset[(offsetof(GeorgeScriptVTable, parent20) == 0x20) ? 1 : -1];
 typedef char script_method_function_offset[(offsetof(GeorgeScriptParentMethod, function) == 4) ? 1 : -1];
 
-GeorgeScriptObject *func_002D06E8(GeorgeScriptObject *object);
-void func_002D0700(GeorgeScriptObject *object, u32 flags);
-GeorgeDeimosPoolNode *func_002D0790(GeorgeScriptObject *object);
-void func_002D0800(GeorgeScriptObject *object);
+GeorgeScriptObject *func_002D06E8(GeorgeScriptObject *object) GEORGE_SAVE128;
+void func_002D0700(GeorgeScriptObject *object, u32 flags) GEORGE_SAVE128;
+GeorgeDeimosPoolNode *func_002D0790(GeorgeScriptObject *object) GEORGE_SAVE128;
+void func_002D0800(GeorgeScriptObject *object) GEORGE_SAVE128;
 
 #endif

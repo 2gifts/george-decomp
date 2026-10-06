@@ -136,6 +136,161 @@
           "evidence": "Entire compiler .rodata section agrees byte-for-byte with retail fmodf exception name, alignment and double NaN at 0x4550e8; original HI16/LO16 accesses corroborate both addresses."
         }
       }
+    },
+    {
+      "name": "finitef",
+      "address": "0x37dd78",
+      "file_offset": "0x27ed78",
+      "size": 36,
+      "source": "src/runtime/finitef.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "394c8fde7b2c1cfcb87c29f6b039bab1fce527b14a93b5122fdf0d909f952f3c",
+      "upstream_symbol": "finitef",
+      "upstream_revision": "Public GNU EE source newlib 1.8.1, ee/newlib/libm/common/sf_finite.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "27ae495b9f65f3ed5e04522eb36feaec9718742e8baa366b490b7306e0d8b421",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Original instruction flow reproduces the unchanged older newlib bit-trick implementation for float finiteness/NaN classification. Compiler register allocation agrees, but bundled assembler inserts a NOP after mfc1; source is reconstructed, not byte matched."
+    },
+    {
+      "name": "isnanf",
+      "address": "0x37de88",
+      "file_offset": "0x27ee88",
+      "size": 36,
+      "source": "src/runtime/isnanf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "23ff288f23259acbe99312ee228bfd9ff4b3573a75ae3a0e220ac58aa57cce2a",
+      "upstream_symbol": "isnanf",
+      "upstream_revision": "Public GNU EE source newlib 1.8.1, ee/newlib/libm/math/sf_isnan.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "2e315a0421ae7acca9b9ea1854af87a821b47ac5ae86bab27eeb365fcd11eb8a",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Original instruction flow reproduces the unchanged older newlib bit-trick implementation for float finiteness/NaN classification. Compiler register allocation agrees, but bundled assembler inserts a NOP after mfc1; source is reconstructed, not byte matched."
+    },
+    {
+      "name": "matherr",
+      "address": "0x37db30",
+      "file_offset": "0x27eb30",
+      "size": 36,
+      "source": "src/runtime/matherr.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "900aac4b2fdab42334c9e4f0e0aeae91951c3044a846a69f3f883ff26b4bc62a",
+      "upstream_symbol": "matherr",
+      "upstream_revision": "newlib-1.10.0, newlib/libm/common/s_matherr.c",
+      "upstream_source_sha256": "2418d753aee84b3b3698ccee872a82d7459793af9c707d9fbadc95d68365ab25",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Unchanged newlib source, identical in official 1.10.0 and public GNU EE 1.8.1 source, independently compiled with pinned GCC2.9 and linked to proven dpcmp call target; all36 retail function bytes match exactly.",
+      "link_symbols": {
+        "dpcmp": "0x373250"
+      }
+    },
+    {
+      "name": "__errno",
+      "address": "0x393368",
+      "file_offset": "0x294368",
+      "size": 12,
+      "source": "src/runtime/errno.c",
+      "source_kind": "c",
+      "status": "matched",
+      "original_sha256": "32948819e455dbc030c89b7dd8faa6457fc36f5600304eec9c40ac7e8b980e0e",
+      "upstream_symbol": "__errno",
+      "upstream_revision": "newlib-1.10.0, newlib/libc/errno/errno.c",
+      "upstream_source_sha256": "b8289e696607e597adb5a1dcd3386cd06fa1503ddb63281847def1af652b54c7",
+      "upstream_license": "Newlib compilation: Red Hat/Cygnus permissive preserve-notice license, see LICENSES/newlib-1.10.0.txt",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "link_symbols": {
+        "_impure_ptr": "0x405694"
+      },
+      "evidence": "Retail domain-error paths call this helper and store errno33 through its result. Unchanged upstream source returns &_REENT->_errno; known reentrancy pointer binding and independently compiled/linked GCC3.2.3 function match all12 original bytes."
+    },
+    {
+      "name": "__ieee754_fmodf",
+      "address": "0x37b9c8",
+      "file_offset": "0x27c9c8",
+      "size": 592,
+      "source": "src/runtime/ieee754_fmodf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "8be18184280942fbd5b16a46dbacae2c2797a06dca24ea180cd927e9f3d8285e",
+      "upstream_symbol": "__ieee754_fmodf",
+      "upstream_revision": "Public GNU EE source newlib1.8.1, ee/newlib/libm/math/ef_fmod.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "b39481ebcfd75620e30a4de269d9e120556fd1661c873ffce84eed478057f83a",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Called by the independently identified fmodf wrapper. Complete shift/subtract remainder control flow agrees with unchanged upstream source: sign extraction, NaN(x*y)/(x*y), magnitude comparison, subnormal exponent loops, normalization and signed-zero table at0x455128. Independently compiled source links its entire16-byte one/Zero constant pool at0x455120 exactly, but code does not byte-match.",
+      "boundary_evidence": "Entire entry-to-final-return body reviewed, including final delay slot; subsequent function/alignment excluded.",
+      "link": true,
+      "link_data": {
+        ".rodata": {
+          "address": "0x455120",
+          "file_offset": "0x356120",
+          "size": 16,
+          "original_sha256": "6d0674270425195bfd01d3aa897a21e6fc17a0905ba3ada3c259b4d6bf07b519",
+          "evidence": "Entire compiled one(1.0f), alignment and signed Zero[] table matches these16retail bytes; original lui/addiu base0x455128 plus sign-indexed lwc1 confirms table role."
+        }
+      }
+    },
+    {
+      "name": "floorf",
+      "address": "0x37dda0",
+      "file_offset": "0x27eda0",
+      "size": 228,
+      "source": "src/runtime/floorf.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "original_sha256": "9e71c7426c5051f0ee31fd33439b33edb52795207477704f1220ea491b4a47b2",
+      "upstream_symbol": "floorf",
+      "upstream_revision": "Public GNU EE source newlib1.8.1, ee/newlib/libm/math/sf_floor.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "d6f369587250b29810d7ee3dad05fbe07d3a072e4f96ad31c96e91584984f50d",
+      "upstream_license": "Sun Microsystems 1993 permissive preserve-notice license",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common"
+      ],
+      "evidence": "Complete float floor exponent/mantissa algorithm and huge1e30 inexact checks agree with unchanged upstream source, including negative fractional adjustment, integral early returns and infinity/NaN x+x branch. Entry, return delay slot and following isnanf boundary reviewed. Compiled code differs and remains reconstructed.",
+      "boundary_evidence": "Entire entry-to-final-return body reviewed, including final delay slot; subsequent function/alignment excluded."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately."

@@ -178,7 +178,7 @@ void func_001D5D68(s32 argc, s32 destination)
     APPEND_RESULT();
 }
 
-/* Optional numeric restart parameter; retail uses cvt.w.s then mfc1. */
+/* Optional numeric restart parameter; EE opcode 0x46000064 is trunc.w.s. */
 void func_001D5E28(s32 argc, s32 destination)
 {
     s32 value = 0;
@@ -295,8 +295,8 @@ void func_001D89D8(GeorgeGameplayGoalQueue *queue, GeorgeGameplayGoal *goal)
         goal->field08 = queue->field08;
         queue->field08 = goal;
     } else {
-        queue->field08 = goal;
         queue->field00 = goal;
+        queue->field08 = goal;
     }
 }
 

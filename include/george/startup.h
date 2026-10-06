@@ -1,6 +1,7 @@
 #ifndef GEORGE_STARTUP_H
 #define GEORGE_STARTUP_H
 
+#include "george/compiler.h"
 #include "george/types.h"
 
 /* Reviewed prefixes only; names and complete source classes remain unknown. */
@@ -47,17 +48,17 @@ typedef char george_startup_vector_x[(offsetof(GeorgeStartupVector2234, field222
 typedef char george_startup_vector_y[(offsetof(GeorgeStartupVector2234, field2230) == 0x2230) ? 1 : -1];
 typedef char george_startup_vector_z[(offsetof(GeorgeStartupVector2234, field2234) == 0x2234) ? 1 : -1];
 
-void **func_00100C30(void **begin, void **end, void *const *key, GeorgeStartupCompare compare);
-void func_00100CD0(GeorgeStartupBase *object, u32 flags);
-void func_00100D50(GeorgeStartupNamed *object);
-void func_00100D78(GeorgeStartupNamed *object);
-s32 func_00100DE0(const void *left, const void *right);
-void func_00100E30(void);
-GeorgeStartupNamed *func_00100EA8(const char *name, u32 *index);
-GeorgeStartupNamed *func_00100F78(GeorgeStartupNamed *object);
-void func_00100FD8(GeorgeStartupNamed *object, u32 flags);
-void func_00101070(GeorgeStartupNamed *object, const char *name);
-void func_00101818(void *unused, s32 index);
-void func_001018D0(void *unused, s32 index);
+void **func_00100C30(void **begin, void **end, void *const *key, GeorgeStartupCompare compare) GEORGE_SAVE128;
+void func_00100CD0(GeorgeStartupBase *object, u32 flags) GEORGE_SAVE128;
+void func_00100D50(GeorgeStartupNamed *object) GEORGE_SAVE128;
+void func_00100D78(GeorgeStartupNamed *object) GEORGE_SAVE128;
+s32 func_00100DE0(const void *left, const void *right) GEORGE_SAVE128;
+void func_00100E30(void) GEORGE_SAVE128;
+GeorgeStartupNamed *func_00100EA8(const char *name, u32 *index) GEORGE_SAVE128;
+GeorgeStartupNamed *func_00100F78(GeorgeStartupNamed *object) GEORGE_SAVE128;
+void func_00100FD8(GeorgeStartupNamed *object, u32 flags) GEORGE_SAVE128;
+void func_00101070(GeorgeStartupNamed *object, const char *name) GEORGE_SAVE128;
+void func_00101818(void *unused, s32 index) GEORGE_SAVE128;
+void func_001018D0(void *unused, s32 index) GEORGE_SAVE128;
 
 #endif

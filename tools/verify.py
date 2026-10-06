@@ -138,6 +138,9 @@ def compiler_configuration(args):
     if args.compiler is not None:
         data["profiles"][default] = {**data["profiles"][default], "compiler": str(args.compiler.resolve())}
         data["profiles"][default].pop("compiler_sha256", None)
+        data["profiles"][default].pop("binary_manifest", None)
+        data["profiles"][default].pop("binaries", None)
+        data["profiles"][default].pop("assembler_provenance", None)
     if args.dll_path is not None:
         data["profiles"][default]["path_entries"] = [str(args.dll_path.resolve())]
     return data
@@ -149,6 +152,10 @@ def prepare_compiler(profile):
     if profile.get("compiler_sha256") and digest != profile["compiler_sha256"]:
         raise ValueError(f"Compiler profile fingerprint mismatch: {profile['compiler']}")
     dependencies = list(profile.get("binaries", []))
+    if profile.get("binary_manifest"):
+        reference = profile["binary_manifest"]
+        manifest = json.loads((ROOT / reference["path"]).read_text(encoding="utf-8"))
+        dependencies.extend(manifest[reference["group"]]["binaries"])
     if profile.get("assembler_provenance"):
         dependencies.append(profile["assembler_provenance"])
     for dependency in dependencies:

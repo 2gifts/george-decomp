@@ -1,0 +1,2558 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "28 script-goal behavior/destruction methods plus shared referenced-object release and position resolver form30 reviewed C routines; no original class names asserted.",
+    "Original dispatch tables connect these methods to constructor/script bindings recorded in goals.json and script_gameplay.json. Table data itself does not count as C recovery.",
+    "Shared partial layouts are extended only by proved accesses, including owner/entity state, scalar output records, referenced-object tagged payload, and signed16 adjusted-this virtual entries.",
+    "The complex drive destructor1DC820, idle selector1E06D8, and getter/predicate1E8988 remain external assembly; they were deliberately omitted from this reviewed batch.",
+    "Source macros reuse only observed repeated action destructor/success patterns. External function prototypes use explicitly set ABI arguments and callee entry review, excluding stale temporary registers.",
+    "Unsigned operations preserve32/16/8-bit wrap where original instructions do. Float comparisons retain unordered behavior and single-step angle wrapping.",
+    "GEORGE_SAVE128 is an opt-in annotation on observed nonleaf routines with128-bit saved registers; default recipes expand it to nothing. No inline assembly, backend modification, or byte masking.",
+    "Compiler matching is unproved until complete linked bytes and exact symbol size match; manual C review alone is never counted as a match.",
+    "Float literal audit derives constant bits from original instructions. The look factor is exactly3C8EFA36 (0.01745329424738884f), one ULP above the usual rounded degree/radian factor; pi/negative pi/2pi are40490FDB/C0490FDB/40C90FDB and random factor38D1B717. All literals in both constructor and method batches checked; original hashes describe original code and are unchanged by source repairs.",
+    "Independent full-instruction and layout review passed six exceptional paths:1DA650,1DF548,1E5BA0,1E8818,1CAF88,1CAFE0. Reviewer confirmed exact angle wraps, unsigned low-halfword road index/0x60 stride, owner and reference reloads, untouched-vector gate, full32 loop comparison, per-call signed8 narrowing, signed virtual adjustments, and resolver cases."
+  ],
+  "functions": [
+    {
+      "name": "func_001CAF88",
+      "address": "0x001CAF88",
+      "file_offset": "0x000CBF88",
+      "size": 88,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001CAF88",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "93a0558fd36dab7b65c707459e05eb759f3542a052bf1507997224d4ebabd50d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Decrements referenced-object byte5 modulo256 and stores it. Only the narrowed result zero sets byte6 bit4, invokes1CB180 with flags2, then frees through allocator45C640/2AD748. Complements the constructor byte5 increments.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 88,
+          "different_bytes": 36,
+          "compiled_sha256": "5ef059652daa804ee4a6981cd5603bcffbbd8d9f8945770f29f8230adabe9330",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 60,
+          "compiled_sha256": "bd527603c9b3e6886f6964a3fef4f74b8bc065ca2d70311c59b7e9abefc9af52",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 100,
+          "different_bytes": 59,
+          "compiled_sha256": "f8a60a49973e6131f07b0daa6488a934563026c9d698a4cddb825f96ea16189d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001CAFE0",
+      "address": "0x001CAFE0",
+      "file_offset": "0x000CBFE0",
+      "size": 148,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001CAFE0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "546dde569309c075305aa4ce779588d6d90d41e923d49a85534e4d4c41cbd261",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Dispatches signed object byte4: type1 returns word20 address+40 with32-bit wrap; type2 calls virtual vector entry with signed16 adjustment at table28 and method at2C; type3 returns inline vector+20; type5 calls120B68 with stored pointer; all other signed types return null. No additional stale integer args inferred.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 136,
+          "different_bytes": 106,
+          "compiled_sha256": "b214b270627516395d4056be0fd70dfcfbb9b6b6313fd03ab8069a5699fc9cb9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 128,
+          "different_bytes": 99,
+          "compiled_sha256": "3eeb729faa8b6fa68d7ee48319c2405f9caf6c78ff5a3bf28a327d3c2f16e5fb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 128,
+          "different_bytes": 99,
+          "compiled_sha256": "3eeb729faa8b6fa68d7ee48319c2405f9caf6c78ff5a3bf28a327d3c2f16e5fb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001D9970",
+      "address": "0x001D9970",
+      "file_offset": "0x000DA970",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001D9970",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "de9263b98a9097048b18f9b8409f970bf11ae581beecff56cd099b793c336399",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots owner before dispatch-table replacement, clears owner halfword +24 bit8, then calls shared base destructor with original flags.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436818",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "b540f97ad4163e65c864bb389c25fcef65c1313f7ad4d99575e6b58763a598d3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "92f18ff1144440b42dd6137889c384650016cfb33ab6b384ed30f4aa3ddc72eb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "92f18ff1144440b42dd6137889c384650016cfb33ab6b384ed30f4aa3ddc72eb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001D99A8",
+      "address": "0x001D99A8",
+      "file_offset": "0x000DA9A8",
+      "size": 80,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001D99A8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "be27c417e2b841c79abcb0f4a9e21b839895563f964bfa2407b1c9a078987d4d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Calls action gate 1868F8 on owner entity+8. Only nonzero result copies goal scalar +14 to +10, sets owner halfword +24 bit8, and clears goal byte+18. Owner is reloaded after the gate.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436818",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 76,
+          "different_bytes": 28,
+          "compiled_sha256": "1a3d78563e6cce14a8f611b1e2e07434e8fa06dc1398a18551d9ebc2172ccf02",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 19,
+          "compiled_sha256": "3c5cf67f19a3dbcfd1ffe427009a9633a369c32c4f30291db57503ae7e872f54",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 17,
+          "compiled_sha256": "111d46b5ed06996d27d4dc961d0626185f241975992d8a140988a305a13d6e8f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001D9AD0",
+      "address": "0x001D9AD0",
+      "file_offset": "0x000DAAD0",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001D9AD0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "e4bc9406541ec75a2437e1ce5d7684601c7b50e5e41eb93229428be73fe7d516",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same observed action-destructor pattern as 1D9970 with table 4368A0.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004368A0",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "f0504601ed8063592597d9ce07f788153c4937f32568cc2671f8677590e1c8f6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "ca81c90be68c237db49e6744582b485accee02ee241564bc9a8b7dacf66fec6c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "ca81c90be68c237db49e6744582b485accee02ee241564bc9a8b7dacf66fec6c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001D9B08",
+      "address": "0x001D9B08",
+      "file_offset": "0x000DAB08",
+      "size": 112,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001D9B08",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7853a09d8999605eff905c4cc39f568576bd3170a019147cc0d1f1d41c68b729",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Zeroes a 12-byte stack vector using original memset helper, passes it to 177E48, then gates through 173818 on the reloaded owner entity. Success uses the same scalar/owner-flag/status writes as 1D99A8.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004368A0",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 108,
+          "different_bytes": 29,
+          "compiled_sha256": "50ac24e135be63477fd6afaa959a0fa46690430372107eea9db34a77a241a227",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 108,
+          "different_bytes": 19,
+          "compiled_sha256": "26a42399840039bb937cbaa67d9948bad6ada00c9a28ad9898b1626c15f11610",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 108,
+          "different_bytes": 17,
+          "compiled_sha256": "e7ba5009ce9f3b6fc07bb5fd6c3ace2522b187ccb1e2425f95766be024b7ae81",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001DA650",
+      "address": "0x001DA650",
+      "file_offset": "0x000DB650",
+      "size": 320,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DA650",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "d58b241cafca530950c26eacb2e8c171eb455aef2cb77821f96a1ed2747fdbe0",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Zero vector then 177E48; reads entity angle+5C and two goal scalar offsets. Multiplies each by exact float3C8EFA36, adds angle, snapshots angle+18, and independently wraps each output once using strict +/-pi comparisons and 2pi. Clears words+10/+14. Unordered and extreme inputs retain original one-step behavior.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436900",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001DA68C",
+          "bits": "0x3C8EFA36",
+          "value": 0.01745329424738884
+        },
+        {
+          "address": "0x001DA6AC",
+          "bits": "0x40490FDB",
+          "value": 3.1415927410125732
+        },
+        {
+          "address": "0x001DA6D4",
+          "bits": "0x40C90FDB",
+          "value": 6.2831854820251465
+        },
+        {
+          "address": "0x001DA6F0",
+          "bits": "0xC0490FDB",
+          "value": -3.1415927410125732
+        },
+        {
+          "address": "0x001DA710",
+          "bits": "0x40C90FDB",
+          "value": 6.2831854820251465
+        },
+        {
+          "address": "0x001DA73C",
+          "bits": "0x40C90FDB",
+          "value": 6.2831854820251465
+        },
+        {
+          "address": "0x001DA768",
+          "bits": "0x40C90FDB",
+          "value": 6.2831854820251465
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 320,
+          "different_bytes": 114,
+          "compiled_sha256": "e7de7311646f181d557b82d287dc84a1c2be38a9a265f9f681821fa1d40bbbda",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 320,
+          "different_bytes": 32,
+          "compiled_sha256": "bc8e70b75b305cb72d2e7b66d22eb9b82a4326c2666ef31c0d2cc605a3b76777",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 320,
+          "different_bytes": 32,
+          "compiled_sha256": "5ff8b2d782466a2a2f361d343ac8663ee5a02761deed79449d50acdc98c105c8",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001DA790",
+      "address": "0x001DA790",
+      "file_offset": "0x000DB790",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DA790",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "8497af18426e47f892b1d2c54b83552b6361f31e8263c83a166253399b73b289",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots scalar+18, then owner. Only owner word+2C==0 writes owner float+34 to the snapshot and owner float+30 to exact2pi bits40C90FDB.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436900",
+          "entry_offset": "0x1C"
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001DA7B0",
+          "bits": "0x40C90FDB",
+          "value": 6.2831854820251465
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 48,
+          "different_bytes": 43,
+          "compiled_sha256": "97b40e816f5460a4d4020959dcd1f0876e300b896f2150d25c860a5023b334d5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 48,
+          "different_bytes": 43,
+          "compiled_sha256": "97b40e816f5460a4d4020959dcd1f0876e300b896f2150d25c860a5023b334d5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 48,
+          "different_bytes": 43,
+          "compiled_sha256": "97b40e816f5460a4d4020959dcd1f0876e300b896f2150d25c860a5023b334d5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001DC5F8",
+      "address": "0x001DC5F8",
+      "file_offset": "0x000DD5F8",
+      "size": 32,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DC5F8",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "d88c530c56037ae418f4585ca629514bb3ef0abe5af686db7a2f70885bedb23d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Nonzero signed halfword+12 enables modulo16 decrement of halfword+10; disabled case does not read or change the counter.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436A70",
+          "entry_offset": "0x14"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compiled_sha256": "d88c530c56037ae418f4585ca629514bb3ef0abe5af686db7a2f70885bedb23d",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc323",
+        "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "d88c530c56037ae418f4585ca629514bb3ef0abe5af686db7a2f70885bedb23d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "d88c530c56037ae418f4585ca629514bb3ef0abe5af686db7a2f70885bedb23d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "d88c530c56037ae418f4585ca629514bb3ef0abe5af686db7a2f70885bedb23d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001DC698",
+      "address": "0x001DC698",
+      "file_offset": "0x000DD698",
+      "size": 32,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DC698",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "66a230a74177370a3cadd0469c7859c187b38a64c9d71c8a08599f454cee242f",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots owner and incoming word+14, reads entity word+368, stores previous value to goal+10, then reloads entity through saved owner and writes incoming value at entity+368. Reload preserves aliases.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436AF8",
+          "entry_offset": "0x14"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compiled_sha256": "66a230a74177370a3cadd0469c7859c187b38a64c9d71c8a08599f454cee242f",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc323",
+        "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "66a230a74177370a3cadd0469c7859c187b38a64c9d71c8a08599f454cee242f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "66a230a74177370a3cadd0469c7859c187b38a64c9d71c8a08599f454cee242f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 32,
+          "different_bytes": 0,
+          "compiled_sha256": "66a230a74177370a3cadd0469c7859c187b38a64c9d71c8a08599f454cee242f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001DC7E0",
+      "address": "0x001DC7E0",
+      "file_offset": "0x000DD7E0",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DC7E0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f6aa4838de5d3d2a99a86ddfb1b358618ccb93339d130f3e77afce7af8861c30",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Clears output word+10 before output tag+0=1, then reloads owner and copies its vector+3C to output+4/+8/+C with interleaved scalar reads/stores.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436B98",
+          "entry_offset": "0x1C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 44,
+          "different_bytes": 25,
+          "compiled_sha256": "72b0a64639e88b3d0389e83d3e6c9e9ee7a03626bf2be73d329d91e3623e0ee7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 28,
+          "compiled_sha256": "92f40679e50bf112b0c554a1c4a3f32708c70e793cca21bf89f1d847b2f6d9a1",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 44,
+          "different_bytes": 28,
+          "compiled_sha256": "92f40679e50bf112b0c554a1c4a3f32708c70e793cca21bf89f1d847b2f6d9a1",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001DF548",
+      "address": "0x001DF548",
+      "file_offset": "0x000E0548",
+      "size": 228,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001DF548",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "40a0e7fa62f80e86e86077f3f67c0087fce663e5ea084d659c224d040e8883da",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Captures owner entity vector+D0 into embedded words at goal+1C/+20/+24. Calls DC468 with entity context+40 and owner fields18/14/20. Result1 sets byte+11=1; result0 resolves road, copies float from 0x60-stride record indexed by owner low-half18 to owner+8C, resets owner words80/88 and float84=1, clears goal bytes11 then10. Missing road/other result sets byte11=2.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436C48",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001DF5E0",
+          "bits": "0x3F800000",
+          "value": 1.0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 224,
+          "different_bytes": 164,
+          "compiled_sha256": "813d6aa028bd7d8f89e90fe81222b3ae1368610baa157f98eb892f191a6ad4dd",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 220,
+          "different_bytes": 149,
+          "compiled_sha256": "823e1d3c485085a8e050068db053e4cdf4de61982e65bcd6092c8f054715699c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 220,
+          "different_bytes": 148,
+          "compiled_sha256": "0742f0057ac4a9ac97e3ead04a69c021a1241df41d241ebc4aadf8ca74d641e9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E0530",
+      "address": "0x001E0530",
+      "file_offset": "0x000E1530",
+      "size": 152,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E0530",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ecc0e471ceb161c8e5cccef2741a5cbe309846deaa57421f50a4623c7f79fd0a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Clears byte+12 before snapshotting entity vector+D0 into goal+14/+18/+1C. Calls DC468 with reloaded owner/context. Result1 calls DFEB0; result0 sets byte11=1; other results set byte11=2.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436C98",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 148,
+          "different_bytes": 97,
+          "compiled_sha256": "1660c598dab699f22e78cdb839def03509984428dd3bb078017890f7d1322051",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 148,
+          "different_bytes": 88,
+          "compiled_sha256": "38511175804a8772c8cbd1c4385e2859e2f8b45504ca96c49d910dc5b9aad15d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 148,
+          "different_bytes": 86,
+          "compiled_sha256": "87a61eafccafcef24cf44194c41d207c22834da6dc5b6ff94fbe47811d330664",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E05C8",
+      "address": "0x001E05C8",
+      "file_offset": "0x000E15C8",
+      "size": 92,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E05C8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ea34d569ffecce569e31bb1bbe5bf81f994b595a913b49a2779fcc121143c0fd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Calls original random helper, takes signed remainder modulo10001, converts signed remainder to float, multiplies exact38D1B717 constant, reloads owner and writes float+1C.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436C98",
+          "entry_offset": "0x1C"
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001E05E8",
+          "bits": "0x38D1B717",
+          "value": 9.999999747378752e-05
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 92,
+          "different_bytes": 22,
+          "compiled_sha256": "de56edc306d09f19c20230bb042ad5201e63fdd7988ba0c0909b99fdb9c4f6d9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 92,
+          "different_bytes": 6,
+          "compiled_sha256": "f31b650137fd195cee33df83cb40bcb7f243a9560ac48e559af2162a7f2437ce",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 92,
+          "different_bytes": 6,
+          "compiled_sha256": "732ddde2c66350e61ef8c96ba2d8b61266dca77e99955d53d70dcdfa1cfa82e7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E0CE0",
+      "address": "0x001E0CE0",
+      "file_offset": "0x000E1CE0",
+      "size": 80,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E0CE0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5bb74784c3ffa4c6cb9de5ab0f6030e3b27cca5210ab0bb684d4ac3b2ed88fc6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Replaces idle dispatch table, reloads owner entity and calls 192368, then invokes base destructor with unchanged flags.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436CE8",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 23,
+          "compiled_sha256": "4d1836e1e1f4514953488b6c18f89a5d558aadeeb3376087b59955e438ec612d",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 37,
+          "compiled_sha256": "15f0e206b57de05dfc86fec2239b80f3eb1983bcb557d62f0bd798fa43f7d7a3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 34,
+          "compiled_sha256": "88354d8ec50775907843b7a8e4e6d60386b4606252be0525dcfb6f4cb8443ed5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E0F18",
+      "address": "0x001E0F18",
+      "file_offset": "0x000E1F18",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E0F18",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "6358f276af2e1f65e8aba232b894190f9fea26b2602c8a304d49a34bb6f049dc",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same observed action-destructor pattern as 1D9970 with table 436DC0.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436DC0",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "a21283854bd5147dcde2e07d9a5b5d3d0997651b22556eb10fed5c5457340ec6",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "ceeb0e70a1df9eb51e8cfc7fb8921bb72d0f3d9d43d9286fb4bbe821f963962c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "ceeb0e70a1df9eb51e8cfc7fb8921bb72d0f3d9d43d9286fb4bbe821f963962c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E0F50",
+      "address": "0x001E0F50",
+      "file_offset": "0x000E1F50",
+      "size": 80,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E0F50",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a194776aa5ab466714cdab17642948815502e250a4e1dcd775bd534a3dc85c15",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Calls gate 174500 on owner entity+8 and uses the shared action-success write pattern only for a nonzero result.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436DC0",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 76,
+          "different_bytes": 28,
+          "compiled_sha256": "005d357650800df910a2e36014873aad4c48a79b9ce118855f76721f0302fd07",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 19,
+          "compiled_sha256": "fab7317231059689728f722f9318a9d0768923d48352e3ea34caa4aead8861a7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 17,
+          "compiled_sha256": "1ac680650f964a5320caf55710d94fdb83eeb81dde09c529c989eb279cf97024",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E10C8",
+      "address": "0x001E10C8",
+      "file_offset": "0x000E20C8",
+      "size": 52,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E10C8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9856c1e7247b77cbc1c14caa2d47af86dffc1816b85acbbb642aef76da26a6a7",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Same observed action-destructor pattern as 1D9970 with table 436E48.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436E48",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 20,
+          "compiled_sha256": "18eec0a07e9551369d71ce3e0bbcccef97c9d44ad2b67a472880398b737d3c75",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "8f7e2b9be9d9df40efd8fe634917d26121e4c5be42e548eef3682e206063f0e5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 45,
+          "compiled_sha256": "8f7e2b9be9d9df40efd8fe634917d26121e4c5be42e548eef3682e206063f0e5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E1100",
+      "address": "0x001E1100",
+      "file_offset": "0x000E2100",
+      "size": 132,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E1100",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a14f3300cfd789f63c49561a78d917722257d605ccdc9b05024b46860d6dd86d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Zeroes a 12-byte stack vector, calls 177E48, reloads entity, then calls 1915D8 with entity-data word +3FC, integer mode0 and independent float5.0. Success uses shared action writes.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00436E48",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [
+        {
+          "address": "0x001E113C",
+          "bits": "0x40A00000",
+          "value": 5.0
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 128,
+          "different_bytes": 38,
+          "compiled_sha256": "43e6f407b74e902f12630327d61c6547d45008a0cbc81c7b78fe0bf296ed88f5",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 128,
+          "different_bytes": 27,
+          "compiled_sha256": "300875c499c6ddbbbfc7b2bff76a180a2a6a18673625402a9b7d9c25289effaa",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 128,
+          "different_bytes": 25,
+          "compiled_sha256": "846ddf32630a536588b9a04da59a993712e95f74d7eab61c28a0753593a1f3a7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E1EC0",
+      "address": "0x001E1EC0",
+      "file_offset": "0x000E2EC0",
+      "size": 92,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E1EC0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "b3bc3c68d0c7569b276f7010e1d2869f4e58d6b6914eeca47fa650f515e7bc5a",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Global-query getter 211BA8 takes no arguments by complete entry review; zero result writes goal+10=2 but processing continues. Resolves word+14 through 239FD8 and hash21F5A0EA through238BA0, reloads owner, and invokes1779F8 with entity,node,node word+88. Original has no null check.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437168",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 92,
+          "different_bytes": 14,
+          "compiled_sha256": "7f9a47ad873b761c48e15891c07dd254075e1f9d57385f86775b442365ed1d47",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 88,
+          "different_bytes": 23,
+          "compiled_sha256": "c6f5db1facf5d6a46c12cec3a332b30aecae02ea4790335cefe7d7c6aeeb484e",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 88,
+          "different_bytes": 21,
+          "compiled_sha256": "17453f1f8b6e5d07429bc6e0a3064672615d99c3472daeebfbd99e36ddd4a1fe",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E1F98",
+      "address": "0x001E1F98",
+      "file_offset": "0x000E2F98",
+      "size": 80,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E1F98",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "a50602b3baf527e5746964ae4c1ef5626ec1f6c7eca5ce8ee74f3f350614c2fd",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Replaces script-call table, releases retained Deimos node at+10 through already recovered CD130, clears word+10 after release, then calls shared base destructor.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004371B8",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 80,
+          "different_bytes": 23,
+          "compiled_sha256": "bb39aef7e05e79a27d7d8a913fd16251e7bafdd5af32be6e21ffdb1a959855e0",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 41,
+          "compiled_sha256": "c23437607bc4b2dfd30ff9501c3eb6eeb5a5a13fe3f2c5687f822c3134e30c83",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 76,
+          "different_bytes": 38,
+          "compiled_sha256": "2382a623baa5a220e35bfef88f6ab55e5a9210099ba0e085562fcec6da4c44a7",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E1FE8",
+      "address": "0x001E1FE8",
+      "file_offset": "0x000E2FE8",
+      "size": 36,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E1FE8",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "36327407dd4f04d366897023a84a96c9818a725eed8f6163eb8230b2ad2983ac",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Passes stored Deimos node+10 and two explicit zero integer arguments to2D02A8. No additional stale register arguments are asserted.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004371B8",
+          "entry_offset": "0x14"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compiled_sha256": "36327407dd4f04d366897023a84a96c9818a725eed8f6163eb8230b2ad2983ac",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc323",
+        "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-fno-reorder-blocks",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original instruction span matches; no padding, byte masking, or unresolved relocations."
+      },
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 36,
+          "different_bytes": 0,
+          "compiled_sha256": "36327407dd4f04d366897023a84a96c9818a725eed8f6163eb8230b2ad2983ac",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 16,
+          "different_bytes": 28,
+          "compiled_sha256": "430ca1feb4223f0a473a4825ade8d0233571aa41a6bf595767ff68c1f8b17783",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 16,
+          "different_bytes": 28,
+          "compiled_sha256": "430ca1feb4223f0a473a4825ade8d0233571aa41a6bf595767ff68c1f8b17783",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E59E0",
+      "address": "0x001E59E0",
+      "file_offset": "0x000E69E0",
+      "size": 56,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E59E0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "ecd14ff285ad63c0279d0f1ee6668cc1ce6a6a740ee6093289789b72b347ff95",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots owner, goal word+10, entity+8 and owner word+7C; invokes1B67C0 with six explicit EABI integer arguments: entity context+40,entity,owner word,goal word,0,1. All six are consumed at callee entry.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437340",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 52,
+          "different_bytes": 22,
+          "compiled_sha256": "111a84f9094b46d36769e3a47f8d5124f6a907f228a9ce023aa0a1074072036a",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 43,
+          "compiled_sha256": "64b16e8afca8033b217b56d0b2375e485462d989ac16fe711ae1c8a0a9404823",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 43,
+          "compiled_sha256": "64b16e8afca8033b217b56d0b2375e485462d989ac16fe711ae1c8a0a9404823",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E5B08",
+      "address": "0x001E5B08",
+      "file_offset": "0x000E6B08",
+      "size": 88,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E5B08",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "5fdfba1cea41b4acf97e8cc6e74a89b1a1e9ab0512dc560abc65ba15e8e21f76",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Replaces set-position table; nonzero object word+10 calls shared referenced-object release and clears+10 only after it returns, then invokes base destructor.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437390",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 92,
+          "different_bytes": 62,
+          "compiled_sha256": "6932d3a8f6e2956fd18a9c8e37bda3ee2cfaadc78eb95cf3ab653cd054cb9419",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 44,
+          "compiled_sha256": "7f8b977a0d63c8def689753f9a51c8ea4d1da2402f006032b6b425d61b6dc25c",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 84,
+          "different_bytes": 41,
+          "compiled_sha256": "2d84e94a0fc3a3d9679dc7884231139eff03b4d1df33007f96d744b3cd3da9a8",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E5BA0",
+      "address": "0x001E5BA0",
+      "file_offset": "0x000E6BA0",
+      "size": 168,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E5BA0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "3354d0fc3cb9484903cdabf938d1d78aa0bda3c03fddfebc44787182d537e8a6",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Sets output tag+0=1 then copies goal word+10 to output+10 before reloading goal word. Nonzero referenced object yields vector only if object byte6 bit40 or word20 is nonzero; failed condition leaves output vector untouched. Null reference sequentially copies goal+14/+18/+1C. External vector call reloads goal object argument.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437390",
+          "entry_offset": "0x1C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 136,
+          "different_bytes": 126,
+          "compiled_sha256": "15445a5202f421c568eb13e578f8b7d33dd7ca596c7390db21241f2aa175ed87",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 144,
+          "different_bytes": 122,
+          "compiled_sha256": "f8db6b7a3b4c28172cdffe203146f6a7d2dd14b063f25246be1e5da6c855b000",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 144,
+          "different_bytes": 121,
+          "compiled_sha256": "8b308edfd37a38dc03cfc20322d28b853c474a72021befb412dee5043100fbc9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E68D8",
+      "address": "0x001E68D8",
+      "file_offset": "0x000E78D8",
+      "size": 48,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E68D8",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "eef2206c10cbbb4ccf38bb75166a023fab738bac16eb52a6a7933e430afd2966",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Sets output tag+0=1, sequentially copies three floats from goal+18/+1C/+20 to output+4/+8/+C, then clears output word+10. This differs from set-position vector origin+14.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004374C8",
+          "entry_offset": "0x1C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 40,
+          "different_bytes": 28,
+          "compiled_sha256": "642b5cf550306645d78d17880b837776d282feb671b6faefe39bdb32cc404bf3",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 40,
+          "different_bytes": 30,
+          "compiled_sha256": "54ff228d3df1943c25184f4782576058c60f7c9d363575217cfee9fab6c32482",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 40,
+          "different_bytes": 30,
+          "compiled_sha256": "54ff228d3df1943c25184f4782576058c60f7c9d363575217cfee9fab6c32482",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E8580",
+      "address": "0x001E8580",
+      "file_offset": "0x000E9580",
+      "size": 128,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E8580",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "71bd9e048dacf242623460fbd296bc1cdbb4810175d0928579f74ed1542cdb30",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Replaces enter-vehicle table; independently releases nonzero referenced object+10 and resource+14, clears each after its call, reloads owner and clears halfword+24 bit40, then invokes base destructor.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004375A0",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 132,
+          "different_bytes": 94,
+          "compiled_sha256": "d3811e6278aa51feb20a0bbeef49ade5feeed5d711962df1dc4c964877f580cd",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 124,
+          "different_bytes": 50,
+          "compiled_sha256": "f7054a41c93bacd3d720e2825696b2e2000997b2538a1a040aaf15c288ba333b",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 124,
+          "different_bytes": 48,
+          "compiled_sha256": "e9c3c939567fba31805610ff85a7b8fd8cdcbdd01804bd3c4f767fef1a2e4e02",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "func_001E8818",
+      "address": "0x001E8818",
+      "file_offset": "0x000E9818",
+      "size": 228,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E8818",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "03e957f91fccc95185ff336f030e218501db54561420807ea56e2525a8f6207d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Nonzero goal word14 loops with full32 counter compared signed against a freshly invoked virtual count every iteration; only virtual indexed-call argument narrows to signed8. Virtual entries use signed-halfword this adjustments at table+1A0/+1B8 and method pointers+1A4/+1BC. Returned entity type14 and zero flag query trigger BAAD8 with entity word364/signed byte738. Zero goal word14 uses goal word10 and owner entity byte738 directly. m2c incorrectly narrowed loop counter; corrected manually.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_00437628",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 228,
+          "different_bytes": 173,
+          "compiled_sha256": "ca2cf884427c005b6c4dd9a4aa7042bea433cd22af19081bb6b4b5bc6cbd3214",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 248,
+          "different_bytes": 167,
+          "compiled_sha256": "4ddf0ca48a7ffbee560fef0171f664023738584547811a9a29eccd796cadd89f",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 248,
+          "different_bytes": 163,
+          "compiled_sha256": "d706d380550f6eb462010e86b4be8abd384e0afcdccee49c916f5ef82f43c7e9",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "independent_review_status": "instruction_and_layout_review_passed"
+    },
+    {
+      "name": "func_001E8E88",
+      "address": "0x001E8E88",
+      "file_offset": "0x000E9E88",
+      "size": 56,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_001E8E88",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "verified_byte_match",
+      "original_sha256": "7cd6cba04cf831ca5a253e8b036e4c0c0a55d86a8b24cf34bca9d2916c363636",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshots owner and enabled word10, saves old halfword bit40 into goal word14, then reloads owner flags and sets/clears bit40. Reload after the goal store preserves aliases.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_004377D8",
+          "entry_offset": "0x14"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 56,
+          "different_bytes": 9,
+          "compiled_sha256": "37075a2362e3b4b588b3fd98cffc9b1f85bccbde36db26e7a02abf947e517569",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "compiled_sha256": "7cd6cba04cf831ca5a253e8b036e4c0c0a55d86a8b24cf34bca9d2916c363636",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 56,
+          "different_bytes": 0,
+          "compiled_sha256": "7cd6cba04cf831ca5a253e8b036e4c0c0a55d86a8b24cf34bca9d2916c363636",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compiled_sha256": "7cd6cba04cf831ca5a253e8b036e4c0c0a55d86a8b24cf34bca9d2916c363636",
+      "verification": {
+        "method": "Complete linked function bytes at original address, exact symbol size, all relocations resolved",
+        "identical": true,
+        "different_bytes": 0,
+        "remaining_relocations": []
+      },
+      "match_evidence": {
+        "compiler_profile": "gcc29",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "comparison": "Entire original56-byte instruction span matches; no padding, byte masking, or unresolved relocations. Supported original backend; no save-width attribute required for this leaf."
+      }
+    },
+    {
+      "name": "func_0020D2C0",
+      "address": "0x0020D2C0",
+      "file_offset": "0x0010E2C0",
+      "size": 48,
+      "source": "src/game/goal_methods.c",
+      "source_name": "func_0020D2C0",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "98bbb81aa34fac1cecb7bcb7a8598b252f9efe8acfc6d3be606bc8c34fd4d78b",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Assigns base dispatch table at+0C; original flags bit0 alone controls call to general free helper2AF100.",
+      "boundary_evidence": "All entry-to-return instructions and branches reviewed; return delay slot included and alignment padding excluded.",
+      "dispatch_bindings": [
+        {
+          "table": "D_0043A2B0",
+          "entry_offset": "0x0C"
+        }
+      ],
+      "original_float_constants": [],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "compiled_size": 48,
+          "different_bytes": 19,
+          "compiled_sha256": "762e9e56a5ae2bc1a3d1b1496a3ea600d00d10159969d35ed22bf2d7926a6799",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 41,
+          "compiled_sha256": "d8aeca3b0706a6a4f1465996f4611d74cf06c0ef66611bff86908584432603cb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ]
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compiled_size": 36,
+          "different_bytes": 41,
+          "compiled_sha256": "d8aeca3b0706a6a4f1465996f4611d74cf06c0ef66611bff86908584432603cb",
+          "unresolved_relocations": [],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ]
+        }
+      ]
+    }
+  ]
+}

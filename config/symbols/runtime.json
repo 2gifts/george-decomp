@@ -25,12 +25,12 @@
     "__ieee754_fmodf": {
       "address": "0x37b9c8",
       "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "evidence": "fmodf wrapper call target plus complete shift/subtract remainder algorithm and independent16B one/signed-Zero pool mapping agree with unchanged newlib1.8.1 source; code byte match pending."
     },
     "isnanf": {
       "address": "0x37de88",
       "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "evidence": "fmodf call target, exponent-mask subtract sign-bit algorithm and unchanged newlib1.8.1 source agree; no high-level byte match awarded yet."
     },
     "fptodp": {
       "address": "0x374848",
@@ -44,18 +44,33 @@
     },
     "matherr": {
       "address": "0x37db30",
-      "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "confidence": "confirmed",
+      "evidence": "Unchanged newlib s_matherr.c compiled and linked with pinned GCC2.9 matches all36 retail bytes."
     },
     "__errno": {
       "address": "0x393368",
-      "confidence": "corroborated",
-      "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+      "confidence": "confirmed",
+      "evidence": "Retail fmodf errno33 store corroborates semantic role; unchanged newlib __errno source linked with known _impure_ptr binding matches all12 bytes under gcc323."
     },
     "__fdlib_version": {
       "address": "0x45567c",
       "confidence": "corroborated",
       "evidence": "Binding from complete fmodf wrapper control flow and embedded exception name; upstream newlib wf_fmod.c establishes reference role. Full linked byte match pending."
+    },
+    "finitef": {
+      "address": "0x37dd78",
+      "confidence": "corroborated",
+      "evidence": "Complete sign/exponent bit manipulation agrees with unchanged newlib1.8.1 finitef; no high-level byte match awarded yet."
+    },
+    "dpcmp": {
+      "address": "0x373250",
+      "confidence": "confirmed",
+      "evidence": "Compiler-generated soft-double comparison helper binding from exact linked newlib matherr; both double operands are x->arg1."
+    },
+    "floorf": {
+      "address": "0x37dda0",
+      "confidence": "corroborated",
+      "evidence": "Complete bit-twiddling floorf algorithm, huge1e30 inexact check and special-value branches match unchanged public newlib1.8.1 source; byte match pending."
     }
   }
 }

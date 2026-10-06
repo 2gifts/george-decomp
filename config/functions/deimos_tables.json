@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "No upstream source copied. m2c drafts assisted control-flow reading but unaligned64-bit copy errors were resolved manually.",
+    "Callback return registers have no consumer in the generic iterator; visitor prototypes are void.",
+    "Generic-map bucket count validity is a caller invariant; no new checks or allocation recovery were added."
+  ],
+  "functions": [
+    {
+      "name": "func_002CCB10",
+      "address": "0x002CCB10",
+      "file_offset": "0x001CDB10",
+      "size": 324,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "9f2897d2dc25c744346faa17af03838117833f2a0a49fa7fd85eca076e0a1d10",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Secondary-first lookup; release old pool-backed tags3..5 before copying all eight input bytes; acquire new value afterwards. Missing keys allocate16-byte inline-value nodes, reload bucket base after node writes, and reread input after insertion. Allocation failure logs and returns.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 324,
+        "compiled_size": 304,
+        "different_bytes": 253,
+        "first_different_offsets": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "9f2897d2dc25c744346faa17af03838117833f2a0a49fa7fd85eca076e0a1d10",
+        "compiled_sha256": "8c0e3122713b133f6badf98c2cfa36f7d8cc0f325c9937acdc173c8e429c755f"
+      }
+    },
+    {
+      "name": "func_002CDCA0",
+      "address": "0x002CDCA0",
+      "file_offset": "0x001CECA0",
+      "size": 192,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "7115bf339fc1398fe7f00ab87e78f033509671528dfeeb47f75bad4d5c634a1c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Global lookup; old value release before copy. Missing values allocate8-byte records, reload global map after allocation and insert before copy. New destination tag3..5 then acquires its pool payload. Original has no allocation-null check.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 192,
+        "compiled_size": 180,
+        "different_bytes": 135,
+        "first_different_offsets": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "7115bf339fc1398fe7f00ab87e78f033509671528dfeeb47f75bad4d5c634a1c",
+        "compiled_sha256": "c6dc88b84e352f6da4ced90a0fe25121b56d59d130fdb14f96efe0634400edc8"
+      }
+    },
+    {
+      "name": "func_002CDD60",
+      "address": "0x002CDD60",
+      "file_offset": "0x001CED60",
+      "size": 40,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "c6baad0a381be749ef1179e4688a8633e0f3d2d587fad0fa6b817e093dc62675",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Global map lookup forwarding the key unchanged and returning the stored value pointer.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 40,
+        "compiled_size": 36,
+        "different_bytes": 32,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "c6baad0a381be749ef1179e4688a8633e0f3d2d587fad0fa6b817e093dc62675",
+        "compiled_sha256": "a87e4ec4690353522ba4ce399fc7978e06d9fabb4bcaf5304d359db20976c145"
+      }
+    },
+    {
+      "name": "func_002CDD88",
+      "address": "0x002CDD88",
+      "file_offset": "0x001CED88",
+      "size": 40,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "byte_matched_and_reviewed",
+      "original_sha256": "8a06f265099a9e5988ca33b6fab468f2de7e566e3841444278f978b5453fd906",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Four-argument generic iterator adapter calls three-argument Deimos visitor with key,value,storedcontext. Generic iterator ignores callback return registers. All40 linked bytes exactly match retail.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 40,
+        "compiled_size": 40,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "8a06f265099a9e5988ca33b6fab468f2de7e566e3841444278f978b5453fd906",
+        "compiled_sha256": "8a06f265099a9e5988ca33b6fab468f2de7e566e3841444278f978b5453fd906"
+      }
+    },
+    {
+      "name": "func_002CDDB0",
+      "address": "0x002CDDB0",
+      "file_offset": "0x001CEDB0",
+      "size": 52,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "09bfb65289d6274891e53267ad702300868c73cd3dfdd87c0d15d7583709d7f5",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Build8-byte callback/context record on stack and synchronously visit global map using the reviewed adapter.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 52,
+        "compiled_size": 60,
+        "different_bytes": 56,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "09bfb65289d6274891e53267ad702300868c73cd3dfdd87c0d15d7583709d7f5",
+        "compiled_sha256": "d10670aba8d4f7045704575bc5ebacd455dba031b3360f87d570167533535bef"
+      }
+    },
+    {
+      "name": "func_002A7C08",
+      "address": "0x002A7C08",
+      "file_offset": "0x001A8C08",
+      "size": 80,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "14badd2e4d2636e8750ecc30983b5d4e2c28054203c0ef3c6c6b2ebf032e137d",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Unsigned key modulo bucket_count; first matching node returns pointer payload, missing keys returnNULL.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 80,
+        "compiled_size": 88,
+        "different_bytes": 33,
+        "first_different_offsets": [
+          10,
+          40,
+          52,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "14badd2e4d2636e8750ecc30983b5d4e2c28054203c0ef3c6c6b2ebf032e137d",
+        "compiled_sha256": "e03ca8b4b9cb686d3ac1df9bfbf3734cc73feb7b69d656c0239da55d8a282e86"
+      }
+    },
+    {
+      "name": "func_002A7CD0",
+      "address": "0x002A7CD0",
+      "file_offset": "0x001A8CD0",
+      "size": 236,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "2a943e86ca269b4116fa340004a9e0d5ddd735b18a413a80ce9cc34bb0f88560",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Flags bit0 permits duplicate keys; otherwise first existing value is replaced. Missing keys allocate12-byte nodes, prepend with bucket-base reloads after stores, increment count; allocation failure leaves map unchanged.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 236,
+        "compiled_size": 220,
+        "different_bytes": 162,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "2a943e86ca269b4116fa340004a9e0d5ddd735b18a413a80ce9cc34bb0f88560",
+        "compiled_sha256": "39b300dfbcc6eda1d89ba5c0c6ff9fe08f9d38009701812cdf171ac6da02e093"
+      }
+    },
+    {
+      "name": "func_002A8130",
+      "address": "0x002A8130",
+      "file_offset": "0x001A9130",
+      "size": 160,
+      "source": "src/game/deimos_tables.c",
+      "compiler_profile": "gcc323",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "reconstructed_from_disassembly",
+      "original_sha256": "f5435fddddeda5ee28ac076b309af74edd47ed77e22c4f12b73cf4862c3acf2c",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "evidence": "Snapshot node value,key,next before callback; next is saved before callback can remove current node. Reload map count and bucket base after every bucket chain; callback return is ignored.",
+      "boundary_evidence": "Disassembler body start and final return delay slot individually reviewed; trailing zero alignment padding excluded.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 160,
+        "compiled_size": 160,
+        "different_bytes": 57,
+        "first_different_offsets": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "f5435fddddeda5ee28ac076b309af74edd47ed77e22c4f12b73cf4862c3acf2c",
+        "compiled_sha256": "2da042d423d36806d38ca23423f56f71db41eb27d0dc2bc4f8a1d598f830cbea"
+      }
+    }
+  ]
+}
