@@ -1680,3 +1680,9 @@ another 12 complete entries/864 bytes from the same unchanged licensed sources.
 Five link naturally under the default historical recipe; seven generated getter
 COMMON objects retain genuine linker blockers. All 12 remain reconstructed and
 add no exact bytes, data mappings or source imports.
+
+## Further collision and unchanged signed division
+
+[Segment/triangle intersections](segment_intersection.md), [record collision queries](record_collision.md) and [vector transforms](vector_transform.md) recover six complete functions /2,764 original bytes with existing real bounds, matrix, normalization and licensed distance/runtime sources. Each batch retains its explicitly stated alias, finite arithmetic, helper and caller-context limits; no original library/class identity is inferred.
+
+[Signed division](gnu_signed_division.md) adds one complete 1,772-byte routine from the already pinned, unchanged GNU libgcc2 source and18 dependencies. A genuine GCC2.9 whole function/table link passes; a newer outlined local helper remains honestly unbound. All seven entries are reconstructed, with no new exact matching bytes. Independent full selected/source/proof review, private whole reproduction, central-only comparisons, canonical verification and the retail-identical hybrid build passed. The integrated reviewed tooling suite contains402 tests (one platform-specific symlink skip).

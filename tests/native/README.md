@@ -440,4 +440,6 @@ soft-runtime observer contracts. Both preserve alias-sensitive memory and actual
 call observations; SSE scalar binary32 excludes x87 excess precision. Their
 [callback](../../docs/path_callbacks2.md) and [distance](../../docs/segment_distance.md)
 notes state the finite-domain and EE hardware limits. The integrated reviewed
-tooling suite now contains 379 tests (one platform-specific symlink skip).
+tooling suite now contains 402 tests (one platform-specific symlink skip).
+
+`run_segment_intersection.py` passes389,118 warning-free checks across3,043 fixtures /698,525 original instructions and nine guards, using real published normalization. `run_record_collision.py` passes1,157,227 checks across718 fixtures /170,738 original instructions and eight guards, using real production inverse, normalization/scale and licensed segment distance; original transform helpers and finite native observer contracts retain the documented limits. `run_vector_transform.py` executes the two production transform bodies in a separate translation unit and passes136,999 checks across2,060 fixtures /61,800 original instructions and six local guards. Five synthetic vector methods also pass without the private executable; the actual-original alias method then skips. The [intersection](../../docs/segment_intersection.md), [record](../../docs/record_collision.md) and [transform](../../docs/vector_transform.md) notes describe numeric and hardware limits. Unchanged GNU signed division has actual target ABI, complete code/data and source proof; it has no new native arithmetic claim.

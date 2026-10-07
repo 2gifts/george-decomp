@@ -89004,6 +89004,784 @@
           ]
         }
       }
+    },
+    {
+      "name": "__divdi3",
+      "address": "0x36fc88",
+      "file_offset": "0x270c88",
+      "size": 1772,
+      "source": "src/runtime/gcc/libgcc2.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "author_peer_parent_full_selected_unchanged_source_proof_central_only_reproduction_and_canonical_verify_build_passed",
+      "original_sha256": "b6fa695e9243aa716684adbc910016281cf96c59835b12e1368ca2460abada75",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-DIN_LIBGCC2",
+        "-D__GCC_FLOAT_NOT_NEEDED",
+        "-Dinhibit_libc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-DL_divdi3"
+      ],
+      "link": true,
+      "link_data": {
+        ".rodata": {
+          "address": "0x454248",
+          "file_offset": "0x355248",
+          "size": 256,
+          "original_sha256": "14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac",
+          "evidence": "Actual three original LUI/SRLV/ADDIU pairs preserve table base; complete untouched compiled256B __clz_tab section and actual GCC29 whole linked output equal original table. Data identity does not award code matching progress."
+        }
+      },
+      "upstream_symbol": "__divdi3",
+      "upstream_revision": "GNU EE GCC2.9 Git b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_source_sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/libgcc2.c",
+      "upstream_license": "GPL-2.0-or-later with exact historical GCC libgcc2 linking exception; unchanged notices retained, LICENSES/GPL-2.0.txt and LICENSES/GCC-libgcc2-exception.txt.",
+      "source_provenance_manifest": "src/runtime/gcc/provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/gcc/libgcc2.c",
+          "sha256": "629b902c36ff32b0c14b372f49995988260def3d0850c8e9211395a5ab5a1d47",
+          "size": 95739
+        },
+        {
+          "path": "src/runtime/gcc/include/tconfig.h",
+          "sha256": "5f1cc04cc99889aff006b7f0fbf03b487f43dfdbfb37657ce18f2138d4a3deb1",
+          "size": 49
+        },
+        {
+          "path": "src/runtime/gcc/include/gansidecl.h",
+          "sha256": "dde0beeca62d66079f191df3277a8ff5d0d52d08431c58bc0bc3aa8cfbd2c8a8",
+          "size": 2336
+        },
+        {
+          "path": "src/runtime/gcc/include/ansidecl.h",
+          "sha256": "5bf46e39aa9d210a7876ac52f26aa663040fbee86024bd4c79f8a23433c4679a",
+          "size": 4864
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/xm-mips.h",
+          "sha256": "bdf33116e035c3a8ed7ffa2da45c4b208dd1e1558865ae214be8870b05f4ffb8",
+          "size": 2207
+        },
+        {
+          "path": "src/runtime/gcc/include/tm.h",
+          "sha256": "3d7850b2decf3587c09407b1c53d9ee8e904379e39099672cf12b869df486791",
+          "size": 134
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/elf5900.h",
+          "sha256": "4809a79756d55d19c1d6243f826074843bc7756cfaf475aed84ee3f5523a766a",
+          "size": 5891
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/elfl64.h",
+          "sha256": "3b5391a0a3cfe91da2a989b95e4515442c9d2cad71be61201911628c7bcc42f4",
+          "size": 1082
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/elf64.h",
+          "sha256": "b2bf602eedd8ebfe7ec7b3650e5f1cb1e7cd54a3685c9d8d149868cba45b5846",
+          "size": 9838
+        },
+        {
+          "path": "src/runtime/gcc/include/config/gofast.h",
+          "sha256": "05a28beeb2580637086e52165c2a18d71ab3f74bad157026cf5c88eb3822b047",
+          "size": 4108
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/mips.h",
+          "sha256": "cb883a8321119b8ab028f24e4fa5387032cf2e485dd6c98bc50798ab6607d5c4",
+          "size": 185126
+        },
+        {
+          "path": "src/runtime/gcc/include/config/mips/abi64.h",
+          "sha256": "18fa2b234d89018fc5842ae4433dd334af12a9f234570208c63677cc670b907e",
+          "size": 9861
+        },
+        {
+          "path": "src/runtime/gcc/include/config/libgloss.h",
+          "sha256": "58f165e2955c7b45d414e462ec0ce888cbab4b8642036e9c12cf296e47a63d14",
+          "size": 1484
+        },
+        {
+          "path": "src/runtime/gcc/include/machmode.h",
+          "sha256": "ef8caaa7ca085598bb8fd04f05cae2ac2a3a9fb3a0c4c07eb2fe995fc8e96ce0",
+          "size": 7163
+        },
+        {
+          "path": "src/runtime/gcc/include/machmode.def",
+          "sha256": "1cb3699a3e86c80ebd2b8698bbd0d098cb339369bbf3a7026282e71ca3a3009a",
+          "size": 5274
+        },
+        {
+          "path": "src/runtime/gcc/include/defaults.h",
+          "sha256": "7b870f666effa9b2891844455f52f80b567d36f4a75d53ef29a0add91559366a",
+          "size": 4978
+        },
+        {
+          "path": "src/runtime/gcc/include/ginclude/stddef.h",
+          "sha256": "23ed59b27cda4de82a312f98e85a258f29d61711beb873a42a1f8404558894ae",
+          "size": 9834
+        },
+        {
+          "path": "src/runtime/gcc/include/longlong.h",
+          "sha256": "6eb0c26b6d312df86949e598c135298a6126350bd18c5fad41c632a7f519579d",
+          "size": 39923
+        }
+      ],
+      "boundary_evidence": "Entire443 original instructions including single actual JR31 and delay; NOP370374 and separate default_terminate370378 excluded, despite merged1792B heuristic.",
+      "entry_proof": {
+        "kind": "two_encoded_direct_jal",
+        "references": [
+          {
+            "address": "0x365858",
+            "word": "0xc0dbf22",
+            "kind": "jal",
+            "container": "func_00365410"
+          },
+          {
+            "address": "0x391028",
+            "word": "0xc0dbf22",
+            "kind": "jal",
+            "container": "func_003908B0"
+          }
+        ],
+        "whole_containing_bodies": {
+          "func_00365410": {
+            "address": "0x365410",
+            "file_offset": "0x266410",
+            "size": 3520,
+            "sha256": "d83550b7671ed99610888a62f5ccc7238afed7f2343a0886a619405b18709046",
+            "assembly_path": "build/functions/func_00365410.s",
+            "assembly_sha256": "90c0cf88813c516ce8a2c5c1b4e36afc15bffa3ac70e2aabb325489af10f2c50",
+            "manual_review": "Geometry and call-site window only; no entire containing game function semantics claim."
+          },
+          "func_003908B0": {
+            "address": "0x3908b0",
+            "file_offset": "0x2918b0",
+            "size": 2432,
+            "sha256": "30ca4da9878258f08d23900506ea34795acafdd43f1822aaac64b0c3f0f505ef",
+            "assembly_path": "build/functions/func_003908B0.s",
+            "assembly_sha256": "3bb3d4ad655a2bad7b829a6fb630afc053853bfdca32487f999911c6b8395776",
+            "manual_review": "Geometry and call-site window only; no entire containing game function semantics claim."
+          }
+        },
+        "manual_scope": "Entire selected443 instructions; two bounded full64 argument/result windows. Whole large callers raw/assembly geometry only."
+      },
+      "complete_decoded_store_inventory": [],
+      "local_branch_evidence": [
+        {
+          "address": "0x36fc9c",
+          "word": "0x4810016",
+          "target": "0x36fcf8",
+          "delay": "0x36fca0",
+          "likely": false
+        },
+        {
+          "address": "0x36fcfc",
+          "word": "0x4810015",
+          "target": "0x36fd54",
+          "delay": "0x36fd00",
+          "likely": false
+        },
+        {
+          "address": "0x36fd70",
+          "word": "0x14a000f2",
+          "target": "0x37013c",
+          "delay": "0x36fd74",
+          "likely": false
+        },
+        {
+          "address": "0x36fd7c",
+          "word": "0x10400053",
+          "target": "0x36fecc",
+          "delay": "0x36fd80",
+          "likely": false
+        },
+        {
+          "address": "0x36fd88",
+          "word": "0x14400005",
+          "target": "0x36fda0",
+          "delay": "0x36fd8c",
+          "likely": false
+        },
+        {
+          "address": "0x36fd98",
+          "word": "0x10000007",
+          "target": "0x36fdb8",
+          "delay": "0x36fd9c",
+          "likely": false
+        },
+        {
+          "address": "0x36fdd8",
+          "word": "0x10c00006",
+          "target": "0x36fdf4",
+          "delay": "0x36fddc",
+          "likely": false
+        },
+        {
+          "address": "0x36fe04",
+          "word": "0x50a00001",
+          "target": "0x36fe0c",
+          "delay": "0x36fe08",
+          "likely": true
+        },
+        {
+          "address": "0x36fe30",
+          "word": "0x5040000c",
+          "target": "0x36fe64",
+          "delay": "0x36fe34",
+          "likely": true
+        },
+        {
+          "address": "0x36fe40",
+          "word": "0x14400007",
+          "target": "0x36fe60",
+          "delay": "0x36fe44",
+          "likely": false
+        },
+        {
+          "address": "0x36fe4c",
+          "word": "0x50400005",
+          "target": "0x36fe64",
+          "delay": "0x36fe50",
+          "likely": true
+        },
+        {
+          "address": "0x36fe64",
+          "word": "0x50a00001",
+          "target": "0x36fe6c",
+          "delay": "0x36fe68",
+          "likely": true
+        },
+        {
+          "address": "0x36fe98",
+          "word": "0x10400007",
+          "target": "0x36feb8",
+          "delay": "0x36fe9c",
+          "likely": false
+        },
+        {
+          "address": "0x36fea4",
+          "word": "0x14400004",
+          "target": "0x36feb8",
+          "delay": "0x36fea8",
+          "likely": false
+        },
+        {
+          "address": "0x36feb0",
+          "word": "0x54400001",
+          "target": "0x36feb8",
+          "delay": "0x36feb4",
+          "likely": true
+        },
+        {
+          "address": "0x36fec4",
+          "word": "0x1000010e",
+          "target": "0x370300",
+          "delay": "0x36fec8",
+          "likely": false
+        },
+        {
+          "address": "0x36fecc",
+          "word": "0x1500000a",
+          "target": "0x36fef8",
+          "delay": "0x36fed0",
+          "likely": false
+        },
+        {
+          "address": "0x36fed8",
+          "word": "0x51000001",
+          "target": "0x36fee0",
+          "delay": "0x36fedc",
+          "likely": true
+        },
+        {
+          "address": "0x36fef8",
+          "word": "0x14400005",
+          "target": "0x36ff10",
+          "delay": "0x36fefc",
+          "likely": false
+        },
+        {
+          "address": "0x36ff08",
+          "word": "0x10000007",
+          "target": "0x36ff28",
+          "delay": "0x36ff0c",
+          "likely": false
+        },
+        {
+          "address": "0x36ff48",
+          "word": "0x14c00006",
+          "target": "0x36ff64",
+          "delay": "0x36ff4c",
+          "likely": false
+        },
+        {
+          "address": "0x36ff5c",
+          "word": "0x10000042",
+          "target": "0x370068",
+          "delay": "0x36ff60",
+          "likely": false
+        },
+        {
+          "address": "0x36ff90",
+          "word": "0x50a00001",
+          "target": "0x36ff98",
+          "delay": "0x36ff94",
+          "likely": true
+        },
+        {
+          "address": "0x36ffc0",
+          "word": "0x5040000c",
+          "target": "0x36fff4",
+          "delay": "0x36ffc4",
+          "likely": true
+        },
+        {
+          "address": "0x36ffd0",
+          "word": "0x14400007",
+          "target": "0x36fff0",
+          "delay": "0x36ffd4",
+          "likely": false
+        },
+        {
+          "address": "0x36ffdc",
+          "word": "0x50400005",
+          "target": "0x36fff4",
+          "delay": "0x36ffe0",
+          "likely": true
+        },
+        {
+          "address": "0x36fff4",
+          "word": "0x50a00001",
+          "target": "0x36fffc",
+          "delay": "0x36fff8",
+          "likely": true
+        },
+        {
+          "address": "0x370028",
+          "word": "0x1040000b",
+          "target": "0x370058",
+          "delay": "0x37002c",
+          "likely": false
+        },
+        {
+          "address": "0x370038",
+          "word": "0x14400006",
+          "target": "0x370054",
+          "delay": "0x37003c",
+          "likely": false
+        },
+        {
+          "address": "0x370044",
+          "word": "0x10400004",
+          "target": "0x370058",
+          "delay": "0x370048",
+          "likely": false
+        },
+        {
+          "address": "0x370078",
+          "word": "0x50a00001",
+          "target": "0x370080",
+          "delay": "0x37007c",
+          "likely": true
+        },
+        {
+          "address": "0x3700a4",
+          "word": "0x5040000b",
+          "target": "0x3700d4",
+          "delay": "0x3700a8",
+          "likely": true
+        },
+        {
+          "address": "0x3700b4",
+          "word": "0x14400006",
+          "target": "0x3700d0",
+          "delay": "0x3700b8",
+          "likely": false
+        },
+        {
+          "address": "0x3700c0",
+          "word": "0x50400004",
+          "target": "0x3700d4",
+          "delay": "0x3700c4",
+          "likely": true
+        },
+        {
+          "address": "0x3700d4",
+          "word": "0x50a00001",
+          "target": "0x3700dc",
+          "delay": "0x3700d8",
+          "likely": true
+        },
+        {
+          "address": "0x370108",
+          "word": "0x10400007",
+          "target": "0x370128",
+          "delay": "0x37010c",
+          "likely": false
+        },
+        {
+          "address": "0x370114",
+          "word": "0x14400004",
+          "target": "0x370128",
+          "delay": "0x370118",
+          "likely": false
+        },
+        {
+          "address": "0x370120",
+          "word": "0x54400001",
+          "target": "0x370128",
+          "delay": "0x370124",
+          "likely": true
+        },
+        {
+          "address": "0x370134",
+          "word": "0x10000074",
+          "target": "0x370308",
+          "delay": "0x370138",
+          "likely": false
+        },
+        {
+          "address": "0x37013c",
+          "word": "0x10400003",
+          "target": "0x37014c",
+          "delay": "0x370140",
+          "likely": false
+        },
+        {
+          "address": "0x370144",
+          "word": "0x1000006e",
+          "target": "0x370300",
+          "delay": "0x370148",
+          "likely": false
+        },
+        {
+          "address": "0x370150",
+          "word": "0x14400005",
+          "target": "0x370168",
+          "delay": "0x370154",
+          "likely": false
+        },
+        {
+          "address": "0x370160",
+          "word": "0x10000007",
+          "target": "0x370180",
+          "delay": "0x370164",
+          "likely": false
+        },
+        {
+          "address": "0x3701a0",
+          "word": "0x54c00009",
+          "target": "0x3701c8",
+          "delay": "0x3701a4",
+          "likely": true
+        },
+        {
+          "address": "0x3701ac",
+          "word": "0x14400054",
+          "target": "0x370300",
+          "delay": "0x3701b0",
+          "likely": false
+        },
+        {
+          "address": "0x3701b8",
+          "word": "0x14400051",
+          "target": "0x370300",
+          "delay": "0x3701bc",
+          "likely": false
+        },
+        {
+          "address": "0x3701c0",
+          "word": "0x1000004f",
+          "target": "0x370300",
+          "delay": "0x3701c4",
+          "likely": false
+        },
+        {
+          "address": "0x3701fc",
+          "word": "0x50c00001",
+          "target": "0x370204",
+          "delay": "0x370200",
+          "likely": true
+        },
+        {
+          "address": "0x370228",
+          "word": "0x5040000c",
+          "target": "0x37025c",
+          "delay": "0x37022c",
+          "likely": true
+        },
+        {
+          "address": "0x370238",
+          "word": "0x14400007",
+          "target": "0x370258",
+          "delay": "0x37023c",
+          "likely": false
+        },
+        {
+          "address": "0x370244",
+          "word": "0x50400005",
+          "target": "0x37025c",
+          "delay": "0x370248",
+          "likely": true
+        },
+        {
+          "address": "0x37025c",
+          "word": "0x50c00001",
+          "target": "0x370264",
+          "delay": "0x370260",
+          "likely": true
+        },
+        {
+          "address": "0x370290",
+          "word": "0x1040000b",
+          "target": "0x3702c0",
+          "delay": "0x370294",
+          "likely": false
+        },
+        {
+          "address": "0x3702a0",
+          "word": "0x14400006",
+          "target": "0x3702bc",
+          "delay": "0x3702a4",
+          "likely": false
+        },
+        {
+          "address": "0x3702ac",
+          "word": "0x10400004",
+          "target": "0x3702c0",
+          "delay": "0x3702b0",
+          "likely": false
+        },
+        {
+          "address": "0x3702e0",
+          "word": "0x54400007",
+          "target": "0x370300",
+          "delay": "0x3702e4",
+          "likely": true
+        },
+        {
+          "address": "0x3702e8",
+          "word": "0x14c30007",
+          "target": "0x370308",
+          "delay": "0x3702ec",
+          "likely": false
+        },
+        {
+          "address": "0x3702f4",
+          "word": "0x10400005",
+          "target": "0x37030c",
+          "delay": "0x3702f8",
+          "likely": false
+        },
+        {
+          "address": "0x37031c",
+          "word": "0x11e00013",
+          "target": "0x37036c",
+          "delay": "0x370320",
+          "likely": false
+        }
+      ],
+      "original_direct_calls": [],
+      "original_returns": [
+        {
+          "address": "0x37036c",
+          "delay": "0x370370",
+          "register": 31,
+          "delay_operation": "daddu      $2, $4, $0"
+        }
+      ],
+      "source_control_evidence": [
+        {
+          "original": "36FC88..36FD54",
+          "source": "libgcc2.c mode typedefs/DIunion lines87..142, __negdi2 lines157..174 and __divdi3 lines659..685",
+          "evidence": "Full64 arguments GPR4/5 saved as magnitudes; signed high32 gates, low-word negate with borrow correction, complement sign word for each negative operand."
+        },
+        {
+          "original": "36FD54..36FECC",
+          "source": "libgcc2.c __udivmoddi4 normalized d1==0,d0>n1 arm lines494..515; longlong.h generic __udiv_qrnnd_c lines1217..1252",
+          "evidence": "Unpack high/low32; bitlength table; optional normalization, two16-bit DIVU quotient digits, each unsigned product/borrow comparison with up-to-two digit decrements; high quotient zero."
+        },
+        {
+          "original": "36FECC..37013C",
+          "source": "libgcc2.c normalized d1==0,d0<=n1 arm lines517..558; same longlong.h macro",
+          "evidence": "Intentional zero-divisor trap branch, table normalization; separate bm==0 highdigit1 arm or normalized highdigit division; lowdigit division repeated, final 64-bit quotient assembled."
+        },
+        {
+          "original": "37013C..3701C8",
+          "source": "libgcc2.c d1!=0 arms lines568..619",
+          "evidence": "High denominator greater than numerator returns zero quotient; third bitlength lookup, bm==0 case compares full high/low words yielding quotient0/1; no remainder stores because rp is literalNULL."
+        },
+        {
+          "original": "3701C8..370300",
+          "source": "libgcc2.c normalized double-word denominator lines620..653; longlong.h MIPS umul_ppmm lines667..676",
+          "evidence": "Normalize two-word numerator/divisor, two16-bit quotient-digit corrections, real MULTU high/low product and final unsigned comparison decrement; no remainder output."
+        },
+        {
+          "original": "370300..370374",
+          "source": "libgcc2.c final quotient union lines655..657 and __divdi3 conditional __negdi2 lines679..683",
+          "evidence": "Pack high/low quotient; conditional low/high negate with borrow; entire64 GPR2 result in sole JR31 delay."
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "__divdi3",
+          "address": "0x36fc88",
+          "size": 1772,
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_divdi3"
+          ],
+          "source": "src/runtime/gcc/libgcc2.c",
+          "source_kind": "c",
+          "linked": true,
+          "code_and_whole_data_identical": false,
+          "whole_readonly_data_identical": true,
+          "mapped_data_sha256": "14a5d850c255623f9472e3c650abce0c78d32f0276b315b3a276a0462d97a1ac",
+          "resolved_bindings": {},
+          "linked_elf": "build/reuse/divdi3_runtime/gcc29_linked/link-3r6j5f9d/function.elf",
+          "input_relocations": [
+            {
+              "offset": 312,
+              "type": 5,
+              "symbol": "",
+              "symbol_index": 5
+            },
+            {
+              "offset": 320,
+              "type": 6,
+              "symbol": "",
+              "symbol_index": 5
+            },
+            {
+              "offset": 672,
+              "type": 5,
+              "symbol": "",
+              "symbol_index": 5
+            },
+            {
+              "offset": 680,
+              "type": 6,
+              "symbol": "",
+              "symbol_index": 5
+            },
+            {
+              "offset": 1264,
+              "type": 5,
+              "symbol": "",
+              "symbol_index": 5
+            },
+            {
+              "offset": 1272,
+              "type": 6,
+              "symbol": "",
+              "symbol_index": 5
+            }
+          ],
+          "identical": false,
+          "expected_size": 1772,
+          "compiled_size": 1756,
+          "different_bytes": 1187,
+          "first_different_offsets": [
+            232,
+            244,
+            270,
+            277,
+            282,
+            297,
+            304,
+            305
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b6fa695e9243aa716684adbc910016281cf96c59835b12e1368ca2460abada75",
+          "compiled_sha256": "d0f0b55532e6c76661a9f17f7980437a3c7cc61372e3e368fb3a6dde262e2d3b"
+        },
+        {
+          "name": "__divdi3",
+          "address": "0x36fc88",
+          "size": 1772,
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DIN_LIBGCC2",
+            "-D__GCC_FLOAT_NOT_NEEDED",
+            "-Dinhibit_libc",
+            "-Isrc/runtime/gcc/include",
+            "-Isrc/runtime/gcc/include/config",
+            "-Isrc/runtime/gcc/include/ginclude",
+            "-DL_divdi3"
+          ],
+          "source": "src/runtime/gcc/libgcc2.c",
+          "source_kind": "c",
+          "linked": false,
+          "link_error": "Missing retail binding for defined reference: __udivmoddi4",
+          "remaining_reference": "Compiler emits a genuine separate local __udivmoddi4; no corresponding standalone retail address is proved. Original selected body has no calls and inlines its unsigned division graph.",
+          "comparison_kind": "Unlinked complete selected STT_FUNC; relocation bytes retained and counted, no masking or fabricated helper binding.",
+          "code_and_whole_data_identical": false,
+          "whole_readonly_data_identical": true,
+          "readonly_data_evidence": "Complete untouched input .rodata equals original256B; failed link does not establish actual linked data or a code match.",
+          "mapped_data_sha256": null,
+          "resolved_bindings": {},
+          "identical": false,
+          "expected_size": 1772,
+          "compiled_size": 348,
+          "different_bytes": 1719,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9
+          ],
+          "unresolved_relocations": [
+            192
+          ],
+          "expected_sha256": "b6fa695e9243aa716684adbc910016281cf96c59835b12e1368ca2460abada75",
+          "compiled_sha256": "90031946ce0e0f0dda7bde38e619ae832d50e51b0c1fac2b76e31feaf27446c3"
+        }
+      ],
+      "implementation_limits": [
+        "No exact code match: genuinely linked GCC29 whole1756B differs1187B from retail1772B, although actual whole256B readonly table equals.",
+        "GCC323 genuine local __udivmoddi4 exists only as compiled1832B function; no proved standalone retail binding. Selected348B is honestly unlinked with actual R_MIPS_26 at192. No fabricated alias, cropping, padding or mapper change.",
+        "Library code deliberately invokes undefined/trapping division when denominator is zero. Signed minimum divided by minus one and compiler-sensitive signed word negation overflow have no portable ISO C behavioral guarantee; original target operations retained.",
+        "No native arithmetic, malformed-domain, upper128bit-register, trap timing, scheduler or whole original compiler identification claim. ABI observer proves actual target modes/layout only.",
+        "GCC323 old-header deprecated multiline string warnings retained in diagnostics; no suppression or source change.",
+        "Read-only data/source identity does not imply a matching function or data progress award."
+      ],
+      "evidence": "Entire unchanged active L_divdi3/__negdi2/__udivmoddi4 source graph and target longlong macros agree with complete original443 instructions and full256B bit-length lookup table. Actual target20-word ABI matches both profiles. Natural GCC29 whole code1756B differs1187B from retail1772B; GCC323 separate local helper blocks a full retail link. Reconstructed only; no native arithmetic or original compiler claim."
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",
@@ -90914,5 +91692,20 @@
     ],
     "limits": "Reuse unchanged already pinned C++ sources/private headers. Original getter storage/names and generated literal pools are identity-only, no storage mapper or data award. Seven actual compiler COMMON blockers remain link:false. Full source/control/ABI proof passed all independent reviews; no native RTTI/EH execution claim.",
     "canonical_status": "Central-only48 full comparison records reproduced; canonical verifier/build passed, zero new exact awards."
+  },
+  "signed_division_evidence": {
+    "functions": 1,
+    "original_bytes": 1772,
+    "selected_instructions": 443,
+    "actual_entry_refs": 2,
+    "whole_readonly_table_bytes": 256,
+    "gcc29_complete_link_size": 1756,
+    "gcc29_different_bytes": 1187,
+    "gcc323_defined_local_helper_blocker": true,
+    "exact_matches": 0,
+    "source_dependencies_per_profile": 18,
+    "target_abi_words_per_profile": 20,
+    "limits": "Complete unchanged signed64 source graph; whole256B readonly table identity only. No native arithmetic/hardware/trap/upper128 claim. Genuine GCC323 local helper remains unbound; no mapper or source patches.",
+    "canonical_status": "Central-only eleven whole proof dictionaries reproduced; canonical GCC29 whole1756B function/256B table passed strict link, zero new exact award; canonical verifier/build passed."
   }
 }
