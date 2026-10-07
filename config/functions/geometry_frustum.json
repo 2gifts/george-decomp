@@ -1,0 +1,1819 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002A3DF8",
+      "address": "0x002A3DF8",
+      "size": 1832,
+      "file_offset": "0x001A4DF8",
+      "original_sha256": "c04b4591879b8df79d2bb7f745fc0b9fca6ea2a4f37da01f5c87e7772b22eef8",
+      "original_assembly": "build/functions/func_002A3DF8.s",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x002A4520",
+      "source": "src/game/geometry_frustum.c",
+      "source_kind": "c",
+      "source_name": "func_002A3DF8",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "complete_author_parent_peer_original_source_native_and_whole_link_review_passed",
+      "evidence": "Entire458-instruction straight-line six-face body; actualGPR4/GPR5/f12..f15 ABI in full170-instruction setup caller2B85D0. Published actor179168 calls setup. All five actual original normalizations and existing source reused, temporary lastvertex/store+freshreload order retained.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 1832,
+        "compiled_size": 1308,
+        "different_bytes": 1574,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "c04b4591879b8df79d2bb7f745fc0b9fca6ea2a4f37da01f5c87e7772b22eef8",
+        "compiled_sha256": "4b56cc5acd92e59a27b09cf892b637a67da5fb717e704a1edc90f41ab23131c6"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_002A3DF8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": ".local/geometry_frustum/gcc323.o",
+          "identical": false,
+          "expected_size": 1832,
+          "compiled_size": 1308,
+          "different_bytes": 1574,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04b4591879b8df79d2bb7f745fc0b9fca6ea2a4f37da01f5c87e7772b22eef8",
+          "compiled_sha256": "4b56cc5acd92e59a27b09cf892b637a67da5fb717e704a1edc90f41ab23131c6"
+        },
+        "gcc29": {
+          "name": "func_002A3DF8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": ".local/geometry_frustum/gcc29.o",
+          "identical": false,
+          "expected_size": 1832,
+          "compiled_size": 1320,
+          "different_bytes": 1588,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04b4591879b8df79d2bb7f745fc0b9fca6ea2a4f37da01f5c87e7772b22eef8",
+          "compiled_sha256": "d34cb4173c0fbbb5fb24c15357d0d806e810348f908748b7b52fbeb6d21974cc"
+        },
+        "gcc29_precision": {
+          "name": "func_002A3DF8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": ".local/geometry_frustum/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 1832,
+          "compiled_size": 1320,
+          "different_bytes": 1587,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            12,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04b4591879b8df79d2bb7f745fc0b9fca6ea2a4f37da01f5c87e7772b22eef8",
+          "compiled_sha256": "cf5279f6b54d57aa20146ce33b1c108fb057518ce091e7a2d9c0ffb6741a63eb"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x002B8840",
+          "word": "0x0C0A8F7E",
+          "delay_word": "0x4600B386",
+          "caller": {
+            "name": "func_002B85D0",
+            "address": "0x002B85D0",
+            "size": 680,
+            "file_offset": "0x001B95D0",
+            "original_sha256": "36f2fd6bce95b88893b7a1966f88ef6efc23bcffaa2c9ea608f1c0d22ded3029",
+            "original_assembly": "build/functions/func_002B85D0.s",
+            "terminal_jr": "0x002B8870",
+            "terminal_jr_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01C0",
+            "excluded_zero_alignment_bytes": 0,
+            "following_entry": "0x002B8878"
+          },
+          "caller_registered_manifests": []
+        }
+      ],
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "preceding_complete_body": {
+        "name": "func_002A3CA0",
+        "address": "0x002A3CA0",
+        "size": 344,
+        "file_offset": "0x001A4CA0",
+        "original_sha256": "2ad935f4aca333a4d39a9b611b1cde0c6306de8c554339515eb8468b952ee7b8",
+        "original_assembly": "build/functions/func_002A3CA0.s",
+        "terminal_jr": "0x002A3DF0",
+        "terminal_jr_word": "0x03E00008",
+        "terminal_delay_word": "0x27BD0020",
+        "excluded_zero_alignment_bytes": 0,
+        "following_entry": "0x002A3DF8"
+      },
+      "terminal_jr": "0x002A4518",
+      "terminal_delay_word": "0x27BD00E0",
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x002A3E00",
+          "word": "0x7FB000D0",
+          "base_gpr": 29,
+          "source_register": 16,
+          "register_file": "GPR",
+          "signed_offset": 208,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E08",
+          "word": "0x7FB100C0",
+          "base_gpr": 29,
+          "source_register": 17,
+          "register_file": "GPR",
+          "signed_offset": 192,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E10",
+          "word": "0x7FB200B0",
+          "base_gpr": 29,
+          "source_register": 18,
+          "register_file": "GPR",
+          "signed_offset": 176,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E18",
+          "word": "0x7FB300A0",
+          "base_gpr": 29,
+          "source_register": 19,
+          "register_file": "GPR",
+          "signed_offset": 160,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E20",
+          "word": "0x7FB40090",
+          "base_gpr": 29,
+          "source_register": 20,
+          "register_file": "GPR",
+          "signed_offset": 144,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E28",
+          "word": "0x7FB50080",
+          "base_gpr": 29,
+          "source_register": 21,
+          "register_file": "GPR",
+          "signed_offset": 128,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E30",
+          "word": "0x7FB60070",
+          "base_gpr": 29,
+          "source_register": 22,
+          "register_file": "GPR",
+          "signed_offset": 112,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E38",
+          "word": "0x7FB70060",
+          "base_gpr": 29,
+          "source_register": 23,
+          "register_file": "GPR",
+          "signed_offset": 96,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E40",
+          "word": "0x7FBE0050",
+          "base_gpr": 29,
+          "source_register": 30,
+          "register_file": "GPR",
+          "signed_offset": 80,
+          "size": 16
+        },
+        {
+          "instruction": "0x002A3E48",
+          "word": "0xFFBF0040",
+          "base_gpr": 29,
+          "source_register": 31,
+          "register_file": "GPR",
+          "signed_offset": 64,
+          "size": 8
+        },
+        {
+          "instruction": "0x002A3E7C",
+          "word": "0xE7A00000",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3E90",
+          "word": "0xAFA40030",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "GPR",
+          "signed_offset": 48,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3E9C",
+          "word": "0xE7A00004",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EA4",
+          "word": "0xE7A20020",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 32,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EAC",
+          "word": "0xAFA70034",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "GPR",
+          "signed_offset": 52,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EB0",
+          "word": "0xE7A10008",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EBC",
+          "word": "0xE7A00024",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 36,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EC4",
+          "word": "0xE7A50014",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3ECC",
+          "word": "0xE7A30018",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3ED0",
+          "word": "0xE7A40010",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3ED4",
+          "word": "0xE6060010",
+          "base_gpr": 16,
+          "source_register": 6,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3ED8",
+          "word": "0xE7A10028",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 40,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EE0",
+          "word": "0xE6200004",
+          "base_gpr": 17,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3EE8",
+          "word": "0xE6210008",
+          "base_gpr": 17,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3F40",
+          "word": "0xE602002C",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 44,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3F44",
+          "word": "0xE6C00004",
+          "base_gpr": 22,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3F48",
+          "word": "0xE6C10008",
+          "base_gpr": 22,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3FA0",
+          "word": "0xE6020048",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 72,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3FA4",
+          "word": "0xE6600004",
+          "base_gpr": 19,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A3FA8",
+          "word": "0xE6610008",
+          "base_gpr": 19,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4000",
+          "word": "0xE6020064",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 100,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4004",
+          "word": "0xE6400004",
+          "base_gpr": 18,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4008",
+          "word": "0xE6410008",
+          "base_gpr": 18,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4060",
+          "word": "0xE6020080",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 128,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4064",
+          "word": "0xE6800004",
+          "base_gpr": 20,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4068",
+          "word": "0xE6810008",
+          "base_gpr": 20,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4074",
+          "word": "0xE600009C",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 156,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4084",
+          "word": "0xE4640004",
+          "base_gpr": 3,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4090",
+          "word": "0xE4620008",
+          "base_gpr": 3,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40B0",
+          "word": "0xE603009C",
+          "base_gpr": 16,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 156,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40B4",
+          "word": "0xE4600008",
+          "base_gpr": 3,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40B8",
+          "word": "0xE4610004",
+          "base_gpr": 3,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40DC",
+          "word": "0xE7A40004",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40E8",
+          "word": "0xE7A50008",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A40F0",
+          "word": "0xE7A30000",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4110",
+          "word": "0xE7A20010",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4118",
+          "word": "0xE7A00014",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4128",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A413C",
+          "word": "0xE6040000",
+          "base_gpr": 16,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4140",
+          "word": "0xE6080004",
+          "base_gpr": 16,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4148",
+          "word": "0xE6000008",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A418C",
+          "word": "0xE600000C",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 12,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41A4",
+          "word": "0xE7A40000",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41AC",
+          "word": "0xE7A20004",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41B4",
+          "word": "0xE7A30008",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41D0",
+          "word": "0xE7A70010",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41D8",
+          "word": "0xE7A00014",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41E8",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A41FC",
+          "word": "0xE602001C",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 28,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4200",
+          "word": "0xE6E80004",
+          "base_gpr": 23,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4208",
+          "word": "0xE6E00008",
+          "base_gpr": 23,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A424C",
+          "word": "0xE6000028",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 40,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4264",
+          "word": "0xE7A40000",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A426C",
+          "word": "0xE7A30008",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4274",
+          "word": "0xE7A20004",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4290",
+          "word": "0xE7A70010",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4298",
+          "word": "0xE7A00014",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A42A8",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A42BC",
+          "word": "0xE6020038",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 56,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A42C0",
+          "word": "0xE7C80004",
+          "base_gpr": 30,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A42C8",
+          "word": "0xE7C00008",
+          "base_gpr": 30,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A430C",
+          "word": "0xE6000044",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 68,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4324",
+          "word": "0xE7A40000",
+          "base_gpr": 29,
+          "source_register": 4,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A432C",
+          "word": "0xE7A20004",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4334",
+          "word": "0xE7A30008",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4350",
+          "word": "0xE7A70010",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A435C",
+          "word": "0xE7A00014",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4364",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A437C",
+          "word": "0xE6020054",
+          "base_gpr": 16,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 84,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4384",
+          "word": "0xE4E80004",
+          "base_gpr": 7,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A438C",
+          "word": "0xE4E00008",
+          "base_gpr": 7,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A43D8",
+          "word": "0xE6000060",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 96,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A43F0",
+          "word": "0xE7A50000",
+          "base_gpr": 29,
+          "source_register": 5,
+          "register_file": "FPR",
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A43F8",
+          "word": "0xE7A20008",
+          "base_gpr": 29,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4400",
+          "word": "0xE7A10004",
+          "base_gpr": 29,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A441C",
+          "word": "0xE7A70010",
+          "base_gpr": 29,
+          "source_register": 7,
+          "register_file": "FPR",
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4424",
+          "word": "0xE7A00014",
+          "base_gpr": 29,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4434",
+          "word": "0xE7A30018",
+          "base_gpr": 29,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4448",
+          "word": "0xE6010070",
+          "base_gpr": 16,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 112,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A444C",
+          "word": "0xE6A80004",
+          "base_gpr": 21,
+          "source_register": 8,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4454",
+          "word": "0xE6A00008",
+          "base_gpr": 21,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A447C",
+          "word": "0xE603008C",
+          "base_gpr": 16,
+          "source_register": 3,
+          "register_file": "FPR",
+          "signed_offset": 140,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44A8",
+          "word": "0xE600007C",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 124,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44B4",
+          "word": "0xE4410004",
+          "base_gpr": 2,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44C0",
+          "word": "0xE4420008",
+          "base_gpr": 2,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44CC",
+          "word": "0xE600008C",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 140,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44E0",
+          "word": "0xE4410004",
+          "base_gpr": 2,
+          "source_register": 1,
+          "register_file": "FPR",
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A44E4",
+          "word": "0xE4420008",
+          "base_gpr": 2,
+          "source_register": 2,
+          "register_file": "FPR",
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x002A4510",
+          "word": "0xE6000098",
+          "base_gpr": 16,
+          "source_register": 0,
+          "register_file": "FPR",
+          "signed_offset": 152,
+          "size": 4
+        }
+      ],
+      "actual_direct_calls": [
+        {
+          "instruction": "0x002A4144",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538",
+          "delay_word": "0xE6000008"
+        },
+        {
+          "instruction": "0x002A4204",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538",
+          "delay_word": "0xE6E00008"
+        },
+        {
+          "instruction": "0x002A42C4",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538",
+          "delay_word": "0xE7C00008"
+        },
+        {
+          "instruction": "0x002A4388",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538",
+          "delay_word": "0xE4E00008"
+        },
+        {
+          "instruction": "0x002A4450",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538",
+          "delay_word": "0xE6A00008"
+        }
+      ],
+      "local_branch_evidence": [],
+      "implementation_limits": [
+        "Finite normal/zero binary32 observer excludes EE exceptional/subnormal/overflow arithmetic, FCR and timing. Valid aligned complete frame64/output168 spans required; no invented guard.",
+        "Shifted input/output aliases, nonunit/degenerate axes, zero extents and signed zeros preserved. Exactly six observed28B face records, no original class or format-capacity inference.",
+        "Source consumes GPR4/GPR5/f12..f15. Sole containing caller ignores GPR2/f0 immediately after call; observed void result does not assert an original prototype.",
+        "Only the selected1832B is proposed; existing3538 helper, geometry constructor, setup/creator/actor callers and all ABI/layout data get no new credit."
+      ]
+    }
+  ],
+  "full_original_instructions": 458,
+  "full_original_code_bytes": 1832,
+  "complete_whole_link_evidence": {
+    "gcc323": {
+      "elf_type": "ET_EXEC",
+      "complete_symbol_address": "0x002A3DF8",
+      "complete_symbol_size": 1308,
+      "complete_code_sha256": "4b56cc5acd92e59a27b09cf892b637a67da5fb717e704a1edc90f41ab23131c6",
+      "output_relocations": [],
+      "actual_encoded_normalizer_calls": [
+        {
+          "instruction": "0x002A401C",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A40B4",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A414C",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A41E4",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A4288",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        }
+      ],
+      "result": "Whole natural linked code compared, including all missing/extra bytes. Zero exact, no masking, patching, flag grid or generated data."
+    },
+    "gcc29": {
+      "elf_type": "ET_EXEC",
+      "complete_symbol_address": "0x002A3DF8",
+      "complete_symbol_size": 1320,
+      "complete_code_sha256": "d34cb4173c0fbbb5fb24c15357d0d806e810348f908748b7b52fbeb6d21974cc",
+      "output_relocations": [],
+      "actual_encoded_normalizer_calls": [
+        {
+          "instruction": "0x002A4028",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A40C0",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A4158",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A41F0",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A4294",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        }
+      ],
+      "result": "Whole natural linked code compared, including all missing/extra bytes. Zero exact, no masking, patching, flag grid or generated data."
+    },
+    "gcc29_precision": {
+      "elf_type": "ET_EXEC",
+      "complete_symbol_address": "0x002A3DF8",
+      "complete_symbol_size": 1320,
+      "complete_code_sha256": "cf5279f6b54d57aa20146ce33b1c108fb057518ce091e7a2d9c0ffb6741a63eb",
+      "output_relocations": [],
+      "actual_encoded_normalizer_calls": [
+        {
+          "instruction": "0x002A4028",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A40C0",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A4158",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A41F0",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        },
+        {
+          "instruction": "0x002A4294",
+          "word": "0x0C0A8D4E",
+          "target": "0x002A3538"
+        }
+      ],
+      "result": "Whole natural linked code compared, including all missing/extra bytes. Zero exact, no masking, patching, flag grid or generated data."
+    }
+  },
+  "caller_manual_review_and_abi": {
+    "setup": {
+      "name": "func_002B85D0",
+      "address": "0x002B85D0",
+      "size": 680,
+      "file_offset": "0x001B95D0",
+      "original_sha256": "36f2fd6bce95b88893b7a1966f88ef6efc23bcffaa2c9ea608f1c0d22ded3029",
+      "original_assembly": "build/functions/func_002B85D0.s",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x002B8878",
+      "manual_review": "Author complete170 original instructions; parent complete170 original instructions per scope approval. Output+0xC0, aligned localframe+0x70, independent f12..15; epilogue ignores return."
+    },
+    "published_actor": {
+      "name": "func_00179168",
+      "address": "0x00179168",
+      "size": 212,
+      "file_offset": "0x0007A168",
+      "original_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+      "original_assembly": "build/functions/func_00179168.s",
+      "excluded_zero_alignment_bytes": 4,
+      "following_entry": "0x00179240",
+      "manual_review": "Author complete53 original instructions and existing published actor source/header. No additional caller award."
+    },
+    "creator": {
+      "name": "func_002B84B8",
+      "address": "0x002B84B8",
+      "size": 280,
+      "file_offset": "0x001B94B8",
+      "original_sha256": "d6ad1d3ead3206f7135cf25d3be034dc8614f2608077deb5c012cb4d78e1317d",
+      "original_assembly": "build/functions/func_002B84B8.s",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x002B85D0",
+      "manual_review": "Author complete70 original instructions only; parent has not independently read this new supporting creator at scope approval. Full raw/assembly geometry/hash proved. No source recovery or capacity/class assertion."
+    },
+    "actual_setup_incoming_refs": [
+      {
+        "instruction": "0x0017921C",
+        "word": "0x0C0AE174",
+        "delay_word": "0xE7A10058",
+        "caller": {
+          "name": "func_00179168",
+          "address": "0x00179168",
+          "size": 212,
+          "file_offset": "0x0007A168",
+          "original_sha256": "e100d788ccb85ee166a901ae6b45192592b799c965f0c72e2dcc146eb6708ff8",
+          "original_assembly": "build/functions/func_00179168.s",
+          "terminal_jr": "0x00179234",
+          "terminal_jr_word": "0x03E00008",
+          "terminal_delay_word": "0x27BD0080",
+          "excluded_zero_alignment_bytes": 4,
+          "following_entry": "0x00179240"
+        },
+        "caller_registered_manifests": [
+          "config/functions/actor_actions.json"
+        ]
+      },
+      {
+        "instruction": "0x002B852C",
+        "word": "0x0C0AE174",
+        "delay_word": "0xAFA00028",
+        "caller": {
+          "name": "func_002B84B8",
+          "address": "0x002B84B8",
+          "size": 280,
+          "file_offset": "0x001B94B8",
+          "original_sha256": "d6ad1d3ead3206f7135cf25d3be034dc8614f2608077deb5c012cb4d78e1317d",
+          "original_assembly": "build/functions/func_002B84B8.s",
+          "terminal_jr": "0x002B85C8",
+          "terminal_jr_word": "0x03E00008",
+          "terminal_delay_word": "0x27BD0060",
+          "excluded_zero_alignment_bytes": 0,
+          "following_entry": "0x002B85D0"
+        },
+        "caller_registered_manifests": []
+      }
+    ],
+    "original_selected_abi_window": {
+      "call_instruction": "0x002B8840",
+      "start": "0x002B8800",
+      "size": 92,
+      "sha256": "3c4e15c0483b98cf2644a74195c585a84d035975204d1703b11c50c1130ab358",
+      "words": [
+        {
+          "instruction": "0x002B8800",
+          "word": "0xC7B40044"
+        },
+        {
+          "instruction": "0x002B8804",
+          "word": "0xC7AC0048"
+        },
+        {
+          "instruction": "0x002B8808",
+          "word": "0x3C014396"
+        },
+        {
+          "instruction": "0x002B880C",
+          "word": "0x44810000"
+        },
+        {
+          "instruction": "0x002B8810",
+          "word": "0x460CA302"
+        },
+        {
+          "instruction": "0x002B8814",
+          "word": "0x4600BE00"
+        },
+        {
+          "instruction": "0x002B8818",
+          "word": "0x0C0DEC6C"
+        },
+        {
+          "instruction": "0x002B881C",
+          "word": "0x46156302"
+        },
+        {
+          "instruction": "0x002B8820",
+          "word": "0x4615A302"
+        },
+        {
+          "instruction": "0x002B8824",
+          "word": "0x0C0DEC6C"
+        },
+        {
+          "instruction": "0x002B8828",
+          "word": "0x4600C582"
+        },
+        {
+          "instruction": "0x002B882C",
+          "word": "0x4600C346"
+        },
+        {
+          "instruction": "0x002B8830",
+          "word": "0x266400C0"
+        },
+        {
+          "instruction": "0x002B8834",
+          "word": "0x46006BC2"
+        },
+        {
+          "instruction": "0x002B8838",
+          "word": "0x0240282D"
+        },
+        {
+          "instruction": "0x002B883C",
+          "word": "0x4600BB06"
+        },
+        {
+          "instruction": "0x002B8840",
+          "word": "0x0C0A8F7E"
+        },
+        {
+          "instruction": "0x002B8844",
+          "word": "0x4600B386"
+        },
+        {
+          "instruction": "0x002B8848",
+          "word": "0x7BB00180"
+        },
+        {
+          "instruction": "0x002B884C",
+          "word": "0x7BB10170"
+        },
+        {
+          "instruction": "0x002B8850",
+          "word": "0x7BB20160"
+        },
+        {
+          "instruction": "0x002B8854",
+          "word": "0x7BB30150"
+        },
+        {
+          "instruction": "0x002B8858",
+          "word": "0xDFBF0140"
+        }
+      ],
+      "contract": "GPR4 is caller output+0xC0, GPR5 is an actual aligned64B frame at callerSP+0x70, independent f12/f13/f14/f15 retain near/far/horizontal/vertical source values. Immediately following epilogue does not use GPR2 or f0 result. Constructor whole body consumes only GPR4/GPR5/f12..15; observed void result, no type/class identity claim."
+    }
+  },
+  "reused_source_and_complete_helper_proof": {
+    "existing_sources": [
+      {
+        "path": "src/game/geometry.c",
+        "sha256": "a2848488e9159d3a7b946d6cfa2edd494aab0c46a07a3d006740f494bf5c930a"
+      },
+      {
+        "path": "include/george/geometry.h",
+        "sha256": "2fb499032a30cd4a356234ed0b6afc4c2a201178d9a0f254dfa00c9854248471"
+      },
+      {
+        "path": "src/game/vector_math.c",
+        "sha256": "9086b7784f1909a7fa50cb32ce24c7f7803b55388ed966420b334082e19e304f"
+      },
+      {
+        "path": "include/george/vector_math.h",
+        "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+      },
+      {
+        "path": "include/george/math_helpers.h",
+        "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+      },
+      {
+        "path": "include/george/compiler.h",
+        "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+      },
+      {
+        "path": "include/george/ee_math.h",
+        "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+      },
+      {
+        "path": "include/george/types.h",
+        "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+      }
+    ],
+    "existing_helper": {
+      "name": "func_002A3538",
+      "address": "0x002A3538",
+      "size": 136,
+      "file_offset": "0x001A4538",
+      "original_sha256": "a0e83bf6cdaad7427f7421ae598cd2adad00350d1e6f7f92572667e5b85a71b0",
+      "original_assembly": "build/functions/func_002A3538.s",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x002A35C0",
+      "complete_original_branch_inventory": [
+        {
+          "instruction": "0x002A3570",
+          "word": "0x4503000C",
+          "target": "0x002A35A4",
+          "delay_word": "0xE4870008"
+        },
+        {
+          "instruction": "0x002A359C",
+          "word": "0x10000006",
+          "target": "0x002A35B8",
+          "delay_word": "0xE4800004"
+        }
+      ],
+      "ee_sqrt_instruction": "0x002A3564",
+      "ee_sqrt_word": "0x46000184",
+      "return_contract": "float length ignored at all five selected call sites, next f0 overwritten before use; captureXYZ/zero fallback/(1/length)*XYZ and Z/X/Y real stores retained."
+    },
+    "ordinary_C_reuse": "The reviewed geometry.c NORMAL_COMPONENTS and PLANE_DISTANCE expression shapes and existing frame/face/vector types are reused. Existing published source/header remains unchanged. No external algorithm/source identity or new license import inferred.",
+    "hardware_primitive": "Existing vector_math source uses published george_ee_square_root, a narrow target SQRT.S primitive. The new constructor itself is ordinaryC; native uses host sqrt for finite fixtures only.",
+    "award": false
+  },
+  "target_compiler_abi": {
+    "gcc323": {
+      "flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-ffunction-sections"
+      ],
+      "object_sha256": "e6d392f8a6cd891881570d19346767cc5d51cd54828f3b5002cfa4361af44874",
+      "source_sha256": "58f6488d71b2003c5b8850cb18d5605aaec9e1d90e3cb06b02dc574b2ecbdeb2",
+      "layout_words": [
+        4,
+        4,
+        64,
+        48,
+        28,
+        12,
+        16,
+        168,
+        140,
+        12,
+        4,
+        8
+      ],
+      "data_sha256": "56f655bf3e1b42da376b6cb905626183d1c1284bfd78c8cf2eacf6c50b51d3a2",
+      "meanings": [
+        "pointer",
+        "float",
+        "frame",
+        "position",
+        "face",
+        "distance",
+        "vertex",
+        "six faces",
+        "face5",
+        "Vec3",
+        "Vec3Y",
+        "Vec3Z"
+      ],
+      "whole_linked_caller_size": 72,
+      "whole_linked_caller_sha256": "012c508a66dc487b49245cacf1477cf3d5a2e2b1a88dafd4968cb190a76562a6",
+      "input_relocations": [
+        {
+          "offset": 52,
+          "type": 4,
+          "symbol": "func_002A3DF8"
+        }
+      ],
+      "remaining_relocations": [],
+      "actual_encoded_transfer_observation": {
+        "instruction": "0x00400034",
+        "word": "0x0C0A8F7E",
+        "kind": "JAL",
+        "target": "0x002A3DF8",
+        "delay_word": "0x34A54560",
+        "gpr4": 1193040,
+        "gpr5": 2311520,
+        "f12_f15": [
+          1067450368,
+          3223322624,
+          1081081856,
+          3230662656
+        ],
+        "instruction_count": 15
+      },
+      "limit": "Genuine authored compiler+GNUld caller and target-layout experiment only. GCC29 naturally tails via J; GCC323 emits JAL. No target body substitute, original source syntax/class inference or code/data award."
+    },
+    "gcc29": {
+      "flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-ffunction-sections"
+      ],
+      "object_sha256": "07081106cc9f2172a24590611df6b533e18c0149530ce38cfedb0445265b4702",
+      "source_sha256": "58f6488d71b2003c5b8850cb18d5605aaec9e1d90e3cb06b02dc574b2ecbdeb2",
+      "layout_words": [
+        4,
+        4,
+        64,
+        48,
+        28,
+        12,
+        16,
+        168,
+        140,
+        12,
+        4,
+        8
+      ],
+      "data_sha256": "56f655bf3e1b42da376b6cb905626183d1c1284bfd78c8cf2eacf6c50b51d3a2",
+      "meanings": [
+        "pointer",
+        "float",
+        "frame",
+        "position",
+        "face",
+        "distance",
+        "vertex",
+        "six faces",
+        "face5",
+        "Vec3",
+        "Vec3Y",
+        "Vec3Z"
+      ],
+      "whole_linked_caller_size": 52,
+      "whole_linked_caller_sha256": "c7f2a4de234d8f8252a7050a17063241bca10e4088407121c72f1762cc42868b",
+      "input_relocations": [
+        {
+          "offset": 44,
+          "type": 4,
+          "symbol": "func_002A3DF8"
+        }
+      ],
+      "remaining_relocations": [],
+      "actual_encoded_transfer_observation": {
+        "instruction": "0x0040002C",
+        "word": "0x080A8F7E",
+        "kind": "tail J",
+        "target": "0x002A3DF8",
+        "delay_word": "0x34A54560",
+        "gpr4": 1193040,
+        "gpr5": 2311520,
+        "f12_f15": [
+          1067450368,
+          3223322624,
+          1081081856,
+          3230662656
+        ],
+        "instruction_count": 13
+      },
+      "limit": "Genuine authored compiler+GNUld caller and target-layout experiment only. GCC29 naturally tails via J; GCC323 emits JAL. No target body substitute, original source syntax/class inference or code/data award."
+    }
+  },
+  "actual_target_dependencies": {
+    "gcc323": {
+      "compiler_sha256": "b4968a6bc322e9a3d69bd0addfd59b39dd7710eaea3e42db16f4a5567961751e",
+      "dependencies": [
+        {
+          "path": "src/game/geometry_frustum.c",
+          "size": 5466,
+          "sha256": "f9bf169fd85aeac8c7e0b07771e51c55d465a84cac74ade853c1ccc613d56a27"
+        },
+        {
+          "path": "include/george/geometry_frustum.h",
+          "size": 622,
+          "sha256": "4617868ae3307634e4eb3f382897c4043695d9a78c0345c58088081736d903ce"
+        },
+        {
+          "path": "include/george/geometry.h",
+          "size": 892,
+          "sha256": "2fb499032a30cd4a356234ed0b6afc4c2a201178d9a0f254dfa00c9854248471"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "size": 762,
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "size": 5556,
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "size": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "size": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "size": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        }
+      ]
+    },
+    "gcc29": {
+      "compiler_sha256": "9cd442a48ba0f7f7afe10dce8d03a0d955007f89f0a144d355906d5855e9459a",
+      "dependencies": [
+        {
+          "path": "src/game/geometry_frustum.c",
+          "size": 5466,
+          "sha256": "f9bf169fd85aeac8c7e0b07771e51c55d465a84cac74ade853c1ccc613d56a27"
+        },
+        {
+          "path": "include/george/geometry_frustum.h",
+          "size": 622,
+          "sha256": "4617868ae3307634e4eb3f382897c4043695d9a78c0345c58088081736d903ce"
+        },
+        {
+          "path": "include/george/geometry.h",
+          "size": 892,
+          "sha256": "2fb499032a30cd4a356234ed0b6afc4c2a201178d9a0f254dfa00c9854248471"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "size": 762,
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "size": 5556,
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "size": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "size": 10176,
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "size": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        }
+      ]
+    }
+  },
+  "public_ci_guard_replay": {
+    "guard_methods": 9,
+    "passed_without_private_original": 8,
+    "explicit_exact_path_skips": 1,
+    "method": "test_original_shifted_aliases_and_opposite_signed_zero",
+    "no_shared_edits": true
+  },
+  "synthetic_fixture_evidence": {
+    "fixtures": 728,
+    "executed_original_instructions": 429299,
+    "maximum_instructions": 598,
+    "input_sha256": "6366fb2d3dab8e2e18080f77a1c8827f7d0c118977918610f913c15b7dfde2ce",
+    "header_sha256_lf": "d04b82e582c3b9a1dc84cbfd6d64e37bcc117015c991d95fc011d48915882d1d",
+    "header_sha256_on_disk": "d04b82e582c3b9a1dc84cbfd6d64e37bcc117015c991d95fc011d48915882d1d",
+    "helper_branch_outcomes": {
+      "0x002A3570": [
+        [
+          false,
+          true
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x002A359C": [
+        [
+          true,
+          false
+        ]
+      ]
+    },
+    "actual_original_helpers": [
+      "0x002A3538"
+    ],
+    "controlled_calls": [],
+    "native_checks": 112158,
+    "strict_guard_methods": 9,
+    "native_production_sources": [
+      "src/game/geometry_frustum.c",
+      "src/game/vector_math.c"
+    ],
+    "native_normalizer_bridge": "Native-only symbol rename on the real vector_math TU; wrapper records pointer/XYZ, then executes source3538. Unselected trigonometric callbacks abort.",
+    "checked_words": "All128 authored arena words and20 actual normalization pointer/XYZ arguments perfixture; includes unchanged outside complete42-word output. Independent axis corner/plane/unit-normal and zero-length fallback invariants.",
+    "shifted_alias_frame_word_offsets": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "output_word_offset": 24,
+    "native_flags": [
+      "-m32",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-strict-aliasing",
+      "-msse2",
+      "-mfpmath=sse"
+    ],
+    "limits": "HostIEEE finite normal/zero scalar results only. Complete constructor+normalizer instructions counted, including executed ordinary and likely delays. All fourth frame lanes authored but not independently consumed except aliases. No completeEE/FCR/upper128GPR/timing/helperexception proof."
+  },
+  "boundary_notes": "Author all458selected/full170setup/full70creator/full53actor/full34normalizer and existing source/helper/type paths manually read. Parent selected458/setup170 scope reviewed; creator70 remains author-only until independent audit. Full original source-free geometry and one encodedJAL are proved. Peer/root full source/native/proof acceptance pending; no central writes or exact award.",
+  "notes": [
+    "Parent and independent peer reviewed full458 selected plus34 normalizer/170 setup/70 creator/53 published-actor supporting originals and entire frozen source/proof packet. Independent fresh12 dictionary and complete ET_EXEC/ABI replay passed; all72 raw frozen inputs unchanged. Historical isolated scope/approval remains unchanged."
+  ]
+}

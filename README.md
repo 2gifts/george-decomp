@@ -21,14 +21,14 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C/C++ | 1166 functions reviewed; 249 match (5,412 bytes) |
-| Reused upstream C/C++ | 78 match (11,128 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`) |
-| C source | 1360 functions reviewed; 316 match (15,152 bytes) |
+| Recovered game C/C++ | 1169 functions reviewed; 249 match (5,412 bytes) |
+| Reused upstream C/C++ | 80 match (11,192 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`, `bcopy`, `index`) |
+| C source | 1365 functions reviewed; 318 match (15,216 bytes) |
 | C++ source | 24 functions reviewed; 11 match (1,388 bytes) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C/C++ matching total is **16,540 / 3,083,712 code bytes (0.536367%)**, including
+The C/C++ matching total is **16,604 / 3,083,712 code bytes (0.538442%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C/C++ progress.
@@ -112,6 +112,11 @@ adds another complete routine from the unchanged GNU source.
 [GNU startup and exit](docs/gnu_lifecycle.md) reuse four more entries, including
 the exact exit routine. [Newlib random state](docs/random_runtime.md) reuses
 two unchanged functions matching all 64 original bytes.
+[Recursive collision nodes](docs/actor_collision.md) and
+[six-face construction](docs/geometry_frustum.md) add three complete game bodies
+with unchanged published geometry, allocator and query helpers.
+[Newlib memory wrappers](docs/memory_wrappers.md) add unchanged `bcopy`/`index`
+source matching another 64 original bytes.
 [Resource resolution and accounting](docs/resource_manager.md)
 and the [resource registry](docs/resource_registry.md) cover providers,
 allocation, queued requests, pooled map mutation and shared counters.
