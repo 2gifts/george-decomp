@@ -5271,7 +5271,19 @@
           "func_00276C60"
         ],
         "scan_limit": "All complete recognized intervals from scope scanned at full size/hash. Omitted C2C0 and CE68 lack an established concrete entry. Other duplicate entries receive no recovery award."
-      }
+      },
+      "source_kind": "c",
+      "source_dependencies": [
+        {
+          "path": "src/game/actor_controller.c",
+          "sha256": "51b175709e58fefaa60f9152662676ab1da217923b4bc57a375d9dd81d536a23"
+        },
+        {
+          "path": "include/george/actor_controller.h",
+          "sha256": "14802b0ad356d25b51889160f2b39b6722b2dc74894c3d73f22797d276000118"
+        }
+      ],
+      "source_declaration_evidence": "Metadata-only supplement of the two existing measured whole C/header fingerprints after root and distinct source-free review. Source, flags, compiler profile, cached object, original bytes, status and old evidence are unchanged. These declarations are not an upstream-source identity or an authentic old compiler -M closure."
     }
   ],
   "schema_version": 1,
