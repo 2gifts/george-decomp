@@ -594,49 +594,410 @@
     },
     {
       "name": "strcmp",
-      "address": "0x393a28",
-      "file_offset": "0x294a28",
+      "address": "0x00393A28",
+      "file_offset": "0x00294A28",
       "size": 332,
-      "source": "src/runtime/strcmp.S",
-      "source_kind": "assembly",
+      "source": "src/runtime/strcmp.c",
+      "source_kind": "c",
+      "upstream_source_sha256": "6f62e0d671b401da18f5e708f064dacb1eef465d393cdb7d13b390e9717b0e7e",
+      "source_sha256": "6f62e0d671b401da18f5e708f064dacb1eef465d393cdb7d13b390e9717b0e7e",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strcmp.c",
+          "sha256": "6f62e0d671b401da18f5e708f064dacb1eef465d393cdb7d13b390e9717b0e7e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
       "status": "reconstructed",
-      "original_sha256": "3587aea3da3a8df8565c1d62d0dcf3a2cee9b0e416c7a638aebae02c609de997",
-      "upstream_symbol": "strcmp",
-      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/machine/r5900/strcmp.S, Git b595ded606227e93b8c4a447446c1d2ac093827d",
-      "upstream_source_sha256": "fc9bf84277c79326306001daefaccc2c272795d300347bae2f56f59ff8f4d0ac",
-      "upstream_license": "Jeff Johnston/Cygnus Solutions 1999 permissive preserve-notice license; exact notice retained in source.",
       "compiler_profile": "gcc323",
       "compile_flags": [
         "-O2",
         "-G0",
+        "-mfp64",
         "-fno-builtin",
-        "-fno-common"
+        "-fno-common",
+        "-ffunction-sections"
       ],
-      "evidence": "Complete independently named string algorithm matches unchanged upstream assembly. All original instructions outside the two DLI macro expansions and the induced initial branch displacement agree exactly; both complete 64-bit constant values agree. The pinned assembler emits shorter LUI-based DLI expansions, so full bytes and size differ. This is reconstructed licensed assembly only, not high-level C or an exact byte match.",
-      "boundary_evidence": "Entire entry through final jr and return delay slot reviewed; following function begins immediately after body."
+      "link": true,
+      "original_sha256": "3587aea3da3a8df8565c1d62d0dcf3a2cee9b0e416c7a638aebae02c609de997",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strcmp.c",
+      "upstream_license": "Unchanged generic newlib C, inherited Cygnus1994/1997 COPYING.NEWLIB clause9; complete published license and documentation acknowledgment required.",
+      "modified": false,
+      "migration": {
+        "replaces_original_assembly_source": "src/runtime/strcmp.S",
+        "existing_address": "0x00393A28",
+        "duplicate_recovery_credit": false
+      },
+      "evidence": [
+        "Whole unchanged pinned generic Newlib C. Full153 selected original instructions, complete primary C/S and exact default Cygnus notice reviewed. Default candidate is nonexact; strcpy remains strictly blocked by natural section alignment8 at original address4mod8. Both actual17-word target ABIs and four whole canonical two-GPR callers verified;12 genuine-M closures retained.42217 initialized padded/disjoint fixtures and64887529 native byte/return checks pass. Both entire generic sources optimized; one authentic strcpy assignment-condition warning retained. Nine guards and two genuine failing controls. Signed-subtraction subset/GNU alias and long-width/schedule limits explicit; no original source/compiler identity, helper/data or new exact credit. Parent and distinct final peer pending.",
+        "Parent/distinct peer preserve1001 whole authored inputs, including unchanged961 defaults, before one archived document annotation.22 entire qualified dictionaries/17 complete target artifacts/full emitted assembly agree; native whole ImageHlp-qualified PEs have only genuine timestamp/checksum differences.42,217 original fixtures/8,432,793 original instructions/all153 selected words and17 conditional outcomes;64,887,529 native checks. Signed-long subtraction arithmetic subsets and long32/long64 GNU contracts remain explicit. Replaces exactly one existing assembly primary row; historical assembly source/row preserved, no duplicate primary or assembly/helper/data/exact credit."
+      ],
+      "source_provenance_manifest": "src/runtime/runtime_copy_compare_provenance.json",
+      "reviewed": true,
+      "review_status": "whole_original_unchanged_primary_source_target_ABI_native_parent_and_distinct_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 228,
+      "compiled_sha256": "cd3cfc03edf9ab96c96c58c92887e8d7d04ba4ef093d10a43caf265defed5877",
+      "compile_comparisons": [
+        {
+          "name": "strcmp",
+          "address": "0x00393A28",
+          "size": 332,
+          "source": "src/runtime/strcmp.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strcmp",
+            "section": ".text.strcmp",
+            "value": 0,
+            "size": 196,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_copy_compare/linked/gcc29/strcmp/link-ui2rykvd/function.elf",
+          "identical": false,
+          "expected_size": 332,
+          "compiled_size": 196,
+          "different_bytes": 304,
+          "first_different_offsets": [
+            1,
+            6,
+            7,
+            8,
+            14,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3587aea3da3a8df8565c1d62d0dcf3a2cee9b0e416c7a638aebae02c609de997",
+          "compiled_sha256": "0c4389c153846ce5fb61bbc89ac3227470ff1166e67f4b97f39b9420a7bd2009"
+        },
+        {
+          "name": "strcmp",
+          "address": "0x00393A28",
+          "size": 332,
+          "source": "src/runtime/strcmp.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strcmp",
+            "section": ".text.strcmp",
+            "value": 0,
+            "size": 228,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_copy_compare/linked/gcc323/strcmp/link-rl3sa525/function.elf",
+          "identical": false,
+          "expected_size": 332,
+          "compiled_size": 228,
+          "different_bytes": 300,
+          "first_different_offsets": [
+            1,
+            6,
+            7,
+            8,
+            14,
+            16,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3587aea3da3a8df8565c1d62d0dcf3a2cee9b0e416c7a638aebae02c609de997",
+          "compiled_sha256": "cd3cfc03edf9ab96c96c58c92887e8d7d04ba4ef093d10a43caf265defed5877"
+        }
+      ],
+      "author_evidence_snapshot": "Whole unchanged pinned generic Newlib C. Full153 selected original instructions, complete primary C/S and exact default Cygnus notice reviewed. Default candidate is nonexact; strcpy remains strictly blocked by natural section alignment8 at original address4mod8. Both actual17-word target ABIs and four whole canonical two-GPR callers verified;12 genuine-M closures retained.42217 initialized padded/disjoint fixtures and64887529 native byte/return checks pass. Both entire generic sources optimized; one authentic strcpy assignment-condition warning retained. Nine guards and two genuine failing controls. Signed-subtraction subset/GNU alias and long-width/schedule limits explicit; no original source/compiler identity, helper/data or new exact credit. Parent and distinct final peer pending.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "entire_primary_C_unchanged": true,
+        "selected_original_complete": true,
+        "native_checks": 64887529,
+        "new_exact": false,
+        "migration_replaces_one_row": true
+      }
     },
     {
       "name": "strcpy",
-      "address": "0x393b74",
-      "file_offset": "0x294b74",
+      "address": "0x00393B74",
+      "file_offset": "0x00294B74",
       "size": 280,
-      "source": "src/runtime/strcpy.S",
-      "source_kind": "assembly",
+      "source": "src/runtime/strcpy.c",
+      "source_kind": "c",
+      "upstream_source_sha256": "591ce22174939e22ef839071c998c58c4e49ae0170d90499f003391d2ba8c74c",
+      "source_sha256": "591ce22174939e22ef839071c998c58c4e49ae0170d90499f003391d2ba8c74c",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strcpy.c",
+          "sha256": "591ce22174939e22ef839071c998c58c4e49ae0170d90499f003391d2ba8c74c"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "src/runtime/include/limits.h",
+          "sha256": "7e650381312eeb2f19e12746bd5fab3fe32cba6c57286bbe1f00739ac9ac233c"
+        }
+      ],
       "status": "reconstructed",
-      "original_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
-      "upstream_symbol": "strcpy",
-      "upstream_revision": "Public GNU EE newlib1.8.1, ee/newlib/libc/machine/r5900/strcpy.S, Git b595ded606227e93b8c4a447446c1d2ac093827d",
-      "upstream_source_sha256": "759a01754e8231a089da1d6648e3c85e3b8e532c72555d32ee42f9195ce7cbc8",
-      "upstream_license": "Jeff Johnston/Cygnus Solutions 1999 permissive preserve-notice license; exact notice retained in source.",
-      "compiler_profile": "gcc323",
+      "compiler_profile": "gcc29",
       "compile_flags": [
         "-O2",
         "-G0",
+        "-mfp64",
         "-fno-builtin",
-        "-fno-common"
+        "-fno-common",
+        "-ffunction-sections",
+        "-malign-functions=2",
+        "-malign-loops=2",
+        "-I",
+        "src/runtime/include"
       ],
-      "evidence": "Complete independently named string algorithm matches unchanged upstream assembly. All original instructions outside the two DLI macro expansions and the induced initial branch displacement agree exactly; both complete 64-bit constant values agree. The pinned assembler emits shorter LUI-based DLI expansions, so full bytes and size differ. This is reconstructed licensed assembly only, not high-level C or an exact byte match.",
-      "boundary_evidence": "Entire entry through final jr and return delay slot reviewed; following function begins immediately after body."
+      "link": true,
+      "original_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strcpy.c",
+      "upstream_license": "Unchanged generic newlib C, inherited Cygnus1994/1997 COPYING.NEWLIB clause9; complete published license and documentation acknowledgment required.",
+      "modified": false,
+      "migration": {
+        "replaces_original_assembly_source": "src/runtime/strcpy.S",
+        "existing_address": "0x00393B74",
+        "duplicate_recovery_credit": false
+      },
+      "evidence": [
+        "Separate single parent-approved historical R5900 placement-only recipe. Unchanged generic C; actual function/loop exponents2 yield natural whole224B alignment4 symbol and strict393B74 ET_EXEC link. All224 candidate bytes compared against full280B original,241 differences; no exact award. Actual17-word ABI and two whole canonical two-GPR caller ELFs agree. Default961 remains immutable with both alignment8 blockers; native/source/decoder/domain proof reused exactly, no tuning or source/object/linker patches.",
+        "Parent/distinct peer preserve1001 whole authored inputs, including unchanged961 defaults, before one archived document annotation.22 entire qualified dictionaries/17 complete target artifacts/full emitted assembly agree; native whole ImageHlp-qualified PEs have only genuine timestamp/checksum differences.42,217 original fixtures/8,432,793 original instructions/all153 selected words and17 conditional outcomes;64,887,529 native checks. Signed-long subtraction arithmetic subsets and long32/long64 GNU contracts remain explicit. Replaces exactly one existing assembly primary row; historical assembly source/row preserved, no duplicate primary or assembly/helper/data/exact credit."
+      ],
+      "source_provenance_manifest": "src/runtime/runtime_copy_compare_provenance.json",
+      "reviewed": true,
+      "review_status": "whole_original_unchanged_primary_source_target_ABI_native_parent_and_distinct_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_size": 224,
+      "compiled_sha256": "55fb2c2e371c6fc48608b8bdf1cb234427f6f82abcfcd81fa34bddf84ba80cf6",
+      "compile_comparisons": [
+        {
+          "name": "strcpy",
+          "address": "0x00393B74",
+          "size": 280,
+          "source": "src/runtime/strcpy.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": false,
+          "blocked_reason": "Target address conflicts with function-section alignment",
+          "object": "build/runtime_copy_compare/gcc29_strcpy.o",
+          "actual_stt_func": {
+            "name": "strcpy",
+            "section": ".text.strcpy",
+            "value": 0,
+            "size": 228,
+            "binding": "STB_GLOBAL"
+          },
+          "object_section_alignment": 8,
+          "comparison_qualification": "Whole unlinked natural symbol only; strict original VMA rejected. No linked code or exact award.",
+          "identical": false,
+          "expected_size": 280,
+          "compiled_size": 228,
+          "different_bytes": 237,
+          "first_different_offsets": [
+            1,
+            5,
+            6,
+            10,
+            11,
+            12,
+            18,
+            19
+          ],
+          "unresolved_relocations": [
+            {
+              "type": "unlinked_complete_object",
+              "reason": "Target address conflicts with function-section alignment"
+            }
+          ],
+          "expected_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
+          "compiled_sha256": "7504dfc1b7b678dc621e96a9687a2a625444d1e8540582d93fe50a52462109d3"
+        },
+        {
+          "name": "strcpy",
+          "address": "0x00393B74",
+          "size": 280,
+          "source": "src/runtime/strcpy.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": false,
+          "blocked_reason": "Target address conflicts with function-section alignment",
+          "object": "build/runtime_copy_compare/gcc323_strcpy.o",
+          "actual_stt_func": {
+            "name": "strcpy",
+            "section": ".text.strcpy",
+            "value": 0,
+            "size": 176,
+            "binding": "STB_GLOBAL"
+          },
+          "object_section_alignment": 8,
+          "comparison_qualification": "Whole unlinked natural symbol only; strict original VMA rejected. No linked code or exact award.",
+          "identical": false,
+          "expected_size": 280,
+          "compiled_size": 176,
+          "different_bytes": 255,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [
+            {
+              "type": "unlinked_complete_object",
+              "reason": "Target address conflicts with function-section alignment"
+            }
+          ],
+          "expected_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
+          "compiled_sha256": "1f75745cb7535ee8fe5b28d4deb70f42e2861c962835caebee20ee34c0c85862"
+        },
+        {
+          "name": "strcpy",
+          "address": "0x00393B74",
+          "size": 280,
+          "source": "src/runtime/strcpy.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-malign-functions=2",
+            "-malign-loops=2"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strcpy",
+            "section": ".text.strcpy",
+            "value": 0,
+            "size": 224,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_copy_compare_alignment/linked/gcc29/strcpy/link-f_qnevs_/function.elf",
+          "identical": false,
+          "expected_size": 280,
+          "compiled_size": 224,
+          "different_bytes": 241,
+          "first_different_offsets": [
+            1,
+            5,
+            6,
+            10,
+            11,
+            12,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "87cc629bd79e4f31c9da32e0ddfb612228572e256269b6c1bc158c401f8234df",
+          "compiled_sha256": "55fb2c2e371c6fc48608b8bdf1cb234427f6f82abcfcd81fa34bddf84ba80cf6"
+        }
+      ],
+      "author_evidence_snapshot": "Separate single parent-approved historical R5900 placement-only recipe. Unchanged generic C; actual function/loop exponents2 yield natural whole224B alignment4 symbol and strict393B74 ET_EXEC link. All224 candidate bytes compared against full280B original,241 differences; no exact award. Actual17-word ABI and two whole canonical two-GPR caller ELFs agree. Default961 remains immutable with both alignment8 blockers; native/source/decoder/domain proof reused exactly, no tuning or source/object/linker patches.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "entire_primary_C_unchanged": true,
+        "selected_original_complete": true,
+        "native_checks": 64887529,
+        "new_exact": false,
+        "migration_replaces_one_row": true
+      }
     },
     {
       "name": "__kernel_sinf",

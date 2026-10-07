@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "source_language": "C++",
+  "functions": [
+    {
+      "name": "before__C9type_infoRC9type_info",
+      "source": "src/runtime/gcc/cp/tinfo2.cc",
+      "source_kind": "cxx",
+      "source_language": "C++",
+      "address": "0x00375F88",
+      "file_offset": "0x00276F88",
+      "size": 36,
+      "original_sha256": "eeb541a77cb28d02cf26c1027c1a3fc341c3fd1545def79bc6cb068cad825428",
+      "status": "matching",
+      "reviewed": true,
+      "review_status": "whole_genuine_source_exact_target_ABI_native_parent_and_distinct_peer_passed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-ffunction-sections",
+        "-fno-common",
+        "-Isrc/runtime/gcc",
+        "-Isrc/runtime/gcc/cp",
+        "-Isrc/runtime/gcc/cp/inc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-Dmalloc=func_002AF140",
+        "-Dfree=func_002AF1E8"
+      ],
+      "link": true,
+      "upstream_symbol": "std::type_info::before",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/cp/tinfo2.cc",
+      "upstream_source_sha256": "1d29116ce662b6173d36201bf2f4129f3fe4c6c14c60a5aa6b12297b1edc92a7",
+      "source_provenance_manifest": "src/runtime/gcc/cxx_provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/gcc/cp/tinfo2.cc",
+          "sha256": "1d29116ce662b6173d36201bf2f4129f3fe4c6c14c60a5aa6b12297b1edc92a7"
+        },
+        {
+          "path": "src/runtime/gcc/include/ginclude/stddef.h",
+          "sha256": "23ed59b27cda4de82a312f98e85a258f29d61711beb873a42a1f8404558894ae"
+        },
+        {
+          "path": "src/runtime/gcc/cp/tinfo.h",
+          "sha256": "648432aff597c97b77015434403aa56233eda1f48669679a8fa9daa2fdb9b8aa"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/typeinfo",
+          "sha256": "c6e77173f1ab39bc19e03902183fe4b8bab0799d6340946fe276539d7311a430"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/exception",
+          "sha256": "6956b782485f45fe3dbc00caf8311e85df005e097d0d4d43ee511231e0d22232"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/new",
+          "sha256": "f1bb0c0b8f436b8e3faad2951502de5e87dce77789fce9b8efdd410678aa290e"
+        }
+      ],
+      "notes": "Complete36 GNU method exact candidate; no discovered runtime entry references. FDE-only boundary evidence and genuine source identity, provisional source work approved; reachability unresolved. Getter375F48/64 separately published, excluded. Native name4/bool1 differs targetname0/bool4; unexecuted exception/delete traps and genuine destructor/equality/strcmp are supporting only. No source edits/compiler grid/merged100/helper/data credit.",
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_symbol": "before__C9type_infoRC9type_info",
+      "compiled_size": 36,
+      "compiled_sha256": "eeb541a77cb28d02cf26c1027c1a3fc341c3fd1545def79bc6cb068cad825428",
+      "evidence": [
+        "Complete original36/9 words, unchanged whole genuine GNU TU, cached object/sole strcmp relocation and actual linked whole36 match independently verified. Fresh-M6, real7-word target ABI/28-byte canonical two-GPR caller;3872 original fixtures/427122 instructions/all9 selected+83 supporting words/111203 native checks.",
+        "Parent/distinct peer preserve122 whole authored inputs before separately archived final document.15 entire dictionaries/9 strict RAW artifacts/two full ImageHlp-qualified PEs. Complete target/source/ABI bytes strict. No direct incoming root; genuine FDE boundary and unique method identity support provisional unrooted source recovery. Getter64 unchanged; no invocation, destructor/equality/host-control/helper/data/class award. Host name4/bool1/vptr0 versus actual EE name0/bool4/vptr4 bridged only through typed logical fields. Historical native failures and private guard line-shift repair preserved; no line-number or code normalization."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "whole_exact_original_bytes": 36,
+        "cached_full_TU_reused": true,
+        "source_unchanged": true,
+        "reachability": "unresolved",
+        "native_checks": 111203
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "selected_functions": 1,
+    "selected_original_bytes": 36,
+    "new_exact_functions": 1,
+    "new_exact_bytes": 36,
+    "freeze": {
+      "path": "build/type_info_before/frozen_inputs.json",
+      "raw_sha256": "0c9872cf389dc4e16c5313d08965686218a87db93ad693d78b55ade604bc6697",
+      "raw_inputs": 122,
+      "all_current_RAW_equal": true
+    }
+  }
+}

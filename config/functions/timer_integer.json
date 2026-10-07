@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002BD4F8",
+      "address": "0x002BD4F8",
+      "file_offset": "0x001BE4F8",
+      "size": 284,
+      "source": "src/game/timer_integer.c",
+      "source_kind": "c",
+      "source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_dependencies": [
+        {
+          "path": "include/george/timer_integer.h",
+          "sha256": "57aa9085cd1e79711a9e46cabe0da0d4cd58cbb74969201438e7102846e1d675"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "11bc8c83325487c36201801b7225d944438b941bee7f593b2b9c3850a61e485b",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "Complete lazy registration, then actual MFC0 Count at2BD5F0 followed by DSLL32/DSRA32. Low32 return; no incoming GPR consumed. No concrete incoming root found. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer preserve all328 authored inputs before separately archived final documentation.17 complete qualified dictionaries,37 RAW object/ELF pairs and4 complete native PE observations pass. New Count gate only exact word at2BD5F0.216/220 selected words execute; three constant-division BREAK delay words and unsigned-input DIVU zero-divisor BREAK at2BDDA0 remain unexecuted. Nonzero native divisor required. Native2,685,743 checks,9 present/absent guards and3 real wrong variants pass. Genuine GNU constructed-storage/alias/lifetime contracts and explicit core/diagnostic/pop/Count controls remain bounded; root exact-path-label repair history retained. Invocation/prototype/class remain unresolved."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 236,
+          "different_bytes": 240,
+          "compiled_sha256": "efad4f0cd3c7c229429bdc4a9fcc4193a113b73a724acff20379b64e90ee9efe",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 236,
+          "different_bytes": 239,
+          "compiled_sha256": "65fc8742df0b1166a6d72074f0a23ecaa9c170bceb19aed317922ba7e28da35c",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 240,
+          "different_bytes": 225,
+          "compiled_sha256": "36cd0229e00f999eaccad36a968cb83011c8b469d0853282abf9120b206fc3e4",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_provenance_manifest": "src/game/timer_integer_provenance.json",
+      "review_status": "whole_original_source_target_ABI_native_parent_and_distinct_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Complete lazy registration, then actual MFC0 Count at2BD5F0 followed by DSLL32/DSRA32. Low32 return; no incoming GPR consumed. No concrete incoming root found. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+      "compiled_size": 240,
+      "compiled_sha256": "36cd0229e00f999eaccad36a968cb83011c8b469d0853282abf9120b206fc3e4",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "selected_original_complete": true,
+        "source_header_initial_unchanged": true,
+        "new_exact": false,
+        "native_checks": 2685743
+      }
+    },
+    {
+      "name": "func_002BDC18",
+      "address": "0x002BDC18",
+      "file_offset": "0x001BEC18",
+      "size": 312,
+      "source": "src/game/timer_integer.c",
+      "source_kind": "c",
+      "source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_dependencies": [
+        {
+          "path": "include/george/timer_integer.h",
+          "sha256": "57aa9085cd1e79711a9e46cabe0da0d4cd58cbb74969201438e7102846e1d675"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "b8cb09e361fab52352d8d3bd95a40820f182e87d954d7a5773dec349278a48c4",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "Capture incoming GPR5 before initialization; incoming GPR4 unused. Fresh global+8 divider after initialization, DIVU with genuine zero-divisor BREAK, returned low32. No fabricated zero guard or concrete incoming root. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer preserve all328 authored inputs before separately archived final documentation.17 complete qualified dictionaries,37 RAW object/ELF pairs and4 complete native PE observations pass. New Count gate only exact word at2BD5F0.216/220 selected words execute; three constant-division BREAK delay words and unsigned-input DIVU zero-divisor BREAK at2BDDA0 remain unexecuted. Nonzero native divisor required. Native2,685,743 checks,9 present/absent guards and3 real wrong variants pass. Genuine GNU constructed-storage/alias/lifetime contracts and explicit core/diagnostic/pop/Count controls remain bounded; root exact-path-label repair history retained. Invocation/prototype/class remain unresolved."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 288,
+          "different_bytes": 268,
+          "compiled_sha256": "22894184c874b168828686e6cdc1097dc68393a6f5c8cf4cc2e04524a9790eab",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 288,
+          "different_bytes": 267,
+          "compiled_sha256": "67722c1a25ac9c0626ca8f8e7968fb0e5530bfb6f24c3e0d96400e63dd2d6a0b",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 284,
+          "different_bytes": 272,
+          "compiled_sha256": "986fda9efe6ccc982016a3ff6f60b6979b5f9008562f84edf27f5cd8938c0200",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_provenance_manifest": "src/game/timer_integer_provenance.json",
+      "review_status": "whole_original_source_target_ABI_native_parent_and_distinct_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Capture incoming GPR5 before initialization; incoming GPR4 unused. Fresh global+8 divider after initialization, DIVU with genuine zero-divisor BREAK, returned low32. No fabricated zero guard or concrete incoming root. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+      "compiled_size": 284,
+      "compiled_sha256": "986fda9efe6ccc982016a3ff6f60b6979b5f9008562f84edf27f5cd8938c0200",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "selected_original_complete": true,
+        "source_header_initial_unchanged": true,
+        "new_exact": false,
+        "native_checks": 2685743
+      }
+    },
+    {
+      "name": "func_002BDD50",
+      "address": "0x002BDD50",
+      "file_offset": "0x001BED50",
+      "size": 284,
+      "source": "src/game/timer_integer.c",
+      "source_kind": "c",
+      "source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_dependencies": [
+        {
+          "path": "include/george/timer_integer.h",
+          "sha256": "57aa9085cd1e79711a9e46cabe0da0d4cd58cbb74969201438e7102846e1d675"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "89ff1d44921704ce76cb314f51757fffaa3586d6b579c86fff7d7f1d3ec5c290",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "Same complete lazy registration, then fresh global pointer and+4 word returned low32. Substantive initializer dependency is retained, but no concrete incoming root found. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer preserve all328 authored inputs before separately archived final documentation.17 complete qualified dictionaries,37 RAW object/ELF pairs and4 complete native PE observations pass. New Count gate only exact word at2BD5F0.216/220 selected words execute; three constant-division BREAK delay words and unsigned-input DIVU zero-divisor BREAK at2BDDA0 remain unexecuted. Nonzero native divisor required. Native2,685,743 checks,9 present/absent guards and3 real wrong variants pass. Genuine GNU constructed-storage/alias/lifetime contracts and explicit core/diagnostic/pop/Count controls remain bounded; root exact-path-label repair history retained. Invocation/prototype/class remain unresolved."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 260,
+          "different_bytes": 249,
+          "compiled_sha256": "4540417beae54fcaf47fe4aa9eaed3b6845bc6e82c8d7360cdd61704092d0091",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 260,
+          "different_bytes": 248,
+          "compiled_sha256": "38b9bb8d114985d8620050917fe02c71254db6a493ea3a4a044cf1c5d033da55",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 252,
+          "different_bytes": 239,
+          "compiled_sha256": "8505a5f7193d4975329fc9096514bfabb995c6694c05f612c1b89b5c430feb98",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "f74d824b9640a93a19a369202d3b04a6217fd8fcdff9b4df02c1e4d02d609e48",
+      "source_provenance_manifest": "src/game/timer_integer_provenance.json",
+      "review_status": "whole_original_source_target_ABI_native_parent_and_distinct_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Same complete lazy registration, then fresh global pointer and+4 word returned low32. Substantive initializer dependency is retained, but no concrete incoming root found. All220 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and0/2-GPR numeric caller forwarding.433 initialized fixtures/51623 actual original instructions,2685743 native checks,9 synthetic guards present/absent,3 actual failing variants exercise unsigned division, fresh constant and fresh end reload. Original invocation/prototype/class unresolved; unknown first argument modeled as unused low32 slot. Author selected C/H retain initial bytes.",
+      "compiled_size": 252,
+      "compiled_sha256": "8505a5f7193d4975329fc9096514bfabb995c6694c05f612c1b89b5c430feb98",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "selected_original_complete": true,
+        "source_header_initial_unchanged": true,
+        "new_exact": false,
+        "native_checks": 2685743
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "selected_functions": 3,
+    "selected_original_bytes": 880,
+    "new_exact_functions": 0,
+    "new_exact_bytes": 0,
+    "freeze": {
+      "path": "build/timer_integer/frozen_inputs.json",
+      "raw_sha256": "51d5aa939a41e12765fa10d2c482f2381f81191825d11402f981977268d2b7da",
+      "raw_inputs": 328,
+      "all_current_RAW_equal": true
+    }
+  }
+}
