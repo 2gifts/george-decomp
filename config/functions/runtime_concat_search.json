@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "strcat",
+      "address": "0x00393758",
+      "file_offset": "0x00294758",
+      "size": 304,
+      "source": "src/runtime/strcat.c",
+      "source_kind": "c",
+      "source_sha256": "ea0e8b62e141bc93fab06e3c5ef51faabdcce998068e4db4e1d4ad04cbd65c2a",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strcat.c",
+          "sha256": "ea0e8b62e141bc93fab06e3c5ef51faabdcce998068e4db4e1d4ad04cbd65c2a",
+          "upstream_path": "ee/newlib/libc/string/strcat.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "fabccabaf4c32af9a26a4add09616d7df8a1814da880bde6473f1a4ca7dd4c75",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strcat.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Whole unchanged pinned Newlib generic C; all180 selected original instructions and full70-instruction strcpy support reviewed/executed. Four whole selected defaults nonexact; actual both17-word target layouts/two-GPR callers and13 actual-M closures.11670 initialized padded/disjoint fixtures,17936790 native byte/return checks,9 guards and2 genuine failing controls. Generic native supporting strcpy genuine bytewise branch only/no helper credit. GNU alias/alignment, different long8/long4 block widths and original/native schedule limits retained; peer/parent final pending.",
+        "Parent and independent peer preserve404 RAW inputs before the separately archived publication documentation annotation. Thirteen entire dictionaries reproduce with exact disclosed output/link paths, test time and parsed whole native PE clock/checksum qualifications. Fourteen whole target artifacts and seven native objects plus synthetic trace/golden remain exact RAW.",
+        "Both17-word target ABI arrays and four complete two-GPR callers are independently checked.13 actual-M closures/31 files;11670 fixtures/2649980 original instructions/17936790 native checks;9 guards/2 actual failing controls. Native long32 and EE long64/quadword read schedules differ; initialized padded disjoint GNU alias/alignment domains remain explicit. No helper/data/assembly/original compiler or source identity award."
+      ],
+      "upstream_source_sha256": "ea0e8b62e141bc93fab06e3c5ef51faabdcce998068e4db4e1d4ad04cbd65c2a",
+      "source_provenance_manifest": "src/runtime/runtime_concat_search_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 196,
+      "compiled_sha256": "e0e7b7dab925c66bfb6e2c6e94c43e80ededb7750ade3c56a066727fa23fabd0",
+      "compile_comparisons": [
+        {
+          "name": "strcat",
+          "address": "0x00393758",
+          "size": 304,
+          "source": "src/runtime/strcat.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strcat",
+            "section": ".text.strcat",
+            "value": 0,
+            "size": 224,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "strcpy": 3750772
+          },
+          "input_relocations": [
+            {
+              "offset": 196,
+              "type": 4,
+              "symbol": "strcpy",
+              "symbol_index": 10
+            }
+          ],
+          "linked_elf": "build/runtime_concat_search/linked/gcc29/strcat/link-jextbpml/function.elf",
+          "identical": false,
+          "expected_size": 304,
+          "compiled_size": 224,
+          "different_bytes": 245,
+          "first_different_offsets": [
+            7,
+            16,
+            23,
+            24,
+            27,
+            28,
+            29,
+            31
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fabccabaf4c32af9a26a4add09616d7df8a1814da880bde6473f1a4ca7dd4c75",
+          "compiled_sha256": "9677be457efb45ae98bd240c7607c63ce1ee22c6857f0e43cb7c399d16a30eac"
+        },
+        {
+          "name": "strcat",
+          "address": "0x00393758",
+          "size": 304,
+          "source": "src/runtime/strcat.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strcat",
+            "section": ".text.strcat",
+            "value": 0,
+            "size": 196,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "strcpy": 3750772
+          },
+          "input_relocations": [
+            {
+              "offset": 168,
+              "type": 4,
+              "symbol": "strcpy",
+              "symbol_index": 10
+            }
+          ],
+          "linked_elf": "build/runtime_concat_search/linked/gcc323/strcat/link-52qw1qa3/function.elf",
+          "identical": false,
+          "expected_size": 304,
+          "compiled_size": 196,
+          "different_bytes": 269,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fabccabaf4c32af9a26a4add09616d7df8a1814da880bde6473f1a4ca7dd4c75",
+          "compiled_sha256": "e0e7b7dab925c66bfb6e2c6e94c43e80ededb7750ade3c56a066727fa23fabd0"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "whole_original_unchanged_primary_source_target_ABI_native_parent_and_distinct_final_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Whole unchanged pinned Newlib generic C; all180 selected original instructions and full70-instruction strcpy support reviewed/executed. Four whole selected defaults nonexact; actual both17-word target layouts/two-GPR callers and13 actual-M closures.11670 initialized padded/disjoint fixtures,17936790 native byte/return checks,9 guards and2 genuine failing controls. Generic native supporting strcpy genuine bytewise branch only/no helper credit. GNU alias/alignment, different long8/long4 block widths and original/native schedule limits retained; peer/parent final pending.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "source_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    },
+    {
+      "name": "strchr",
+      "address": "0x00393888",
+      "file_offset": "0x00294888",
+      "size": 416,
+      "source": "src/runtime/strchr.c",
+      "source_kind": "c",
+      "source_sha256": "0a13efb5508c24d51c447be1172c4ac38774c7fccccac16ec84f0a58ac737b80",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strchr.c",
+          "sha256": "0a13efb5508c24d51c447be1172c4ac38774c7fccccac16ec84f0a58ac737b80",
+          "upstream_path": "ee/newlib/libc/string/strchr.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "7ed48db7969cd19e7f28925a13f5201fdb24b579c3cfd53d1cdbd8d765022304",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strchr.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Whole unchanged pinned Newlib generic C; all180 selected original instructions and full70-instruction strcpy support reviewed/executed. Four whole selected defaults nonexact; actual both17-word target layouts/two-GPR callers and13 actual-M closures.11670 initialized padded/disjoint fixtures,17936790 native byte/return checks,9 guards and2 genuine failing controls. Generic native supporting strcpy genuine bytewise branch only/no helper credit. GNU alias/alignment, different long8/long4 block widths and original/native schedule limits retained; peer/parent final pending.",
+        "Parent and independent peer preserve404 RAW inputs before the separately archived publication documentation annotation. Thirteen entire dictionaries reproduce with exact disclosed output/link paths, test time and parsed whole native PE clock/checksum qualifications. Fourteen whole target artifacts and seven native objects plus synthetic trace/golden remain exact RAW.",
+        "Both17-word target ABI arrays and four complete two-GPR callers are independently checked.13 actual-M closures/31 files;11670 fixtures/2649980 original instructions/17936790 native checks;9 guards/2 actual failing controls. Native long32 and EE long64/quadword read schedules differ; initialized padded disjoint GNU alias/alignment domains remain explicit. No helper/data/assembly/original compiler or source identity award."
+      ],
+      "upstream_source_sha256": "0a13efb5508c24d51c447be1172c4ac38774c7fccccac16ec84f0a58ac737b80",
+      "source_provenance_manifest": "src/runtime/runtime_concat_search_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 292,
+      "compiled_sha256": "99e90001b3924c51f8fef96787851d78c8d10a74b3427b1b2a2eef880ba4be3e",
+      "compile_comparisons": [
+        {
+          "name": "strchr",
+          "address": "0x00393888",
+          "size": 416,
+          "source": "src/runtime/strchr.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strchr",
+            "section": ".text.strchr",
+            "value": 0,
+            "size": 296,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_concat_search/linked/gcc29/strchr/link-6w8kh1dq/function.elf",
+          "identical": false,
+          "expected_size": 416,
+          "compiled_size": 296,
+          "different_bytes": 382,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7ed48db7969cd19e7f28925a13f5201fdb24b579c3cfd53d1cdbd8d765022304",
+          "compiled_sha256": "cbff3bd13830bc5dcf443630887f9b297e6aea1ccfe104af933344cf7790747d"
+        },
+        {
+          "name": "strchr",
+          "address": "0x00393888",
+          "size": 416,
+          "source": "src/runtime/strchr.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strchr",
+            "section": ".text.strchr",
+            "value": 0,
+            "size": 292,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_concat_search/linked/gcc323/strchr/link-145z_y8t/function.elf",
+          "identical": false,
+          "expected_size": 416,
+          "compiled_size": 292,
+          "different_bytes": 378,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7ed48db7969cd19e7f28925a13f5201fdb24b579c3cfd53d1cdbd8d765022304",
+          "compiled_sha256": "99e90001b3924c51f8fef96787851d78c8d10a74b3427b1b2a2eef880ba4be3e"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "whole_original_unchanged_primary_source_target_ABI_native_parent_and_distinct_final_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Whole unchanged pinned Newlib generic C; all180 selected original instructions and full70-instruction strcpy support reviewed/executed. Four whole selected defaults nonexact; actual both17-word target layouts/two-GPR callers and13 actual-M closures.11670 initialized padded/disjoint fixtures,17936790 native byte/return checks,9 guards and2 genuine failing controls. Generic native supporting strcpy genuine bytewise branch only/no helper credit. GNU alias/alignment, different long8/long4 block widths and original/native schedule limits retained; peer/parent final pending.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "source_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "frozen_raw_inputs": 404,
+    "source_free_baseline_inputs": 224,
+    "selected_functions": 2,
+    "selected_bytes": 720,
+    "entire_dictionaries": 13,
+    "whole_target_objects": 6,
+    "whole_target_ET_EXECs": 8,
+    "whole_native_objects": 7,
+    "actual_M_closures": 13,
+    "unique_inputs": 31,
+    "actual17_word_ABI_arrays": 2,
+    "fixtures": 11670,
+    "original_instructions": 2649980,
+    "selected_original_instructions": 180,
+    "support_original_instructions": 70,
+    "native_checks": 17936790,
+    "guards": 9,
+    "absence_passed": 6,
+    "absence_skipped": 3,
+    "actual_negatives": 2,
+    "complete_exact_functions": 0,
+    "complete_exact_bytes": 0,
+    "native_PE_whole_RAW_equal": false,
+    "metadata_completion": "Measured upstream_source_sha256 and chosen-M source dependencies plus separate standard package; original authored provenance/draft/source/proofs unchanged."
+  }
+}
