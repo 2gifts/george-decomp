@@ -1,0 +1,5768 @@
+{
+  "schema_version": 1,
+  "functions": [
+    {
+      "name": "func_002A4B70",
+      "address": "0x002A4B70",
+      "size": 584,
+      "file_offset": "0x001A5B70",
+      "original_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+      "original_assembly": "build/functions/func_002A4B70.s",
+      "original_assembly_raw_sha256": "31a9e6cfea3304d3a8d60764aa5b5e507a50fa19cf19722777e511eb62f9ce58",
+      "terminal_word": "0x03E00008",
+      "terminal_delay_word": "0x27BD0050",
+      "excluded_zero_padding": 0,
+      "source": "src/game/buffer_manager.c",
+      "source_name": "func_002A4B70",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "evidence": "Signed-byte lowercasing or CR/LF submission. Captures current line/text before length; history ring preserves capacity reloads, clear and count/navigation store order, then copy. Line ring preserves loop-index final slot. Command traversal retains captured old line, prefix-at-offset8 and fresh string/list/count/callback fields; callback receives manager/matched text/data in three GPRs.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 584,
+        "compiled_size": 604,
+        "different_bytes": 410,
+        "first_different_offsets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+        "compiled_sha256": "525ba447bef5622c43648e232b4de345de17ef74a0e4fe33cf28e3356b371ca2"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_002A4B70",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 584,
+          "compiled_size": 604,
+          "different_bytes": 410,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+          "compiled_sha256": "525ba447bef5622c43648e232b4de345de17ef74a0e4fe33cf28e3356b371ca2"
+        },
+        "gcc29": {
+          "name": "func_002A4B70",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 584,
+          "compiled_size": 624,
+          "different_bytes": 437,
+          "first_different_offsets": [
+            8,
+            11,
+            13,
+            18,
+            19,
+            24,
+            26,
+            27
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+          "compiled_sha256": "0dcd6216e99da54cadce5c32ad36256f1783df1a03f114cc0fb36ef4e274647b"
+        },
+        "gcc29_precision": {
+          "name": "func_002A4B70",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 584,
+          "compiled_size": 624,
+          "different_bytes": 435,
+          "first_different_offsets": [
+            8,
+            13,
+            18,
+            19,
+            24,
+            26,
+            32,
+            34
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+          "compiled_sha256": "69255872f31511d267ff24e1f4e2c176376d4ea6abf890f6cfc88c452dee84cb"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x00216868",
+          "word": "0x0C0A92DC",
+          "kind": "JAL",
+          "target": "0x002A4B70",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002169B8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00216828",
+            "size": 128,
+            "sha256": "cb76bb083bc436f64fc6dfd579b955f44fbfc07138e1ef617a45e1e3ebf3d343",
+            "words": [
+              {
+                "instruction": "0x00216828",
+                "word": "0x90620005"
+              },
+              {
+                "instruction": "0x0021682C",
+                "word": "0x30420008"
+              },
+              {
+                "instruction": "0x00216830",
+                "word": "0x1040005D"
+              },
+              {
+                "instruction": "0x00216834",
+                "word": "0x24020008"
+              },
+              {
+                "instruction": "0x00216838",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x0021683C",
+                "word": "0x2602FFE0"
+              },
+              {
+                "instruction": "0x00216840",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216844",
+                "word": "0x0C0A94E6"
+              },
+              {
+                "instruction": "0x00216848",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x0021684C",
+                "word": "0x10000057"
+              },
+              {
+                "instruction": "0x00216850",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216854",
+                "word": "0x2C420060"
+              },
+              {
+                "instruction": "0x00216858",
+                "word": "0x10400007"
+              },
+              {
+                "instruction": "0x0021685C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216860",
+                "word": "0x00102E00"
+              },
+              {
+                "instruction": "0x00216864",
+                "word": "0x00052E03"
+              },
+              {
+                "instruction": "0x00216868",
+                "word": "0x0C0A92DC"
+              },
+              {
+                "instruction": "0x0021686C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216870",
+                "word": "0x1000004E"
+              },
+              {
+                "instruction": "0x00216874",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216878",
+                "word": "0x2402000A"
+              },
+              {
+                "instruction": "0x0021687C",
+                "word": "0x12020003"
+              },
+              {
+                "instruction": "0x00216880",
+                "word": "0x2402000D"
+              },
+              {
+                "instruction": "0x00216884",
+                "word": "0x16020036"
+              },
+              {
+                "instruction": "0x00216888",
+                "word": "0x240200E5"
+              },
+              {
+                "instruction": "0x0021688C",
+                "word": "0x3C030044"
+              },
+              {
+                "instruction": "0x00216890",
+                "word": "0x8E279408"
+              },
+              {
+                "instruction": "0x00216894",
+                "word": "0x2462A700"
+              },
+              {
+                "instruction": "0x00216898",
+                "word": "0xDC65A700"
+              },
+              {
+                "instruction": "0x0021689C",
+                "word": "0x90460014"
+              },
+              {
+                "instruction": "0x002168A0",
+                "word": "0xDC430008"
+              },
+              {
+                "instruction": "0x002168A4",
+                "word": "0x8C440010"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002168E8",
+          "word": "0x0C0A92DC",
+          "kind": "JAL",
+          "target": "0x002A4B70",
+          "delay_word": "0x8C640000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002169B8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002168A8",
+            "size": 128,
+            "sha256": "3310e5e12beec8f6e02a349658c9d1376b4efd03fdba8282d849e6888c9284aa",
+            "words": [
+              {
+                "instruction": "0x002168A8",
+                "word": "0xFFA50000"
+              },
+              {
+                "instruction": "0x002168AC",
+                "word": "0xFFA30008"
+              },
+              {
+                "instruction": "0x002168B0",
+                "word": "0xA3A60014"
+              },
+              {
+                "instruction": "0x002168B4",
+                "word": "0xAFA40010"
+              },
+              {
+                "instruction": "0x002168B8",
+                "word": "0x0C0A94FA"
+              },
+              {
+                "instruction": "0x002168BC",
+                "word": "0x8CE40000"
+              },
+              {
+                "instruction": "0x002168C0",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002168C4",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002168C8",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x002168CC",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x002168D0",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002168D4",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002168D8",
+                "word": "0x24A5A718"
+              },
+              {
+                "instruction": "0x002168DC",
+                "word": "0x8E239408"
+              },
+              {
+                "instruction": "0x002168E0",
+                "word": "0x00102E00"
+              },
+              {
+                "instruction": "0x002168E4",
+                "word": "0x00052E03"
+              },
+              {
+                "instruction": "0x002168E8",
+                "word": "0x0C0A92DC"
+              },
+              {
+                "instruction": "0x002168EC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x002168F0",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002168F4",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002168F8",
+                "word": "0x3C030044"
+              },
+              {
+                "instruction": "0x002168FC",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x00216900",
+                "word": "0x2470A720"
+              },
+              {
+                "instruction": "0x00216904",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x00216908",
+                "word": "0x0C0B3ADE"
+              },
+              {
+                "instruction": "0x0021690C",
+                "word": "0x0200302D"
+              },
+              {
+                "instruction": "0x00216910",
+                "word": "0x1040000C"
+              },
+              {
+                "instruction": "0x00216914",
+                "word": "0x3C040044"
+              },
+              {
+                "instruction": "0x00216918",
+                "word": "0x0C0A7192"
+              },
+              {
+                "instruction": "0x0021691C",
+                "word": "0x2484A730"
+              },
+              {
+                "instruction": "0x00216920",
+                "word": "0x0040202D"
+              },
+              {
+                "instruction": "0x00216924",
+                "word": "0x0000282D"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        }
+      ],
+      "preceding_body": {
+        "name": "func_002A4998",
+        "address": "0x002A4998",
+        "size": 468,
+        "instructions": 117,
+        "section": ".text",
+        "file_offset": "0x001A5998",
+        "original_sha256": "40dfa524b042801713e5869b519cac6a0e9f197e0e003d153c8345718b2b39fa",
+        "original_assembly": "build/functions/func_002A4998.s",
+        "original_assembly_raw_sha256": "408d327de948298ffd7c079985cb548e0baa0714957ea6806e3258126e1d3754",
+        "scanner_extent": 472,
+        "terminal_instruction": "0x002A4B64",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A4B68",
+        "terminal_delay_word": "0x27BD0290",
+        "excluded_zero_padding": 4,
+        "following_entry": "0x002A4B70",
+        "registered_sources": []
+      },
+      "following_body": {
+        "name": "func_002A4DB8",
+        "address": "0x002A4DB8",
+        "size": 312,
+        "instructions": 78,
+        "section": ".text",
+        "file_offset": "0x001A5DB8",
+        "original_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+        "original_assembly": "build/functions/func_002A4DB8.s",
+        "original_assembly_raw_sha256": "dee183997681069f9381eb164bcd94ee9fd1d96bf2c46793103edfbf23b06018",
+        "scanner_extent": 312,
+        "terminal_instruction": "0x002A4EE8",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A4EEC",
+        "terminal_delay_word": "0x00000000",
+        "excluded_zero_padding": 0,
+        "following_entry": "0x002A4EF0",
+        "registered_sources": []
+      },
+      "original_instruction_inventory": {
+        "loads": [
+          {
+            "instruction": "0x002A4BA8",
+            "word": "0x8E330010",
+            "base": 17,
+            "register": 19,
+            "signed_offset": 16,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BAC",
+            "word": "0x8E700008",
+            "base": 19,
+            "register": 16,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BBC",
+            "word": "0x8E23000C",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BC0",
+            "word": "0x8E220024",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BC4",
+            "word": "0x8E23001C",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 28,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BD0",
+            "word": "0x8E220024",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BD4",
+            "word": "0x8E220028",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BE4",
+            "word": "0x8C460000",
+            "base": 2,
+            "register": 6,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BE8",
+            "word": "0x8E220028",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4BFC",
+            "word": "0x8C830004",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C04",
+            "word": "0x8E22001C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 28,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C14",
+            "word": "0x8E220028",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C18",
+            "word": "0x8E22001C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 28,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C1C",
+            "word": "0x8E230028",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C2C",
+            "word": "0x8E23001C",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 28,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C30",
+            "word": "0x8E220028",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C3C",
+            "word": "0x8C64FFFC",
+            "base": 3,
+            "register": 4,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C44",
+            "word": "0x8E22001C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 28,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C54",
+            "word": "0x8E220024",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C5C",
+            "word": "0x8E230028",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 40,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C64",
+            "word": "0x8E260008",
+            "base": 17,
+            "register": 6,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C70",
+            "word": "0x8C440000",
+            "base": 2,
+            "register": 4,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C74",
+            "word": "0x8E230024",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C84",
+            "word": "0x8E23000C",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C8C",
+            "word": "0x8E220004",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C98",
+            "word": "0x8C660000",
+            "base": 3,
+            "register": 6,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C9C",
+            "word": "0x8E22000C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CAC",
+            "word": "0x8C830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CB4",
+            "word": "0x8E220004",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CC0",
+            "word": "0x8E22000C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CC4",
+            "word": "0x8E22000C",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CDC",
+            "word": "0x8CC20008",
+            "base": 6,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CFC",
+            "word": "0x8E640008",
+            "base": 19,
+            "register": 4,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D0C",
+            "word": "0x8E620008",
+            "base": 19,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D18",
+            "word": "0x8E060004",
+            "base": 16,
+            "register": 6,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D1C",
+            "word": "0x8E020000",
+            "base": 16,
+            "register": 2,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D30",
+            "word": "0x8E240014",
+            "base": 17,
+            "register": 4,
+            "signed_offset": 20,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D3C",
+            "word": "0x8E240014",
+            "base": 17,
+            "register": 4,
+            "signed_offset": 20,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D44",
+            "word": "0x7BB00040",
+            "base": 29,
+            "register": 16,
+            "signed_offset": 64,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4D48",
+            "word": "0x8E280010",
+            "base": 17,
+            "register": 8,
+            "signed_offset": 16,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D58",
+            "word": "0x8D070004",
+            "base": 8,
+            "register": 7,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D5C",
+            "word": "0x90620000",
+            "base": 3,
+            "register": 2,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4D60",
+            "word": "0x8D050000",
+            "base": 8,
+            "register": 5,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D7C",
+            "word": "0x8D020008",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D90",
+            "word": "0x8D020008",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D9C",
+            "word": "0x7BB00040",
+            "base": 29,
+            "register": 16,
+            "signed_offset": 64,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4DA0",
+            "word": "0x7BB10030",
+            "base": 29,
+            "register": 17,
+            "signed_offset": 48,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4DA4",
+            "word": "0x7BB20020",
+            "base": 29,
+            "register": 18,
+            "signed_offset": 32,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4DA8",
+            "word": "0x7BB30010",
+            "base": 29,
+            "register": 19,
+            "signed_offset": 16,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4DAC",
+            "word": "0xDFBF0000",
+            "base": 29,
+            "register": 31,
+            "signed_offset": 0,
+            "width": 8
+          }
+        ],
+        "stores": [
+          {
+            "instruction": "0x002A4B78",
+            "word": "0x7FB10030",
+            "base": 29,
+            "register": 17,
+            "signed_offset": 48,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4B80",
+            "word": "0x7FB00040",
+            "base": 29,
+            "register": 16,
+            "signed_offset": 64,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4B88",
+            "word": "0x7FB20020",
+            "base": 29,
+            "register": 18,
+            "signed_offset": 32,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4B90",
+            "word": "0x7FB30010",
+            "base": 29,
+            "register": 19,
+            "signed_offset": 16,
+            "width": 16
+          },
+          {
+            "instruction": "0x002A4B98",
+            "word": "0xFFBF0000",
+            "base": 29,
+            "register": 31,
+            "signed_offset": 0,
+            "width": 8
+          },
+          {
+            "instruction": "0x002A4C00",
+            "word": "0xAC830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C28",
+            "word": "0xAC46FFFC",
+            "base": 2,
+            "register": 6,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C40",
+            "word": "0xA0800000",
+            "base": 4,
+            "register": 0,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4C4C",
+            "word": "0xAE220024",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C50",
+            "word": "0xAE220020",
+            "base": 17,
+            "register": 2,
+            "signed_offset": 32,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C7C",
+            "word": "0xAE230020",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 32,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4C80",
+            "word": "0xAE230024",
+            "base": 17,
+            "register": 3,
+            "signed_offset": 36,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CB0",
+            "word": "0xAC83FFFC",
+            "base": 4,
+            "register": 3,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CD4",
+            "word": "0xAC66FFFC",
+            "base": 3,
+            "register": 6,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CD8",
+            "word": "0xACC00004",
+            "base": 6,
+            "register": 0,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4CE0",
+            "word": "0xA0400000",
+            "base": 2,
+            "register": 0,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4CE8",
+            "word": "0xAE260010",
+            "base": 17,
+            "register": 6,
+            "signed_offset": 16,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D88",
+            "word": "0xA0440000",
+            "base": 2,
+            "register": 4,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4D8C",
+            "word": "0xAD030004",
+            "base": 8,
+            "register": 3,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4D98",
+            "word": "0xA0400000",
+            "base": 2,
+            "register": 0,
+            "signed_offset": 0,
+            "width": 1
+          }
+        ],
+        "direct_calls": [
+          {
+            "instruction": "0x002A4BB0",
+            "word": "0x0C0A5414",
+            "kind": "JAL",
+            "target": "0x00295050",
+            "delay_word": "0x0200202D",
+            "helper": {
+              "name": "func_00295050",
+              "address": "0x00295050",
+              "size": 48,
+              "instructions": 12,
+              "section": ".text",
+              "file_offset": "0x00196050",
+              "original_sha256": "0eebdffa6c07510c32489659f138034aa99bf183a52d06171ff7c75918de3c05",
+              "original_assembly": "build/functions/func_00295050.s",
+              "original_assembly_raw_sha256": "a60ae275880a9b24b786a5d009c275ab3199e8ce0af9687928a34a7383113245",
+              "scanner_extent": 48,
+              "terminal_instruction": "0x00295078",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_instruction": "0x0029507C",
+              "terminal_delay_word": "0x0060102D",
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00295080",
+              "registered_sources": [
+                {
+                  "name": "func_00295050",
+                  "address": "0x00295050",
+                  "size": 48,
+                  "source": "src/game/string_algorithms.c",
+                  "status": "reconstructed",
+                  "manifest": "config/functions/string_algorithms.json"
+                }
+              ]
+            },
+            "selected_call_context": {
+              "address": "0x002A4B90",
+              "size": 56,
+              "sha256": "f874997735126a15bf4c27441e7e8ddc1e98b48cb287c6eacaa939a5355d452e",
+              "words": [
+                {
+                  "instruction": "0x002A4B90",
+                  "word": "0x7FB30010"
+                },
+                {
+                  "instruction": "0x002A4B94",
+                  "word": "0x10C20004"
+                },
+                {
+                  "instruction": "0x002A4B98",
+                  "word": "0xFFBF0000"
+                },
+                {
+                  "instruction": "0x002A4B9C",
+                  "word": "0x2402000D"
+                },
+                {
+                  "instruction": "0x002A4BA0",
+                  "word": "0x14C20069"
+                },
+                {
+                  "instruction": "0x002A4BA4",
+                  "word": "0x3C030045"
+                },
+                {
+                  "instruction": "0x002A4BA8",
+                  "word": "0x8E330010"
+                },
+                {
+                  "instruction": "0x002A4BAC",
+                  "word": "0x8E700008"
+                },
+                {
+                  "instruction": "0x002A4BB0",
+                  "word": "0x0C0A5414"
+                },
+                {
+                  "instruction": "0x002A4BB4",
+                  "word": "0x0200202D"
+                },
+                {
+                  "instruction": "0x002A4BB8",
+                  "word": "0x50400033"
+                },
+                {
+                  "instruction": "0x002A4BBC",
+                  "word": "0x8E23000C"
+                },
+                {
+                  "instruction": "0x002A4BC0",
+                  "word": "0x8E220024"
+                },
+                {
+                  "instruction": "0x002A4BC4",
+                  "word": "0x8E23001C"
+                }
+              ],
+              "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+            }
+          },
+          {
+            "instruction": "0x002A4C6C",
+            "word": "0x0C0E5004",
+            "kind": "JAL",
+            "target": "0x00394010",
+            "delay_word": "0x8C440000",
+            "helper": {
+              "name": "func_00394010",
+              "address": "0x00394010",
+              "size": 456,
+              "instructions": 114,
+              "section": ".text",
+              "file_offset": "0x00295010",
+              "original_sha256": "88855dbcea2c2cc350526d81ee05648e1f0de1c2da2a9dc7411f7de878a397a6",
+              "original_assembly": "build/functions/func_00394010.s",
+              "original_assembly_raw_sha256": "323232d08c7442d040ae02ab6e9d6d70061e3495eb9bc8b1a5c67126372abc04",
+              "scanner_extent": 456,
+              "terminal_instruction": "0x003941D0",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_instruction": "0x003941D4",
+              "terminal_delay_word": "0x0100102D",
+              "excluded_zero_padding": 0,
+              "following_entry": "0x003941D8",
+              "registered_sources": []
+            },
+            "selected_call_context": {
+              "address": "0x002A4C4C",
+              "size": 56,
+              "sha256": "0255368bd5864ac6d2a435e75c0d0217b9e78a0009c2232f065fe2f856f47fee",
+              "words": [
+                {
+                  "instruction": "0x002A4C4C",
+                  "word": "0xAE220024"
+                },
+                {
+                  "instruction": "0x002A4C50",
+                  "word": "0xAE220020"
+                },
+                {
+                  "instruction": "0x002A4C54",
+                  "word": "0x8E220024"
+                },
+                {
+                  "instruction": "0x002A4C58",
+                  "word": "0x0200282D"
+                },
+                {
+                  "instruction": "0x002A4C5C",
+                  "word": "0x8E230028"
+                },
+                {
+                  "instruction": "0x002A4C60",
+                  "word": "0x00021080"
+                },
+                {
+                  "instruction": "0x002A4C64",
+                  "word": "0x8E260008"
+                },
+                {
+                  "instruction": "0x002A4C68",
+                  "word": "0x00431021"
+                },
+                {
+                  "instruction": "0x002A4C6C",
+                  "word": "0x0C0E5004"
+                },
+                {
+                  "instruction": "0x002A4C70",
+                  "word": "0x8C440000"
+                },
+                {
+                  "instruction": "0x002A4C74",
+                  "word": "0x8E230024"
+                },
+                {
+                  "instruction": "0x002A4C78",
+                  "word": "0x24630001"
+                },
+                {
+                  "instruction": "0x002A4C7C",
+                  "word": "0xAE230020"
+                },
+                {
+                  "instruction": "0x002A4C80",
+                  "word": "0xAE230024"
+                }
+              ],
+              "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+            }
+          },
+          {
+            "instruction": "0x002A4CF0",
+            "word": "0x0C0AABD4",
+            "kind": "JAL",
+            "target": "0x002AAF50",
+            "delay_word": "0x0240282D",
+            "helper": {
+              "name": "func_002AAF50",
+              "address": "0x002AAF50",
+              "size": 56,
+              "instructions": 14,
+              "section": ".text",
+              "file_offset": "0x001ABF50",
+              "original_sha256": "f04309fadb38dc8f3b9b595d585113bea93b5f9897b9e92e963c274fd634c980",
+              "original_assembly": "build/functions/func_002AAF50.s",
+              "original_assembly_raw_sha256": "3027f4eef735c88bb599a9ba6dc221ff5a772edd7515c2ad4c8554a268bf1df0",
+              "scanner_extent": 56,
+              "terminal_instruction": "0x002AAF80",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_instruction": "0x002AAF84",
+              "terminal_delay_word": "0x0000102D",
+              "excluded_zero_padding": 0,
+              "following_entry": "0x002AAF88",
+              "registered_sources": []
+            },
+            "selected_call_context": {
+              "address": "0x002A4CD0",
+              "size": 56,
+              "sha256": "b20d9519b0e2f7c3de1df4dd5b5554d330b103a86be44218c9bf1186ecf85051",
+              "words": [
+                {
+                  "instruction": "0x002A4CD0",
+                  "word": "0x00621821"
+                },
+                {
+                  "instruction": "0x002A4CD4",
+                  "word": "0xAC66FFFC"
+                },
+                {
+                  "instruction": "0x002A4CD8",
+                  "word": "0xACC00004"
+                },
+                {
+                  "instruction": "0x002A4CDC",
+                  "word": "0x8CC20008"
+                },
+                {
+                  "instruction": "0x002A4CE0",
+                  "word": "0xA0400000"
+                },
+                {
+                  "instruction": "0x002A4CE4",
+                  "word": "0x10000011"
+                },
+                {
+                  "instruction": "0x002A4CE8",
+                  "word": "0xAE260010"
+                },
+                {
+                  "instruction": "0x002A4CEC",
+                  "word": "0x00000000"
+                },
+                {
+                  "instruction": "0x002A4CF0",
+                  "word": "0x0C0AABD4"
+                },
+                {
+                  "instruction": "0x002A4CF4",
+                  "word": "0x0240282D"
+                },
+                {
+                  "instruction": "0x002A4CF8",
+                  "word": "0x0040802D"
+                },
+                {
+                  "instruction": "0x002A4CFC",
+                  "word": "0x8E640008"
+                },
+                {
+                  "instruction": "0x002A4D00",
+                  "word": "0x0C0E618A"
+                },
+                {
+                  "instruction": "0x002A4D04",
+                  "word": "0x26050008"
+                }
+              ],
+              "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+            }
+          },
+          {
+            "instruction": "0x002A4D00",
+            "word": "0x0C0E618A",
+            "kind": "JAL",
+            "target": "0x00398628",
+            "delay_word": "0x26050008",
+            "helper": {
+              "name": "func_00398628",
+              "address": "0x00398628",
+              "size": 116,
+              "instructions": 29,
+              "section": ".text",
+              "file_offset": "0x00299628",
+              "original_sha256": "b86a1f58672770c6ebf30a910f1f6b57049f0cb201b87ff1f5fcc2573b59f353",
+              "original_assembly": "build/functions/func_00398628.s",
+              "original_assembly_raw_sha256": "0edd04c5d636dad027c60f44947819f1689b1ecc3641005a1fac38adab6dcc35",
+              "scanner_extent": 120,
+              "terminal_instruction": "0x00398694",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_instruction": "0x00398698",
+              "terminal_delay_word": "0x0000102D",
+              "excluded_zero_padding": 4,
+              "following_entry": "0x003986A0",
+              "registered_sources": [
+                {
+                  "name": "strstr",
+                  "address": "0x00398628",
+                  "size": 116,
+                  "source": "src/runtime/strstr.c",
+                  "status": "reconstructed",
+                  "manifest": "config/runtime_functions.json"
+                }
+              ]
+            },
+            "selected_call_context": {
+              "address": "0x002A4CE0",
+              "size": 56,
+              "sha256": "e27d25bd3ddc33cf534db021a37ecdd91bf99b06e9f13f5f61dc75d65be8b8a9",
+              "words": [
+                {
+                  "instruction": "0x002A4CE0",
+                  "word": "0xA0400000"
+                },
+                {
+                  "instruction": "0x002A4CE4",
+                  "word": "0x10000011"
+                },
+                {
+                  "instruction": "0x002A4CE8",
+                  "word": "0xAE260010"
+                },
+                {
+                  "instruction": "0x002A4CEC",
+                  "word": "0x00000000"
+                },
+                {
+                  "instruction": "0x002A4CF0",
+                  "word": "0x0C0AABD4"
+                },
+                {
+                  "instruction": "0x002A4CF4",
+                  "word": "0x0240282D"
+                },
+                {
+                  "instruction": "0x002A4CF8",
+                  "word": "0x0040802D"
+                },
+                {
+                  "instruction": "0x002A4CFC",
+                  "word": "0x8E640008"
+                },
+                {
+                  "instruction": "0x002A4D00",
+                  "word": "0x0C0E618A"
+                },
+                {
+                  "instruction": "0x002A4D04",
+                  "word": "0x26050008"
+                },
+                {
+                  "instruction": "0x002A4D08",
+                  "word": "0x0040282D"
+                },
+                {
+                  "instruction": "0x002A4D0C",
+                  "word": "0x8E620008"
+                },
+                {
+                  "instruction": "0x002A4D10",
+                  "word": "0x54A20006"
+                },
+                {
+                  "instruction": "0x002A4D14",
+                  "word": "0x26520001"
+                }
+              ],
+              "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+            }
+          },
+          {
+            "instruction": "0x002A4D2C",
+            "word": "0x0C0AABE2",
+            "kind": "JAL",
+            "target": "0x002AAF88",
+            "delay_word": "0x8E240014",
+            "helper": {
+              "name": "func_002AAF88",
+              "address": "0x002AAF88",
+              "size": 8,
+              "instructions": 2,
+              "section": ".text",
+              "file_offset": "0x001ABF88",
+              "original_sha256": "40abbd07f55cd406a62594859ce2780c8757044f8b82960f352cda7168cd26eb",
+              "original_assembly": "build/functions/func_002AAF88.s",
+              "original_assembly_raw_sha256": "209fa15e4a7b44adb0a12c848c6383c277a68c1101c52ef0aca57169281a22b3",
+              "scanner_extent": 8,
+              "terminal_instruction": "0x002AAF88",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_instruction": "0x002AAF8C",
+              "terminal_delay_word": "0x8C820008",
+              "excluded_zero_padding": 0,
+              "following_entry": "0x002AAF90",
+              "registered_sources": [
+                {
+                  "name": "func_002AAF88",
+                  "address": "0x002AAF88",
+                  "size": 8,
+                  "source": "src/game/accessors.c",
+                  "status": "matched",
+                  "manifest": "config/functions/accessors.json"
+                }
+              ]
+            },
+            "selected_call_context": {
+              "address": "0x002A4D0C",
+              "size": 56,
+              "sha256": "e6393c7b5fd01c18df8bf2c1009ed3081784cfc76de9a198444628e52b087b47",
+              "words": [
+                {
+                  "instruction": "0x002A4D0C",
+                  "word": "0x8E620008"
+                },
+                {
+                  "instruction": "0x002A4D10",
+                  "word": "0x54A20006"
+                },
+                {
+                  "instruction": "0x002A4D14",
+                  "word": "0x26520001"
+                },
+                {
+                  "instruction": "0x002A4D18",
+                  "word": "0x8E060004"
+                },
+                {
+                  "instruction": "0x002A4D1C",
+                  "word": "0x8E020000"
+                },
+                {
+                  "instruction": "0x002A4D20",
+                  "word": "0x0040F809"
+                },
+                {
+                  "instruction": "0x002A4D24",
+                  "word": "0x0220202D"
+                },
+                {
+                  "instruction": "0x002A4D28",
+                  "word": "0x26520001"
+                },
+                {
+                  "instruction": "0x002A4D2C",
+                  "word": "0x0C0AABE2"
+                },
+                {
+                  "instruction": "0x002A4D30",
+                  "word": "0x8E240014"
+                },
+                {
+                  "instruction": "0x002A4D34",
+                  "word": "0x0242102A"
+                },
+                {
+                  "instruction": "0x002A4D38",
+                  "word": "0x5440FFED"
+                },
+                {
+                  "instruction": "0x002A4D3C",
+                  "word": "0x8E240014"
+                },
+                {
+                  "instruction": "0x002A4D40",
+                  "word": "0x10000017"
+                }
+              ],
+              "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+            }
+          }
+        ],
+        "indirect_calls_or_jumps": [
+          {
+            "instruction": "0x002A4D20",
+            "word": "0x0040F809",
+            "source": 2,
+            "destination": 31,
+            "delay_word": "0x0220202D"
+          }
+        ],
+        "branches": [
+          {
+            "instruction": "0x002A4B94",
+            "word": "0x10C20004",
+            "target": "0x002A4BA8",
+            "delay_word": "0xFFBF0000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4BA0",
+            "word": "0x14C20069",
+            "target": "0x002A4D48",
+            "delay_word": "0x3C030045",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4BB8",
+            "word": "0x50400033",
+            "target": "0x002A4C88",
+            "delay_word": "0x8E23000C",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4BCC",
+            "word": "0x54400022",
+            "target": "0x002A4C58",
+            "delay_word": "0x8E220024",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4BE0",
+            "word": "0x1860000D",
+            "target": "0x002A4C18",
+            "delay_word": "0x8C460000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4C10",
+            "word": "0x5440FFF7",
+            "target": "0x002A4BF0",
+            "delay_word": "0x8E220028",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4C94",
+            "word": "0x1040000B",
+            "target": "0x002A4CC4",
+            "delay_word": "0x8C660000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4CBC",
+            "word": "0x5440FFF8",
+            "target": "0x002A4CA0",
+            "delay_word": "0x8E22000C",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4CE4",
+            "word": "0x10000011",
+            "target": "0x002A4D2C",
+            "delay_word": "0xAE260010",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4D10",
+            "word": "0x54A20006",
+            "target": "0x002A4D2C",
+            "delay_word": "0x26520001",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4D38",
+            "word": "0x5440FFED",
+            "target": "0x002A4CF0",
+            "delay_word": "0x8E240014",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4D40",
+            "word": "0x10000017",
+            "target": "0x002A4DA0",
+            "delay_word": "0x7BB00040",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4D74",
+            "word": "0x10A00009",
+            "target": "0x002A4D9C",
+            "delay_word": "0x00042603",
+            "likely": false
+          }
+        ],
+        "returns": [
+          {
+            "instruction": "0x002A4DB0",
+            "word": "0x03E00008",
+            "source": 31,
+            "destination": 0,
+            "delay_word": "0x27BD0050"
+          }
+        ],
+        "float_word_materializations": []
+      },
+      "implementation_limits": [
+        "Observed line/manager/command prefixes are partial views, not original class identities, allocation sizes or format capacities. Signed count gates retain zero/negative behavior; first line/history entry is read even below one. Original readable/writable pointer preconditions apply; no synthetic null or capacity guard.",
+        "Ordinary C explicitly models wrapping low32 index-product and pointer addition. Native aliases stay within initialized representable authored storage; pointer conversions are target/host32 implementation-defined, not a portable arbitrary-address API.",
+        "Signed ctype address is base456118+1+signed lowbyte, including negative values. Native/observer classification evidence is restricted to nonnegative signed characters andEOF(-1) inside the complete257-byte table. Other negative target values retain the original readable-address precondition; no adjacent-ROM identity or fabricated prefix data is claimed.",
+        "Five support entry intervals execute actual original instructions. Unknown indexed2AAF50 native source is an explicitly bounded lowword observer; its14 original instructions were fully read, and no helper recovery/data award is made. The complete length function is byte-extracted from published source; count accessors,strstr andctype compile unchanged whole published TUs.",
+        "Pinned generic newlib strncpy compiled unchanged with PREFER_SIZE_OVER_SPEED is supporting native C only. The original394010 byte/padding path executes for deliberately unaligned or small-count fixtures. Overlapping input/destination and aligned bulk/MMI/overread paths are rejected by the observer, not guarded in production; no retail strncpy source/compiler identity is claimed.",
+        "Controlled three-GPR callback bodies mutate authored command/count/current/captured-line fields. Actual captured/fresh pointers and source helper calls execute. Callback implementation, kernel/SDK identity, concurrency, faults,EE upper-register preservation and complete game behavior remain outside proof.",
+        "Complete natural ET_EXEC symbol bytes and size are compared at original addresses, with zero relocations/no additional allocated sections. One16-byte getter matchesGCC29; larger entries remain nonmatching. No patches, cropped functions, relocation masks, assembly-body fallback or helper duplicate credit.",
+        "Full memory comparison translates only explicitly listed pointer/function cells. Low-byte pointer-store alias fixtures require the disclosed256-byte-aligned native arena. Nonpointer words remain literal; alias/address observers do not establish game allocation/layout capacities.",
+        "Complete selected228 and primary-support171 instructions and23 incoming bounded windows were manually read. Whole containing-caller identities/root scans do not imply complete manual semantic/CFG reachability review of large callers. OptionalUI2408B and its callback graph remain supporting historical scope only, no new source award.",
+        "Historical source-free FINAL106 and separate records FINAL44 remain immutable. Historical optional-CVT prose is separately qualified by UI scope; neither optional source nor shared headers/catalogs were edited."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed": false,
+        "exact_recipes": []
+      }
+    },
+    {
+      "name": "func_002A4DB8",
+      "address": "0x002A4DB8",
+      "size": 312,
+      "file_offset": "0x001A5DB8",
+      "original_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+      "original_assembly": "build/functions/func_002A4DB8.s",
+      "original_assembly_raw_sha256": "dee183997681069f9381eb164bcd94ee9fd1d96bf2c46793103edfbf23b06018",
+      "terminal_word": "0x03E00008",
+      "terminal_delay_word": "0x00000000",
+      "excluded_zero_padding": 0,
+      "source": "src/game/buffer_manager.c",
+      "source_name": "func_002A4DB8",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "link": true,
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "evidence": "Terminated input append with no lowercasing/history/callback. Appends current byte, count then fresh terminator pointer; re-reads limit/count and advances input before rotating when full. CR/LF rotates without append. Every iteration fetches input anew; count/array/data aliases remain visible.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 312,
+        "compiled_size": 356,
+        "different_bytes": 260,
+        "first_different_offsets": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          14,
+          15,
+          22
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+        "compiled_sha256": "de436e3203615613be865a381e69fd7b7ff7d948ce7c7119674fcc0d98e9f5b9"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_002A4DB8",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 312,
+          "compiled_size": 356,
+          "different_bytes": 260,
+          "first_different_offsets": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            14,
+            15,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+          "compiled_sha256": "de436e3203615613be865a381e69fd7b7ff7d948ce7c7119674fcc0d98e9f5b9"
+        },
+        "gcc29": {
+          "name": "func_002A4DB8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 312,
+          "compiled_size": 368,
+          "different_bytes": 290,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+          "compiled_sha256": "70beb7948127bf3422a5492df824a1c0428fcf0edb17d9f57cb1eb4e84e96684"
+        },
+        "gcc29_precision": {
+          "name": "func_002A4DB8",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": false,
+          "expected_size": 312,
+          "compiled_size": 368,
+          "different_bytes": 290,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "b46eba50eb81bd9167d05b6d05e960d1c5a902e98f5b44c66ccf446d0212e3f3",
+          "compiled_sha256": "70beb7948127bf3422a5492df824a1c0428fcf0edb17d9f57cb1eb4e84e96684"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x00216658",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x24A50214",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021672C",
+            "terminal_delay_word": "0x27BD01B0",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00216618",
+            "size": 128,
+            "sha256": "24b3f37f7add5fc2648f6813c4068df55c865d42d46d2a1614c19cf122ae7bc5",
+            "words": [
+              {
+                "instruction": "0x00216618",
+                "word": "0x8E840008"
+              },
+              {
+                "instruction": "0x0021661C",
+                "word": "0x10800008"
+              },
+              {
+                "instruction": "0x00216620",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00216624",
+                "word": "0x0C0B3688"
+              },
+              {
+                "instruction": "0x00216628",
+                "word": "0x0000302D"
+              },
+              {
+                "instruction": "0x0021662C",
+                "word": "0x10000005"
+              },
+              {
+                "instruction": "0x00216630",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216634",
+                "word": "0x27C462D0"
+              },
+              {
+                "instruction": "0x00216638",
+                "word": "0x0C0B376C"
+              },
+              {
+                "instruction": "0x0021663C",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x00216640",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216644",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x00216648",
+                "word": "0x28420002"
+              },
+              {
+                "instruction": "0x0021664C",
+                "word": "0x5440000E"
+              },
+              {
+                "instruction": "0x00216650",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216654",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216658",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021665C",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216660",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216664",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216668",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021666C",
+                "word": "0x24A50010"
+              },
+              {
+                "instruction": "0x00216670",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00216674",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00216678",
+                "word": "0x24A5A690"
+              },
+              {
+                "instruction": "0x0021667C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216680",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216684",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216688",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x0021668C",
+                "word": "0x58400012"
+              },
+              {
+                "instruction": "0x00216690",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216694",
+                "word": "0x8CA20210"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00216668",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x24A50010",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021672C",
+            "terminal_delay_word": "0x27BD01B0",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00216628",
+            "size": 128,
+            "sha256": "efbd0d974870f12fd6719e9e4e6dd9b3d93a0ee88a916522b6b81b1b00b234a5",
+            "words": [
+              {
+                "instruction": "0x00216628",
+                "word": "0x0000302D"
+              },
+              {
+                "instruction": "0x0021662C",
+                "word": "0x10000005"
+              },
+              {
+                "instruction": "0x00216630",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216634",
+                "word": "0x27C462D0"
+              },
+              {
+                "instruction": "0x00216638",
+                "word": "0x0C0B376C"
+              },
+              {
+                "instruction": "0x0021663C",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x00216640",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216644",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x00216648",
+                "word": "0x28420002"
+              },
+              {
+                "instruction": "0x0021664C",
+                "word": "0x5440000E"
+              },
+              {
+                "instruction": "0x00216650",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216654",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216658",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021665C",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216660",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216664",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216668",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021666C",
+                "word": "0x24A50010"
+              },
+              {
+                "instruction": "0x00216670",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00216674",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00216678",
+                "word": "0x24A5A690"
+              },
+              {
+                "instruction": "0x0021667C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216680",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216684",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216688",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x0021668C",
+                "word": "0x58400012"
+              },
+              {
+                "instruction": "0x00216690",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216694",
+                "word": "0x8CA20210"
+              },
+              {
+                "instruction": "0x00216698",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x0021669C",
+                "word": "0x00A21021"
+              },
+              {
+                "instruction": "0x002166A0",
+                "word": "0xA0400010"
+              },
+              {
+                "instruction": "0x002166A4",
+                "word": "0x8E459408"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x0021667C",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021672C",
+            "terminal_delay_word": "0x27BD01B0",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x0021663C",
+            "size": 128,
+            "sha256": "c6c0fda6e3ac8992d4aa4d8913efdd7d0e0b921e081cd1f03e1fd30f82754787",
+            "words": [
+              {
+                "instruction": "0x0021663C",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x00216640",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216644",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x00216648",
+                "word": "0x28420002"
+              },
+              {
+                "instruction": "0x0021664C",
+                "word": "0x5440000E"
+              },
+              {
+                "instruction": "0x00216650",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216654",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216658",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021665C",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216660",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216664",
+                "word": "0x8CA40000"
+              },
+              {
+                "instruction": "0x00216668",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021666C",
+                "word": "0x24A50010"
+              },
+              {
+                "instruction": "0x00216670",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00216674",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00216678",
+                "word": "0x24A5A690"
+              },
+              {
+                "instruction": "0x0021667C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216680",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216684",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x00216688",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x0021668C",
+                "word": "0x58400012"
+              },
+              {
+                "instruction": "0x00216690",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216694",
+                "word": "0x8CA20210"
+              },
+              {
+                "instruction": "0x00216698",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x0021669C",
+                "word": "0x00A21021"
+              },
+              {
+                "instruction": "0x002166A0",
+                "word": "0xA0400010"
+              },
+              {
+                "instruction": "0x002166A4",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166A8",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002166AC",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x002166B0",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166B4",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166B8",
+                "word": "0x0C0E4DD6"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00216950",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002169B8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00216910",
+            "size": 128,
+            "sha256": "3be5cb794160670a3cb7fa95b10c79ba4f47f60f20ed8b6defdc5de05c380bce",
+            "words": [
+              {
+                "instruction": "0x00216910",
+                "word": "0x1040000C"
+              },
+              {
+                "instruction": "0x00216914",
+                "word": "0x3C040044"
+              },
+              {
+                "instruction": "0x00216918",
+                "word": "0x0C0A7192"
+              },
+              {
+                "instruction": "0x0021691C",
+                "word": "0x2484A730"
+              },
+              {
+                "instruction": "0x00216920",
+                "word": "0x0040202D"
+              },
+              {
+                "instruction": "0x00216924",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x00216928",
+                "word": "0x0C0B4096"
+              },
+              {
+                "instruction": "0x0021692C",
+                "word": "0x2406FFFF"
+              },
+              {
+                "instruction": "0x00216930",
+                "word": "0x0200202D"
+              },
+              {
+                "instruction": "0x00216934",
+                "word": "0x0C0B412C"
+              },
+              {
+                "instruction": "0x00216938",
+                "word": "0x24050001"
+              },
+              {
+                "instruction": "0x0021693C",
+                "word": "0x1000001B"
+              },
+              {
+                "instruction": "0x00216940",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216944",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216948",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x0021694C",
+                "word": "0x24A5A740"
+              },
+              {
+                "instruction": "0x00216950",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216954",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216958",
+                "word": "0x10000014"
+              },
+              {
+                "instruction": "0x0021695C",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216960",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216964",
+                "word": "0x240200E7"
+              },
+              {
+                "instruction": "0x00216968",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x0021696C",
+                "word": "0x0C0A948C"
+              },
+              {
+                "instruction": "0x00216970",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216974",
+                "word": "0x1000000D"
+              },
+              {
+                "instruction": "0x00216978",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x0021697C",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216980",
+                "word": "0x24020009"
+              },
+              {
+                "instruction": "0x00216984",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216988",
+                "word": "0x0C0A94A4"
+              },
+              {
+                "instruction": "0x0021698C",
+                "word": "0x8C440000"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217414",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0xAE509408",
+          "caller": {
+            "name": "func_002173A0",
+            "address": "0x002173A0",
+            "size": 208,
+            "instructions": 52,
+            "section": ".text",
+            "file_offset": "0x001183A0",
+            "original_sha256": "ece913f8536a7a52ec49cae2babd69611608080d5917c5c32764b5f25dc7c537",
+            "original_assembly": "build/functions/func_002173A0.s",
+            "original_assembly_raw_sha256": "396e2b90b5708d410d49c76f408b27076fa12137e3a2f1ce1e3907e6fb2ce622",
+            "scanner_extent": 208,
+            "terminal_instruction": "0x00217468",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021746C",
+            "terminal_delay_word": "0x27BD0040",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217470",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002173D4",
+            "size": 128,
+            "sha256": "981631d4a668facbdc8cb6a8f154a691b4670a08a5a935f4d2e53d3756885078",
+            "words": [
+              {
+                "instruction": "0x002173D4",
+                "word": "0x24060014"
+              },
+              {
+                "instruction": "0x002173D8",
+                "word": "0xAE110008"
+              },
+              {
+                "instruction": "0x002173DC",
+                "word": "0x0C0A9526"
+              },
+              {
+                "instruction": "0x002173E0",
+                "word": "0x2405005A"
+              },
+              {
+                "instruction": "0x002173E4",
+                "word": "0x3C040044"
+              },
+              {
+                "instruction": "0x002173E8",
+                "word": "0x3C060021"
+              },
+              {
+                "instruction": "0x002173EC",
+                "word": "0xAE020000"
+              },
+              {
+                "instruction": "0x002173F0",
+                "word": "0x0000382D"
+              },
+              {
+                "instruction": "0x002173F4",
+                "word": "0x24C674C0"
+              },
+              {
+                "instruction": "0x002173F8",
+                "word": "0x24050001"
+              },
+              {
+                "instruction": "0x002173FC",
+                "word": "0x2484A630"
+              },
+              {
+                "instruction": "0x00217400",
+                "word": "0x0C0B3950"
+              },
+              {
+                "instruction": "0x00217404",
+                "word": "0xAE000004"
+              },
+              {
+                "instruction": "0x00217408",
+                "word": "0x8E040000"
+              },
+              {
+                "instruction": "0x0021740C",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217410",
+                "word": "0x24A5A638"
+              },
+              {
+                "instruction": "0x00217414",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217418",
+                "word": "0xAE509408"
+              },
+              {
+                "instruction": "0x0021741C",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217420",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217424",
+                "word": "0x24A5A670"
+              },
+              {
+                "instruction": "0x00217428",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021742C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217430",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217434",
+                "word": "0x3C100044"
+              },
+              {
+                "instruction": "0x00217438",
+                "word": "0x2610A690"
+              },
+              {
+                "instruction": "0x0021743C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217440",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217444",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217448",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x0021744C",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217450",
+                "word": "0x0C0A936E"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217428",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002173A0",
+            "address": "0x002173A0",
+            "size": 208,
+            "instructions": 52,
+            "section": ".text",
+            "file_offset": "0x001183A0",
+            "original_sha256": "ece913f8536a7a52ec49cae2babd69611608080d5917c5c32764b5f25dc7c537",
+            "original_assembly": "build/functions/func_002173A0.s",
+            "original_assembly_raw_sha256": "396e2b90b5708d410d49c76f408b27076fa12137e3a2f1ce1e3907e6fb2ce622",
+            "scanner_extent": 208,
+            "terminal_instruction": "0x00217468",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021746C",
+            "terminal_delay_word": "0x27BD0040",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217470",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002173E8",
+            "size": 128,
+            "sha256": "d2c6526ac9b3e14b26492d5281678406402a2dac34f45233542f6c09b9d6958a",
+            "words": [
+              {
+                "instruction": "0x002173E8",
+                "word": "0x3C060021"
+              },
+              {
+                "instruction": "0x002173EC",
+                "word": "0xAE020000"
+              },
+              {
+                "instruction": "0x002173F0",
+                "word": "0x0000382D"
+              },
+              {
+                "instruction": "0x002173F4",
+                "word": "0x24C674C0"
+              },
+              {
+                "instruction": "0x002173F8",
+                "word": "0x24050001"
+              },
+              {
+                "instruction": "0x002173FC",
+                "word": "0x2484A630"
+              },
+              {
+                "instruction": "0x00217400",
+                "word": "0x0C0B3950"
+              },
+              {
+                "instruction": "0x00217404",
+                "word": "0xAE000004"
+              },
+              {
+                "instruction": "0x00217408",
+                "word": "0x8E040000"
+              },
+              {
+                "instruction": "0x0021740C",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217410",
+                "word": "0x24A5A638"
+              },
+              {
+                "instruction": "0x00217414",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217418",
+                "word": "0xAE509408"
+              },
+              {
+                "instruction": "0x0021741C",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217420",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217424",
+                "word": "0x24A5A670"
+              },
+              {
+                "instruction": "0x00217428",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021742C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217430",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217434",
+                "word": "0x3C100044"
+              },
+              {
+                "instruction": "0x00217438",
+                "word": "0x2610A690"
+              },
+              {
+                "instruction": "0x0021743C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217440",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217444",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217448",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x0021744C",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217450",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217454",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217458",
+                "word": "0x7BB00030"
+              },
+              {
+                "instruction": "0x0021745C",
+                "word": "0x7BB10020"
+              },
+              {
+                "instruction": "0x00217460",
+                "word": "0x7BB20010"
+              },
+              {
+                "instruction": "0x00217464",
+                "word": "0xDFBF0000"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217440",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x0200282D",
+          "caller": {
+            "name": "func_002173A0",
+            "address": "0x002173A0",
+            "size": 208,
+            "instructions": 52,
+            "section": ".text",
+            "file_offset": "0x001183A0",
+            "original_sha256": "ece913f8536a7a52ec49cae2babd69611608080d5917c5c32764b5f25dc7c537",
+            "original_assembly": "build/functions/func_002173A0.s",
+            "original_assembly_raw_sha256": "396e2b90b5708d410d49c76f408b27076fa12137e3a2f1ce1e3907e6fb2ce622",
+            "scanner_extent": 208,
+            "terminal_instruction": "0x00217468",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021746C",
+            "terminal_delay_word": "0x27BD0040",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217470",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00217400",
+            "size": 112,
+            "sha256": "408d8c347e8582e7da7bce8bc47ede3911f0f44e8d26f51dc68e95132bfd2d6d",
+            "words": [
+              {
+                "instruction": "0x00217400",
+                "word": "0x0C0B3950"
+              },
+              {
+                "instruction": "0x00217404",
+                "word": "0xAE000004"
+              },
+              {
+                "instruction": "0x00217408",
+                "word": "0x8E040000"
+              },
+              {
+                "instruction": "0x0021740C",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217410",
+                "word": "0x24A5A638"
+              },
+              {
+                "instruction": "0x00217414",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217418",
+                "word": "0xAE509408"
+              },
+              {
+                "instruction": "0x0021741C",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217420",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217424",
+                "word": "0x24A5A670"
+              },
+              {
+                "instruction": "0x00217428",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021742C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217430",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217434",
+                "word": "0x3C100044"
+              },
+              {
+                "instruction": "0x00217438",
+                "word": "0x2610A690"
+              },
+              {
+                "instruction": "0x0021743C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217440",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217444",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217448",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x0021744C",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217450",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217454",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217458",
+                "word": "0x7BB00030"
+              },
+              {
+                "instruction": "0x0021745C",
+                "word": "0x7BB10020"
+              },
+              {
+                "instruction": "0x00217460",
+                "word": "0x7BB20010"
+              },
+              {
+                "instruction": "0x00217464",
+                "word": "0xDFBF0000"
+              },
+              {
+                "instruction": "0x00217468",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x0021746C",
+                "word": "0x27BD0040"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217450",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002173A0",
+            "address": "0x002173A0",
+            "size": 208,
+            "instructions": 52,
+            "section": ".text",
+            "file_offset": "0x001183A0",
+            "original_sha256": "ece913f8536a7a52ec49cae2babd69611608080d5917c5c32764b5f25dc7c537",
+            "original_assembly": "build/functions/func_002173A0.s",
+            "original_assembly_raw_sha256": "396e2b90b5708d410d49c76f408b27076fa12137e3a2f1ce1e3907e6fb2ce622",
+            "scanner_extent": 208,
+            "terminal_instruction": "0x00217468",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x0021746C",
+            "terminal_delay_word": "0x27BD0040",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217470",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00217410",
+            "size": 96,
+            "sha256": "e0802fa2a843e7fc6470843a85a6257386dff6905de6cf0b2a1460c95060a26a",
+            "words": [
+              {
+                "instruction": "0x00217410",
+                "word": "0x24A5A638"
+              },
+              {
+                "instruction": "0x00217414",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217418",
+                "word": "0xAE509408"
+              },
+              {
+                "instruction": "0x0021741C",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217420",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00217424",
+                "word": "0x24A5A670"
+              },
+              {
+                "instruction": "0x00217428",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x0021742C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217430",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x00217434",
+                "word": "0x3C100044"
+              },
+              {
+                "instruction": "0x00217438",
+                "word": "0x2610A690"
+              },
+              {
+                "instruction": "0x0021743C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217440",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217444",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217448",
+                "word": "0x8E429408"
+              },
+              {
+                "instruction": "0x0021744C",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00217450",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217454",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217458",
+                "word": "0x7BB00030"
+              },
+              {
+                "instruction": "0x0021745C",
+                "word": "0x7BB10020"
+              },
+              {
+                "instruction": "0x00217460",
+                "word": "0x7BB20010"
+              },
+              {
+                "instruction": "0x00217464",
+                "word": "0xDFBF0000"
+              },
+              {
+                "instruction": "0x00217468",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x0021746C",
+                "word": "0x27BD0040"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217554",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C640000",
+          "caller": {
+            "name": "func_00217540",
+            "address": "0x00217540",
+            "size": 40,
+            "instructions": 10,
+            "section": ".text",
+            "file_offset": "0x00118540",
+            "original_sha256": "0aecb1d7ed908c6747e724b35b156c0efc81582fe1276ed640e44b7610218ae9",
+            "original_assembly": "build/functions/func_00217540.s",
+            "original_assembly_raw_sha256": "47ed965c6682fa6b8c83ea86b6e8edc171dc747de336d592c7d0639a266602dc",
+            "scanner_extent": 40,
+            "terminal_instruction": "0x00217560",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x00217564",
+            "terminal_delay_word": "0x27BD0010",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217568",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00217540",
+            "size": 40,
+            "sha256": "0aecb1d7ed908c6747e724b35b156c0efc81582fe1276ed640e44b7610218ae9",
+            "words": [
+              {
+                "instruction": "0x00217540",
+                "word": "0x27BDFFF0"
+              },
+              {
+                "instruction": "0x00217544",
+                "word": "0x3C020040"
+              },
+              {
+                "instruction": "0x00217548",
+                "word": "0xFFBF0000"
+              },
+              {
+                "instruction": "0x0021754C",
+                "word": "0x0080282D"
+              },
+              {
+                "instruction": "0x00217550",
+                "word": "0x8C439408"
+              },
+              {
+                "instruction": "0x00217554",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217558",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x0021755C",
+                "word": "0xDFBF0000"
+              },
+              {
+                "instruction": "0x00217560",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x00217564",
+                "word": "0x27BD0010"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x0021764C",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_00217598",
+            "address": "0x00217598",
+            "size": 308,
+            "instructions": 77,
+            "section": ".text",
+            "file_offset": "0x00118598",
+            "original_sha256": "a2de6eef65ebf2c535383f13f8908886122fe8243c8343a672dfad5b3e0bab5d",
+            "original_assembly": "build/functions/func_00217598.s",
+            "original_assembly_raw_sha256": "c2e68cfcf9a495438e711bd5ae0752a4dc84636e3e0819b08d9afed2ba168682",
+            "scanner_extent": 312,
+            "terminal_instruction": "0x002176C4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002176C8",
+            "terminal_delay_word": "0x27BD0080",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002176D0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x0021760C",
+            "size": 128,
+            "sha256": "a8af5e411c8e15a87cadc5567580f375b81a2445443526c4326ab966620832ad",
+            "words": [
+              {
+                "instruction": "0x0021760C",
+                "word": "0x80650000"
+              },
+              {
+                "instruction": "0x00217610",
+                "word": "0x80820000"
+              },
+              {
+                "instruction": "0x00217614",
+                "word": "0x54A20001"
+              },
+              {
+                "instruction": "0x00217618",
+                "word": "0xAE300210"
+              },
+              {
+                "instruction": "0x0021761C",
+                "word": "0x26100001"
+              },
+              {
+                "instruction": "0x00217620",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x00217624",
+                "word": "0x0240202D"
+              },
+              {
+                "instruction": "0x00217628",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x0021762C",
+                "word": "0x10400006"
+              },
+              {
+                "instruction": "0x00217630",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217634",
+                "word": "0x8E220210"
+              },
+              {
+                "instruction": "0x00217638",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x0021763C",
+                "word": "0x1440FFF2"
+              },
+              {
+                "instruction": "0x00217640",
+                "word": "0x02501821"
+              },
+              {
+                "instruction": "0x00217644",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217648",
+                "word": "0x02A0282D"
+              },
+              {
+                "instruction": "0x0021764C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217650",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217654",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217658",
+                "word": "0x0260282D"
+              },
+              {
+                "instruction": "0x0021765C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217660",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217664",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217668",
+                "word": "0x26C5A690"
+              },
+              {
+                "instruction": "0x0021766C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217670",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217674",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x00217678",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x0021767C",
+                "word": "0x0240202D"
+              },
+              {
+                "instruction": "0x00217680",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x00217684",
+                "word": "0x26330010"
+              },
+              {
+                "instruction": "0x00217688",
+                "word": "0xAE220210"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x0021765C",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_00217598",
+            "address": "0x00217598",
+            "size": 308,
+            "instructions": 77,
+            "section": ".text",
+            "file_offset": "0x00118598",
+            "original_sha256": "a2de6eef65ebf2c535383f13f8908886122fe8243c8343a672dfad5b3e0bab5d",
+            "original_assembly": "build/functions/func_00217598.s",
+            "original_assembly_raw_sha256": "c2e68cfcf9a495438e711bd5ae0752a4dc84636e3e0819b08d9afed2ba168682",
+            "scanner_extent": 312,
+            "terminal_instruction": "0x002176C4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002176C8",
+            "terminal_delay_word": "0x27BD0080",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002176D0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x0021761C",
+            "size": 128,
+            "sha256": "7b5e38b48259264586a7089d40f5b13d1be45014fa998717be6aa4c3f0af898f",
+            "words": [
+              {
+                "instruction": "0x0021761C",
+                "word": "0x26100001"
+              },
+              {
+                "instruction": "0x00217620",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x00217624",
+                "word": "0x0240202D"
+              },
+              {
+                "instruction": "0x00217628",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x0021762C",
+                "word": "0x10400006"
+              },
+              {
+                "instruction": "0x00217630",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217634",
+                "word": "0x8E220210"
+              },
+              {
+                "instruction": "0x00217638",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x0021763C",
+                "word": "0x1440FFF2"
+              },
+              {
+                "instruction": "0x00217640",
+                "word": "0x02501821"
+              },
+              {
+                "instruction": "0x00217644",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217648",
+                "word": "0x02A0282D"
+              },
+              {
+                "instruction": "0x0021764C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217650",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217654",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217658",
+                "word": "0x0260282D"
+              },
+              {
+                "instruction": "0x0021765C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217660",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217664",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217668",
+                "word": "0x26C5A690"
+              },
+              {
+                "instruction": "0x0021766C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217670",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217674",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x00217678",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x0021767C",
+                "word": "0x0240202D"
+              },
+              {
+                "instruction": "0x00217680",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x00217684",
+                "word": "0x26330010"
+              },
+              {
+                "instruction": "0x00217688",
+                "word": "0xAE220210"
+              },
+              {
+                "instruction": "0x0021768C",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x00217690",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x00217694",
+                "word": "0x0240282D"
+              },
+              {
+                "instruction": "0x00217698",
+                "word": "0x8E23000C"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x0021766C",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_00217598",
+            "address": "0x00217598",
+            "size": 308,
+            "instructions": 77,
+            "section": ".text",
+            "file_offset": "0x00118598",
+            "original_sha256": "a2de6eef65ebf2c535383f13f8908886122fe8243c8343a672dfad5b3e0bab5d",
+            "original_assembly": "build/functions/func_00217598.s",
+            "original_assembly_raw_sha256": "c2e68cfcf9a495438e711bd5ae0752a4dc84636e3e0819b08d9afed2ba168682",
+            "scanner_extent": 312,
+            "terminal_instruction": "0x002176C4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002176C8",
+            "terminal_delay_word": "0x27BD0080",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002176D0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x0021762C",
+            "size": 128,
+            "sha256": "1dea18b4f052f80ccc2e7ccdb62a2b172d8a5bdc9b5eabab20585f49f31c9c66",
+            "words": [
+              {
+                "instruction": "0x0021762C",
+                "word": "0x10400006"
+              },
+              {
+                "instruction": "0x00217630",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217634",
+                "word": "0x8E220210"
+              },
+              {
+                "instruction": "0x00217638",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x0021763C",
+                "word": "0x1440FFF2"
+              },
+              {
+                "instruction": "0x00217640",
+                "word": "0x02501821"
+              },
+              {
+                "instruction": "0x00217644",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217648",
+                "word": "0x02A0282D"
+              },
+              {
+                "instruction": "0x0021764C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217650",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217654",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217658",
+                "word": "0x0260282D"
+              },
+              {
+                "instruction": "0x0021765C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217660",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217664",
+                "word": "0x8E829408"
+              },
+              {
+                "instruction": "0x00217668",
+                "word": "0x26C5A690"
+              },
+              {
+                "instruction": "0x0021766C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00217670",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00217674",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x00217678",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x0021767C",
+                "word": "0x0240202D"
+              },
+              {
+                "instruction": "0x00217680",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x00217684",
+                "word": "0x26330010"
+              },
+              {
+                "instruction": "0x00217688",
+                "word": "0xAE220210"
+              },
+              {
+                "instruction": "0x0021768C",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x00217690",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x00217694",
+                "word": "0x0240282D"
+              },
+              {
+                "instruction": "0x00217698",
+                "word": "0x8E23000C"
+              },
+              {
+                "instruction": "0x0021769C",
+                "word": "0x24630001"
+              },
+              {
+                "instruction": "0x002176A0",
+                "word": "0xAE23000C"
+              },
+              {
+                "instruction": "0x002176A4",
+                "word": "0x7BB00070"
+              },
+              {
+                "instruction": "0x002176A8",
+                "word": "0x7BB10060"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002A4A90",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x03A0282D",
+          "caller": {
+            "name": "func_002A4998",
+            "address": "0x002A4998",
+            "size": 468,
+            "instructions": 117,
+            "section": ".text",
+            "file_offset": "0x001A5998",
+            "original_sha256": "40dfa524b042801713e5869b519cac6a0e9f197e0e003d153c8345718b2b39fa",
+            "original_assembly": "build/functions/func_002A4998.s",
+            "original_assembly_raw_sha256": "408d327de948298ffd7c079985cb548e0baa0714957ea6806e3258126e1d3754",
+            "scanner_extent": 472,
+            "terminal_instruction": "0x002A4B64",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002A4B68",
+            "terminal_delay_word": "0x27BD0290",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002A4B70",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002A4A50",
+            "size": 128,
+            "sha256": "07b5444f0bdf0ef8fe6808da4dc71745e4bcde3860405351fd710c3dcc93b50c",
+            "words": [
+              {
+                "instruction": "0x002A4A50",
+                "word": "0x3C140044"
+              },
+              {
+                "instruction": "0x002A4A54",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002A4A58",
+                "word": "0x03B02821"
+              },
+              {
+                "instruction": "0x002A4A5C",
+                "word": "0x80820000"
+              },
+              {
+                "instruction": "0x002A4A60",
+                "word": "0x80A30000"
+              },
+              {
+                "instruction": "0x002A4A64",
+                "word": "0x00431026"
+              },
+              {
+                "instruction": "0x002A4A68",
+                "word": "0x0202A80B"
+              },
+              {
+                "instruction": "0x002A4A6C",
+                "word": "0x26100001"
+              },
+              {
+                "instruction": "0x002A4A70",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4A74",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002A4A78",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x002A4A7C",
+                "word": "0x10400003"
+              },
+              {
+                "instruction": "0x002A4A80",
+                "word": "0x0215102B"
+              },
+              {
+                "instruction": "0x002A4A84",
+                "word": "0x1440FFF4"
+              },
+              {
+                "instruction": "0x002A4A88",
+                "word": "0x02302021"
+              },
+              {
+                "instruction": "0x002A4A8C",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4A90",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4A94",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4A98",
+                "word": "0x26855AE8"
+              },
+              {
+                "instruction": "0x002A4A9C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4AA0",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4AA4",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x002A4AA8",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002A4AAC",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002A4AB0",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4AB4",
+                "word": "0x26920001"
+              },
+              {
+                "instruction": "0x002A4AB8",
+                "word": "0x0040A82D"
+              },
+              {
+                "instruction": "0x002A4ABC",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002A4AC0",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002A4AC4",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002A4AC8",
+                "word": "0x0240A02D"
+              },
+              {
+                "instruction": "0x002A4ACC",
+                "word": "0x02C0902D"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002A4A9C",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x0260202D",
+          "caller": {
+            "name": "func_002A4998",
+            "address": "0x002A4998",
+            "size": 468,
+            "instructions": 117,
+            "section": ".text",
+            "file_offset": "0x001A5998",
+            "original_sha256": "40dfa524b042801713e5869b519cac6a0e9f197e0e003d153c8345718b2b39fa",
+            "original_assembly": "build/functions/func_002A4998.s",
+            "original_assembly_raw_sha256": "408d327de948298ffd7c079985cb548e0baa0714957ea6806e3258126e1d3754",
+            "scanner_extent": 472,
+            "terminal_instruction": "0x002A4B64",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002A4B68",
+            "terminal_delay_word": "0x27BD0290",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002A4B70",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002A4A5C",
+            "size": 128,
+            "sha256": "d617acaeab623f7804687155f97b3ed52dd17be1eca368a19ba10dbaea4097cc",
+            "words": [
+              {
+                "instruction": "0x002A4A5C",
+                "word": "0x80820000"
+              },
+              {
+                "instruction": "0x002A4A60",
+                "word": "0x80A30000"
+              },
+              {
+                "instruction": "0x002A4A64",
+                "word": "0x00431026"
+              },
+              {
+                "instruction": "0x002A4A68",
+                "word": "0x0202A80B"
+              },
+              {
+                "instruction": "0x002A4A6C",
+                "word": "0x26100001"
+              },
+              {
+                "instruction": "0x002A4A70",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4A74",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002A4A78",
+                "word": "0x0202102B"
+              },
+              {
+                "instruction": "0x002A4A7C",
+                "word": "0x10400003"
+              },
+              {
+                "instruction": "0x002A4A80",
+                "word": "0x0215102B"
+              },
+              {
+                "instruction": "0x002A4A84",
+                "word": "0x1440FFF4"
+              },
+              {
+                "instruction": "0x002A4A88",
+                "word": "0x02302021"
+              },
+              {
+                "instruction": "0x002A4A8C",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4A90",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4A94",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4A98",
+                "word": "0x26855AE8"
+              },
+              {
+                "instruction": "0x002A4A9C",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4AA0",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4AA4",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x002A4AA8",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002A4AAC",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002A4AB0",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4AB4",
+                "word": "0x26920001"
+              },
+              {
+                "instruction": "0x002A4AB8",
+                "word": "0x0040A82D"
+              },
+              {
+                "instruction": "0x002A4ABC",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002A4AC0",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002A4AC4",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002A4AC8",
+                "word": "0x0240A02D"
+              },
+              {
+                "instruction": "0x002A4ACC",
+                "word": "0x02C0902D"
+              },
+              {
+                "instruction": "0x002A4AD0",
+                "word": "0x0C0AABE2"
+              },
+              {
+                "instruction": "0x002A4AD4",
+                "word": "0x8E640014"
+              },
+              {
+                "instruction": "0x002A4AD8",
+                "word": "0x0242102A"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002A4AF0",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x0260202D",
+          "caller": {
+            "name": "func_002A4998",
+            "address": "0x002A4998",
+            "size": 468,
+            "instructions": 117,
+            "section": ".text",
+            "file_offset": "0x001A5998",
+            "original_sha256": "40dfa524b042801713e5869b519cac6a0e9f197e0e003d153c8345718b2b39fa",
+            "original_assembly": "build/functions/func_002A4998.s",
+            "original_assembly_raw_sha256": "408d327de948298ffd7c079985cb548e0baa0714957ea6806e3258126e1d3754",
+            "scanner_extent": 472,
+            "terminal_instruction": "0x002A4B64",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002A4B68",
+            "terminal_delay_word": "0x27BD0290",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002A4B70",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002A4AB0",
+            "size": 128,
+            "sha256": "d81a112f6ee0f5ea536a35369fb0352d98ed92ae450f95c188c1be2643caa3f1",
+            "words": [
+              {
+                "instruction": "0x002A4AB0",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4AB4",
+                "word": "0x26920001"
+              },
+              {
+                "instruction": "0x002A4AB8",
+                "word": "0x0040A82D"
+              },
+              {
+                "instruction": "0x002A4ABC",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002A4AC0",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002A4AC4",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002A4AC8",
+                "word": "0x0240A02D"
+              },
+              {
+                "instruction": "0x002A4ACC",
+                "word": "0x02C0902D"
+              },
+              {
+                "instruction": "0x002A4AD0",
+                "word": "0x0C0AABE2"
+              },
+              {
+                "instruction": "0x002A4AD4",
+                "word": "0x8E640014"
+              },
+              {
+                "instruction": "0x002A4AD8",
+                "word": "0x0242102A"
+              },
+              {
+                "instruction": "0x002A4ADC",
+                "word": "0x5440FFCC"
+              },
+              {
+                "instruction": "0x002A4AE0",
+                "word": "0x8E640014"
+              },
+              {
+                "instruction": "0x002A4AE4",
+                "word": "0x2A820002"
+              },
+              {
+                "instruction": "0x002A4AE8",
+                "word": "0x14400007"
+              },
+              {
+                "instruction": "0x002A4AEC",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4AF0",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4AF4",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4AF8",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x002A4AFC",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4B00",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4B04",
+                "word": "0x24A55AE8"
+              },
+              {
+                "instruction": "0x002A4B08",
+                "word": "0x1A800005"
+              },
+              {
+                "instruction": "0x002A4B0C",
+                "word": "0x03B51021"
+              },
+              {
+                "instruction": "0x002A4B10",
+                "word": "0x8E700010"
+              },
+              {
+                "instruction": "0x002A4B14",
+                "word": "0xA0400000"
+              },
+              {
+                "instruction": "0x002A4B18",
+                "word": "0x10000003"
+              },
+              {
+                "instruction": "0x002A4B1C",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4B20",
+                "word": "0x8E700010"
+              },
+              {
+                "instruction": "0x002A4B24",
+                "word": "0x27A50100"
+              },
+              {
+                "instruction": "0x002A4B28",
+                "word": "0x8E040008"
+              },
+              {
+                "instruction": "0x002A4B2C",
+                "word": "0x0C0E5004"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002A4B00",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x24A55AE8",
+          "caller": {
+            "name": "func_002A4998",
+            "address": "0x002A4998",
+            "size": 468,
+            "instructions": 117,
+            "section": ".text",
+            "file_offset": "0x001A5998",
+            "original_sha256": "40dfa524b042801713e5869b519cac6a0e9f197e0e003d153c8345718b2b39fa",
+            "original_assembly": "build/functions/func_002A4998.s",
+            "original_assembly_raw_sha256": "408d327de948298ffd7c079985cb548e0baa0714957ea6806e3258126e1d3754",
+            "scanner_extent": 472,
+            "terminal_instruction": "0x002A4B64",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002A4B68",
+            "terminal_delay_word": "0x27BD0290",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002A4B70",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002A4AC0",
+            "size": 128,
+            "sha256": "c9f27b8846222216ed1cb7b9935f16e65529fcc5b9f13a653eb7329d7a73a109",
+            "words": [
+              {
+                "instruction": "0x002A4AC0",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002A4AC4",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002A4AC8",
+                "word": "0x0240A02D"
+              },
+              {
+                "instruction": "0x002A4ACC",
+                "word": "0x02C0902D"
+              },
+              {
+                "instruction": "0x002A4AD0",
+                "word": "0x0C0AABE2"
+              },
+              {
+                "instruction": "0x002A4AD4",
+                "word": "0x8E640014"
+              },
+              {
+                "instruction": "0x002A4AD8",
+                "word": "0x0242102A"
+              },
+              {
+                "instruction": "0x002A4ADC",
+                "word": "0x5440FFCC"
+              },
+              {
+                "instruction": "0x002A4AE0",
+                "word": "0x8E640014"
+              },
+              {
+                "instruction": "0x002A4AE4",
+                "word": "0x2A820002"
+              },
+              {
+                "instruction": "0x002A4AE8",
+                "word": "0x14400007"
+              },
+              {
+                "instruction": "0x002A4AEC",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4AF0",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4AF4",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4AF8",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x002A4AFC",
+                "word": "0x0260202D"
+              },
+              {
+                "instruction": "0x002A4B00",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A4B04",
+                "word": "0x24A55AE8"
+              },
+              {
+                "instruction": "0x002A4B08",
+                "word": "0x1A800005"
+              },
+              {
+                "instruction": "0x002A4B0C",
+                "word": "0x03B51021"
+              },
+              {
+                "instruction": "0x002A4B10",
+                "word": "0x8E700010"
+              },
+              {
+                "instruction": "0x002A4B14",
+                "word": "0xA0400000"
+              },
+              {
+                "instruction": "0x002A4B18",
+                "word": "0x10000003"
+              },
+              {
+                "instruction": "0x002A4B1C",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A4B20",
+                "word": "0x8E700010"
+              },
+              {
+                "instruction": "0x002A4B24",
+                "word": "0x27A50100"
+              },
+              {
+                "instruction": "0x002A4B28",
+                "word": "0x8E040008"
+              },
+              {
+                "instruction": "0x002A4B2C",
+                "word": "0x0C0E5004"
+              },
+              {
+                "instruction": "0x002A4B30",
+                "word": "0x8E060000"
+              },
+              {
+                "instruction": "0x002A4B34",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002A4B38",
+                "word": "0x8E040008"
+              },
+              {
+                "instruction": "0x002A4B3C",
+                "word": "0xAE020004"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x002A5360",
+          "word": "0x0C0A936E",
+          "kind": "JAL",
+          "target": "0x002A4DB8",
+          "delay_word": "0x03A0282D",
+          "caller": {
+            "name": "func_002A5318",
+            "address": "0x002A5318",
+            "size": 128,
+            "instructions": 32,
+            "section": ".text",
+            "file_offset": "0x001A6318",
+            "original_sha256": "857f056b131f5241a513f41f215a185419a185cad02001eeef4986360d8ef910",
+            "original_assembly": "build/functions/func_002A5318.s",
+            "original_assembly_raw_sha256": "b1a475fa3448e3e24043692a6c0420177f575581316155046f651fe63b2fa83e",
+            "scanner_extent": 128,
+            "terminal_instruction": "0x002A5390",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002A5394",
+            "terminal_delay_word": "0x27BD0440",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x002A5398",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002A5320",
+            "size": 120,
+            "sha256": "7713dac620b425ffcc8118ce9bda48d489a26d9ec43068550cc806bd39d740c9",
+            "words": [
+              {
+                "instruction": "0x002A5320",
+                "word": "0x7FB10420"
+              },
+              {
+                "instruction": "0x002A5324",
+                "word": "0x0000802D"
+              },
+              {
+                "instruction": "0x002A5328",
+                "word": "0x7FB20410"
+              },
+              {
+                "instruction": "0x002A532C",
+                "word": "0x0080882D"
+              },
+              {
+                "instruction": "0x002A5330",
+                "word": "0xFFBF0400"
+              },
+              {
+                "instruction": "0x002A5334",
+                "word": "0x1000000C"
+              },
+              {
+                "instruction": "0x002A5338",
+                "word": "0x3C120044"
+              },
+              {
+                "instruction": "0x002A533C",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002A5340",
+                "word": "0x0C0AABD4"
+              },
+              {
+                "instruction": "0x002A5344",
+                "word": "0x8E240014"
+              },
+              {
+                "instruction": "0x002A5348",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002A534C",
+                "word": "0x26455AF0"
+              },
+              {
+                "instruction": "0x002A5350",
+                "word": "0x24470080"
+              },
+              {
+                "instruction": "0x002A5354",
+                "word": "0x0C0E54B2"
+              },
+              {
+                "instruction": "0x002A5358",
+                "word": "0x24460008"
+              },
+              {
+                "instruction": "0x002A535C",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002A5360",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x002A5364",
+                "word": "0x03A0282D"
+              },
+              {
+                "instruction": "0x002A5368",
+                "word": "0x0C0AABE2"
+              },
+              {
+                "instruction": "0x002A536C",
+                "word": "0x8E240014"
+              },
+              {
+                "instruction": "0x002A5370",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x002A5374",
+                "word": "0x0202102A"
+              },
+              {
+                "instruction": "0x002A5378",
+                "word": "0x1440FFF1"
+              },
+              {
+                "instruction": "0x002A537C",
+                "word": "0x26100001"
+              },
+              {
+                "instruction": "0x002A5380",
+                "word": "0x7BB00430"
+              },
+              {
+                "instruction": "0x002A5384",
+                "word": "0x7BB10420"
+              },
+              {
+                "instruction": "0x002A5388",
+                "word": "0x7BB20410"
+              },
+              {
+                "instruction": "0x002A538C",
+                "word": "0xDFBF0400"
+              },
+              {
+                "instruction": "0x002A5390",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x002A5394",
+                "word": "0x27BD0440"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        }
+      ],
+      "preceding_body": {
+        "name": "func_002A4B70",
+        "address": "0x002A4B70",
+        "size": 584,
+        "instructions": 146,
+        "section": ".text",
+        "file_offset": "0x001A5B70",
+        "original_sha256": "f8dc1e34b38b5ae4dd9b5d15163272c2c6bbd8662db614e80d38ec08769339ed",
+        "original_assembly": "build/functions/func_002A4B70.s",
+        "original_assembly_raw_sha256": "31a9e6cfea3304d3a8d60764aa5b5e507a50fa19cf19722777e511eb62f9ce58",
+        "scanner_extent": 584,
+        "terminal_instruction": "0x002A4DB0",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A4DB4",
+        "terminal_delay_word": "0x27BD0050",
+        "excluded_zero_padding": 0,
+        "following_entry": "0x002A4DB8",
+        "registered_sources": []
+      },
+      "following_body": {
+        "name": "func_002A4EF0",
+        "address": "0x002A4EF0",
+        "size": 88,
+        "instructions": 22,
+        "section": ".text",
+        "file_offset": "0x001A5EF0",
+        "original_sha256": "2fa0418e44503166ac93e4c216a759fd011f45903164a675796b87834f592db2",
+        "original_assembly": "build/functions/func_002A4EF0.s",
+        "original_assembly_raw_sha256": "2e6950638c00319ad928f4668bc4855f2ae07415f55bae02d38ef48a59c5f4fe",
+        "scanner_extent": 88,
+        "terminal_instruction": "0x002A4F40",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A4F44",
+        "terminal_delay_word": "0x27BD0030",
+        "excluded_zero_padding": 0,
+        "following_entry": "0x002A4F48",
+        "registered_sources": []
+      },
+      "original_instruction_inventory": {
+        "loads": [
+          {
+            "instruction": "0x002A4DB8",
+            "word": "0x80A20000",
+            "base": 5,
+            "register": 2,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4DC4",
+            "word": "0x90A30000",
+            "base": 5,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4DDC",
+            "word": "0x8D03000C",
+            "base": 8,
+            "register": 3,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4DE4",
+            "word": "0x8D040010",
+            "base": 8,
+            "register": 4,
+            "signed_offset": 16,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4DE8",
+            "word": "0x8D03000C",
+            "base": 8,
+            "register": 3,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4DF0",
+            "word": "0x8D020004",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E00",
+            "word": "0x8C670000",
+            "base": 3,
+            "register": 7,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E04",
+            "word": "0x8D02000C",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E14",
+            "word": "0x8C830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E1C",
+            "word": "0x8D020004",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E28",
+            "word": "0x8D02000C",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E34",
+            "word": "0x8C860004",
+            "base": 4,
+            "register": 6,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E38",
+            "word": "0x8C820000",
+            "base": 4,
+            "register": 2,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E48",
+            "word": "0x8C820008",
+            "base": 4,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E58",
+            "word": "0x8C820008",
+            "base": 4,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E64",
+            "word": "0x8C830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E68",
+            "word": "0x8C820004",
+            "base": 4,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E7C",
+            "word": "0x8D03000C",
+            "base": 8,
+            "register": 3,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E84",
+            "word": "0x8D020004",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E90",
+            "word": "0x8C670000",
+            "base": 3,
+            "register": 7,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E94",
+            "word": "0x8D02000C",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EA4",
+            "word": "0x8C830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EAC",
+            "word": "0x8D020004",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EB8",
+            "word": "0x8D02000C",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EBC",
+            "word": "0x8D02000C",
+            "base": 8,
+            "register": 2,
+            "signed_offset": 12,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4ED0",
+            "word": "0x8CE20008",
+            "base": 7,
+            "register": 2,
+            "signed_offset": 8,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EDC",
+            "word": "0x80A20000",
+            "base": 5,
+            "register": 2,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4EE4",
+            "word": "0x90A30000",
+            "base": 5,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 1
+          }
+        ],
+        "stores": [
+          {
+            "instruction": "0x002A4E18",
+            "word": "0xAC83FFFC",
+            "base": 4,
+            "register": 3,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E50",
+            "word": "0xA0470000",
+            "base": 2,
+            "register": 7,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4E54",
+            "word": "0xAC830004",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4E60",
+            "word": "0xA0400000",
+            "base": 2,
+            "register": 0,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4EA8",
+            "word": "0xAC83FFFC",
+            "base": 4,
+            "register": 3,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4EC8",
+            "word": "0xAC67FFFC",
+            "base": 3,
+            "register": 7,
+            "signed_offset": -4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4ECC",
+            "word": "0xACE00004",
+            "base": 7,
+            "register": 0,
+            "signed_offset": 4,
+            "width": 4
+          },
+          {
+            "instruction": "0x002A4ED4",
+            "word": "0xA0400000",
+            "base": 2,
+            "register": 0,
+            "signed_offset": 0,
+            "width": 1
+          },
+          {
+            "instruction": "0x002A4ED8",
+            "word": "0xAD070010",
+            "base": 8,
+            "register": 7,
+            "signed_offset": 16,
+            "width": 4
+          }
+        ],
+        "direct_calls": [],
+        "indirect_calls_or_jumps": [],
+        "branches": [
+          {
+            "instruction": "0x002A4DC0",
+            "word": "0x10400049",
+            "target": "0x002A4EE8",
+            "delay_word": "0x90A30000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4DD8",
+            "word": "0x50EA0004",
+            "target": "0x002A4DEC",
+            "delay_word": "0x8D03000C",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4DE0",
+            "word": "0x54E90014",
+            "target": "0x002A4E34",
+            "delay_word": "0x8D040010",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4DFC",
+            "word": "0x1040002F",
+            "target": "0x002A4EBC",
+            "delay_word": "0x8C670000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4E24",
+            "word": "0x1440FFF8",
+            "target": "0x002A4E08",
+            "delay_word": "0x8D02000C",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4E2C",
+            "word": "0x10000025",
+            "target": "0x002A4EC4",
+            "delay_word": "0x00061880",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4E40",
+            "word": "0x10400008",
+            "target": "0x002A4E64",
+            "delay_word": "0x24C30001",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4E74",
+            "word": "0x10400019",
+            "target": "0x002A4EDC",
+            "delay_word": "0x24A50001",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4E8C",
+            "word": "0x1040000B",
+            "target": "0x002A4EBC",
+            "delay_word": "0x8C670000",
+            "likely": false
+          },
+          {
+            "instruction": "0x002A4EB4",
+            "word": "0x5440FFF8",
+            "target": "0x002A4E98",
+            "delay_word": "0x8D02000C",
+            "likely": true
+          },
+          {
+            "instruction": "0x002A4EE0",
+            "word": "0x1440FFBB",
+            "target": "0x002A4DD0",
+            "delay_word": "0x90A30000",
+            "likely": false
+          }
+        ],
+        "returns": [
+          {
+            "instruction": "0x002A4EE8",
+            "word": "0x03E00008",
+            "source": 31,
+            "destination": 0,
+            "delay_word": "0x00000000"
+          }
+        ],
+        "float_word_materializations": []
+      },
+      "implementation_limits": [
+        "Observed line/manager/command prefixes are partial views, not original class identities, allocation sizes or format capacities. Signed count gates retain zero/negative behavior; first line/history entry is read even below one. Original readable/writable pointer preconditions apply; no synthetic null or capacity guard.",
+        "Ordinary C explicitly models wrapping low32 index-product and pointer addition. Native aliases stay within initialized representable authored storage; pointer conversions are target/host32 implementation-defined, not a portable arbitrary-address API.",
+        "Signed ctype address is base456118+1+signed lowbyte, including negative values. Native/observer classification evidence is restricted to nonnegative signed characters andEOF(-1) inside the complete257-byte table. Other negative target values retain the original readable-address precondition; no adjacent-ROM identity or fabricated prefix data is claimed.",
+        "Five support entry intervals execute actual original instructions. Unknown indexed2AAF50 native source is an explicitly bounded lowword observer; its14 original instructions were fully read, and no helper recovery/data award is made. The complete length function is byte-extracted from published source; count accessors,strstr andctype compile unchanged whole published TUs.",
+        "Pinned generic newlib strncpy compiled unchanged with PREFER_SIZE_OVER_SPEED is supporting native C only. The original394010 byte/padding path executes for deliberately unaligned or small-count fixtures. Overlapping input/destination and aligned bulk/MMI/overread paths are rejected by the observer, not guarded in production; no retail strncpy source/compiler identity is claimed.",
+        "Controlled three-GPR callback bodies mutate authored command/count/current/captured-line fields. Actual captured/fresh pointers and source helper calls execute. Callback implementation, kernel/SDK identity, concurrency, faults,EE upper-register preservation and complete game behavior remain outside proof.",
+        "Complete natural ET_EXEC symbol bytes and size are compared at original addresses, with zero relocations/no additional allocated sections. One16-byte getter matchesGCC29; larger entries remain nonmatching. No patches, cropped functions, relocation masks, assembly-body fallback or helper duplicate credit.",
+        "Full memory comparison translates only explicitly listed pointer/function cells. Low-byte pointer-store alias fixtures require the disclosed256-byte-aligned native arena. Nonpointer words remain literal; alias/address observers do not establish game allocation/layout capacities.",
+        "Complete selected228 and primary-support171 instructions and23 incoming bounded windows were manually read. Whole containing-caller identities/root scans do not imply complete manual semantic/CFG reachability review of large callers. OptionalUI2408B and its callback graph remain supporting historical scope only, no new source award.",
+        "Historical source-free FINAL106 and separate records FINAL44 remain immutable. Historical optional-CVT prose is separately qualified by UI scope; neither optional source nor shared headers/catalogs were edited."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed": false,
+        "exact_recipes": []
+      }
+    },
+    {
+      "name": "func_002A56C0",
+      "address": "0x002A56C0",
+      "size": 16,
+      "file_offset": "0x001A66C0",
+      "original_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95",
+      "original_assembly": "build/functions/func_002A56C0.s",
+      "original_assembly_raw_sha256": "15462aa35f8f9d6e15dd92b16820f5a15388fcc5eaf22c85e4ed7ec92fb154b4",
+      "terminal_word": "0x03E00008",
+      "terminal_delay_word": "0x00621024",
+      "excluded_zero_padding": 0,
+      "source": "src/game/buffer_manager.c",
+      "source_name": "func_002A56C0",
+      "source_kind": "c",
+      "status": "matched",
+      "link": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "evidence": "Returns the raw unsigned80000000 flag bit, not a boolean. Four genuine encoded callers and complete16-byte original extent including terminal delay independently identified.",
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 16,
+        "compiled_size": 16,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95",
+        "compiled_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_002A56C0",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 16,
+          "compiled_size": 16,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            2,
+            6,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95",
+          "compiled_sha256": "6ce07c79104c3001107159ad377703144778d2b351c86c9d444fd72ab4e1f134"
+        },
+        "gcc29": {
+          "name": "func_002A56C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": true,
+          "expected_size": 16,
+          "compiled_size": 16,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95",
+          "compiled_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95"
+        },
+        "gcc29_precision": {
+          "name": "func_002A56C0",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "identical": true,
+          "expected_size": 16,
+          "compiled_size": 16,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95",
+          "compiled_sha256": "fccae78189ebadf320a5d046e3e65b4e65ba3c46784c247790c204e55e110f95"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0021674C",
+          "word": "0x0C0A95B0",
+          "kind": "JAL",
+          "target": "0x002A56C0",
+          "delay_word": "0x8C840000",
+          "caller": {
+            "name": "func_00216730",
+            "address": "0x00216730",
+            "size": 168,
+            "instructions": 42,
+            "section": ".text",
+            "file_offset": "0x00117730",
+            "original_sha256": "30786a37ff506191300d734eeb19a2338a985b24b4188d037ea3811ab50bd893",
+            "original_assembly": "build/functions/func_00216730.s",
+            "original_assembly_raw_sha256": "95460916bd658ee12ec83fbc66b9e24ab69ed62e03db6d8385e871291d3653cb",
+            "scanner_extent": 168,
+            "terminal_instruction": "0x002167D0",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002167D4",
+            "terminal_delay_word": "0x27BD0020",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x002167D8",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00216730",
+            "size": 92,
+            "sha256": "bd8dacbc3e70e1614c6af45ba2f8ae949f4c6adc73aeb4036f4c106a30704718",
+            "words": [
+              {
+                "instruction": "0x00216730",
+                "word": "0x27BDFFE0"
+              },
+              {
+                "instruction": "0x00216734",
+                "word": "0x3C020040"
+              },
+              {
+                "instruction": "0x00216738",
+                "word": "0x7FB00010"
+              },
+              {
+                "instruction": "0x0021673C",
+                "word": "0x8C449408"
+              },
+              {
+                "instruction": "0x00216740",
+                "word": "0x0040802D"
+              },
+              {
+                "instruction": "0x00216744",
+                "word": "0x10800005"
+              },
+              {
+                "instruction": "0x00216748",
+                "word": "0xFFBF0000"
+              },
+              {
+                "instruction": "0x0021674C",
+                "word": "0x0C0A95B0"
+              },
+              {
+                "instruction": "0x00216750",
+                "word": "0x8C840000"
+              },
+              {
+                "instruction": "0x00216754",
+                "word": "0x10000002"
+              },
+              {
+                "instruction": "0x00216758",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x0021675C",
+                "word": "0x0000102D"
+              },
+              {
+                "instruction": "0x00216760",
+                "word": "0x10400019"
+              },
+              {
+                "instruction": "0x00216764",
+                "word": "0x8E029408"
+              },
+              {
+                "instruction": "0x00216768",
+                "word": "0x0C0A95BA"
+              },
+              {
+                "instruction": "0x0021676C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216770",
+                "word": "0x3C020047"
+              },
+              {
+                "instruction": "0x00216774",
+                "word": "0x8C448398"
+              },
+              {
+                "instruction": "0x00216778",
+                "word": "0x2405FFFE"
+              },
+              {
+                "instruction": "0x0021677C",
+                "word": "0x8C820004"
+              },
+              {
+                "instruction": "0x00216780",
+                "word": "0x00451024"
+              },
+              {
+                "instruction": "0x00216784",
+                "word": "0xAC820004"
+              },
+              {
+                "instruction": "0x00216788",
+                "word": "0x3C030047"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00216810",
+          "word": "0x0C0A95B0",
+          "kind": "JAL",
+          "target": "0x002A56C0",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002169B8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002167D8",
+            "size": 120,
+            "sha256": "f8a72e34f51e7cc07ca1736f450f69de90a237fa95818174800ee8d0021327e0",
+            "words": [
+              {
+                "instruction": "0x002167D8",
+                "word": "0x27BDFED0"
+              },
+              {
+                "instruction": "0x002167DC",
+                "word": "0x7FB10110"
+              },
+              {
+                "instruction": "0x002167E0",
+                "word": "0x3C110040"
+              },
+              {
+                "instruction": "0x002167E4",
+                "word": "0x7FB00120"
+              },
+              {
+                "instruction": "0x002167E8",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x002167EC",
+                "word": "0x3C100047"
+              },
+              {
+                "instruction": "0x002167F0",
+                "word": "0xFFBF0100"
+              },
+              {
+                "instruction": "0x002167F4",
+                "word": "0xE44C0004"
+              },
+              {
+                "instruction": "0x002167F8",
+                "word": "0x8E0383AC"
+              },
+              {
+                "instruction": "0x002167FC",
+                "word": "0x90620065"
+              },
+              {
+                "instruction": "0x00216800",
+                "word": "0x30420004"
+              },
+              {
+                "instruction": "0x00216804",
+                "word": "0x54400069"
+              },
+              {
+                "instruction": "0x00216808",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x0021680C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216810",
+                "word": "0x0C0A95B0"
+              },
+              {
+                "instruction": "0x00216814",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216818",
+                "word": "0x10400063"
+              },
+              {
+                "instruction": "0x0021681C",
+                "word": "0x8E0383AC"
+              },
+              {
+                "instruction": "0x00216820",
+                "word": "0x90700004"
+              },
+              {
+                "instruction": "0x00216824",
+                "word": "0x00701821"
+              },
+              {
+                "instruction": "0x00216828",
+                "word": "0x90620005"
+              },
+              {
+                "instruction": "0x0021682C",
+                "word": "0x30420008"
+              },
+              {
+                "instruction": "0x00216830",
+                "word": "0x1040005D"
+              },
+              {
+                "instruction": "0x00216834",
+                "word": "0x24020008"
+              },
+              {
+                "instruction": "0x00216838",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x0021683C",
+                "word": "0x2602FFE0"
+              },
+              {
+                "instruction": "0x00216840",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216844",
+                "word": "0x0C0A94E6"
+              },
+              {
+                "instruction": "0x00216848",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x0021684C",
+                "word": "0x10000057"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00216A14",
+          "word": "0x0C0A95B0",
+          "kind": "JAL",
+          "target": "0x002A56C0",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002169C0",
+            "address": "0x002169C0",
+            "size": 1084,
+            "instructions": 271,
+            "section": ".text",
+            "file_offset": "0x001179C0",
+            "original_sha256": "aa8b60b82e4ab30f2a3d081046a195d9aa5cbea8c463379c1bef024667bb9cc1",
+            "original_assembly": "build/functions/func_002169C0.s",
+            "original_assembly_raw_sha256": "d90322fb28f8ef941c090422a4da3a36a4e84c424eb93f17d620f13c72a6774c",
+            "scanner_extent": 1088,
+            "terminal_instruction": "0x00216DF4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x00216DF8",
+            "terminal_delay_word": "0x27BD00B0",
+            "excluded_zero_padding": 4,
+            "following_entry": "0x00216E00",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002169D4",
+            "size": 128,
+            "sha256": "8c2b364b2f46f2d6a84c0b0be11bce31575fc8ad41a6a988a03010b196f47ad3",
+            "words": [
+              {
+                "instruction": "0x002169D4",
+                "word": "0x7FB00040"
+              },
+              {
+                "instruction": "0x002169D8",
+                "word": "0x7FB10030"
+              },
+              {
+                "instruction": "0x002169DC",
+                "word": "0x7FB20020"
+              },
+              {
+                "instruction": "0x002169E0",
+                "word": "0xFFBF0000"
+              },
+              {
+                "instruction": "0x002169E4",
+                "word": "0xE7BF00A8"
+              },
+              {
+                "instruction": "0x002169E8",
+                "word": "0xE7BE00A0"
+              },
+              {
+                "instruction": "0x002169EC",
+                "word": "0xE7BD0098"
+              },
+              {
+                "instruction": "0x002169F0",
+                "word": "0xE7BC0090"
+              },
+              {
+                "instruction": "0x002169F4",
+                "word": "0xE7BB0088"
+              },
+              {
+                "instruction": "0x002169F8",
+                "word": "0xE7BA0080"
+              },
+              {
+                "instruction": "0x002169FC",
+                "word": "0xE7B90078"
+              },
+              {
+                "instruction": "0x00216A00",
+                "word": "0xE7B80070"
+              },
+              {
+                "instruction": "0x00216A04",
+                "word": "0xE7B70068"
+              },
+              {
+                "instruction": "0x00216A08",
+                "word": "0xE7B60060"
+              },
+              {
+                "instruction": "0x00216A0C",
+                "word": "0xE7B50058"
+              },
+              {
+                "instruction": "0x00216A10",
+                "word": "0xE7B40050"
+              },
+              {
+                "instruction": "0x00216A14",
+                "word": "0x0C0A95B0"
+              },
+              {
+                "instruction": "0x00216A18",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216A1C",
+                "word": "0x104000E4"
+              },
+              {
+                "instruction": "0x00216A20",
+                "word": "0x8E629408"
+              },
+              {
+                "instruction": "0x00216A24",
+                "word": "0x3C01C17A"
+              },
+              {
+                "instruction": "0x00216A28",
+                "word": "0x3421E148"
+              },
+              {
+                "instruction": "0x00216A2C",
+                "word": "0x4481F800"
+              },
+              {
+                "instruction": "0x00216A30",
+                "word": "0x4480A000"
+              },
+              {
+                "instruction": "0x00216A34",
+                "word": "0x0C0A94F0"
+              },
+              {
+                "instruction": "0x00216A38",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216A3C",
+                "word": "0x3C0143D4"
+              },
+              {
+                "instruction": "0x00216A40",
+                "word": "0x3421CCCD"
+              },
+              {
+                "instruction": "0x00216A44",
+                "word": "0x4481C000"
+              },
+              {
+                "instruction": "0x00216A48",
+                "word": "0x8E639408"
+              },
+              {
+                "instruction": "0x00216A4C",
+                "word": "0x0040882D"
+              },
+              {
+                "instruction": "0x00216A50",
+                "word": "0x3C0141CC"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        },
+        {
+          "instruction": "0x00217584",
+          "word": "0x0C0A95B0",
+          "kind": "JAL",
+          "target": "0x002A56C0",
+          "delay_word": "0x8C840000",
+          "caller": {
+            "name": "func_00217568",
+            "address": "0x00217568",
+            "size": 48,
+            "instructions": 12,
+            "section": ".text",
+            "file_offset": "0x00118568",
+            "original_sha256": "f3c6340cda10bae448edcbb8b9696fd1f1d6af53b28036642586c11675e89307",
+            "original_assembly": "build/functions/func_00217568.s",
+            "original_assembly_raw_sha256": "2ddba28408206f21856d09ce4a7a7892d76f38205b3d0d74a61c9b8f83586947",
+            "scanner_extent": 48,
+            "terminal_instruction": "0x00217590",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x00217594",
+            "terminal_delay_word": "0x27BD0010",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x00217598",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x00217568",
+            "size": 48,
+            "sha256": "f3c6340cda10bae448edcbb8b9696fd1f1d6af53b28036642586c11675e89307",
+            "words": [
+              {
+                "instruction": "0x00217568",
+                "word": "0x3C020040"
+              },
+              {
+                "instruction": "0x0021756C",
+                "word": "0x27BDFFF0"
+              },
+              {
+                "instruction": "0x00217570",
+                "word": "0x8C449408"
+              },
+              {
+                "instruction": "0x00217574",
+                "word": "0x14800003"
+              },
+              {
+                "instruction": "0x00217578",
+                "word": "0xFFBF0000"
+              },
+              {
+                "instruction": "0x0021757C",
+                "word": "0x10000003"
+              },
+              {
+                "instruction": "0x00217580",
+                "word": "0x0000102D"
+              },
+              {
+                "instruction": "0x00217584",
+                "word": "0x0C0A95B0"
+              },
+              {
+                "instruction": "0x00217588",
+                "word": "0x8C840000"
+              },
+              {
+                "instruction": "0x0021758C",
+                "word": "0xDFBF0000"
+              },
+              {
+                "instruction": "0x00217590",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x00217594",
+                "word": "0x27BD0010"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        }
+      ],
+      "preceding_body": {
+        "name": "func_002A56A8",
+        "address": "0x002A56A8",
+        "size": 20,
+        "instructions": 5,
+        "section": ".text",
+        "file_offset": "0x001A66A8",
+        "original_sha256": "c20e10ed662d248f02fa47ab480b0a10b3f2179d5a75531f0c66fe8f1b74da34",
+        "original_assembly": "build/functions/func_002A56A8.s",
+        "original_assembly_raw_sha256": "f9c9ba57f7d31491a1d60d3261f00b01b2ef09cc6bece872c1e1aeb0777889b6",
+        "scanner_extent": 24,
+        "terminal_instruction": "0x002A56B4",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A56B8",
+        "terminal_delay_word": "0xAC820000",
+        "excluded_zero_padding": 4,
+        "following_entry": "0x002A56C0",
+        "registered_sources": []
+      },
+      "following_body": {
+        "name": "func_002A56D0",
+        "address": "0x002A56D0",
+        "size": 20,
+        "instructions": 5,
+        "section": ".text",
+        "file_offset": "0x001A66D0",
+        "original_sha256": "514a2adacfe40405c1dafcaba8ad29234be53e41b54eb0f95a93775e052794af",
+        "original_assembly": "build/functions/func_002A56D0.s",
+        "original_assembly_raw_sha256": "8a9f115db0230218dcf194ead989e2ab43c2dc41397adc889fefc79182542a24",
+        "scanner_extent": 24,
+        "terminal_instruction": "0x002A56DC",
+        "terminal_word": "0x03E00008",
+        "terminal_delay_instruction": "0x002A56E0",
+        "terminal_delay_word": "0xAC820000",
+        "excluded_zero_padding": 4,
+        "following_entry": "0x002A56E8",
+        "registered_sources": []
+      },
+      "original_instruction_inventory": {
+        "loads": [
+          {
+            "instruction": "0x002A56C0",
+            "word": "0x8C830000",
+            "base": 4,
+            "register": 3,
+            "signed_offset": 0,
+            "width": 4
+          }
+        ],
+        "stores": [],
+        "direct_calls": [],
+        "indirect_calls_or_jumps": [],
+        "branches": [],
+        "returns": [
+          {
+            "instruction": "0x002A56C8",
+            "word": "0x03E00008",
+            "source": 31,
+            "destination": 0,
+            "delay_word": "0x00621024"
+          }
+        ],
+        "float_word_materializations": []
+      },
+      "implementation_limits": [
+        "Observed line/manager/command prefixes are partial views, not original class identities, allocation sizes or format capacities. Signed count gates retain zero/negative behavior; first line/history entry is read even below one. Original readable/writable pointer preconditions apply; no synthetic null or capacity guard.",
+        "Ordinary C explicitly models wrapping low32 index-product and pointer addition. Native aliases stay within initialized representable authored storage; pointer conversions are target/host32 implementation-defined, not a portable arbitrary-address API.",
+        "Signed ctype address is base456118+1+signed lowbyte, including negative values. Native/observer classification evidence is restricted to nonnegative signed characters andEOF(-1) inside the complete257-byte table. Other negative target values retain the original readable-address precondition; no adjacent-ROM identity or fabricated prefix data is claimed.",
+        "Five support entry intervals execute actual original instructions. Unknown indexed2AAF50 native source is an explicitly bounded lowword observer; its14 original instructions were fully read, and no helper recovery/data award is made. The complete length function is byte-extracted from published source; count accessors,strstr andctype compile unchanged whole published TUs.",
+        "Pinned generic newlib strncpy compiled unchanged with PREFER_SIZE_OVER_SPEED is supporting native C only. The original394010 byte/padding path executes for deliberately unaligned or small-count fixtures. Overlapping input/destination and aligned bulk/MMI/overread paths are rejected by the observer, not guarded in production; no retail strncpy source/compiler identity is claimed.",
+        "Controlled three-GPR callback bodies mutate authored command/count/current/captured-line fields. Actual captured/fresh pointers and source helper calls execute. Callback implementation, kernel/SDK identity, concurrency, faults,EE upper-register preservation and complete game behavior remain outside proof.",
+        "Complete natural ET_EXEC symbol bytes and size are compared at original addresses, with zero relocations/no additional allocated sections. One16-byte getter matchesGCC29; larger entries remain nonmatching. No patches, cropped functions, relocation masks, assembly-body fallback or helper duplicate credit.",
+        "Full memory comparison translates only explicitly listed pointer/function cells. Low-byte pointer-store alias fixtures require the disclosed256-byte-aligned native arena. Nonpointer words remain literal; alias/address observers do not establish game allocation/layout capacities.",
+        "Complete selected228 and primary-support171 instructions and23 incoming bounded windows were manually read. Whole containing-caller identities/root scans do not imply complete manual semantic/CFG reachability review of large callers. OptionalUI2408B and its callback graph remain supporting historical scope only, no new source award.",
+        "Historical source-free FINAL106 and separate records FINAL44 remain immutable. Historical optional-CVT prose is separately qualified by UI scope; neither optional source nor shared headers/catalogs were edited."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed": true,
+        "exact_recipes": [
+          "gcc29",
+          "gcc29_precision"
+        ]
+      }
+    }
+  ],
+  "scope": "Only three approved primary entries3/912B; optionalUI2408 excluded",
+  "review_status": "parent_and_independent_peer_passed",
+  "native": {
+    "fixtures": 867,
+    "executed_original_instructions": 165053,
+    "maximum_instructions": 544,
+    "native_checks": 2233020,
+    "input_sha256": "aebff002b45ce36d8ef4b1b1270025b36009494ecb369938aa6d481d2b4d4b02",
+    "golden_sha256_lf": "ea485037abd2bbc20afec812233cdc39dcd4ad9ed8664b64b4e1056a037d6e35",
+    "strict_guard_methods": 9,
+    "public_absence_replay": {
+      "actual_methods": 9,
+      "synthetic_pass": 8,
+      "original_dependent_skip": 1,
+      "mocked_path": "orig/SLUS_216.68",
+      "success": true,
+      "original_moved_or_deleted": false,
+      "limit": "Fresh public test import and real synthetic methods; only exact private-original Path.is_file mocked, no build directory dependency."
+    },
+    "selected_instruction_coverage": [
+      {
+        "name": "func_002A4B70",
+        "complete_instructions": 146,
+        "executed_distinct": 145,
+        "unexecuted_sites": [
+          "0x002A4CEC"
+        ],
+        "unexecuted_qualification": "Unreachable original internal NOP after unconditional branch; retained in whole912B extent."
+      },
+      {
+        "name": "func_002A4DB8",
+        "complete_instructions": 78,
+        "executed_distinct": 78,
+        "unexecuted_sites": [],
+        "unexecuted_qualification": null
+      },
+      {
+        "name": "func_002A56C0",
+        "complete_instructions": 4,
+        "executed_distinct": 4,
+        "unexecuted_sites": [],
+        "unexecuted_qualification": null
+      }
+    ],
+    "whole_memory_words_per_fixture": 2048,
+    "source_reuse": {
+      "published_source": "src/game/string_algorithms.c",
+      "published_raw_sha256": "9698731283767559acdbe58f30601ecb2e1cb7d9c668cd22d37cac5fe8198c4f",
+      "raw_offset": 278,
+      "raw_size": 198,
+      "entire_function_raw_sha256": "affe3dbe9cb5f03ad78ccbe711c25fdae60c7b7b3574e9833591100ef5cf5e11",
+      "generated_TU_raw_sha256": "98f0906ad89bfbdab3c772ad9047d7eeb9822325097d76ab89c8705c875875c9",
+      "entire_original_C_function_retained": true,
+      "body_modification": false,
+      "whole_published_TU_compiled": false,
+      "supporting_strncpy": {
+        "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+        "path": "ee/newlib/libc/string/strncpy.c",
+        "raw_sha256": "02668aeb2461c074f110b2cdda739cb0346a239196c23bf38f78db0917084da2",
+        "unchanged_source": true,
+        "define": "PREFER_SIZE_OVER_SPEED",
+        "target_source_identity_or_award": false
+      },
+      "whole_published_TUs": [
+        {
+          "path": "src/game/accessors.c",
+          "raw_sha256": "e1be88872dbbf008f7f4a5ab3a9f31becd1c24e2e7914db6160267c504b6b4c0"
+        },
+        {
+          "path": "src/runtime/strstr.c",
+          "raw_sha256": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7"
+        },
+        {
+          "path": "src/runtime/ctype_table.c",
+          "raw_sha256": "abe4161ebc4a20df1e7dc050c4d741baad2cea2f7d1d3bb654cb252e923028bf"
+        }
+      ]
+    }
+  },
+  "supporting_originals": [
+    {
+      "address": "0x00295050",
+      "size": 48,
+      "raw_sha256": "0eebdffa6c07510c32489659f138034aa99bf183a52d06171ff7c75918de3c05",
+      "assembly_raw_sha256": "a60ae275880a9b24b786a5d009c275ab3199e8ce0af9687928a34a7383113245",
+      "actual_terminal_JR31": true,
+      "terminal_delay_word": "0x0060102D",
+      "excluded_padding": 0
+    },
+    {
+      "address": "0x00394010",
+      "size": 456,
+      "raw_sha256": "88855dbcea2c2cc350526d81ee05648e1f0de1c2da2a9dc7411f7de878a397a6",
+      "assembly_raw_sha256": "323232d08c7442d040ae02ab6e9d6d70061e3495eb9bc8b1a5c67126372abc04",
+      "actual_terminal_JR31": true,
+      "terminal_delay_word": "0x0100102D",
+      "excluded_padding": 0
+    },
+    {
+      "address": "0x002AAF50",
+      "size": 56,
+      "raw_sha256": "f04309fadb38dc8f3b9b595d585113bea93b5f9897b9e92e963c274fd634c980",
+      "assembly_raw_sha256": "3027f4eef735c88bb599a9ba6dc221ff5a772edd7515c2ad4c8554a268bf1df0",
+      "actual_terminal_JR31": true,
+      "terminal_delay_word": "0x0000102D",
+      "excluded_padding": 0
+    },
+    {
+      "address": "0x00398628",
+      "size": 116,
+      "raw_sha256": "b86a1f58672770c6ebf30a910f1f6b57049f0cb201b87ff1f5fcc2573b59f353",
+      "assembly_raw_sha256": "0edd04c5d636dad027c60f44947819f1689b1ecc3641005a1fac38adab6dcc35",
+      "actual_terminal_JR31": true,
+      "terminal_delay_word": "0x0000102D",
+      "excluded_padding": 4
+    },
+    {
+      "address": "0x002AAF88",
+      "size": 8,
+      "raw_sha256": "40abbd07f55cd406a62594859ce2780c8757044f8b82960f352cda7168cd26eb",
+      "assembly_raw_sha256": "209fa15e4a7b44adb0a12c848c6383c277a68c1101c52ef0aca57169281a22b3",
+      "actual_terminal_JR31": true,
+      "terminal_delay_word": "0x8C820008",
+      "excluded_padding": 0
+    }
+  ],
+  "source_provenance": [
+    {
+      "published_path": "src/runtime/strstr.c",
+      "upstream_path": "ee/newlib/libc/string/strstr.c",
+      "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "whole_raw_sha256": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
+      "unchanged": true
+    },
+    {
+      "published_path": "src/runtime/ctype_table.c",
+      "upstream_path": "ee/newlib/libc/ctype/ctype_.c",
+      "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "whole_raw_sha256": "abe4161ebc4a20df1e7dc050c4d741baad2cea2f7d1d3bb654cb252e923028bf",
+      "unchanged": true
+    }
+  ],
+  "limits": [
+    "Observed line/manager/command prefixes are partial views, not original class identities, allocation sizes or format capacities. Signed count gates retain zero/negative behavior; first line/history entry is read even below one. Original readable/writable pointer preconditions apply; no synthetic null or capacity guard.",
+    "Ordinary C explicitly models wrapping low32 index-product and pointer addition. Native aliases stay within initialized representable authored storage; pointer conversions are target/host32 implementation-defined, not a portable arbitrary-address API.",
+    "Signed ctype address is base456118+1+signed lowbyte, including negative values. Native/observer classification evidence is restricted to nonnegative signed characters andEOF(-1) inside the complete257-byte table. Other negative target values retain the original readable-address precondition; no adjacent-ROM identity or fabricated prefix data is claimed.",
+    "Five support entry intervals execute actual original instructions. Unknown indexed2AAF50 native source is an explicitly bounded lowword observer; its14 original instructions were fully read, and no helper recovery/data award is made. The complete length function is byte-extracted from published source; count accessors,strstr andctype compile unchanged whole published TUs.",
+    "Pinned generic newlib strncpy compiled unchanged with PREFER_SIZE_OVER_SPEED is supporting native C only. The original394010 byte/padding path executes for deliberately unaligned or small-count fixtures. Overlapping input/destination and aligned bulk/MMI/overread paths are rejected by the observer, not guarded in production; no retail strncpy source/compiler identity is claimed.",
+    "Controlled three-GPR callback bodies mutate authored command/count/current/captured-line fields. Actual captured/fresh pointers and source helper calls execute. Callback implementation, kernel/SDK identity, concurrency, faults,EE upper-register preservation and complete game behavior remain outside proof.",
+    "Complete natural ET_EXEC symbol bytes and size are compared at original addresses, with zero relocations/no additional allocated sections. One16-byte getter matchesGCC29; larger entries remain nonmatching. No patches, cropped functions, relocation masks, assembly-body fallback or helper duplicate credit.",
+    "Full memory comparison translates only explicitly listed pointer/function cells. Low-byte pointer-store alias fixtures require the disclosed256-byte-aligned native arena. Nonpointer words remain literal; alias/address observers do not establish game allocation/layout capacities.",
+    "Complete selected228 and primary-support171 instructions and23 incoming bounded windows were manually read. Whole containing-caller identities/root scans do not imply complete manual semantic/CFG reachability review of large callers. OptionalUI2408B and its callback graph remain supporting historical scope only, no new source award.",
+    "Historical source-free FINAL106 and separate records FINAL44 remain immutable. Historical optional-CVT prose is separately qualified by UI scope; neither optional source nor shared headers/catalogs were edited."
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "recover_code",
+    "frozen_raw_inputs": 216,
+    "native_checks": 2233020,
+    "complete_exact_functions": 1,
+    "complete_exact_bytes": 16
+  }
+}
