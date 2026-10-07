@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "functions": [
+    {
+      "name": "func_002A1C08",
+      "address": "0x002A1C08",
+      "file_offset": "0x001A2C08",
+      "size": 40,
+      "original_sha256": "2b2dc926834e438d8e5d1553fa8c0612c2192a79166a879536a98ab923837a85",
+      "source": "src/game/matrix_copy.c",
+      "source_kind": "c",
+      "source_sha256": "99f8e607eb2b9598beb6cc604b9085edb6b8c680e7249db8d174805fb4babef6",
+      "source_dependencies": [
+        {
+          "path": "src/game/matrix_copy.c",
+          "sha256": "99f8e607eb2b9598beb6cc604b9085edb6b8c680e7249db8d174805fb4babef6"
+        },
+        {
+          "path": "include/george/matrix_copy_identity.h",
+          "sha256": "da84881809d9fbb3d7589b82a40d59c7ce775ccb96f3cb513d17a26ee08b8ddb"
+        }
+      ],
+      "compiled_symbol": "func_002A1C08",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "evidence": "Whole original/source/ABI/closure/finite full-arena/native proof captured in build/matrix_copy_identity; final acceptance recorded separately in parent receipts/canonical manifest.",
+      "compile_comparisons": [
+        {
+          "profile": "gcc29",
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 136,
+          "different_bytes": 129,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2b2dc926834e438d8e5d1553fa8c0612c2192a79166a879536a98ab923837a85",
+          "compiled_sha256": "e7c06a85432b1cbc15e068ca846f672ebf3422e9d48ccaa7cd843525f6773937"
+        },
+        {
+          "profile": "gcc323",
+          "identical": false,
+          "expected_size": 40,
+          "compiled_size": 136,
+          "different_bytes": 129,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "2b2dc926834e438d8e5d1553fa8c0612c2192a79166a879536a98ab923837a85",
+          "compiled_sha256": "11753e3b6870f95abd4d0b63762138b14cbdba41df70e74f4db3170dcc845dc1"
+        }
+      ],
+      "source_domain": "Aligned initialized complete64-byte ordinary nonvolatile storage; effects-only return. Unsigned-char snapshot permits shifted overlap/arbitrary object bits.",
+      "upstream_license": "original project reconstruction",
+      "independent_review": "Root and distinct whole original/source/license/ABI/actual-artifact reviews and unchanged contained replays passed; full raw arenas and ledgers independently checked.",
+      "review_status": "Parent and distinct bounded final reviews passed; no exact-match award.",
+      "validation": {
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "final_review": {
+        "index": {
+          "path": "build/matrix_copy_identity/frozen_inputs.json",
+          "bytes": 110275,
+          "raw_sha256": "10f457573c043a74d4a0a787f943e16ed467dabfeb5c3aa522418fd48297d35e"
+        },
+        "parent": {
+          "path": ".local/matrix_copy_identity_final_root_review.json",
+          "bytes": 3147,
+          "raw_sha256": "56c43e91257b624d94459cd0819b97403eac120ba8e95b78904b33142826f7d9"
+        },
+        "distinct": {
+          "path": ".local/matrix_copy_identity_final_peer0001/independent_audit.json",
+          "bytes": 60121,
+          "raw_sha256": "03ebaadae5c875791a805c8f7966a77b3406fa1c421fc86dae88958700ba412c"
+        }
+      }
+    },
+    {
+      "name": "func_002A1C30",
+      "address": "0x002A1C30",
+      "file_offset": "0x001A2C30",
+      "size": 48,
+      "original_sha256": "25bcf411ca6fc1ef61f5e9f2aff947370166309a93b50637355770e30b5829b6",
+      "source": "src/game/matrix_identity.c",
+      "source_kind": "c",
+      "source_sha256": "a9a09eae1d74ceaa6ee03960559252331dd667d49affd6c62a9f991e462b9512",
+      "source_dependencies": [
+        {
+          "path": "src/game/matrix_identity.c",
+          "sha256": "a9a09eae1d74ceaa6ee03960559252331dd667d49affd6c62a9f991e462b9512"
+        },
+        {
+          "path": "include/george/matrix_copy_identity.h",
+          "sha256": "da84881809d9fbb3d7589b82a40d59c7ce775ccb96f3cb513d17a26ee08b8ddb"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        }
+      ],
+      "compiled_symbol": "matrix_unit",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "evidence": "Whole original/source/ABI/closure/finite full-arena/native proof captured in build/matrix_copy_identity; final acceptance recorded separately in parent receipts/canonical manifest.",
+      "compile_comparisons": [
+        {
+          "profile": "gcc29",
+          "identical": false,
+          "expected_size": 48,
+          "compiled_size": 68,
+          "different_bytes": 59,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "25bcf411ca6fc1ef61f5e9f2aff947370166309a93b50637355770e30b5829b6",
+          "compiled_sha256": "a86bad56f5e8c435be4eef9c8e12a2d6b9e305ba1bd72b2592bb4537c8ae5ab7"
+        },
+        {
+          "profile": "gcc323",
+          "identical": false,
+          "expected_size": 48,
+          "compiled_size": 72,
+          "different_bytes": 63,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "25bcf411ca6fc1ef61f5e9f2aff947370166309a93b50637355770e30b5829b6",
+          "compiled_sha256": "711566ca6b1951da394271450ef3990593e6ee99937528b4c0d09d1b9f996cba"
+        }
+      ],
+      "source_domain": "Aligned initialized complete64-byte ordinary nonvolatile storage; effects-only return. Binary32 float MATRIX final memory only; unchanged licensed SDK method differs retail store order, existing numeric pointer prototypes unproved.",
+      "upstream_license": "Academic Free License2.0",
+      "independent_review": "Root and distinct whole original/source/license/ABI/actual-artifact reviews and unchanged contained replays passed; full raw arenas and ledgers independently checked.",
+      "review_status": "Parent and distinct bounded final reviews passed; no exact-match award.",
+      "validation": {
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "final_review": {
+        "index": {
+          "path": "build/matrix_copy_identity/frozen_inputs.json",
+          "bytes": 110275,
+          "raw_sha256": "10f457573c043a74d4a0a787f943e16ed467dabfeb5c3aa522418fd48297d35e"
+        },
+        "parent": {
+          "path": ".local/matrix_copy_identity_final_root_review.json",
+          "bytes": 3147,
+          "raw_sha256": "56c43e91257b624d94459cd0819b97403eac120ba8e95b78904b33142826f7d9"
+        },
+        "distinct": {
+          "path": ".local/matrix_copy_identity_final_peer0001/independent_audit.json",
+          "bytes": 60121,
+          "raw_sha256": "03ebaadae5c875791a805c8f7966a77b3406fa1c421fc86dae88958700ba412c"
+        }
+      }
+    }
+  ]
+}

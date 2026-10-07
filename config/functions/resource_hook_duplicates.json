@@ -1,0 +1,676 @@
+{
+  "functions": [
+    {
+      "source": "src/game/tree.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "source_dependencies": [
+        {
+          "path": "src/game/tree.c",
+          "bytes": 5678,
+          "sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7",
+          "raw_sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7"
+        },
+        {
+          "path": "include/george/tree.h",
+          "bytes": 2399,
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940",
+          "raw_sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/list.h",
+          "bytes": 1380,
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30",
+          "raw_sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "name": "func_00226B88",
+      "address": "0x00226B88",
+      "file_offset": "0x00127B88",
+      "compiled_symbol": "func_002AD208",
+      "reuse_compiled_symbol": "func_002AD208",
+      "link_symbols": {
+        "func_00226B88": "0x00226B88"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "compiled_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct final matching-only reviews passed; canonical full build required.",
+      "boundary_evidence": {
+        "name": "func_00226B88",
+        "address": "0x00226B88",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00127B88",
+        "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "original_assembly": "build/functions/func_00226B88.s",
+        "original_assembly_raw_sha256": "f2a3bfa8b03470052636a4cec27cfbcec1f3992c98c64a9edbb631face5a52e5",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x00226B90",
+        "terminal_instruction": "0x00226B88",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x00226B8C",
+        "delay_word": "0x00000000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "observed_prefix_address": "0x0043B1C8",
+        "observed_prefix_bytes": 56,
+        "observed_prefix_sha256": "20823eafa545fe9cb026bbf989b00f6290976aa004aa9ae318a6464f37663a8a",
+        "complete_table_extent_identity_unproved": true,
+        "allocated_publication_words": 2,
+        "actual_direct_calls": 0,
+        "manual_publication_and_signed_adjustment_dispatch": true,
+        "original_argument_return_class_runtime_ancestry_unproved": true,
+        "full_private_sourcefree_proof": "build/resource_hook_scope/scope.json"
+      },
+      "source_counterpart_qualification": "Complete genuine OWN Tree effects-only empty method; no original callback class/prototype or data identity.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_whole8000_object_RAW_unchanged": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B88/link-tjs9k1jb/function.o",
+            "bytes": 8000,
+            "raw_sha256": "339e0e4f7956f3776c58b23583b4e588d58e8122f874ba4ab1d6f01af62cedc2"
+          },
+          "linked_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B88/link-tjs9k1jb/function.elf",
+            "bytes": 3312,
+            "raw_sha256": "2da8caba9c615df08bf6e3093d17d2108a746c8f71156338521b395bd3de964d"
+          },
+          "script_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B88/link-tjs9k1jb/function.ld",
+            "bytes": 178,
+            "raw_sha256": "c6dfe63be486e23d0751131f85b7a4d948c2727562d35bdcbeaf248f2797b605"
+          }
+        },
+        "no_new_compile_M_ABI_native_model": true,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "The four complete8B originals are JR31/NOP only, no memory/data/helper dependency, input consumption or GPR2/FPR result construction. The complete published OWN Tree void(void) method is an effects-only source counterpart; original callback declarations, parameters, return type/class/capacity and portable complete interfaces remain unproved.",
+        "Observed56B prefix at43B1C8 has four zero signed-adjustment/pointer pairs. Full226BC0 constructor publication and four complete consuming dispatches were manually reviewed, including226018 qualified visitor callback chain via224F58/21A458. Modified-memory callback targets and nonzero adjustments are not an established fixed table contract. No complete table extent/STT/class/data identity or runtime-main invocation is inferred.",
+        "The selected entries have no discovered direct J/JAL or next100 constructions;20 aligned allocated words are publication evidence only. Qualified invocation support comes from the complete original constructor/table loads/signed adjustment/JALR argument contexts, not bare pointers or FDE.1070B0..D0 passed to actual no-op sinks remain deferred without stored callback evidence.",
+        "Sourcefree849 and external11-record correction plus its full index remain unchanged. The obsolete plaintext subprocess-docstring preflight rejection and original frozen README replay erratum are retained, not silently fixed/refrozen. Current final replay is a separate complete contained matching-only protocol.",
+        "The entire unchanged5678B Tree C and2399B header, exact selected lexical definition/declaration, complete8000B cached GCC323 object and genuine prior same-TU seven-file actual-M query are inherited with precise provenance. No new source, compiler/M/ABI/native/model command or inherited behavioral count is claimed.",
+        "Legitimate per-row numeric link_symbols use actual public symbol_bindings and remove ONLY selected defined func002AD208. Every other real canonical and source-local value remains. No new global alias/private replacement map/selected-byte patch/flag change/mapping/helper or data award occurs.",
+        "Four full strict ET_EXECs each have one allocated8B .text at their true original VMA, complete STT_FUNC size8 and no remaining relocations. Twelve whole object/script/ELF artifacts retain RAW identity. Matching is complete code equality, not substring/crop/padding/relocation masking.",
+        "Full actual author-link catalogs/tool versions/global maps are owned immutable captures. Historical sourcefree303documents/1575records remain separately retained; later unrelated additive aliases are not claimed to exist at author-link. Parent registration/final acceptance receipts are separate from this frozen author reconstructed draft."
+      ],
+      "independent_review": "Root and distinct complete original/source/cache/strict reused-symbol reviews and unchanged contained final replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/resource_hook_duplicates_final/frozen_inputs.json",
+          "bytes": 176299,
+          "raw_sha256": "aea1dffc78e34b96d2ee42ec8ceb89b433c4475e499efefa99e065d88d4e48fe"
+        },
+        "parent": {
+          "path": ".local/resource_hook_final_root_review.json",
+          "bytes": 4905,
+          "raw_sha256": "c45020147b8f4dd34446e86cc67e226df55b94483630353ed7de7ca18fea03c5"
+        },
+        "distinct": {
+          "path": ".local/resource_hook_final_peer0001/independent_audit.json",
+          "bytes": 7474,
+          "raw_sha256": "16c9848f3f8b0fbee8b7231630ac9fa2f852249d0bf2e0c7d472f3194437c95c"
+        }
+      }
+    },
+    {
+      "source": "src/game/tree.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "source_dependencies": [
+        {
+          "path": "src/game/tree.c",
+          "bytes": 5678,
+          "sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7",
+          "raw_sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7"
+        },
+        {
+          "path": "include/george/tree.h",
+          "bytes": 2399,
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940",
+          "raw_sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/list.h",
+          "bytes": 1380,
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30",
+          "raw_sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "name": "func_00226B90",
+      "address": "0x00226B90",
+      "file_offset": "0x00127B90",
+      "compiled_symbol": "func_002AD208",
+      "reuse_compiled_symbol": "func_002AD208",
+      "link_symbols": {
+        "func_00226B90": "0x00226B90"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "compiled_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct final matching-only reviews passed; canonical full build required.",
+      "boundary_evidence": {
+        "name": "func_00226B90",
+        "address": "0x00226B90",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00127B90",
+        "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "original_assembly": "build/functions/func_00226B90.s",
+        "original_assembly_raw_sha256": "19a4c314d9aca0a738fa277c4b58f6a232265a3227086562f084e7e2cc25565b",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x00226B98",
+        "terminal_instruction": "0x00226B90",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x00226B94",
+        "delay_word": "0x00000000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "observed_prefix_address": "0x0043B1C8",
+        "observed_prefix_bytes": 56,
+        "observed_prefix_sha256": "20823eafa545fe9cb026bbf989b00f6290976aa004aa9ae318a6464f37663a8a",
+        "complete_table_extent_identity_unproved": true,
+        "allocated_publication_words": 5,
+        "actual_direct_calls": 0,
+        "manual_publication_and_signed_adjustment_dispatch": true,
+        "original_argument_return_class_runtime_ancestry_unproved": true,
+        "full_private_sourcefree_proof": "build/resource_hook_scope/scope.json"
+      },
+      "source_counterpart_qualification": "Complete genuine OWN Tree effects-only empty method; no original callback class/prototype or data identity.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_whole8000_object_RAW_unchanged": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B90/link-go8tg8hr/function.o",
+            "bytes": 8000,
+            "raw_sha256": "339e0e4f7956f3776c58b23583b4e588d58e8122f874ba4ab1d6f01af62cedc2"
+          },
+          "linked_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B90/link-go8tg8hr/function.elf",
+            "bytes": 3320,
+            "raw_sha256": "d29e2690032b4f04981fb7a85a421693ff151ede171342824759ba31e2af3a13"
+          },
+          "script_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B90/link-go8tg8hr/function.ld",
+            "bytes": 178,
+            "raw_sha256": "839131ca5d2967a61c78666e2be969b8e17c9026bf0d71bd30491f2077e355df"
+          }
+        },
+        "no_new_compile_M_ABI_native_model": true,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "The four complete8B originals are JR31/NOP only, no memory/data/helper dependency, input consumption or GPR2/FPR result construction. The complete published OWN Tree void(void) method is an effects-only source counterpart; original callback declarations, parameters, return type/class/capacity and portable complete interfaces remain unproved.",
+        "Observed56B prefix at43B1C8 has four zero signed-adjustment/pointer pairs. Full226BC0 constructor publication and four complete consuming dispatches were manually reviewed, including226018 qualified visitor callback chain via224F58/21A458. Modified-memory callback targets and nonzero adjustments are not an established fixed table contract. No complete table extent/STT/class/data identity or runtime-main invocation is inferred.",
+        "The selected entries have no discovered direct J/JAL or next100 constructions;20 aligned allocated words are publication evidence only. Qualified invocation support comes from the complete original constructor/table loads/signed adjustment/JALR argument contexts, not bare pointers or FDE.1070B0..D0 passed to actual no-op sinks remain deferred without stored callback evidence.",
+        "Sourcefree849 and external11-record correction plus its full index remain unchanged. The obsolete plaintext subprocess-docstring preflight rejection and original frozen README replay erratum are retained, not silently fixed/refrozen. Current final replay is a separate complete contained matching-only protocol.",
+        "The entire unchanged5678B Tree C and2399B header, exact selected lexical definition/declaration, complete8000B cached GCC323 object and genuine prior same-TU seven-file actual-M query are inherited with precise provenance. No new source, compiler/M/ABI/native/model command or inherited behavioral count is claimed.",
+        "Legitimate per-row numeric link_symbols use actual public symbol_bindings and remove ONLY selected defined func002AD208. Every other real canonical and source-local value remains. No new global alias/private replacement map/selected-byte patch/flag change/mapping/helper or data award occurs.",
+        "Four full strict ET_EXECs each have one allocated8B .text at their true original VMA, complete STT_FUNC size8 and no remaining relocations. Twelve whole object/script/ELF artifacts retain RAW identity. Matching is complete code equality, not substring/crop/padding/relocation masking.",
+        "Full actual author-link catalogs/tool versions/global maps are owned immutable captures. Historical sourcefree303documents/1575records remain separately retained; later unrelated additive aliases are not claimed to exist at author-link. Parent registration/final acceptance receipts are separate from this frozen author reconstructed draft."
+      ],
+      "independent_review": "Root and distinct complete original/source/cache/strict reused-symbol reviews and unchanged contained final replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/resource_hook_duplicates_final/frozen_inputs.json",
+          "bytes": 176299,
+          "raw_sha256": "aea1dffc78e34b96d2ee42ec8ceb89b433c4475e499efefa99e065d88d4e48fe"
+        },
+        "parent": {
+          "path": ".local/resource_hook_final_root_review.json",
+          "bytes": 4905,
+          "raw_sha256": "c45020147b8f4dd34446e86cc67e226df55b94483630353ed7de7ca18fea03c5"
+        },
+        "distinct": {
+          "path": ".local/resource_hook_final_peer0001/independent_audit.json",
+          "bytes": 7474,
+          "raw_sha256": "16c9848f3f8b0fbee8b7231630ac9fa2f852249d0bf2e0c7d472f3194437c95c"
+        }
+      }
+    },
+    {
+      "source": "src/game/tree.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "source_dependencies": [
+        {
+          "path": "src/game/tree.c",
+          "bytes": 5678,
+          "sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7",
+          "raw_sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7"
+        },
+        {
+          "path": "include/george/tree.h",
+          "bytes": 2399,
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940",
+          "raw_sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/list.h",
+          "bytes": 1380,
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30",
+          "raw_sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "name": "func_00226B98",
+      "address": "0x00226B98",
+      "file_offset": "0x00127B98",
+      "compiled_symbol": "func_002AD208",
+      "reuse_compiled_symbol": "func_002AD208",
+      "link_symbols": {
+        "func_00226B98": "0x00226B98"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "compiled_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct final matching-only reviews passed; canonical full build required.",
+      "boundary_evidence": {
+        "name": "func_00226B98",
+        "address": "0x00226B98",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00127B98",
+        "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "original_assembly": "build/functions/func_00226B98.s",
+        "original_assembly_raw_sha256": "8d4e424e0dcda0e5daba71f9c352df7651e859a332114fa6dbe5cdac9d426e08",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x00226BA0",
+        "terminal_instruction": "0x00226B98",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x00226B9C",
+        "delay_word": "0x00000000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "observed_prefix_address": "0x0043B1C8",
+        "observed_prefix_bytes": 56,
+        "observed_prefix_sha256": "20823eafa545fe9cb026bbf989b00f6290976aa004aa9ae318a6464f37663a8a",
+        "complete_table_extent_identity_unproved": true,
+        "allocated_publication_words": 5,
+        "actual_direct_calls": 0,
+        "manual_publication_and_signed_adjustment_dispatch": true,
+        "original_argument_return_class_runtime_ancestry_unproved": true,
+        "full_private_sourcefree_proof": "build/resource_hook_scope/scope.json"
+      },
+      "source_counterpart_qualification": "Complete genuine OWN Tree effects-only empty method; no original callback class/prototype or data identity.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_whole8000_object_RAW_unchanged": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B98/link-c9vsjj64/function.o",
+            "bytes": 8000,
+            "raw_sha256": "339e0e4f7956f3776c58b23583b4e588d58e8122f874ba4ab1d6f01af62cedc2"
+          },
+          "linked_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B98/link-c9vsjj64/function.elf",
+            "bytes": 3328,
+            "raw_sha256": "c78145a389e25a1a05ec8d0d121a8f32cffddb329801ba95ec1dd53ac3f62070"
+          },
+          "script_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226B98/link-c9vsjj64/function.ld",
+            "bytes": 178,
+            "raw_sha256": "210eb6bd1dc59f19b445f107f77441e41ae182e4f9b79328df3a71bd7012e656"
+          }
+        },
+        "no_new_compile_M_ABI_native_model": true,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "The four complete8B originals are JR31/NOP only, no memory/data/helper dependency, input consumption or GPR2/FPR result construction. The complete published OWN Tree void(void) method is an effects-only source counterpart; original callback declarations, parameters, return type/class/capacity and portable complete interfaces remain unproved.",
+        "Observed56B prefix at43B1C8 has four zero signed-adjustment/pointer pairs. Full226BC0 constructor publication and four complete consuming dispatches were manually reviewed, including226018 qualified visitor callback chain via224F58/21A458. Modified-memory callback targets and nonzero adjustments are not an established fixed table contract. No complete table extent/STT/class/data identity or runtime-main invocation is inferred.",
+        "The selected entries have no discovered direct J/JAL or next100 constructions;20 aligned allocated words are publication evidence only. Qualified invocation support comes from the complete original constructor/table loads/signed adjustment/JALR argument contexts, not bare pointers or FDE.1070B0..D0 passed to actual no-op sinks remain deferred without stored callback evidence.",
+        "Sourcefree849 and external11-record correction plus its full index remain unchanged. The obsolete plaintext subprocess-docstring preflight rejection and original frozen README replay erratum are retained, not silently fixed/refrozen. Current final replay is a separate complete contained matching-only protocol.",
+        "The entire unchanged5678B Tree C and2399B header, exact selected lexical definition/declaration, complete8000B cached GCC323 object and genuine prior same-TU seven-file actual-M query are inherited with precise provenance. No new source, compiler/M/ABI/native/model command or inherited behavioral count is claimed.",
+        "Legitimate per-row numeric link_symbols use actual public symbol_bindings and remove ONLY selected defined func002AD208. Every other real canonical and source-local value remains. No new global alias/private replacement map/selected-byte patch/flag change/mapping/helper or data award occurs.",
+        "Four full strict ET_EXECs each have one allocated8B .text at their true original VMA, complete STT_FUNC size8 and no remaining relocations. Twelve whole object/script/ELF artifacts retain RAW identity. Matching is complete code equality, not substring/crop/padding/relocation masking.",
+        "Full actual author-link catalogs/tool versions/global maps are owned immutable captures. Historical sourcefree303documents/1575records remain separately retained; later unrelated additive aliases are not claimed to exist at author-link. Parent registration/final acceptance receipts are separate from this frozen author reconstructed draft."
+      ],
+      "independent_review": "Root and distinct complete original/source/cache/strict reused-symbol reviews and unchanged contained final replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/resource_hook_duplicates_final/frozen_inputs.json",
+          "bytes": 176299,
+          "raw_sha256": "aea1dffc78e34b96d2ee42ec8ceb89b433c4475e499efefa99e065d88d4e48fe"
+        },
+        "parent": {
+          "path": ".local/resource_hook_final_root_review.json",
+          "bytes": 4905,
+          "raw_sha256": "c45020147b8f4dd34446e86cc67e226df55b94483630353ed7de7ca18fea03c5"
+        },
+        "distinct": {
+          "path": ".local/resource_hook_final_peer0001/independent_audit.json",
+          "bytes": 7474,
+          "raw_sha256": "16c9848f3f8b0fbee8b7231630ac9fa2f852249d0bf2e0c7d472f3194437c95c"
+        }
+      }
+    },
+    {
+      "source": "src/game/tree.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "source_dependencies": [
+        {
+          "path": "src/game/tree.c",
+          "bytes": 5678,
+          "sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7",
+          "raw_sha256": "fbb0893fa7633f03026fd25f3109c17c5756695e429d64eb43375a79560349d7"
+        },
+        {
+          "path": "include/george/tree.h",
+          "bytes": 2399,
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940",
+          "raw_sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/list.h",
+          "bytes": 1380,
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30",
+          "raw_sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "name": "func_00226BA0",
+      "address": "0x00226BA0",
+      "file_offset": "0x00127BA0",
+      "compiled_symbol": "func_002AD208",
+      "reuse_compiled_symbol": "func_002AD208",
+      "link_symbols": {
+        "func_00226BA0": "0x00226BA0"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "compiled_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct final matching-only reviews passed; canonical full build required.",
+      "boundary_evidence": {
+        "name": "func_00226BA0",
+        "address": "0x00226BA0",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00127BA0",
+        "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+        "original_assembly": "build/functions/func_00226BA0.s",
+        "original_assembly_raw_sha256": "48fca421e019fb5755179036b3c08d0660cbb71a7ee8136eaefa368aa98be9ff",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x00226BA8",
+        "terminal_instruction": "0x00226BA0",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x00226BA4",
+        "delay_word": "0x00000000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "observed_prefix_address": "0x0043B1C8",
+        "observed_prefix_bytes": 56,
+        "observed_prefix_sha256": "20823eafa545fe9cb026bbf989b00f6290976aa004aa9ae318a6464f37663a8a",
+        "complete_table_extent_identity_unproved": true,
+        "allocated_publication_words": 8,
+        "actual_direct_calls": 0,
+        "manual_publication_and_signed_adjustment_dispatch": true,
+        "original_argument_return_class_runtime_ancestry_unproved": true,
+        "full_private_sourcefree_proof": "build/resource_hook_scope/scope.json"
+      },
+      "source_counterpart_qualification": "Complete genuine OWN Tree effects-only empty method; no original callback class/prototype or data identity.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_whole8000_object_RAW_unchanged": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226BA0/link-zhm8et74/function.o",
+            "bytes": 8000,
+            "raw_sha256": "339e0e4f7956f3776c58b23583b4e588d58e8122f874ba4ab1d6f01af62cedc2"
+          },
+          "linked_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226BA0/link-zhm8et74/function.elf",
+            "bytes": 3336,
+            "raw_sha256": "f3a89ee4e4c159ccc31b0d4433ccfc1e60f90f36d572be37b224710788e99903"
+          },
+          "script_path": {
+            "path": "build/resource_hook_duplicates_final/linked/func_00226BA0/link-zhm8et74/function.ld",
+            "bytes": 178,
+            "raw_sha256": "2c42490763f3b7bfa790f5f5c2b30dcf94b51b1b75b5a495b2eda05e2db37f98"
+          }
+        },
+        "no_new_compile_M_ABI_native_model": true,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "The four complete8B originals are JR31/NOP only, no memory/data/helper dependency, input consumption or GPR2/FPR result construction. The complete published OWN Tree void(void) method is an effects-only source counterpart; original callback declarations, parameters, return type/class/capacity and portable complete interfaces remain unproved.",
+        "Observed56B prefix at43B1C8 has four zero signed-adjustment/pointer pairs. Full226BC0 constructor publication and four complete consuming dispatches were manually reviewed, including226018 qualified visitor callback chain via224F58/21A458. Modified-memory callback targets and nonzero adjustments are not an established fixed table contract. No complete table extent/STT/class/data identity or runtime-main invocation is inferred.",
+        "The selected entries have no discovered direct J/JAL or next100 constructions;20 aligned allocated words are publication evidence only. Qualified invocation support comes from the complete original constructor/table loads/signed adjustment/JALR argument contexts, not bare pointers or FDE.1070B0..D0 passed to actual no-op sinks remain deferred without stored callback evidence.",
+        "Sourcefree849 and external11-record correction plus its full index remain unchanged. The obsolete plaintext subprocess-docstring preflight rejection and original frozen README replay erratum are retained, not silently fixed/refrozen. Current final replay is a separate complete contained matching-only protocol.",
+        "The entire unchanged5678B Tree C and2399B header, exact selected lexical definition/declaration, complete8000B cached GCC323 object and genuine prior same-TU seven-file actual-M query are inherited with precise provenance. No new source, compiler/M/ABI/native/model command or inherited behavioral count is claimed.",
+        "Legitimate per-row numeric link_symbols use actual public symbol_bindings and remove ONLY selected defined func002AD208. Every other real canonical and source-local value remains. No new global alias/private replacement map/selected-byte patch/flag change/mapping/helper or data award occurs.",
+        "Four full strict ET_EXECs each have one allocated8B .text at their true original VMA, complete STT_FUNC size8 and no remaining relocations. Twelve whole object/script/ELF artifacts retain RAW identity. Matching is complete code equality, not substring/crop/padding/relocation masking.",
+        "Full actual author-link catalogs/tool versions/global maps are owned immutable captures. Historical sourcefree303documents/1575records remain separately retained; later unrelated additive aliases are not claimed to exist at author-link. Parent registration/final acceptance receipts are separate from this frozen author reconstructed draft."
+      ],
+      "independent_review": "Root and distinct complete original/source/cache/strict reused-symbol reviews and unchanged contained final replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/resource_hook_duplicates_final/frozen_inputs.json",
+          "bytes": 176299,
+          "raw_sha256": "aea1dffc78e34b96d2ee42ec8ceb89b433c4475e499efefa99e065d88d4e48fe"
+        },
+        "parent": {
+          "path": ".local/resource_hook_final_root_review.json",
+          "bytes": 4905,
+          "raw_sha256": "c45020147b8f4dd34446e86cc67e226df55b94483630353ed7de7ca18fea03c5"
+        },
+        "distinct": {
+          "path": ".local/resource_hook_final_peer0001/independent_audit.json",
+          "bytes": 7474,
+          "raw_sha256": "16c9848f3f8b0fbee8b7231630ac9fa2f852249d0bf2e0c7d472f3194437c95c"
+        }
+      }
+    }
+  ]
+}

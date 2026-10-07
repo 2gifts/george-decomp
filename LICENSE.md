@@ -9,6 +9,14 @@ Imported runtime files retain their upstream license notices and terms. See
 `docs/reuse.md`, the notices in `src/runtime/`, and `LICENSES/newlib-1.10.0.txt`.
 Downloaded tools are not distributed by this repository.
 
+The PS2SDK matrix extraction in `src/game/matrix_identity.c` and
+`include/george/matrix_copy_identity.h` retains Naomi Peori's copyright notice
+and is governed by the Academic Free License 2.0 in
+`LICENSES/PS2SDK-AFL-2.0.txt`. The files carry prominent modified-work notices.
+Before using or redistributing those covered files, please read the complete
+license and expressly assent to its terms. These terms are separate from the
+MIT license for original project tooling and documentation.
+
 ## MIT License for original tooling, tests, and documentation
 
 Copyright (c) 2026 George decompilation contributors
