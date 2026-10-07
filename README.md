@@ -21,14 +21,14 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C/C++ | 1180 functions reviewed; 249 match (5,412 bytes) |
+| Recovered game C/C++ | 1186 functions reviewed; 251 match (5,464 bytes) |
 | Reused upstream C/C++ | 80 match (11,192 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`, `bcopy`, `index`) |
-| C source | 1382 functions reviewed; 318 match (15,216 bytes) |
+| C source | 1388 functions reviewed; 320 match (15,268 bytes) |
 | C++ source | 24 functions reviewed; 11 match (1,388 bytes) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C/C++ matching total is **16,604 / 3,083,712 code bytes (0.538442%)**, including
+The C/C++ matching total is **16,656 / 3,083,712 code bytes (0.540128%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C/C++ progress.

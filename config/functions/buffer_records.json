@@ -1,0 +1,4573 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002A5230",
+      "address": "0x002A5230",
+      "file_offset": "0x001A6230",
+      "size": 92,
+      "original_sha256": "f1f541e3917cd67d3f7c0bbe2c159c77e13f61fef6b492c5e9e296b84e76a256",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x0021696C",
+          "word": "0x0C0A948C",
+          "kind": "JAL",
+          "target": "0x002A5230",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0130",
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x0021692C",
+            "size": 128,
+            "sha256": "9bc61c006e5ba928edc652fad596d4fee199a4922a3188a83ca5fde0761961f5",
+            "words": [
+              {
+                "instruction": "0x0021692C",
+                "word": "0x2406FFFF"
+              },
+              {
+                "instruction": "0x00216930",
+                "word": "0x0200202D"
+              },
+              {
+                "instruction": "0x00216934",
+                "word": "0x0C0B412C"
+              },
+              {
+                "instruction": "0x00216938",
+                "word": "0x24050001"
+              },
+              {
+                "instruction": "0x0021693C",
+                "word": "0x1000001B"
+              },
+              {
+                "instruction": "0x00216940",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216944",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216948",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x0021694C",
+                "word": "0x24A5A740"
+              },
+              {
+                "instruction": "0x00216950",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216954",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216958",
+                "word": "0x10000014"
+              },
+              {
+                "instruction": "0x0021695C",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216960",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216964",
+                "word": "0x240200E7"
+              },
+              {
+                "instruction": "0x00216968",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x0021696C",
+                "word": "0x0C0A948C"
+              },
+              {
+                "instruction": "0x00216970",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216974",
+                "word": "0x1000000D"
+              },
+              {
+                "instruction": "0x00216978",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x0021697C",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216980",
+                "word": "0x24020009"
+              },
+              {
+                "instruction": "0x00216984",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216988",
+                "word": "0x0C0A94A4"
+              },
+              {
+                "instruction": "0x0021698C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216990",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x00216994",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216998",
+                "word": "0x16020004"
+              },
+              {
+                "instruction": "0x0021699C",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x002169A0",
+                "word": "0x0C0858FA"
+              },
+              {
+                "instruction": "0x002169A4",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002169A8",
+                "word": "0x7BB00120"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [
+        {
+          "instruction": "0x2a5234",
+          "word": "0x7fb00010",
+          "operation": "sq          $16, 0x10($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a5238",
+          "word": "0xffbf0000",
+          "operation": "sd          $31, 0x0($29)",
+          "width": 8
+        },
+        {
+          "instruction": "0x2a5248",
+          "word": "0xac820020",
+          "operation": "sw          $2, 0x20($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5278",
+          "word": "0xae020004",
+          "operation": "sw          $2, 0x4($16)",
+          "width": 4
+        }
+      ],
+      "original_loads": [
+        {
+          "instruction": "0x2a523c",
+          "word": "0x8c820020",
+          "operation": "lw          $2, 0x20($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a524c",
+          "word": "0x8c820020",
+          "operation": "lw          $2, 0x20($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5250",
+          "word": "0x8c830028",
+          "operation": "lw          $3, 0x28($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5254",
+          "word": "0x8c900010",
+          "operation": "lw          $16, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5260",
+          "word": "0x8e060000",
+          "operation": "lw          $6, 0x0($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5264",
+          "word": "0x8c450000",
+          "operation": "lw          $5, 0x0($2)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a526c",
+          "word": "0x8e040008",
+          "operation": "lw         $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5274",
+          "word": "0x8e040008",
+          "operation": "lw         $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a527c",
+          "word": "0x7bb00010",
+          "operation": "lq          $16, 0x10($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a5280",
+          "word": "0xdfbf0000",
+          "operation": "ld          $31, 0x0($29)",
+          "width": 8
+        }
+      ],
+      "original_branches": [
+        {
+          "instruction": "0x2a5240",
+          "word": "0x18400002",
+          "operation": "blez        $2, .L002A524C",
+          "target": "0x2a524c",
+          "delay_word": "0x2442ffff"
+        }
+      ],
+      "original_calls": [
+        {
+          "instruction": "0x2a5268",
+          "word": "0xc0e5004",
+          "operation": "jal         func_00394010",
+          "target": "0x394010",
+          "delay_word": "0x8e040008"
+        },
+        {
+          "instruction": "0x2a5270",
+          "word": "0xc0a5414",
+          "operation": "jal         func_00295050",
+          "target": "0x295050",
+          "delay_word": "0x8e040008"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A5230",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": false,
+          "expected_size": 92,
+          "compiled_size": 92,
+          "different_bytes": 27,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            14,
+            16,
+            18,
+            22,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f1f541e3917cd67d3f7c0bbe2c159c77e13f61fef6b492c5e9e296b84e76a256",
+          "compiled_sha256": "64a342031c9c54366d69ea669a4ffb522287754feb4e75c89d7b269e959e9439"
+        },
+        {
+          "name": "func_002A5230",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": false,
+          "expected_size": 92,
+          "compiled_size": 92,
+          "different_bytes": 29,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            14,
+            16,
+            18,
+            22,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f1f541e3917cd67d3f7c0bbe2c159c77e13f61fef6b492c5e9e296b84e76a256",
+          "compiled_sha256": "444a8ce8c5eacf6a0f17df184459bc40edca9f873466096a1a736115ef4fe4d4"
+        },
+        {
+          "name": "func_002A5230",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 92,
+          "compiled_size": 92,
+          "different_bytes": 31,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            11,
+            14,
+            16,
+            18,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f1f541e3917cd67d3f7c0bbe2c159c77e13f61fef6b492c5e9e296b84e76a256",
+          "compiled_sha256": "61f0376cbf5b0a97b5603430d2f530e2c1e3561ec9d3b5a5caf0ede97bd33a65"
+        }
+      ],
+      "provisional_exact_candidate": false,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": false
+      }
+    },
+    {
+      "name": "func_002A5290",
+      "address": "0x002A5290",
+      "file_offset": "0x001A6290",
+      "size": 132,
+      "original_sha256": "fcaae9de6dfc2ecf5816b2ce508c7ea905dd29458a02051818ed5fa49033fb64",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x00216988",
+          "word": "0x0C0A94A4",
+          "kind": "JAL",
+          "target": "0x002A5290",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0130",
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216948",
+            "size": 116,
+            "sha256": "16fae3ac0506b2f81309435f0e172d849ce55ba082224fdc91225e75a912aff8",
+            "words": [
+              {
+                "instruction": "0x00216948",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x0021694C",
+                "word": "0x24A5A740"
+              },
+              {
+                "instruction": "0x00216950",
+                "word": "0x0C0A936E"
+              },
+              {
+                "instruction": "0x00216954",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216958",
+                "word": "0x10000014"
+              },
+              {
+                "instruction": "0x0021695C",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216960",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216964",
+                "word": "0x240200E7"
+              },
+              {
+                "instruction": "0x00216968",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x0021696C",
+                "word": "0x0C0A948C"
+              },
+              {
+                "instruction": "0x00216970",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216974",
+                "word": "0x1000000D"
+              },
+              {
+                "instruction": "0x00216978",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x0021697C",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x00216980",
+                "word": "0x24020009"
+              },
+              {
+                "instruction": "0x00216984",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216988",
+                "word": "0x0C0A94A4"
+              },
+              {
+                "instruction": "0x0021698C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216990",
+                "word": "0x10000006"
+              },
+              {
+                "instruction": "0x00216994",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216998",
+                "word": "0x16020004"
+              },
+              {
+                "instruction": "0x0021699C",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x002169A0",
+                "word": "0x0C0858FA"
+              },
+              {
+                "instruction": "0x002169A4",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002169A8",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x002169AC",
+                "word": "0x7BB10110"
+              },
+              {
+                "instruction": "0x002169B0",
+                "word": "0xDFBF0100"
+              },
+              {
+                "instruction": "0x002169B4",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x002169B8",
+                "word": "0x27BD0130"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [
+        {
+          "instruction": "0x2a5294",
+          "word": "0x7fb00020",
+          "operation": "sq          $16, 0x20($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a5298",
+          "word": "0xffbf0010",
+          "operation": "sd          $31, 0x10($29)",
+          "width": 8
+        },
+        {
+          "instruction": "0x2a529c",
+          "word": "0xa3a00000",
+          "operation": "sb          $0, 0x0($29)",
+          "width": 1
+        },
+        {
+          "instruction": "0x2a52c8",
+          "word": "0xac830020",
+          "operation": "sw         $3, 0x20($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5300",
+          "word": "0xae020004",
+          "operation": "sw          $2, 0x4($16)",
+          "width": 4
+        }
+      ],
+      "original_loads": [
+        {
+          "instruction": "0x2a52a0",
+          "word": "0x8c830020",
+          "operation": "lw          $3, 0x20($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52a4",
+          "word": "0x8c850024",
+          "operation": "lw          $5, 0x24($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52b4",
+          "word": "0x8c900010",
+          "operation": "lw          $16, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52cc",
+          "word": "0x8c900010",
+          "operation": "lw          $16, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52d8",
+          "word": "0x8c820028",
+          "operation": "lw          $2, 0x28($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52e0",
+          "word": "0x8c900010",
+          "operation": "lw          $16, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52e8",
+          "word": "0x8c650000",
+          "operation": "lw          $5, 0x0($3)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52ec",
+          "word": "0x8e040008",
+          "operation": "lw          $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52f4",
+          "word": "0x8e060000",
+          "operation": "lw         $6, 0x0($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a52fc",
+          "word": "0x8e040008",
+          "operation": "lw         $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5304",
+          "word": "0x7bb00020",
+          "operation": "lq          $16, 0x20($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a5308",
+          "word": "0xdfbf0010",
+          "operation": "ld          $31, 0x10($29)",
+          "width": 8
+        }
+      ],
+      "original_branches": [
+        {
+          "instruction": "0x2a52ac",
+          "word": "0x14400004",
+          "operation": "bnez        $2, .L002A52C0",
+          "target": "0x2a52c0",
+          "delay_word": "0x24630001"
+        },
+        {
+          "instruction": "0x2a52b8",
+          "word": "0x1000000c",
+          "operation": "b           .L002A52EC",
+          "target": "0x2a52ec",
+          "delay_word": "0x3a0282d"
+        },
+        {
+          "instruction": "0x2a52c4",
+          "word": "0x14400004",
+          "operation": "bnez        $2, .L002A52D8",
+          "target": "0x2a52d8",
+          "delay_word": "0xac830020"
+        },
+        {
+          "instruction": "0x2a52d0",
+          "word": "0x10000006",
+          "operation": "b           .L002A52EC",
+          "target": "0x2a52ec",
+          "delay_word": "0x3a0282d"
+        }
+      ],
+      "original_calls": [
+        {
+          "instruction": "0x2a52f0",
+          "word": "0xc0e5004",
+          "operation": "jal         func_00394010",
+          "target": "0x394010",
+          "delay_word": "0x8e060000"
+        },
+        {
+          "instruction": "0x2a52f8",
+          "word": "0xc0a5414",
+          "operation": "jal         func_00295050",
+          "target": "0x295050",
+          "delay_word": "0x8e040008"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A5290",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": false,
+          "expected_size": 132,
+          "compiled_size": 112,
+          "different_bytes": 108,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fcaae9de6dfc2ecf5816b2ce508c7ea905dd29458a02051818ed5fa49033fb64",
+          "compiled_sha256": "f9c39d6f267e439f952972bbf8fdbe47d980be1fc6ee78d7250155058f59786d"
+        },
+        {
+          "name": "func_002A5290",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": false,
+          "expected_size": 132,
+          "compiled_size": 116,
+          "different_bytes": 86,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            16,
+            18,
+            20,
+            22,
+            28
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fcaae9de6dfc2ecf5816b2ce508c7ea905dd29458a02051818ed5fa49033fb64",
+          "compiled_sha256": "1c0ee3db93a4f5d9e6bf31a59d42976faf230b7dc79b58f92f2eb80d1a03601c"
+        },
+        {
+          "name": "func_002A5290",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 132,
+          "compiled_size": 116,
+          "different_bytes": 87,
+          "first_different_offsets": [
+            6,
+            7,
+            10,
+            11,
+            16,
+            18,
+            20,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "fcaae9de6dfc2ecf5816b2ce508c7ea905dd29458a02051818ed5fa49033fb64",
+          "compiled_sha256": "b780763c80919e8d3e2724f3edee691fe81331d1a6c2a7ebfee7c4efe35c3677"
+        }
+      ],
+      "provisional_exact_candidate": false,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": false
+      }
+    },
+    {
+      "name": "func_002A5398",
+      "address": "0x002A5398",
+      "file_offset": "0x001A6398",
+      "size": 40,
+      "original_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x00216844",
+          "word": "0x0C0A94E6",
+          "kind": "JAL",
+          "target": "0x002A5398",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0130",
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216804",
+            "size": 128,
+            "sha256": "9f458a29fbfa5b208670c5b320448e651fe678793fad735522d2207e2dfe0e65",
+            "words": [
+              {
+                "instruction": "0x00216804",
+                "word": "0x54400069"
+              },
+              {
+                "instruction": "0x00216808",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x0021680C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216810",
+                "word": "0x0C0A95B0"
+              },
+              {
+                "instruction": "0x00216814",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216818",
+                "word": "0x10400063"
+              },
+              {
+                "instruction": "0x0021681C",
+                "word": "0x8E0383AC"
+              },
+              {
+                "instruction": "0x00216820",
+                "word": "0x90700004"
+              },
+              {
+                "instruction": "0x00216824",
+                "word": "0x00701821"
+              },
+              {
+                "instruction": "0x00216828",
+                "word": "0x90620005"
+              },
+              {
+                "instruction": "0x0021682C",
+                "word": "0x30420008"
+              },
+              {
+                "instruction": "0x00216830",
+                "word": "0x1040005D"
+              },
+              {
+                "instruction": "0x00216834",
+                "word": "0x24020008"
+              },
+              {
+                "instruction": "0x00216838",
+                "word": "0x16020006"
+              },
+              {
+                "instruction": "0x0021683C",
+                "word": "0x2602FFE0"
+              },
+              {
+                "instruction": "0x00216840",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216844",
+                "word": "0x0C0A94E6"
+              },
+              {
+                "instruction": "0x00216848",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x0021684C",
+                "word": "0x10000057"
+              },
+              {
+                "instruction": "0x00216850",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216854",
+                "word": "0x2C420060"
+              },
+              {
+                "instruction": "0x00216858",
+                "word": "0x10400007"
+              },
+              {
+                "instruction": "0x0021685C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216860",
+                "word": "0x00102E00"
+              },
+              {
+                "instruction": "0x00216864",
+                "word": "0x00052E03"
+              },
+              {
+                "instruction": "0x00216868",
+                "word": "0x0C0A92DC"
+              },
+              {
+                "instruction": "0x0021686C",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216870",
+                "word": "0x1000004E"
+              },
+              {
+                "instruction": "0x00216874",
+                "word": "0x7BB00120"
+              },
+              {
+                "instruction": "0x00216878",
+                "word": "0x2402000A"
+              },
+              {
+                "instruction": "0x0021687C",
+                "word": "0x12020003"
+              },
+              {
+                "instruction": "0x00216880",
+                "word": "0x2402000D"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [
+        {
+          "instruction": "0x2a53ac",
+          "word": "0xac830004",
+          "operation": "sw          $3, 0x4($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a53b4",
+          "word": "0xa0400000",
+          "operation": "sb          $0, 0x0($2)",
+          "width": 1
+        }
+      ],
+      "original_loads": [
+        {
+          "instruction": "0x2a5398",
+          "word": "0x8c840010",
+          "operation": "lw          $4, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a539c",
+          "word": "0x8c830004",
+          "operation": "lw          $3, 0x4($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a53a8",
+          "word": "0x8c820008",
+          "operation": "lw          $2, 0x8($4)",
+          "width": 4
+        }
+      ],
+      "original_branches": [
+        {
+          "instruction": "0x2a53a0",
+          "word": "0x18600005",
+          "operation": "blez        $3, .L002A53B8",
+          "target": "0x2a53b8",
+          "delay_word": "0x2463ffff"
+        }
+      ],
+      "original_calls": [],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A5398",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": true,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6",
+          "compiled_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6"
+        },
+        {
+          "name": "func_002A5398",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": true,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6",
+          "compiled_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6"
+        },
+        {
+          "name": "func_002A5398",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": true,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6",
+          "compiled_sha256": "dea95e8d378601c937d63a12b4cf22cbeeaad4c7c3d8530620346fbadc7ed7e6"
+        }
+      ],
+      "provisional_exact_candidate": true,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": true
+      }
+    },
+    {
+      "name": "func_002A53D0",
+      "address": "0x002A53D0",
+      "file_offset": "0x001A63D0",
+      "size": 24,
+      "original_sha256": "52ef3440a0ae197003ab719aa5eacc97eedf75b6f2cc985ae34664d8760d4fcc",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x00216CF4",
+          "word": "0x0C0A94F4",
+          "kind": "JAL",
+          "target": "0x002A53D0",
+          "delay_word": "0x8C440000",
+          "caller": {
+            "name": "func_002169C0",
+            "address": "0x002169C0",
+            "size": 1084,
+            "instructions": 271,
+            "section": ".text",
+            "file_offset": "0x001179C0",
+            "original_sha256": "aa8b60b82e4ab30f2a3d081046a195d9aa5cbea8c463379c1bef024667bb9cc1",
+            "original_assembly": "build/functions/func_002169C0.s",
+            "original_assembly_raw_sha256": "d90322fb28f8ef941c090422a4da3a36a4e84c424eb93f17d620f13c72a6774c",
+            "scanner_extent": 1088,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x00216DF4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00B0",
+            "following_entry": "0x00216E00",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216CB4",
+            "size": 128,
+            "sha256": "a8fff6c1d6893e1bf37815b13109b43beeca498be17e9c25644978532a058a30",
+            "words": [
+              {
+                "instruction": "0x00216CB4",
+                "word": "0x4600E306"
+              },
+              {
+                "instruction": "0x00216CB8",
+                "word": "0x4600CC46"
+              },
+              {
+                "instruction": "0x00216CBC",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00216CC0",
+                "word": "0x4600A346"
+              },
+              {
+                "instruction": "0x00216CC4",
+                "word": "0x4600F3C6"
+              },
+              {
+                "instruction": "0x00216CC8",
+                "word": "0x46007406"
+              },
+              {
+                "instruction": "0x00216CCC",
+                "word": "0x0C08F242"
+              },
+              {
+                "instruction": "0x00216CD0",
+                "word": "0x24040001"
+              },
+              {
+                "instruction": "0x00216CD4",
+                "word": "0x2631FFFF"
+              },
+              {
+                "instruction": "0x00216CD8",
+                "word": "0x0251102A"
+              },
+              {
+                "instruction": "0x00216CDC",
+                "word": "0x10400016"
+              },
+              {
+                "instruction": "0x00216CE0",
+                "word": "0x4600F506"
+              },
+              {
+                "instruction": "0x00216CE4",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x00216CE8",
+                "word": "0x8E629408"
+              },
+              {
+                "instruction": "0x00216CEC",
+                "word": "0x0240282D"
+              },
+              {
+                "instruction": "0x00216CF0",
+                "word": "0x26520001"
+              },
+              {
+                "instruction": "0x00216CF4",
+                "word": "0x0C0A94F4"
+              },
+              {
+                "instruction": "0x00216CF8",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216CFC",
+                "word": "0x3C0141F5"
+              },
+              {
+                "instruction": "0x00216D00",
+                "word": "0x3421C290"
+              },
+              {
+                "instruction": "0x00216D04",
+                "word": "0x44816000"
+              },
+              {
+                "instruction": "0x00216D08",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x00216D0C",
+                "word": "0x3C013F80"
+              },
+              {
+                "instruction": "0x00216D10",
+                "word": "0x44818800"
+              },
+              {
+                "instruction": "0x00216D14",
+                "word": "0x4600EB46"
+              },
+              {
+                "instruction": "0x00216D18",
+                "word": "0x4600A386"
+              },
+              {
+                "instruction": "0x00216D1C",
+                "word": "0x4600A3C6"
+              },
+              {
+                "instruction": "0x00216D20",
+                "word": "0x4600A406"
+              },
+              {
+                "instruction": "0x00216D24",
+                "word": "0x0C08F242"
+              },
+              {
+                "instruction": "0x00216D28",
+                "word": "0x24040001"
+              },
+              {
+                "instruction": "0x00216D2C",
+                "word": "0x0251102A"
+              },
+              {
+                "instruction": "0x00216D30",
+                "word": "0x1440FFED"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        },
+        {
+          "instruction": "0x00216D54",
+          "word": "0x0C0A94F4",
+          "kind": "JAL",
+          "target": "0x002A53D0",
+          "delay_word": "0x2610A798",
+          "caller": {
+            "name": "func_002169C0",
+            "address": "0x002169C0",
+            "size": 1084,
+            "instructions": 271,
+            "section": ".text",
+            "file_offset": "0x001179C0",
+            "original_sha256": "aa8b60b82e4ab30f2a3d081046a195d9aa5cbea8c463379c1bef024667bb9cc1",
+            "original_assembly": "build/functions/func_002169C0.s",
+            "original_assembly_raw_sha256": "d90322fb28f8ef941c090422a4da3a36a4e84c424eb93f17d620f13c72a6774c",
+            "scanner_extent": 1088,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x00216DF4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD00B0",
+            "following_entry": "0x00216E00",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216D14",
+            "size": 128,
+            "sha256": "5436440ed19392f67b30b8d71c3a344e51270d5aae3793917adf2b4f607810bc",
+            "words": [
+              {
+                "instruction": "0x00216D14",
+                "word": "0x4600EB46"
+              },
+              {
+                "instruction": "0x00216D18",
+                "word": "0x4600A386"
+              },
+              {
+                "instruction": "0x00216D1C",
+                "word": "0x4600A3C6"
+              },
+              {
+                "instruction": "0x00216D20",
+                "word": "0x4600A406"
+              },
+              {
+                "instruction": "0x00216D24",
+                "word": "0x0C08F242"
+              },
+              {
+                "instruction": "0x00216D28",
+                "word": "0x24040001"
+              },
+              {
+                "instruction": "0x00216D2C",
+                "word": "0x0251102A"
+              },
+              {
+                "instruction": "0x00216D30",
+                "word": "0x1440FFED"
+              },
+              {
+                "instruction": "0x00216D34",
+                "word": "0x461FEF40"
+              },
+              {
+                "instruction": "0x00216D38",
+                "word": "0x8E629408"
+              },
+              {
+                "instruction": "0x00216D3C",
+                "word": "0x0240282D"
+              },
+              {
+                "instruction": "0x00216D40",
+                "word": "0x3C013F66"
+              },
+              {
+                "instruction": "0x00216D44",
+                "word": "0x34216666"
+              },
+              {
+                "instruction": "0x00216D48",
+                "word": "0x4481A000"
+              },
+              {
+                "instruction": "0x00216D4C",
+                "word": "0x3C100044"
+              },
+              {
+                "instruction": "0x00216D50",
+                "word": "0x8C440000"
+              },
+              {
+                "instruction": "0x00216D54",
+                "word": "0x0C0A94F4"
+              },
+              {
+                "instruction": "0x00216D58",
+                "word": "0x2610A798"
+              },
+              {
+                "instruction": "0x00216D5C",
+                "word": "0x4600A386"
+              },
+              {
+                "instruction": "0x00216D60",
+                "word": "0x3C0141F5"
+              },
+              {
+                "instruction": "0x00216D64",
+                "word": "0x3421C290"
+              },
+              {
+                "instruction": "0x00216D68",
+                "word": "0x44816000"
+              },
+              {
+                "instruction": "0x00216D6C",
+                "word": "0x3C013F80"
+              },
+              {
+                "instruction": "0x00216D70",
+                "word": "0x44818800"
+              },
+              {
+                "instruction": "0x00216D74",
+                "word": "0x4600EB46"
+              },
+              {
+                "instruction": "0x00216D78",
+                "word": "0x0200282D"
+              },
+              {
+                "instruction": "0x00216D7C",
+                "word": "0x0040302D"
+              },
+              {
+                "instruction": "0x00216D80",
+                "word": "0x460073C6"
+              },
+              {
+                "instruction": "0x00216D84",
+                "word": "0x46007406"
+              },
+              {
+                "instruction": "0x00216D88",
+                "word": "0x0C08F242"
+              },
+              {
+                "instruction": "0x00216D8C",
+                "word": "0x24040001"
+              },
+              {
+                "instruction": "0x00216D90",
+                "word": "0x0C0A399A"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [],
+      "original_loads": [
+        {
+          "instruction": "0x2a53d0",
+          "word": "0x8c82000c",
+          "operation": "lw          $2, 0xC($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a53dc",
+          "word": "0x8ca30000",
+          "operation": "lw          $3, 0x0($5)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a53e4",
+          "word": "0x8c620008",
+          "operation": "lw         $2, 0x8($3)",
+          "width": 4
+        }
+      ],
+      "original_branches": [],
+      "original_calls": [],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A53D0",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": false,
+          "expected_size": 24,
+          "compiled_size": 24,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "52ef3440a0ae197003ab719aa5eacc97eedf75b6f2cc985ae34664d8760d4fcc",
+          "compiled_sha256": "4af87b85bee0a9262ca137154311185ec1b1f6e59f78e34a5b83431f6c601e84"
+        },
+        {
+          "name": "func_002A53D0",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": false,
+          "expected_size": 24,
+          "compiled_size": 24,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "52ef3440a0ae197003ab719aa5eacc97eedf75b6f2cc985ae34664d8760d4fcc",
+          "compiled_sha256": "4af87b85bee0a9262ca137154311185ec1b1f6e59f78e34a5b83431f6c601e84"
+        },
+        {
+          "name": "func_002A53D0",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 24,
+          "compiled_size": 24,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            9,
+            10,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "52ef3440a0ae197003ab719aa5eacc97eedf75b6f2cc985ae34664d8760d4fcc",
+          "compiled_sha256": "4af87b85bee0a9262ca137154311185ec1b1f6e59f78e34a5b83431f6c601e84"
+        }
+      ],
+      "provisional_exact_candidate": false,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": false
+      }
+    },
+    {
+      "name": "func_002A53E8",
+      "address": "0x002A53E8",
+      "file_offset": "0x001A63E8",
+      "size": 12,
+      "original_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "matched",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x00216424",
+          "word": "0x0C0A94FA",
+          "kind": "JAL",
+          "target": "0x002A53E8",
+          "delay_word": "0x26100110",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "excluded_zero_padding": 0,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01B0",
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x002163E8",
+            "size": 124,
+            "sha256": "224fb8bb2c1630b4e3335fdf7d3e0c5ee35093dac08f8f893b2c651fab2d2ff1",
+            "words": [
+              {
+                "instruction": "0x002163E8",
+                "word": "0x27BDFE50"
+              },
+              {
+                "instruction": "0x002163EC",
+                "word": "0x7FB10190"
+              },
+              {
+                "instruction": "0x002163F0",
+                "word": "0x7FB001A0"
+              },
+              {
+                "instruction": "0x002163F4",
+                "word": "0x3C110040"
+              },
+              {
+                "instruction": "0x002163F8",
+                "word": "0x7FB30170"
+              },
+              {
+                "instruction": "0x002163FC",
+                "word": "0x7FB20180"
+              },
+              {
+                "instruction": "0x00216400",
+                "word": "0x0000982D"
+              },
+              {
+                "instruction": "0x00216404",
+                "word": "0x7FB40160"
+              },
+              {
+                "instruction": "0x00216408",
+                "word": "0x7FB50150"
+              },
+              {
+                "instruction": "0x0021640C",
+                "word": "0x7FB60140"
+              },
+              {
+                "instruction": "0x00216410",
+                "word": "0x7FB70130"
+              },
+              {
+                "instruction": "0x00216414",
+                "word": "0x7FBE0120"
+              },
+              {
+                "instruction": "0x00216418",
+                "word": "0xFFBF0110"
+              },
+              {
+                "instruction": "0x0021641C",
+                "word": "0x8E309408"
+              },
+              {
+                "instruction": "0x00216420",
+                "word": "0x8E040000"
+              },
+              {
+                "instruction": "0x00216424",
+                "word": "0x0C0A94FA"
+              },
+              {
+                "instruction": "0x00216428",
+                "word": "0x26100110"
+              },
+              {
+                "instruction": "0x0021642C",
+                "word": "0x0200202D"
+              },
+              {
+                "instruction": "0x00216430",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x00216434",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x00216438",
+                "word": "0x8E239408"
+              },
+              {
+                "instruction": "0x0021643C",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00216440",
+                "word": "0x24A5A6E8"
+              },
+              {
+                "instruction": "0x00216444",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x00216448",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x0021644C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216450",
+                "word": "0x3C030044"
+              },
+              {
+                "instruction": "0x00216454",
+                "word": "0x37A40008"
+              },
+              {
+                "instruction": "0x00216458",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x0021645C",
+                "word": "0xA0400214"
+              },
+              {
+                "instruction": "0x00216460",
+                "word": "0x2469A6F0"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        },
+        {
+          "instruction": "0x002168B8",
+          "word": "0x0C0A94FA",
+          "kind": "JAL",
+          "target": "0x002A53E8",
+          "delay_word": "0x8CE40000",
+          "caller": {
+            "name": "func_002167D8",
+            "address": "0x002167D8",
+            "size": 484,
+            "instructions": 121,
+            "section": ".text",
+            "file_offset": "0x001177D8",
+            "original_sha256": "7fc5fef4194ac190cdcb3a0643aeff4112ec17d5ec49858636def8116de466cd",
+            "original_assembly": "build/functions/func_002167D8.s",
+            "original_assembly_raw_sha256": "59dd2822e85f05b5d29fd76777a4c10ba8b524c4f885e7ca04c39528277fa17c",
+            "scanner_extent": 488,
+            "excluded_zero_padding": 4,
+            "terminal_instruction": "0x002169B4",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0130",
+            "following_entry": "0x002169C0",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216878",
+            "size": 128,
+            "sha256": "97d82b565ec76d5cf2a00bcfd07f6944306131d396b50140efd371304107b09b",
+            "words": [
+              {
+                "instruction": "0x00216878",
+                "word": "0x2402000A"
+              },
+              {
+                "instruction": "0x0021687C",
+                "word": "0x12020003"
+              },
+              {
+                "instruction": "0x00216880",
+                "word": "0x2402000D"
+              },
+              {
+                "instruction": "0x00216884",
+                "word": "0x16020036"
+              },
+              {
+                "instruction": "0x00216888",
+                "word": "0x240200E5"
+              },
+              {
+                "instruction": "0x0021688C",
+                "word": "0x3C030044"
+              },
+              {
+                "instruction": "0x00216890",
+                "word": "0x8E279408"
+              },
+              {
+                "instruction": "0x00216894",
+                "word": "0x2462A700"
+              },
+              {
+                "instruction": "0x00216898",
+                "word": "0xDC65A700"
+              },
+              {
+                "instruction": "0x0021689C",
+                "word": "0x90460014"
+              },
+              {
+                "instruction": "0x002168A0",
+                "word": "0xDC430008"
+              },
+              {
+                "instruction": "0x002168A4",
+                "word": "0x8C440010"
+              },
+              {
+                "instruction": "0x002168A8",
+                "word": "0xFFA50000"
+              },
+              {
+                "instruction": "0x002168AC",
+                "word": "0xFFA30008"
+              },
+              {
+                "instruction": "0x002168B0",
+                "word": "0xA3A60014"
+              },
+              {
+                "instruction": "0x002168B4",
+                "word": "0xAFA40010"
+              },
+              {
+                "instruction": "0x002168B8",
+                "word": "0x0C0A94FA"
+              },
+              {
+                "instruction": "0x002168BC",
+                "word": "0x8CE40000"
+              },
+              {
+                "instruction": "0x002168C0",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002168C4",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002168C8",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x002168CC",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x002168D0",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002168D4",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002168D8",
+                "word": "0x24A5A718"
+              },
+              {
+                "instruction": "0x002168DC",
+                "word": "0x8E239408"
+              },
+              {
+                "instruction": "0x002168E0",
+                "word": "0x00102E00"
+              },
+              {
+                "instruction": "0x002168E4",
+                "word": "0x00052E03"
+              },
+              {
+                "instruction": "0x002168E8",
+                "word": "0x0C0A92DC"
+              },
+              {
+                "instruction": "0x002168EC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x002168F0",
+                "word": "0x0C0A5414"
+              },
+              {
+                "instruction": "0x002168F4",
+                "word": "0x03A0202D"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [],
+      "original_loads": [
+        {
+          "instruction": "0x2a53e8",
+          "word": "0x8c830010",
+          "operation": "lw          $3, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a53f0",
+          "word": "0x8c620008",
+          "operation": "lw         $2, 0x8($3)",
+          "width": 4
+        }
+      ],
+      "original_branches": [],
+      "original_calls": [],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A53E8",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": true,
+          "expected_size": 12,
+          "compiled_size": 12,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c",
+          "compiled_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c"
+        },
+        {
+          "name": "func_002A53E8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": true,
+          "expected_size": 12,
+          "compiled_size": 12,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c",
+          "compiled_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c"
+        },
+        {
+          "name": "func_002A53E8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": true,
+          "expected_size": 12,
+          "compiled_size": 12,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c",
+          "compiled_sha256": "c32f9d3910005d13ff96b628aa691dadd4327831731b9e52b581c109eac6825c"
+        }
+      ],
+      "provisional_exact_candidate": true,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": true
+      }
+    },
+    {
+      "name": "func_002A53F8",
+      "address": "0x002A53F8",
+      "file_offset": "0x001A63F8",
+      "size": 56,
+      "original_sha256": "f3fbc41e693449650037af400b75f750dddd81e7954efa6e6d70ed740d3a5784",
+      "source": "src/game/buffer_records.c",
+      "source_kind": "c",
+      "source_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+      "source_dependencies": [
+        {
+          "path": "src/game/buffer_records.c",
+          "bytes": 2426,
+          "raw_sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da",
+          "sha256": "1d0e4a93f671d18e791b272d7ce7ccc69a1944498606f57720b852df17b703da"
+        },
+        {
+          "path": "include/george/buffer_records.h",
+          "bytes": 1663,
+          "raw_sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658",
+          "sha256": "c693af0273f203a4b82434a4ea1fe043154037b389a5dcd6022aa07ab50d7658"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x00216444",
+          "word": "0x0C0A94FE",
+          "kind": "JAL",
+          "target": "0x002A53F8",
+          "delay_word": "0x8C640000",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "excluded_zero_padding": 0,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01B0",
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216404",
+            "size": 128,
+            "sha256": "12c578a8fdd7f29ed83d67a85975308640ec59e6f70f2590a7dfb5855b45b31a",
+            "words": [
+              {
+                "instruction": "0x00216404",
+                "word": "0x7FB40160"
+              },
+              {
+                "instruction": "0x00216408",
+                "word": "0x7FB50150"
+              },
+              {
+                "instruction": "0x0021640C",
+                "word": "0x7FB60140"
+              },
+              {
+                "instruction": "0x00216410",
+                "word": "0x7FB70130"
+              },
+              {
+                "instruction": "0x00216414",
+                "word": "0x7FBE0120"
+              },
+              {
+                "instruction": "0x00216418",
+                "word": "0xFFBF0110"
+              },
+              {
+                "instruction": "0x0021641C",
+                "word": "0x8E309408"
+              },
+              {
+                "instruction": "0x00216420",
+                "word": "0x8E040000"
+              },
+              {
+                "instruction": "0x00216424",
+                "word": "0x0C0A94FA"
+              },
+              {
+                "instruction": "0x00216428",
+                "word": "0x26100110"
+              },
+              {
+                "instruction": "0x0021642C",
+                "word": "0x0200202D"
+              },
+              {
+                "instruction": "0x00216430",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x00216434",
+                "word": "0x0040282D"
+              },
+              {
+                "instruction": "0x00216438",
+                "word": "0x8E239408"
+              },
+              {
+                "instruction": "0x0021643C",
+                "word": "0x3C050044"
+              },
+              {
+                "instruction": "0x00216440",
+                "word": "0x24A5A6E8"
+              },
+              {
+                "instruction": "0x00216444",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x00216448",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x0021644C",
+                "word": "0x8E229408"
+              },
+              {
+                "instruction": "0x00216450",
+                "word": "0x3C030044"
+              },
+              {
+                "instruction": "0x00216454",
+                "word": "0x37A40008"
+              },
+              {
+                "instruction": "0x00216458",
+                "word": "0x0000282D"
+              },
+              {
+                "instruction": "0x0021645C",
+                "word": "0xA0400214"
+              },
+              {
+                "instruction": "0x00216460",
+                "word": "0x2469A6F0"
+              },
+              {
+                "instruction": "0x00216464",
+                "word": "0x69220007"
+              },
+              {
+                "instruction": "0x00216468",
+                "word": "0x6D220000"
+              },
+              {
+                "instruction": "0x0021646C",
+                "word": "0xB3A20007"
+              },
+              {
+                "instruction": "0x00216470",
+                "word": "0xB7A20000"
+              },
+              {
+                "instruction": "0x00216474",
+                "word": "0x0C0E4DA8"
+              },
+              {
+                "instruction": "0x00216478",
+                "word": "0x24060008"
+              },
+              {
+                "instruction": "0x0021647C",
+                "word": "0x0220902D"
+              },
+              {
+                "instruction": "0x00216480",
+                "word": "0x27B10010"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        },
+        {
+          "instruction": "0x002166C8",
+          "word": "0x0C0A94FE",
+          "kind": "JAL",
+          "target": "0x002A53F8",
+          "delay_word": "0x8C640000",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "excluded_zero_padding": 0,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01B0",
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x00216688",
+            "size": 128,
+            "sha256": "590163f9e640c794ce59ef64888f72d0aa709c355feea962d79800c358721ce6",
+            "words": [
+              {
+                "instruction": "0x00216688",
+                "word": "0x8CA2000C"
+              },
+              {
+                "instruction": "0x0021668C",
+                "word": "0x58400012"
+              },
+              {
+                "instruction": "0x00216690",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x00216694",
+                "word": "0x8CA20210"
+              },
+              {
+                "instruction": "0x00216698",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x0021669C",
+                "word": "0x00A21021"
+              },
+              {
+                "instruction": "0x002166A0",
+                "word": "0xA0400010"
+              },
+              {
+                "instruction": "0x002166A4",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166A8",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002166AC",
+                "word": "0x24A50214"
+              },
+              {
+                "instruction": "0x002166B0",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166B4",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166B8",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002166BC",
+                "word": "0x24A50010"
+              },
+              {
+                "instruction": "0x002166C0",
+                "word": "0x8E439408"
+              },
+              {
+                "instruction": "0x002166C4",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002166C8",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x002166CC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x002166D0",
+                "word": "0x1000000C"
+              },
+              {
+                "instruction": "0x002166D4",
+                "word": "0x7BB001A0"
+              },
+              {
+                "instruction": "0x002166D8",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002166DC",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166E0",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166E4",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166E8",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002166EC",
+                "word": "0x24A50110"
+              },
+              {
+                "instruction": "0x002166F0",
+                "word": "0x8E439408"
+              },
+              {
+                "instruction": "0x002166F4",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002166F8",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x002166FC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x00216700",
+                "word": "0x7BB001A0"
+              },
+              {
+                "instruction": "0x00216704",
+                "word": "0x7BB10190"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        },
+        {
+          "instruction": "0x002166F8",
+          "word": "0x0C0A94FE",
+          "kind": "JAL",
+          "target": "0x002A53F8",
+          "delay_word": "0x8C640000",
+          "caller": {
+            "name": "func_002163E8",
+            "address": "0x002163E8",
+            "size": 840,
+            "instructions": 210,
+            "section": ".text",
+            "file_offset": "0x001173E8",
+            "original_sha256": "0c3c834621eb9cd5d15ce5d27a81e29ad3453ba499aebcb11ff2c69404ac6103",
+            "original_assembly": "build/functions/func_002163E8.s",
+            "original_assembly_raw_sha256": "b5076db8e2d72c385be95bee7f4d467761497f7a9648b05a7f8b7c28e0ad70bd",
+            "scanner_extent": 840,
+            "excluded_zero_padding": 0,
+            "terminal_instruction": "0x00216728",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD01B0",
+            "following_entry": "0x00216730",
+            "registered_sources": []
+          },
+          "bounded_context": {
+            "start": "0x002166B8",
+            "size": 120,
+            "sha256": "88ee5d481dbe22b298d755154b8a763ef144626f68855c22b13df3ae5a975d84",
+            "words": [
+              {
+                "instruction": "0x002166B8",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002166BC",
+                "word": "0x24A50010"
+              },
+              {
+                "instruction": "0x002166C0",
+                "word": "0x8E439408"
+              },
+              {
+                "instruction": "0x002166C4",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002166C8",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x002166CC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x002166D0",
+                "word": "0x1000000C"
+              },
+              {
+                "instruction": "0x002166D4",
+                "word": "0x7BB001A0"
+              },
+              {
+                "instruction": "0x002166D8",
+                "word": "0x0C0E4EDD"
+              },
+              {
+                "instruction": "0x002166DC",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166E0",
+                "word": "0x8E459408"
+              },
+              {
+                "instruction": "0x002166E4",
+                "word": "0x0220202D"
+              },
+              {
+                "instruction": "0x002166E8",
+                "word": "0x0C0E4DD6"
+              },
+              {
+                "instruction": "0x002166EC",
+                "word": "0x24A50110"
+              },
+              {
+                "instruction": "0x002166F0",
+                "word": "0x8E439408"
+              },
+              {
+                "instruction": "0x002166F4",
+                "word": "0x0220282D"
+              },
+              {
+                "instruction": "0x002166F8",
+                "word": "0x0C0A94FE"
+              },
+              {
+                "instruction": "0x002166FC",
+                "word": "0x8C640000"
+              },
+              {
+                "instruction": "0x00216700",
+                "word": "0x7BB001A0"
+              },
+              {
+                "instruction": "0x00216704",
+                "word": "0x7BB10190"
+              },
+              {
+                "instruction": "0x00216708",
+                "word": "0x7BB20180"
+              },
+              {
+                "instruction": "0x0021670C",
+                "word": "0x7BB30170"
+              },
+              {
+                "instruction": "0x00216710",
+                "word": "0x7BB40160"
+              },
+              {
+                "instruction": "0x00216714",
+                "word": "0x7BB50150"
+              },
+              {
+                "instruction": "0x00216718",
+                "word": "0x7BB60140"
+              },
+              {
+                "instruction": "0x0021671C",
+                "word": "0x7BB70130"
+              },
+              {
+                "instruction": "0x00216720",
+                "word": "0x7BBE0120"
+              },
+              {
+                "instruction": "0x00216724",
+                "word": "0xDFBF0110"
+              },
+              {
+                "instruction": "0x00216728",
+                "word": "0x03E00008"
+              },
+              {
+                "instruction": "0x0021672C",
+                "word": "0x27BD01B0"
+              }
+            ],
+            "manual_qualification": "Bounded argument/result context only; no full large-caller semantic review claim."
+          }
+        }
+      ],
+      "original_stores": [
+        {
+          "instruction": "0x2a53fc",
+          "word": "0xffbf0000",
+          "operation": "sd          $31, 0x0($29)",
+          "width": 8
+        },
+        {
+          "instruction": "0x2a5400",
+          "word": "0x7fb00010",
+          "operation": "sq          $16, 0x10($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a541c",
+          "word": "0xae020004",
+          "operation": "sw          $2, 0x4($16)",
+          "width": 4
+        }
+      ],
+      "original_loads": [
+        {
+          "instruction": "0x2a5404",
+          "word": "0x8c900010",
+          "operation": "lw          $16, 0x10($4)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5408",
+          "word": "0x8e060000",
+          "operation": "lw          $6, 0x0($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5410",
+          "word": "0x8e040008",
+          "operation": "lw         $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5418",
+          "word": "0x8e040008",
+          "operation": "lw         $4, 0x8($16)",
+          "width": 4
+        },
+        {
+          "instruction": "0x2a5420",
+          "word": "0x7bb00010",
+          "operation": "lq          $16, 0x10($29)",
+          "width": 16
+        },
+        {
+          "instruction": "0x2a5424",
+          "word": "0xdfbf0000",
+          "operation": "ld          $31, 0x0($29)",
+          "width": 8
+        }
+      ],
+      "original_branches": [],
+      "original_calls": [
+        {
+          "instruction": "0x2a540c",
+          "word": "0xc0e5004",
+          "operation": "jal         func_00394010",
+          "target": "0x394010",
+          "delay_word": "0x8e040008"
+        },
+        {
+          "instruction": "0x2a5414",
+          "word": "0xc0a5414",
+          "operation": "jal         func_00295050",
+          "target": "0x295050",
+          "delay_word": "0x8e040008"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "func_002A53F8",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/buffer_records/gcc323.o",
+          "identical": false,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 10,
+          "first_different_offsets": [
+            4,
+            8,
+            11,
+            36,
+            38,
+            39,
+            40,
+            42
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3fbc41e693449650037af400b75f750dddd81e7954efa6e6d70ed740d3a5784",
+          "compiled_sha256": "7f4fe9b01cc9d53bbe5dde24f3d3951d6c7feff853261b1d7d03ecac24f29c8f"
+        },
+        {
+          "name": "func_002A53F8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/buffer_records/gcc29.o",
+          "identical": false,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            4,
+            8,
+            11,
+            42,
+            43,
+            46
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3fbc41e693449650037af400b75f750dddd81e7954efa6e6d70ed740d3a5784",
+          "compiled_sha256": "de368d1f26d2d5ee1446af359b83b43c95f7e930398806d635052f023adb7415"
+        },
+        {
+          "name": "func_002A53F8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/buffer_records.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/buffer_records/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 56,
+          "compiled_size": 56,
+          "different_bytes": 6,
+          "first_different_offsets": [
+            4,
+            8,
+            42,
+            43,
+            46,
+            47
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f3fbc41e693449650037af400b75f750dddd81e7954efa6e6d70ed740d3a5784",
+          "compiled_sha256": "1bdfd476d571e63694c8a312e22190964bdbd2bb6a5c250f5bfb78ab9ee56526"
+        }
+      ],
+      "provisional_exact_candidate": false,
+      "target_abi": {
+        "gcc323": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\bin\\ee-gcc.exe",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc323_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "cc41edd5657d8dc7c67e32ea6dadf4a75840d62d7c7c46b164f938f3bf988267",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "d44860990d2a6598c7237df5da604f6e009495d002ce7b89a2f1947bc369a96e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "995f5935b4de1549bde6ec2cdebea140e42ea9bbe301fba95a7ef924ce22cbc6",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "ec95c27f270fff695d07350219e9684181a5fdd5e9db333e0ceac85716a4abac",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "8c784d35658b8d41acdf6a8111ed97dea31fcde2741fbde8a63c17d3061d4e69",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "13037fc72796b088d8cc70c6637a60d31e101409900fe5f29f1f13d550bd7c5e",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "ed15630720be4520aab8d66fbdd1e1e6933ff866ab3a5d20c90e13a1beaa95fa",
+              "remaining_relocations": []
+            }
+          ]
+        },
+        "gcc29": {
+          "command": [
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\bin\\ee-gcc.exe",
+            "-Btools/vendor/gcc29-local/lib/gcc-lib/mips64r5900-sky-elf/2.9-ee-991111/",
+            "-Btools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/bin/",
+            "-mgas",
+            "-mno-mips-tfile",
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\gcc29-local\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\tools\\vendor\\ps2dev-20181019\\MinGW\\msys\\1.0\\local\\ps2dev\\ee\\ee\\include",
+            "-I",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records",
+            "-c",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\abi.c",
+            "-o",
+            "C:\\Users\\kirby\\George Decomp\\build\\buffer_records\\gcc29_abi.o"
+          ],
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "source_sha256": "51f349969fed4323aa92e775162956020466119d96c207563c0406af195ae3e1",
+          "object_sha256": "e039763c408369eefbfb08609a1447ceb4e857144d1ba56c3abd3ca61c3c14de",
+          "words": [
+            4,
+            4,
+            4,
+            8,
+            12,
+            44,
+            4,
+            8,
+            12,
+            16,
+            32,
+            36,
+            40,
+            4
+          ],
+          "data_sha256": "f950608cc65a6b04ad8d4fb0dff406be9137b9058fda003cf192ffc7d6cfd8c7",
+          "calls": [
+            {
+              "symbol": "buffer_call0",
+              "target": "0x2a5230",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "e51746831ada7cf5c0feec9dbb7bf50e9919b323f9bece99eb095fcaaedfa00a",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call1",
+              "target": "0x2a5290",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "460052217c68f98d4b0debdbde2664c2d5c002852fd7d3092ce745f3084ec139",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call2",
+              "target": "0x2a5398",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 4,
+              "whole_size": 12,
+              "whole_sha256": "ac6367bc3a2a9119a88a8e3ce6bd5873ee475e6cb4ccd5592c3cb9a17583530c",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call3",
+              "target": "0x2a53d0",
+              "argument_gprs": [
+                2166572384,
+                2147483649
+              ],
+              "transfer_offset": 20,
+              "whole_size": 40,
+              "whole_sha256": "4ac2e6cc390792893fd7c1fdaa347684f2ced179bf47540cbd5e7b2f82b1b0dd",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call4",
+              "target": "0x2a53e8",
+              "argument_gprs": [
+                2166572384
+              ],
+              "transfer_offset": 12,
+              "whole_size": 32,
+              "whole_sha256": "a49c9ab4b4969ada11bef5181ae9e2752762ab45e4b5ed418b1429660f8a481f",
+              "remaining_relocations": []
+            },
+            {
+              "symbol": "buffer_call5",
+              "target": "0x2a53f8",
+              "argument_gprs": [
+                2166572384,
+                2184466433
+              ],
+              "transfer_offset": 12,
+              "whole_size": 20,
+              "whole_sha256": "9bc2cbb7d04de6c9ae15843c1134f0635334a4019d0485bfea64796ecdd6b94a",
+              "remaining_relocations": []
+            }
+          ]
+        }
+      },
+      "validation": {
+        "original_fixtures": 548,
+        "original_instructions": 66420,
+        "maximum": 254,
+        "selected_instructions": 89,
+        "native_checks": 285633,
+        "guards": 9,
+        "absent_pass": 5,
+        "absent_skip": 4,
+        "whole_selected_links": 18,
+        "whole_ABI_links": 12,
+        "actual_M_closures": 9,
+        "unique_dependency_files": 24,
+        "negative_cached_pointer_rejected": true
+      },
+      "implementation_limits": [
+        "Observed prefixes only: child12/parent44 bytes. No full engine class, allocation size, capacity root or vtable identity inferred; nine unrooted survey entries remain deferred.",
+        "Initialized low32 memory/register/delay model with disjoint owned arena and stack; upper EE registers, traps/FCR/timing, invalid pointers and original stack/address identity excluded.",
+        "Actual strncpy executes alignment gate and unsigned-byte/padding path only. Copy counts0..16, destination/source readable domains, valid resulting NUL string and nonoverlap apply; aligned8/16-byte bulk overreads not modeled.",
+        "Supporting unchanged Newlib generic C uses genuine PREFER_SIZE_OVER_SPEED only in native; no original strncpy C/body or hardware implementation award.",
+        "Length executes complete original12 and exact unchanged project C lexical function. Unrelated CRC routines excluded because genuine whole-TU PE linking failed; no dummy CRC globals.",
+        "Known pointer-cell translation only, scalars unchanged. Native arena65536 alignment makes low-one/two-byte pointer alias writes exact; higher byte edits outside domains. Complete pointer-store translation is representation-only, not callback/helper algorithm substitution.",
+        "Selected void return conventions are caller-compatible; incidental original v0 after copy/deletion/navigation uncredited. Only observed getter pointer results compared.",
+        "Canonical published bindings verified per entry. No private selected-link aliases, mapping, instruction patch, cropping or padding to award matches. Two complete exact functions totaling52B passed independent parent and peer review; canonical-only relink and global verification follow registration."
+      ],
+      "evidence": "Complete original body/terminal delay/excluded padding and genuine encoded caller entry proved; high-level C preserves signed gates, wrapped byte offsets, captured child/data and fresh data reload after copy. No public engine source identity inferred. Eighteen actual complete natural links use published bindings; two complete exact functions totaling52B passed independent parent and peer review.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "complete_comparison_confirmed_in_all_three_recipes": false
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "recover_code",
+    "frozen_raw_inputs": 266,
+    "native_checks": 285633,
+    "complete_exact_functions": 2,
+    "complete_exact_bytes": 52
+  }
+}
