@@ -1386,6 +1386,21 @@
     "strchr": {
       "address": "0x393888",
       "evidence": "Actual selectedoriginal JAL3983D0 binds complete manuallyread numericcallee; no extra recovery award."
+    },
+    "_realloc_r": {
+      "address": "0x0039C0A0",
+      "confidence": "corroborated",
+      "evidence": "The existing independently reviewed complete1404-byte unchanged newlib _realloc_r source entry is at39C0A0. The approved original nonreentrant realloc wrapper makes actual JAL3971D8, encoded0C0E7028, to that same entry. Numeric binding only; no duplicate source or callee byte award."
+    },
+    "memalign": {
+      "address": "0x00396348",
+      "confidence": "corroborated_behavioral_adaptation",
+      "evidence": "Complete96B original wrapper captures two32-bit inputs before lock, separately reloads _impure_ptr for lock/core/unlock, forwards core arguments inGPR4..6, captures pointer result before unlock and returns it. Explicit licensed modification of the single-call pinned newlib baseline, not an unchanged-source or retail-origin claim. All four genuine whole links resolve with published bindings only, none exact. Both genuine target8-word ABIs and eight actual argument-lane callers pass;15 actual dependencies per source/profile. Original-traced960 fixtures/23040 instructions match24960 warning-free separate-TU native checks;8 decoder/original guards pass and cached-global negative control fails. Authored hooks do not implement cores/OS or assert real lock mutation. Independent parent and peer reviews passed; registered with canonical bindings and no exact-code claim."
+    },
+    "realloc": {
+      "address": "0x003971A8",
+      "confidence": "corroborated_behavioral_adaptation",
+      "evidence": "Complete96B original wrapper captures two32-bit inputs before lock, separately reloads _impure_ptr for lock/core/unlock, forwards core arguments inGPR4..6, captures pointer result before unlock and returns it. Explicit licensed modification of the single-call pinned newlib baseline, not an unchanged-source or retail-origin claim. All four genuine whole links resolve with published bindings only, none exact. Both genuine target8-word ABIs and eight actual argument-lane callers pass;15 actual dependencies per source/profile. Original-traced960 fixtures/23040 instructions match24960 warning-free separate-TU native checks;8 decoder/original guards pass and cached-global negative control fails. Authored hooks do not implement cores/OS or assert real lock mutation. Independent parent and peer reviews passed; registered with canonical bindings and no exact-code claim."
     }
   }
 }

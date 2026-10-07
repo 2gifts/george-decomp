@@ -1704,3 +1704,13 @@ Independent parent/peer full selected/source review, private complete-link repro
 Independent author/parent/peer review, isolated whole-function and mixed-ABI reproduction, and canonical-only comparisons passed. Canonical verification reports329 exact C/C++ functions /16,604 bytes, with1,389 recovered functions covering347,444 original bytes. The reviewed tooling suite passes437 tests (one platform-specific symlink skip). No supporting helper, retained original data, alignment padding or assembly contributes new C/C++ credit.
 
 The checkpoint44 hybrid build completed successfully and reproduced retail ELF SHA-256 `01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8` byte for byte. Its reused assembly remains excluded from source progress.
+
+## Road queries, actor routes and allocator wrappers
+
+[Road queries](road_queries.md), [actor route consumers](actor_route.md) and [route setup](route_setup.md) recover eight complete game functions /3,536 original bytes. They reuse published provider, bounds, registry, vector and goal helper source, unchanged licensed Sun/newlib `ceilf` and GNU `fp_bit`, and the existing EE square-root primitive. Native goal helper extraction preserves complete original published function and macro spans, with raw hashes and actual dependencies; it does not claim that entire goal translation units are compiled. Controlled supporting getter/setup bridges remain limited to the actor packet, while setup receives a separate source award.
+
+[Allocator wrappers](allocator_wrappers.md) adapt pinned newlib1.8.1 `malign.c` and `realloc.c`: two complete96-byte bodies. The original Cygnus notice, dated modifications and baseline hashes remain explicit. This software was developed at Cygnus Solutions. Their three fresh reentrancy-pointer reads, captured result and observed lock/unlock calls differ from the upstream single-call baseline; unchanged-source identity and original retail source origin are not claimed.
+
+Independent complete parent and peer review, frozen private replay, actual compiler ABIs and26 complete canonical-only links passed. All ten functions remain reconstructed. Canonical source totals are1,399 functions /351,172 original bytes, with329 exact functions /16,604 bytes unchanged. The reviewed tooling suite passes472 tests (one platform-specific symlink skip). Original helpers, data, padding and assembly receive no duplicate C/C++ award.
+
+The checkpoint45 hybrid build passed and reproduced the supplied retail ELF SHA-256 `01c035b7fb0d6a91ae0e5afa75203c3ece967196fadf651d94ef9cc1586fa4e8` byte for byte. This retains unresolved original code/data and is not a complete source build.

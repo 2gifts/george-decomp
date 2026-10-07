@@ -96404,6 +96404,1514 @@
         "Source-free historicalcaller ranges448/1360B include4Bzero padding each; actualcaller bodies444/1356B are independentlyhashed and no padding is counted as a wrapperbody."
       ],
       "evidence": "Entire unchanged source-equivalent wrapper, concreteencodedentry, fullsource/ABI/dependency proof. GCC323 complete linked body is exact withzero unresolved; candidateremainsreconstructed until parent/peer/canonical approval. No callee award. Complete parent and independent peer all16 selected/167 supporting originals, full111-instruction indexcaller and bounded18-instruction bcopy argument window, licensed raw sources/interfaces/defaultclause9, both7word target ABIs and all4 complete natural links independently reproduced. GCC323 full64 distinct bytes exact; current canonical-only verification follows separately. Historical provisional candidate records preserved."
+    },
+    {
+      "name": "memalign",
+      "compiled_symbol": "memalign",
+      "address": "0x00396348",
+      "file_offset": "0x00297348",
+      "size": 96,
+      "source": "src/runtime/stdlib/malign.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "7d1ade55d67340c764446aa2b684a0144fe0b11700dfeaba8293ef3b13ebc264",
+      "source_sha256": "426aa19be2e9217270d24d0023fffe9b98f20ed7c4fd549e48a624c93e0bb39c",
+      "modified_upstream_source": true,
+      "unchanged_upstream_source": false,
+      "upstream_baseline_sha256": "2ad0ef4429acb515e78568e499d960cf6d4750f23dc8c49963cac136dd69a2f0",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/stdlib/malign.c",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/malign.c",
+      "upstream_license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/malign.c",
+          "sha256": "426aa19be2e9217270d24d0023fffe9b98f20ed7c4fd549e48a624c93e0bb39c",
+          "size": 1548,
+          "modified": true,
+          "unchanged_upstream_source": false,
+          "upstream_baseline_sha256": "2ad0ef4429acb515e78568e499d960cf6d4750f23dc8c49963cac136dd69a2f0",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/malign.c",
+          "upstream_license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "size": 1998,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "size": 3484,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "size": 3613,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "size": 6749,
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/time.h",
+          "sha256": "fd227bbf35f2c3005ebd59c8b8872b4f9fbdcad6403c335964e579da45cb3adb",
+          "size": 5289,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "size": 269,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "size": 12695,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "size": 9326,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "size": 230,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "size": 2812,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "size": 475,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "size": 6276,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "size": 405,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/malloc.h",
+          "sha256": "16ff294095149646de3acb3121d75c7b0deca30305e4f342f06e0df50ae4fed3",
+          "size": 3027,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-Isrc/runtime/stdlib/compat"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x002E24A0",
+          "word": "0x0C0E58D2",
+          "delay_word": "0x0040282D",
+          "caller": {
+            "name": "func_002E2490",
+            "address": "0x002E2490",
+            "size": 36,
+            "file_offset": "0x001E3490",
+            "original_sha256": "60f1046a9574b8088213c39987f3858f1b8628103171565cf35251d0820dadf7",
+            "original_assembly": "build/functions/func_002E2490.s",
+            "original_assembly_sha256": "d981b8d6537b8bdf2b8db5a81e84721ef8123471140d78b6b2a0e1d21a816e04",
+            "terminal_address": "0x002E24AC",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0010",
+            "excluded_zero_alignment_bytes": 4,
+            "following_entry": "0x002E24B8"
+          }
+        },
+        {
+          "instruction": "0x003926A0",
+          "word": "0x0C0E58D2",
+          "delay_word": "0x24040040",
+          "caller": {
+            "name": "func_003925D0",
+            "address": "0x003925D0",
+            "size": 1920,
+            "file_offset": "0x002935D0",
+            "original_sha256": "ffb125f805810c6a79708616e157cf7d50d790fcab58fed78fc346106cffee68",
+            "original_assembly": "build/functions/func_003925D0.s",
+            "original_assembly_sha256": "ef975c3f27b6674206cb7523c071c77eea62f3828338d545443ec37c45d4832e",
+            "terminal_address": "0x00392D48",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0050",
+            "excluded_zero_alignment_bytes": 0,
+            "following_entry": "0x00392D50"
+          }
+        },
+        {
+          "instruction": "0x00392794",
+          "word": "0x0C0E58D2",
+          "delay_word": "0x24040040",
+          "caller": {
+            "name": "func_003925D0",
+            "address": "0x003925D0",
+            "size": 1920,
+            "file_offset": "0x002935D0",
+            "original_sha256": "ffb125f805810c6a79708616e157cf7d50d790fcab58fed78fc346106cffee68",
+            "original_assembly": "build/functions/func_003925D0.s",
+            "original_assembly_sha256": "ef975c3f27b6674206cb7523c071c77eea62f3828338d545443ec37c45d4832e",
+            "terminal_address": "0x00392D48",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0050",
+            "excluded_zero_alignment_bytes": 0,
+            "following_entry": "0x00392D50"
+          }
+        }
+      ],
+      "source_adaptation": {
+        "source": "src/runtime/stdlib/malign.c",
+        "source_sha256": "426aa19be2e9217270d24d0023fffe9b98f20ed7c4fd549e48a624c93e0bb39c",
+        "baseline_path": "ee/newlib/libc/stdlib/malign.c",
+        "baseline_sha256": "2ad0ef4429acb515e78568e499d960cf6d4750f23dc8c49963cac136dd69a2f0",
+        "modified": true,
+        "unchanged_source_identity": false,
+        "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+        "license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file.",
+        "acknowledgement": "This software was developed at Cygnus Solutions.",
+        "patch": "--- ee/newlib/libc/stdlib/malign.c\n+++ src/runtime/stdlib/malign.c\n@@ -1,4 +1,26 @@\n /* malign.c -- a wrapper for memalign_r.  */\n+\n+/*\n+ * Copyright (c) 1994, 1997 Cygnus Solutions.\n+ * All rights reserved.\n+ *\n+ * Redistribution and use in source and binary forms are permitted\n+ * provided that the above copyright notice and this paragraph are\n+ * duplicated in all such forms and that any documentation,\n+ * advertising materials, and other materials related to such\n+ * distribution and use acknowledge that the software was developed\n+ * at Cygnus Solutions.  Cygnus Solutions may not be used to\n+ * endorse or promote products derived from this software without\n+ * specific prior written permission.\n+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR\n+ * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED\n+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.\n+ *\n+ * Modified 2026-10-06 for george-decomp: add the observed retail lock and\n+ * unlock calls. Keep three separately evaluated _REENT expressions and\n+ * retain the allocation result across unlock. This is an adaptation of\n+ * the licensed newlib baseline, not a claim of unchanged retail source.\n+ */\n \n #include <_ansi.h>\n #include <reent.h>\n@@ -7,12 +29,19 @@\n \n #ifndef _REENT_ONLY\n \n+extern void __malloc_lock _PARAMS ((struct _reent *));\n+extern void __malloc_unlock _PARAMS ((struct _reent *));\n+\n _PTR\n _DEFUN (memalign, (align, nbytes),\n \tsize_t align _AND\n \tsize_t nbytes)\n {\n-  return _memalign_r (_REENT, align, nbytes);\n+  _PTR result;\n+  __malloc_lock (_REENT);\n+  result = _memalign_r (_REENT, align, nbytes);\n+  __malloc_unlock (_REENT);\n+  return result;\n }\n \n #endif\n",
+        "change": "Add two observed lock/unlock calls, retain core result across unlock, three separately fresh _REENT expressions; explicit prototypes and notice/date only."
+      },
+      "original_calls": [
+        {
+          "address": "0x396368",
+          "word": "0xc0e59ba",
+          "operation": "jal         func_003966E8",
+          "target": "0x3966e8",
+          "delay_address": "0x39636c",
+          "delay_operation": "daddu      $17, $5, $0"
+        },
+        {
+          "address": "0x396378",
+          "word": "0xc0e7188",
+          "operation": "jal         func_0039C620",
+          "target": "0x39c620",
+          "delay_address": "0x39637c",
+          "delay_operation": "daddu      $6, $17, $0"
+        },
+        {
+          "address": "0x396384",
+          "word": "0xc0e59d2",
+          "operation": "jal         func_00396748",
+          "target": "0x396748",
+          "delay_address": "0x396388",
+          "delay_operation": "daddu      $17, $2, $0"
+        }
+      ],
+      "original_global_loads": [
+        {
+          "address": "0x396360",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        },
+        {
+          "address": "0x396370",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        },
+        {
+          "address": "0x396380",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        }
+      ],
+      "original_stores": [
+        {
+          "address": "0x39634c",
+          "word": "0x7fb00030",
+          "operation": "sq          $16, 0x30($29)"
+        },
+        {
+          "address": "0x396350",
+          "word": "0x7fb20010",
+          "operation": "sq          $18, 0x10($29)"
+        },
+        {
+          "address": "0x39635c",
+          "word": "0x7fb10020",
+          "operation": "sq          $17, 0x20($29)"
+        },
+        {
+          "address": "0x396364",
+          "word": "0xffbf0000",
+          "operation": "sd          $31, 0x0($29)"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "memalign",
+          "address": "0x00396348",
+          "source": "src/runtime/stdlib/malign.c",
+          "profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/stdlib/compat"
+          ],
+          "linked_elf": "build/reuse/allocator_wrappers/gcc323_memalign_linked.elf",
+          "resolved_bindings": {
+            "_impure_ptr": 4216468,
+            "__malloc_lock": 3761896,
+            "_memalign_r": 3786272,
+            "__malloc_unlock": 3761992
+          },
+          "input_relocations": [
+            {
+              "offset": 8,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 32,
+              "type": 4,
+              "symbol": "__malloc_lock",
+              "symbol_index": 11
+            },
+            {
+              "offset": 44,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "_memalign_r",
+              "symbol_index": 12
+            },
+            {
+              "offset": 56,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 60,
+              "type": 4,
+              "symbol": "__malloc_unlock",
+              "symbol_index": 13
+            }
+          ],
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 44,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7d1ade55d67340c764446aa2b684a0144fe0b11700dfeaba8293ef3b13ebc264",
+          "compiled_sha256": "b21526559e7b82eb880ac2108b81a113842a604bc303c13533db400c1330d227"
+        },
+        {
+          "name": "memalign",
+          "address": "0x00396348",
+          "source": "src/runtime/stdlib/malign.c",
+          "profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/stdlib/compat"
+          ],
+          "linked_elf": "build/reuse/allocator_wrappers/gcc29_memalign_linked.elf",
+          "resolved_bindings": {
+            "_impure_ptr": 4216468,
+            "__malloc_lock": 3761896,
+            "_memalign_r": 3786272,
+            "__malloc_unlock": 3761992
+          },
+          "input_relocations": [
+            {
+              "offset": 16,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 28,
+              "type": 4,
+              "symbol": "__malloc_lock",
+              "symbol_index": 11
+            },
+            {
+              "offset": 36,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 40,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "_memalign_r",
+              "symbol_index": 12
+            },
+            {
+              "offset": 56,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 60,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 64,
+              "type": 4,
+              "symbol": "__malloc_unlock",
+              "symbol_index": 13
+            }
+          ],
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 61,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "7d1ade55d67340c764446aa2b684a0144fe0b11700dfeaba8293ef3b13ebc264",
+          "compiled_sha256": "b1fc423b49ed6372d98f7240bb95317f021b1cf8159ccffb7841d83d19702475"
+        }
+      ],
+      "target_abi": {
+        "gcc323": {
+          "words": [
+            4,
+            8,
+            4,
+            4,
+            4,
+            748,
+            0,
+            484
+          ],
+          "meanings": [
+            "int",
+            "long",
+            "pointer",
+            "size_t",
+            "reent pointer",
+            "reent size",
+            "errno offset",
+            "FILE array offset"
+          ],
+          "data_sha256": "8e17bd8c1e5f1a7458a04362d109fbd020b7a12a282dec2b09fe35ca8a16dc2c",
+          "caller_functions": [
+            {
+              "name": "allocator_memalign_abi_call",
+              "size": 36,
+              "sha256": "f5a7785bbbe78922e19e14000eb1aad4f17e09854cd27ffb79c4d4c01ac2a5e2",
+              "instructions": [
+                "0x3c048000",
+                "0x27bdfff0",
+                "0x2405fff1",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34840020",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "memalign"
+            },
+            {
+              "name": "allocator_realloc_abi_call",
+              "size": 40,
+              "sha256": "edb3bd9d71ffad9a4ed9237a53c12748fa03388fd4a41dc81698cdd37e878103",
+              "instructions": [
+                "0x3c048123",
+                "0x3c058000",
+                "0x27bdfff0",
+                "0x34844567",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34a50005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "realloc"
+            },
+            {
+              "name": "allocator_memalign_core_abi_call",
+              "size": 40,
+              "sha256": "96aec9a1763f184ed1fb39d5bf80694039d2a2f881e62ce919cb45602be082d5",
+              "instructions": [
+                "0x3c058000",
+                "0x27bdfff0",
+                "0x3c040002",
+                "0x34a50020",
+                "0xffbf0000",
+                "0xc000000",
+                "0x2406fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131072,
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "_memalign_r"
+            },
+            {
+              "name": "allocator_realloc_core_abi_call",
+              "size": 48,
+              "sha256": "84fce5d8bbe042a97bb33a3809f4094f29b7e7950fb094c6b8735400cd419eab",
+              "instructions": [
+                "0x3c040002",
+                "0x3c058123",
+                "0x3c068000",
+                "0x27bdfff0",
+                "0x34840004",
+                "0x34a54567",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34c60005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131076,
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "_realloc_r"
+            }
+          ],
+          "limit": "Actual target compile-time layouts; emitted two-GPR wrapper and three-GPR core callers. Low32-bit lane proof only, not hardware execution."
+        },
+        "gcc29": {
+          "words": [
+            4,
+            8,
+            4,
+            4,
+            4,
+            748,
+            0,
+            484
+          ],
+          "meanings": [
+            "int",
+            "long",
+            "pointer",
+            "size_t",
+            "reent pointer",
+            "reent size",
+            "errno offset",
+            "FILE array offset"
+          ],
+          "data_sha256": "8e17bd8c1e5f1a7458a04362d109fbd020b7a12a282dec2b09fe35ca8a16dc2c",
+          "caller_functions": [
+            {
+              "name": "allocator_memalign_abi_call",
+              "size": 40,
+              "sha256": "acdaa7c25c10c9d92561ee0d4dd12f849a7019aff6f9318f68f6fed4abce5d88",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c048000",
+                "0x3c05ffff",
+                "0xffbf0000",
+                "0x34840020",
+                "0xc000000",
+                "0x34a5fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "memalign"
+            },
+            {
+              "name": "allocator_realloc_abi_call",
+              "size": 40,
+              "sha256": "d1288f7889544901bb27a4f76ffce26399a0ce5f7cc5dc8a69a1c558f13caf95",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c048123",
+                "0x3c058000",
+                "0xffbf0000",
+                "0x34844567",
+                "0xc000000",
+                "0x34a50005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "realloc"
+            },
+            {
+              "name": "allocator_memalign_core_abi_call",
+              "size": 44,
+              "sha256": "3b9716075ef468d9a847b00e2a8c8f14acdb6c38546254e5a58ac5fe551719e3",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c058000",
+                "0x3c06ffff",
+                "0xffbf0000",
+                "0x3c040002",
+                "0x34a50020",
+                "0xc000000",
+                "0x34c6fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131072,
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "_memalign_r"
+            },
+            {
+              "name": "allocator_realloc_core_abi_call",
+              "size": 48,
+              "sha256": "29aad0e1a1d4c63aa4ad59c9e10cf9765e67717b026ff97542b8c497d5e8a6a3",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c040002",
+                "0x3c058123",
+                "0x3c068000",
+                "0xffbf0000",
+                "0x34840004",
+                "0x34a54567",
+                "0xc000000",
+                "0x34c60005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131076,
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "_realloc_r"
+            }
+          ],
+          "limit": "Actual target compile-time layouts; emitted two-GPR wrapper and three-GPR core callers. Low32-bit lane proof only, not hardware execution."
+        }
+      },
+      "implementation_limits": [
+        "Both original cores and custom lock/OS bodies are binding-only for this batch; no new core/OS data or source award.",
+        "Two complete96B functions remain reconstructed. No flags grid, masking, cropping, padding, mapping or compiler/backend changes.",
+        "Authored callbacks test caller order, captured arguments/result and fresh global reloads, not allocation/thread/semaphore behavior.",
+        "Target size_t/pointer32 and long64, valid observed interfaces. No general heap safety, null/overflow/alignment policy, malformed-domain or full hardware claim.",
+        "Native opaque pointers are numeric observations, never dereferenced. Synthetic observer replacement of _impure_ptr stresses reloads beyond the real locks, which ignore incoming reent.",
+        "Large3925D0 only bounded two argument/result windows manually reviewed, whole raw/assembly/hash geometry independently checked. No large-caller full semantics claim."
+      ],
+      "evidence": "Complete96B original wrapper captures two32-bit inputs before lock, separately reloads _impure_ptr for lock/core/unlock, forwards core arguments inGPR4..6, captures pointer result before unlock and returns it. Explicit licensed modification of the single-call pinned newlib baseline, not an unchanged-source or retail-origin claim. All four genuine whole links resolve with published bindings only, none exact. Both genuine target8-word ABIs and eight actual argument-lane callers pass;15 actual dependencies per source/profile. Original-traced960 fixtures/23040 instructions match24960 warning-free separate-TU native checks;8 decoder/original guards pass and cached-global negative control fails. Authored hooks do not implement cores/OS or assert real lock mutation. Independent parent/peer final review and canonical registration pending.",
+      "validation": {
+        "original_fixtures": 960,
+        "original_instructions": 23040,
+        "original_instruction_maximum": 24,
+        "native_checks": 24960,
+        "decoder_and_original_guards": 8,
+        "exact_candidates": 0,
+        "cached_reent_negative_control": "rejected at fixture3",
+        "modeled_core_lock_behavior": "Controlled observers only, no original implementation claim."
+      },
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "claimed_exact_match": false
+      }
+    },
+    {
+      "name": "realloc",
+      "compiled_symbol": "realloc",
+      "address": "0x003971A8",
+      "file_offset": "0x002981A8",
+      "size": 96,
+      "source": "src/runtime/stdlib/realloc.c",
+      "source_kind": "c",
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "07977d68787ca3fbf1a8978f61711c29c06b50d90a52d19fcdce3004d59f0f3a",
+      "source_sha256": "56f59280c767fc1155f3e4c57fdfbd40dae69144e19b5b11f4a4aa05b7bd88dd",
+      "modified_upstream_source": true,
+      "unchanged_upstream_source": false,
+      "upstream_baseline_sha256": "e20cca24a490cba81ef9120d92b4679288f0a90599c72ba44b8d8bd41cee05ce",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/stdlib/realloc.c",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/newlib/libc/stdlib/realloc.c",
+      "upstream_license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/stdlib/realloc.c",
+          "sha256": "56f59280c767fc1155f3e4c57fdfbd40dae69144e19b5b11f4a4aa05b7bd88dd",
+          "size": 1535,
+          "modified": true,
+          "unchanged_upstream_source": false,
+          "upstream_baseline_sha256": "e20cca24a490cba81ef9120d92b4679288f0a90599c72ba44b8d8bd41cee05ce",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/stdlib/realloc.c",
+          "upstream_license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946",
+          "size": 1998,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d",
+          "size": 3484,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/reent.h",
+          "sha256": "dfde5846b345c7979e66eaf1070cca469a9ecb5600dfa6aa752d7a03d9c18ac0",
+          "size": 3613,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "src/runtime/stdlib/compat/sys/reent.h",
+          "sha256": "2f29999d7f38ef2c601ed48643d4c06abd733c8e8d3a59b7a4f84adb0e722595",
+          "size": 6749,
+          "modified": false,
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "upstream_path": "ee/newlib/libc/include/sys/reent.h"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/time.h",
+          "sha256": "fd227bbf35f2c3005ebd59c8b8872b4f9fbdcad6403c335964e579da45cb3adb",
+          "size": 5289,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/machine/time.h",
+          "sha256": "35a025bd950abdb4ef430c6c54c90a3279c55e7c07027d457194d6676180b4db",
+          "size": 269,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "size": 12695,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/types.h",
+          "sha256": "ed74234f42e67baaf6cc5e5ed0f6e5c86df718b9ca1837508c93a43f4ed42b54",
+          "size": 9326,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/machine/types.h",
+          "sha256": "f37932e69653c9689a84bdfad058b7de3ebf301a684ffceb052951c88383fc4a",
+          "size": 230,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/features.h",
+          "sha256": "2d68fa452e5df46a5185832651c5d016480028a5112f1ba8f64cb9333ec9136f",
+          "size": 2812,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca",
+          "size": 475,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0",
+          "size": 6276,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0",
+          "size": 405,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/malloc.h",
+          "sha256": "16ff294095149646de3acb3121d75c7b0deca30305e4f342f06e0df50ae4fed3",
+          "size": 3027,
+          "modified": false,
+          "upstream_revision": "Public PS2DEV20181019 newlib1.10/GNU compiler headers, pinned archive",
+          "upstream_archive_sha256": "18b3b4c1187461982429a2baff95dc3fe326faf20faced33d57cf31c153364b6"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-Isrc/runtime/stdlib/compat"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x002D2610",
+          "word": "0x0C0E5C6A",
+          "delay_word": "0x00000000",
+          "caller": {
+            "name": "func_002D2608",
+            "address": "0x002D2608",
+            "size": 28,
+            "file_offset": "0x001D3608",
+            "original_sha256": "db6ef94fa9dcd3f9c0735341e374bc2e868bd73db4f610c2307c2d3b9a34b9e7",
+            "original_assembly": "build/functions/func_002D2608.s",
+            "original_assembly_sha256": "d108e4d34756dfa7dc5d0c302d0a5648bb8f33a16edf27be94c05ed295318316",
+            "terminal_address": "0x002D261C",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0010",
+            "excluded_zero_alignment_bytes": 4,
+            "following_entry": "0x002D2628"
+          }
+        }
+      ],
+      "source_adaptation": {
+        "source": "src/runtime/stdlib/realloc.c",
+        "source_sha256": "56f59280c767fc1155f3e4c57fdfbd40dae69144e19b5b11f4a4aa05b7bd88dd",
+        "baseline_path": "ee/newlib/libc/stdlib/realloc.c",
+        "baseline_sha256": "e20cca24a490cba81ef9120d92b4679288f0a90599c72ba44b8d8bd41cee05ce",
+        "modified": true,
+        "unchanged_source_identity": false,
+        "revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+        "license": "Exact newlib1.8.1 default clause9 Cygnus1994/1997; full notice embedded in each modified file.",
+        "acknowledgement": "This software was developed at Cygnus Solutions.",
+        "patch": "--- ee/newlib/libc/stdlib/realloc.c\n+++ src/runtime/stdlib/realloc.c\n@@ -1,4 +1,26 @@\n /* realloc.c -- a wrapper for realloc_r.  */\n+\n+/*\n+ * Copyright (c) 1994, 1997 Cygnus Solutions.\n+ * All rights reserved.\n+ *\n+ * Redistribution and use in source and binary forms are permitted\n+ * provided that the above copyright notice and this paragraph are\n+ * duplicated in all such forms and that any documentation,\n+ * advertising materials, and other materials related to such\n+ * distribution and use acknowledge that the software was developed\n+ * at Cygnus Solutions.  Cygnus Solutions may not be used to\n+ * endorse or promote products derived from this software without\n+ * specific prior written permission.\n+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR\n+ * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED\n+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.\n+ *\n+ * Modified 2026-10-06 for george-decomp: add the observed retail lock and\n+ * unlock calls. Keep three separately evaluated _REENT expressions and\n+ * retain the allocation result across unlock. This is an adaptation of\n+ * the licensed newlib baseline, not a claim of unchanged retail source.\n+ */\n \n #include <_ansi.h>\n #include <reent.h>\n@@ -7,12 +29,19 @@\n \n #ifndef _REENT_ONLY\n \n+extern void __malloc_lock _PARAMS ((struct _reent *));\n+extern void __malloc_unlock _PARAMS ((struct _reent *));\n+\n _PTR\n _DEFUN (realloc, (ap, nbytes),\n \t_PTR ap _AND\n \tsize_t nbytes)\n {\n-  return _realloc_r (_REENT, ap, nbytes);\n+  _PTR result;\n+  __malloc_lock (_REENT);\n+  result = _realloc_r (_REENT, ap, nbytes);\n+  __malloc_unlock (_REENT);\n+  return result;\n }\n \n #endif\n",
+        "change": "Add two observed lock/unlock calls, retain core result across unlock, three separately fresh _REENT expressions; explicit prototypes and notice/date only."
+      },
+      "original_calls": [
+        {
+          "address": "0x3971c8",
+          "word": "0xc0e59ba",
+          "operation": "jal         func_003966E8",
+          "target": "0x3966e8",
+          "delay_address": "0x3971cc",
+          "delay_operation": "daddu      $17, $5, $0"
+        },
+        {
+          "address": "0x3971d8",
+          "word": "0xc0e7028",
+          "operation": "jal         func_0039C0A0",
+          "target": "0x39c0a0",
+          "delay_address": "0x3971dc",
+          "delay_operation": "daddu      $6, $17, $0"
+        },
+        {
+          "address": "0x3971e4",
+          "word": "0xc0e59d2",
+          "operation": "jal         func_00396748",
+          "target": "0x396748",
+          "delay_address": "0x3971e8",
+          "delay_operation": "daddu      $17, $2, $0"
+        }
+      ],
+      "original_global_loads": [
+        {
+          "address": "0x3971c0",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        },
+        {
+          "address": "0x3971d0",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        },
+        {
+          "address": "0x3971e0",
+          "word": "0x8e045694",
+          "operation": "lw          $4, %lo(D_00405694)($16)"
+        }
+      ],
+      "original_stores": [
+        {
+          "address": "0x3971ac",
+          "word": "0x7fb00030",
+          "operation": "sq          $16, 0x30($29)"
+        },
+        {
+          "address": "0x3971b0",
+          "word": "0x7fb20010",
+          "operation": "sq          $18, 0x10($29)"
+        },
+        {
+          "address": "0x3971bc",
+          "word": "0x7fb10020",
+          "operation": "sq          $17, 0x20($29)"
+        },
+        {
+          "address": "0x3971c4",
+          "word": "0xffbf0000",
+          "operation": "sd          $31, 0x0($29)"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "name": "realloc",
+          "address": "0x003971A8",
+          "source": "src/runtime/stdlib/realloc.c",
+          "profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/stdlib/compat"
+          ],
+          "linked_elf": "build/reuse/allocator_wrappers/gcc323_realloc_linked.elf",
+          "resolved_bindings": {
+            "_impure_ptr": 4216468,
+            "__malloc_lock": 3761896,
+            "_realloc_r": 3784864,
+            "__malloc_unlock": 3761992
+          },
+          "input_relocations": [
+            {
+              "offset": 8,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 32,
+              "type": 4,
+              "symbol": "__malloc_lock",
+              "symbol_index": 11
+            },
+            {
+              "offset": 44,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "_realloc_r",
+              "symbol_index": 12
+            },
+            {
+              "offset": 56,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 60,
+              "type": 4,
+              "symbol": "__malloc_unlock",
+              "symbol_index": 13
+            }
+          ],
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 44,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "07977d68787ca3fbf1a8978f61711c29c06b50d90a52d19fcdce3004d59f0f3a",
+          "compiled_sha256": "0331ff785a409b997ffc24476ca98b04e07900ee3dea8583312e64ffad545ee2"
+        },
+        {
+          "name": "realloc",
+          "address": "0x003971A8",
+          "source": "src/runtime/stdlib/realloc.c",
+          "profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-Isrc/runtime/stdlib/compat"
+          ],
+          "linked_elf": "build/reuse/allocator_wrappers/gcc29_realloc_linked.elf",
+          "resolved_bindings": {
+            "_impure_ptr": 4216468,
+            "__malloc_lock": 3761896,
+            "_realloc_r": 3784864,
+            "__malloc_unlock": 3761992
+          },
+          "input_relocations": [
+            {
+              "offset": 16,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 28,
+              "type": 4,
+              "symbol": "__malloc_lock",
+              "symbol_index": 11
+            },
+            {
+              "offset": 36,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 40,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "_realloc_r",
+              "symbol_index": 12
+            },
+            {
+              "offset": 56,
+              "type": 5,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 60,
+              "type": 6,
+              "symbol": "_impure_ptr",
+              "symbol_index": 10
+            },
+            {
+              "offset": 64,
+              "type": 4,
+              "symbol": "__malloc_unlock",
+              "symbol_index": 13
+            }
+          ],
+          "identical": false,
+          "expected_size": 96,
+          "compiled_size": 96,
+          "different_bytes": 61,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "07977d68787ca3fbf1a8978f61711c29c06b50d90a52d19fcdce3004d59f0f3a",
+          "compiled_sha256": "9a08dbe8200d56d430d6dcc43c2faafa51349eb0980c3175904081a19e581e88"
+        }
+      ],
+      "target_abi": {
+        "gcc323": {
+          "words": [
+            4,
+            8,
+            4,
+            4,
+            4,
+            748,
+            0,
+            484
+          ],
+          "meanings": [
+            "int",
+            "long",
+            "pointer",
+            "size_t",
+            "reent pointer",
+            "reent size",
+            "errno offset",
+            "FILE array offset"
+          ],
+          "data_sha256": "8e17bd8c1e5f1a7458a04362d109fbd020b7a12a282dec2b09fe35ca8a16dc2c",
+          "caller_functions": [
+            {
+              "name": "allocator_memalign_abi_call",
+              "size": 36,
+              "sha256": "f5a7785bbbe78922e19e14000eb1aad4f17e09854cd27ffb79c4d4c01ac2a5e2",
+              "instructions": [
+                "0x3c048000",
+                "0x27bdfff0",
+                "0x2405fff1",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34840020",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "memalign"
+            },
+            {
+              "name": "allocator_realloc_abi_call",
+              "size": 40,
+              "sha256": "edb3bd9d71ffad9a4ed9237a53c12748fa03388fd4a41dc81698cdd37e878103",
+              "instructions": [
+                "0x3c048123",
+                "0x3c058000",
+                "0x27bdfff0",
+                "0x34844567",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34a50005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "realloc"
+            },
+            {
+              "name": "allocator_memalign_core_abi_call",
+              "size": 40,
+              "sha256": "96aec9a1763f184ed1fb39d5bf80694039d2a2f881e62ce919cb45602be082d5",
+              "instructions": [
+                "0x3c058000",
+                "0x27bdfff0",
+                "0x3c040002",
+                "0x34a50020",
+                "0xffbf0000",
+                "0xc000000",
+                "0x2406fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131072,
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "_memalign_r"
+            },
+            {
+              "name": "allocator_realloc_core_abi_call",
+              "size": 48,
+              "sha256": "84fce5d8bbe042a97bb33a3809f4094f29b7e7950fb094c6b8735400cd419eab",
+              "instructions": [
+                "0x3c040002",
+                "0x3c058123",
+                "0x3c068000",
+                "0x27bdfff0",
+                "0x34840004",
+                "0x34a54567",
+                "0xffbf0000",
+                "0xc000000",
+                "0x34c60005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131076,
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "_realloc_r"
+            }
+          ],
+          "limit": "Actual target compile-time layouts; emitted two-GPR wrapper and three-GPR core callers. Low32-bit lane proof only, not hardware execution."
+        },
+        "gcc29": {
+          "words": [
+            4,
+            8,
+            4,
+            4,
+            4,
+            748,
+            0,
+            484
+          ],
+          "meanings": [
+            "int",
+            "long",
+            "pointer",
+            "size_t",
+            "reent pointer",
+            "reent size",
+            "errno offset",
+            "FILE array offset"
+          ],
+          "data_sha256": "8e17bd8c1e5f1a7458a04362d109fbd020b7a12a282dec2b09fe35ca8a16dc2c",
+          "caller_functions": [
+            {
+              "name": "allocator_memalign_abi_call",
+              "size": 40,
+              "sha256": "acdaa7c25c10c9d92561ee0d4dd12f849a7019aff6f9318f68f6fed4abce5d88",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c048000",
+                "0x3c05ffff",
+                "0xffbf0000",
+                "0x34840020",
+                "0xc000000",
+                "0x34a5fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "memalign"
+            },
+            {
+              "name": "allocator_realloc_abi_call",
+              "size": 40,
+              "sha256": "d1288f7889544901bb27a4f76ffce26399a0ce5f7cc5dc8a69a1c558f13caf95",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c048123",
+                "0x3c058000",
+                "0xffbf0000",
+                "0x34844567",
+                "0xc000000",
+                "0x34a50005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5
+              ],
+              "actual_argument_words": [
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "realloc"
+            },
+            {
+              "name": "allocator_memalign_core_abi_call",
+              "size": 44,
+              "sha256": "3b9716075ef468d9a847b00e2a8c8f14acdb6c38546254e5a58ac5fe551719e3",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c058000",
+                "0x3c06ffff",
+                "0xffbf0000",
+                "0x3c040002",
+                "0x34a50020",
+                "0xc000000",
+                "0x34c6fff1",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131072,
+                2147483680,
+                4294967281
+              ],
+              "actual_relocation_target": "_memalign_r"
+            },
+            {
+              "name": "allocator_realloc_core_abi_call",
+              "size": 48,
+              "sha256": "29aad0e1a1d4c63aa4ad59c9e10cf9765e67717b026ff97542b8c497d5e8a6a3",
+              "instructions": [
+                "0x27bdfff0",
+                "0x3c040002",
+                "0x3c058123",
+                "0x3c068000",
+                "0xffbf0000",
+                "0x34840004",
+                "0x34a54567",
+                "0xc000000",
+                "0x34c60005",
+                "0xdfbf0000",
+                "0x3e00008",
+                "0x27bd0010"
+              ],
+              "actual_argument_gprs": [
+                4,
+                5,
+                6
+              ],
+              "actual_argument_words": [
+                131076,
+                2166572391,
+                2147483653
+              ],
+              "actual_relocation_target": "_realloc_r"
+            }
+          ],
+          "limit": "Actual target compile-time layouts; emitted two-GPR wrapper and three-GPR core callers. Low32-bit lane proof only, not hardware execution."
+        }
+      },
+      "implementation_limits": [
+        "Both original cores and custom lock/OS bodies are binding-only for this batch; no new core/OS data or source award.",
+        "Two complete96B functions remain reconstructed. No flags grid, masking, cropping, padding, mapping or compiler/backend changes.",
+        "Authored callbacks test caller order, captured arguments/result and fresh global reloads, not allocation/thread/semaphore behavior.",
+        "Target size_t/pointer32 and long64, valid observed interfaces. No general heap safety, null/overflow/alignment policy, malformed-domain or full hardware claim.",
+        "Native opaque pointers are numeric observations, never dereferenced. Synthetic observer replacement of _impure_ptr stresses reloads beyond the real locks, which ignore incoming reent.",
+        "Large3925D0 only bounded two argument/result windows manually reviewed, whole raw/assembly/hash geometry independently checked. No large-caller full semantics claim."
+      ],
+      "evidence": "Complete96B original wrapper captures two32-bit inputs before lock, separately reloads _impure_ptr for lock/core/unlock, forwards core arguments inGPR4..6, captures pointer result before unlock and returns it. Explicit licensed modification of the single-call pinned newlib baseline, not an unchanged-source or retail-origin claim. All four genuine whole links resolve with published bindings only, none exact. Both genuine target8-word ABIs and eight actual argument-lane callers pass;15 actual dependencies per source/profile. Original-traced960 fixtures/23040 instructions match24960 warning-free separate-TU native checks;8 decoder/original guards pass and cached-global negative control fails. Authored hooks do not implement cores/OS or assert real lock mutation. Independent parent/peer final review and canonical registration pending.",
+      "validation": {
+        "original_fixtures": 960,
+        "original_instructions": 23040,
+        "original_instruction_maximum": 24,
+        "native_checks": 24960,
+        "decoder_and_original_guards": 8,
+        "exact_candidates": 0,
+        "cached_reent_negative_control": "rejected at fixture3",
+        "modeled_core_lock_behavior": "Controlled observers only, no original implementation claim."
+      },
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "canonical_bindings_only": true,
+        "claimed_exact_match": false
+      }
     }
   ],
   "progress_policy": "C bytes count toward high-level source progress; reused assembly bytes must be reported separately.",
