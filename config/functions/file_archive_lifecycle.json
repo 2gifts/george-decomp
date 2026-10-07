@@ -1,0 +1,1859 @@
+{
+  "schema_version": 1,
+  "functions": [
+    {
+      "name": "func_002B15C8",
+      "address": "0x002B15C8",
+      "file_offset": "0x001B25C8",
+      "size": 824,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002B15C8",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "1f5f2239eb9f727702b5ade4d9d8dbd1f33870e054e96d944a560716cbd73294",
+      "compiled_size": 880,
+      "compiled_sha256": "6a96ab52daafd819513748bf7691b21e3110bc08c805326f265c3ca2bef0ae16",
+      "evidence": [
+        "Recursive directory records retain captured stride/next sector, ZERO retry, persistent wrapping depth, wrapping name length minus two, heap override and post-callback fresh map. No invented bounds or malformed-input guard.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 741,
+        "first_different_offsets": [
+          4,
+          6,
+          8,
+          13,
+          14,
+          16,
+          17,
+          18
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002B15C8",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 824,
+          "compiled_size": 896,
+          "different_bytes": 760,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f5f2239eb9f727702b5ade4d9d8dbd1f33870e054e96d944a560716cbd73294",
+          "compiled_sha256": "64401d7a38470a910e78293865b718b16ba73054a130d01a7bfd1d6391e18fde"
+        },
+        {
+          "name": "func_002B15C8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 824,
+          "compiled_size": 880,
+          "different_bytes": 748,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            11,
+            13,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f5f2239eb9f727702b5ade4d9d8dbd1f33870e054e96d944a560716cbd73294",
+          "compiled_sha256": "e6e6d2a67a39cef5a959f4b48a7533323e3d664b84ae0a60e14afa6170e60f87"
+        },
+        {
+          "name": "func_002B15C8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 824,
+          "compiled_size": 880,
+          "different_bytes": 741,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            13,
+            14,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "1f5f2239eb9f727702b5ade4d9d8dbd1f33870e054e96d944a560716cbd73294",
+          "compiled_sha256": "6a96ab52daafd819513748bf7691b21e3110bc08c805326f265c3ca2bef0ae16"
+        }
+      ],
+      "author_evidence_snapshot": "Recursive directory records retain captured stride/next sector, ZERO retry, persistent wrapping depth, wrapping name length minus two, heap override and post-callback fresh map. No invented bounds or malformed-input guard.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002B1900",
+      "address": "0x002B1900",
+      "file_offset": "0x001B2900",
+      "size": 484,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002B1900",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "10fe0a809023db97d1a0fb845d9d36ecb9d97fd4da149b4a82db017fdff42ad2",
+      "compiled_size": 432,
+      "compiled_sha256": "a6377347e74bfc13f6006b3c80a4dcd793230b4d6421ffca703abd3b0680770d",
+      "evidence": [
+        "Loader retains NONZERO retry, type/signature/optional prefix and block-size gates, captured mode pointer, fresh root extent and final readiness even allocation failure.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 409,
+        "first_different_offsets": [
+          0,
+          4,
+          12,
+          14,
+          16,
+          18,
+          26,
+          27
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002B1900",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 484,
+          "compiled_size": 432,
+          "different_bytes": 424,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "10fe0a809023db97d1a0fb845d9d36ecb9d97fd4da149b4a82db017fdff42ad2",
+          "compiled_sha256": "d4cb2da9555a58ce57af638923ccfa3e7146fac76099a818c99de6b1c253fde7"
+        },
+        {
+          "name": "func_002B1900",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 484,
+          "compiled_size": 432,
+          "different_bytes": 413,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            12,
+            14,
+            15,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "10fe0a809023db97d1a0fb845d9d36ecb9d97fd4da149b4a82db017fdff42ad2",
+          "compiled_sha256": "3d8d744c882a4110d65396f954bc54c2231118c7973b1c11182130993f5b67c8"
+        },
+        {
+          "name": "func_002B1900",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 484,
+          "compiled_size": 432,
+          "different_bytes": 409,
+          "first_different_offsets": [
+            0,
+            4,
+            12,
+            14,
+            16,
+            18,
+            26,
+            27
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "10fe0a809023db97d1a0fb845d9d36ecb9d97fd4da149b4a82db017fdff42ad2",
+          "compiled_sha256": "a6377347e74bfc13f6006b3c80a4dcd793230b4d6421ffca703abd3b0680770d"
+        }
+      ],
+      "author_evidence_snapshot": "Loader retains NONZERO retry, type/signature/optional prefix and block-size gates, captured mode pointer, fresh root extent and final readiness even allocation failure.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002B1D30",
+      "address": "0x002B1D30",
+      "file_offset": "0x001B2D30",
+      "size": 344,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002B1D30",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "cc7980759ecefcfa786a8e523f8c2445cf27373e6a04b021ef4e82dcf2c6057d",
+      "compiled_size": 360,
+      "compiled_sha256": "2d64db940797091d2a6e36bf1d6a97583137538b03001a1c247553a407a397b1",
+      "evidence": [
+        "88-byte creator preserves partial initialization and unguarded heap/map results, captured extra integer lanes, map draining, loader result before module/scheduler calls and untouched bytes.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 203,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          16,
+          18,
+          21,
+          22,
+          24
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002B1D30",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 344,
+          "compiled_size": 332,
+          "different_bytes": 282,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cc7980759ecefcfa786a8e523f8c2445cf27373e6a04b021ef4e82dcf2c6057d",
+          "compiled_sha256": "55448319a387dbbb7e90f1e39d8eb9dd082205493b79c2d5a13d1c43c568e5cc"
+        },
+        {
+          "name": "func_002B1D30",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 344,
+          "compiled_size": 360,
+          "different_bytes": 206,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            10,
+            11,
+            16,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cc7980759ecefcfa786a8e523f8c2445cf27373e6a04b021ef4e82dcf2c6057d",
+          "compiled_sha256": "d2c18d2951744b000ff70804b451f20989f8e73474cbaf02a89b2c3c7693e699"
+        },
+        {
+          "name": "func_002B1D30",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 344,
+          "compiled_size": 360,
+          "different_bytes": 203,
+          "first_different_offsets": [
+            4,
+            8,
+            10,
+            16,
+            18,
+            21,
+            22,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cc7980759ecefcfa786a8e523f8c2445cf27373e6a04b021ef4e82dcf2c6057d",
+          "compiled_sha256": "2d64db940797091d2a6e36bf1d6a97583137538b03001a1c247553a407a397b1"
+        }
+      ],
+      "author_evidence_snapshot": "88-byte creator preserves partial initialization and unguarded heap/map results, captured extra integer lanes, map draining, loader result before module/scheduler calls and untouched bytes.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002B1E88",
+      "address": "0x002B1E88",
+      "file_offset": "0x001B2E88",
+      "size": 84,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002B1E88",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "e77b04276d50c83be6460a8af0e26f7a6f2e88d71f6d5ed554a2ea64b9be48ea",
+      "compiled_size": 84,
+      "compiled_sha256": "ae4d65dfff9c72895d16f321f2acdcb5e72ac83d38ffbf85223e0dd5dea2cab8",
+      "evidence": [
+        "Fresh map is reloaded for each pop/clear; values and context explicitly freed. Does not invent map/heap destruction. Outer ancestor root remains unresolved.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 19,
+        "first_different_offsets": [
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          16,
+          17
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002B1E88",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 84,
+          "different_bytes": 19,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            16,
+            17
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e77b04276d50c83be6460a8af0e26f7a6f2e88d71f6d5ed554a2ea64b9be48ea",
+          "compiled_sha256": "ae4d65dfff9c72895d16f321f2acdcb5e72ac83d38ffbf85223e0dd5dea2cab8"
+        },
+        {
+          "name": "func_002B1E88",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 80,
+          "different_bytes": 24,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            60,
+            61,
+            62,
+            63,
+            64
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e77b04276d50c83be6460a8af0e26f7a6f2e88d71f6d5ed554a2ea64b9be48ea",
+          "compiled_sha256": "fc85b802d5b944c8151aeac5a1b2f28feed2bcdba4b3e16ed75cb40f436364ff"
+        },
+        {
+          "name": "func_002B1E88",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 84,
+          "compiled_size": 80,
+          "different_bytes": 22,
+          "first_different_offsets": [
+            4,
+            8,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "e77b04276d50c83be6460a8af0e26f7a6f2e88d71f6d5ed554a2ea64b9be48ea",
+          "compiled_sha256": "be29fc4b4ea48c434d215002d46465f6aab378a1d8d4aea0ac820bdfcd6c1d9d"
+        }
+      ],
+      "author_evidence_snapshot": "Fresh map is reloaded for each pop/clear; values and context explicitly freed. Does not invent map/heap destruction. Outer ancestor root remains unresolved.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002B0860",
+      "address": "0x002B0860",
+      "file_offset": "0x001B1860",
+      "size": 152,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002B0860",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "a70dee5de79d79548a39b3e9c55103cda21aade29a1c5a31252717a51d222784",
+      "compiled_size": 168,
+      "compiled_sha256": "82d42ba36aee1a5df4b2de77507df42b75758e8df16a6a57ad1ce7efaa02f931",
+      "evidence": [
+        "UINT32_MAX startup gate, captured creator lanes, ordered global publication, twenty28-byte observed slots with signed pointer end comparison and untouched+10.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 114,
+        "first_different_offsets": [
+          0,
+          8,
+          10,
+          11,
+          14,
+          16,
+          17,
+          18
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002B0860",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 152,
+          "compiled_size": 168,
+          "different_bytes": 114,
+          "first_different_offsets": [
+            0,
+            8,
+            10,
+            11,
+            14,
+            16,
+            17,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a70dee5de79d79548a39b3e9c55103cda21aade29a1c5a31252717a51d222784",
+          "compiled_sha256": "82d42ba36aee1a5df4b2de77507df42b75758e8df16a6a57ad1ce7efaa02f931"
+        },
+        {
+          "name": "func_002B0860",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 152,
+          "compiled_size": 204,
+          "different_bytes": 167,
+          "first_different_offsets": [
+            0,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a70dee5de79d79548a39b3e9c55103cda21aade29a1c5a31252717a51d222784",
+          "compiled_sha256": "fd46bba08b1c4e96c6202d0f9cfe77dcb4fc2198eca17aa23b9b8a629163fd68"
+        },
+        {
+          "name": "func_002B0860",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 152,
+          "compiled_size": 204,
+          "different_bytes": 167,
+          "first_different_offsets": [
+            0,
+            7,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "a70dee5de79d79548a39b3e9c55103cda21aade29a1c5a31252717a51d222784",
+          "compiled_sha256": "8c5cd0825ba167df0aeda2db7ce5401aba75f9f19df411c8e7c9e056e447a52b"
+        }
+      ],
+      "author_evidence_snapshot": "UINT32_MAX startup gate, captured creator lanes, ordered global publication, twenty28-byte observed slots with signed pointer end comparison and untouched+10.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002A7E68",
+      "address": "0x002A7E68",
+      "file_offset": "0x001A8E68",
+      "size": 180,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002A7E68",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "c1e27257c23138df59829c04877ad6b5338c91e4ab6e5bf1ba4c5ab132e1716a",
+      "compiled_size": 172,
+      "compiled_sha256": "5fcd15817d5f254a5a970708d90a70c669a855699c1ec8dab7c488304899da90",
+      "evidence": [
+        "Value is captured before optional key output; aliased output precedes fresh bucket base and node next loads; count is freshly decremented after free. Null payload remains a null return.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 128,
+        "first_different_offsets": [
+          4,
+          8,
+          10,
+          11,
+          16,
+          18,
+          19,
+          24
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002A7E68",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 180,
+          "compiled_size": 172,
+          "different_bytes": 146,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c1e27257c23138df59829c04877ad6b5338c91e4ab6e5bf1ba4c5ab132e1716a",
+          "compiled_sha256": "9994691f2bc74769cde6c410e4a6a5a6f0eb218c8848d400cf9a1afcacc66143"
+        },
+        {
+          "name": "func_002A7E68",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 180,
+          "compiled_size": 172,
+          "different_bytes": 129,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            10,
+            11,
+            16,
+            18,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c1e27257c23138df59829c04877ad6b5338c91e4ab6e5bf1ba4c5ab132e1716a",
+          "compiled_sha256": "72e1b8bdb9458f62445e13d413b86456f254d0518beb11fe3cb7563a3a2f6154"
+        },
+        {
+          "name": "func_002A7E68",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 180,
+          "compiled_size": 172,
+          "different_bytes": 128,
+          "first_different_offsets": [
+            4,
+            8,
+            10,
+            11,
+            16,
+            18,
+            19,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c1e27257c23138df59829c04877ad6b5338c91e4ab6e5bf1ba4c5ab132e1716a",
+          "compiled_sha256": "5fcd15817d5f254a5a970708d90a70c669a855699c1ec8dab7c488304899da90"
+        }
+      ],
+      "author_evidence_snapshot": "Value is captured before optional key output; aliased output precedes fresh bucket base and node next loads; count is freshly decremented after free. Null payload remains a null return.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002A7F58",
+      "address": "0x002A7F58",
+      "file_offset": "0x001A8F58",
+      "size": 108,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002A7F58",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "08fd84a7fa95a739f50193df94a59a25429f35b7b18593a39453067c10c1c5ec",
+      "compiled_size": 108,
+      "compiled_sha256": "7d161858c4299cc60ef803502664ce2f02d00c408d07e1165e5780dffe6b6e5d",
+      "evidence": [
+        "Wrapping bucket shift and allocation-plus16 retained; explicit header fields and real memset of captured wrapped bytes, with only original allocation guard.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 12,
+        "first_different_offsets": [
+          4,
+          8,
+          20,
+          24,
+          84,
+          86,
+          87,
+          88
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002A7F58",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 108,
+          "different_bytes": 53,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "08fd84a7fa95a739f50193df94a59a25429f35b7b18593a39453067c10c1c5ec",
+          "compiled_sha256": "aace9a91d5bdd98c18c5eb71722c0a2a0fc34fbdf295998e9c7d2da4b20042e4"
+        },
+        {
+          "name": "func_002A7F58",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 108,
+          "different_bytes": 16,
+          "first_different_offsets": [
+            4,
+            7,
+            8,
+            11,
+            20,
+            23,
+            24,
+            84
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "08fd84a7fa95a739f50193df94a59a25429f35b7b18593a39453067c10c1c5ec",
+          "compiled_sha256": "91f23c3bbebcc090c0722bfb40ea9a882e2f141e2035dcce0e57c567b71ad88d"
+        },
+        {
+          "name": "func_002A7F58",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 108,
+          "compiled_size": 108,
+          "different_bytes": 12,
+          "first_different_offsets": [
+            4,
+            8,
+            20,
+            24,
+            84,
+            86,
+            87,
+            88
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "08fd84a7fa95a739f50193df94a59a25429f35b7b18593a39453067c10c1c5ec",
+          "compiled_sha256": "7d161858c4299cc60ef803502664ce2f02d00c408d07e1165e5780dffe6b6e5d"
+        }
+      ],
+      "author_evidence_snapshot": "Wrapping bucket shift and allocation-plus16 retained; explicit header fields and real memset of captured wrapped bytes, with only original allocation guard.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    },
+    {
+      "name": "func_002A7FC8",
+      "address": "0x002A7FC8",
+      "file_offset": "0x001A8FC8",
+      "size": 168,
+      "source": "src/game/file_archive_lifecycle.c",
+      "source_kind": "c",
+      "source_name": "func_002A7FC8",
+      "source_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+      "source_dependencies": [
+        {
+          "path": "src/game/file_archive_lifecycle.c",
+          "bytes": 10815,
+          "raw_sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09",
+          "sha256": "498c7357d8e51f1a8b94018b9ee3a698dc534a629aef2cc7c4508f7b77061c09"
+        },
+        {
+          "path": "include/george/file_archive_lifecycle.h",
+          "bytes": 2866,
+          "raw_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+          "sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945"
+        },
+        {
+          "path": "include/george/file_archive.h",
+          "bytes": 856,
+          "raw_sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2",
+          "sha256": "a94a7c6d3559bf7d88168409db030740ad3e38e3c954bc401df0ac3e0d60dea2"
+        },
+        {
+          "path": "include/george/file_operations.h",
+          "bytes": 2079,
+          "raw_sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24",
+          "sha256": "c158638c37c12b0f445ab21f644770ef712a95164878d2b7b2c2e094b8487b24"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "bytes": 10176,
+          "raw_sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/string_algorithms.h",
+          "bytes": 508,
+          "raw_sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa",
+          "sha256": "c3491f4c75d2bfb2384c4707a84cfaecf606fb13061d04e2b7a910ab5850d8fa"
+        }
+      ],
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-DGEORGE_USE_SAVE128"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "complete_original_source_observer_whole_link_parent_and_independent_peer_review_passed",
+      "original_sha256": "4f433c31686b18ca49fb9ca662314f729d2d8d8a205b277f3b63a3570571e38b",
+      "compiled_size": 152,
+      "compiled_sha256": "c1fb7ca64d02c5c76409c99b32c904782127de6dbe5e1fdb0b4816df75ded7f9",
+      "evidence": [
+        "Captures node next before free, reloads buckets after each chain and count at loop comparison, clears count finally without freeing values/map allocation.",
+        "Parent and independent peer reproduce15+4 entire dictionaries,5 RAW objects,40 complete selected/ABI ELFs; all510 inputs preserved before sole archived doc status qualification.",
+        "All24 natural selected comparisons remain nonexact; fresh canonical-only whole relinks agree. Native SDK/core/module/scheduler effects and heap-create bridge remain controlled/unawarded."
+      ],
+      "boundary_evidence": "Historical approved whole raw/assembly/JR31+delay and excluded padding, exact five executable references/full caller geometries. Conditional ancestor qualification retained.",
+      "boundary_confidence": "reviewed_provisional",
+      "verification": {
+        "identical": false,
+        "different_bytes": 119,
+        "first_different_offsets": [
+          4,
+          6,
+          10,
+          11,
+          13,
+          16,
+          18,
+          22
+        ],
+        "unresolved_relocations": []
+      },
+      "identity_packet": "build/file_archive_lifecycle/identity_packet.json",
+      "review_header_sha256": "86c83af18d58e3fcd7a5b96e0108e7e1346bc6f249c31bf530712c2a0db05945",
+      "qualification": "No helper/data/SDK/source match award; all3 genuine complete recipes retained. Best difference only selects a reproducible nonmatching recipe, not a compiler identity claim.",
+      "compile_comparisons": [
+        {
+          "name": "func_002A7FC8",
+          "compiler_profile": "gcc323",
+          "recipe": "gcc323",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "object": "build/file_archive_lifecycle/gcc323.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 144,
+          "different_bytes": 137,
+          "first_different_offsets": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4f433c31686b18ca49fb9ca662314f729d2d8d8a205b277f3b63a3570571e38b",
+          "compiled_sha256": "1d9016a8de466c2d281cb2cb61885bd4794d87baa150edf0ec121d9f3ea179b5"
+        },
+        {
+          "name": "func_002A7FC8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 152,
+          "different_bytes": 122,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            10,
+            11,
+            13,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4f433c31686b18ca49fb9ca662314f729d2d8d8a205b277f3b63a3570571e38b",
+          "compiled_sha256": "4472de3239fc828031ddcb9fb3fff73f20d8657c673da364e6ac283535c280f8"
+        },
+        {
+          "name": "func_002A7FC8",
+          "compiler_profile": "gcc29",
+          "recipe": "gcc29_precision",
+          "source": "src/game/file_archive_lifecycle.c",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": "build/file_archive_lifecycle/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 168,
+          "compiled_size": 152,
+          "different_bytes": 119,
+          "first_different_offsets": [
+            4,
+            6,
+            10,
+            11,
+            13,
+            16,
+            18,
+            22
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "4f433c31686b18ca49fb9ca662314f729d2d8d8a205b277f3b63a3570571e38b",
+          "compiled_sha256": "c1fb7ca64d02c5c76409c99b32c904782127de6dbe5e1fdb0b4816df75ded7f9"
+        }
+      ],
+      "author_evidence_snapshot": "Captures node next before free, reloads buckets after each chain and count at loop comparison, clears count finally without freeing values/map allocation.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "exact_in_any_recipe": false,
+        "approved_inline_declarations_only": true,
+        "heap_create_bridge_no_award": true
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "frozen_raw_inputs": 510,
+    "owned_inputs": 336,
+    "immutable_baselines": 174,
+    "source_free_historical_inputs": 148,
+    "whole_selected_and_ABI_links": 40,
+    "target_objects": 5,
+    "entire_evidence_dictionaries": 15,
+    "native_reuse_dictionaries": 4,
+    "selected_comparisons": 24,
+    "complete_exact_functions": 0,
+    "complete_exact_bytes": 0,
+    "native_checks": 3227776,
+    "actual_M_closures": 21,
+    "unique_dependencies": 44,
+    "finite_pointer_tokens": 21143,
+    "scoped_decoder_budget": 250000,
+    "initial_30000_failure_independently_reproduced": true,
+    "metadata_complement": "Parent replaces authored dependency dictionary with standard path/SHA256 list from actual selected-recipe-M closure and adds complete retained comparisons; immutable authored draft is unchanged."
+  }
+}
