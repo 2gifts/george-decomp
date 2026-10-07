@@ -1,0 +1,1950 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_0029F370",
+      "address": "0x0029F370",
+      "file_offset": "0x001A0370",
+      "size": 700,
+      "original_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+      "original_assembly": "build/functions/func_0029F370.s",
+      "source": "src/game/plane_intersection.c",
+      "source_kind": "c",
+      "source_name": "func_0029F370",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "full_original_and_source_parent_peer_independently_passed",
+      "evidence": "Four GPRs: a0/a1 observed16B planes with normalXYZ and field0C; a2/a3 exactlyXYZ outputs. Real caller29F7C8 at29F85C passes two16B-stride plane entries and stackXYZ outputs. Cross normals, abs-component L1 threshold38D1B717, choose dominant component/ties, solve point with zero component, publish point Z/X/Y then endpoint X/Z/Y after captures. Output unchanged on parallel rejection; no normal normalization or capacity proof. Independent parent and peer full selected/source/ABI/strict fixture review and whole genuine compiler reproduction passed. Canonical-only comparison is required and recorded separately; all recipes remain nonmatching.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 700,
+        "compiled_size": 596,
+        "different_bytes": 510,
+        "first_different_offsets": [
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+        "compiled_sha256": "d98371e36d02665d8c19491eb38f9b87e45997992c62428e3365bc69706f35a6"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029F370",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": ".local/plane_intersection/gcc323.o",
+          "identical": false,
+          "expected_size": 700,
+          "compiled_size": 596,
+          "different_bytes": 510,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+          "compiled_sha256": "d98371e36d02665d8c19491eb38f9b87e45997992c62428e3365bc69706f35a6"
+        },
+        "gcc29": {
+          "name": "func_0029F370",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": ".local/plane_intersection/gcc29.o",
+          "identical": false,
+          "expected_size": 700,
+          "compiled_size": 584,
+          "different_bytes": 535,
+          "first_different_offsets": [
+            4,
+            6,
+            7,
+            8,
+            11,
+            13,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+          "compiled_sha256": "0da5d62152f5b445030bab728dacf5a91824a8019d62d1d6998a76c60b343aa1"
+        },
+        "gcc29_precision": {
+          "name": "func_0029F370",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": ".local/plane_intersection/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 700,
+          "compiled_size": 584,
+          "different_bytes": 532,
+          "first_different_offsets": [
+            4,
+            6,
+            8,
+            13,
+            14,
+            16,
+            18,
+            24
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+          "compiled_sha256": "881e2a23aee258a07143f3722bb73c222f80af25905f2593d67cbade06128dea"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0029F85C",
+          "word": "0x0C0A7CDC",
+          "delay_word": "0x00622021",
+          "caller": {
+            "name": "func_0029F7C8",
+            "address": "0x0029F7C8",
+            "size": 808,
+            "file_offset": "0x001A07C8",
+            "original_sha256": "e981ce5e51b9f3d35320f795a5f2acb96a247c4070319e0bf73c199285af1fc1",
+            "original_assembly": "build/functions/func_0029F7C8.s",
+            "terminal_jr": "0x0029FAE8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_alignment_bytes": 0,
+            "following_entry": "0x0029FAF0"
+          }
+        }
+      ],
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "preceding_complete_body": {
+        "name": "func_0029F1E0",
+        "address": "0x0029F1E0",
+        "size": 400,
+        "file_offset": "0x001A01E0",
+        "original_sha256": "4b09870e7095124860b00ce65d15cdee3e223ce734f1cbec792f2389bb435e28",
+        "original_assembly": "build/functions/func_0029F1E0.s",
+        "terminal_jr": "0x0029F368",
+        "terminal_delay_word": "0x27BD0040",
+        "excluded_zero_alignment_bytes": 0,
+        "following_entry": "0x0029F370"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029F624",
+      "terminal_delay_word": "0x27BD0070",
+      "following_entry": "0x0029F630",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029F408",
+          "word": "0x45010002",
+          "target": "0x0029F414",
+          "delay_word": "0xE7A40014",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F41C",
+          "word": "0x45010002",
+          "target": "0x0029F428",
+          "delay_word": "0x460020C6",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F430",
+          "word": "0x45010002",
+          "target": "0x0029F43C",
+          "delay_word": "0x46002886",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F458",
+          "word": "0x4501006D",
+          "target": "0x0029F610",
+          "delay_word": "0x0000102D",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F468",
+          "word": "0x45000007",
+          "target": "0x0029F488",
+          "delay_word": "0x00000000",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F478",
+          "word": "0x45000008",
+          "target": "0x0029F49C",
+          "delay_word": "0x24030003",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F480",
+          "word": "0x10000006",
+          "target": "0x0029F49C",
+          "delay_word": "0x24030001",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F490",
+          "word": "0x45000002",
+          "target": "0x0029F49C",
+          "delay_word": "0x24030003",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4AC",
+          "word": "0x10620022",
+          "target": "0x0029F538",
+          "delay_word": "0x46000987",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4B8",
+          "word": "0x10400005",
+          "target": "0x0029F4D0",
+          "delay_word": "0x24020001",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4C0",
+          "word": "0x10620008",
+          "target": "0x0029F4E4",
+          "delay_word": "0xC7A00008",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4C8",
+          "word": "0x10000044",
+          "target": "0x0029F5DC",
+          "delay_word": "0xC7A50000",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4D4",
+          "word": "0x1062002B",
+          "target": "0x0029F584",
+          "delay_word": "0xC7A00008",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F4DC",
+          "word": "0x1000003E",
+          "target": "0x0029F5D8",
+          "delay_word": "0x24020001",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F530",
+          "word": "0x10000027",
+          "target": "0x0029F5D0",
+          "delay_word": "0xE7A00004",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F57C",
+          "word": "0x10000013",
+          "target": "0x0029F5CC",
+          "delay_word": "0xE7A10008",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029F374",
+          "word": "0x7FB00060",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 16,
+          "signed_offset": 96,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F378",
+          "word": "0x7FB10050",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 17,
+          "signed_offset": 80,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F380",
+          "word": "0x7FB20040",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 18,
+          "signed_offset": 64,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F388",
+          "word": "0x7FB30030",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 19,
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F394",
+          "word": "0xFFBF0020",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 31,
+          "signed_offset": 32,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029F400",
+          "word": "0xE7A20010",
+          "base_gpr": 29,
+          "source_fpr": 2,
+          "source_gpr": null,
+          "signed_offset": 16,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F404",
+          "word": "0xE7A10018",
+          "base_gpr": 29,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 24,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F40C",
+          "word": "0xE7A40014",
+          "base_gpr": 29,
+          "source_fpr": 4,
+          "source_gpr": null,
+          "signed_offset": 20,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F508",
+          "word": "0xAFA00000",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 0,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F52C",
+          "word": "0xE7A10008",
+          "base_gpr": 29,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F534",
+          "word": "0xE7A00004",
+          "base_gpr": 29,
+          "source_fpr": 0,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F554",
+          "word": "0xAFA00004",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 0,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F580",
+          "word": "0xE7A10008",
+          "base_gpr": 29,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F5A0",
+          "word": "0xAFA00008",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 0,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F5C8",
+          "word": "0xE7A10004",
+          "base_gpr": 29,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F5CC",
+          "word": "0xE7A00000",
+          "base_gpr": 29,
+          "source_fpr": 0,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F5F0",
+          "word": "0xE6400008",
+          "base_gpr": 18,
+          "source_fpr": 0,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F5FC",
+          "word": "0xE6450000",
+          "base_gpr": 18,
+          "source_fpr": 5,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F600",
+          "word": "0xE6440004",
+          "base_gpr": 18,
+          "source_fpr": 4,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F604",
+          "word": "0xE6610000",
+          "base_gpr": 19,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F608",
+          "word": "0xE6600008",
+          "base_gpr": 19,
+          "source_fpr": 0,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F60C",
+          "word": "0xE6620004",
+          "base_gpr": 19,
+          "source_fpr": 2,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        }
+      ],
+      "actual_direct_calls": [
+        {
+          "instruction": "0x0029F3A0",
+          "word": "0x0C0E4DA8",
+          "target": "0x003936A0",
+          "delay_word": "0x2406000C"
+        },
+        {
+          "instruction": "0x0029F3B0",
+          "word": "0x0C0E4DA8",
+          "target": "0x003936A0",
+          "delay_word": "0x2406000C"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029F624",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0070"
+        }
+      ],
+      "implementation_limits": [
+        "Valid aligned XYZ/plane/output spans; no added null, unit-normal or degeneracy guard. Output/input overlap and prefix-store fresh reloads retained.",
+        "Finite normal/zero IEEE test model excludes exceptional/subnormal arithmetic, zero division, EE FCR and hardware/helper timing.",
+        "Actual JAL entry ownership proved, but containing caller29F7C8 incoming root remains unresolved. No computed reachability, original class or SDK identity inferred.",
+        "Licensed compatible Coin3D formulas adapted with original thresholds/ties/divisions/nonunit endpoints and store ordering. Not unchanged external source or whole-code identity."
+      ]
+    },
+    {
+      "name": "func_0029F630",
+      "address": "0x0029F630",
+      "file_offset": "0x001A0630",
+      "size": 404,
+      "original_sha256": "60344b1f505d468cb88c7c711c57fed98d871e17d0ec7977b29fd462b33dd078",
+      "original_assembly": "build/functions/func_0029F630.s",
+      "source": "src/game/plane_intersection.c",
+      "source_kind": "c",
+      "source_name": "func_0029F630",
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "reviewed": true,
+      "review_status": "full_original_and_source_parent_peer_independently_passed",
+      "evidence": "Four GPRs: a0/a1 exactlyXYZ line endpoints, a2 observed16B plane, a3 XYZ output. Real caller29F7C8 at29F8B4 passes prior point/endpoint and third16B-stride plane. Capture line difference and dot/offset before finite soft calls374848/373250/372CC0; absolute denominator threshold3F1A36E2E0000000. Success first copies first endpointX, reloads/storesY, then reloadsZ before finalX/Z/Y result publication. Shifted output/first aliases therefore affect actual fresh loads. Failure leaves output unchanged; infinite-line result, no fraction-range guard. Independent parent and peer full selected/source/ABI/strict fixture review and whole genuine compiler reproduction passed. Canonical-only comparison is required and recorded separately; all recipes remain nonmatching.",
+      "candidate_comparison": {
+        "identical": false,
+        "expected_size": 404,
+        "compiled_size": 380,
+        "different_bytes": 329,
+        "first_different_offsets": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "60344b1f505d468cb88c7c711c57fed98d871e17d0ec7977b29fd462b33dd078",
+        "compiled_sha256": "0fc5f34d11dfdcad6e7962fc46ebfd3bc51daf8817de421ea0f24c4229c44949"
+      },
+      "profile_comparisons": {
+        "gcc323": {
+          "name": "func_0029F630",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-fno-reorder-blocks",
+            "-ffunction-sections"
+          ],
+          "object": ".local/plane_intersection/gcc323.o",
+          "identical": false,
+          "expected_size": 404,
+          "compiled_size": 380,
+          "different_bytes": 329,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "60344b1f505d468cb88c7c711c57fed98d871e17d0ec7977b29fd462b33dd078",
+          "compiled_sha256": "0fc5f34d11dfdcad6e7962fc46ebfd3bc51daf8817de421ea0f24c4229c44949"
+        },
+        "gcc29": {
+          "name": "func_0029F630",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "object": ".local/plane_intersection/gcc29.o",
+          "identical": false,
+          "expected_size": 404,
+          "compiled_size": 380,
+          "different_bytes": 303,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            11,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "60344b1f505d468cb88c7c711c57fed98d871e17d0ec7977b29fd462b33dd078",
+          "compiled_sha256": "44c457f39822897d9ae17799ffa8d91da431e4c66664eb70b3d5ea6e93ae4401"
+        },
+        "gcc29_precision": {
+          "name": "func_0029F630",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "object": ".local/plane_intersection/gcc29_precision.o",
+          "identical": false,
+          "expected_size": 404,
+          "compiled_size": 380,
+          "different_bytes": 299,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            8,
+            13,
+            14,
+            16,
+            18
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "60344b1f505d468cb88c7c711c57fed98d871e17d0ec7977b29fd462b33dd078",
+          "compiled_sha256": "11129005a1cfc0679e539accc8d76d8e1e1f7e86db18d8cc4598e038950ddd59"
+        }
+      },
+      "entry_references": [
+        {
+          "instruction": "0x0029F8B4",
+          "word": "0x0C0A7D8C",
+          "delay_word": "0x00503821",
+          "caller": {
+            "name": "func_0029F7C8",
+            "address": "0x0029F7C8",
+            "size": 808,
+            "file_offset": "0x001A07C8",
+            "original_sha256": "e981ce5e51b9f3d35320f795a5f2acb96a247c4070319e0bf73c199285af1fc1",
+            "original_assembly": "build/functions/func_0029F7C8.s",
+            "terminal_jr": "0x0029FAE8",
+            "terminal_delay_word": "0x27BD0130",
+            "excluded_zero_alignment_bytes": 0,
+            "following_entry": "0x0029FAF0"
+          }
+        }
+      ],
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "preceding_complete_body": {
+        "name": "func_0029F370",
+        "address": "0x0029F370",
+        "size": 700,
+        "file_offset": "0x001A0370",
+        "original_sha256": "717d9e8ce2177c43a8921e76893133881dd25f58278c8b848c828afbd27b280a",
+        "original_assembly": "build/functions/func_0029F370.s",
+        "terminal_jr": "0x0029F624",
+        "terminal_delay_word": "0x27BD0070",
+        "excluded_zero_alignment_bytes": 4,
+        "following_entry": "0x0029F630"
+      },
+      "excluded_zero_alignment_bytes": 4,
+      "terminal_jr": "0x0029F7BC",
+      "terminal_delay_word": "0x27BD0080",
+      "following_entry": "0x0029F7C8",
+      "local_branch_evidence": [
+        {
+          "instruction": "0x0029F6FC",
+          "word": "0x04410004",
+          "target": "0x0029F710",
+          "delay_word": "0x0200282D",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F730",
+          "word": "0x04400019",
+          "target": "0x0029F798",
+          "delay_word": "0xC7A20000",
+          "likely": false
+        },
+        {
+          "instruction": "0x0029F790",
+          "word": "0x10000002",
+          "target": "0x0029F79C",
+          "delay_word": "0xE6650004",
+          "likely": false
+        }
+      ],
+      "complete_decoded_store_inventory": [
+        {
+          "instruction": "0x0029F634",
+          "word": "0x7FB00060",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 16,
+          "signed_offset": 96,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F638",
+          "word": "0x7FB10050",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 17,
+          "signed_offset": 80,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F640",
+          "word": "0x7FB20040",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 18,
+          "signed_offset": 64,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F64C",
+          "word": "0x7FB30030",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 19,
+          "signed_offset": 48,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F650",
+          "word": "0x7FB40020",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 20,
+          "signed_offset": 32,
+          "size": 16
+        },
+        {
+          "instruction": "0x0029F658",
+          "word": "0xE7B50078",
+          "base_gpr": 29,
+          "source_fpr": 21,
+          "source_gpr": null,
+          "signed_offset": 120,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F660",
+          "word": "0xE7B40070",
+          "base_gpr": 29,
+          "source_fpr": 20,
+          "source_gpr": null,
+          "signed_offset": 112,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F668",
+          "word": "0xFFBF0010",
+          "base_gpr": 29,
+          "source_fpr": null,
+          "source_gpr": 31,
+          "signed_offset": 16,
+          "size": 8
+        },
+        {
+          "instruction": "0x0029F6BC",
+          "word": "0xE7A40000",
+          "base_gpr": 29,
+          "source_fpr": 4,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F6C4",
+          "word": "0xE7A50004",
+          "base_gpr": 29,
+          "source_fpr": 5,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F6CC",
+          "word": "0xE7A80008",
+          "base_gpr": 29,
+          "source_fpr": 8,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F74C",
+          "word": "0xE6660000",
+          "base_gpr": 19,
+          "source_fpr": 6,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F760",
+          "word": "0xE6650004",
+          "base_gpr": 19,
+          "source_fpr": 5,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F778",
+          "word": "0xE7A20000",
+          "base_gpr": 29,
+          "source_fpr": 2,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F780",
+          "word": "0xE7A00008",
+          "base_gpr": 29,
+          "source_fpr": 0,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F784",
+          "word": "0xE7A40004",
+          "base_gpr": 29,
+          "source_fpr": 4,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F788",
+          "word": "0xE6660000",
+          "base_gpr": 19,
+          "source_fpr": 6,
+          "source_gpr": null,
+          "signed_offset": 0,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F78C",
+          "word": "0xE6610008",
+          "base_gpr": 19,
+          "source_fpr": 1,
+          "source_gpr": null,
+          "signed_offset": 8,
+          "size": 4
+        },
+        {
+          "instruction": "0x0029F794",
+          "word": "0xE6650004",
+          "base_gpr": 19,
+          "source_fpr": 5,
+          "source_gpr": null,
+          "signed_offset": 4,
+          "size": 4
+        }
+      ],
+      "actual_direct_calls": [
+        {
+          "instruction": "0x0029F66C",
+          "word": "0x0C0E4DA8",
+          "target": "0x003936A0",
+          "delay_word": "0x00E0982D"
+        },
+        {
+          "instruction": "0x0029F6E4",
+          "word": "0x0C0DD212",
+          "target": "0x00374848",
+          "delay_word": "0x4600A306"
+        },
+        {
+          "instruction": "0x0029F6F4",
+          "word": "0x0C0DCC94",
+          "target": "0x00373250",
+          "delay_word": "0x0200202D"
+        },
+        {
+          "instruction": "0x0029F704",
+          "word": "0x0C0DCB30",
+          "target": "0x00372CC0",
+          "delay_word": "0x0280202D"
+        },
+        {
+          "instruction": "0x0029F728",
+          "word": "0x0C0DCC94",
+          "target": "0x00373250",
+          "delay_word": "0x0200202D"
+        }
+      ],
+      "actual_returns": [
+        {
+          "instruction": "0x0029F7BC",
+          "word": "0x03E00008",
+          "delay_word": "0x27BD0080"
+        }
+      ],
+      "implementation_limits": [
+        "Valid aligned XYZ/plane/output spans; no added null, unit-normal or degeneracy guard. Output/input overlap and prefix-store fresh reloads retained.",
+        "Finite normal/zero IEEE test model excludes exceptional/subnormal arithmetic, zero division, EE FCR and hardware/helper timing.",
+        "Actual JAL entry ownership proved, but containing caller29F7C8 incoming root remains unresolved. No computed reachability, original class or SDK identity inferred.",
+        "Licensed compatible Coin3D formulas adapted with original thresholds/ties/divisions/nonunit endpoints and store ordering. Not unchanged external source or whole-code identity."
+      ]
+    }
+  ],
+  "complete_branches": [
+    {
+      "instruction": "0x0029F408",
+      "word": "0x45010002",
+      "target": "0x0029F414",
+      "delay_word": "0xE7A40014",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F41C",
+      "word": "0x45010002",
+      "target": "0x0029F428",
+      "delay_word": "0x460020C6",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F430",
+      "word": "0x45010002",
+      "target": "0x0029F43C",
+      "delay_word": "0x46002886",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F458",
+      "word": "0x4501006D",
+      "target": "0x0029F610",
+      "delay_word": "0x0000102D",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F468",
+      "word": "0x45000007",
+      "target": "0x0029F488",
+      "delay_word": "0x00000000",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F478",
+      "word": "0x45000008",
+      "target": "0x0029F49C",
+      "delay_word": "0x24030003",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F480",
+      "word": "0x10000006",
+      "target": "0x0029F49C",
+      "delay_word": "0x24030001",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F490",
+      "word": "0x45000002",
+      "target": "0x0029F49C",
+      "delay_word": "0x24030003",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4AC",
+      "word": "0x10620022",
+      "target": "0x0029F538",
+      "delay_word": "0x46000987",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4B8",
+      "word": "0x10400005",
+      "target": "0x0029F4D0",
+      "delay_word": "0x24020001",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4C0",
+      "word": "0x10620008",
+      "target": "0x0029F4E4",
+      "delay_word": "0xC7A00008",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4C8",
+      "word": "0x10000044",
+      "target": "0x0029F5DC",
+      "delay_word": "0xC7A50000",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4D4",
+      "word": "0x1062002B",
+      "target": "0x0029F584",
+      "delay_word": "0xC7A00008",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F4DC",
+      "word": "0x1000003E",
+      "target": "0x0029F5D8",
+      "delay_word": "0x24020001",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F530",
+      "word": "0x10000027",
+      "target": "0x0029F5D0",
+      "delay_word": "0xE7A00004",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F57C",
+      "word": "0x10000013",
+      "target": "0x0029F5CC",
+      "delay_word": "0xE7A10008",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F6FC",
+      "word": "0x04410004",
+      "target": "0x0029F710",
+      "delay_word": "0x0200282D",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F730",
+      "word": "0x04400019",
+      "target": "0x0029F798",
+      "delay_word": "0xC7A20000",
+      "likely": false
+    },
+    {
+      "instruction": "0x0029F790",
+      "word": "0x10000002",
+      "target": "0x0029F79C",
+      "delay_word": "0xE6650004",
+      "likely": false
+    }
+  ],
+  "complete_stores_including_stack_and_delays": [
+    {
+      "instruction": "0x0029F374",
+      "word": "0x7FB00060",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 16,
+      "signed_offset": 96,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F378",
+      "word": "0x7FB10050",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 17,
+      "signed_offset": 80,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F380",
+      "word": "0x7FB20040",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 18,
+      "signed_offset": 64,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F388",
+      "word": "0x7FB30030",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 19,
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F394",
+      "word": "0xFFBF0020",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 31,
+      "signed_offset": 32,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029F400",
+      "word": "0xE7A20010",
+      "base_gpr": 29,
+      "source_fpr": 2,
+      "source_gpr": null,
+      "signed_offset": 16,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F404",
+      "word": "0xE7A10018",
+      "base_gpr": 29,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 24,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F40C",
+      "word": "0xE7A40014",
+      "base_gpr": 29,
+      "source_fpr": 4,
+      "source_gpr": null,
+      "signed_offset": 20,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F508",
+      "word": "0xAFA00000",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 0,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F52C",
+      "word": "0xE7A10008",
+      "base_gpr": 29,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F534",
+      "word": "0xE7A00004",
+      "base_gpr": 29,
+      "source_fpr": 0,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F554",
+      "word": "0xAFA00004",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 0,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F580",
+      "word": "0xE7A10008",
+      "base_gpr": 29,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F5A0",
+      "word": "0xAFA00008",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 0,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F5C8",
+      "word": "0xE7A10004",
+      "base_gpr": 29,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F5CC",
+      "word": "0xE7A00000",
+      "base_gpr": 29,
+      "source_fpr": 0,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F5F0",
+      "word": "0xE6400008",
+      "base_gpr": 18,
+      "source_fpr": 0,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F5FC",
+      "word": "0xE6450000",
+      "base_gpr": 18,
+      "source_fpr": 5,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F600",
+      "word": "0xE6440004",
+      "base_gpr": 18,
+      "source_fpr": 4,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F604",
+      "word": "0xE6610000",
+      "base_gpr": 19,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F608",
+      "word": "0xE6600008",
+      "base_gpr": 19,
+      "source_fpr": 0,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F60C",
+      "word": "0xE6620004",
+      "base_gpr": 19,
+      "source_fpr": 2,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F634",
+      "word": "0x7FB00060",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 16,
+      "signed_offset": 96,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F638",
+      "word": "0x7FB10050",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 17,
+      "signed_offset": 80,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F640",
+      "word": "0x7FB20040",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 18,
+      "signed_offset": 64,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F64C",
+      "word": "0x7FB30030",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 19,
+      "signed_offset": 48,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F650",
+      "word": "0x7FB40020",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 20,
+      "signed_offset": 32,
+      "size": 16
+    },
+    {
+      "instruction": "0x0029F658",
+      "word": "0xE7B50078",
+      "base_gpr": 29,
+      "source_fpr": 21,
+      "source_gpr": null,
+      "signed_offset": 120,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F660",
+      "word": "0xE7B40070",
+      "base_gpr": 29,
+      "source_fpr": 20,
+      "source_gpr": null,
+      "signed_offset": 112,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F668",
+      "word": "0xFFBF0010",
+      "base_gpr": 29,
+      "source_fpr": null,
+      "source_gpr": 31,
+      "signed_offset": 16,
+      "size": 8
+    },
+    {
+      "instruction": "0x0029F6BC",
+      "word": "0xE7A40000",
+      "base_gpr": 29,
+      "source_fpr": 4,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F6C4",
+      "word": "0xE7A50004",
+      "base_gpr": 29,
+      "source_fpr": 5,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F6CC",
+      "word": "0xE7A80008",
+      "base_gpr": 29,
+      "source_fpr": 8,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F74C",
+      "word": "0xE6660000",
+      "base_gpr": 19,
+      "source_fpr": 6,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F760",
+      "word": "0xE6650004",
+      "base_gpr": 19,
+      "source_fpr": 5,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F778",
+      "word": "0xE7A20000",
+      "base_gpr": 29,
+      "source_fpr": 2,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F780",
+      "word": "0xE7A00008",
+      "base_gpr": 29,
+      "source_fpr": 0,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F784",
+      "word": "0xE7A40004",
+      "base_gpr": 29,
+      "source_fpr": 4,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F788",
+      "word": "0xE6660000",
+      "base_gpr": 19,
+      "source_fpr": 6,
+      "source_gpr": null,
+      "signed_offset": 0,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F78C",
+      "word": "0xE6610008",
+      "base_gpr": 19,
+      "source_fpr": 1,
+      "source_gpr": null,
+      "signed_offset": 8,
+      "size": 4
+    },
+    {
+      "instruction": "0x0029F794",
+      "word": "0xE6650004",
+      "base_gpr": 19,
+      "source_fpr": 5,
+      "source_gpr": null,
+      "signed_offset": 4,
+      "size": 4
+    }
+  ],
+  "complete_actual_calls": [
+    {
+      "instruction": "0x0029F3A0",
+      "word": "0x0C0E4DA8",
+      "target": "0x003936A0",
+      "delay_word": "0x2406000C"
+    },
+    {
+      "instruction": "0x0029F3B0",
+      "word": "0x0C0E4DA8",
+      "target": "0x003936A0",
+      "delay_word": "0x2406000C"
+    },
+    {
+      "instruction": "0x0029F66C",
+      "word": "0x0C0E4DA8",
+      "target": "0x003936A0",
+      "delay_word": "0x00E0982D"
+    },
+    {
+      "instruction": "0x0029F6E4",
+      "word": "0x0C0DD212",
+      "target": "0x00374848",
+      "delay_word": "0x4600A306"
+    },
+    {
+      "instruction": "0x0029F6F4",
+      "word": "0x0C0DCC94",
+      "target": "0x00373250",
+      "delay_word": "0x0200202D"
+    },
+    {
+      "instruction": "0x0029F704",
+      "word": "0x0C0DCB30",
+      "target": "0x00372CC0",
+      "delay_word": "0x0280202D"
+    },
+    {
+      "instruction": "0x0029F728",
+      "word": "0x0C0DCC94",
+      "target": "0x00373250",
+      "delay_word": "0x0200202D"
+    }
+  ],
+  "complete_actual_returns": [
+    {
+      "instruction": "0x0029F624",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0070"
+    },
+    {
+      "instruction": "0x0029F7BC",
+      "word": "0x03E00008",
+      "delay_word": "0x27BD0080"
+    }
+  ],
+  "binary32_constant_sites": [
+    {
+      "function": "func_0029F370",
+      "high": "0x0029F440",
+      "low": "0x0029F444",
+      "transfer": "0x0029F448",
+      "high_word": "0x3C0138D1",
+      "low_word": "0x3421B717",
+      "transfer_word": "0x44810800",
+      "bits": "0x38D1B717",
+      "word_sha256": "0f2f3591427956b004ca17393783192e0f81858c06bb5496aa2cea004f1ee863"
+    }
+  ],
+  "full64_threshold_materializations": [
+    {
+      "start": "0x0029F710",
+      "end_exclusive": "0x0029F728",
+      "sequence": [
+        {
+          "instruction": "0x0029F710",
+          "word": "0x3405FC68"
+        },
+        {
+          "instruction": "0x0029F714",
+          "word": "0x00052C38"
+        },
+        {
+          "instruction": "0x0029F718",
+          "word": "0x34A5DB8B"
+        },
+        {
+          "instruction": "0x0029F71C",
+          "word": "0x00052C38"
+        },
+        {
+          "instruction": "0x0029F720",
+          "word": "0x34A58000"
+        },
+        {
+          "instruction": "0x0029F724",
+          "word": "0x00052BB8"
+        }
+      ],
+      "bits": "0x3F1A36E2E0000000",
+      "word_sha256": "564be83b341e452f4492fa81f7d5f215f446119f583c33a94b619cd1ee7287fd",
+      "comparison_call": "0x0029F728",
+      "comparison_word": "0x0C0DCC94",
+      "scope": "Genuine full64 ORI/DSLL operand; no narrowed float substitute or mapped original data."
+    }
+  ],
+  "incoming_abi_evidence": {
+    "0x0029F85C": {
+      "arguments": [
+        "loaded plane array + index*16",
+        "same plane array + (index+1)*16",
+        "SP+00",
+        "SP+10"
+      ],
+      "evidence": "Entire202-instruction808B caller manually read. Genuine four GPR pointer arguments; v0 gates third-plane intersection and later acceptance. The caller has no proved incoming root.",
+      "manual_read_context_identity": {
+        "address": "0x0029F7C8",
+        "end_exclusive": "0x0029FAF0",
+        "size": 808,
+        "sha256": "e981ce5e51b9f3d35320f795a5f2acb96a247c4070319e0bf73c199285af1fc1"
+      }
+    },
+    "0x0029F8B4": {
+      "arguments": [
+        "SP+00 prior point",
+        "SP+10 prior raw-cross endpoint",
+        "plane array + third index*16",
+        "SP+20 + resultindex*12"
+      ],
+      "evidence": "Entire202-instruction808B caller manually read. Genuine endpoint representation/output XYZ stride; return v0 gates solution processing. No table capacity or caller reachability claim.",
+      "manual_read_context_identity": {
+        "address": "0x0029F7C8",
+        "end_exclusive": "0x0029FAF0",
+        "size": 808,
+        "sha256": "e981ce5e51b9f3d35320f795a5f2acb96a247c4070319e0bf73c199285af1fc1"
+      }
+    }
+  },
+  "supporting_abi_evidence": [
+    {
+      "name": "func_00374848",
+      "address": "0x00374848",
+      "size": 64,
+      "file_offset": "0x00275848",
+      "original_sha256": "90845880ee36da0bf73f680d9b4e167faf8111964a7ee813b753d3b79c66513a",
+      "original_assembly": "build/functions/func_00374848.s",
+      "source": "src/runtime/fp_bit.c",
+      "source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "manual_read": "Complete original ABI entry; corresponding published GNU software path reused where present. Zero-fill original complete184B reviewed for selected stack-local/fill0/count12 contract; controlled trace/native model only. No dependency source or data award."
+    },
+    {
+      "name": "func_00373250",
+      "address": "0x00373250",
+      "size": 76,
+      "file_offset": "0x00274250",
+      "original_sha256": "4ed0022da1e7b9e817e88c398cbdc26e5f8f3ac2fb9a5ac952a722507bde9082",
+      "original_assembly": "build/functions/func_00373250.s",
+      "source": "src/runtime/fp_bit.c",
+      "source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "manual_read": "Complete original ABI entry; corresponding published GNU software path reused where present. Zero-fill original complete184B reviewed for selected stack-local/fill0/count12 contract; controlled trace/native model only. No dependency source or data award."
+    },
+    {
+      "name": "func_00372CC0",
+      "address": "0x00372CC0",
+      "size": 100,
+      "file_offset": "0x00273CC0",
+      "original_sha256": "dfa2db669262ae94a58bbbdbb118c92d20f2336d558ba132c0b928e8e839eae0",
+      "original_assembly": "build/functions/func_00372CC0.s",
+      "source": "src/runtime/fp_bit.c",
+      "source_sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190",
+      "manual_read": "Complete original ABI entry; corresponding published GNU software path reused where present. Zero-fill original complete184B reviewed for selected stack-local/fill0/count12 contract; controlled trace/native model only. No dependency source or data award."
+    },
+    {
+      "name": "func_003936A0",
+      "address": "0x003936A0",
+      "size": 184,
+      "file_offset": "0x002946A0",
+      "original_sha256": "c6de919ca7de024c2388c44000550f6dcb7e1ab430809189e16a2bf007fef5c1",
+      "original_assembly": "build/functions/func_003936A0.s",
+      "source": null,
+      "source_sha256": null,
+      "manual_read": "Complete original ABI entry; corresponding published GNU software path reused where present. Zero-fill original complete184B reviewed for selected stack-local/fill0/count12 contract; controlled trace/native model only. No dependency source or data award."
+    }
+  ],
+  "target_abi": {
+    "gcc323": {
+      "data_sha256": "fa84bc19893f39d44f514b9c60e88a391b8c8214590288aeeb4b4e932c7b2a66",
+      "words": [
+        4,
+        4,
+        4,
+        8,
+        4,
+        12,
+        16,
+        0,
+        4,
+        8,
+        0,
+        4,
+        8,
+        12
+      ],
+      "source_sha256": "8263d92ec8237c758862e80263687de788cbde7534da78df104a9508d4a04f2f",
+      "meanings": [
+        "float",
+        "u32",
+        "s32",
+        "soft64",
+        "pointer",
+        "Vec3",
+        "Vec4",
+        "Vec3X",
+        "Vec3Y",
+        "Vec3Z",
+        "Vec4X",
+        "Vec4Y",
+        "Vec4Z",
+        "Vec4W"
+      ],
+      "limit": "Actual target layout observer only; no original class identity or code/data award."
+    },
+    "gcc29": {
+      "data_sha256": "fa84bc19893f39d44f514b9c60e88a391b8c8214590288aeeb4b4e932c7b2a66",
+      "words": [
+        4,
+        4,
+        4,
+        8,
+        4,
+        12,
+        16,
+        0,
+        4,
+        8,
+        0,
+        4,
+        8,
+        12
+      ],
+      "source_sha256": "8263d92ec8237c758862e80263687de788cbde7534da78df104a9508d4a04f2f",
+      "meanings": [
+        "float",
+        "u32",
+        "s32",
+        "soft64",
+        "pointer",
+        "Vec3",
+        "Vec4",
+        "Vec3X",
+        "Vec3Y",
+        "Vec3Z",
+        "Vec4X",
+        "Vec4Y",
+        "Vec4Z",
+        "Vec4W"
+      ],
+      "limit": "Actual target layout observer only; no original class identity or code/data award."
+    }
+  },
+  "synthetic_fixture_evidence": {
+    "fixtures": 1317,
+    "executed_original_instructions": 134392,
+    "maximum_instructions": 125,
+    "input_sha256": "3380ddac6e8ff6e7b626be8f46435a5b62f4ffaa0f3b2a1b1c40581b9f41f1ae",
+    "header_sha256_lf": "3b94b376787316af4a8cdfc73b7408ff0ddc8ed013bc3bf9f4f80b67e571a121",
+    "header_sha256_on_disk": "3b94b376787316af4a8cdfc73b7408ff0ddc8ed013bc3bf9f4f80b67e571a121",
+    "native_checks": 149517,
+    "strict_guards": 9,
+    "branch_outcomes": {
+      "0x0029F408": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F41C": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F430": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F458": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F468": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F478": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F480": [
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F490": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F4AC": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F4B8": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F4C0": [
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F4D4": [
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F530": [
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F57C": [
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F6FC": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F730": [
+        [
+          false,
+          false
+        ],
+        [
+          true,
+          false
+        ]
+      ],
+      "0x0029F790": [
+        [
+          true,
+          false
+        ]
+      ]
+    },
+    "actual_trace_helpers": [],
+    "controlled_lower_calls": [
+      "0x00374848",
+      "0x00373250",
+      "0x00372CC0",
+      "0x003936A0"
+    ],
+    "native_production_sources": [
+      "src/game/plane_intersection.c"
+    ],
+    "native_flags": [
+      "-m32",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-strict-aliasing",
+      "-msse2",
+      "-mfpmath=sse"
+    ],
+    "limits": "Finite normal/zero host IEEE model only. All64memorywords/result/fourcounts/twelve-word full64 arguments and six-output-word events checked. Only selected original instruction counts; reviewed zero-fill/soft calls are controlled contracts. No original game data or hardware/exception precision claim."
+  },
+  "licensed_adaptation": {
+    "primary_pin": {
+      "commit": "da9c1330c618cff65598b97e881bb896d9ac84ad",
+      "path": "src/base/SbPlane.cpp",
+      "url": "https://raw.githubusercontent.com/coin3d/coin/da9c1330c618cff65598b97e881bb896d9ac84ad/src/base/SbPlane.cpp",
+      "size": 11748,
+      "sha256": "a7ab9e3c14f037da1c1e524b3d147b4a1e8a9462a373fecf70a58f41bcc59a97"
+    },
+    "compatible_methods": [
+      {
+        "first_line": 165,
+        "last_line": 207,
+        "lf_fragment_sha256": "9a9c8fee6ba5588809d096a4a703c776aefdee110e5ca155b4c8d758e1082de6"
+      },
+      {
+        "first_line": 301,
+        "last_line": 350,
+        "lf_fragment_sha256": "ad3bed07efcb98989f05d66eecac8256e1e94d5090d0022d81e3e68201969cd8"
+      }
+    ],
+    "complete_notice_bytes": 1732,
+    "complete_notice_sha256": "d352f04166a0c83263f42c70a6e8dfba50afa23f81f58df234e3579437fd47ea",
+    "source_sha256": "62037695dac92d57c48511f8c266d470dfb0b3fbd8b34a81a85f1894f60a6e66",
+    "license_sha256": "826061941dfa50a5f6b8c5fcd63e9a0c8d54d6d81f6e08570bd09046ecb1602e",
+    "correspondence": "Cross normal; dominant-coordinate two-equation point solve; infinite line-plane parameter and interpolated point. Licensed adaptation only; no inference that retail used Coin3D.",
+    "preserved_original_differences": [
+      "L1 cross threshold38D1B717 rather than squared-component FLT_EPSILON",
+      "Original maximum-component ties",
+      "Separate divisions rather than reciprocal multiply",
+      "Raw cross endpoint instead of normalized direction/class operations",
+      "Soft-full64 absolute threshold3F1A36E2E0000000",
+      "Captured/fresh alias order and exact publication stores"
+    ],
+    "supplemental_source": "Pinned SbLine.cpp manually read as context only; no import or award."
+  },
+  "unresolved_reachability": [
+    {
+      "name": "func_0029E8D8",
+      "address": "0x0029E8D8",
+      "size": 704,
+      "file_offset": "0x0019F8D8",
+      "original_sha256": "687ae0c4d4e42bc8bc5ca12d7c13c5c9b0d681f05faba7f3228517f3d4cef6dd",
+      "original_assembly": "build/functions/func_0029E8D8.s",
+      "terminal_jr": "0x0029EB90",
+      "terminal_delay_word": "0x27BD0060",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x0029EB98",
+      "actual_incoming_j_jals": [],
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "reason": "No actual whole-text J/JAL or allocated nonexec aligned pointer reference found. Complete bounds/algorithm are known, but computed entry reachability unresolved; no source recovery award proposed."
+    },
+    {
+      "name": "func_0029F7C8",
+      "address": "0x0029F7C8",
+      "size": 808,
+      "file_offset": "0x001A07C8",
+      "original_sha256": "e981ce5e51b9f3d35320f795a5f2acb96a247c4070319e0bf73c199285af1fc1",
+      "original_assembly": "build/functions/func_0029F7C8.s",
+      "terminal_jr": "0x0029FAE8",
+      "terminal_delay_word": "0x27BD0130",
+      "excluded_zero_alignment_bytes": 0,
+      "following_entry": "0x0029FAF0",
+      "actual_incoming_j_jals": [],
+      "allocated_nonexec_aligned_pointer_refs": [],
+      "reason": "No actual whole-text J/JAL or allocated nonexec aligned pointer reference found. Complete bounds/algorithm are known, but computed entry reachability unresolved; no source recovery award proposed."
+    }
+  ],
+  "boundary_notes": "Complete175+101 instructions1104B; actualJR31+delays and fourzeroalignment after eachbody. Two real JALs/full808B caller identity; caller root unresolved, deferred29E8D8 noaward. No switch/table/helper data award or source distortion. Author fullselected/C/header/helpers/native/trace/guards/proofs reviewed; independent peer/parent pending."
+}

@@ -1354,6 +1354,34 @@
     "__divdi3": {
       "address": "0x36fc88",
       "evidence": "Complete independently split1772B source-identical GNU signed64 division body; two original encoded JALs365858/391028 and full-width argument/result contexts. No new helper/global binding invented."
+    },
+    "__do_global_dtors": {
+      "address": "0x36fb60",
+      "evidence": "Actual selected original call/array/global source-local binding; no central alias changed by author."
+    },
+    "__do_global_ctors": {
+      "address": "0x36fbb8",
+      "evidence": "Actual selected original call/array/global source-local binding; no central alias changed by author."
+    },
+    "__CTOR_LIST__": {
+      "address": "0x406004",
+      "evidence": "Entire700-byte array406004: count173,173 aligned .text callback pointers andNULL; real original constructor base loads/signed sentinel/control agree. Source-local GNU pointer-array identity only."
+    },
+    "__DTOR_LIST__": {
+      "address": "0x4062c0",
+      "evidence": "Original source static cursor4021AC stores4062C4=base4062C0+4; complete476-byte array header117,117 .text callbacks andNULL independently checked. Source active dtors skips header and usesNULL termination. Identity-only writable data."
+    },
+    "_exit": {
+      "address": "0x100218",
+      "evidence": "Actual selected original call/array/global source-local binding; no central alias changed by author."
+    },
+    "srand": {
+      "address": "0x397168",
+      "evidence": "Actual encoded2A3374 JAL and whole40B seedcaller; complete16B original source-equivalent entry."
+    },
+    "rand": {
+      "address": "0x397178",
+      "evidence": "188 actual executable JAL targets; entire48B original source-equivalent function/terminal delay."
     }
   }
 }
