@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "source_language": "C++",
+  "functions": [
+    {
+      "name": "__cp_exception_info",
+      "source": "src/runtime/gcc/cp/exception.cc",
+      "source_kind": "cxx",
+      "source_language": "C++",
+      "address": "0x003735B0",
+      "file_offset": "0x002745B0",
+      "size": 36,
+      "original_sha256": "0ddecc1581519aac8fb08550c232332e5bdc280addcc098e8403e18f7eb9275c",
+      "status": "matching",
+      "reviewed": true,
+      "review_status": "whole_genuine_source_exact_target_ABI_native_parent_and_distinct_peer_passed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-ffunction-sections",
+        "-fno-common",
+        "-Isrc/runtime/gcc",
+        "-Isrc/runtime/gcc/cp",
+        "-Isrc/runtime/gcc/cp/inc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-Dmalloc=func_002AF140",
+        "-Dfree=func_002AF1E8",
+        "-fexceptions"
+      ],
+      "link": true,
+      "upstream_symbol": "__cp_exception_info",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/cp/exception.cc",
+      "upstream_source_sha256": "531ff987405ba67f07d68b2d1f049ab464b6ee3f8d042ed51d9e87a5270ec83e",
+      "source_provenance_manifest": "src/runtime/gcc/cxx_provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/gcc/cp/exception.cc",
+          "sha256": "531ff987405ba67f07d68b2d1f049ab464b6ee3f8d042ed51d9e87a5270ec83e"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/typeinfo",
+          "sha256": "c6e77173f1ab39bc19e03902183fe4b8bab0799d6340946fe276539d7311a430"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/exception",
+          "sha256": "6956b782485f45fe3dbc00caf8311e85df005e097d0d4d43ee511231e0d22232"
+        },
+        {
+          "path": "src/runtime/gcc/include/ginclude/stddef.h",
+          "sha256": "23ed59b27cda4de82a312f98e85a258f29d61711beb873a42a1f8404558894ae"
+        },
+        {
+          "path": "src/runtime/gcc/include/gansidecl.h",
+          "sha256": "dde0beeca62d66079f191df3277a8ff5d0d52d08431c58bc0bc3aa8cfbd2c8a8"
+        },
+        {
+          "path": "src/runtime/gcc/include/ansidecl.h",
+          "sha256": "5bf46e39aa9d210a7876ac52f26aa663040fbee86024bd4c79f8a23433c4679a"
+        },
+        {
+          "path": "src/runtime/gcc/eh-common.h",
+          "sha256": "d14e1de4b9f304e8cdc55e41bcc5289b30adb766c5932f7478acb497748ea29c"
+        }
+      ],
+      "notes": "Complete unchanged GNU method and genuine cached full object; actual canonical-only full relocated candidate exact. No runtime entry discovery beyond complete FDE; original invocation unresolved. Whole29-word genuine target ABI and two real no-arg callers,1568 finite original fixtures/80577 native checks and four wrong-source controls. Native logical layout/alias/provider limits retained; no helper/data/OS duplicate award. Canonical byte match award deferred to parent verification.",
+      "implementation_limits": [
+        "No discovered encoded incoming or callback publication: FDE-only complete boundaries; reachability unresolved.",
+        "Native bool1/long4/record36/handlers28/original32 differs target bool4/long8/record48/handlers32/original40; typed initialized logical fields compared, not raw layout equivalence.",
+        "GNU separate-TU cp_eh_info** versus authentic void** getter interface and mutable typed context-provider seam are explicit host contracts. No original class identity or thread/exception/OS/hardware behavior credit.",
+        "Old hook domain is nonnull live current record; predicate domain null or live record with initialized boolean0/1. Unread record fields and context fields preserved.",
+        "Native child diagnostic mode allows actual null-mutant fault status without a claimed original OS model. All deliberate mutations are private generated sources.",
+        "No selected target recompilation, source patch, alternate flag search, synthetic mapper, cropped function comparison or data/helper duplicate award. Authentic GCC323 legacy-header ABI compilation failure retained."
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_symbol": "__cp_exception_info",
+      "compiled_size": 36,
+      "compiled_sha256": "0ddecc1581519aac8fb08550c232332e5bdc280addcc098e8403e18f7eb9275c",
+      "author_notes_snapshot": "Complete unchanged GNU method and genuine cached full object; actual canonical-only full relocated candidate exact. No runtime entry discovery beyond complete FDE; original invocation unresolved. Whole29-word genuine target ABI and two real no-arg callers,1568 finite original fixtures/80577 native checks and four wrong-source controls. Native logical layout/alias/provider limits retained; no helper/data/OS duplicate award. Canonical byte match award deferred to parent verification.",
+      "evidence": [
+        "Complete unchanged genuine GNU method, full cached published TU and complete canonical original-VMA link reproduce every selected byte; both retained cached GCC29 recipes exact. Genuine29-word ABI andtwo actual noarg callers verified; newer legacy-header failure retained.",
+        "Parent and distinct peer preserve450 RAW before archived publication annotation;9+15 whole qualified dictionaries/27 strict RAW artifacts/six whole targetELFs/fifteen nativeobjects/five actual ImageHlp-qualified PEs reproduce.1568 original fixtures/32928 instructions/all22 selected+10support words/80577 nativechecks/nine guards/four real wrong-source controls. Provider switches slots/records and mutates value/caught; helper returns fresh live slot. Typed hostbool1/long4/record36 vsEEbool4/long8/record48/GNU interTU alias contract remains explicit. CompleteFDE boundary does not establish invocation. Historical445 importpath failure retained and exact historicalindex pinned; no helper/data/class/OS/thread credit."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "whole_exact_original_bytes": 36,
+        "cached_full_TU_reused": true,
+        "source_unchanged": true,
+        "reachability": "unresolved",
+        "native_checks": 80577
+      }
+    },
+    {
+      "name": "uncaught_exception__Fv",
+      "source": "src/runtime/gcc/cp/exception.cc",
+      "source_kind": "cxx",
+      "source_language": "C++",
+      "address": "0x00373B28",
+      "file_offset": "0x00274B28",
+      "size": 52,
+      "original_sha256": "f37540491fbc947189d919647061a4cf9f1cad5344f1eda2e5884e489d3fff05",
+      "status": "matching",
+      "reviewed": true,
+      "review_status": "whole_genuine_source_exact_target_ABI_native_parent_and_distinct_peer_passed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-ffunction-sections",
+        "-fno-common",
+        "-Isrc/runtime/gcc",
+        "-Isrc/runtime/gcc/cp",
+        "-Isrc/runtime/gcc/cp/inc",
+        "-Isrc/runtime/gcc/include",
+        "-Isrc/runtime/gcc/include/config",
+        "-Isrc/runtime/gcc/include/ginclude",
+        "-Dmalloc=func_002AF140",
+        "-Dfree=func_002AF1E8",
+        "-fexceptions"
+      ],
+      "link": true,
+      "upstream_symbol": "std::uncaught_exception",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/cp/exception.cc",
+      "upstream_source_sha256": "531ff987405ba67f07d68b2d1f049ab464b6ee3f8d042ed51d9e87a5270ec83e",
+      "source_provenance_manifest": "src/runtime/gcc/cxx_provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/gcc/cp/exception.cc",
+          "sha256": "531ff987405ba67f07d68b2d1f049ab464b6ee3f8d042ed51d9e87a5270ec83e"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/typeinfo",
+          "sha256": "c6e77173f1ab39bc19e03902183fe4b8bab0799d6340946fe276539d7311a430"
+        },
+        {
+          "path": "src/runtime/gcc/cp/inc/exception",
+          "sha256": "6956b782485f45fe3dbc00caf8311e85df005e097d0d4d43ee511231e0d22232"
+        },
+        {
+          "path": "src/runtime/gcc/include/ginclude/stddef.h",
+          "sha256": "23ed59b27cda4de82a312f98e85a258f29d61711beb873a42a1f8404558894ae"
+        },
+        {
+          "path": "src/runtime/gcc/include/gansidecl.h",
+          "sha256": "dde0beeca62d66079f191df3277a8ff5d0d52d08431c58bc0bc3aa8cfbd2c8a8"
+        },
+        {
+          "path": "src/runtime/gcc/include/ansidecl.h",
+          "sha256": "5bf46e39aa9d210a7876ac52f26aa663040fbee86024bd4c79f8a23433c4679a"
+        },
+        {
+          "path": "src/runtime/gcc/eh-common.h",
+          "sha256": "d14e1de4b9f304e8cdc55e41bcc5289b30adb766c5932f7478acb497748ea29c"
+        }
+      ],
+      "notes": "Complete unchanged GNU method and genuine cached full object; actual canonical-only full relocated candidate exact. No runtime entry discovery beyond complete FDE; original invocation unresolved. Whole29-word genuine target ABI and two real no-arg callers,1568 finite original fixtures/80577 native checks and four wrong-source controls. Native logical layout/alias/provider limits retained; no helper/data/OS duplicate award. Canonical byte match award deferred to parent verification.",
+      "implementation_limits": [
+        "No discovered encoded incoming or callback publication: FDE-only complete boundaries; reachability unresolved.",
+        "Native bool1/long4/record36/handlers28/original32 differs target bool4/long8/record48/handlers32/original40; typed initialized logical fields compared, not raw layout equivalence.",
+        "GNU separate-TU cp_eh_info** versus authentic void** getter interface and mutable typed context-provider seam are explicit host contracts. No original class identity or thread/exception/OS/hardware behavior credit.",
+        "Old hook domain is nonnull live current record; predicate domain null or live record with initialized boolean0/1. Unread record fields and context fields preserved.",
+        "Native child diagnostic mode allows actual null-mutant fault status without a claimed original OS model. All deliberate mutations are private generated sources.",
+        "No selected target recompilation, source patch, alternate flag search, synthetic mapper, cropped function comparison or data/helper duplicate award. Authentic GCC323 legacy-header ABI compilation failure retained."
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "compiled_symbol": "uncaught_exception__Fv",
+      "compiled_size": 52,
+      "compiled_sha256": "f37540491fbc947189d919647061a4cf9f1cad5344f1eda2e5884e489d3fff05",
+      "author_notes_snapshot": "Complete unchanged GNU method and genuine cached full object; actual canonical-only full relocated candidate exact. No runtime entry discovery beyond complete FDE; original invocation unresolved. Whole29-word genuine target ABI and two real no-arg callers,1568 finite original fixtures/80577 native checks and four wrong-source controls. Native logical layout/alias/provider limits retained; no helper/data/OS duplicate award. Canonical byte match award deferred to parent verification.",
+      "evidence": [
+        "Complete unchanged genuine GNU method, full cached published TU and complete canonical original-VMA link reproduce every selected byte; both retained cached GCC29 recipes exact. Genuine29-word ABI andtwo actual noarg callers verified; newer legacy-header failure retained.",
+        "Parent and distinct peer preserve450 RAW before archived publication annotation;9+15 whole qualified dictionaries/27 strict RAW artifacts/six whole targetELFs/fifteen nativeobjects/five actual ImageHlp-qualified PEs reproduce.1568 original fixtures/32928 instructions/all22 selected+10support words/80577 nativechecks/nine guards/four real wrong-source controls. Provider switches slots/records and mutates value/caught; helper returns fresh live slot. Typed hostbool1/long4/record36 vsEEbool4/long8/record48/GNU interTU alias contract remains explicit. CompleteFDE boundary does not establish invocation. Historical445 importpath failure retained and exact historicalindex pinned; no helper/data/class/OS/thread credit."
+      ],
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "whole_exact_original_bytes": 52,
+        "cached_full_TU_reused": true,
+        "source_unchanged": true,
+        "reachability": "unresolved",
+        "native_checks": 80577
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "disc_tooling",
+    "selected_functions": 2,
+    "selected_original_bytes": 88,
+    "new_exact_functions": 2,
+    "new_exact_bytes": 88,
+    "freeze": {
+      "path": "build/gnu_exception_queries/frozen_inputs.json",
+      "raw_sha256": "f7ae0a40c447f406f005805c0e60795a88f32b12a76c776f7291f4b6ff396476",
+      "count": 450
+    }
+  }
+}

@@ -1,0 +1,12 @@
+#include "george/hashtable_clear_duplicates.h"
+
+extern void *D_003F21B8[];
+#include "hashtable_clear_duplicates_template.h"
+
+GEORGE_CLEAR_PREFIX_FUNCTION(func_0024B7D0)
+GEORGE_CLEAR_PREFIX_FUNCTION(func_0024BF58)
+GEORGE_CLEAR_PREFIX_FUNCTION(func_0024C320)
+GEORGE_CLEAR_PREFIX_FUNCTION(func_0024C6E8)
+GEORGE_CLEAR_PREFIX_FUNCTION(func_0024CE78)
+
+#undef GEORGE_CLEAR_PREFIX_FUNCTION
