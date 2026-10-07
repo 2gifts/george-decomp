@@ -21,10 +21,10 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C/C++ | 1228 functions reviewed; 254 match (5,504 bytes) |
+| Recovered game C/C++ | 1234 functions reviewed; 254 match (5,504 bytes) |
 | Reused upstream C/C++ | 80 match (11,192 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`, `bcopy`, `index`) |
-| C source | 1435 functions reviewed; 323 match (15,308 bytes) |
-| C++ source | 25 functions reviewed; 11 match (1,388 bytes) |
+| C source | 1441 functions reviewed; 323 match (15,308 bytes) |
+| C++ source | 27 functions reviewed; 11 match (1,388 bytes) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
@@ -39,6 +39,8 @@ and original data retained in the hybrid build do **not** count as C/C++ progres
 [Vector insertion](docs/vector_insert.md) reuses the original-era SGI template and adds a byte-exact unsigned comparator.
 
 [Memory and string reuse](docs/runtime_strings.md) adds five complete licensed routines with measured target ABI and qualified native memory contracts.
+
+[Resolver and container lifetime](docs/completion_resolver.md) combines reconstructed callbacks with two complete licensed SGI methods.
 
 ## Build on Windows
 
