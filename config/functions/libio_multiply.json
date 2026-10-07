@@ -1,0 +1,678 @@
+{
+  "functions": [
+    {
+      "name": "func_0035EB28",
+      "compiled_symbol": "s2b",
+      "upstream_symbol": "s2b",
+      "address": "0x0035EB28",
+      "file_offset": "0x0025FB28",
+      "size": 312,
+      "original_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370",
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+      ],
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Full unchanged FSF1993/1994 GNU notice/compiler exception plus full AT&T1991 notice retained in source, LICENSES/libio-floatconv-notices.txt and docs/libio_multiply.md.",
+      "entry_evidence": {
+        "boundary": {
+          "address": "0x0035EB28",
+          "name": "func_0035EB28",
+          "size": 312,
+          "instructions": 78,
+          "scanner_extent": 312,
+          "excluded_zero_padding": 0,
+          "following_entry": "0x0035EC60",
+          "file_offset": "0x0025FB28",
+          "section": ".text",
+          "original_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370",
+          "assembly": {
+            "path": "build/functions/func_0035EB28.s",
+            "bytes": 4938,
+            "raw_sha256": "ab6cbc51c10623cf01f3c224f291e4adf86b94dff31071efea9154e482ebe67b",
+            "role": "Whole original assembly geometry; separate manual attribution."
+          },
+          "terminal_pc": "0x0035EC58",
+          "terminal_word": "0x03E00008",
+          "terminal_delay_word": "0x27BD0070",
+          "terminal_is_JR31": true,
+          "overlapping_current_records": [],
+          "predecessor": {
+            "address": "0x0035EA58",
+            "name": "func_0035EA58",
+            "size": 208,
+            "instructions": 52,
+            "scanner_extent": 208,
+            "excluded_zero_padding": 0,
+            "following_entry": "0x0035EB28",
+            "file_offset": "0x0025FA58",
+            "section": ".text",
+            "original_sha256": "cb6c17bbb7e0b06bec5876885f1dda173b513b1094ce0e71fa45003f65a9a305",
+            "assembly": {
+              "path": "build/functions/func_0035EA58.s",
+              "bytes": 3332,
+              "raw_sha256": "831960e36ed7e04d841abb83459df77741fcd838ab86c5e79762b8a8f21b997a",
+              "role": "Whole original assembly geometry; separate manual attribution."
+            },
+            "terminal_pc": "0x0035EB20",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0030",
+            "terminal_is_JR31": true,
+            "overlapping_current_records": []
+          }
+        },
+        "direct_references": [
+          {
+            "pc": "0x00360064",
+            "word": "0x0C0D7ACA",
+            "target": "0x0035EB28",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": []
+            }
+          }
+        ],
+        "source_free_scope": "build/mprec_second_multiply_scope/scope.json"
+      },
+      "validation": {
+        "mode": "matching_only",
+        "all_whole_default_comparisons": [
+          {
+            "name": "func_0035EB28",
+            "compiled_symbol": "s2b",
+            "address": "0x0035EB28",
+            "size": 312,
+            "source": "src/runtime/libio/floatconv.c",
+            "compiler_profile": "gcc29",
+            "compile_flags": [
+              "-O2",
+              "-G0",
+              "-mfp64",
+              "-fno-builtin",
+              "-fno-common",
+              "-ffunction-sections",
+              "-fdata-sections",
+              "-I",
+              "src/runtime/libio",
+              "-I",
+              "src/runtime/sgi/libio",
+              "-I",
+              "src/runtime/sgi/config",
+              "-idirafter",
+              "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+            ],
+            "link_symbols": {},
+            "comparison": {
+              "identical": true,
+              "expected_size": 312,
+              "compiled_size": 312,
+              "different_bytes": 0,
+              "first_different_offsets": [],
+              "unresolved_relocations": [],
+              "expected_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370",
+              "compiled_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370"
+            },
+            "whole_elf": {
+              "path": "build/mprec_second_multiply/linked/gcc29/s2b/link-9bh4kdoi/function.elf",
+              "bytes": 3572,
+              "sha256": "e39c2a61190dde4a826667262891988199a0d0755ebc3748a7452e08a9be6394",
+              "complete_function_address": "0x0035EB28",
+              "complete_function_size": 312
+            },
+            "whole_input_object_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+          },
+          {
+            "name": "func_0035EB28",
+            "compiled_symbol": "s2b",
+            "address": "0x0035EB28",
+            "size": 312,
+            "source": "src/runtime/libio/floatconv.c",
+            "compiler_profile": "gcc323",
+            "compile_flags": [
+              "-O2",
+              "-G0",
+              "-mfp64",
+              "-fno-builtin",
+              "-fno-common",
+              "-ffunction-sections",
+              "-fdata-sections",
+              "-I",
+              "src/runtime/libio",
+              "-I",
+              "src/runtime/sgi/libio",
+              "-I",
+              "src/runtime/sgi/config",
+              "-idirafter",
+              "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+            ],
+            "link_symbols": {},
+            "comparison": {
+              "identical": false,
+              "expected_size": 312,
+              "compiled_size": 276,
+              "different_bytes": 261,
+              "first_different_offsets": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                6,
+                8,
+                10
+              ],
+              "unresolved_relocations": [],
+              "expected_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370",
+              "compiled_sha256": "0271ba50fded41adc8ddf3a8ea39fa051d87c9eca2422207ef1cf26ca3a1420a"
+            },
+            "whole_elf": {
+              "path": "build/mprec_second_multiply/linked/gcc323/s2b/link-ys_6ogpp/function.elf",
+              "bytes": 3540,
+              "sha256": "728259559cba73a86daa452f80223d88d89af5e3f79fac29fc4c62b49f57a201",
+              "complete_function_address": "0x0035EB28",
+              "complete_function_size": 276
+            },
+            "whole_input_object_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+          }
+        ],
+        "genuine_fresh_ABI_callers": true,
+        "primary_source_recompiled": false,
+        "no_native_or_CPU_execution_claim": true,
+        "parent_matching_only_amendment": ".local/mprec_multiply_matching_only_parent_amendment.json"
+      },
+      "implementation_limits": "Genuine source interfaces consume valid initialized Bigint fields/storage, representable counts/shifts/byte ranges and successful allocation. Product output disjoint from both operands; decimal prefix/count/pointer routes consistent. No generic heap/OS, original class/lifetime, portable-C, CPU/hardware, native/coverage or inherited test-count claim. No helper/data/deferred credit.",
+      "link": true,
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "complete_original_source_ABI_contained_parent_and_distinct_final_matching_only_reviews_passed",
+      "compiled_size": 312,
+      "compiled_sha256": "951da1db907a45dabe38549dcba5f5e34879a7d830cef8a629d8b6ab3c413370",
+      "independent_review": "Register complete unchanged genuine GNU s2b/mult with GCC29 after full original876B identity, genuine source/licenses/cachedobjects/actual-M, measured targetABI, contained root/author/distinct final195 replays and exact185 history bridge. link:true. Only approved plain-static and numeric selected aliases; all old values and source-local allocation graph unchanged. Matching-only no new selected/native/CPU/model/coverage claim; G323 honest nonmatches. Preserve full195 author doc separately when publication status annotation changes it.",
+      "final_review": {
+        "freeze": {
+          "path": "build/mprec_second_multiply/frozen_inputs.json",
+          "bytes": 44837,
+          "raw_sha256": "5f7adff2cdcba8d15237890ba37d29e7c50b06ec2769fa8f843be15ba56d550a"
+        },
+        "parent": {
+          "path": ".local/libio_multiply_final_root_review.json",
+          "bytes": 2238,
+          "raw_sha256": "50101d6cf9ee05d48ab905494ca05fc08e5b3a4bed8b84f99a9185b1c47d71be"
+        },
+        "distinct_peer": {
+          "path": ".local/libio_mult_peer00001/independent_audit.json",
+          "bytes": 12062,
+          "raw_sha256": "e9ee1bba83365f91606779402493349123007b085f288b5f9ce90cd3b719a8f8"
+        }
+      }
+    },
+    {
+      "name": "func_0035EDE0",
+      "compiled_symbol": "mult",
+      "upstream_symbol": "mult",
+      "address": "0x0035EDE0",
+      "file_offset": "0x0025FDE0",
+      "size": 564,
+      "original_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8",
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+      ],
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Full unchanged FSF1993/1994 GNU notice/compiler exception plus full AT&T1991 notice retained in source, LICENSES/libio-floatconv-notices.txt and docs/libio_multiply.md.",
+      "entry_evidence": {
+        "boundary": {
+          "address": "0x0035EDE0",
+          "name": "func_0035EDE0",
+          "size": 564,
+          "instructions": 141,
+          "scanner_extent": 568,
+          "excluded_zero_padding": 4,
+          "following_entry": "0x0035F018",
+          "file_offset": "0x0025FDE0",
+          "section": ".text",
+          "original_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8",
+          "assembly": {
+            "path": "build/functions/func_0035EDE0.s",
+            "bytes": 8998,
+            "raw_sha256": "a67bc351b622b11add4b5fc9b7cf1e7e1cfcea3b3e10198e3a04db2a69e1e1fc",
+            "role": "Whole original assembly geometry; separate manual attribution."
+          },
+          "terminal_pc": "0x0035F00C",
+          "terminal_word": "0x03E00008",
+          "terminal_delay_word": "0x27BD0070",
+          "terminal_is_JR31": true,
+          "overlapping_current_records": [],
+          "predecessor": {
+            "address": "0x0035EDA8",
+            "name": "func_0035EDA8",
+            "size": 56,
+            "instructions": 14,
+            "scanner_extent": 56,
+            "excluded_zero_padding": 0,
+            "following_entry": "0x0035EDE0",
+            "file_offset": "0x0025FDA8",
+            "section": ".text",
+            "original_sha256": "b662f8e90c341bead6caea7003a381f198727fa59e1a796b84c1d452525b2baf",
+            "assembly": {
+              "path": "build/functions/func_0035EDA8.s",
+              "bytes": 966,
+              "raw_sha256": "7e2587c1a7e6fedafd5e93c234b28a0e8d7dc0da0492423abe4cbe1847600595",
+              "role": "Whole original assembly geometry; separate manual attribution."
+            },
+            "terminal_pc": "0x0035EDD8",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_word": "0x27BD0020",
+            "terminal_is_JR31": true,
+            "overlapping_current_records": []
+          }
+        },
+        "direct_references": [
+          {
+            "pc": "0x0036061C",
+            "word": "0x0C0D7B78",
+            "target": "0x0035EDE0",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": []
+            }
+          },
+          {
+            "pc": "0x00361554",
+            "word": "0x0C0D7B78",
+            "target": "0x0035EDE0",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x00360980",
+              "name": "func_00360980",
+              "size": 4544,
+              "instructions": 1136,
+              "scanner_extent": 4544,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00361B40",
+              "file_offset": "0x00261980",
+              "section": ".text",
+              "original_sha256": "3ca0f001c1e02d57a1cb73dabb3cd86001f08611d9d869365ee2ab020f0ac671",
+              "assembly": {
+                "path": "build/functions/func_00360980.s",
+                "bytes": 72966,
+                "raw_sha256": "184bad5e36bf5511296d0d42ad6cd7ce757db1cb594f3e0030f73a630506a683",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00361B38",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0250",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": []
+            }
+          }
+        ],
+        "source_free_scope": "build/mprec_second_multiply_scope/scope.json"
+      },
+      "validation": {
+        "mode": "matching_only",
+        "all_whole_default_comparisons": [
+          {
+            "name": "func_0035EDE0",
+            "compiled_symbol": "mult",
+            "address": "0x0035EDE0",
+            "size": 564,
+            "source": "src/runtime/libio/floatconv.c",
+            "compiler_profile": "gcc29",
+            "compile_flags": [
+              "-O2",
+              "-G0",
+              "-mfp64",
+              "-fno-builtin",
+              "-fno-common",
+              "-ffunction-sections",
+              "-fdata-sections",
+              "-I",
+              "src/runtime/libio",
+              "-I",
+              "src/runtime/sgi/libio",
+              "-I",
+              "src/runtime/sgi/config",
+              "-idirafter",
+              "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+            ],
+            "link_symbols": {},
+            "comparison": {
+              "identical": true,
+              "expected_size": 564,
+              "compiled_size": 564,
+              "different_bytes": 0,
+              "first_different_offsets": [],
+              "unresolved_relocations": [],
+              "expected_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8",
+              "compiled_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8"
+            },
+            "whole_elf": {
+              "path": "build/mprec_second_multiply/linked/gcc29/mult/link-qiygub7w/function.elf",
+              "bytes": 4508,
+              "sha256": "06b05b6aeab2d3f16d5476bf7bfba13fbcfb38478b1b8b69274b4eb8e3313c1d",
+              "complete_function_address": "0x0035EDE0",
+              "complete_function_size": 564
+            },
+            "whole_input_object_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+          },
+          {
+            "name": "func_0035EDE0",
+            "compiled_symbol": "mult",
+            "address": "0x0035EDE0",
+            "size": 564,
+            "source": "src/runtime/libio/floatconv.c",
+            "compiler_profile": "gcc323",
+            "compile_flags": [
+              "-O2",
+              "-G0",
+              "-mfp64",
+              "-fno-builtin",
+              "-fno-common",
+              "-ffunction-sections",
+              "-fdata-sections",
+              "-I",
+              "src/runtime/libio",
+              "-I",
+              "src/runtime/sgi/libio",
+              "-I",
+              "src/runtime/sgi/config",
+              "-idirafter",
+              "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+            ],
+            "link_symbols": {},
+            "comparison": {
+              "identical": false,
+              "expected_size": 564,
+              "compiled_size": 528,
+              "different_bytes": 493,
+              "first_different_offsets": [
+                4,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "unresolved_relocations": [],
+              "expected_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8",
+              "compiled_sha256": "bbb99c1c0a8dca599063c0eabc5a588373da7a6a22fe24d8abed45eff03c9404"
+            },
+            "whole_elf": {
+              "path": "build/mprec_second_multiply/linked/gcc323/mult/link-u4e8s5q5/function.elf",
+              "bytes": 4468,
+              "sha256": "9c68e8626fd125dbe4667a9912057855d15ad0f47e451c41533c2815f4aaf820",
+              "complete_function_address": "0x0035EDE0",
+              "complete_function_size": 528
+            },
+            "whole_input_object_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+          }
+        ],
+        "genuine_fresh_ABI_callers": true,
+        "primary_source_recompiled": false,
+        "no_native_or_CPU_execution_claim": true,
+        "parent_matching_only_amendment": ".local/mprec_multiply_matching_only_parent_amendment.json"
+      },
+      "implementation_limits": "Genuine source interfaces consume valid initialized Bigint fields/storage, representable counts/shifts/byte ranges and successful allocation. Product output disjoint from both operands; decimal prefix/count/pointer routes consistent. No generic heap/OS, original class/lifetime, portable-C, CPU/hardware, native/coverage or inherited test-count claim. No helper/data/deferred credit.",
+      "link": true,
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "complete_original_source_ABI_contained_parent_and_distinct_final_matching_only_reviews_passed",
+      "compiled_size": 564,
+      "compiled_sha256": "10c1c05726d838c76a117374da8bbf93efec214b2cd5476f1dd5745de3f6d0b8",
+      "independent_review": "Register complete unchanged genuine GNU s2b/mult with GCC29 after full original876B identity, genuine source/licenses/cachedobjects/actual-M, measured targetABI, contained root/author/distinct final195 replays and exact185 history bridge. link:true. Only approved plain-static and numeric selected aliases; all old values and source-local allocation graph unchanged. Matching-only no new selected/native/CPU/model/coverage claim; G323 honest nonmatches. Preserve full195 author doc separately when publication status annotation changes it.",
+      "final_review": {
+        "freeze": {
+          "path": "build/mprec_second_multiply/frozen_inputs.json",
+          "bytes": 44837,
+          "raw_sha256": "5f7adff2cdcba8d15237890ba37d29e7c50b06ec2769fa8f843be15ba56d550a"
+        },
+        "parent": {
+          "path": ".local/libio_multiply_final_root_review.json",
+          "bytes": 2238,
+          "raw_sha256": "50101d6cf9ee05d48ab905494ca05fc08e5b3a4bed8b84f99a9185b1c47d71be"
+        },
+        "distinct_peer": {
+          "path": ".local/libio_mult_peer00001/independent_audit.json",
+          "bytes": 12062,
+          "raw_sha256": "e9ee1bba83365f91606779402493349123007b085f288b5f9ce90cd3b719a8f8"
+        }
+      }
+    }
+  ]
+}

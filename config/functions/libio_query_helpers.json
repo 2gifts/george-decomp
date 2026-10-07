@@ -1,0 +1,1604 @@
+{
+  "functions": [
+    {
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+      ],
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Unchanged FSF1993/1994 GPL2-or-later with exact GNU-compiler linking exception, plus complete David M. Gay/AT&T1991 permissive notice; both retained in source and docs/libio_bigint.md.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "name": "func_0035F408",
+      "compiled_symbol": "ulp",
+      "upstream_symbol": "ulp",
+      "address": "0x0035F408",
+      "file_offset": "0x00260408",
+      "size": 148,
+      "original_sha256": "5bef4d5ff531cea52c108b21a985f44030c70926a6e60844ad9890887e00761c",
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_exact_primary": true,
+      "compiled_size": 148,
+      "compiled_sha256": "5bef4d5ff531cea52c108b21a985f44030c70926a6e60844ad9890887e00761c",
+      "genuine_method_span": {
+        "symbol": "ulp",
+        "start": 22478,
+        "end": 23194,
+        "bytes": 716,
+        "raw_git_blob_sha256": "3629f6ca2e8ac5b570deb62034fb1e49e89080d039c84828c0bfb569eb90c868",
+        "declaration_start": 22464,
+        "entire_declared_method_bytes": 730,
+        "entire_declared_method_sha256": "3628fa88144375a95cb0e3a49ef8d39831043e30e9c213f64aa28051d57380e6",
+        "return_storage_declaration": "static double",
+        "definition_header": "static double\nulp\n#ifdef KR_headers\n        (x) double x;\n#else\n        (double x)\n#endif\n",
+        "qualification": "Complete unchanged primary method declaration/body lexical span, including alternative KR/prototype branches; no authored source or new compilation."
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "pc": "0x00360034",
+            "word": "0x0C0D7D02",
+            "target": "0x0035F408",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x0035F740",
+                "name": "func_0035F740",
+                "size": 204,
+                "instructions": 51,
+                "scanner_extent": 208,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x0035F810",
+                "file_offset": "0x00260740",
+                "section": ".text",
+                "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                "assembly": {
+                  "path": "build/functions/func_0035F740.s",
+                  "bytes": 3314,
+                  "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x0035F804",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0050",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F5D0",
+                  "name": "func_0035F5D0",
+                  "size": 364,
+                  "instructions": 91,
+                  "scanner_extent": 368,
+                  "excluded_zero_padding": 4,
+                  "following_entry": "0x0035F740",
+                  "file_offset": "0x002605D0",
+                  "section": ".text",
+                  "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                  "assembly": {
+                    "path": "build/functions/func_0035F5D0.s",
+                    "bytes": 5923,
+                    "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x0035F734",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0090",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [
+                    {
+                      "name": "func_0035F5D0",
+                      "address": "0x0035F5D0",
+                      "size": 364,
+                      "source": "src/runtime/libio/floatconv.c"
+                    }
+                  ]
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          },
+          {
+            "pc": "0x003601A8",
+            "word": "0x0C0D7D02",
+            "target": "0x0035F408",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x0035F740",
+                "name": "func_0035F740",
+                "size": 204,
+                "instructions": 51,
+                "scanner_extent": 208,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x0035F810",
+                "file_offset": "0x00260740",
+                "section": ".text",
+                "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                "assembly": {
+                  "path": "build/functions/func_0035F740.s",
+                  "bytes": 3314,
+                  "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x0035F804",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0050",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F5D0",
+                  "name": "func_0035F5D0",
+                  "size": 364,
+                  "instructions": 91,
+                  "scanner_extent": 368,
+                  "excluded_zero_padding": 4,
+                  "following_entry": "0x0035F740",
+                  "file_offset": "0x002605D0",
+                  "section": ".text",
+                  "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                  "assembly": {
+                    "path": "build/functions/func_0035F5D0.s",
+                    "bytes": 5923,
+                    "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x0035F734",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0090",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [
+                    {
+                      "name": "func_0035F5D0",
+                      "address": "0x0035F5D0",
+                      "size": 364,
+                      "source": "src/runtime/libio/floatconv.c"
+                    }
+                  ]
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          },
+          {
+            "pc": "0x00360334",
+            "word": "0x0C0D7D02",
+            "target": "0x0035F408",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x0035F740",
+                "name": "func_0035F740",
+                "size": 204,
+                "instructions": 51,
+                "scanner_extent": 208,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x0035F810",
+                "file_offset": "0x00260740",
+                "section": ".text",
+                "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                "assembly": {
+                  "path": "build/functions/func_0035F740.s",
+                  "bytes": 3314,
+                  "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x0035F804",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0050",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F5D0",
+                  "name": "func_0035F5D0",
+                  "size": 364,
+                  "instructions": 91,
+                  "scanner_extent": 368,
+                  "excluded_zero_padding": 4,
+                  "following_entry": "0x0035F740",
+                  "file_offset": "0x002605D0",
+                  "section": ".text",
+                  "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                  "assembly": {
+                    "path": "build/functions/func_0035F5D0.s",
+                    "bytes": 5923,
+                    "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x0035F734",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0090",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [
+                    {
+                      "name": "func_0035F5D0",
+                      "address": "0x0035F5D0",
+                      "size": 364,
+                      "source": "src/runtime/libio/floatconv.c"
+                    }
+                  ]
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          },
+          {
+            "pc": "0x0036044C",
+            "word": "0x0C0D7D02",
+            "target": "0x0035F408",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x0035F740",
+                "name": "func_0035F740",
+                "size": 204,
+                "instructions": 51,
+                "scanner_extent": 208,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x0035F810",
+                "file_offset": "0x00260740",
+                "section": ".text",
+                "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                "assembly": {
+                  "path": "build/functions/func_0035F740.s",
+                  "bytes": 3314,
+                  "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x0035F804",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0050",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F5D0",
+                  "name": "func_0035F5D0",
+                  "size": 364,
+                  "instructions": 91,
+                  "scanner_extent": 368,
+                  "excluded_zero_padding": 4,
+                  "following_entry": "0x0035F740",
+                  "file_offset": "0x002605D0",
+                  "section": ".text",
+                  "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                  "assembly": {
+                    "path": "build/functions/func_0035F5D0.s",
+                    "bytes": 5923,
+                    "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x0035F734",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0090",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [
+                    {
+                      "name": "func_0035F5D0",
+                      "address": "0x0035F5D0",
+                      "size": 364,
+                      "source": "src/runtime/libio/floatconv.c"
+                    }
+                  ]
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          }
+        ],
+        "root_qualification": "Actual encoded references and complete containing geometries; ancestry to entry/main not claimed."
+      },
+      "validation": {
+        "matching_only": true,
+        "whole_chosen_target_equal": true,
+        "full_comparisons": [
+          {
+            "name": "func_0035F408",
+            "compiled_symbol": "ulp",
+            "address": "0x0035F408",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc29",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": false,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc29.o",
+              "bytes": 23828,
+              "raw_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+            },
+            "comparison": {
+              "identical": true,
+              "expected_size": 148,
+              "compiled_size": 148,
+              "different_bytes": 0,
+              "first_different_offsets": [],
+              "unresolved_relocations": [],
+              "expected_sha256": "5bef4d5ff531cea52c108b21a985f44030c70926a6e60844ad9890887e00761c",
+              "compiled_sha256": "5bef4d5ff531cea52c108b21a985f44030c70926a6e60844ad9890887e00761c"
+            },
+            "input_relocations": [],
+            "resolved_bindings": {},
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ulp/link-jp0qy52c/function.o",
+                "bytes": 23828,
+                "raw_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ulp/link-jp0qy52c/function.elf",
+                "bytes": 1556,
+                "raw_sha256": "c9d266139f7eda1a589b61c49d0618cdb6d454850b462901923d64c70171db32"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ulp/link-jp0qy52c/function.ld",
+                "bytes": 168,
+                "raw_sha256": "1fe2b5699f37c947e1c6f1a7dfd35caef85c7d6693a292144f010e76f6e4f6a9"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3535880,
+                "size": 152,
+                "whole_raw_sha256": "11cf314ade34d5832e0705d0438425b4f262a6c4097d14dd40f4cae6e7a47cbd"
+              }
+            ],
+            "selected_symbol_size": 148,
+            "selected_entire_section_size": 152
+          },
+          {
+            "name": "func_0035F408",
+            "compiled_symbol": "ulp",
+            "address": "0x0035F408",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc323",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": true,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc323.o",
+              "bytes": 23940,
+              "raw_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+            },
+            "comparison": {
+              "identical": false,
+              "expected_size": 148,
+              "compiled_size": 212,
+              "different_bytes": 179,
+              "first_different_offsets": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8
+              ],
+              "unresolved_relocations": [],
+              "expected_sha256": "5bef4d5ff531cea52c108b21a985f44030c70926a6e60844ad9890887e00761c",
+              "compiled_sha256": "0e7c4b819ec907cd67a890e01f2164e694a996149f6757ec33ad14b2124fd205"
+            },
+            "input_relocations": [],
+            "resolved_bindings": {},
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ulp/link-kdhp1fz5/function.o",
+                "bytes": 23940,
+                "raw_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ulp/link-kdhp1fz5/function.elf",
+                "bytes": 1620,
+                "raw_sha256": "599c44bb0dd4d247282d03f314b65a41a4a42be0d320d95527217e1bdc32e2a2"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ulp/link-kdhp1fz5/function.ld",
+                "bytes": 168,
+                "raw_sha256": "1fe2b5699f37c947e1c6f1a7dfd35caef85c7d6693a292144f010e76f6e4f6a9"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3535880,
+                "size": 216,
+                "whole_raw_sha256": "739992154b8ae9394bdc612fd4104d7ac34595e91e5835809665281e682a0e54"
+              }
+            ],
+            "selected_symbol_size": 212,
+            "selected_entire_section_size": 216
+          }
+        ],
+        "measured_ABI": "Declaration-only genuine prototypes with actual GPR64 arguments/returns; actual direct call/SDLD/SWLW words and M closures.",
+        "no_selected_emulator_or_native_model": true
+      },
+      "implementation_limits": [
+        "Strict complete chosen target byte equality is the acceptance proof; no instruction mask, mapping, padding credit or source-original compiler/type identity is inferred.",
+        "Source Bigint52/sign14/on_stack12/wds16/x20 are measured declarations and consumed prefix evidence, not original full object/class/capacity identity.",
+        "Retail quorem captured GPR13 topword and halfword aliases are preserved by whole chosen target identity; no host reload/quotient oracle or portable alias arithmetic claim.",
+        "Inherited whole source18-file-M/cache recipes are not fresh algorithm compilations. Six fresh real ABI callers occur across two objects/M4 each. Their18 controlled transport observations are not selected/native/helper executions.",
+        "Encoded original calls and full containing geometry do not prove an ancestry path to entry/main. Larger conversions/pow5/data and all called helpers receive no award.",
+        "GCC323 full alternatives are nonmatching diagnostics only; primary recovered source uses the exact GCC29 recipe."
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "complete_original_source_ABI_contained_parent_and_distinct_final_matching_only_reviews_passed",
+      "independent_review": "Register complete unchanged genuine GNU ulp/ratio/quorem with GCC29, link:true, after parent+distinct complete original884B identity/source/notices/cache/M and measured actual typed ABI plus full contained FINAL1970 replay. Only six reviewed plain-static/numeric selected aliases; all old values and b2d/cmp/dpdiv source helper addresses unchanged; no __divdf3, genericmalloc/free, data/deferred/helper or native/selected-CPU/model/coverage/hardware/portable-C credit. Original quorem captured topword precedes halfword stores and exact target equality governs; no host reload oracle. Actual alignment-rounded section zero tails retained whole and excluded from symbol-size matching credit. Entire1970 remains unchanged; new public status document copies private immutable README without modifying it.",
+      "final_review": {
+        "freeze": {
+          "path": "build/libio_query_helpers/frozen_inputs.json",
+          "bytes": 348512,
+          "raw_sha256": "4009da5f4514ed9ca36564d84e4be9fa880b27743bdeb1e720e538106e01d289"
+        },
+        "parent": {
+          "path": ".local/libio_query_helpers_final_root_review.json",
+          "bytes": 6346,
+          "raw_sha256": "0a7f5168b28bd1f2b9885325d46eecd65efa5838eea1209e8a8c7cd10331de39"
+        },
+        "distinct_peer": {
+          "path": ".local/libio_query_final_peer0001/independent_audit.json",
+          "bytes": 13019,
+          "raw_sha256": "20a042df60a8158480ef2e82581b0b97120ce44d9b04a11d4346b295a2ca256e"
+        }
+      }
+    },
+    {
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+      ],
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Unchanged FSF1993/1994 GPL2-or-later with exact GNU-compiler linking exception, plus complete David M. Gay/AT&T1991 permissive notice; both retained in source and docs/libio_bigint.md.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "name": "func_0035F740",
+      "compiled_symbol": "ratio",
+      "upstream_symbol": "ratio",
+      "address": "0x0035F740",
+      "file_offset": "0x00260740",
+      "size": 204,
+      "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_exact_primary": true,
+      "compiled_size": 204,
+      "compiled_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+      "genuine_method_span": {
+        "symbol": "ratio",
+        "start": 26295,
+        "end": 27080,
+        "bytes": 785,
+        "raw_git_blob_sha256": "858cdba53cb8c1e93d23a692c2b7e1e984bac63ec83630ea838a1440cbd8f664",
+        "declaration_start": 26281,
+        "entire_declared_method_bytes": 799,
+        "entire_declared_method_sha256": "e26c5fed24f14e7c58a663e4492ebaa3c35e98e7710adb84090709469d8d9803",
+        "return_storage_declaration": "static double",
+        "definition_header": "static double\nratio\n#ifdef KR_headers\n        (a, b) Bigint *a, *b;\n#else\n        (Bigint *a, Bigint *b)\n#endif\n",
+        "qualification": "Complete unchanged primary method declaration/body lexical span, including alternative KR/prototype branches; no authored source or new compilation."
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "pc": "0x003601DC",
+            "word": "0x0C0D7DD0",
+            "target": "0x0035F740",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x0035F810",
+              "name": "func_0035F810",
+              "size": 3928,
+              "instructions": 982,
+              "scanner_extent": 3928,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00360768",
+              "file_offset": "0x00260810",
+              "section": ".text",
+              "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+              "assembly": {
+                "path": "build/functions/func_0035F810.s",
+                "bytes": 62783,
+                "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00360760",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0290",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x0035F740",
+                "name": "func_0035F740",
+                "size": 204,
+                "instructions": 51,
+                "scanner_extent": 208,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x0035F810",
+                "file_offset": "0x00260740",
+                "section": ".text",
+                "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                "assembly": {
+                  "path": "build/functions/func_0035F740.s",
+                  "bytes": 3314,
+                  "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x0035F804",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0050",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F5D0",
+                  "name": "func_0035F5D0",
+                  "size": 364,
+                  "instructions": 91,
+                  "scanner_extent": 368,
+                  "excluded_zero_padding": 4,
+                  "following_entry": "0x0035F740",
+                  "file_offset": "0x002605D0",
+                  "section": ".text",
+                  "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                  "assembly": {
+                    "path": "build/functions/func_0035F5D0.s",
+                    "bytes": 5923,
+                    "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x0035F734",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0090",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [
+                    {
+                      "name": "func_0035F5D0",
+                      "address": "0x0035F5D0",
+                      "size": 364,
+                      "source": "src/runtime/libio/floatconv.c"
+                    }
+                  ]
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          }
+        ],
+        "root_qualification": "Actual encoded references and complete containing geometries; ancestry to entry/main not claimed."
+      },
+      "validation": {
+        "matching_only": true,
+        "whole_chosen_target_equal": true,
+        "full_comparisons": [
+          {
+            "name": "func_0035F740",
+            "compiled_symbol": "ratio",
+            "address": "0x0035F740",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc29",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": false,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc29.o",
+              "bytes": 23828,
+              "raw_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+            },
+            "comparison": {
+              "identical": true,
+              "expected_size": 204,
+              "compiled_size": 204,
+              "different_bytes": 0,
+              "first_different_offsets": [],
+              "unresolved_relocations": [],
+              "expected_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+              "compiled_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f"
+            },
+            "input_relocations": [
+              {
+                "offset": 28,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 21
+              },
+              {
+                "offset": 44,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 21
+              },
+              {
+                "offset": 172,
+                "type": 4,
+                "symbol": "dpdiv",
+                "symbol_index": 58
+              }
+            ],
+            "resolved_bindings": {
+              "b2d": 3536032,
+              "dpdiv": 3616720
+            },
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ratio/link-59d31mr6/function.o",
+                "bytes": 23828,
+                "raw_sha256": "055fe0775b22c865bbb43639b12596386fe11ee9d15b22f83739cc4e40122299"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ratio/link-59d31mr6/function.elf",
+                "bytes": 2476,
+                "raw_sha256": "8e29eabf67b60e0c08a81feb3f7325cd918506a59da63c88c1ed15c1c56bb593"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/ratio/link-59d31mr6/function.ld",
+                "bytes": 191,
+                "raw_sha256": "1f147ef18b5e5781d3bb9937dd8577c9ff52ffaadd4502b933fdf7420deb3c9f"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3536704,
+                "size": 208,
+                "whole_raw_sha256": "28601457043da7e209ba7a6333d6d6b99f30454b2f2022d4be7d1e66586a92c3"
+              }
+            ],
+            "selected_symbol_size": 204,
+            "selected_entire_section_size": 208
+          },
+          {
+            "name": "func_0035F740",
+            "compiled_symbol": "ratio",
+            "address": "0x0035F740",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc323",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": true,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc323.o",
+              "bytes": 23940,
+              "raw_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+            },
+            "comparison": {
+              "identical": false,
+              "expected_size": 204,
+              "compiled_size": 208,
+              "different_bytes": 148,
+              "first_different_offsets": [
+                4,
+                6,
+                8,
+                9,
+                10,
+                11,
+                13,
+                15
+              ],
+              "unresolved_relocations": [],
+              "expected_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+              "compiled_sha256": "bb3b19d8b1ef72cbe4113ee7f0df73ae26668006f1c0c0eb0357b0138323d706"
+            },
+            "input_relocations": [
+              {
+                "offset": 28,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 22
+              },
+              {
+                "offset": 44,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 22
+              },
+              {
+                "offset": 168,
+                "type": 4,
+                "symbol": "dpdiv",
+                "symbol_index": 57
+              }
+            ],
+            "resolved_bindings": {
+              "b2d": 3536032,
+              "dpdiv": 3616720
+            },
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ratio/link-ilzn1kxu/function.o",
+                "bytes": 23940,
+                "raw_sha256": "cfdce831d767609a8c167c7e30db0396615c12d63806633bc7af18162763168f"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ratio/link-ilzn1kxu/function.elf",
+                "bytes": 2476,
+                "raw_sha256": "d1281cfb8bfae4187d11b834784c04ce59c2784e49186ffbf7a993a823b4ff80"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/ratio/link-ilzn1kxu/function.ld",
+                "bytes": 191,
+                "raw_sha256": "1f147ef18b5e5781d3bb9937dd8577c9ff52ffaadd4502b933fdf7420deb3c9f"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3536704,
+                "size": 208,
+                "whole_raw_sha256": "bb3b19d8b1ef72cbe4113ee7f0df73ae26668006f1c0c0eb0357b0138323d706"
+              }
+            ],
+            "selected_symbol_size": 208,
+            "selected_entire_section_size": 208
+          }
+        ],
+        "measured_ABI": "Declaration-only genuine prototypes with actual GPR64 arguments/returns; actual direct call/SDLD/SWLW words and M closures.",
+        "no_selected_emulator_or_native_model": true
+      },
+      "implementation_limits": [
+        "Strict complete chosen target byte equality is the acceptance proof; no instruction mask, mapping, padding credit or source-original compiler/type identity is inferred.",
+        "Source Bigint52/sign14/on_stack12/wds16/x20 are measured declarations and consumed prefix evidence, not original full object/class/capacity identity.",
+        "Retail quorem captured GPR13 topword and halfword aliases are preserved by whole chosen target identity; no host reload/quotient oracle or portable alias arithmetic claim.",
+        "Inherited whole source18-file-M/cache recipes are not fresh algorithm compilations. Six fresh real ABI callers occur across two objects/M4 each. Their18 controlled transport observations are not selected/native/helper executions.",
+        "Encoded original calls and full containing geometry do not prove an ancestry path to entry/main. Larger conversions/pow5/data and all called helpers receive no award.",
+        "GCC323 full alternatives are nonmatching diagnostics only; primary recovered source uses the exact GCC29 recipe."
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "complete_original_source_ABI_contained_parent_and_distinct_final_matching_only_reviews_passed",
+      "independent_review": "Register complete unchanged genuine GNU ulp/ratio/quorem with GCC29, link:true, after parent+distinct complete original884B identity/source/notices/cache/M and measured actual typed ABI plus full contained FINAL1970 replay. Only six reviewed plain-static/numeric selected aliases; all old values and b2d/cmp/dpdiv source helper addresses unchanged; no __divdf3, genericmalloc/free, data/deferred/helper or native/selected-CPU/model/coverage/hardware/portable-C credit. Original quorem captured topword precedes halfword stores and exact target equality governs; no host reload oracle. Actual alignment-rounded section zero tails retained whole and excluded from symbol-size matching credit. Entire1970 remains unchanged; new public status document copies private immutable README without modifying it.",
+      "final_review": {
+        "freeze": {
+          "path": "build/libio_query_helpers/frozen_inputs.json",
+          "bytes": 348512,
+          "raw_sha256": "4009da5f4514ed9ca36564d84e4be9fa880b27743bdeb1e720e538106e01d289"
+        },
+        "parent": {
+          "path": ".local/libio_query_helpers_final_root_review.json",
+          "bytes": 6346,
+          "raw_sha256": "0a7f5168b28bd1f2b9885325d46eecd65efa5838eea1209e8a8c7cd10331de39"
+        },
+        "distinct_peer": {
+          "path": ".local/libio_query_final_peer0001/independent_audit.json",
+          "bytes": 13019,
+          "raw_sha256": "20a042df60a8158480ef2e82581b0b97120ce44d9b04a11d4346b295a2ca256e"
+        }
+      }
+    },
+    {
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include"
+      ],
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Unchanged FSF1993/1994 GPL2-or-later with exact GNU-compiler linking exception, plus complete David M. Gay/AT&T1991 permissive notice; both retained in source and docs/libio_bigint.md.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "name": "func_00360768",
+      "compiled_symbol": "quorem",
+      "upstream_symbol": "quorem",
+      "address": "0x00360768",
+      "file_offset": "0x00261768",
+      "size": 532,
+      "original_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_exact_primary": true,
+      "compiled_size": 532,
+      "compiled_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+      "genuine_method_span": {
+        "symbol": "quorem",
+        "start": 47753,
+        "end": 50475,
+        "bytes": 2722,
+        "raw_git_blob_sha256": "b901a7f7d0f23a5c62cc8d8b7604682e365dfa627e9ac6ceafdb1e425a71ed68",
+        "declaration_start": 47742,
+        "entire_declared_method_bytes": 2733,
+        "entire_declared_method_sha256": "17c9e2ee96b619b2dfd443e4c3ccbc5c80a5a081e7fe1ed47047f3a2312600b3",
+        "return_storage_declaration": "static int",
+        "definition_header": "static int\nquorem\n#ifdef KR_headers\n        (b, S) Bigint *b, *S;\n#else\n        (Bigint *b, Bigint *S)\n#endif\n",
+        "qualification": "Complete unchanged primary method declaration/body lexical span, including alternative KR/prototype branches; no authored source or new compilation."
+      },
+      "entry_evidence": {
+        "direct_references": [
+          {
+            "pc": "0x0036187C",
+            "word": "0x0C0D81DA",
+            "target": "0x00360768",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x00360980",
+              "name": "func_00360980",
+              "size": 4544,
+              "instructions": 1136,
+              "scanner_extent": 4544,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00361B40",
+              "file_offset": "0x00261980",
+              "section": ".text",
+              "original_sha256": "3ca0f001c1e02d57a1cb73dabb3cd86001f08611d9d869365ee2ab020f0ac671",
+              "assembly": {
+                "path": "build/functions/func_00360980.s",
+                "bytes": 72966,
+                "raw_sha256": "184bad5e36bf5511296d0d42ad6cd7ce757db1cb594f3e0030f73a630506a683",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00361B38",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0250",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x00360768",
+                "name": "func_00360768",
+                "size": 532,
+                "instructions": 133,
+                "scanner_extent": 536,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x00360980",
+                "file_offset": "0x00261768",
+                "section": ".text",
+                "original_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+                "assembly": {
+                  "path": "build/functions/func_00360768.s",
+                  "bytes": 8550,
+                  "raw_sha256": "71f1262750598d875250bef4395dd5644998a00b78c146a67268a21d9c630a12",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x00360974",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0080",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F810",
+                  "name": "func_0035F810",
+                  "size": 3928,
+                  "instructions": 982,
+                  "scanner_extent": 3928,
+                  "excluded_zero_padding": 0,
+                  "following_entry": "0x00360768",
+                  "file_offset": "0x00260810",
+                  "section": ".text",
+                  "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+                  "assembly": {
+                    "path": "build/functions/func_0035F810.s",
+                    "bytes": 62783,
+                    "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x00360760",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0290",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [],
+                  "predecessor": {
+                    "address": "0x0035F740",
+                    "name": "func_0035F740",
+                    "size": 204,
+                    "instructions": 51,
+                    "scanner_extent": 208,
+                    "excluded_zero_padding": 4,
+                    "following_entry": "0x0035F810",
+                    "file_offset": "0x00260740",
+                    "section": ".text",
+                    "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                    "assembly": {
+                      "path": "build/functions/func_0035F740.s",
+                      "bytes": 3314,
+                      "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                      "role": "Whole original assembly geometry; separate manual attribution."
+                    },
+                    "terminal_pc": "0x0035F804",
+                    "terminal_word": "0x03E00008",
+                    "terminal_delay_word": "0x27BD0050",
+                    "terminal_is_JR31": true,
+                    "overlapping_current_records": [],
+                    "predecessor": {
+                      "address": "0x0035F5D0",
+                      "name": "func_0035F5D0",
+                      "size": 364,
+                      "instructions": 91,
+                      "scanner_extent": 368,
+                      "excluded_zero_padding": 4,
+                      "following_entry": "0x0035F740",
+                      "file_offset": "0x002605D0",
+                      "section": ".text",
+                      "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                      "assembly": {
+                        "path": "build/functions/func_0035F5D0.s",
+                        "bytes": 5923,
+                        "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                        "role": "Whole original assembly geometry; separate manual attribution."
+                      },
+                      "terminal_pc": "0x0035F734",
+                      "terminal_word": "0x03E00008",
+                      "terminal_delay_word": "0x27BD0090",
+                      "terminal_is_JR31": true,
+                      "overlapping_current_records": [
+                        {
+                          "name": "func_0035F5D0",
+                          "address": "0x0035F5D0",
+                          "size": 364,
+                          "source": "src/runtime/libio/floatconv.c"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          },
+          {
+            "pc": "0x003619E4",
+            "word": "0x0C0D81DA",
+            "target": "0x00360768",
+            "kind": "JAL",
+            "section": ".text",
+            "whole_caller": {
+              "address": "0x00360980",
+              "name": "func_00360980",
+              "size": 4544,
+              "instructions": 1136,
+              "scanner_extent": 4544,
+              "excluded_zero_padding": 0,
+              "following_entry": "0x00361B40",
+              "file_offset": "0x00261980",
+              "section": ".text",
+              "original_sha256": "3ca0f001c1e02d57a1cb73dabb3cd86001f08611d9d869365ee2ab020f0ac671",
+              "assembly": {
+                "path": "build/functions/func_00360980.s",
+                "bytes": 72966,
+                "raw_sha256": "184bad5e36bf5511296d0d42ad6cd7ce757db1cb594f3e0030f73a630506a683",
+                "role": "Whole original assembly geometry; separate manual attribution."
+              },
+              "terminal_pc": "0x00361B38",
+              "terminal_word": "0x03E00008",
+              "terminal_delay_word": "0x27BD0250",
+              "terminal_is_JR31": true,
+              "overlapping_current_records": [],
+              "predecessor": {
+                "address": "0x00360768",
+                "name": "func_00360768",
+                "size": 532,
+                "instructions": 133,
+                "scanner_extent": 536,
+                "excluded_zero_padding": 4,
+                "following_entry": "0x00360980",
+                "file_offset": "0x00261768",
+                "section": ".text",
+                "original_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+                "assembly": {
+                  "path": "build/functions/func_00360768.s",
+                  "bytes": 8550,
+                  "raw_sha256": "71f1262750598d875250bef4395dd5644998a00b78c146a67268a21d9c630a12",
+                  "role": "Whole original assembly geometry; separate manual attribution."
+                },
+                "terminal_pc": "0x00360974",
+                "terminal_word": "0x03E00008",
+                "terminal_delay_word": "0x27BD0080",
+                "terminal_is_JR31": true,
+                "overlapping_current_records": [],
+                "predecessor": {
+                  "address": "0x0035F810",
+                  "name": "func_0035F810",
+                  "size": 3928,
+                  "instructions": 982,
+                  "scanner_extent": 3928,
+                  "excluded_zero_padding": 0,
+                  "following_entry": "0x00360768",
+                  "file_offset": "0x00260810",
+                  "section": ".text",
+                  "original_sha256": "9c91766fd164fbc495a000f7f3dda3689744705101d642b4d5c4f7e232f6344f",
+                  "assembly": {
+                    "path": "build/functions/func_0035F810.s",
+                    "bytes": 62783,
+                    "raw_sha256": "11888e7155521a7baa2bfbfba4bc6ace105e98a1a205017d5d21c9fb372b39ea",
+                    "role": "Whole original assembly geometry; separate manual attribution."
+                  },
+                  "terminal_pc": "0x00360760",
+                  "terminal_word": "0x03E00008",
+                  "terminal_delay_word": "0x27BD0290",
+                  "terminal_is_JR31": true,
+                  "overlapping_current_records": [],
+                  "predecessor": {
+                    "address": "0x0035F740",
+                    "name": "func_0035F740",
+                    "size": 204,
+                    "instructions": 51,
+                    "scanner_extent": 208,
+                    "excluded_zero_padding": 4,
+                    "following_entry": "0x0035F810",
+                    "file_offset": "0x00260740",
+                    "section": ".text",
+                    "original_sha256": "38ea8e6608235d4217bb29c1c8b5fe74fad0ec001ce1e1be987c90f3c660399f",
+                    "assembly": {
+                      "path": "build/functions/func_0035F740.s",
+                      "bytes": 3314,
+                      "raw_sha256": "b4b80f0328d98fd106b146ca0130859af943d0357cbe26a999ccb6925ece79d1",
+                      "role": "Whole original assembly geometry; separate manual attribution."
+                    },
+                    "terminal_pc": "0x0035F804",
+                    "terminal_word": "0x03E00008",
+                    "terminal_delay_word": "0x27BD0050",
+                    "terminal_is_JR31": true,
+                    "overlapping_current_records": [],
+                    "predecessor": {
+                      "address": "0x0035F5D0",
+                      "name": "func_0035F5D0",
+                      "size": 364,
+                      "instructions": 91,
+                      "scanner_extent": 368,
+                      "excluded_zero_padding": 4,
+                      "following_entry": "0x0035F740",
+                      "file_offset": "0x002605D0",
+                      "section": ".text",
+                      "original_sha256": "25fb860d7f0b9adf61a628e4676c721c68f73e130721259e92868dbcbe97a96b",
+                      "assembly": {
+                        "path": "build/functions/func_0035F5D0.s",
+                        "bytes": 5923,
+                        "raw_sha256": "1237618d70f3fa701c7d5a8e4fd1bc8ebdbae24ba219b5e2cf424e550ccd208d",
+                        "role": "Whole original assembly geometry; separate manual attribution."
+                      },
+                      "terminal_pc": "0x0035F734",
+                      "terminal_word": "0x03E00008",
+                      "terminal_delay_word": "0x27BD0090",
+                      "terminal_is_JR31": true,
+                      "overlapping_current_records": [
+                        {
+                          "name": "func_0035F5D0",
+                          "address": "0x0035F5D0",
+                          "size": 364,
+                          "source": "src/runtime/libio/floatconv.c"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "invocation_root_qualification": "Authentic encoded CPU call site when in CPU text; whole containing geometry is not a proved ancestry path to entry/main."
+          }
+        ],
+        "root_qualification": "Actual encoded references and complete containing geometries; ancestry to entry/main not claimed."
+      },
+      "validation": {
+        "matching_only": true,
+        "whole_chosen_target_equal": true,
+        "full_comparisons": [
+          {
+            "name": "func_00360768",
+            "compiled_symbol": "quorem",
+            "address": "0x00360768",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc29",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": false,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc29.o",
+              "bytes": 23828,
+              "raw_sha256": "cd5d697d71a8f03b34a668b6b0a813cb332c86ec9743108c9a3e74cb9e47c122"
+            },
+            "comparison": {
+              "identical": true,
+              "expected_size": 532,
+              "compiled_size": 532,
+              "different_bytes": 0,
+              "first_different_offsets": [],
+              "unresolved_relocations": [],
+              "expected_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+              "compiled_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397"
+            },
+            "input_relocations": [
+              {
+                "offset": 300,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 18
+              }
+            ],
+            "resolved_bindings": {
+              "cmp": 3535376
+            },
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/quorem/link-7ihyt_6b/function.o",
+                "bytes": 23828,
+                "raw_sha256": "e99f3775a3ad518aff8af0ecfc91bf9555b76e8aef9071b2fb5e8420e23006b7"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/quorem/link-7ihyt_6b/function.elf",
+                "bytes": 2820,
+                "raw_sha256": "f2eef7ea7c8ea50ecb9187b3ab4da63396d8ba680c6489ad61a917a33f13e10d"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc29/quorem/link-7ihyt_6b/function.ld",
+                "bytes": 171,
+                "raw_sha256": "17aa8fe267dcc1925bfd099ee0142eb5c8d47eae4d95b72c1d467d64e79714f3"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3540840,
+                "size": 536,
+                "whole_raw_sha256": "5f179e1a539d78d2152725a7dcd45cc87adc71efe851dc7c1adfa49b387ecd5d"
+              }
+            ],
+            "selected_symbol_size": 532,
+            "selected_entire_section_size": 536
+          },
+          {
+            "name": "func_00360768",
+            "compiled_symbol": "quorem",
+            "address": "0x00360768",
+            "source": "src/runtime/libio/floatconv.c",
+            "profile": "gcc323",
+            "primary_profile": "gcc29",
+            "alternative_diagnostic_only": true,
+            "unchanged_cached_source_object": {
+              "path": "build/mprec_second/gcc323.o",
+              "bytes": 23940,
+              "raw_sha256": "66073efa151988af541192faaeeb74084686c322f79c1f27c5391fafa19d2b81"
+            },
+            "comparison": {
+              "identical": false,
+              "expected_size": 532,
+              "compiled_size": 584,
+              "different_bytes": 438,
+              "first_different_offsets": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "unresolved_relocations": [],
+              "expected_sha256": "b0524e8e3d9f703993a714e8a0e8916d268c59f2055e3e8cd1dde6ef7ab76397",
+              "compiled_sha256": "a48aa39f7a1712fcbe1fc5224ef2d86ec356babebc49bb1fca476a733652e780"
+            },
+            "input_relocations": [
+              {
+                "offset": 320,
+                "type": 4,
+                "symbol": "",
+                "symbol_index": 19
+              }
+            ],
+            "resolved_bindings": {
+              "cmp": 3535376
+            },
+            "no_mappings": true,
+            "whole_artifacts": {
+              "object_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/quorem/link-8rcrdnx_/function.o",
+                "bytes": 23940,
+                "raw_sha256": "0d1540287222717cd3877007af52b885fcafbda20e5a3f310c75264b4e4beaa0"
+              },
+              "linked_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/quorem/link-8rcrdnx_/function.elf",
+                "bytes": 2868,
+                "raw_sha256": "93ff3b1f8d7e4b956e0a21c5cb9245488a58884fcedd2a85058421c5e30de1de"
+              },
+              "script_path": {
+                "path": "build/libio_query_helpers/linked/gcc323/quorem/link-8rcrdnx_/function.ld",
+                "bytes": 171,
+                "raw_sha256": "17aa8fe267dcc1925bfd099ee0142eb5c8d47eae4d95b72c1d467d64e79714f3"
+              }
+            },
+            "all_allocated_sections": [
+              {
+                "name": ".text",
+                "address": 3540840,
+                "size": 584,
+                "whole_raw_sha256": "a48aa39f7a1712fcbe1fc5224ef2d86ec356babebc49bb1fca476a733652e780"
+              }
+            ],
+            "selected_symbol_size": 584,
+            "selected_entire_section_size": 584
+          }
+        ],
+        "measured_ABI": "Declaration-only genuine prototypes with actual GPR64 arguments/returns; actual direct call/SDLD/SWLW words and M closures.",
+        "no_selected_emulator_or_native_model": true
+      },
+      "implementation_limits": [
+        "Strict complete chosen target byte equality is the acceptance proof; no instruction mask, mapping, padding credit or source-original compiler/type identity is inferred.",
+        "Source Bigint52/sign14/on_stack12/wds16/x20 are measured declarations and consumed prefix evidence, not original full object/class/capacity identity.",
+        "Retail quorem captured GPR13 topword and halfword aliases are preserved by whole chosen target identity; no host reload/quotient oracle or portable alias arithmetic claim.",
+        "Inherited whole source18-file-M/cache recipes are not fresh algorithm compilations. Six fresh real ABI callers occur across two objects/M4 each. Their18 controlled transport observations are not selected/native/helper executions.",
+        "Encoded original calls and full containing geometry do not prove an ancestry path to entry/main. Larger conversions/pow5/data and all called helpers receive no award.",
+        "GCC323 full alternatives are nonmatching diagnostics only; primary recovered source uses the exact GCC29 recipe."
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "complete_original_source_ABI_contained_parent_and_distinct_final_matching_only_reviews_passed",
+      "independent_review": "Register complete unchanged genuine GNU ulp/ratio/quorem with GCC29, link:true, after parent+distinct complete original884B identity/source/notices/cache/M and measured actual typed ABI plus full contained FINAL1970 replay. Only six reviewed plain-static/numeric selected aliases; all old values and b2d/cmp/dpdiv source helper addresses unchanged; no __divdf3, genericmalloc/free, data/deferred/helper or native/selected-CPU/model/coverage/hardware/portable-C credit. Original quorem captured topword precedes halfword stores and exact target equality governs; no host reload oracle. Actual alignment-rounded section zero tails retained whole and excluded from symbol-size matching credit. Entire1970 remains unchanged; new public status document copies private immutable README without modifying it.",
+      "final_review": {
+        "freeze": {
+          "path": "build/libio_query_helpers/frozen_inputs.json",
+          "bytes": 348512,
+          "raw_sha256": "4009da5f4514ed9ca36564d84e4be9fa880b27743bdeb1e720e538106e01d289"
+        },
+        "parent": {
+          "path": ".local/libio_query_helpers_final_root_review.json",
+          "bytes": 6346,
+          "raw_sha256": "0a7f5168b28bd1f2b9885325d46eecd65efa5838eea1209e8a8c7cd10331de39"
+        },
+        "distinct_peer": {
+          "path": ".local/libio_query_final_peer0001/independent_audit.json",
+          "bytes": 13019,
+          "raw_sha256": "20a042df60a8158480ef2e82581b0b97120ce44d9b04a11d4346b295a2ca256e"
+        }
+      }
+    }
+  ]
+}
