@@ -73,3 +73,40 @@ and compares the selected checked-in source through the canonical manifests.
 Canonical verification, the retail-identical hybrid executable and 364 reviewed
 tooling tests passed (one platform-specific symlink skip). C and C++ progress
 are now counted separately and together; original assembly remains separate.
+
+## Additional unchanged-source reuse
+
+Twelve more complete functions reuse the same nine pinned source/header blobs,
+without compatibility changes or new imports. Their 864 original bytes include
+five naturally linked routines (320 bytes): `__cp_push_exception`,
+`__is_pointer__FPv`, `__rtti_class`, `__rtti_si` and `__rtti_user`.
+All remain reconstructed, with zero additional exact matches.
+
+Seven complete generated type-info getters (544 bytes) are also identified:
+class, single-inheritance, user, `type_info`, pointer, attribute and function
+getters. The genuine old compiler emits their 8/12-byte identity objects as
+`SHN_COMMON`, even with `-fno-common`: the pinned `cp/rtti.c` generator explicitly
+sets `DECL_COMMON`. Their link blockers remain explicit. Original storage,
+NUL-terminated names, complete readonly prefixes and constructor/publication
+chains provide identity evidence only; no new storage mapping or data credit
+is awarded. A targeted `-fdata-sections` probe retains the COMMON blockers and
+whole unrelated literal pools; no partial pool is cropped to permit a link.
+
+All 216 selected original instructions, 243 actual incoming transfers, 209 complete
+caller byte identities, three complete 24-byte readonly prefixes and three
+actual getter-argument/callback chains were checked. Large containing callers
+have complete geometry and byte identity without a full semantic recovery claim.
+Author, independent peer and parent full selected/source/control/ABI/proof review
+and fresh reproduction passed. The already reviewed sources and layouts remain
+unchanged. Four transparent recipes produce 48 full records: six natural whole
+links (including the explicit no-builtin push variant), seven COMMON blockers
+and 35 actual historical-source compiler failures. No record matches retail.
+
+Central-only reproduction preserves all source/compiler/code/data/ABI/relocation
+and comparison fields; only temporary linked paths and private ABI diagnostic
+path/whitespace reflow are normalized. Canonical verification, the retail-identical
+hybrid build and 379 reviewed tooling tests pass (one platform symlink skip).
+There is no native RTTI/EH execution claim. The ignored reproducible packet is
+under `build/reuse/cxx_followup`; source-free scope approval and all historical
+producer snapshots remain preserved. Previously deferred FDE-only entries receive
+no award.

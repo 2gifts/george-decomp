@@ -118,3 +118,18 @@ This policy supports the authentic `_localeconv_r` object's self-contained
 `.rodata` at `0x00456C30`. Writable data, mixed relocation types, external or
 cross-section data pointers, and unused mappings remain unsupported. A mapping
 cannot bypass differing literal bytes or differing resolved pointer values.
+
+## Scalar EE accumulator feasibility
+
+The remaining curve polynomials use scalar EE `MULA.S`/`MADDA.S`/`MADD.S`.
+The pinned historical [MIPS backend](https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/gcc/config/mips/mips.md#L2586)
+has ordinary four-FPR multiply-add templates requiring ISA4, but no scalar EE
+FPU accumulator operand or MULA/MADDA chain. Its R5900 default is ISA3;
+`-mmad` selects integer multiply-add paths. All nine genuine unchanged callback
+objects under the three documented recipes contain zero scalar EE ACC opcodes.
+The existing GNU3.2.3 PS2 patch also adds integer paths; its pristine full backend
+was not audited. This bounded evidence gives no justified extra flag recipe for
+these ACC chains. The original compiler remains unknown. The source stays
+ordinary C and the complete comparisons remain nonmatching; no assembly,
+intrinsics or compiler patch forces a match. The ignored pinned-source and
+object audit is `build/reuse/acc_backend/audit.json`.

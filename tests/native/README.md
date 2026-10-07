@@ -431,3 +431,13 @@ original curve/path fixtures retain their earlier outputs and instruction counts
 `run_plane_geometry.py` passes165,110 warning-free checks across1,123 fixtures /89,426 original instructions and six guards, using actual published normalization in a separate production translation unit. Independent line, winding and sphere/bounds invariants supplement instruction-derived results. See [plane evidence](../../docs/plane_geometry.md).
 
 The three runners model finite scalar binary32 operations with their documented compiler arithmetic options and host square root. They do not establish EE exceptional/FCR/timing behavior. The unchanged GNU C++ runtime has target object/ABI and complete-link equality evidence, without an authored native RTTI/EH execution claim.
+
+The remaining five curve callbacks pass 208,890 checks over 1,512 original fixtures;
+`run_path_callbacks2.py` executes their production source and the existing
+quaternion source in separate translation units. The complete segment-distance
+adaptation passes 391,307 checks over 2,747 original fixtures with explicit finite
+soft-runtime observer contracts. Both preserve alias-sensitive memory and actual
+call observations; SSE scalar binary32 excludes x87 excess precision. Their
+[callback](../../docs/path_callbacks2.md) and [distance](../../docs/segment_distance.md)
+notes state the finite-domain and EE hardware limits. The integrated reviewed
+tooling suite now contains 379 tests (one platform-specific symlink skip).

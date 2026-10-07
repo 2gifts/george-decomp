@@ -1663,3 +1663,20 @@ tests (one platform-specific symlink skip).
 [GNU C++ runtime evidence](cxx_runtime.md) covers twelve complete functions /2,612 bytes from unchanged historical tinfo, tinfo2 and exception sources plus four private headers. Eleven complete natural linked functions match all1,388 bytes in canonical verification. The larger type matcher remains reconstructed. Nine exact Git blobs, original copyright/license notices and the exact GNU source linking exception are retained. Target ABI objects, original callback publications and central-only reproduction support the recovery; generated data receives no new mapping or award.
 
 The C++ checkpoint passed canonical verification, the retail-identical hybrid build and364 tooling tests (one platform-specific symlink skip). C and C++ counts are separate in the report, with combined exact source progress; assembly remains separate.
+
+## Segment distance and further GNU C++ source reuse
+
+The [complete segment-distance routine](segment_distance.md) adapts Coin3D's
+pinned, BSD-3-Clause nine-region and parallel algorithm. Its full copyright,
+conditions and disclaimer are retained in the production source and
+`LICENSES/coin3d-segment-distance.txt`. The actual origin/displacement ABI,
+operation grouping, soft-double absolute sequence, signed zero and output order
+are backed by the complete retail instructions. This establishes reusable public
+algorithm correspondence without an original SDK or compiler identity claim.
+The 1,932-byte routine is reconstructed; three genuine whole links differ.
+
+The [GNU C++ follow-up](cxx_runtime.md#additional-unchanged-source-reuse) identifies
+another 12 complete entries/864 bytes from the same unchanged licensed sources.
+Five link naturally under the default historical recipe; seven generated getter
+COMMON objects retain genuine linker blockers. All 12 remain reconstructed and
+add no exact bytes, data mappings or source imports.
