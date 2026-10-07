@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002BD770",
+      "address": "0x002BD770",
+      "file_offset": "0x001BE770",
+      "size": 436,
+      "source": "src/game/timer_float.c",
+      "source_kind": "c",
+      "source_sha256": "3cb66bf17e7f0869580c3597c3a2c7d510f931771314f8bd86368a84dcf2cb3f",
+      "source_dependencies": [
+        {
+          "path": "include/george/timer_float.h",
+          "sha256": "866c6361a2e7ad9a7d062f7d4488f565cd34fd61c056ed3ae66073fcdfe48bbf"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "21c3adb2709fc73cb82f146ed64cb16111a8c2bfbcdebc7d96ba850d3dd860f6",
+      "reviewed": true,
+      "implementation_limits": [
+        "Natural ordinary scalar float C models the observed unsigned conversion/division shape, with full initial source retained. General EE low-bit precision and FCR31 state remain unresolved; no generic IEEE or hardware equivalence.",
+        "Numerical proof requires signextended low64 u32 numerator exactly representable in binary24 and positive power2 divisor<=2^31. +zero or exact normal quotient only. Out-of-domain values are observer exclusions, never production guards.",
+        "Default initialized divisor294911760 is inexact/nonpower2 and excluded from numerical evidence. Supported lazy cases deliberately change actual initialized storage through controlled allocator/Count callbacks.",
+        "First routine captures rate pointer before genuine elapsed call and reads its +4 contents fresh afterward; timer/reset can alias that word. Second consumes signextended u32 GPR5; GPR4 unused, original prototypes/classes/invocation roots unknown.",
+        "Native genuine published timer, heap, upper-bound, comparator, SGI vector/allocator, atexit and licensed bytewise memmove run with constructed storage and measured GNU C prefix/static-member alias views. Controlled Count/core allocation/free/diagnostic/pop and fail-fast inactive ostream seams get no helper/data/hardware credit."
+      ],
+      "evidence": [
+        "Capture timer GPR4/reset GPR5 across initialization. Capture global rate pointer at2BD87C BEFORE elapsed2BD618 call. Rate+4 load2BD890 occurs AFTER elapsed return, in BLTZ delay. Convert unsigned elapsed and rate constant by CVT.S.W or half/sticky-bit/CVT.S.W/ADD.S, then DIV.S f0. No concrete incoming root found. Author read all212 selected original instructions and natural emitted target/ABI bodies; prior supporting graph review is retained separately. Entire1231B lazy-register macro reused unchanged. Three fixed ordinary recipes produce six whole resolved selected symbols and18 actual complete two-GPR/scalar-f0 callers, zero matches. Both genuine compilers prove11 layout words and high/max/pattern/zero GPR5 signextension.395 newly derived fixtures/60382 original instructions,2450300 native checks; nine local guards and eight-pass/one-skip original-absence proof; three genuinely failing mutants. All original words retained, including two constant1000 divisor-zero BREAK delays never executed.",
+        "Parent and distinct final peer preserve485 RAW before archived publication document;9+3 entire dictionaries,81 strict RAW artifacts/24 entire target ELFs/44 native objects/golden and4 whole read-only ImageHlp-qualified PEs reproduce.395 fixtures/60382 original instructions/2450300 checks/nine guards/three real rejected mutants;15177 typed fields and independent integer exponent/significand checks. Entire1231-byte published lazy macro unchanged. Only exact-normal/+zero results for binary24-representable signextended u32 and positive power2 divisor<=2^31 are inferred; default294911760/general EE precision/FCR31/hardware excluded. Unresolved numeric declarations/classes/roots; initial production hashes unchanged and private replay failures retained."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 408,
+          "different_bytes": 351,
+          "compiled_sha256": "e43a2645c0f596acd04f89ddf87520322c1794ce0d0f3c4e66b9479aa89ea163",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 408,
+          "different_bytes": 349,
+          "compiled_sha256": "e5dd20eadb4789996cecd938a3dd8a57d4ec4c5b45dc051fa650b5fbaec075fc",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 396,
+          "different_bytes": 384,
+          "compiled_sha256": "dfcf8c54453630de1f711decc0cd089cbd4766592ee9b939123c2da9cd955cb8",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_peer_passed",
+      "author_evidence_snapshot": "Capture timer GPR4/reset GPR5 across initialization. Capture global rate pointer at2BD87C BEFORE elapsed2BD618 call. Rate+4 load2BD890 occurs AFTER elapsed return, in BLTZ delay. Convert unsigned elapsed and rate constant by CVT.S.W or half/sticky-bit/CVT.S.W/ADD.S, then DIV.S f0. No concrete incoming root found. Author read all212 selected original instructions and natural emitted target/ABI bodies; prior supporting graph review is retained separately. Entire1231B lazy-register macro reused unchanged. Three fixed ordinary recipes produce six whole resolved selected symbols and18 actual complete two-GPR/scalar-f0 callers, zero matches. Both genuine compilers prove11 layout words and high/max/pattern/zero GPR5 signextension.395 newly derived fixtures/60382 original instructions,2450300 native checks; nine local guards and eight-pass/one-skip original-absence proof; three genuinely failing mutants. All original words retained, including two constant1000 divisor-zero BREAK delays never executed.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "whole_original_complete": true,
+        "freeze": {
+          "path": "build/timer_float/frozen_inputs.json",
+          "raw_sha256": "b1a8e64739692d53ef92ecf46bccf3bf08f71fdb90773bfa561a61732098838a",
+          "count": 485
+        },
+        "distinct_peer": {
+          "path": ".local/tfp0000001/independent_audit.json",
+          "raw_sha256": "e07476c3daa6ef7d4f161fd69cf3297296624e715c3fc50c3ca050fcf4b81db4"
+        },
+        "root_replay": {
+          "path": ".local/tf2q000004/audit.json",
+          "raw_sha256": "41aa7b503ee40b218995f10dcc799f7146e03b7b0649b48d15f90a0bb32a8dba"
+        }
+      },
+      "compiled_symbol": "func_002BD770",
+      "compiled_size": 396,
+      "compiled_sha256": "dfcf8c54453630de1f711decc0cd089cbd4766592ee9b939123c2da9cd955cb8",
+      "upstream_source_sha256": "3cb66bf17e7f0869580c3597c3a2c7d510f931771314f8bd86368a84dcf2cb3f",
+      "source_provenance_manifest": "src/game/timer_float_provenance.json"
+    },
+    {
+      "name": "func_002BDA78",
+      "address": "0x002BDA78",
+      "file_offset": "0x001BEA78",
+      "size": 412,
+      "source": "src/game/timer_float.c",
+      "source_kind": "c",
+      "source_sha256": "3cb66bf17e7f0869580c3597c3a2c7d510f931771314f8bd86368a84dcf2cb3f",
+      "source_dependencies": [
+        {
+          "path": "include/george/timer_float.h",
+          "sha256": "866c6361a2e7ad9a7d062f7d4488f565cd34fd61c056ed3ae66073fcdfe48bbf"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "da742db858e135f351f467f67f2680aeb008916ba90c163671f8f580a76ead47",
+      "reviewed": true,
+      "implementation_limits": [
+        "Natural ordinary scalar float C models the observed unsigned conversion/division shape, with full initial source retained. General EE low-bit precision and FCR31 state remain unresolved; no generic IEEE or hardware equivalence.",
+        "Numerical proof requires signextended low64 u32 numerator exactly representable in binary24 and positive power2 divisor<=2^31. +zero or exact normal quotient only. Out-of-domain values are observer exclusions, never production guards.",
+        "Default initialized divisor294911760 is inexact/nonpower2 and excluded from numerical evidence. Supported lazy cases deliberately change actual initialized storage through controlled allocator/Count callbacks.",
+        "First routine captures rate pointer before genuine elapsed call and reads its +4 contents fresh afterward; timer/reset can alias that word. Second consumes signextended u32 GPR5; GPR4 unused, original prototypes/classes/invocation roots unknown.",
+        "Native genuine published timer, heap, upper-bound, comparator, SGI vector/allocator, atexit and licensed bytewise memmove run with constructed storage and measured GNU C prefix/static-member alias views. Controlled Count/core allocation/free/diagnostic/pop and fail-fast inactive ostream seams get no helper/data/hardware credit."
+      ],
+      "evidence": [
+        "Capture incoming GPR5 before initialization; incoming GPR4 is not read. Reload global rate after initialization and read+4 in conversion branch delay. Two unsigned-word conversion expression graphs then DIV.S f0. No concrete incoming root found; original argument declarations unknown. Author read all212 selected original instructions and natural emitted target/ABI bodies; prior supporting graph review is retained separately. Entire1231B lazy-register macro reused unchanged. Three fixed ordinary recipes produce six whole resolved selected symbols and18 actual complete two-GPR/scalar-f0 callers, zero matches. Both genuine compilers prove11 layout words and high/max/pattern/zero GPR5 signextension.395 newly derived fixtures/60382 original instructions,2450300 native checks; nine local guards and eight-pass/one-skip original-absence proof; three genuinely failing mutants. All original words retained, including two constant1000 divisor-zero BREAK delays never executed.",
+        "Parent and distinct final peer preserve485 RAW before archived publication document;9+3 entire dictionaries,81 strict RAW artifacts/24 entire target ELFs/44 native objects/golden and4 whole read-only ImageHlp-qualified PEs reproduce.395 fixtures/60382 original instructions/2450300 checks/nine guards/three real rejected mutants;15177 typed fields and independent integer exponent/significand checks. Entire1231-byte published lazy macro unchanged. Only exact-normal/+zero results for binary24-representable signextended u32 and positive power2 divisor<=2^31 are inferred; default294911760/general EE precision/FCR31/hardware excluded. Unresolved numeric declarations/classes/roots; initial production hashes unchanged and private replay failures retained."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 380,
+          "different_bytes": 353,
+          "compiled_sha256": "2566a98c72a4a2603fa9c2a82b7d1e39b2f3d45faeea556667f5e4fbc0f2e41a",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 380,
+          "different_bytes": 352,
+          "compiled_sha256": "9aa3181481fa55e116de1d09dbc4e370f269608e0deb88c8a8768c1ee256b87b",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 368,
+          "different_bytes": 367,
+          "compiled_sha256": "f42220c98d29f07a645a4b257783e6679854ffb5ce283dbfd56abdf11a24bc16",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_peer_passed",
+      "author_evidence_snapshot": "Capture incoming GPR5 before initialization; incoming GPR4 is not read. Reload global rate after initialization and read+4 in conversion branch delay. Two unsigned-word conversion expression graphs then DIV.S f0. No concrete incoming root found; original argument declarations unknown. Author read all212 selected original instructions and natural emitted target/ABI bodies; prior supporting graph review is retained separately. Entire1231B lazy-register macro reused unchanged. Three fixed ordinary recipes produce six whole resolved selected symbols and18 actual complete two-GPR/scalar-f0 callers, zero matches. Both genuine compilers prove11 layout words and high/max/pattern/zero GPR5 signextension.395 newly derived fixtures/60382 original instructions,2450300 native checks; nine local guards and eight-pass/one-skip original-absence proof; three genuinely failing mutants. All original words retained, including two constant1000 divisor-zero BREAK delays never executed.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "whole_original_complete": true,
+        "freeze": {
+          "path": "build/timer_float/frozen_inputs.json",
+          "raw_sha256": "b1a8e64739692d53ef92ecf46bccf3bf08f71fdb90773bfa561a61732098838a",
+          "count": 485
+        },
+        "distinct_peer": {
+          "path": ".local/tfp0000001/independent_audit.json",
+          "raw_sha256": "e07476c3daa6ef7d4f161fd69cf3297296624e715c3fc50c3ca050fcf4b81db4"
+        },
+        "root_replay": {
+          "path": ".local/tf2q000004/audit.json",
+          "raw_sha256": "41aa7b503ee40b218995f10dcc799f7146e03b7b0649b48d15f90a0bb32a8dba"
+        }
+      },
+      "compiled_symbol": "func_002BDA78",
+      "compiled_size": 368,
+      "compiled_sha256": "f42220c98d29f07a645a4b257783e6679854ffb5ce283dbfd56abdf11a24bc16",
+      "upstream_source_sha256": "3cb66bf17e7f0869580c3597c3a2c7d510f931771314f8bd86368a84dcf2cb3f",
+      "source_provenance_manifest": "src/game/timer_float_provenance.json"
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "disc_tooling",
+    "selected_functions": 2,
+    "selected_bytes": 848,
+    "new_exact_functions": 0,
+    "new_exact_bytes": 0,
+    "freeze": {
+      "path": "build/timer_float/frozen_inputs.json",
+      "raw_sha256": "b1a8e64739692d53ef92ecf46bccf3bf08f71fdb90773bfa561a61732098838a",
+      "count": 485
+    }
+  }
+}

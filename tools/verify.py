@@ -95,6 +95,41 @@ def symbol_bindings(function):
         if name in bindings and bindings[name] != address:
             raise ValueError(f"Conflicting per-function symbol binding {name}")
         bindings[name] = address
+    if "reuse_compiled_symbol" in function:
+        seed_name = function["reuse_compiled_symbol"]
+        if not isinstance(seed_name, str) or not seed_name:
+            raise ValueError("Compiled-symbol reuse requires a canonical seed name")
+        seeds = [item for item in manifests() if item["name"] == seed_name]
+        if len(seeds) != 1:
+            raise ValueError("Compiled-symbol reuse requires one canonical seed")
+        seed = seeds[0]
+        reviewed = seed.get("reviewed") is True
+        legacy_review = (seed.get("status") in ("matched", "matching")
+                         and isinstance(seed.get("independent_review"), str)
+                         and bool(seed["independent_review"].strip()))
+        if not (reviewed or legacy_review) or "reuse_compiled_symbol" in seed:
+            raise ValueError("Compiled-symbol reuse requires a reviewed primary seed")
+        symbol = function.get("compiled_symbol", function["name"])
+        if symbol != seed.get("compiled_symbol", seed["name"]):
+            raise ValueError("Compiled-symbol reuse changed the selected source symbol")
+        for key in ("source", "source_kind", "compiler_profile", "compile_flags",
+                    "size", "original_sha256"):
+            if key not in seed or function.get(key) != seed[key]:
+                raise ValueError(f"Compiled-symbol reuse changed seed field {key}")
+        if function.get("source_provenance_manifest") != seed.get("source_provenance_manifest"):
+            raise ValueError("Compiled-symbol reuse changed seed provenance manifest")
+        address = number(function["address"])
+        seed_address = number(seed["address"])
+        if (address == seed_address or function["name"] == seed_name
+                or bindings.get(function["name"]) != address
+                or bindings.get(symbol) != seed_address):
+            raise ValueError("Compiled-symbol reuse requires distinct canonical entry bindings")
+        if validate_sources([seed, function], ROOT) != [seed_name, function["name"]]:
+            raise ValueError("Compiled-symbol reuse requires complete source fingerprints")
+        # This is the selected definition, which GNU ld places at its own
+        # original VMA. Every external/helper/data binding stays canonical;
+        # the global seed binding remains unchanged outside this one call.
+        del bindings[symbol]
     return bindings
 
 
