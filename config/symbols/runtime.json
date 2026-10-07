@@ -1401,6 +1401,41 @@
       "address": "0x003971A8",
       "confidence": "corroborated_behavioral_adaptation",
       "evidence": "Complete96B original wrapper captures two32-bit inputs before lock, separately reloads _impure_ptr for lock/core/unlock, forwards core arguments inGPR4..6, captures pointer result before unlock and returns it. Explicit licensed modification of the single-call pinned newlib baseline, not an unchanged-source or retail-origin claim. All four genuine whole links resolve with published bindings only, none exact. Both genuine target8-word ABIs and eight actual argument-lane callers pass;15 actual dependencies per source/profile. Original-traced960 fixtures/23040 instructions match24960 warning-free separate-TU native checks;8 decoder/original guards pass and cached-global negative control fails. Authored hooks do not implement cores/OS or assert real lock mutation. Independent parent and peer reviews passed; registered with canonical bindings and no exact-code claim."
+    },
+    "func_00363750": {
+      "address": "0x00363750",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock direct JAL and full16-byte syscall trampoline prove numeric entry; syscall number 47. Signed32 callable interface is corroborated by pinned public kernel headers. Kernel implementation is unawarded."
+    },
+    "func_003638A0": {
+      "address": "0x003638A0",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock direct JAL and full16-byte syscall trampoline prove numeric entry; syscall number 68. Signed32 callable interface is corroborated by pinned public kernel headers. Kernel implementation is unawarded."
+    },
+    "func_00363880": {
+      "address": "0x00363880",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock direct JAL and full16-byte syscall trampoline prove numeric entry; syscall number 66. Signed32 callable interface is corroborated by pinned public kernel headers. Kernel implementation is unawarded."
+    },
+    "D_00400BC0": {
+      "address": "0x00400BC0",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock load/store encodings prove this writable Semaphore word passed to wait/signal. Only the accessed four-byte original word is identified; no source or data credit."
+    },
+    "D_004059F8": {
+      "address": "0x004059F8",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock load/store encodings prove this writable Signed current-owner word, minus1 release sentinel. Only the accessed four-byte original word is identified; no source or data credit."
+    },
+    "D_004059FC": {
+      "address": "0x004059FC",
+      "confidence": "instruction_backed_numeric_binding",
+      "evidence": "Original allocator-lock load/store encodings prove this writable Wrapping32 nesting word; no positivity/ownership guard in release. Only the accessed four-byte original word is identified; no source or data credit."
+    },
+    "fclose": {
+      "address": "0x003941D8",
+      "confidence": "corroborated_modified_library_behavior",
+      "evidence": "Full45 original instructions retain NULL/init/inactive gates, flush result followed by fresh close/cookie loads, signed-negative callback result and final16-bit flags clear. Modified licensed pinned Newlib baseline deletes exactly the three main/ungetc/line cleanup clauses; full reverse identity proves only these six lines and dated prefix changed. Both authentic target profiles naturally compile/link whole functions with canonical published bindings; none exact. Author complete manual/original/native proof; independent parent/peer final review passed."
     }
   }
 }
