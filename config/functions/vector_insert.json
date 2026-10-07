@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_001007E0",
+      "address": "0x001007E0",
+      "file_offset": "0x000017E0",
+      "size": 708,
+      "original_sha256": "17d47b9069e17348c92457a7a997d7b2add3ebb9b37d54f7dd44b8bb1e8a60bd",
+      "source": "src/runtime/sgi/vector_insert.cpp",
+      "source_kind": "cxx",
+      "status": "reconstructed",
+      "reviewed": true,
+      "compiler_profile": "gcc323",
+      "compiled_symbol": "_ZN6vectorIPv24__default_alloc_templateILb0ELi0EEE13_M_insert_auxEPS0_RKS0_",
+      "compile_flags": [
+        "-Isrc/runtime/include",
+        "-Isrc/runtime/sgi/include",
+        "-Isrc/runtime/sgi/libio",
+        "-Isrc/runtime/sgi/gcc",
+        "-Isrc/runtime/sgi/config",
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-exceptions",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-weak"
+      ],
+      "link": true,
+      "upstream_source_sha256": "8331e4b1b69d152ffad4488c75b9b87b6a3f2c90b46115f946fec9e3effa2eb9",
+      "source_provenance_manifest": "src/runtime/sgi/vector_insert_provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/sgi/vector_insert.cpp",
+          "sha256": "8331e4b1b69d152ffad4488c75b9b87b6a3f2c90b46115f946fec9e3effa2eb9"
+        },
+        {
+          "path": "src/runtime/sgi/include/vector",
+          "sha256": "07a256832d9b3c3f07155c04c73319ed9a9152a086908fcc801b16c273eaf268"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_algobase.h",
+          "sha256": "2e59da60b4f9b7e837000b8e459b43491a8b11e4f700a6587f081168eaa370d1"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_config.h",
+          "sha256": "2d33f1ea4a4fe3df1b45ec830e48c513cd0544ee3cc3cc4adf9dfc89fba02c52"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_relops.h",
+          "sha256": "684315cc5a8ffbba7db56752ed35263200981a10f195e1b1c0d4fe4a7c3e7518"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_pair.h",
+          "sha256": "256f94c7c00e11bbcc71b637b1477e12d9afa897bacda9f5f43a6577e3f95de3"
+        },
+        {
+          "path": "src/runtime/sgi/include/type_traits.h",
+          "sha256": "f86bf3aed5c0322aae8e53fab94df7e78c992a38e0ee69e1aa9368a36f660e44"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/include/limits.h",
+          "sha256": "7e650381312eeb2f19e12746bd5fab3fe32cba6c57286bbe1f00739ac9ac233c"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "src/runtime/sgi/gcc/new.h",
+          "sha256": "e9e7e99c08fb6e33bdd8ababaf9ef0300b8deb797dc0b58f550415148bb57131"
+        },
+        {
+          "path": "src/runtime/sgi/gcc/new",
+          "sha256": "f1bb0c0b8f436b8e3faad2951502de5e87dce77789fce9b8efdd410678aa290e"
+        },
+        {
+          "path": "src/runtime/sgi/gcc/exception",
+          "sha256": "6956b782485f45fe3dbc00caf8311e85df005e097d0d4d43ee511231e0d22232"
+        },
+        {
+          "path": "src/runtime/sgi/libio/iostream.h",
+          "sha256": "368c62e3e9b7dad76a1a08f8fde693f748f8aa01b247fdb3e7370f97e95a5be8"
+        },
+        {
+          "path": "src/runtime/sgi/libio/streambuf.h",
+          "sha256": "04151dfee01591afb0302aa600c9639f4a8ac8f0b3b233dae76a6ea63a7f9710"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_iterator.h",
+          "sha256": "ea933fe81e87cadf2c32970c8881662cad2bbc542db192afac32ef419aa3ff0d"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_alloc.h",
+          "sha256": "b4f58bc3fe9b60f716f32768df99fb6921910090f31c78d1a03326692cec8e8f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/assert.h",
+          "sha256": "ee9626082870fce9ddbfb31810843f9bf229087a574c5b2177b958192720bb06"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_construct.h",
+          "sha256": "6a3b3cf6d734bf4924b6b1d283e15aec08f414279b9af5cf1395e6c2a23f2e73"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_uninitialized.h",
+          "sha256": "31a7740afa34505d9a2aff4bc475af3b53c2784f20349666d0d364b0debdd900"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_vector.h",
+          "sha256": "e77b871327e81a5449f699fba4d9498ad4d2f55544f1533e2d84a87674d65ae4"
+        },
+        {
+          "path": "src/runtime/sgi/include/stl_bvector.h",
+          "sha256": "c1fc202bc5b0f0211017264735a9b0df22499d17046fdf4b15df8ecd4bf64cf4"
+        }
+      ],
+      "public_source_reuse": true,
+      "source_modified": "Explicit integration/type lookup only; active upstream algorithm unchanged",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "evidence": [
+        "Complete real entry/JR+delay and240 encoded references proven in immutable SOURCE-FREE519; whole genuine canonical-only linking; no helpers/data/duplicates awarded.",
+        "Root and independent peer preserve1313 RAW inputs through isolated replay, compare12 whole dictionaries with explicit private-path/test-time/native-PE header qualifications, six target objects/four whole target ELFs/five native objects/golden/trace exactly RAW. Peer additionally relinks all four through current canonical bindings.",
+        "One complete16-byte unsigned comparator matches GCC29; genuine SGI insertion remains496vs708/diff636. No helper/data/58duplicate comparator award. Frozen timestamp-only native_environment text is explicitly rejected by separately retained factual erratum; approved parsed timestamp and checksum fields are checked on complete unchanged native images."
+      ],
+      "compiler_evidence": {
+        "compiled_size": 496,
+        "different_bytes": 636,
+        "identical": false,
+        "compiled_sha256": "7f75706268499087945135ef76b13acf5576e22ff0f86e0fafc7004f9b5090ad",
+        "whole_elf_sha256": "f0f6d10900b7aa0ec05d2519c0f1346ff7a7d0c63946d74b497f786e1aeaa8c2"
+      },
+      "implementation_limits": [
+        "Valid initialized vector objects/storage and iterators; bounded allocation/element sizes only; no added safety guards or arbitrary aliases.",
+        "Zero-count/zero-capacity and reset representations exercise historical GNU null subtraction/addition behavior, not a portable ISO-C++ proof; pointer bit representations are machine/compiler-qualified.",
+        "Engine allocation/free are controlled size/pointer observation hooks, not recovered heap semantics.",
+        "Outlined refill and OOM aliases are explicitly parent-approved semantic counterparts; distinct source/original message addresses and controlled stream contents do not prove pointer identity.",
+        "Complete licensed generic native memmove is support-only; actual252B original helper executes in the trace. No new helper/data/58duplicate comparator credit.",
+        "Unknown original compiler/template/class/element spelling; ordinary pointer POD instantiation is a behavior-compatible source reuse choice."
+      ],
+      "validation": {
+        "fixtures": 500,
+        "original_instructions": 206144,
+        "native_checks": 2065912,
+        "guards": 9,
+        "absence_passed": 5,
+        "absence_skipped": 4,
+        "negative_reject": "case19 check78593"
+      },
+      "compiled_size": 496,
+      "compiled_sha256": "7f75706268499087945135ef76b13acf5576e22ff0f86e0fafc7004f9b5090ad",
+      "compile_comparisons": [
+        {
+          "profile": "gcc323",
+          "symbol": "_ZN6vectorIPv24__default_alloc_templateILb0ELi0EEE13_M_insert_auxEPS0_RKS0_",
+          "address": "0x1007e0",
+          "source": "src/runtime/sgi/vector_insert.cpp",
+          "object_sha256": "31ccc6ec98e8da2b1a115f64d2d81d4caaaf6f1ee028e9a4c5cc9886c0bbf2dd",
+          "linked_elf_sha256": "f0f6d10900b7aa0ec05d2519c0f1346ff7a7d0c63946d74b497f786e1aeaa8c2",
+          "code_sha256": "7f75706268499087945135ef76b13acf5576e22ff0f86e0fafc7004f9b5090ad",
+          "whole_symbol_extent": 496,
+          "canonical_only": true,
+          "identical": false,
+          "expected_size": 708,
+          "compiled_size": 496,
+          "different_bytes": 636,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "17d47b9069e17348c92457a7a997d7b2add3ebb9b37d54f7dd44b8bb1e8a60bd",
+          "compiled_sha256": "7f75706268499087945135ef76b13acf5576e22ff0f86e0fafc7004f9b5090ad"
+        }
+      ],
+      "review_status": "parent_and_independent_complete_source_original_observer_whole_canonical_link_review_passed",
+      "author_evidence_snapshot": "Complete real entry/JR+delay and240 encoded references proven in immutable SOURCE-FREE519; whole genuine canonical-only linking; no helpers/data/duplicates awarded.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "canonical_bindings_only": true,
+        "entire_original_compared": true,
+        "exact_in_chosen_recipe": false,
+        "native_PE_whole_raw_equal": false,
+        "factual_native_metadata_erratum": true
+      }
+    },
+    {
+      "name": "func_00100AA8",
+      "address": "0x00100AA8",
+      "file_offset": "0x00001AA8",
+      "size": 16,
+      "original_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+      "source": "src/game/vector_insert_compare.c",
+      "source_kind": "c",
+      "status": "matched",
+      "reviewed": true,
+      "compiler_profile": "gcc29",
+      "compiled_symbol": "func_00100AA8",
+      "compile_flags": [
+        "-Isrc/runtime/include",
+        "-Isrc/runtime/sgi/include",
+        "-Isrc/runtime/sgi/libio",
+        "-Isrc/runtime/sgi/gcc",
+        "-Isrc/runtime/sgi/config",
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-exceptions",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-weak"
+      ],
+      "link": true,
+      "upstream_source_sha256": "88c7d4070efc691a6c2c207e9c1a039b90eb6fedb8c2e67b621b6218c55ac796",
+      "source_provenance_manifest": "src/runtime/sgi/vector_insert_provenance.json",
+      "source_dependencies": [
+        {
+          "path": "src/game/vector_insert_compare.c",
+          "sha256": "88c7d4070efc691a6c2c207e9c1a039b90eb6fedb8c2e67b621b6218c55ac796"
+        },
+        {
+          "path": "include/george/vector_insert.h",
+          "sha256": "f1798286f4c5ac648b73249a42075c01dd4f74710b3fff6ae7014459fd4f02f8"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        }
+      ],
+      "public_source_reuse": false,
+      "source_modified": "Independent original unsigned-word comparator reconstruction",
+      "upstream_repository": null,
+      "upstream_revision": null,
+      "evidence": [
+        "Complete real entry/JR+delay and240 encoded references proven in immutable SOURCE-FREE519; whole genuine canonical-only linking; no helpers/data/duplicates awarded.",
+        "Root and independent peer preserve1313 RAW inputs through isolated replay, compare12 whole dictionaries with explicit private-path/test-time/native-PE header qualifications, six target objects/four whole target ELFs/five native objects/golden/trace exactly RAW. Peer additionally relinks all four through current canonical bindings.",
+        "One complete16-byte unsigned comparator matches GCC29; genuine SGI insertion remains496vs708/diff636. No helper/data/58duplicate comparator award. Frozen timestamp-only native_environment text is explicitly rejected by separately retained factual erratum; approved parsed timestamp and checksum fields are checked on complete unchanged native images."
+      ],
+      "compiler_evidence": {
+        "compiled_size": 16,
+        "different_bytes": 0,
+        "identical": true,
+        "compiled_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+        "whole_elf_sha256": "40b8ff5f4df84ad2925cce1664dd716eb9eb0ce13988d3a762c061c4d0e7e70b"
+      },
+      "implementation_limits": [
+        "Valid initialized vector objects/storage and iterators; bounded allocation/element sizes only; no added safety guards or arbitrary aliases.",
+        "Zero-count/zero-capacity and reset representations exercise historical GNU null subtraction/addition behavior, not a portable ISO-C++ proof; pointer bit representations are machine/compiler-qualified.",
+        "Engine allocation/free are controlled size/pointer observation hooks, not recovered heap semantics.",
+        "Outlined refill and OOM aliases are explicitly parent-approved semantic counterparts; distinct source/original message addresses and controlled stream contents do not prove pointer identity.",
+        "Complete licensed generic native memmove is support-only; actual252B original helper executes in the trace. No new helper/data/58duplicate comparator credit.",
+        "Unknown original compiler/template/class/element spelling; ordinary pointer POD instantiation is a behavior-compatible source reuse choice."
+      ],
+      "validation": {
+        "fixtures": 500,
+        "original_instructions": 206144,
+        "native_checks": 2065912,
+        "guards": 9,
+        "absence_passed": 5,
+        "absence_skipped": 4,
+        "negative_reject": "case19 check78593"
+      },
+      "compiled_size": 16,
+      "compiled_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+      "compile_comparisons": [
+        {
+          "profile": "gcc29",
+          "symbol": "func_00100AA8",
+          "address": "0x100aa8",
+          "source": "src/game/vector_insert_compare.c",
+          "object_sha256": "ed9103c52bd3144026e1dacd1a393aff737b205aaf05057a64492b9c98b2e931",
+          "linked_elf_sha256": "40b8ff5f4df84ad2925cce1664dd716eb9eb0ce13988d3a762c061c4d0e7e70b",
+          "code_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+          "whole_symbol_extent": 16,
+          "canonical_only": true,
+          "identical": true,
+          "expected_size": 16,
+          "compiled_size": 16,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+          "compiled_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1"
+        },
+        {
+          "profile": "gcc323",
+          "symbol": "func_00100AA8",
+          "address": "0x100aa8",
+          "source": "src/game/vector_insert_compare.c",
+          "object_sha256": "3009f186f7877233bc3eef09f2bc92e0ea3fba7665c8ed20aab026e9e66fabcd",
+          "linked_elf_sha256": "eecba6b449725570cf0db0843f78dc89545121e1e839cad70e2f9aed87a34347",
+          "code_sha256": "858312fedcbb57c6a2a07ec5619065018dd6c59214f48f0628dd06e47a2f8df1",
+          "whole_symbol_extent": 16,
+          "canonical_only": true,
+          "identical": false,
+          "expected_size": 16,
+          "compiled_size": 16,
+          "different_bytes": 3,
+          "first_different_offsets": [
+            2,
+            6,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "afa19e6cc739f97f592c962cac3dfaaf0b6ba4e5fa029080bfdf13dcd309c4c1",
+          "compiled_sha256": "858312fedcbb57c6a2a07ec5619065018dd6c59214f48f0628dd06e47a2f8df1"
+        }
+      ],
+      "review_status": "parent_and_independent_complete_source_original_observer_whole_canonical_link_review_passed",
+      "author_evidence_snapshot": "Complete real entry/JR+delay and240 encoded references proven in immutable SOURCE-FREE519; whole genuine canonical-only linking; no helpers/data/duplicates awarded.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "disc_tooling",
+        "canonical_bindings_only": true,
+        "entire_original_compared": true,
+        "exact_in_chosen_recipe": true,
+        "native_PE_whole_raw_equal": false,
+        "factual_native_metadata_erratum": true
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "disc_tooling",
+    "frozen_raw_inputs": 1313,
+    "owned_inputs": 317,
+    "immutable_baselines": 996,
+    "historical_source_free519": true,
+    "whole_target_objects": 6,
+    "whole_target_ELFs": 4,
+    "whole_native_objects": 5,
+    "entire_dictionaries": 12,
+    "independent_current_canonical_relinks": 4,
+    "actual_M_closures": 12,
+    "unique_dependency_files": 54,
+    "all_executable_sections": 5,
+    "selected_encoded_references": 240,
+    "serialized_whole_original_geometries": 491,
+    "primary_caller_plus_selected_geometries": 153,
+    "actual_ABI_arrays": 3,
+    "licensed_primary_headers": 18,
+    "fixtures": 500,
+    "original_instructions": 206144,
+    "native_checks": 2065912,
+    "guards": 9,
+    "absent_original_passed": 5,
+    "absent_original_skipped": 4,
+    "negative_fixture": 19,
+    "complete_exact_functions": 1,
+    "complete_exact_bytes": 16,
+    "native_PE_contract": "Full images retained and checked; only parsed TimeDateStamp and correctly recomputed CheckSum fields differ. Frozen timestamp-only wording is explicitly false and superseded by independent factual erratum; all target bytes remain strict."
+  }
+}
