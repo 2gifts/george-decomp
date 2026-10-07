@@ -231,6 +231,101 @@ def mapped_codegen_data(function, original, sections):
     return mappings
 
 
+def writable_original_sections(elf, original):
+    """Describe authentic whole plain initialized writable sections."""
+    sections = []
+    for section in elf.iter_sections():
+        if section["sh_type"] == "SHT_PROGBITS" and section["sh_flags"] == 3:
+            offset, size = section["sh_offset"], section["sh_size"]
+            if offset + size > len(original) or section.data() != original[offset:offset + size]:
+                raise ValueError("Original writable section file bytes disagree with ELF geometry")
+            sections.append({"name": section.name, "offset": offset, "address": section["sh_addr"],
+                             "size": size, "type": section["sh_type"], "flags": section["sh_flags"],
+                             "alignment": section["sh_addralign"], "entsize": section["sh_entsize"],
+                             "sha256": hashlib.sha256(section.data()).hexdigest()})
+    return sections
+
+
+def mapped_initialized_data(function, original, sections):
+    """Prove a whole compiler-local item within an authentic writable section."""
+    from link_match import SECTION, SHA256, _symbol
+    proofs = function.get("link_writable_data", {})
+    if not isinstance(proofs, dict):
+        raise ValueError("Initialized writable proofs must be a dictionary")
+    result = {}
+    for name, proof in proofs.items():
+        required = {"file_offset", "size", "address", "original_sha256", "original_section",
+                    "original_section_sha256", "compiled_symbol", "code_bindings"}
+        if (not isinstance(name, str) or not SECTION.fullmatch(name)
+                or not (name == ".data" or name.startswith(".data."))
+                or not isinstance(proof, dict) or not required <= set(proof)
+                or set(proof) - required - {"evidence"}):
+            raise ValueError("Writable data requires complete whole original section/item and pointer proof")
+        symbol = _symbol(proof["compiled_symbol"])
+        offset, size, address = (number(proof[key]) for key in ("file_offset", "size", "address"))
+        if (any(type(value) is not int for value in (offset, size, address))
+                or offset < 0 or size <= 0 or size & 3 or offset & 3 or address & 3
+                or offset + size > len(original) or not 0 <= address <= 0xFFFFFFFF
+                or address + size > 0x100000000):
+            raise ValueError("Invalid whole initialized writable item word geometry")
+        matches = [section for section in sections if section.get("name") == proof["original_section"]]
+        if len(matches) != 1:
+            raise ValueError("Missing or ambiguous containing original writable section")
+        section = matches[0]
+        keys = ("offset", "address", "size", "flags", "alignment", "entsize")
+        if (any(type(section.get(key)) is not int for key in keys)
+                or section.get("type") != "SHT_PROGBITS" or section["flags"] != 3
+                or section["offset"] < 0 or section["size"] <= 0 or section["size"] & 3
+                or section["offset"] + section["size"] > len(original)
+                or not 0 <= section["address"] <= 0xFFFFFFFF
+                or section["address"] + section["size"] > 0x100000000
+                or section["alignment"] < 4 or section["alignment"] & (section["alignment"] - 1)
+                or section["address"] % section["alignment"] or section["offset"] % section["alignment"]
+                or section["entsize"] != 0
+                or not section["offset"] <= offset or offset + size > section["offset"] + section["size"]
+                or address != section["address"] + offset - section["offset"]):
+            raise ValueError("Item is not inside complete original allocated writable PROGBITS")
+        whole = original[section["offset"]:section["offset"] + section["size"]]
+        if (not isinstance(proof["original_section_sha256"], str)
+                or not SHA256.fullmatch(proof["original_section_sha256"])
+                or hashlib.sha256(whole).hexdigest() != proof["original_section_sha256"]
+                or section.get("sha256") != proof["original_section_sha256"]):
+            raise ValueError("Whole original writable section fingerprint mismatch")
+        # Reuse the existing narrow actual LUI/ADDIU pointer grammar unchanged.
+        # Its readonly-specific name does not change storage: only this local
+        # proof adapter feeds its byte/geometry and code-binding validation.
+        adapter = {key: proof[key] for key in ("file_offset", "size", "address", "original_sha256", "code_bindings")}
+        mapped_codegen_data({**function, "link_codegen_readonly": {name: adapter}}, original,
+                            [{key: section[key] for key in ("offset", "address", "size")}])
+        data = original[offset:offset + size]
+        result[name] = {"address": address, "expected_bytes": data,
+                        "expected_sha256": proof["original_sha256"], "compiled_symbol": symbol}
+    return result
+
+
+def writable_mapping_report(proofs, mappings, linked_mappings, original_sections):
+    """Keep the distinct whole writable proof available for hybrid rechecking."""
+    if len(linked_mappings) != len(mappings):
+        raise ValueError("Linked writable mapping inventory changed")
+    result, seen = [], set()
+    for index, item in enumerate(linked_mappings):
+        name = item["name"]
+        if name not in mappings or name in seen:
+            raise ValueError("Unexpected or duplicate linked writable mapping")
+        seen.add(name)
+        expected, proof = mappings[name], proofs[name]
+        if (item["address"] != expected["address"] or item["size"] != len(expected["expected_bytes"])
+                or item["data"] != expected["expected_bytes"] or item["sha256"] != expected["expected_sha256"]
+                or item["compiled_symbol"] != expected["compiled_symbol"] or item["flags"] != 3
+                or item["output_section"] != f".george_writable_data_{index}"):
+            raise ValueError("Actual linked initialized writable data proof changed")
+        section = next(q for q in original_sections if q["name"] == proof["original_section"])
+        result.append({**{key: item[key] for key in ("name", "output_section", "address", "size", "sha256", "input_sha256", "alignment", "compiled_symbol", "flags")},
+                       "file_offset": number(proof["file_offset"]), "original_sha256": proof["original_sha256"],
+                       "original_section": dict(section), "initializer_relocation_count": len(item["input_relocations"]),
+                       "code_bindings": proof["code_bindings"]})
+    return result
+
 def gate_generated_comparison(comparison, mapping_reports):
     """A whole code match alone cannot award a differing generated data table."""
     result = dict(comparison)
@@ -493,6 +588,7 @@ def main():
                               "size": section["sh_size"]} for section in elf.iter_sections()
                              if section["sh_type"] == "SHT_PROGBITS" and section["sh_flags"] & 2
                              and not section["sh_flags"] & 5]
+        writable_sections = writable_original_sections(elf, original) if any(f.get("link_writable_data") for f in functions) else []
         nobits_sections = [{"name": section.name, "address": section["sh_addr"], "size": section["sh_size"],
                             "type": section["sh_type"], "flags": section["sh_flags"]}
                            for section in elf.iter_sections() if section["sh_type"] == "SHT_NOBITS"]
@@ -516,7 +612,8 @@ def main():
         setup = compiler_profiles[profile_name]
         profile = setup["profile"]
         use_linker = bool(function.get("link", False) or function.get("link_symbols")
-                          or function.get("link_data") or function.get("link_bss") or function.get("link_codegen_readonly"))
+                          or function.get("link_data") or function.get("link_bss") or function.get("link_codegen_readonly")
+                          or function.get("link_writable_data"))
         chosen_flags = list(function.get("compile_flags", DEFAULT_FLAGS))
         if use_linker and "-ffunction-sections" not in chosen_flags:
             chosen_flags.append("-ffunction-sections")
@@ -548,15 +645,18 @@ def main():
         mapping_report = []
         bss_report = []
         generated_report = []
+        writable_report = []
         if use_linker:
             from link_match import link_function
             mappings = mapped_data(function, original, readonly_sections)
             bss_mappings = mapped_bss(function, original, nobits_sections)
             generated_mappings = mapped_codegen_data(function, original, readonly_sections)
+            writable_mappings = mapped_initialized_data(function, original, writable_sections)
             linked = link_function(ROOT / compiled_paths[key], symbol, number(function["address"]),
                                    symbol_bindings(function), ROOT / "build/linked" / function["name"],
                                    mapped_sections=mappings, mapped_nobits=bss_mappings,
-                                   mapped_codegen_readonly=generated_mappings)
+                                   mapped_codegen_readonly=generated_mappings,
+                                   **({"mapped_writable_data": writable_mappings} if writable_mappings else {}))
             for mapped in linked["mapped_sections"]:
                 expected_mapping = mappings[mapped["name"]]
                 if (mapped["data"] != expected_mapping["expected_bytes"]
@@ -581,6 +681,9 @@ def main():
                                          "original_sha256": expected_mapping["expected_sha256"],
                                          "file_offset": number(function["link_codegen_readonly"][mapped["name"]]["file_offset"]),
                                          "relocation_count": len(mapped["input_relocations"])})
+            if writable_mappings:
+                writable_report = writable_mapping_report(function["link_writable_data"], writable_mappings,
+                    linked.get("mapped_writable_data", []), writable_sections)
             actual, relocations = linked["code"], linked["remaining_relocations"]
             linked_path = linked["linked_path"].relative_to(ROOT).as_posix()
         comparison = gate_generated_comparison(compare_function(expected, actual, relocations), generated_report)
@@ -594,7 +697,8 @@ def main():
                         "linked_elf": linked_path,
                         "compiler_profile": profile_name, "compiler": setup["version"],
                         "compiler_sha256": setup["sha256"], "mapped_data": mapping_report, "mapped_nobits": bss_report,
-                        "compile_flags": list(flags), **({"mapped_codegen_readonly": generated_report} if generated_report else {}), **comparison})
+                        "compile_flags": list(flags), **({"mapped_codegen_readonly": generated_report} if generated_report else {}),
+                        **({"mapped_writable_data": writable_report} if writable_report else {}), **comparison})
     with (ROOT / "orig/SLUS_216.68").open("rb") as stream:
         elf = ELFFile(stream)
         code_sizes = {name: elf.get_section_by_name(name)["sh_size"] for name in (".text", ".rentext", ".vutext")}
@@ -606,7 +710,9 @@ def main():
                 "compiler_sha256": default_setup["sha256"],
                 "compiler_profiles": {name: {"version": setup["version"], "sha256": setup["sha256"]}
                                       for name, setup in compiler_profiles.items()},
-                "method": "Exact function code bytes and size plus complete equality of any generated readonly tables after actual linking; no unresolved relocations. Padding excluded.",
+                "method": ("Exact function code bytes and size plus complete equality of generated readonly and initialized writable data after actual linking; no unresolved relocations. Padding excluded."
+                           if any(result.get("mapped_writable_data") for result in results) else
+                           "Exact function code bytes and size plus complete equality of any generated readonly tables after actual linking; no unresolved relocations. Padding excluded."),
                 "full_game_build": False, "code_section_bytes": code_sizes, "total_code_bytes": total,
                 **counts,
                 "functions": results}

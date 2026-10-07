@@ -34,6 +34,8 @@ game and runtime code. The denominator includes `.text`, `.rentext`, and
 and original data retained in the hybrid build do **not** count as C/C++ progress.
 <!-- progress:end -->
 
+[Whole writable-data linking](docs/writable_data_mapping.md) adds strict support for complete initialized compiler-local objects, with independent linked-data checks and preserved historical tool versions. It adds no source or matching credit.
+
 [Archive lifecycle](docs/file_archive_lifecycle.md) now covers recursive directory loading, startup and map lifetime. Its original retry conditions and callback-sensitive field order are retained.
 
 [Vector insertion](docs/vector_insert.md) reuses the original-era SGI template and adds a byte-exact unsigned comparator.

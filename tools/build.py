@@ -12,7 +12,7 @@ import sys
 
 from elftools.elf.elffile import ELFFile
 from analyze import ROOT, validated_elf, write_json
-from verify import manifests, mapped_data, object_functions, validate_target_function
+from verify import manifests, mapped_data, object_functions, validate_target_function, number, writable_original_sections
 from source_provenance import validate_sources
 
 
@@ -43,8 +43,49 @@ def validate_codegen_hybrid(function, linked, original, readonly_sections):
             raise ValueError("Generated readonly hybrid section differs from complete original proof")
 
 
+def validate_writable_hybrid(function, linked, original, writable_sections, declaration):
+    """Require canonical whole writable proofs and independently read ld data."""
+    from link_match import _validate_writable_output, LinkError
+    from verify import mapped_initialized_data
+    proofs = declaration.get("link_writable_data", {})
+    expected = mapped_initialized_data(declaration, original, writable_sections)
+    reports = function.get("mapped_writable_data", [])
+    if not isinstance(reports, list) or len(reports) != len(expected):
+        raise ValueError("Missing or extra declared initialized writable build report")
+    if not expected:
+        return
+    if linked is None:
+        raise ValueError("Initialized writable candidate needs complete actual linked ELF")
+    seen = set()
+    for index, item in enumerate(reports):
+        if not isinstance(item, dict) or item.get("name") not in expected or item["name"] in seen:
+            raise ValueError("Invalid or duplicate initialized writable build report")
+        name = item["name"]
+        seen.add(name)
+        proof, mapping = proofs[name], expected[name]
+        section = next(q for q in writable_sections if q["name"] == proof["original_section"])
+        if (item.get("output_section") != f".george_writable_data_{index}"
+                or item.get("original_section") != section or item.get("code_bindings") != proof["code_bindings"]
+                or item.get("file_offset") != number(proof["file_offset"])
+                or item.get("original_sha256") != proof["original_sha256"]
+                or item.get("address") != mapping["address"] or item.get("size") != len(mapping["expected_bytes"])
+                or item.get("sha256") != mapping["expected_sha256"] or item.get("input_sha256") != mapping["expected_sha256"]
+                or item.get("compiled_symbol") != mapping["compiled_symbol"] or item.get("flags") != 3
+                or type(item.get("alignment")) is not int or item["alignment"] < 4
+                or item["alignment"] & (item["alignment"] - 1) or item["address"] % item["alignment"]
+                or type(item.get("initializer_relocation_count")) is not int or item["initializer_relocation_count"] != 0):
+            raise ValueError("Initialized writable report differs from canonical original proof")
+        try:
+            _validate_writable_output(linked, {**mapping, "size": len(mapping["expected_bytes"]),
+                "alignment": item["alignment"], "output_section": item["output_section"], "sha256": mapping["expected_sha256"]})
+        except LinkError as error:
+            raise ValueError("Initialized writable hybrid data differs from whole original proof") from error
+
+
 def main():
-    validate_sources(manifests())
+    declarations = manifests()
+    validate_sources(declarations)
+    declaration_by_name = {function["name"]: function for function in declarations}
     subprocess.run([sys.executable, str(ROOT / "tools/bootstrap_toolchain.py"), "--verify-only"], cwd=ROOT, check=True)
     # Recompile and recheck on every build so stale artifacts cannot earn matches.
     for script in ("baseline.py", "verify.py"):
@@ -59,6 +100,7 @@ def main():
         readonly_sections = [{"offset": section["sh_offset"], "address": section["sh_addr"], "size": section["sh_size"]}
                              for section in elf.iter_sections() if section["sh_type"] == "SHT_PROGBITS"
                              and section["sh_flags"] & 2 and not section["sh_flags"] & 5]
+        writable_sections = writable_original_sections(elf, original) if any(f.get("link_writable_data") for f in declarations) else []
     text = sections[0]
     with (ROOT / "build/text.elf").open("rb") as stream:
         compiled_text = ELFFile(stream).get_section_by_name(".text").data()
@@ -76,6 +118,7 @@ def main():
             with (ROOT / function["linked_elf"]).open("rb") as stream:
                 linked = ELFFile(stream)
                 validate_codegen_hybrid(function, linked, original, readonly_sections)
+                validate_writable_hybrid(function, linked, original, writable_sections, declaration_by_name[function["name"]])
                 symbol = next(s for s in linked.get_section_by_name(".symtab").iter_symbols()
                               if s.name == function["compiled_symbol"])
                 section = linked.get_section(symbol["st_shndx"])
@@ -84,6 +127,7 @@ def main():
                 relocations = []
         else:
             validate_codegen_hybrid(function, None, original, readonly_sections)
+            validate_writable_hybrid(function, None, original, writable_sections, declaration_by_name[function["name"]])
             object_path = ROOT / function["object"]
             if object_path not in objects:
                 objects[object_path] = object_functions(object_path)

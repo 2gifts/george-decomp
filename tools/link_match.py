@@ -8,6 +8,9 @@ geometry; they never permit initialized writable data or relax read-only guards.
 Distinct generated readonly mappings permit only genuine function-local case
 pointers and unchanged literal bytes. Their complete linked data is compared
 without masking; any mismatch is reported for reconstructed candidates only.
+Optional initialized writable mappings retain whole compiler-local word
+objects as genuine writable PROGBITS; input and actual linked initializers must
+both equal the full original byte proof, without data relocations.
 No instruction or relocation bytes are masked, and unresolved references fail.
 """
 
@@ -340,8 +343,93 @@ def _nobits_sections(values, elf, occupied_ranges):
     return result
 
 
+def _writable_sections(values, elf, occupied_ranges, symbols):
+    """Retain exact whole local initialized word objects with writable flags."""
+    if values is None:
+        values = {}
+    if not isinstance(values, dict):
+        raise LinkError("Writable data mappings must be a dictionary")
+    result, ranges = {}, list(occupied_ranges)
+    for name, proof in values.items():
+        if (not isinstance(name, str) or not SECTION.fullmatch(name)
+                or not (name == ".data" or name.startswith(".data."))):
+            raise LinkError(f"Unsupported initialized writable section name: {name!r}")
+        if not isinstance(proof, dict) or set(proof) != {"address", "expected_bytes", "expected_sha256", "compiled_symbol"}:
+            raise LinkError("Writable data requires whole byte/hash/address/object-symbol proof only")
+        address = _address(proof["address"], f"Writable data {name} address")
+        expected, digest = proof["expected_bytes"], proof["expected_sha256"]
+        symbol = _symbol(proof["compiled_symbol"])
+        if (type(expected) is not bytes or not expected or len(expected) & 3
+                or not isinstance(digest, str) or not SHA256.fullmatch(digest)
+                or hashlib.sha256(expected).hexdigest() != digest
+                or address + len(expected) > 0x100000000):
+            raise LinkError("Invalid complete writable data byte/hash/word geometry proof")
+        matches = [(index, section) for index, section in enumerate(elf.iter_sections()) if section.name == name]
+        if len(matches) != 1:
+            raise LinkError(f"Missing or ambiguous initialized writable input section: {name}")
+        index, section = matches[0]
+        if (section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] != 3
+                or section["sh_addr"] != 0 or section["sh_entsize"] != 0
+                or section["sh_size"] != len(expected)):
+            raise LinkError("Writable data requires a whole plain allocated writable PROGBITS section")
+        alignment = section["sh_addralign"]
+        if alignment < 4 or alignment & (alignment - 1) or address % alignment:
+            raise LinkError("Writable data address conflicts with complete section alignment")
+        data = section.data()
+        if data != expected:
+            raise LinkError("Writable data bytes differ from complete original proof")
+        definitions = [item for item in symbols if item["st_shndx"] == index]
+        objects = [item for item in definitions if item["st_info"]["type"] == "STT_OBJECT"]
+        if (len(objects) != 1 or objects[0].name != symbol
+                or sum(item.name == symbol for item in symbols) != 1
+                or objects[0]["st_info"]["bind"] != "STB_LOCAL"
+                or objects[0]["st_value"] != 0 or objects[0]["st_size"] != len(data)):
+            raise LinkError("Writable data needs one unambiguous whole compiler-local object symbol")
+        for item in definitions:
+            if item is objects[0]:
+                continue
+            if (item["st_info"]["type"] != "STT_SECTION" or item["st_info"]["bind"] != "STB_LOCAL"
+                    or item["st_value"] != 0 or item["st_size"] != 0):
+                raise LinkError("Writable data forbids subobjects or other section definitions")
+        for table in elf.iter_sections():
+            if isinstance(table, RelocationSection) and table["sh_info"] == index and table["sh_size"]:
+                raise LinkError("Relocation-bearing initialized writable data is unsupported")
+        ranges.append((address, address + len(data), name))
+        result[index] = {"name": name, "address": address, "size": len(data),
+                         "alignment": alignment, "compiled_symbol": symbol, "data": data,
+                         "expected_bytes": expected, "input_sha256": hashlib.sha256(data).hexdigest(),
+                         "sha256": digest, "input_relocations": [], "flags": 3,
+                         "output_section": f".george_writable_data_{len(result)}"}
+    for previous, current in zip(sorted(ranges), sorted(ranges)[1:]):
+        if previous[1] > current[0]:
+            raise LinkError(f"Writable mapped address overlap: {previous[2]} and {current[2]}")
+    return result
+
+
+def _validate_writable_output(elf, mapping):
+    """Recheck actual entire GNU ld writable storage, including its symbol."""
+    matches = [item for item in elf.iter_sections() if item.name == mapping["output_section"]]
+    if len(matches) != 1:
+        raise LinkError("Missing or ambiguous linked initialized writable section")
+    section = matches[0]
+    if (section["sh_type"] != "SHT_PROGBITS" or section["sh_flags"] != 3
+            or section["sh_addr"] != mapping["address"] or section["sh_size"] != mapping["size"]
+            or section["sh_addralign"] != mapping["alignment"] or section["sh_entsize"] != 0
+            or section.data() != mapping["expected_bytes"]
+            or hashlib.sha256(section.data()).hexdigest() != mapping["sha256"]):
+        raise LinkError("Linked writable data differs from whole fixed original proof")
+    symtab = elf.get_section_by_name(".symtab")
+    objects = [item for item in symtab.iter_symbols() if item.name == mapping["compiled_symbol"]] if symtab else []
+    if (len(objects) != 1 or objects[0]["st_info"]["type"] != "STT_OBJECT"
+            or objects[0]["st_info"]["bind"] != "STB_LOCAL"
+            or objects[0]["st_shndx"] != elf.get_section_index(section.name)
+            or objects[0]["st_value"] != mapping["address"] or objects[0]["st_size"] != mapping["size"]):
+        raise LinkError("Linked writable object symbol no longer covers the whole section")
+    return {**mapping, "data": section.data(), "sha256": hashlib.sha256(section.data()).hexdigest()}
+
+
 def _inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None,
-                      mapped_codegen_readonly=None):
+                      mapped_codegen_readonly=None, mapped_writable_data=None):
     """Validate a target and plan symbol-only normalization, without invoking ld.
 
     Defined functions in other dedicated sections are changed to SHN_ABS in a
@@ -403,6 +491,11 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
         occupied.extend((item["address"], item["address"] + item["size"], item["name"]) for item in generated.values())
         nobits = _nobits_sections(mapped_nobits, elf, occupied)
         mapped.update(nobits)
+        occupied.extend((item["address"], item["address"] + item["size"], item["name"]) for item in nobits.values())
+        writable = _writable_sections(mapped_writable_data, elf, occupied, symbols)
+        if set(writable) & set(mapped):
+            raise LinkError("Writable data and other mappings cannot share an input section")
+        mapped.update(writable)
         used_mappings = set()
         if any(index != target_index and item["st_info"]["type"] == "STT_FUNC"
                and item["st_shndx"] == section_index for index, item in enumerate(symbols)):
@@ -457,6 +550,8 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
                         or value + item["st_size"] > mapping["size"]
                         or (item["st_info"]["type"] == "STT_SECTION" and value != 0)):
                     raise LinkError(f"Invalid symbol bounds/type in mapped read-only section: {name!r}")
+                if location in writable and item["st_info"]["bind"] != "STB_LOCAL":
+                    raise LinkError("Writable mapping accepts only compiler-local data symbols")
                 if location in nobits and item["st_info"]["bind"] != "STB_LOCAL":
                     raise LinkError("NOBITS mapping accepts only bounded compiler-local data symbols")
                 mapped_address = mapping["address"] + value
@@ -528,15 +623,16 @@ def _inspect_function(object_path, symbol, address, bindings, mapped_sections=No
                 "symbol_table_offset": symtab["sh_offset"], "symbol_patches": patches,
                 "assignments": assignments, "resolved_bindings": resolved, "input_relocations": relocations,
                 "mapped_sections": list(readonly.values()), "mapped_nobits": list(nobits.values()),
-                "mapped_codegen_readonly": list(generated.values())}
+                "mapped_codegen_readonly": list(generated.values()),
+                **({"mapped_writable_data": list(writable.values())} if writable else {})}
 
 
 def inspect_function(object_path, symbol, address, bindings, mapped_sections=None, mapped_nobits=None,
-                     mapped_codegen_readonly=None):
+                     mapped_codegen_readonly=None, mapped_writable_data=None):
     """Plan strict original-address linking; malformed ELF input is rejected."""
     try:
         return _inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits,
-                                 mapped_codegen_readonly)
+                                 mapped_codegen_readonly, mapped_writable_data)
     except (ELFError, struct.error) as error:
         raise LinkError(f"Malformed input ELF: {error}") from error
 
@@ -556,7 +652,7 @@ def _linker(binutils):
 
 
 def link_function(object_path, symbol, address, bindings, output_dir, binutils=DEFAULT_BINUTILS,
-                  mapped_sections=None, mapped_nobits=None, mapped_codegen_readonly=None):
+                  mapped_sections=None, mapped_nobits=None, mapped_codegen_readonly=None, mapped_writable_data=None):
     """Return exact linked bytes and audit artifacts, or raise LinkError.
 
     The return dict contains code, remaining_relocations, linked_path,
@@ -577,10 +673,14 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
     pointers inside this selected function may differ at input; every literal
     byte must agree. Actual ld output is returned with complete data equality,
     and the caller must gate a function match on both full code and data.
+    Optional mapped_writable_data requires whole expected_bytes/hash/address
+    and one actual compiled_symbol covering the complete local word object.
+    It retains genuine flags3 PROGBITS and rejects initializer relocations;
+    the whole actual linked section and object symbol are rechecked.
     """
     object_path = Path(object_path).resolve()
     plan = inspect_function(object_path, symbol, address, bindings, mapped_sections, mapped_nobits,
-                            mapped_codegen_readonly)
+                            mapped_codegen_readonly, mapped_writable_data)
     linker = _linker(binutils)
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -606,6 +706,8 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
         lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
     for mapping in plan["mapped_nobits"]:
         lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} (NOLOAD) : {{ KEEP(*("{mapping["name"]}")) }}')
+    for mapping in plan.get("mapped_writable_data", []):
+        lines.append(f'  {mapping["output_section"]} 0x{mapping["address"]:08X} : {{ KEEP(*("{mapping["name"]}")) }}')
     lines.extend(["  /DISCARD/ : { *(*) }", "}"])
     script.write_text("\n".join(lines) + "\n", encoding="ascii")
     linked = work / "function.elf"
@@ -662,9 +764,12 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
                 raise LinkError("Linked generated readonly literal byte changed")
             linked_generated.append({**mapping, "data": actual, "sha256": hashlib.sha256(actual).hexdigest(),
                                      "identical": actual == mapping["expected_bytes"]})
+        linked_writable = [_validate_writable_output(elf, mapping)
+                           for mapping in plan.get("mapped_writable_data", [])]
         expected_allocated = {".text", *(mapping["output_section"] for mapping in plan["mapped_sections"]),
                               *(mapping["output_section"] for mapping in plan["mapped_codegen_readonly"]),
-                              *(mapping["output_section"] for mapping in plan["mapped_nobits"])}
+                              *(mapping["output_section"] for mapping in plan["mapped_nobits"]),
+                              *(mapping["output_section"] for mapping in plan.get("mapped_writable_data", []))}
         if any(section["sh_flags"] & 2 and section.name not in expected_allocated for section in elf.iter_sections()):
             raise LinkError("Unexpected allocated output section")
         for section in elf.iter_sections():
@@ -678,4 +783,5 @@ def link_function(object_path, symbol, address, bindings, output_dir, binutils=D
             "object_path": normalized, "address": address, "size": plan["size"],
             "resolved_bindings": plan["resolved_bindings"], "input_relocations": plan["input_relocations"],
             "mapped_sections": linked_mappings, "mapped_nobits": linked_nobits,
-            "mapped_codegen_readonly": linked_generated}
+            "mapped_codegen_readonly": linked_generated,
+            **({"mapped_writable_data": linked_writable} if linked_writable else {})}
