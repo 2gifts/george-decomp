@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002A1E78",
+      "address": "0x002A1E78",
+      "file_offset": "0x001A2E78",
+      "size": 156,
+      "original_sha256": "ad1118458b173fb0eea6d0f949f9eccc7f1162686209f153c9731e7095691f15",
+      "source": "src/game/matrix_basis.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/matrix_basis.c",
+          "bytes": 2322,
+          "sha256": "40405238d2e4220814e2a9489998e459d4356d35544d614fc6a4964cf720d894"
+        },
+        {
+          "path": "include/george/matrix_basis.h",
+          "bytes": 652,
+          "sha256": "b1ba638e1b37702d7859c9a500e42b0113aca0a34579eb3e0c4aed41079d86e0"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "bytes": 1489,
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "bytes": 762,
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "bytes": 5556,
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        }
+      ],
+      "source_header_fingerprints": {
+        "src/game/matrix_basis.c": "40405238d2e4220814e2a9489998e459d4356d35544d614fc6a4964cf720d894",
+        "include/george/matrix_basis.h": "b1ba638e1b37702d7859c9a500e42b0113aca0a34579eb3e0c4aed41079d86e0"
+      },
+      "candidate_comparisons": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 204,
+          "different_bytes": 192,
+          "first_different_offsets": [
+            0,
+            2,
+            6,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ad1118458b173fb0eea6d0f949f9eccc7f1162686209f153c9731e7095691f15",
+          "compiled_sha256": "2face4099dcca7ec1f44ea026b2f70b799a28637416b91a2df31fcd3f29171ac"
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 204,
+          "different_bytes": 192,
+          "first_different_offsets": [
+            0,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ad1118458b173fb0eea6d0f949f9eccc7f1162686209f153c9731e7095691f15",
+          "compiled_sha256": "d737f760e2d3157fe70c30e617d53371d76e7ad501013b7ef54b99aa3e23f30b"
+        }
+      ],
+      "boundary_evidence": "Complete reviewed JR31/delay body excludes four zero alignment bytes; SOURCE-FREE112 all five EXEC/data/construction scans.",
+      "evidence": "Captured coefficient polynomial with distinct products and grouped subtractions; raw fourth row before basis rows, then live translated X/Y/Z order for second entry. Existing typed caller declarations preserved.",
+      "model_limits": "Nominal binary32 initialized integer-lattice oracle only; no EE/VU rounding/error/flags/hardware/class identity. Shifted native views explicitly GNU storage/alias contract.",
+      "independent_review": "Root and distinct whole original/source/bounded-effects/ABI/complete-artifact FINAL811 reviews and contained replays passed; original whole-arena integer ledgers independently checked.",
+      "review_status": "Parent and distinct complete bounded final reviews passed; no exact-match award.",
+      "final_review": {
+        "index": {
+          "path": "build/matrix_basis/frozen_inputs.json",
+          "bytes": 157402,
+          "raw_sha256": "8daf6741e4968189e73b3b6053b08f1c2d7901e6f27ddccad4f9f5e1483f619c"
+        },
+        "parent": {
+          "path": ".local/matrix_basis_final_root_review.json",
+          "bytes": 5197,
+          "raw_sha256": "8f6b722bdd837a9339e2d968230611d1eba7fe34c18b329a21ffc79e72db213f"
+        },
+        "distinct": {
+          "path": ".local/matrix_basis_peer0001/final_review.json",
+          "bytes": 14634,
+          "raw_sha256": "97b725903daeb199d83caee41736afc2eee657555dcd9636d688c470a9da3c9b"
+        }
+      },
+      "validation": {
+        "unique_original_cases": 4500,
+        "original_instructions": 204700,
+        "all86_selected_PCs": true,
+        "native_checks": 584174,
+        "genuine_failing_controls": 3,
+        "synthetic_guards": 8,
+        "absent_original_guards": 8,
+        "nominal_binary32_only": true,
+        "source_unchanged_since_compilation": true
+      }
+    },
+    {
+      "name": "func_002A1F18",
+      "address": "0x002A1F18",
+      "file_offset": "0x001A2F18",
+      "size": 188,
+      "original_sha256": "cd19c5aa44cf2e885978291ccd5a898d67f16ce7419d251a5efff242265d81e3",
+      "source": "src/game/matrix_basis.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/matrix_basis.c",
+          "bytes": 2322,
+          "sha256": "40405238d2e4220814e2a9489998e459d4356d35544d614fc6a4964cf720d894"
+        },
+        {
+          "path": "include/george/matrix_basis.h",
+          "bytes": 652,
+          "sha256": "b1ba638e1b37702d7859c9a500e42b0113aca0a34579eb3e0c4aed41079d86e0"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "bytes": 1489,
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "bytes": 762,
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "bytes": 5556,
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        }
+      ],
+      "source_header_fingerprints": {
+        "src/game/matrix_basis.c": "40405238d2e4220814e2a9489998e459d4356d35544d614fc6a4964cf720d894",
+        "include/george/matrix_basis.h": "b1ba638e1b37702d7859c9a500e42b0113aca0a34579eb3e0c4aed41079d86e0"
+      },
+      "candidate_comparisons": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 228,
+          "different_bytes": 208,
+          "first_different_offsets": [
+            0,
+            2,
+            6,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cd19c5aa44cf2e885978291ccd5a898d67f16ce7419d251a5efff242265d81e3",
+          "compiled_sha256": "2aeca353d599b67b4cdf801a79a7cb3ce155376d5504c83483b55b9191d44cf4"
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "identical": false,
+          "expected_size": 188,
+          "compiled_size": 228,
+          "different_bytes": 209,
+          "first_different_offsets": [
+            0,
+            2,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "cd19c5aa44cf2e885978291ccd5a898d67f16ce7419d251a5efff242265d81e3",
+          "compiled_sha256": "272db903999fb274590271131f5decdb0e9735ea2e13dc9c56eef3a87094b4c9"
+        }
+      ],
+      "boundary_evidence": "Complete reviewed JR31/delay body excludes four zero alignment bytes; SOURCE-FREE112 all five EXEC/data/construction scans.",
+      "evidence": "Captured coefficient polynomial with distinct products and grouped subtractions; raw fourth row before basis rows, then live translated X/Y/Z order for second entry. Existing typed caller declarations preserved.",
+      "model_limits": "Nominal binary32 initialized integer-lattice oracle only; no EE/VU rounding/error/flags/hardware/class identity. Shifted native views explicitly GNU storage/alias contract.",
+      "independent_review": "Root and distinct whole original/source/bounded-effects/ABI/complete-artifact FINAL811 reviews and contained replays passed; original whole-arena integer ledgers independently checked.",
+      "review_status": "Parent and distinct complete bounded final reviews passed; no exact-match award.",
+      "final_review": {
+        "index": {
+          "path": "build/matrix_basis/frozen_inputs.json",
+          "bytes": 157402,
+          "raw_sha256": "8daf6741e4968189e73b3b6053b08f1c2d7901e6f27ddccad4f9f5e1483f619c"
+        },
+        "parent": {
+          "path": ".local/matrix_basis_final_root_review.json",
+          "bytes": 5197,
+          "raw_sha256": "8f6b722bdd837a9339e2d968230611d1eba7fe34c18b329a21ffc79e72db213f"
+        },
+        "distinct": {
+          "path": ".local/matrix_basis_peer0001/final_review.json",
+          "bytes": 14634,
+          "raw_sha256": "97b725903daeb199d83caee41736afc2eee657555dcd9636d688c470a9da3c9b"
+        }
+      },
+      "validation": {
+        "unique_original_cases": 4500,
+        "original_instructions": 204700,
+        "all86_selected_PCs": true,
+        "native_checks": 584174,
+        "genuine_failing_controls": 3,
+        "synthetic_guards": 8,
+        "absent_original_guards": 8,
+        "nominal_binary32_only": true,
+        "source_unchanged_since_compilation": true
+      }
+    }
+  ]
+}

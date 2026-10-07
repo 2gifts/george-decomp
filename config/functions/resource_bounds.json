@@ -2109,7 +2109,153 @@
         "limit": "Does not exclude code pointers assembled by other arithmetic/data paths, crossing function boundaries, unaligned data fields, external dynamic initialization or computed/table dispatch. Complete body boundaries/semantic recovery are independently reviewed; runtime reachability remains unresolved without a verified incoming reference."
       },
       "evidence": "Full originalinterval/source reconstruction and naturally linked complete Csymbol. Exactstatusrequireswholebytesandlength; no masking/patch/assemblyfallback/dataaward.",
-      "independent_review": "Parent and recoverpeer read339 originalinstructions/fullsource/header and380 projectioncalleeinstructions. Peerreproduced42 complete links/original/caller/table/branch/store/returnfacts and239fixtures. Parent fullnative/10guards read,239 regeneration,179846nativechecks,10guards and42freshlinks reproduce. No source/modeldefect; callercontracts andunresolvedincomingentries retained."
+      "independent_review": "Parent and recoverpeer read339 originalinstructions/fullsource/header and380 projectioncalleeinstructions. Peerreproduced42 complete links/original/caller/table/branch/store/returnfacts and239fixtures. Parent fullnative/10guards read,239 regeneration,179846nativechecks,10guards and42freshlinks reproduce. No source/modeldefect; callercontracts andunresolvedincomingentries retained.",
+      "source_dependencies": [
+        {
+          "path": "src/game/resource_bounds.c",
+          "bytes": 6258,
+          "sha256": "eefe1594948347343bb5cf91e9a33ecf0bd7528da2628581b10b2b6051a5de38",
+          "raw_sha256": "eefe1594948347343bb5cf91e9a33ecf0bd7528da2628581b10b2b6051a5de38"
+        },
+        {
+          "path": "include/george/resource_bounds.h",
+          "bytes": 1671,
+          "sha256": "3118cdde7a8acf72e6388ea90d9dea5079d084be03d34b33ddd21615db43bbdf",
+          "raw_sha256": "3118cdde7a8acf72e6388ea90d9dea5079d084be03d34b33ddd21615db43bbdf"
+        },
+        {
+          "path": "include/george/resource_groups.h",
+          "bytes": 1742,
+          "sha256": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4",
+          "raw_sha256": "46c20770422da2a3df5ed5210f198dedc611d6f0332283ab61e29e205de48bb4"
+        },
+        {
+          "path": "include/george/resource_geometry.h",
+          "bytes": 1395,
+          "sha256": "4383287b1fb7f397c497e38419a6ba8f65a3f31cff0917174fa782d81d8edb8a",
+          "raw_sha256": "4383287b1fb7f397c497e38419a6ba8f65a3f31cff0917174fa782d81d8edb8a"
+        },
+        {
+          "path": "include/george/geometry_classify6.h",
+          "bytes": 303,
+          "sha256": "e16c992ba3ed5e2a5fbd20708b5886a5839dfd0a70d1852c7ef59637f61f3f32",
+          "raw_sha256": "e16c992ba3ed5e2a5fbd20708b5886a5839dfd0a70d1852c7ef59637f61f3f32"
+        },
+        {
+          "path": "include/george/geometry_classify.h",
+          "bytes": 629,
+          "sha256": "826bc50112d3e21476fe93c7dfc338ead43d5980358dedb52506f3bf70d16d83",
+          "raw_sha256": "826bc50112d3e21476fe93c7dfc338ead43d5980358dedb52506f3bf70d16d83"
+        },
+        {
+          "path": "include/george/geometry_bounds.h",
+          "bytes": 1668,
+          "sha256": "c591b5746b3c21e6eb4d40b07cc4f9a48f8d1e8158f4b03d6bfe427a5b51c74d",
+          "raw_sha256": "c591b5746b3c21e6eb4d40b07cc4f9a48f8d1e8158f4b03d6bfe427a5b51c74d"
+        },
+        {
+          "path": "include/george/geometry.h",
+          "bytes": 892,
+          "sha256": "2fb499032a30cd4a356234ed0b6afc4c2a201178d9a0f254dfa00c9854248471",
+          "raw_sha256": "2fb499032a30cd4a356234ed0b6afc4c2a201178d9a0f254dfa00c9854248471"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "bytes": 762,
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57",
+          "raw_sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "bytes": 5556,
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621",
+          "raw_sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "bytes": 1489,
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1",
+          "raw_sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "bytes": 4012,
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140",
+          "raw_sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "bytes": 3838,
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805",
+          "raw_sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "bytes": 2920,
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b",
+          "raw_sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "bytes": 12799,
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083",
+          "raw_sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "bytes": 2593,
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e",
+          "raw_sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "bytes": 4287,
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4",
+          "raw_sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "bytes": 2350,
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e",
+          "raw_sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "bytes": 1960,
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86",
+          "raw_sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "bytes": 466,
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6",
+          "raw_sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "bytes": 1659,
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718",
+          "raw_sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        }
+      ]
     },
     {
       "name": "func_0020FC30",
