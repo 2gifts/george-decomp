@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002D4EB0",
+      "address": "0x002D4EB0",
+      "file_offset": "0x001D5EB0",
+      "size": 28,
+      "original_sha256": "d10de3d70604450706a57ef41515292733095c26efc390b4fc18766739af7885",
+      "source": "src/game/word_cursor.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_word_cursor_read_primary",
+      "source_name": "george_word_cursor_read_primary",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/word_cursor.c",
+          "sha256": "9b7e45148d3c9feee6ca9219d8375ec941f39e2e90a96274fb63e6c5d1a109d3"
+        },
+        {
+          "path": "include/george/word_cursor.h",
+          "sha256": "dfaa6586eccdb6540a60d710d3a1a1b778862e985edc738f712476572404e551"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        }
+      ],
+      "link_symbols": {
+        "func_002D4EB0": 2969264,
+        "george_word_cursor_read_primary": 2969264
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d10de3d70604450706a57ef41515292733095c26efc390b4fc18766739af7885",
+          "compiled_sha256": "189a2781a7492fe56f601a41960af070426d7b73c07bc4c8ef8ca3a42212eb48"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 32,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            22,
+            23,
+            26,
+            27
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "d10de3d70604450706a57ef41515292733095c26efc390b4fc18766739af7885",
+          "compiled_sha256": "61aaaafa6c4e9701aa5fa7606e6905393303f25a4c09176a959ec7d0355df6fc"
+        }
+      ],
+      "target_abi": {
+        "pointer_GPR4": true,
+        "result_lower64_GPR2": true,
+        "actual_layout": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8,
+          12,
+          16,
+          2064
+        ],
+        "actual_caller_functions": 2,
+        "private_proof": "build/word_cursor/final/caller_links.json",
+        "original_prototype_or_class": false
+      },
+      "validation": {
+        "original_fixtures": 798,
+        "original_instructions": 5040,
+        "covered_words": 19,
+        "native_checks": 511522,
+        "actual_wrong_source_failures": 4,
+        "guards": 9,
+        "absent_original_passed": 7,
+        "absent_original_skipped": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Original whole entry/JAL effects support only consumed initialized aligned32-bit scalar cells; original class, C prototype, allocation/capacity/ring semantics, lifetime and runtime ancestor reachability remain unproved.",
+        "Unique semantic declarations preserve original LW lower64 sign extension, cursor capture, low32 SLL/ADDU wrap and load-before-commit aliases. Old numeric declarations remain untouched; no universal cross-TU source-interface identity.",
+        "Production pointer-integer narrowing and out-of-range u32-to-s32 conversion are the explicit measured GNU32/two-complement contract, not universally portable ISO-C. Every actual native dereference is within the existing complete typed640-word arena.",
+        "Upper128 register state, uninitialized/out-of-range memory, exceptions, hardware timing, concurrent/intermediate observers and external class behavior are excluded.",
+        "Declaration-only transport executes complete40-byte caller words at actual private VMAs with real JAL delay and SP/RA/result SD/LD; controlled lower64 return injection is not selected algorithm execution.",
+        "Both original entries and emitted whole functions retain complete sizes, all output sections and explicit unawarded zero alignment tails. GCC29 read bodies32vs28 and GCC323 reordered sums remain honest nonmatches; only full strict output comparison may identify peek20.",
+        "New798 original fixtures/5040instructions/all19 words and full arena/events are observed using exact original PC/words and unchanged RegistryTrace/Trace; no old fixture/native counts are credited as new.",
+        "Initial fixed two production/two declaration compiles plus four actual-M and one positive/four genuine wrong-source native builds are inherited exact histories. Final replay links cached objects and runs RAW copies of whole native images, without recompilation/M queries.",
+        "Approved six numerical/semantic placements are local inputs merged into the complete historical-at-link canonical dictionary; parent owns later canonical status/aliases/source awards.",
+        "Original full four primary caller bodies215words plus all20 bounded incoming windows and support17 were reviewed; complete24 geometry/1082words remains mechanical beyond declared manual coverage."
+      ],
+      "independent_review": "Root and distinct complete original/source/dependency/object/actual-address link/ABI/scalar-native reviews and one contained final replay each passed.",
+      "review_status": "Whole matched bytes credited only where primary complete comparison is identical; other functions retain bounded initialized GNU scalar evidence and remain nonmatching.",
+      "final_review": {
+        "index": {
+          "path": "build/word_cursor/final/frozen_inputs.json",
+          "bytes": 54010,
+          "raw_sha256": "d031372d7aac50aadc48933123af121663d1299858aaa19f1b48f225f545e9e8"
+        },
+        "parent": {
+          "path": ".local/word_cursor_final_root_review.json",
+          "bytes": 25097,
+          "raw_sha256": "c1043394a6a26198f6ee3979722d30a686a266651382fbb0bf8fe286e5ba9273"
+        },
+        "distinct": {
+          "path": ".local/word_cursor_final_peer_review0001/independent_audit.json",
+          "bytes": 21519,
+          "raw_sha256": "1ca272c22f68d34e0dcbbfe6b4e42a752617bccc6a590552617ddb0c772d5948"
+        },
+        "qualifications": [
+          {
+            "path": ".local/checkpoint74_actor_root_reader_qualification.json",
+            "bytes": 2265,
+            "raw_sha256": "d5cd451a2ff09a5fa24469af3f39f0a47f2a9e686d6c161250a13ab46be3364c"
+          },
+          {
+            "path": ".local/actor_field_leaves_caller_layout_root_qualification.json",
+            "bytes": 716,
+            "raw_sha256": "3ea76cb9e8dd8bed96dd80e25f3b4fb26562c586f3e2ffcc8807d6544c08b74e"
+          },
+          {
+            "path": ".local/actor_field_leaves_replay_correction0001/supplemental_frozen_inputs.json",
+            "bytes": 103543,
+            "raw_sha256": "b07914f274d30b48503316fb220c89b1cd1464834ee6c90436983da26221d9cd"
+          },
+          {
+            "path": ".local/word_cursor_final_replay_correction/frozen_inputs.json",
+            "bytes": 1615,
+            "raw_sha256": "c490140a65abb9393df312833b43f60625d965937b00ef01cf3d439fe012bb0a"
+          },
+          {
+            "path": ".local/checkpoint74_word_root_reader_qualification.json",
+            "bytes": 1841,
+            "raw_sha256": "deb3c4750c28d817f27921c2d2653dc8db3c4eddc85ac9a9ca99670978f98196"
+          }
+        ]
+      }
+    },
+    {
+      "name": "func_002D4ED0",
+      "address": "0x002D4ED0",
+      "file_offset": "0x001D5ED0",
+      "size": 28,
+      "original_sha256": "c03616d24093f7d1be423e13e0f6c93c6f945f64be54d12c9e7e693afc04c357",
+      "source": "src/game/word_cursor.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_word_cursor_read_secondary",
+      "source_name": "george_word_cursor_read_secondary",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/word_cursor.c",
+          "sha256": "9b7e45148d3c9feee6ca9219d8375ec941f39e2e90a96274fb63e6c5d1a109d3"
+        },
+        {
+          "path": "include/george/word_cursor.h",
+          "sha256": "dfaa6586eccdb6540a60d710d3a1a1b778862e985edc738f712476572404e551"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        }
+      ],
+      "link_symbols": {
+        "func_002D4ED0": 2969296,
+        "george_word_cursor_read_secondary": 2969296
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 28,
+          "different_bytes": 8,
+          "first_different_offsets": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c03616d24093f7d1be423e13e0f6c93c6f945f64be54d12c9e7e693afc04c357",
+          "compiled_sha256": "dd88f6e2410591856deda70457edbc0ceb14465cf9b08ac6f6b97b08ccee4aa2"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": false,
+          "expected_size": 28,
+          "compiled_size": 32,
+          "different_bytes": 10,
+          "first_different_offsets": [
+            20,
+            22,
+            23,
+            24,
+            26,
+            27
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c03616d24093f7d1be423e13e0f6c93c6f945f64be54d12c9e7e693afc04c357",
+          "compiled_sha256": "817f1f8794ca0cca677aed5622195d294e8c0ea46519d08821ef3fad105ed279"
+        }
+      ],
+      "target_abi": {
+        "pointer_GPR4": true,
+        "result_lower64_GPR2": true,
+        "actual_layout": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8,
+          12,
+          16,
+          2064
+        ],
+        "actual_caller_functions": 2,
+        "private_proof": "build/word_cursor/final/caller_links.json",
+        "original_prototype_or_class": false
+      },
+      "validation": {
+        "original_fixtures": 798,
+        "original_instructions": 5040,
+        "covered_words": 19,
+        "native_checks": 511522,
+        "actual_wrong_source_failures": 4,
+        "guards": 9,
+        "absent_original_passed": 7,
+        "absent_original_skipped": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Original whole entry/JAL effects support only consumed initialized aligned32-bit scalar cells; original class, C prototype, allocation/capacity/ring semantics, lifetime and runtime ancestor reachability remain unproved.",
+        "Unique semantic declarations preserve original LW lower64 sign extension, cursor capture, low32 SLL/ADDU wrap and load-before-commit aliases. Old numeric declarations remain untouched; no universal cross-TU source-interface identity.",
+        "Production pointer-integer narrowing and out-of-range u32-to-s32 conversion are the explicit measured GNU32/two-complement contract, not universally portable ISO-C. Every actual native dereference is within the existing complete typed640-word arena.",
+        "Upper128 register state, uninitialized/out-of-range memory, exceptions, hardware timing, concurrent/intermediate observers and external class behavior are excluded.",
+        "Declaration-only transport executes complete40-byte caller words at actual private VMAs with real JAL delay and SP/RA/result SD/LD; controlled lower64 return injection is not selected algorithm execution.",
+        "Both original entries and emitted whole functions retain complete sizes, all output sections and explicit unawarded zero alignment tails. GCC29 read bodies32vs28 and GCC323 reordered sums remain honest nonmatches; only full strict output comparison may identify peek20.",
+        "New798 original fixtures/5040instructions/all19 words and full arena/events are observed using exact original PC/words and unchanged RegistryTrace/Trace; no old fixture/native counts are credited as new.",
+        "Initial fixed two production/two declaration compiles plus four actual-M and one positive/four genuine wrong-source native builds are inherited exact histories. Final replay links cached objects and runs RAW copies of whole native images, without recompilation/M queries.",
+        "Approved six numerical/semantic placements are local inputs merged into the complete historical-at-link canonical dictionary; parent owns later canonical status/aliases/source awards.",
+        "Original full four primary caller bodies215words plus all20 bounded incoming windows and support17 were reviewed; complete24 geometry/1082words remains mechanical beyond declared manual coverage."
+      ],
+      "independent_review": "Root and distinct complete original/source/dependency/object/actual-address link/ABI/scalar-native reviews and one contained final replay each passed.",
+      "review_status": "Whole matched bytes credited only where primary complete comparison is identical; other functions retain bounded initialized GNU scalar evidence and remain nonmatching.",
+      "final_review": {
+        "index": {
+          "path": "build/word_cursor/final/frozen_inputs.json",
+          "bytes": 54010,
+          "raw_sha256": "d031372d7aac50aadc48933123af121663d1299858aaa19f1b48f225f545e9e8"
+        },
+        "parent": {
+          "path": ".local/word_cursor_final_root_review.json",
+          "bytes": 25097,
+          "raw_sha256": "c1043394a6a26198f6ee3979722d30a686a266651382fbb0bf8fe286e5ba9273"
+        },
+        "distinct": {
+          "path": ".local/word_cursor_final_peer_review0001/independent_audit.json",
+          "bytes": 21519,
+          "raw_sha256": "1ca272c22f68d34e0dcbbfe6b4e42a752617bccc6a590552617ddb0c772d5948"
+        },
+        "qualifications": [
+          {
+            "path": ".local/checkpoint74_actor_root_reader_qualification.json",
+            "bytes": 2265,
+            "raw_sha256": "d5cd451a2ff09a5fa24469af3f39f0a47f2a9e686d6c161250a13ab46be3364c"
+          },
+          {
+            "path": ".local/actor_field_leaves_caller_layout_root_qualification.json",
+            "bytes": 716,
+            "raw_sha256": "3ea76cb9e8dd8bed96dd80e25f3b4fb26562c586f3e2ffcc8807d6544c08b74e"
+          },
+          {
+            "path": ".local/actor_field_leaves_replay_correction0001/supplemental_frozen_inputs.json",
+            "bytes": 103543,
+            "raw_sha256": "b07914f274d30b48503316fb220c89b1cd1464834ee6c90436983da26221d9cd"
+          },
+          {
+            "path": ".local/word_cursor_final_replay_correction/frozen_inputs.json",
+            "bytes": 1615,
+            "raw_sha256": "c490140a65abb9393df312833b43f60625d965937b00ef01cf3d439fe012bb0a"
+          },
+          {
+            "path": ".local/checkpoint74_word_root_reader_qualification.json",
+            "bytes": 1841,
+            "raw_sha256": "deb3c4750c28d817f27921c2d2653dc8db3c4eddc85ac9a9ca99670978f98196"
+          }
+        ]
+      }
+    },
+    {
+      "name": "func_002D4EF0",
+      "address": "0x002D4EF0",
+      "file_offset": "0x001D5EF0",
+      "size": 20,
+      "original_sha256": "3de0c39f047246a34811b3086d1968b3dc85246b023e9cfeef3a802d4bc9c1c2",
+      "source": "src/game/word_cursor.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_word_cursor_peek_secondary",
+      "source_name": "george_word_cursor_peek_secondary",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "matched",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/word_cursor.c",
+          "sha256": "9b7e45148d3c9feee6ca9219d8375ec941f39e2e90a96274fb63e6c5d1a109d3"
+        },
+        {
+          "path": "include/george/word_cursor.h",
+          "sha256": "dfaa6586eccdb6540a60d710d3a1a1b778862e985edc738f712476572404e551"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        }
+      ],
+      "link_symbols": {
+        "func_002D4EF0": 2969328,
+        "george_word_cursor_peek_secondary": 2969328
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": true,
+          "expected_size": 20,
+          "compiled_size": 20,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "3de0c39f047246a34811b3086d1968b3dc85246b023e9cfeef3a802d4bc9c1c2",
+          "compiled_sha256": "3de0c39f047246a34811b3086d1968b3dc85246b023e9cfeef3a802d4bc9c1c2"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": true,
+          "expected_size": 20,
+          "compiled_size": 20,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "3de0c39f047246a34811b3086d1968b3dc85246b023e9cfeef3a802d4bc9c1c2",
+          "compiled_sha256": "3de0c39f047246a34811b3086d1968b3dc85246b023e9cfeef3a802d4bc9c1c2"
+        }
+      ],
+      "target_abi": {
+        "pointer_GPR4": true,
+        "result_lower64_GPR2": true,
+        "actual_layout": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8,
+          12,
+          16,
+          2064
+        ],
+        "actual_caller_functions": 2,
+        "private_proof": "build/word_cursor/final/caller_links.json",
+        "original_prototype_or_class": false
+      },
+      "validation": {
+        "original_fixtures": 798,
+        "original_instructions": 5040,
+        "covered_words": 19,
+        "native_checks": 511522,
+        "actual_wrong_source_failures": 4,
+        "guards": 9,
+        "absent_original_passed": 7,
+        "absent_original_skipped": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Original whole entry/JAL effects support only consumed initialized aligned32-bit scalar cells; original class, C prototype, allocation/capacity/ring semantics, lifetime and runtime ancestor reachability remain unproved.",
+        "Unique semantic declarations preserve original LW lower64 sign extension, cursor capture, low32 SLL/ADDU wrap and load-before-commit aliases. Old numeric declarations remain untouched; no universal cross-TU source-interface identity.",
+        "Production pointer-integer narrowing and out-of-range u32-to-s32 conversion are the explicit measured GNU32/two-complement contract, not universally portable ISO-C. Every actual native dereference is within the existing complete typed640-word arena.",
+        "Upper128 register state, uninitialized/out-of-range memory, exceptions, hardware timing, concurrent/intermediate observers and external class behavior are excluded.",
+        "Declaration-only transport executes complete40-byte caller words at actual private VMAs with real JAL delay and SP/RA/result SD/LD; controlled lower64 return injection is not selected algorithm execution.",
+        "Both original entries and emitted whole functions retain complete sizes, all output sections and explicit unawarded zero alignment tails. GCC29 read bodies32vs28 and GCC323 reordered sums remain honest nonmatches; only full strict output comparison may identify peek20.",
+        "New798 original fixtures/5040instructions/all19 words and full arena/events are observed using exact original PC/words and unchanged RegistryTrace/Trace; no old fixture/native counts are credited as new.",
+        "Initial fixed two production/two declaration compiles plus four actual-M and one positive/four genuine wrong-source native builds are inherited exact histories. Final replay links cached objects and runs RAW copies of whole native images, without recompilation/M queries.",
+        "Approved six numerical/semantic placements are local inputs merged into the complete historical-at-link canonical dictionary; parent owns later canonical status/aliases/source awards.",
+        "Original full four primary caller bodies215words plus all20 bounded incoming windows and support17 were reviewed; complete24 geometry/1082words remains mechanical beyond declared manual coverage."
+      ],
+      "independent_review": "Root and distinct complete original/source/dependency/object/actual-address link/ABI/scalar-native reviews and one contained final replay each passed.",
+      "review_status": "Whole matched bytes credited only where primary complete comparison is identical; other functions retain bounded initialized GNU scalar evidence and remain nonmatching.",
+      "final_review": {
+        "index": {
+          "path": "build/word_cursor/final/frozen_inputs.json",
+          "bytes": 54010,
+          "raw_sha256": "d031372d7aac50aadc48933123af121663d1299858aaa19f1b48f225f545e9e8"
+        },
+        "parent": {
+          "path": ".local/word_cursor_final_root_review.json",
+          "bytes": 25097,
+          "raw_sha256": "c1043394a6a26198f6ee3979722d30a686a266651382fbb0bf8fe286e5ba9273"
+        },
+        "distinct": {
+          "path": ".local/word_cursor_final_peer_review0001/independent_audit.json",
+          "bytes": 21519,
+          "raw_sha256": "1ca272c22f68d34e0dcbbfe6b4e42a752617bccc6a590552617ddb0c772d5948"
+        },
+        "qualifications": [
+          {
+            "path": ".local/checkpoint74_actor_root_reader_qualification.json",
+            "bytes": 2265,
+            "raw_sha256": "d5cd451a2ff09a5fa24469af3f39f0a47f2a9e686d6c161250a13ab46be3364c"
+          },
+          {
+            "path": ".local/actor_field_leaves_caller_layout_root_qualification.json",
+            "bytes": 716,
+            "raw_sha256": "3ea76cb9e8dd8bed96dd80e25f3b4fb26562c586f3e2ffcc8807d6544c08b74e"
+          },
+          {
+            "path": ".local/actor_field_leaves_replay_correction0001/supplemental_frozen_inputs.json",
+            "bytes": 103543,
+            "raw_sha256": "b07914f274d30b48503316fb220c89b1cd1464834ee6c90436983da26221d9cd"
+          },
+          {
+            "path": ".local/word_cursor_final_replay_correction/frozen_inputs.json",
+            "bytes": 1615,
+            "raw_sha256": "c490140a65abb9393df312833b43f60625d965937b00ef01cf3d439fe012bb0a"
+          },
+          {
+            "path": ".local/checkpoint74_word_root_reader_qualification.json",
+            "bytes": 1841,
+            "raw_sha256": "deb3c4750c28d817f27921c2d2653dc8db3c4eddc85ac9a9ca99670978f98196"
+          }
+        ]
+      }
+    }
+  ],
+  "total_original_bytes": 76,
+  "exact_candidates": 1,
+  "exact_candidate_bytes": 20,
+  "canonical_registration": true,
+  "review_contract": "Parent and distinct final acceptance passed; canonical full strict build and full accepted tooling tests required."
+}
