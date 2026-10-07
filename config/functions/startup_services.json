@@ -8,30 +8,6 @@
   ],
   "functions": [
     {
-      "name": "func_00100C30",
-      "address": "0x00100C30",
-      "file_offset": "0x00001C30",
-      "size": 156,
-      "source": "src/game/startup_services.c",
-      "source_name": "func_00100C30",
-      "status": "reconstructed",
-      "reviewed": true,
-      "review_status": "reconstructed_from_disassembly",
-      "original_sha256": "b74e1eddf89702609589dc6e1b204f75cfbb40a427a356f14025fc998e5cf815",
-      "compile_flags": [
-        "-O2",
-        "-G0",
-        "-mfp64",
-        "-fno-builtin",
-        "-fno-strict-aliasing",
-        "-fno-reorder-blocks",
-        "-ffunction-sections"
-      ],
-      "evidence": "Reviewed loop computes signed pointer-distance/4, halves positive count, indirectly compares *key with *middle, keeps left half on nonzero comparator, otherwise moves past middle. Returns upper-bound iterator.",
-      "boundary_evidence": "Selected heuristic start and final return delay slot reviewed; trailing padding excluded.",
-      "link": true
-    },
-    {
       "name": "func_00100CD0",
       "address": "0x00100CD0",
       "file_offset": "0x00001CD0",
@@ -295,5 +271,12 @@
       "boundary_evidence": "Selected heuristic start and final return delay slot reviewed; trailing padding excluded.",
       "link": true
     }
-  ]
+  ],
+  "canonical_migration66": {
+    "migrated_names": [
+      "func_00100C30"
+    ],
+    "new_manifest": "config/functions/sgi_upper_bound.json",
+    "qualification": "Existing whole C reconstructions now use unchanged licensed SGI C++ implementation. Old whole source/macros/native/comparisons remain historical and unchanged; zero new source count or bytes."
+  }
 }

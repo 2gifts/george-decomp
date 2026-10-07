@@ -1,5 +1,10 @@
 # Reuse of identical complete game functions
 
+This document records the earlier C recovery. [Checkpoint66](sgi_upper_bound.md)
+migrates the59 search entries, including the original seed, to the unchanged
+licensed SGI C++ method. Existing C sources and the validation below remain
+historical evidence; the migration adds no functions or code bytes.
+
 This batch recovers 61 complete C function bodies covering 9,368 original
 instruction bytes. Four already reviewed algorithms provide the source. Each
 new original body has the same complete SHA-256 and length as its source seed,
