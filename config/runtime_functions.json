@@ -3911,7 +3911,7 @@
       "size": 680,
       "source": "src/runtime/fp_bit.c",
       "source_kind": "c",
-      "status": "reconstructed",
+      "status": "matched",
       "original_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
       "upstream_symbol": "dpmul",
       "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
@@ -3928,10 +3928,11 @@
         "-ffunction-sections",
         "-DUS_SOFTWARE_GOFAST",
         "-DFLOAT_BIT_ORDER_MISMATCH",
-        "-DNO_DENORMALS"
+        "-DNO_DENORMALS",
+        "-msplit-addresses"
       ],
       "link": true,
-      "evidence": "Complete double multiplication graph: two exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, four muldi3 low32/upper32 products with 128-bit carry combination, exponent sum+4, normalization loops carrying high/low mantissa bits, guard0xFF tie0x80 rounding and low-half sticky condition, then exact pack. All680 bytes genuinely linked; two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "evidence": "Complete unchanged pinned GNU fp-bit method. A primary-backend justified fixed GCC29 -msplit-addresses supplement now links all original bytes exactly at the actual VMA with unchanged whole NaN NOBITS mapping. Every input relocation resolves; no instruction/constant mask, crop, source edit or new storage implementation. Old recipes/nonmatches and whole objects/reports remain immutable. Original compiler remains unidentified; final independent approval is pending.",
       "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
       "candidate_comparisons": [
         {
@@ -3958,6 +3959,29 @@
           "unresolved_relocations": [],
           "expected_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
           "compiled_sha256": "877193ebce8587ee83a86a374c2b6c1a332e5bdbbf30c86739cbd86b78014c02"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-msplit-addresses"
+          ],
+          "identical": true,
+          "expected_size": 680,
+          "compiled_size": 680,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
+          "compiled_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4"
         }
       ],
       "compiled_symbol": "dpmul",
@@ -3979,6 +4003,36 @@
       },
       "link_symbols": {
         "_fpadd_parts": "0x372a28"
+      },
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/fp_bit.c",
+          "sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190"
+        }
+      ],
+      "matching_acceptance": "Whole code identity with existing whole zero-initialized NOBITS geometry. Declaration-only target ABI observer; no new original/native arithmetic, runtime or hardware claim.",
+      "independent_review": "Upgrade four existing reconstructed GNU fp-bit dpmul/fpmul/dpdiv/fpdiv to matched after root+distinct complete original1892B target identity/source/license/actual-M/two genuine whole-TU objects/four typed ABI callers and FINAL207 contained17dictionary27RAW8ELF review. Sole established recipe addition -msplit-addresses; static source, macros, helper targets and existing whole24/16B NaNNOBITS proof unchanged. Preserve complete previous canonical records/report rows and old candidate comparisons; no new source count/bytes or aliases/data/helper/storage credit. link:true, matching-only no selected numerical/native/CPU/model/coverage/hardware/IEEE-FCR claims; compiler remains unidentified; mirrored ABI declarations qualify layout only. Explicitly exclude fpmul4alignmentzeros and preserve complete initial-M failure history. New public document copies immutable author README without changing it.",
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_matching_only_peer_passed",
+      "compiled_size": 680,
+      "compiled_sha256": "1a4f23cf0eca3cfb5dbc2ddae997dd63af685b1238b4f586504ba0390a10d8a4",
+      "final_review": {
+        "freeze": {
+          "path": "build/softfloat_split_supplement/frozen_inputs.json",
+          "bytes": 42337,
+          "raw_sha256": "0fd13d057c76ec186dad88f6f42a6e7bee0a5d1a72bdbe2f8c43fc6dffc391a0"
+        },
+        "parent": {
+          "path": ".local/softfloat_split_final_root_review.json",
+          "bytes": 4826,
+          "raw_sha256": "d1ee354e734fc8a88437dfd6517de1fa85c3d78d9c4346590d3aca9f3138afdc"
+        },
+        "distinct_peer": {
+          "path": ".local/softfloat_split_peer00001/independent_audit.json",
+          "bytes": 12802,
+          "raw_sha256": "c7ac57a79a51519ed5a8cf84afb0437ad0bb164e6cc8875b2ec9531c601c5ff9"
+        }
       }
     },
     {
@@ -3988,7 +4042,7 @@
       "size": 360,
       "source": "src/runtime/fp_bit.c",
       "source_kind": "c",
-      "status": "reconstructed",
+      "status": "matched",
       "original_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
       "upstream_symbol": "dpdiv",
       "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
@@ -4005,10 +4059,11 @@
         "-ffunction-sections",
         "-DUS_SOFTWARE_GOFAST",
         "-DFLOAT_BIT_ORDER_MISMATCH",
-        "-DNO_DENORMALS"
+        "-DNO_DENORMALS",
+        "-msplit-addresses"
       ],
       "link": true,
-      "evidence": "Complete double division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<60, guard0xFF tie0x80 rounding/sticky remainder and exact pack. Complete360-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "evidence": "Complete unchanged pinned GNU fp-bit method. A primary-backend justified fixed GCC29 -msplit-addresses supplement now links all original bytes exactly at the actual VMA with unchanged whole NaN NOBITS mapping. Every input relocation resolves; no instruction/constant mask, crop, source edit or new storage implementation. Old recipes/nonmatches and whole objects/reports remain immutable. Original compiler remains unidentified; final independent approval is pending.",
       "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
       "candidate_comparisons": [
         {
@@ -4041,6 +4096,29 @@
           "unresolved_relocations": [],
           "expected_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
           "compiled_sha256": "1ae145981cc5f4540e8de4f66b585884d692dfbd8bbbfdc52c0223553abdcd44"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-msplit-addresses"
+          ],
+          "identical": true,
+          "expected_size": 360,
+          "compiled_size": 360,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
+          "compiled_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed"
         }
       ],
       "compiled_symbol": "dpdiv",
@@ -4062,6 +4140,36 @@
       },
       "link_symbols": {
         "_fpadd_parts": "0x372a28"
+      },
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/fp_bit.c",
+          "sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190"
+        }
+      ],
+      "matching_acceptance": "Whole code identity with existing whole zero-initialized NOBITS geometry. Declaration-only target ABI observer; no new original/native arithmetic, runtime or hardware claim.",
+      "independent_review": "Upgrade four existing reconstructed GNU fp-bit dpmul/fpmul/dpdiv/fpdiv to matched after root+distinct complete original1892B target identity/source/license/actual-M/two genuine whole-TU objects/four typed ABI callers and FINAL207 contained17dictionary27RAW8ELF review. Sole established recipe addition -msplit-addresses; static source, macros, helper targets and existing whole24/16B NaNNOBITS proof unchanged. Preserve complete previous canonical records/report rows and old candidate comparisons; no new source count/bytes or aliases/data/helper/storage credit. link:true, matching-only no selected numerical/native/CPU/model/coverage/hardware/IEEE-FCR claims; compiler remains unidentified; mirrored ABI declarations qualify layout only. Explicitly exclude fpmul4alignmentzeros and preserve complete initial-M failure history. New public document copies immutable author README without changing it.",
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_matching_only_peer_passed",
+      "compiled_size": 360,
+      "compiled_sha256": "52aa16efd383ae517c1a593270e7745bd2874877d3e311ff61297c54e3bb53ed",
+      "final_review": {
+        "freeze": {
+          "path": "build/softfloat_split_supplement/frozen_inputs.json",
+          "bytes": 42337,
+          "raw_sha256": "0fd13d057c76ec186dad88f6f42a6e7bee0a5d1a72bdbe2f8c43fc6dffc391a0"
+        },
+        "parent": {
+          "path": ".local/softfloat_split_final_root_review.json",
+          "bytes": 4826,
+          "raw_sha256": "d1ee354e734fc8a88437dfd6517de1fa85c3d78d9c4346590d3aca9f3138afdc"
+        },
+        "distinct_peer": {
+          "path": ".local/softfloat_split_peer00001/independent_audit.json",
+          "bytes": 12802,
+          "raw_sha256": "c7ac57a79a51519ed5a8cf84afb0437ad0bb164e6cc8875b2ec9531c601c5ff9"
+        }
       }
     },
     {
@@ -4156,7 +4264,7 @@
       "size": 500,
       "source": "src/runtime/fp_bit.c",
       "source_kind": "c",
-      "status": "reconstructed",
+      "status": "matched",
       "original_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
       "upstream_symbol": "fpmul",
       "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
@@ -4174,10 +4282,11 @@
         "-DUS_SOFTWARE_GOFAST",
         "-DFLOAT_BIT_ORDER_MISMATCH",
         "-DNO_DENORMALS",
-        "-DFLOAT"
+        "-DFLOAT",
+        "-msplit-addresses"
       ],
       "link": true,
-      "evidence": "Complete single multiplication graph: exact unpack calls, ordered NaN/infinity/zero cases and XOR signs, signed64 product of32-bit fractions, high/low product words, exponent sum+2, bit-carry normalization, guard0x7F tie0x40 rounding and low-half sticky condition, then exact pack. Original500-byte extent excludes following zero374334. Two byte differences in temporary address registers remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "evidence": "Complete unchanged pinned GNU fp-bit method. A primary-backend justified fixed GCC29 -msplit-addresses supplement now links all original bytes exactly at the actual VMA with unchanged whole NaN NOBITS mapping. Every input relocation resolves; no instruction/constant mask, crop, source edit or new storage implementation. Old recipes/nonmatches and whole objects/reports remain immutable. Original compiler remains unidentified; final independent approval is pending.",
       "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
       "candidate_comparisons": [
         {
@@ -4205,6 +4314,30 @@
           "unresolved_relocations": [],
           "expected_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
           "compiled_sha256": "2245b17e811c9f78ae3dd3d545912de8fe952cf20cf946046a4a769aab03f2ad"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT",
+            "-msplit-addresses"
+          ],
+          "identical": true,
+          "expected_size": 500,
+          "compiled_size": 500,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
+          "compiled_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db"
         }
       ],
       "compiled_symbol": "fpmul",
@@ -4226,6 +4359,36 @@
       },
       "link_symbols": {
         "_fpadd_parts": "0x373e48"
+      },
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/fp_bit.c",
+          "sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190"
+        }
+      ],
+      "matching_acceptance": "Whole code identity with existing whole zero-initialized NOBITS geometry. Declaration-only target ABI observer; no new original/native arithmetic, runtime or hardware claim.",
+      "independent_review": "Upgrade four existing reconstructed GNU fp-bit dpmul/fpmul/dpdiv/fpdiv to matched after root+distinct complete original1892B target identity/source/license/actual-M/two genuine whole-TU objects/four typed ABI callers and FINAL207 contained17dictionary27RAW8ELF review. Sole established recipe addition -msplit-addresses; static source, macros, helper targets and existing whole24/16B NaNNOBITS proof unchanged. Preserve complete previous canonical records/report rows and old candidate comparisons; no new source count/bytes or aliases/data/helper/storage credit. link:true, matching-only no selected numerical/native/CPU/model/coverage/hardware/IEEE-FCR claims; compiler remains unidentified; mirrored ABI declarations qualify layout only. Explicitly exclude fpmul4alignmentzeros and preserve complete initial-M failure history. New public document copies immutable author README without changing it.",
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_matching_only_peer_passed",
+      "compiled_size": 500,
+      "compiled_sha256": "d26df842e4c5e13a0a5731d81704d93761b72c0f27fbab118d28fcc261a380db",
+      "final_review": {
+        "freeze": {
+          "path": "build/softfloat_split_supplement/frozen_inputs.json",
+          "bytes": 42337,
+          "raw_sha256": "0fd13d057c76ec186dad88f6f42a6e7bee0a5d1a72bdbe2f8c43fc6dffc391a0"
+        },
+        "parent": {
+          "path": ".local/softfloat_split_final_root_review.json",
+          "bytes": 4826,
+          "raw_sha256": "d1ee354e734fc8a88437dfd6517de1fa85c3d78d9c4346590d3aca9f3138afdc"
+        },
+        "distinct_peer": {
+          "path": ".local/softfloat_split_peer00001/independent_audit.json",
+          "bytes": 12802,
+          "raw_sha256": "c7ac57a79a51519ed5a8cf84afb0437ad0bb164e6cc8875b2ec9531c601c5ff9"
+        }
       }
     },
     {
@@ -4235,7 +4398,7 @@
       "size": 352,
       "source": "src/runtime/fp_bit.c",
       "source_kind": "c",
-      "status": "reconstructed",
+      "status": "matched",
       "original_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
       "upstream_symbol": "fpdiv",
       "upstream_revision": "GNU EE GCC 2.9-ee-991111, ee/gcc/config/fp-bit.c, Git b595ded606227e93b8c4a447446c1d2ac093827d",
@@ -4253,10 +4416,11 @@
         "-DUS_SOFTWARE_GOFAST",
         "-DFLOAT_BIT_ORDER_MISMATCH",
         "-DNO_DENORMALS",
-        "-DFLOAT"
+        "-DFLOAT",
+        "-msplit-addresses"
       ],
       "link": true,
-      "evidence": "Complete single division graph: exact unpack calls, NaN returns, XOR signs, same-class infinity/zero NaN, infinite denominator zero, zero denominator infinity, exponent difference, numerator/denominator comparison, long division from1<<30, guard0x7F tie0x40 rounding/sticky remainder and exact pack. Complete352-byte source candidate genuinely links;15 differing bytes remain. Unchanged pinned GNU fp-bit.c and full GPL/runtime exception are preserved. NOBITS geometry/data references are genuinely resolved without initialized file bytes, instruction edits or masked comparison.",
+      "evidence": "Complete unchanged pinned GNU fp-bit method. A primary-backend justified fixed GCC29 -msplit-addresses supplement now links all original bytes exactly at the actual VMA with unchanged whole NaN NOBITS mapping. Every input relocation resolves; no instruction/constant mask, crop, source edit or new storage implementation. Old recipes/nonmatches and whole objects/reports remain immutable. Original compiler remains unidentified; final independent approval is pending.",
       "boundary_evidence": "Every original instruction reviewed through final JR and delay. Full original hashes and complete source-function extents are independently checked; following alignment and adjacent heuristic-merged functions are excluded.",
       "candidate_comparisons": [
         {
@@ -4290,6 +4454,30 @@
           "unresolved_relocations": [],
           "expected_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
           "compiled_sha256": "c9b72053f63cdc23521d31195bc2161f6935c60bedb7a55f672b904f5e8e7c6f"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "compile_flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DUS_SOFTWARE_GOFAST",
+            "-DFLOAT_BIT_ORDER_MISMATCH",
+            "-DNO_DENORMALS",
+            "-DFLOAT",
+            "-msplit-addresses"
+          ],
+          "identical": true,
+          "expected_size": 352,
+          "compiled_size": 352,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
+          "compiled_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1"
         }
       ],
       "compiled_symbol": "fpdiv",
@@ -4311,6 +4499,36 @@
       },
       "link_symbols": {
         "_fpadd_parts": "0x373e48"
+      },
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/runtime/fp_bit.c",
+          "sha256": "c44e6a9dcd898b2689c62ed2be770a445dd30d15afe78d4010429552e07d2190"
+        }
+      ],
+      "matching_acceptance": "Whole code identity with existing whole zero-initialized NOBITS geometry. Declaration-only target ABI observer; no new original/native arithmetic, runtime or hardware claim.",
+      "independent_review": "Upgrade four existing reconstructed GNU fp-bit dpmul/fpmul/dpdiv/fpdiv to matched after root+distinct complete original1892B target identity/source/license/actual-M/two genuine whole-TU objects/four typed ABI callers and FINAL207 contained17dictionary27RAW8ELF review. Sole established recipe addition -msplit-addresses; static source, macros, helper targets and existing whole24/16B NaNNOBITS proof unchanged. Preserve complete previous canonical records/report rows and old candidate comparisons; no new source count/bytes or aliases/data/helper/storage credit. link:true, matching-only no selected numerical/native/CPU/model/coverage/hardware/IEEE-FCR claims; compiler remains unidentified; mirrored ABI declarations qualify layout only. Explicitly exclude fpmul4alignmentzeros and preserve complete initial-M failure history. New public document copies immutable author README without changing it.",
+      "boundary_confidence": "reviewed_provisional",
+      "review_status": "whole_original_source_target_ABI_parent_and_distinct_final_matching_only_peer_passed",
+      "compiled_size": 352,
+      "compiled_sha256": "25446c8f80cd8d1fbefaaf2c38a401ad4a681aa3aabb9e92a4f097cf4647dad1",
+      "final_review": {
+        "freeze": {
+          "path": "build/softfloat_split_supplement/frozen_inputs.json",
+          "bytes": 42337,
+          "raw_sha256": "0fd13d057c76ec186dad88f6f42a6e7bee0a5d1a72bdbe2f8c43fc6dffc391a0"
+        },
+        "parent": {
+          "path": ".local/softfloat_split_final_root_review.json",
+          "bytes": 4826,
+          "raw_sha256": "d1ee354e734fc8a88437dfd6517de1fa85c3d78d9c4346590d3aca9f3138afdc"
+        },
+        "distinct_peer": {
+          "path": ".local/softfloat_split_peer00001/independent_audit.json",
+          "bytes": 12802,
+          "raw_sha256": "c7ac57a79a51519ed5a8cf84afb0437ad0bb164e6cc8875b2ec9531c601c5ff9"
+        }
       }
     },
     {
