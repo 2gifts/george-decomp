@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "memchr",
+      "address": "0x00393378",
+      "file_offset": "0x00294378",
+      "size": 236,
+      "source": "src/runtime/memchr.c",
+      "source_kind": "c",
+      "source_sha256": "3fd97d1c290c82bf122bc799e24f87682da89a786ab210506964811e5e115d1e",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/memchr.c",
+          "sha256": "3fd97d1c290c82bf122bc799e24f87682da89a786ab210506964811e5e115d1e",
+          "upstream_path": "ee/newlib/libc/string/memchr.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "3261cfe7676197936865b282010daadead2441a7dd019d323df1729759264b88",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/memchr.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+        "Parent and independent source-author-distinct peer preserve960 RAW inputs through isolated replay:18 entire dictionaries with exact disclosed output/link paths/test-time/native-PE exceptions,32 whole target artifacts and nine native objects/trace/golden exact RAW.",
+        "Both complete17-word target ABI arrays prove long64/consistent limits; target wrapping behavior is measured using whole naturally linked strncpy candidates. Native GNU long32 -fwrapv/-fno-strict-aliasing and initialized padded/disjoint object domains remain explicit. Nine guards, two actual failing mutations and genuine source warnings retained; no helper/data/assembly/exact-source-identity credit."
+      ],
+      "upstream_source_sha256": "3fd97d1c290c82bf122bc799e24f87682da89a786ab210506964811e5e115d1e",
+      "source_provenance_manifest": "src/runtime/runtime_strings_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 268,
+      "compiled_sha256": "fbb747fdc76fbd0754d5d447fe833eea6732af77b669a7db39603c6f1499de46",
+      "compile_comparisons": [
+        {
+          "name": "memchr",
+          "address": "0x00393378",
+          "size": 236,
+          "source": "src/runtime/memchr.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "memchr",
+            "section": ".text.memchr",
+            "value": 0,
+            "size": 276,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc29/memchr/link-ozko9k_n/function.elf",
+          "identical": false,
+          "expected_size": 236,
+          "compiled_size": 276,
+          "different_bytes": 239,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            7,
+            12,
+            16,
+            24,
+            25
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3261cfe7676197936865b282010daadead2441a7dd019d323df1729759264b88",
+          "compiled_sha256": "8c509002d0bd9bad921da6596539cc20ff7a43f720f0c9111304143ff8d9ca57"
+        },
+        {
+          "name": "memchr",
+          "address": "0x00393378",
+          "size": 236,
+          "source": "src/runtime/memchr.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "memchr",
+            "section": ".text.memchr",
+            "value": 0,
+            "size": 268,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc323/memchr/link-094sn7gh/function.elf",
+          "identical": false,
+          "expected_size": 236,
+          "compiled_size": 268,
+          "different_bytes": 237,
+          "first_different_offsets": [
+            0,
+            2,
+            4,
+            7,
+            12,
+            16,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3261cfe7676197936865b282010daadead2441a7dd019d323df1729759264b88",
+          "compiled_sha256": "fbb747fdc76fbd0754d5d447fe833eea6732af77b669a7db39603c6f1499de46"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_unchanged_source_native_observer_whole_target_parent_and_independent_peer_review_passed",
+      "author_evidence_snapshot": "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "source_unchanged": true,
+        "exact_in_any_recipe": false,
+        "complete_original_compared": true
+      }
+    },
+    {
+      "name": "memset",
+      "address": "0x003936A0",
+      "file_offset": "0x002946A0",
+      "size": 184,
+      "source": "src/runtime/memset.c",
+      "source_kind": "c",
+      "source_sha256": "86793e2d167133a652d5a31b89708e4cbcefc2192c27b0ba781977c8c473d32a",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/memset.c",
+          "sha256": "86793e2d167133a652d5a31b89708e4cbcefc2192c27b0ba781977c8c473d32a",
+          "upstream_path": "ee/newlib/libc/string/memset.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "c6de919ca7de024c2388c44000550f6dcb7e1ab430809189e16a2bf007fef5c1",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/memset.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+        "Parent and independent source-author-distinct peer preserve960 RAW inputs through isolated replay:18 entire dictionaries with exact disclosed output/link paths/test-time/native-PE exceptions,32 whole target artifacts and nine native objects/trace/golden exact RAW.",
+        "Both complete17-word target ABI arrays prove long64/consistent limits; target wrapping behavior is measured using whole naturally linked strncpy candidates. Native GNU long32 -fwrapv/-fno-strict-aliasing and initialized padded/disjoint object domains remain explicit. Nine guards, two actual failing mutations and genuine source warnings retained; no helper/data/assembly/exact-source-identity credit."
+      ],
+      "upstream_source_sha256": "86793e2d167133a652d5a31b89708e4cbcefc2192c27b0ba781977c8c473d32a",
+      "source_provenance_manifest": "src/runtime/runtime_strings_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 220,
+      "compiled_sha256": "7c68061fc00808831d509ae390bf259c5f9356d7ecd67e95e8b4c0f38a7a2f19",
+      "compile_comparisons": [
+        {
+          "name": "memset",
+          "address": "0x003936A0",
+          "size": 184,
+          "source": "src/runtime/memset.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "memset",
+            "section": ".text.memset",
+            "value": 0,
+            "size": 252,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc29/memset/link-yytm80xd/function.elf",
+          "identical": false,
+          "expected_size": 184,
+          "compiled_size": 252,
+          "different_bytes": 203,
+          "first_different_offsets": [
+            2,
+            4,
+            6,
+            7,
+            12,
+            16,
+            21,
+            26
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c6de919ca7de024c2388c44000550f6dcb7e1ab430809189e16a2bf007fef5c1",
+          "compiled_sha256": "736dae75d839562ed37903161a3c22f0245a4d41ddeab683a0100858d31c94aa"
+        },
+        {
+          "name": "memset",
+          "address": "0x003936A0",
+          "size": 184,
+          "source": "src/runtime/memset.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "memset",
+            "section": ".text.memset",
+            "value": 0,
+            "size": 220,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc323/memset/link-ovlf2lzg/function.elf",
+          "identical": false,
+          "expected_size": 184,
+          "compiled_size": 220,
+          "different_bytes": 174,
+          "first_different_offsets": [
+            2,
+            4,
+            6,
+            7,
+            12,
+            16,
+            19,
+            20
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c6de919ca7de024c2388c44000550f6dcb7e1ab430809189e16a2bf007fef5c1",
+          "compiled_sha256": "7c68061fc00808831d509ae390bf259c5f9356d7ecd67e95e8b4c0f38a7a2f19"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_unchanged_source_native_observer_whole_target_parent_and_independent_peer_review_passed",
+      "author_evidence_snapshot": "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "source_unchanged": true,
+        "exact_in_any_recipe": false,
+        "complete_original_compared": true
+      }
+    },
+    {
+      "name": "strncat",
+      "address": "0x00393C90",
+      "file_offset": "0x00294C90",
+      "size": 436,
+      "source": "src/runtime/strncat.c",
+      "source_kind": "c",
+      "source_sha256": "9a6b88ab778c6c22a3d9a38e5c2e2bae6bc772abe6a02183964df518d397b756",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strncat.c",
+          "sha256": "9a6b88ab778c6c22a3d9a38e5c2e2bae6bc772abe6a02183964df518d397b756",
+          "upstream_path": "ee/newlib/libc/string/strncat.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "f10e7e5e51251104d0beed9b161c53532d8eef53ae0631bbc383d6232cc60db7",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strncat.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+        "Parent and independent source-author-distinct peer preserve960 RAW inputs through isolated replay:18 entire dictionaries with exact disclosed output/link paths/test-time/native-PE exceptions,32 whole target artifacts and nine native objects/trace/golden exact RAW.",
+        "Both complete17-word target ABI arrays prove long64/consistent limits; target wrapping behavior is measured using whole naturally linked strncpy candidates. Native GNU long32 -fwrapv/-fno-strict-aliasing and initialized padded/disjoint object domains remain explicit. Nine guards, two actual failing mutations and genuine source warnings retained; no helper/data/assembly/exact-source-identity credit."
+      ],
+      "upstream_source_sha256": "9a6b88ab778c6c22a3d9a38e5c2e2bae6bc772abe6a02183964df518d397b756",
+      "source_provenance_manifest": "src/runtime/runtime_strings_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 240,
+      "compiled_sha256": "353a28ac3439266ed1304f2a84dcc58fe4139ba9f4b4ee02d7493bf65cd06553",
+      "compile_comparisons": [
+        {
+          "name": "strncat",
+          "address": "0x00393C90",
+          "size": 436,
+          "source": "src/runtime/strncat.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncat",
+            "section": ".text.strncat",
+            "value": 0,
+            "size": 332,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc29/strncat/link-2ui0vwqo/function.elf",
+          "identical": false,
+          "expected_size": 436,
+          "compiled_size": 332,
+          "different_bytes": 396,
+          "first_different_offsets": [
+            8,
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            19
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f10e7e5e51251104d0beed9b161c53532d8eef53ae0631bbc383d6232cc60db7",
+          "compiled_sha256": "208530919a2348b921e65f984b922dbf5aaaf2c6969a936a5c19dbd915b88de7"
+        },
+        {
+          "name": "strncat",
+          "address": "0x00393C90",
+          "size": 436,
+          "source": "src/runtime/strncat.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncat",
+            "section": ".text.strncat",
+            "value": 0,
+            "size": 240,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc323/strncat/link-j52obatl/function.elf",
+          "identical": false,
+          "expected_size": 436,
+          "compiled_size": 240,
+          "different_bytes": 412,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "f10e7e5e51251104d0beed9b161c53532d8eef53ae0631bbc383d6232cc60db7",
+          "compiled_sha256": "353a28ac3439266ed1304f2a84dcc58fe4139ba9f4b4ee02d7493bf65cd06553"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_unchanged_source_native_observer_whole_target_parent_and_independent_peer_review_passed",
+      "author_evidence_snapshot": "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "source_unchanged": true,
+        "exact_in_any_recipe": false,
+        "complete_original_compared": true
+      }
+    },
+    {
+      "name": "strncmp",
+      "address": "0x00393E48",
+      "file_offset": "0x00294E48",
+      "size": 456,
+      "source": "src/runtime/strncmp.c",
+      "source_kind": "c",
+      "source_sha256": "e7fc79ac82b3c02a6339a149abe2a0f253be398208b224e87076e49b4778216e",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strncmp.c",
+          "sha256": "e7fc79ac82b3c02a6339a149abe2a0f253be398208b224e87076e49b4778216e",
+          "upstream_path": "ee/newlib/libc/string/strncmp.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "45b1c59c13313a3f0ae7e2b1dfabba4ccac476d7c0995f8b4164c5b2c55ca899",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strncmp.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+        "Parent and independent source-author-distinct peer preserve960 RAW inputs through isolated replay:18 entire dictionaries with exact disclosed output/link paths/test-time/native-PE exceptions,32 whole target artifacts and nine native objects/trace/golden exact RAW.",
+        "Both complete17-word target ABI arrays prove long64/consistent limits; target wrapping behavior is measured using whole naturally linked strncpy candidates. Native GNU long32 -fwrapv/-fno-strict-aliasing and initialized padded/disjoint object domains remain explicit. Nine guards, two actual failing mutations and genuine source warnings retained; no helper/data/assembly/exact-source-identity credit."
+      ],
+      "upstream_source_sha256": "e7fc79ac82b3c02a6339a149abe2a0f253be398208b224e87076e49b4778216e",
+      "source_provenance_manifest": "src/runtime/runtime_strings_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 332,
+      "compiled_sha256": "6eeb702cdc6de4d2f94538dc1adc9ebf3c98aa9517ddd8af759a20b6623c8485",
+      "compile_comparisons": [
+        {
+          "name": "strncmp",
+          "address": "0x00393E48",
+          "size": 456,
+          "source": "src/runtime/strncmp.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncmp",
+            "section": ".text.strncmp",
+            "value": 0,
+            "size": 264,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc29/strncmp/link-cssaq5dl/function.elf",
+          "identical": false,
+          "expected_size": 456,
+          "compiled_size": 264,
+          "different_bytes": 400,
+          "first_different_offsets": [
+            5,
+            18,
+            20,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "45b1c59c13313a3f0ae7e2b1dfabba4ccac476d7c0995f8b4164c5b2c55ca899",
+          "compiled_sha256": "06f091e3133580846b89a2452d28fd3ca3fcd362c508d5793fa829fa82452ea3"
+        },
+        {
+          "name": "strncmp",
+          "address": "0x00393E48",
+          "size": 456,
+          "source": "src/runtime/strncmp.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncmp",
+            "section": ".text.strncmp",
+            "value": 0,
+            "size": 332,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc323/strncmp/link-ho8jh95q/function.elf",
+          "identical": false,
+          "expected_size": 456,
+          "compiled_size": 332,
+          "different_bytes": 419,
+          "first_different_offsets": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "45b1c59c13313a3f0ae7e2b1dfabba4ccac476d7c0995f8b4164c5b2c55ca899",
+          "compiled_sha256": "6eeb702cdc6de4d2f94538dc1adc9ebf3c98aa9517ddd8af759a20b6623c8485"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_unchanged_source_native_observer_whole_target_parent_and_independent_peer_review_passed",
+      "author_evidence_snapshot": "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "source_unchanged": true,
+        "exact_in_any_recipe": false,
+        "complete_original_compared": true
+      }
+    },
+    {
+      "name": "strncpy",
+      "address": "0x00394010",
+      "file_offset": "0x00295010",
+      "size": 456,
+      "source": "src/runtime/strncpy.c",
+      "source_kind": "c",
+      "source_sha256": "02668aeb2461c074f110b2cdda739cb0346a239196c23bf38f78db0917084da2",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/strncpy.c",
+          "sha256": "02668aeb2461c074f110b2cdda739cb0346a239196c23bf38f78db0917084da2",
+          "upstream_path": "ee/newlib/libc/string/strncpy.c",
+          "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+          "modified": false,
+          "license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions."
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/sys-include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/limits.h",
+          "sha256": "aff0064c2a7df7922c5de5b2dee4a6ee574aeb919ac7845f0dc54d115c00f75d"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "88855dbcea2c2cc350526d81ee05648e1f0de1c2da2a9dc7411f7de878a397a6",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_path": "ee/newlib/libc/string/strncpy.c",
+      "upstream_license": "LICENSES/newlib-1.8.1.txt, default clause9: Cygnus Solutions1994/1997. This software was developed at Cygnus Solutions.",
+      "modified": false,
+      "evidence": [
+        "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+        "Parent and independent source-author-distinct peer preserve960 RAW inputs through isolated replay:18 entire dictionaries with exact disclosed output/link paths/test-time/native-PE exceptions,32 whole target artifacts and nine native objects/trace/golden exact RAW.",
+        "Both complete17-word target ABI arrays prove long64/consistent limits; target wrapping behavior is measured using whole naturally linked strncpy candidates. Native GNU long32 -fwrapv/-fno-strict-aliasing and initialized padded/disjoint object domains remain explicit. Nine guards, two actual failing mutations and genuine source warnings retained; no helper/data/assembly/exact-source-identity credit."
+      ],
+      "upstream_source_sha256": "02668aeb2461c074f110b2cdda739cb0346a239196c23bf38f78db0917084da2",
+      "source_provenance_manifest": "src/runtime/runtime_strings_provenance.json",
+      "upstream_repository": "https://github.com/SSXModding/ps2-ee-toolchain",
+      "public_source_reuse": true,
+      "compiled_size": 248,
+      "compiled_sha256": "424c6b1ab6f1cb7f2b1d99a8fe83f2e7a3fa3011091c3b9b6d237581832066e4",
+      "compile_comparisons": [
+        {
+          "name": "strncpy",
+          "address": "0x00394010",
+          "size": 456,
+          "source": "src/runtime/strncpy.c",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncpy",
+            "section": ".text.strncpy",
+            "value": 0,
+            "size": 276,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc29/strncpy/link-t_2jgamc/function.elf",
+          "identical": false,
+          "expected_size": 456,
+          "compiled_size": 276,
+          "different_bytes": 421,
+          "first_different_offsets": [
+            1,
+            5,
+            6,
+            8,
+            10,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "88855dbcea2c2cc350526d81ee05648e1f0de1c2da2a9dc7411f7de878a397a6",
+          "compiled_sha256": "b3b681e1d4f6d682f440d35d3c0bd7e0d3e7b3fcece72144af5f2d80f8f028cb"
+        },
+        {
+          "name": "strncpy",
+          "address": "0x00394010",
+          "size": 456,
+          "source": "src/runtime/strncpy.c",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "actual_stt_func": {
+            "name": "strncpy",
+            "section": ".text.strncpy",
+            "value": 0,
+            "size": 248,
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {},
+          "input_relocations": [],
+          "linked_elf": "build/runtime_strings/linked/gcc323/strncpy/link-ta03jb_a/function.elf",
+          "identical": false,
+          "expected_size": 456,
+          "compiled_size": 248,
+          "different_bytes": 431,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "88855dbcea2c2cc350526d81ee05648e1f0de1c2da2a9dc7411f7de878a397a6",
+          "compiled_sha256": "424c6b1ab6f1cb7f2b1d99a8fe83f2e7a3fa3011091c3b9b6d237581832066e4"
+        }
+      ],
+      "reviewed": true,
+      "review_status": "complete_original_unchanged_source_native_observer_whole_target_parent_and_independent_peer_review_passed",
+      "author_evidence_snapshot": "Entire unchanged pinned generic newlib C; complete selected original/optimized R5900 source review and strict padded/disjoint ordinary-memory value proof. Default10 whole selected links,0exact; exact original C/compiler identity remains unproved. Actual both17-word target ABIs/GPR4..6 and12-M plus9 native-M;9545 original fixtures/441 reachable instructions/14680210 native checks/9 guards/2 negatives. ISO signed-subtraction subset and explicit GNU -fwrapv/-fno-strict-aliasing contract qualified. Author complete, peer/root final review pending; no helper/data award.",
+      "boundary_confidence": "reviewed_provisional",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "canonical_bindings_only": true,
+        "source_unchanged": true,
+        "exact_in_any_recipe": false,
+        "complete_original_compared": true
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "frozen_raw_inputs": 960,
+    "owned_inputs": 231,
+    "immutable_source_free_baselines": 729,
+    "entire_dictionaries": 18,
+    "whole_target_objects": 12,
+    "whole_target_ET_EXECs": 20,
+    "whole_native_objects": 9,
+    "actual_M_closures": 21,
+    "unique_dependencies": 33,
+    "actual_17_word_target_ABI_arrays": 2,
+    "fixtures": 9545,
+    "original_instructions": 2763636,
+    "selected_original_instructions": 442,
+    "executed_selected_original_instructions": 441,
+    "unreachable_NOP": "0x00393FD4",
+    "native_checks": 14680210,
+    "guards": 9,
+    "absence_passed": 7,
+    "absence_skipped": 2,
+    "actual_negatives": 2,
+    "complete_exact_functions": 0,
+    "complete_exact_bytes": 0,
+    "native_PE_whole_raw_equal": false,
+    "metadata_completion": "Parent adds measured upstream_source_sha256 and complete chosen-M dependencies plus standard provenance package; authored source_sha256 draft unchanged. No source/header/compiler/producer edits."
+  }
+}
