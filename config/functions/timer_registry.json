@@ -1,0 +1,2252 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002BD3C8",
+      "address": "0x002BD3C8",
+      "file_offset": "0x001BE3C8",
+      "size": 300,
+      "source": "src/game/timer_registry.c",
+      "source_kind": "c",
+      "source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_dependencies": [
+        {
+          "path": "src/game/timer_registry.c",
+          "sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "ae5d1ebb59764c19cecd69e8651721f45cc773b5b6515e388979b0f036e0999c",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "GPR4 points to a timer word. If global3FD4D8 is null, allocate12 with real2AEE60, store +8=1 and +4=0x1193FF10, publish global before +8 becomes unsigned0x1193FF10/1000; allocate another12, reload global and pointer-range begin/end, then descriptor+4=readonly447AA0,+0=UINT32_MAX,+8=captured global. Pass address of stack descriptor pointer to whole upper-bound100C30 with genuine comparator100AA8; reload current end/capacity afterward. If spare space and returned position equals current end, conditionally write at nonnull position then freshly load/increment end; otherwise real insertion1007E0. Register pop callback2BD340 with396260; ignore registration result. Read actual CP0 Count once after initialization; low32 value stored to captured GPR4. No allocation/exhaustion/null guards, generic class name or frequency-unit assertion. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer reproduce all whole dictionaries/artifacts on isolated private outputs. Every source/header remains the exact initial authored bytes. Native full PE equality is not asserted: parsed clock/checksum-only observations retain actual ImageHlp-valid whole images. Full target/native object, trace and golden bytes remain strict RAW.",
+        "Canonical selected links and complete actual ABI callers have no unresolved relocation. Separate measured chosen-recipe -M source/provenance package supplied by parent; original authored draft/producers/proofs remain unchanged. Both final publication documents have archived exact pre-publication copies. No helper/data/clone or new exact-match credit."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 256,
+          "different_bytes": 250,
+          "compiled_sha256": "fed41443f924be8572571829a66ec9ca5be5f51b9abd13c938cb1320efbbeaf2",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 256,
+          "different_bytes": 248,
+          "compiled_sha256": "5cd62ff6bc82cf8f65cca89bd0e7160535926949155272c462f01065045e76ac",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 264,
+          "different_bytes": 252,
+          "compiled_sha256": "a8a9e4b27788f3c5f0800fe5909478c486e5a2f2f65af188d4c2fc2697b85e83",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_provenance_manifest": "src/game/timer_registry_provenance.json",
+      "compiled_size": 264,
+      "compiled_sha256": "a8a9e4b27788f3c5f0800fe5909478c486e5a2f2f65af188d4c2fc2697b85e83",
+      "compile_comparisons": [
+        {
+          "name": "func_002BD3C8",
+          "address": "0x002BD3C8",
+          "size": 300,
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD3C8",
+            "size": 256,
+            "value": 0,
+            "section": ".text.func_002BD3C8",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736
+          },
+          "input_relocations": [
+            {
+              "offset": 16,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 32,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 36,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 40,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 72,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 76,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 80,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 88,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 92,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 104,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 108,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 120,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 124,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 144,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 204,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 212,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 220,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 216,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29/func_002BD3C8/link-hac2dzqq/function.elf",
+          "identical": false,
+          "expected_size": 300,
+          "compiled_size": 256,
+          "different_bytes": 250,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ae5d1ebb59764c19cecd69e8651721f45cc773b5b6515e388979b0f036e0999c",
+          "compiled_sha256": "fed41443f924be8572571829a66ec9ca5be5f51b9abd13c938cb1320efbbeaf2"
+        },
+        {
+          "name": "func_002BD3C8",
+          "address": "0x002BD3C8",
+          "size": 300,
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD3C8",
+            "size": 256,
+            "value": 0,
+            "section": ".text.func_002BD3C8",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736
+          },
+          "input_relocations": [
+            {
+              "offset": 16,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 20,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 32,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 36,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 40,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 72,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 76,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 80,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 88,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 92,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 104,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 108,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 120,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 124,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 144,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 204,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 212,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 220,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 216,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29_save128/func_002BD3C8/link-d6i7ojfl/function.elf",
+          "identical": false,
+          "expected_size": 300,
+          "compiled_size": 256,
+          "different_bytes": 248,
+          "first_different_offsets": [
+            0,
+            4,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ae5d1ebb59764c19cecd69e8651721f45cc773b5b6515e388979b0f036e0999c",
+          "compiled_sha256": "5cd62ff6bc82cf8f65cca89bd0e7160535926949155272c462f01065045e76ac"
+        },
+        {
+          "name": "func_002BD3C8",
+          "address": "0x002BD3C8",
+          "size": 300,
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD3C8",
+            "size": 264,
+            "value": 0,
+            "section": ".text.func_002BD3C8",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "func_002AEE60": 2813536,
+            "D_0046A0F0": 4628720,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_00396260": 3760736,
+            "func_002BD340": 2872128
+          },
+          "input_relocations": [
+            {
+              "offset": 20,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 24,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 72,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 108,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 112,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 116,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 120,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 128,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 136,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 144,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 164,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 168,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 172,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 216,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 228,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            },
+            {
+              "offset": 224,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 232,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc323/func_002BD3C8/link-2m857xgc/function.elf",
+          "identical": false,
+          "expected_size": 300,
+          "compiled_size": 264,
+          "different_bytes": 252,
+          "first_different_offsets": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ae5d1ebb59764c19cecd69e8651721f45cc773b5b6515e388979b0f036e0999c",
+          "compiled_sha256": "a8a9e4b27788f3c5f0800fe5909478c486e5a2f2f65af188d4c2fc2697b85e83"
+        }
+      ],
+      "review_status": "whole_original_source_ABI_native_parent_and_distinct_final_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "GPR4 points to a timer word. If global3FD4D8 is null, allocate12 with real2AEE60, store +8=1 and +4=0x1193FF10, publish global before +8 becomes unsigned0x1193FF10/1000; allocate another12, reload global and pointer-range begin/end, then descriptor+4=readonly447AA0,+0=UINT32_MAX,+8=captured global. Pass address of stack descriptor pointer to whole upper-bound100C30 with genuine comparator100AA8; reload current end/capacity afterward. If spare space and returned position equals current end, conditionally write at nonnull position then freshly load/increment end; otherwise real insertion1007E0. Register pop callback2BD340 with396260; ignore registration result. Read actual CP0 Count once after initialization; low32 value stored to captured GPR4. No allocation/exhaustion/null guards, generic class name or frequency-unit assertion. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "source_initial_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    },
+    {
+      "name": "func_002BD618",
+      "address": "0x002BD618",
+      "file_offset": "0x001BE618",
+      "size": 340,
+      "source": "src/game/timer_registry.c",
+      "source_kind": "c",
+      "source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_dependencies": [
+        {
+          "path": "src/game/timer_registry.c",
+          "sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "c04438d8cfc41791a707797adafe26bae870b241412f16c1c0a9b22a9d3d5edb",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "Same complete lazy-registration path with original stores/captures/reloads. Capture GPR4 timer pointer and GPR5 reset flag across initialization; read Count once, capture old timer word and optionally write captured low32 Count when flag nonzero, then return wrapping32 Count minus old word. Original reset-path load precedes store, permitting aliases. Signed-extension intermediates do not change observed low32 subtraction. No invented monotonicity, wrap epoch or hardware timing proof. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer reproduce all whole dictionaries/artifacts on isolated private outputs. Every source/header remains the exact initial authored bytes. Native full PE equality is not asserted: parsed clock/checksum-only observations retain actual ImageHlp-valid whole images. Full target/native object, trace and golden bytes remain strict RAW.",
+        "Canonical selected links and complete actual ABI callers have no unresolved relocation. Separate measured chosen-recipe -M source/provenance package supplied by parent; original authored draft/producers/proofs remain unchanged. Both final publication documents have archived exact pre-publication copies. No helper/data/clone or new exact-match credit."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 276,
+          "different_bytes": 295,
+          "compiled_sha256": "2e0584e26e79c81111a373f1c8c30058d4147fd34c6f428bda357109a759d268",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 276,
+          "different_bytes": 294,
+          "compiled_sha256": "9a67bfeef2a49d43bab0af333fde33d2b6d884087c89da0cba547240bc3c921d",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 280,
+          "different_bytes": 306,
+          "compiled_sha256": "9909e770a09b196cebacb3e9db067bdc8912b29c967e78454ae197729368b800",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_provenance_manifest": "src/game/timer_registry_provenance.json",
+      "compiled_size": 280,
+      "compiled_sha256": "9909e770a09b196cebacb3e9db067bdc8912b29c967e78454ae197729368b800",
+      "compile_comparisons": [
+        {
+          "name": "func_002BD618",
+          "address": "0x002BD618",
+          "size": 340,
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD618",
+            "size": 276,
+            "value": 0,
+            "section": ".text.func_002BD618",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736
+          },
+          "input_relocations": [
+            {
+              "offset": 24,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 28,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 40,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 44,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 80,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 84,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 88,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 96,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 100,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 112,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 116,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 128,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 152,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 212,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 220,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 228,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 224,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29/func_002BD618/link-spnzkh2c/function.elf",
+          "identical": false,
+          "expected_size": 340,
+          "compiled_size": 276,
+          "different_bytes": 295,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04438d8cfc41791a707797adafe26bae870b241412f16c1c0a9b22a9d3d5edb",
+          "compiled_sha256": "2e0584e26e79c81111a373f1c8c30058d4147fd34c6f428bda357109a759d268"
+        },
+        {
+          "name": "func_002BD618",
+          "address": "0x002BD618",
+          "size": 340,
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD618",
+            "size": 276,
+            "value": 0,
+            "section": ".text.func_002BD618",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736
+          },
+          "input_relocations": [
+            {
+              "offset": 24,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 28,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 40,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 44,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 48,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 80,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 84,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 88,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 96,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 100,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 112,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 116,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 128,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 152,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 212,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 220,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 228,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 224,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29_save128/func_002BD618/link-0yiwx4bj/function.elf",
+          "identical": false,
+          "expected_size": 340,
+          "compiled_size": 276,
+          "different_bytes": 294,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04438d8cfc41791a707797adafe26bae870b241412f16c1c0a9b22a9d3d5edb",
+          "compiled_sha256": "9a67bfeef2a49d43bab0af333fde33d2b6d884087c89da0cba547240bc3c921d"
+        },
+        {
+          "name": "func_002BD618",
+          "address": "0x002BD618",
+          "size": 340,
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD618",
+            "size": 280,
+            "value": 0,
+            "section": ".text.func_002BD618",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "func_002AEE60": 2813536,
+            "D_0046A0F0": 4628720,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_00396260": 3760736,
+            "func_002BD340": 2872128
+          },
+          "input_relocations": [
+            {
+              "offset": 20,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 28,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 88,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 124,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 128,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 136,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 144,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 212,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 148,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 152,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 160,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 180,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 184,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 188,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 228,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 232,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 240,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            },
+            {
+              "offset": 236,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 244,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc323/func_002BD618/link-jqm65uhl/function.elf",
+          "identical": false,
+          "expected_size": 340,
+          "compiled_size": 280,
+          "different_bytes": 306,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "c04438d8cfc41791a707797adafe26bae870b241412f16c1c0a9b22a9d3d5edb",
+          "compiled_sha256": "9909e770a09b196cebacb3e9db067bdc8912b29c967e78454ae197729368b800"
+        }
+      ],
+      "review_status": "whole_original_source_ABI_native_parent_and_distinct_final_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Same complete lazy-registration path with original stores/captures/reloads. Capture GPR4 timer pointer and GPR5 reset flag across initialization; read Count once, capture old timer word and optionally write captured low32 Count when flag nonzero, then return wrapping32 Count minus old word. Original reset-path load precedes store, permitting aliases. Signed-extension intermediates do not change observed low32 subtraction. No invented monotonicity, wrap epoch or hardware timing proof. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "source_initial_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    },
+    {
+      "name": "func_002BD928",
+      "address": "0x002BD928",
+      "file_offset": "0x001BE928",
+      "size": 336,
+      "source": "src/game/timer_registry.c",
+      "source_kind": "c",
+      "source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_dependencies": [
+        {
+          "path": "src/game/timer_registry.c",
+          "sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+          "modified": true,
+          "classification": "Authored numeric reconstruction with reused support contracts"
+        },
+        {
+          "path": "include/george/timer_registry.h",
+          "sha256": "8545e9390b5a87ef85a2b762b19c4b4a57de68cb5b027ade69ba1e3e70406351"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/tree_updates.h",
+          "sha256": "e985d2b44740e9f419165303bc64e1bd24273ac1cbe786de473476d4527ea527"
+        },
+        {
+          "path": "include/george/tree.h",
+          "sha256": "ac291079172b5d26e586029bfefee3cae84ddd2a929a629754962f898610b940"
+        },
+        {
+          "path": "include/george/list.h",
+          "sha256": "ede6bf207a68b85d67c614724ee1c85a82eb8ef4a21b7f4c90e5e6d3b5a5ee30"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "status": "reconstructed",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "original_sha256": "70f8fcab9bbd8eb24dab04cf81f64335733fcd485d2669c0bbf05c649208b820",
+      "reviewed": true,
+      "implementation_limits": [
+        "Existing published volatile Count primitive reused, only fixture-controlled low32/signextendedlow64 observation; no frequency/timing/privilege/upper128 model.",
+        "Original initialization/Count/append/capture and fresh field order retained; no allocation/divider/capacity guards invented.",
+        "Native authentic SGI constructed vector/pointer lives, measured GNU/native C prefix/static-member alias domain, genuine bytewise licensed memmove/atexit support. Controlled Count/core allocator/release/diagnostic/pop seams have no helper/data award.",
+        "Historical source-free pop status preserved; actual callback is registered only, never executed in native proof."
+      ],
+      "evidence": [
+        "Same complete lazy-registration path. After that path capture current global rate pointer BEFORE nested2BD618(timer,reset). After nested call freshly read +8 through captured rate pointer, execute unsigned elapsed/divisor with original zero-divisor BREAK, return quotient low32. No zero guard or inferred milliseconds promise. Callback/global mutation can change fresh divider without changing captured rate object. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+        "Parent and distinct peer reproduce all whole dictionaries/artifacts on isolated private outputs. Every source/header remains the exact initial authored bytes. Native full PE equality is not asserted: parsed clock/checksum-only observations retain actual ImageHlp-valid whole images. Full target/native object, trace and golden bytes remain strict RAW.",
+        "Canonical selected links and complete actual ABI callers have no unresolved relocation. Separate measured chosen-recipe -M source/provenance package supplied by parent; original authored draft/producers/proofs remain unchanged. Both final publication documents have archived exact pre-publication copies. No helper/data/clone or new exact-match credit."
+      ],
+      "candidate_profiles": [
+        {
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 316,
+          "different_bytes": 270,
+          "compiled_sha256": "abbb6b9514ddf6faceeaef6467a1dacb247a71a39c9bc94b4969409fb15f5527",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "compiled_size": 316,
+          "different_bytes": 267,
+          "compiled_sha256": "51f4fa5b7c2c95b9b5b646294b7f9e8d6a53cf9f2ba59582b3a7f0dbbf2d61f1",
+          "identical": false,
+          "unresolved_relocations": []
+        },
+        {
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "compiled_size": 308,
+          "different_bytes": 291,
+          "compiled_sha256": "95061651e253cbdcccc4dc6dfd4504d5654d27c5db7830432069d525950e13b2",
+          "identical": false,
+          "unresolved_relocations": []
+        }
+      ],
+      "upstream_source_sha256": "97d3b2d105438ea53d321e826ec227ca482564aa2709413d792f8454e1eb9e1b",
+      "source_provenance_manifest": "src/game/timer_registry_provenance.json",
+      "compiled_size": 308,
+      "compiled_sha256": "95061651e253cbdcccc4dc6dfd4504d5654d27c5db7830432069d525950e13b2",
+      "compile_comparisons": [
+        {
+          "name": "func_002BD928",
+          "address": "0x002BD928",
+          "size": 336,
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD928",
+            "size": 316,
+            "value": 0,
+            "section": ".text.func_002BD928",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736,
+            "func_002BD618": 2872856
+          },
+          "input_relocations": [
+            {
+              "offset": 28,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 32,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 44,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 48,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 52,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 96,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 100,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 104,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 112,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 116,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 128,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 144,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 148,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 168,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 228,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 236,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 244,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 240,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            },
+            {
+              "offset": 248,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 252,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 260,
+              "type": 4,
+              "symbol": "func_002BD618",
+              "symbol_index": 21
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29/func_002BD928/link-w6g5qijs/function.elf",
+          "identical": false,
+          "expected_size": 336,
+          "compiled_size": 316,
+          "different_bytes": 270,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            8,
+            11,
+            12,
+            13,
+            14
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "70f8fcab9bbd8eb24dab04cf81f64335733fcd485d2669c0bbf05c649208b820",
+          "compiled_sha256": "abbb6b9514ddf6faceeaef6467a1dacb247a71a39c9bc94b4969409fb15f5527"
+        },
+        {
+          "name": "func_002BD928",
+          "address": "0x002BD928",
+          "size": 336,
+          "recipe": "gcc29_save128",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections",
+            "-DGEORGE_USE_SAVE128"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD928",
+            "size": 316,
+            "value": 0,
+            "section": ".text.func_002BD928",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "D_0046A0F0": 4628720,
+            "func_002AEE60": 2813536,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_002BD340": 2872128,
+            "func_00396260": 3760736,
+            "func_002BD618": 2872856
+          },
+          "input_relocations": [
+            {
+              "offset": 28,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 32,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 44,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 48,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 13
+            },
+            {
+              "offset": 52,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 96,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 100,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 104,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 14
+            },
+            {
+              "offset": 112,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 116,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 128,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 132,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 144,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 148,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 168,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 228,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 236,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 244,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 240,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            },
+            {
+              "offset": 248,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 252,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 260,
+              "type": 4,
+              "symbol": "func_002BD618",
+              "symbol_index": 21
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc29_save128/func_002BD928/link-qpuousrc/function.elf",
+          "identical": false,
+          "expected_size": 336,
+          "compiled_size": 316,
+          "different_bytes": 267,
+          "first_different_offsets": [
+            0,
+            6,
+            7,
+            8,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "70f8fcab9bbd8eb24dab04cf81f64335733fcd485d2669c0bbf05c649208b820",
+          "compiled_sha256": "51f4fa5b7c2c95b9b5b646294b7f9e8d6a53cf9f2ba59582b3a7f0dbbf2d61f1"
+        },
+        {
+          "name": "func_002BD928",
+          "address": "0x002BD928",
+          "size": 336,
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-common",
+            "-ffunction-sections"
+          ],
+          "linked": true,
+          "whole_symbol": {
+            "name": "func_002BD928",
+            "size": 308,
+            "value": 0,
+            "section": ".text.func_002BD928",
+            "binding": "STB_GLOBAL"
+          },
+          "resolved_bindings": {
+            "D_003FD4D8": 4183256,
+            "func_002BD618": 2872856,
+            "func_002AEE60": 2813536,
+            "D_0046A0F0": 4628720,
+            "D_00447AA0": 4487840,
+            "func_00100AA8": 1051304,
+            "func_00100C30": 1051696,
+            "func_001007E0": 1050592,
+            "func_00396260": 3760736,
+            "func_002BD340": 2872128
+          },
+          "input_relocations": [
+            {
+              "offset": 28,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 32,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 44,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 52,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 56,
+              "type": 4,
+              "symbol": "func_002BD618",
+              "symbol_index": 21
+            },
+            {
+              "offset": 112,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 148,
+              "type": 4,
+              "symbol": "func_002AEE60",
+              "symbol_index": 13
+            },
+            {
+              "offset": 280,
+              "type": 5,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 152,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 156,
+              "type": 6,
+              "symbol": "D_003FD4D8",
+              "symbol_index": 12
+            },
+            {
+              "offset": 160,
+              "type": 5,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 168,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 172,
+              "type": 6,
+              "symbol": "D_0046A0F0",
+              "symbol_index": 14
+            },
+            {
+              "offset": 176,
+              "type": 5,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 184,
+              "type": 6,
+              "symbol": "D_00447AA0",
+              "symbol_index": 15
+            },
+            {
+              "offset": 204,
+              "type": 5,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 208,
+              "type": 6,
+              "symbol": "func_00100AA8",
+              "symbol_index": 16
+            },
+            {
+              "offset": 212,
+              "type": 4,
+              "symbol": "func_00100C30",
+              "symbol_index": 17
+            },
+            {
+              "offset": 256,
+              "type": 4,
+              "symbol": "func_001007E0",
+              "symbol_index": 18
+            },
+            {
+              "offset": 268,
+              "type": 4,
+              "symbol": "func_00396260",
+              "symbol_index": 20
+            },
+            {
+              "offset": 264,
+              "type": 5,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            },
+            {
+              "offset": 272,
+              "type": 6,
+              "symbol": "func_002BD340",
+              "symbol_index": 19
+            }
+          ],
+          "linked_elf": "build/timer_registry/linked/gcc323/func_002BD928/link-ilwp76n2/function.elf",
+          "identical": false,
+          "expected_size": 336,
+          "compiled_size": 308,
+          "different_bytes": 291,
+          "first_different_offsets": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "70f8fcab9bbd8eb24dab04cf81f64335733fcd485d2669c0bbf05c649208b820",
+          "compiled_sha256": "95061651e253cbdcccc4dc6dfd4504d5654d27c5db7830432069d525950e13b2"
+        }
+      ],
+      "review_status": "whole_original_source_ABI_native_parent_and_distinct_final_peer_passed",
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": "Same complete lazy-registration path. After that path capture current global rate pointer BEFORE nested2BD618(timer,reset). After nested call freshly read +8 through captured rate pointer, execute unsigned elapsed/divisor with original zero-divisor BREAK, return quotient low32. No zero guard or inferred milliseconds promise. Callback/global mutation can change fresh divider without changing captured rate object. All244 selected plus621 actual tracer support instructions manually read. Three default recipes yield9 genuinely whole resolved selected links, no byte matches. Both real compilers prove13 layout words plus7 authentic exit fields and1/2-GPR caller forwarding.509 initialized fixtures/125730 actual original instructions,3169166 native checks,9 synthetic guards present/absent,3 actual failing variants exercise old-timer load, captured rate pointer and fresh end reload. Author selected C/H retain initial bytes.",
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "research_reuse",
+        "source_initial_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "research_reuse",
+    "selected_functions": 3,
+    "selected_bytes": 976,
+    "complete_exact_functions": 0,
+    "complete_exact_bytes": 0,
+    "author_freeze": {
+      "path": "build/timer_registry/frozen_inputs.json",
+      "raw_sha256": "37e94b9d69830ef12f8a7bf3cdae8bc9c02c684660c957c45f6c20ab77eec4b2",
+      "all_RAW_unchanged": 489
+    },
+    "proof_history_preserved": true,
+    "native_PE_whole_RAW_equal": false
+  }
+}

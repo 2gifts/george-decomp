@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002BF418",
+      "address": "0x002BF418",
+      "file_offset": "0x001C0418",
+      "size": 156,
+      "original_sha256": "3d27f2bb41c8c541264005883bb8f02d6256d06609ce4bf9a4a90dfd6b15ac76",
+      "source": "src/game/hashtable_clear.c",
+      "source_kind": "c",
+      "source_sha256": "958799b0d66161da5e8c826170d057d4d01d5b5434a12261adb65a8ced434716",
+      "source_dependencies": [
+        {
+          "path": "src/game/hashtable_clear.c",
+          "sha256": "958799b0d66161da5e8c826170d057d4d01d5b5434a12261adb65a8ced434716",
+          "modified": true,
+          "classification": "Authored licensed SGI scalar C adaptation"
+        },
+        {
+          "path": "include/george/completion_resolver.h",
+          "sha256": "01983a69fa5d02897cef2cd2e9e621aedbb404ca82a13460ceefa50b84b61efb"
+        },
+        {
+          "path": "include/george/actor_states2.h",
+          "sha256": "6fb6bfb5c666fc1620dc7b8f58d34e5488735bd0e4a4b19fba2e58ebb857bef2"
+        },
+        {
+          "path": "include/george/actor_states.h",
+          "sha256": "560b8b7b4b7cab4747ec49b5158c082cd0ac7108a1c644bc1e6e9c75d452dccb"
+        },
+        {
+          "path": "include/george/actor_movement.h",
+          "sha256": "356c21885189c10dddb6d7e377814899becf1c6e0fd81eba6741f5eabe6cdc0c"
+        },
+        {
+          "path": "include/george/goal_methods6.h",
+          "sha256": "2910e170cdce2f56324e4297a91c4edf6426e892f9ece37da393d01800369686"
+        },
+        {
+          "path": "include/george/goal_methods4.h",
+          "sha256": "729439c45595aa7a6547454dc443d5e7973963a9cb41a10d55796d17d3d18140"
+        },
+        {
+          "path": "include/george/goal_methods3.h",
+          "sha256": "d6f2f2bef8e658ac93eebeadd6247122f22c2fc6a8e3825e03840f3e07b3a805"
+        },
+        {
+          "path": "include/george/goal_methods2.h",
+          "sha256": "a3357bbf71eee6891b0004410dbb0106548908eace52090b51b41001e940f26b"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        },
+        {
+          "path": "include/george/deimos_tables.h",
+          "sha256": "0a2c8d0a2cca5a016a8555605ff12739e605296bc76a71fa4f3d94c2f42caf86"
+        },
+        {
+          "path": "include/george/ring.h",
+          "sha256": "fdca439f06079eecc70d7e19b9a2b52ee2fa3cf2f43377798e9e870b2a4731d6"
+        },
+        {
+          "path": "include/george/deimos_calls.h",
+          "sha256": "86d50a9341348cace268e6b47480168553b80a5668aa0c3bd76bd1643f9d4718"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/startup.h",
+          "sha256": "7247288df11440231222ffcd0f6b99814af8c2d0eff7b7377552f8454ae5f690"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        }
+      ],
+      "status": "reconstructed",
+      "reviewed": true,
+      "review_status": "whole_original_source_ABI_native_parent_and_distinct_final_peer_passed",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "entry_evidence": [
+        {
+          "instruction": "0x002BEEA8",
+          "word": "0x0C0AFD06",
+          "kind": "JAL",
+          "target": "0x002BF418",
+          "delay_word": "0x0200202D",
+          "caller": {
+            "name": "func_002BEDF0",
+            "address": "0x002BEDF0",
+            "size": 336,
+            "instructions": 84,
+            "section": ".text",
+            "file_offset": "0x001BFDF0",
+            "original_sha256": "7bddd0b589d8ae0301577885c140ca82573dfa86188514b8be760694d680db56",
+            "original_assembly": "build/functions/func_002BEDF0.s",
+            "original_assembly_raw_sha256": "a16fe40c45ea98b64e0f3030d6cc0e430d4af06a662e524a5b4369d6a0407362",
+            "scanner_extent": 336,
+            "terminal_instruction": "0x002BEF38",
+            "terminal_word": "0x03E00008",
+            "terminal_delay_instruction": "0x002BEF3C",
+            "terminal_delay_word": "0x27BD0070",
+            "excluded_zero_padding": 0,
+            "following_entry": "0x002BEF40",
+            "registered_sources": []
+          },
+          "abi_window": {
+            "address": "0x002BEE68",
+            "size": 128,
+            "sha256": "9146edef2afbbfb6b5a1a05e7daa25fd33fa725e8c395aa7ae0b0dd97bda1aed",
+            "words": [
+              {
+                "instruction": "0x002BEE68",
+                "word": "0xAFA00010"
+              },
+              {
+                "instruction": "0x002BEE6C",
+                "word": "0x26320008"
+              },
+              {
+                "instruction": "0x002BEE70",
+                "word": "0x1060000D"
+              },
+              {
+                "instruction": "0x002BEE74",
+                "word": "0xAFA20014"
+              },
+              {
+                "instruction": "0x002BEE78",
+                "word": "0x8FA20000"
+              },
+              {
+                "instruction": "0x002BEE7C",
+                "word": "0x8C440008"
+              },
+              {
+                "instruction": "0x002BEE80",
+                "word": "0x10800003"
+              },
+              {
+                "instruction": "0x002BEE84",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002BEE88",
+                "word": "0x0C0ABC48"
+              },
+              {
+                "instruction": "0x002BEE8C",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002BEE90",
+                "word": "0x0C0AFD2E"
+              },
+              {
+                "instruction": "0x002BEE94",
+                "word": "0x03A0202D"
+              },
+              {
+                "instruction": "0x002BEE98",
+                "word": "0x8FA30000"
+              },
+              {
+                "instruction": "0x002BEE9C",
+                "word": "0xAFA00010"
+              },
+              {
+                "instruction": "0x002BEEA0",
+                "word": "0x1460FFF5"
+              },
+              {
+                "instruction": "0x002BEEA4",
+                "word": "0xAFB00014"
+              },
+              {
+                "instruction": "0x002BEEA8",
+                "word": "0x0C0AFD06"
+              },
+              {
+                "instruction": "0x002BEEAC",
+                "word": "0x0200202D"
+              },
+              {
+                "instruction": "0x002BEEB0",
+                "word": "0x8E250008"
+              },
+              {
+                "instruction": "0x002BEEB4",
+                "word": "0x8E420008"
+              },
+              {
+                "instruction": "0x002BEEB8",
+                "word": "0x00451023"
+              },
+              {
+                "instruction": "0x002BEEBC",
+                "word": "0x00021083"
+              },
+              {
+                "instruction": "0x002BEEC0",
+                "word": "0x10400014"
+              },
+              {
+                "instruction": "0x002BEEC4",
+                "word": "0x00021880"
+              },
+              {
+                "instruction": "0x002BEEC8",
+                "word": "0x2C620081"
+              },
+              {
+                "instruction": "0x002BEECC",
+                "word": "0x14400008"
+              },
+              {
+                "instruction": "0x002BEED0",
+                "word": "0x24620007"
+              },
+              {
+                "instruction": "0x002BEED4",
+                "word": "0x0C0ABC7A"
+              },
+              {
+                "instruction": "0x002BEED8",
+                "word": "0x00A0202D"
+              },
+              {
+                "instruction": "0x002BEEDC",
+                "word": "0x1000000D"
+              },
+              {
+                "instruction": "0x002BEEE0",
+                "word": "0x00000000"
+              },
+              {
+                "instruction": "0x002BEEE4",
+                "word": "0xAFA20000"
+              }
+            ],
+            "qualification": "Bounded argument/result-use context, not full large-caller semantic review."
+          }
+        }
+      ],
+      "candidate": {
+        "name": "func_002BF418",
+        "address": "0x002BF418",
+        "recipe": "gcc29",
+        "compiler_profile": "gcc29",
+        "flags": [
+          "-O2",
+          "-G0",
+          "-mfp64",
+          "-fno-builtin",
+          "-fno-strict-aliasing",
+          "-ffunction-sections"
+        ],
+        "identical": false,
+        "expected_size": 156,
+        "compiled_size": 152,
+        "different_bytes": 113,
+        "first_different_offsets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "unresolved_relocations": [],
+        "expected_sha256": "3d27f2bb41c8c541264005883bb8f02d6256d06609ce4bf9a4a90dfd6b15ac76",
+        "compiled_sha256": "778be0f08c1ec6e19ae70f862ccd44bed38958d1a3fb743f9e4d18656eb05797",
+        "resolved_bindings": {
+          "D_003F21B8": 4137400
+        },
+        "input_relocations": [
+          {
+            "offset": 28,
+            "type": 5,
+            "symbol": "D_003F21B8",
+            "symbol_index": 10
+          },
+          {
+            "offset": 32,
+            "type": 6,
+            "symbol": "D_003F21B8",
+            "symbol_index": 10
+          },
+          {
+            "offset": 64,
+            "type": 5,
+            "symbol": "D_003F21B8",
+            "symbol_index": 10
+          },
+          {
+            "offset": 68,
+            "type": 6,
+            "symbol": "D_003F21B8",
+            "symbol_index": 10
+          }
+        ],
+        "artifacts": {
+          "linked_path": {
+            "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.elf",
+            "raw_sha256": "29da04d2ce1eaa937db7befcd6533f544bf216a55323dd3204141aab3d2e85cc"
+          },
+          "object_path": {
+            "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.o",
+            "raw_sha256": "b87fea901bfe97d48fb8c89a4ba8294c7739716f2533316a5239df6b2c589fd0"
+          },
+          "script_path": {
+            "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.ld",
+            "raw_sha256": "029f69b07b594443e8605368b0f74596b95c45b6ab9eeafcbd79daa1e678fa62"
+          }
+        }
+      },
+      "original_boundary": {
+        "size": 156,
+        "terminal": "0x002BF4AC",
+        "delay": "0x002BF4B0",
+        "excluded_padding": 4,
+        "following_entry": "0x002BF4B8"
+      },
+      "evidence": [
+        {
+          "identity_packet": "build/hashtable_clear/identity_packet.json",
+          "licensed_algorithm_adaptation": "Complete SGI clear traversal plus observed fixed-size default deallocate. Explicit modified C with retained HP/SGI notice; no unchanged source/original identity or generic C++ lifetime claim.",
+          "corrected_span_supplement": {
+            "path": ".local/hashtable_clear_scope_author_erratum/erratum.json",
+            "bytes": 27198,
+            "raw_sha256": "fe83ba356517ace1b6dbf63d5985e940edc4c43e6258ca6492ed9d53d3f77024"
+          },
+          "native_checks": 50496,
+          "original_fixtures": 435,
+          "limits": "Actual whole links use verify.symbol_bindings({}) only. D_003F21B8 is the only selected relocation binding; no extra allocator/helper/local storage symbol or mapping. No clone/data/helper award."
+        },
+        "Parent and distinct peer reproduce all whole dictionaries/artifacts on isolated private outputs. Every source/header remains the exact initial authored bytes. Native full PE equality is not asserted: parsed clock/checksum-only observations retain actual ImageHlp-valid whole images. Full target/native object, trace and golden bytes remain strict RAW.",
+        "Canonical selected links and complete actual ABI callers have no unresolved relocation. Separate measured chosen-recipe -M source/provenance package supplied by parent; original authored draft/producers/proofs remain unchanged. Both final publication documents have archived exact pre-publication copies. No helper/data/clone or new exact-match credit."
+      ],
+      "implementation_limits": [
+        "Fixed scalar pair/node12/freeclass1 specialization; no general C++ lifetime/nontrivial destruction or original unchanged-source identity.",
+        "Initialized ordered contiguous buckets, finite acyclic distinct nodes and disjoint existing free-list ownership; no invented null/cycle/capacity/ownership guard.",
+        "Measured GNU wrapping32 subtraction/signed right-shift and four-byte pointers; no kernel/concurrency/MMIO/exception/timing/hardware allocator claim.",
+        "Genuine historical C++ native support retains header warnings, distinct allocator storage and unexecuted failing diagnostic paths.",
+        "Original five duplicate functions, all helpers and whole initialized global table remain unawarded."
+      ],
+      "upstream_source_sha256": "958799b0d66161da5e8c826170d057d4d01d5b5434a12261adb65a8ced434716",
+      "source_provenance_manifest": "src/game/hashtable_clear_provenance.json",
+      "compiled_size": 152,
+      "compiled_sha256": "778be0f08c1ec6e19ae70f862ccd44bed38958d1a3fb743f9e4d18656eb05797",
+      "compile_comparisons": [
+        {
+          "name": "func_002BF418",
+          "address": "0x002BF418",
+          "recipe": "gcc323",
+          "compiler_profile": "gcc323",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections",
+            "-fno-reorder-blocks"
+          ],
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 152,
+          "different_bytes": 117,
+          "first_different_offsets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3d27f2bb41c8c541264005883bb8f02d6256d06609ce4bf9a4a90dfd6b15ac76",
+          "compiled_sha256": "9f9f5323df9f81c3852aa0678f37fca78c9faf047395a0b0fdb1a327332bc59a",
+          "resolved_bindings": {
+            "D_003F21B8": 4137400
+          },
+          "input_relocations": [
+            {
+              "offset": 28,
+              "type": 5,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            },
+            {
+              "offset": 36,
+              "type": 6,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            },
+            {
+              "offset": 64,
+              "type": 6,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            }
+          ],
+          "artifacts": {
+            "linked_path": {
+              "path": "build/hashtable_clear/linked/gcc323/selected/link-c20vbubz/function.elf",
+              "raw_sha256": "07925e2996ff540a8dbde95b1e69005efa71d76ae56edbbc85a1fead19fd463e"
+            },
+            "object_path": {
+              "path": "build/hashtable_clear/linked/gcc323/selected/link-c20vbubz/function.o",
+              "raw_sha256": "c1930cb7e5e96f2cfece8e334e13edd87f56673306fdd8b03d2fa6ad3c224d85"
+            },
+            "script_path": {
+              "path": "build/hashtable_clear/linked/gcc323/selected/link-c20vbubz/function.ld",
+              "raw_sha256": "029f69b07b594443e8605368b0f74596b95c45b6ab9eeafcbd79daa1e678fa62"
+            }
+          }
+        },
+        {
+          "name": "func_002BF418",
+          "address": "0x002BF418",
+          "recipe": "gcc29",
+          "compiler_profile": "gcc29",
+          "flags": [
+            "-O2",
+            "-G0",
+            "-mfp64",
+            "-fno-builtin",
+            "-fno-strict-aliasing",
+            "-ffunction-sections"
+          ],
+          "identical": false,
+          "expected_size": 156,
+          "compiled_size": 152,
+          "different_bytes": 113,
+          "first_different_offsets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "3d27f2bb41c8c541264005883bb8f02d6256d06609ce4bf9a4a90dfd6b15ac76",
+          "compiled_sha256": "778be0f08c1ec6e19ae70f862ccd44bed38958d1a3fb743f9e4d18656eb05797",
+          "resolved_bindings": {
+            "D_003F21B8": 4137400
+          },
+          "input_relocations": [
+            {
+              "offset": 28,
+              "type": 5,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            },
+            {
+              "offset": 32,
+              "type": 6,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            },
+            {
+              "offset": 64,
+              "type": 5,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            },
+            {
+              "offset": 68,
+              "type": 6,
+              "symbol": "D_003F21B8",
+              "symbol_index": 10
+            }
+          ],
+          "artifacts": {
+            "linked_path": {
+              "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.elf",
+              "raw_sha256": "29da04d2ce1eaa937db7befcd6533f544bf216a55323dd3204141aab3d2e85cc"
+            },
+            "object_path": {
+              "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.o",
+              "raw_sha256": "b87fea901bfe97d48fb8c89a4ba8294c7739716f2533316a5239df6b2c589fd0"
+            },
+            "script_path": {
+              "path": "build/hashtable_clear/linked/gcc29/selected/link-g6nxkcxp/function.ld",
+              "raw_sha256": "029f69b07b594443e8605368b0f74596b95c45b6ab9eeafcbd79daa1e678fa62"
+            }
+          }
+        }
+      ],
+      "boundary_confidence": "reviewed_provisional",
+      "author_evidence_snapshot": {
+        "identity_packet": "build/hashtable_clear/identity_packet.json",
+        "licensed_algorithm_adaptation": "Complete SGI clear traversal plus observed fixed-size default deallocate. Explicit modified C with retained HP/SGI notice; no unchanged source/original identity or generic C++ lifetime claim.",
+        "corrected_span_supplement": {
+          "path": ".local/hashtable_clear_scope_author_erratum/erratum.json",
+          "bytes": 27198,
+          "raw_sha256": "fe83ba356517ace1b6dbf63d5985e940edc4c43e6258ca6492ed9d53d3f77024"
+        },
+        "native_checks": 50496,
+        "original_fixtures": 435,
+        "limits": "Actual whole links use verify.symbol_bindings({}) only. D_003F21B8 is the only selected relocation binding; no extra allocator/helper/local storage symbol or mapping. No clone/data/helper award."
+      },
+      "final_review": {
+        "parent": "root",
+        "independent_peer": "recover_code",
+        "source_initial_unchanged": true,
+        "canonical_bindings_only": true,
+        "complete_original_compared": true,
+        "exact_in_any_recipe": false,
+        "native_PE_whole_RAW_equal": false
+      }
+    }
+  ],
+  "final_review": {
+    "parent": "root",
+    "independent_peer": "recover_code",
+    "selected_functions": 1,
+    "selected_bytes": 156,
+    "complete_exact_functions": 0,
+    "complete_exact_bytes": 0,
+    "author_freeze": {
+      "path": "build/hashtable_clear/frozen_inputs.json",
+      "raw_sha256": "fd62f5fafb3afdfdbf2a3fd8251f08dfaec2686d523d726e29113ce2bf76e914",
+      "all_RAW_unchanged": 370
+    },
+    "proof_history_preserved": true,
+    "native_PE_whole_RAW_equal": false
+  }
+}
