@@ -76,7 +76,7 @@ class AllocatorGuards(unittest.TestCase):
 
     def test_missing_original_writes_no_fixture_or_header(self):
         root = Path(__file__).resolve().parents[1]
-        with tempfile.TemporaryDirectory(dir=root / 'build') as directory:
+        with tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
             result = subprocess.run([sys.executable, str(root / 'tools/trace_allocator_wrappers.py'),
                 '--elf', str(out / 'missing.elf'), '--output', str(out / 'trace.json'),
@@ -87,7 +87,7 @@ class AllocatorGuards(unittest.TestCase):
 
     def test_wrong_original_hash_writes_no_fixture(self):
         root = Path(__file__).resolve().parents[1]
-        with tempfile.TemporaryDirectory(dir=root / 'build') as directory:
+        with tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
             (out / 'wrong.elf').write_bytes(b'not the validated original')
             result = subprocess.run([sys.executable, str(root / 'tools/trace_allocator_wrappers.py'),
