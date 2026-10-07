@@ -21,14 +21,14 @@ unresolved relocations are required. Alignment padding is excluded.
 | Disc identification and extraction | 565 files inventoried; boot files extracted |
 | Main CPU assembly baseline | 2,949,800 / 2,949,800 bytes identical |
 | Candidate function regions | 14,560 detected; boundaries need review |
-| Recovered game C/C++ | 1222 functions reviewed; 254 match (5,504 bytes) |
-| Reused upstream C/C++ | 106 match (17,460 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `dpmul`, `dpdiv`, `fpmul`, `fpdiv`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`, `bcopy`, `index`, `__cp_exception_info`, `uncaught_exception__Fv`, `func_0035E910`, `func_0035E970`, `func_0035E998`, `func_0035EB28`, `func_0035EDE0`, `func_0035F408`, `func_0035F740`, `func_00360768`, `func_0035E8E8`, `func_0035EDA8`, `func_0035EC60`, `func_0035ECE8`, `func_0035F210`, `func_0035E9E0`, `func_0035EA58`, `func_0035F090`, `func_0035F278`, `func_0035F4A0`, `func_0035F5D0`, `before__C9type_infoRC9type_info`) |
-| C source | 1452 functions reviewed; 346 match (21,452 bytes) |
+| Recovered game C/C++ | 1229 functions reviewed; 259 match (5,544 bytes) |
+| Reused upstream C/C++ | 107 match (17,580 bytes: `fabsf`, `atoi`, `matherr`, `__errno`, `_localeconv_r`, `sinf`, `tanf`, `__pack_d`, `__unpack_d`, `dpadd`, `dpsub`, `__fpcmp_parts_d`, `dpcmp`, `litodp`, `dptoli`, `dptoul`, `__make_dp`, `dptofp`, `__pack_f`, `__unpack_f`, `__fpcmp_parts_f`, `fptoui`, `__make_fp`, `fptodp`, `__negdf2`, `fpadd`, `fpsub`, `fpcmp`, `sitofp`, `fptosi`, `__negsf2`, `dpmul`, `dpdiv`, `fpmul`, `fpdiv`, `__muldi3`, `__fixunsdfdi`, `__fixdfdi`, `__fixunssfdi`, `__floatdidf`, `cosf`, `eofread_sscanf`, `lflush`, `strtodf`, `_Bfree`, `_hi0bits`, `_lo0bits`, `__mcmp`, `__sclose`, `_cleanup`, `atof`, `decode_uleb128`, `decode_sleb128`, `fde_merge`, `end_fde_sort`, `count_fdes`, `add_fdes`, `frame_init`, `__frame_state_for`, `fde_split`, `__default_terminate`, `old_find_exception_handler`, `find_exception_handler`, `get_reg_addr`, `copy_reg`, `next_stack_level`, `__unwinding_cleanup`, `throw_helper`, `__eq__C9type_infoRC9type_info`, `dcast__C16__user_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C14__si_type_infoRC9type_infoiPvPC9type_infoT3`, `dcast__C17__class_type_infoRC9type_infoiPvPC9type_infoT3`, `__dynamic_cast`, `__start_cp_handler`, `__eh_alloc`, `__cplus_type_matcher`, `__cp_pop_exception`, `__uncatch_exception`, `what__C9exception`, `exit`, `srand`, `rand`, `bcopy`, `index`, `__cp_exception_info`, `uncaught_exception__Fv`, `func_0035E910`, `func_0035E970`, `func_0035E998`, `func_0035EB28`, `func_0035EDE0`, `func_0035F018`, `func_0035F408`, `func_0035F740`, `func_00360768`, `func_0035E8E8`, `func_0035EDA8`, `func_0035EC60`, `func_0035ECE8`, `func_0035F210`, `func_0035E9E0`, `func_0035EA58`, `func_0035F090`, `func_0035F278`, `func_0035F4A0`, `func_0035F5D0`, `before__C9type_infoRC9type_info`) |
+| C source | 1460 functions reviewed; 352 match (21,612 bytes) |
 | C++ source | 104 functions reviewed; 14 match (1,512 bytes) |
 | Reused upstream assembly | 3 functions match (572 bytes) |
 | Full source build | Incomplete |
 
-The C/C++ matching total is **22,964 / 3,083,712 code bytes (0.744687%)**, including
+The C/C++ matching total is **23,124 / 3,083,712 code bytes (0.749875%)**, including
 game and runtime code. The denominator includes `.text`, `.rentext`, and
 `.vutext`; middleware and VU code are still unresolved. Assembly reproduction
 and original data retained in the hybrid build do **not** count as C/C++ progress.
@@ -65,6 +65,8 @@ and original data retained in the hybrid build do **not** count as C/C++ progres
 [GNU floating-point helpers](docs/softfloat_split.md) now match four complete existing reconstructions after one documented compiler option.
 
 [GNU Bigint initialization](docs/libio_small_prerequisites.md) reuses two complete matching functions from the existing licensed decimal-conversion source.
+
+[GNU powers of five](docs/libio_pow5.md) and [five setters](docs/word_store_duplicates.md) reuse existing source for six complete exact matches. [Matrix kernels](docs/matrix_kernels.md) recover two functions with bounded arithmetic and overlap checks; both remain reconstructed.
 
 ## Build on Windows
 

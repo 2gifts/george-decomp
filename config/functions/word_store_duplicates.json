@@ -1,0 +1,1031 @@
+{
+  "functions": [
+    {
+      "source": "src/game/camera_motion.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+      "source_dependencies": [
+        {
+          "path": "src/game/camera_motion.c",
+          "sha256": "87e55dd7586734179a3c5312f3c7aaf2ce3d8f8dfa7807b74f1d668c5d447943"
+        },
+        {
+          "path": "include/george/camera_motion.h",
+          "sha256": "e31e01a4b1719f74dfc34cac16312c91fb963df10540ceb5dda32a4903f6ee67"
+        },
+        {
+          "path": "include/george/input_state.h",
+          "sha256": "fc56448cbd0aca71aeb74e4c047313b7e6c09bac7c1ac7e86aed6f15ad029307"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/duplicate_helpers.h",
+          "sha256": "1f6b50c59ddc1395acee583bf106e8cc66b639c64c7cf8d53ba085526e5a3cda"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        }
+      ],
+      "name": "func_0015F278",
+      "address": "0x0015F278",
+      "file_offset": "0x00060278",
+      "compiled_symbol": "func_002B5F10",
+      "reuse_compiled_symbol": "func_002B5F10",
+      "link_symbols": {
+        "func_0015F278": "0x0015F278"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct complete matching-only final194 reviews passed.",
+      "boundary_evidence": {
+        "name": "func_0015F278",
+        "address": "0x0015F278",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00060278",
+        "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "original_assembly": "build/functions/func_0015F278.s",
+        "original_assembly_raw_sha256": "ba39f25dfe452e1093bc6913a79ff99e92a6a115319745c0ac5f2d0733682a3d",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x0015F280",
+        "terminal_instruction": "0x0015F278",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x0015F27C",
+        "delay_word": "0xAC850000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "encoded_refs": [
+          {
+            "pc": "0x00158AD4",
+            "word": "0x0C057C9E",
+            "target": "0x0015F278",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x8E440040",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_00158A80",
+              "address": "0x00158A80",
+              "size": 10300,
+              "scanner_extent": 10304,
+              "section": ".text",
+              "file_offset": "0x00059A80",
+              "original_sha256": "bea95a2c24dd55119848ab0c639e4aea94a7bb91471fc72df9b741d80e974b59",
+              "original_assembly": "build/functions/func_00158A80.s",
+              "original_assembly_raw_sha256": "295f46f471babcc39b88c22987493dc66783d05073b313f284a24e3e39dbee07",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 4,
+              "following_scanner_entry": "0x0015B2C0",
+              "terminal_instruction": "0x0015B2B4",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0015B2B8",
+              "delay_word": "0x27BD0190",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            },
+            "qualification": "Complete mechanical caller geometry only; argument/result context not yet manually interpreted. VU overlay hits do not establish CPU roots."
+          }
+        ],
+        "allocated_pointer_words": [],
+        "computed": [],
+        "FDE": []
+      },
+      "evidence": "Low32GPRa1 stored to a0+0",
+      "return_contract": "Only JR31 and store delay; v0/FPR untouched. Numeric void effects convention only; incidental caller return propagation separately qualified.",
+      "owner_domain": "Valid aligned writable four-byte field at owner+0",
+      "existing_seed_and_interface_evidence": "Whole unchanged reviewed primary source and genuine cached whole object. Source definition/typed counterpart and inherited actual dependencies are pinned in identity_packet.json.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_object_RAW_unchanged": true,
+        "no_new_primary_ABI_M_or_model": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0015F278/link-yw117gxf/function.o",
+            "bytes": 3984,
+            "raw_sha256": "b4fa5e8feff78c5d5f3d7a1abf5be2d31f7d175b159c0f1bc30175571084e20b"
+          },
+          "linked_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0015F278/link-yw117gxf/function.elf",
+            "bytes": 992,
+            "raw_sha256": "4e67b9ea6df72655598a5d3d1428f280fb5a0e2ffb64113938ea11902dec985b"
+          },
+          "script_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0015F278/link-yw117gxf/function.ld",
+            "bytes": 178,
+            "raw_sha256": "c19b93e6b9e120231d91acb848a23f8b8d2a8af6de07f26721ef47f299a4cbd6"
+          }
+        },
+        "final_immutable_inputs": 194,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Complete8B original JR31/store-delay identity transfers only memory effects and preserved register lanes. Numeric void is an effects convention; original clone declarations/classes/object sizes/capacities/ownership/pointer-validity are unproved.",
+        "The chosen camera signed mode0 and array unsigned used8 are typed source counterparts. Owner0 receives low32 GPR5; owner8 receives zero. No original signed-mode or array class is inferred.",
+        "Original v0 and FPRs remain untouched. Complete23F8A8 caller propagates incidental v0=0x38000, not a newly invented setter return value.",
+        "16EE60 has five allocated readonly pointer words. They establish entry-pointer evidence, not complete vtables or an actual dispatcher/invocation ancestry.",
+        "Four other entries have real encoded JALs. Full small caller semantics and bounded large argument paths are distinguished from whole mechanical caller hashes/geometry.",
+        "Unrooted27AFE0 and all getters/noops/camera72 entries remain deferred. Tree source alternative stays unchanged and unawarded.",
+        "No original source identity, new source implementation, ABI compiler, M scan, CPU/native model, helper/data or previous native-count award. Five complete cached target links provide only matching-only acceptance evidence.",
+        "Strict symbol_bindings reuse gate removes only the defined selected source symbol for original-VMA placement. The complete real historical-at-link canonical map is retained, with only each private numeric clone name added. Current mappings are checked; later unrelated additive mappings are not relabeled historical."
+      ],
+      "matching_credit_pending_parent_and_distinct_review": false,
+      "independent_review": "Root and distinct complete matching-only original/source/whole-object/source-symbol-reuse reviews and isolated FINAL194 cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/word_store_duplicates_final/frozen_inputs.json",
+          "bytes": 37261,
+          "raw_sha256": "07eadf91b1fa4890a84249663075aa57b3b8bcd9c5ca6cd7587750c5f00aec68"
+        },
+        "parent": {
+          "path": ".local/word_store_final194_root_review.json",
+          "bytes": 1542,
+          "raw_sha256": "85d20f914020162602ec6e531407b9212b4dce160e95ba82f2c0e2afd4024bdd"
+        },
+        "distinct": {
+          "path": ".local/word_store_final194_peer0001/independent_audit.json",
+          "bytes": 9401,
+          "raw_sha256": "ca7a582c931a3cc1bd69b8ba46779e05f44ca87d23556fe00a0da3cd2724fa7a"
+        }
+      }
+    },
+    {
+      "source": "src/game/camera_motion.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+      "source_dependencies": [
+        {
+          "path": "src/game/camera_motion.c",
+          "sha256": "87e55dd7586734179a3c5312f3c7aaf2ce3d8f8dfa7807b74f1d668c5d447943"
+        },
+        {
+          "path": "include/george/camera_motion.h",
+          "sha256": "e31e01a4b1719f74dfc34cac16312c91fb963df10540ceb5dda32a4903f6ee67"
+        },
+        {
+          "path": "include/george/input_state.h",
+          "sha256": "fc56448cbd0aca71aeb74e4c047313b7e6c09bac7c1ac7e86aed6f15ad029307"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/duplicate_helpers.h",
+          "sha256": "1f6b50c59ddc1395acee583bf106e8cc66b639c64c7cf8d53ba085526e5a3cda"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        }
+      ],
+      "name": "func_0016EE60",
+      "address": "0x0016EE60",
+      "file_offset": "0x0006FE60",
+      "compiled_symbol": "func_002B5F10",
+      "reuse_compiled_symbol": "func_002B5F10",
+      "link_symbols": {
+        "func_0016EE60": "0x0016EE60"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct complete matching-only final194 reviews passed.",
+      "boundary_evidence": {
+        "name": "func_0016EE60",
+        "address": "0x0016EE60",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x0006FE60",
+        "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "original_assembly": "build/functions/func_0016EE60.s",
+        "original_assembly_raw_sha256": "fe54a7540622031ea9078ffae45c3aca2dc7a962cce2115f690bb6633867d7af",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x0016EE68",
+        "terminal_instruction": "0x0016EE60",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x0016EE64",
+        "delay_word": "0xAC850000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "encoded_refs": [],
+        "allocated_pointer_words": [
+          {
+            "address": "0x0042BFFC",
+            "target": "0x0016EE60",
+            "section": ".rodata",
+            "flags": 2,
+            "qualification": "Aligned allocated absolute word; data/code-identity and actual callback/publication must be reviewed. FDE word alone does not establish invocation."
+          },
+          {
+            "address": "0x0042C084",
+            "target": "0x0016EE60",
+            "section": ".rodata",
+            "flags": 2,
+            "qualification": "Aligned allocated absolute word; data/code-identity and actual callback/publication must be reviewed. FDE word alone does not establish invocation."
+          },
+          {
+            "address": "0x0042EF34",
+            "target": "0x0016EE60",
+            "section": ".rodata",
+            "flags": 2,
+            "qualification": "Aligned allocated absolute word; data/code-identity and actual callback/publication must be reviewed. FDE word alone does not establish invocation."
+          },
+          {
+            "address": "0x0042F074",
+            "target": "0x0016EE60",
+            "section": ".rodata",
+            "flags": 2,
+            "qualification": "Aligned allocated absolute word; data/code-identity and actual callback/publication must be reviewed. FDE word alone does not establish invocation."
+          },
+          {
+            "address": "0x0042F3D4",
+            "target": "0x0016EE60",
+            "section": ".rodata",
+            "flags": 2,
+            "qualification": "Aligned allocated absolute word; data/code-identity and actual callback/publication must be reviewed. FDE word alone does not establish invocation."
+          }
+        ],
+        "computed": [],
+        "FDE": []
+      },
+      "evidence": "Low32GPRa1 stored to a0+0",
+      "return_contract": "Only JR31 and store delay; v0/FPR untouched. Numeric void effects convention only; incidental caller return propagation separately qualified.",
+      "owner_domain": "Valid aligned writable four-byte field at owner+0",
+      "existing_seed_and_interface_evidence": "Whole unchanged reviewed primary source and genuine cached whole object. Source definition/typed counterpart and inherited actual dependencies are pinned in identity_packet.json.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_object_RAW_unchanged": true,
+        "no_new_primary_ABI_M_or_model": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0016EE60/link-yxp8ulnt/function.o",
+            "bytes": 3984,
+            "raw_sha256": "b4fa5e8feff78c5d5f3d7a1abf5be2d31f7d175b159c0f1bc30175571084e20b"
+          },
+          "linked_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0016EE60/link-yxp8ulnt/function.elf",
+            "bytes": 4040,
+            "raw_sha256": "4d471baa2f7969c151a9fa91e61e9163ee5ab1256cb58a244a26b1bddea950f1"
+          },
+          "script_path": {
+            "path": "build/word_store_duplicates_final/linked/func_0016EE60/link-yxp8ulnt/function.ld",
+            "bytes": 178,
+            "raw_sha256": "72f01a2726287cec3b491a00672f0c09631790610ce1b9ae4cca59fa3e8de95b"
+          }
+        },
+        "final_immutable_inputs": 194,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Complete8B original JR31/store-delay identity transfers only memory effects and preserved register lanes. Numeric void is an effects convention; original clone declarations/classes/object sizes/capacities/ownership/pointer-validity are unproved.",
+        "The chosen camera signed mode0 and array unsigned used8 are typed source counterparts. Owner0 receives low32 GPR5; owner8 receives zero. No original signed-mode or array class is inferred.",
+        "Original v0 and FPRs remain untouched. Complete23F8A8 caller propagates incidental v0=0x38000, not a newly invented setter return value.",
+        "16EE60 has five allocated readonly pointer words. They establish entry-pointer evidence, not complete vtables or an actual dispatcher/invocation ancestry.",
+        "Four other entries have real encoded JALs. Full small caller semantics and bounded large argument paths are distinguished from whole mechanical caller hashes/geometry.",
+        "Unrooted27AFE0 and all getters/noops/camera72 entries remain deferred. Tree source alternative stays unchanged and unawarded.",
+        "No original source identity, new source implementation, ABI compiler, M scan, CPU/native model, helper/data or previous native-count award. Five complete cached target links provide only matching-only acceptance evidence.",
+        "Strict symbol_bindings reuse gate removes only the defined selected source symbol for original-VMA placement. The complete real historical-at-link canonical map is retained, with only each private numeric clone name added. Current mappings are checked; later unrelated additive mappings are not relabeled historical."
+      ],
+      "matching_credit_pending_parent_and_distinct_review": false,
+      "independent_review": "Root and distinct complete matching-only original/source/whole-object/source-symbol-reuse reviews and isolated FINAL194 cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/word_store_duplicates_final/frozen_inputs.json",
+          "bytes": 37261,
+          "raw_sha256": "07eadf91b1fa4890a84249663075aa57b3b8bcd9c5ca6cd7587750c5f00aec68"
+        },
+        "parent": {
+          "path": ".local/word_store_final194_root_review.json",
+          "bytes": 1542,
+          "raw_sha256": "85d20f914020162602ec6e531407b9212b4dce160e95ba82f2c0e2afd4024bdd"
+        },
+        "distinct": {
+          "path": ".local/word_store_final194_peer0001/independent_audit.json",
+          "bytes": 9401,
+          "raw_sha256": "ca7a582c931a3cc1bd69b8ba46779e05f44ca87d23556fe00a0da3cd2724fa7a"
+        }
+      }
+    },
+    {
+      "source": "src/game/camera_motion.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+      "source_dependencies": [
+        {
+          "path": "src/game/camera_motion.c",
+          "sha256": "87e55dd7586734179a3c5312f3c7aaf2ce3d8f8dfa7807b74f1d668c5d447943"
+        },
+        {
+          "path": "include/george/camera_motion.h",
+          "sha256": "e31e01a4b1719f74dfc34cac16312c91fb963df10540ceb5dda32a4903f6ee67"
+        },
+        {
+          "path": "include/george/input_state.h",
+          "sha256": "fc56448cbd0aca71aeb74e4c047313b7e6c09bac7c1ac7e86aed6f15ad029307"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/duplicate_helpers.h",
+          "sha256": "1f6b50c59ddc1395acee583bf106e8cc66b639c64c7cf8d53ba085526e5a3cda"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        }
+      ],
+      "name": "func_00241ED8",
+      "address": "0x00241ED8",
+      "file_offset": "0x00142ED8",
+      "compiled_symbol": "func_002B5F10",
+      "reuse_compiled_symbol": "func_002B5F10",
+      "link_symbols": {
+        "func_00241ED8": "0x00241ED8"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct complete matching-only final194 reviews passed.",
+      "boundary_evidence": {
+        "name": "func_00241ED8",
+        "address": "0x00241ED8",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x00142ED8",
+        "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "original_assembly": "build/functions/func_00241ED8.s",
+        "original_assembly_raw_sha256": "8fce6c2c71f4b9e7821fb9f51273b07eac401b709a80f1f123be270c1d51c3de",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x00241EE0",
+        "terminal_instruction": "0x00241ED8",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x00241EDC",
+        "delay_word": "0xAC850000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "encoded_refs": [
+          {
+            "pc": "0x0023F8C8",
+            "word": "0x0C0907B6",
+            "target": "0x00241ED8",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x8C643844",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0023F8A8",
+              "address": "0x0023F8A8",
+              "size": 52,
+              "scanner_extent": 56,
+              "section": ".text",
+              "file_offset": "0x001408A8",
+              "original_sha256": "32e72e54b233851e06a6a82b0fc9fd780e70f06c1eb48f3178178a520889ff6f",
+              "original_assembly": "build/functions/func_0023F8A8.s",
+              "original_assembly_raw_sha256": "4547261803d0a30eb93322564c4eeeac1edecc16936e6498218ba4fdf61b36a6",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 4,
+              "following_scanner_entry": "0x0023F8E0",
+              "terminal_instruction": "0x0023F8D4",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0023F8D8",
+              "delay_word": "0x27BD0010",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            },
+            "qualification": "Complete mechanical caller geometry only; argument/result context not yet manually interpreted. VU overlay hits do not establish CPU roots."
+          }
+        ],
+        "allocated_pointer_words": [],
+        "computed": [],
+        "FDE": []
+      },
+      "evidence": "Low32GPRa1 stored to a0+0",
+      "return_contract": "Only JR31 and store delay; v0/FPR untouched. Numeric void effects convention only; incidental caller return propagation separately qualified.",
+      "owner_domain": "Valid aligned writable four-byte field at owner+0",
+      "existing_seed_and_interface_evidence": "Whole unchanged reviewed primary source and genuine cached whole object. Source definition/typed counterpart and inherited actual dependencies are pinned in identity_packet.json.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_object_RAW_unchanged": true,
+        "no_new_primary_ABI_M_or_model": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/word_store_duplicates_final/linked/func_00241ED8/link-0o2y0hdk/function.o",
+            "bytes": 3984,
+            "raw_sha256": "b4fa5e8feff78c5d5f3d7a1abf5be2d31f7d175b159c0f1bc30175571084e20b"
+          },
+          "linked_path": {
+            "path": "build/word_store_duplicates_final/linked/func_00241ED8/link-0o2y0hdk/function.elf",
+            "bytes": 4160,
+            "raw_sha256": "9adb557147def042b30dd1a9a9cb0a873ad6404e0e88621c2761fab8a1b89391"
+          },
+          "script_path": {
+            "path": "build/word_store_duplicates_final/linked/func_00241ED8/link-0o2y0hdk/function.ld",
+            "bytes": 178,
+            "raw_sha256": "e4a261880070b59f5da666b9fcc39cf43fb0e78befd1653dfbfb3b9cedbc61c7"
+          }
+        },
+        "final_immutable_inputs": 194,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Complete8B original JR31/store-delay identity transfers only memory effects and preserved register lanes. Numeric void is an effects convention; original clone declarations/classes/object sizes/capacities/ownership/pointer-validity are unproved.",
+        "The chosen camera signed mode0 and array unsigned used8 are typed source counterparts. Owner0 receives low32 GPR5; owner8 receives zero. No original signed-mode or array class is inferred.",
+        "Original v0 and FPRs remain untouched. Complete23F8A8 caller propagates incidental v0=0x38000, not a newly invented setter return value.",
+        "16EE60 has five allocated readonly pointer words. They establish entry-pointer evidence, not complete vtables or an actual dispatcher/invocation ancestry.",
+        "Four other entries have real encoded JALs. Full small caller semantics and bounded large argument paths are distinguished from whole mechanical caller hashes/geometry.",
+        "Unrooted27AFE0 and all getters/noops/camera72 entries remain deferred. Tree source alternative stays unchanged and unawarded.",
+        "No original source identity, new source implementation, ABI compiler, M scan, CPU/native model, helper/data or previous native-count award. Five complete cached target links provide only matching-only acceptance evidence.",
+        "Strict symbol_bindings reuse gate removes only the defined selected source symbol for original-VMA placement. The complete real historical-at-link canonical map is retained, with only each private numeric clone name added. Current mappings are checked; later unrelated additive mappings are not relabeled historical."
+      ],
+      "matching_credit_pending_parent_and_distinct_review": false,
+      "independent_review": "Root and distinct complete matching-only original/source/whole-object/source-symbol-reuse reviews and isolated FINAL194 cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/word_store_duplicates_final/frozen_inputs.json",
+          "bytes": 37261,
+          "raw_sha256": "07eadf91b1fa4890a84249663075aa57b3b8bcd9c5ca6cd7587750c5f00aec68"
+        },
+        "parent": {
+          "path": ".local/word_store_final194_root_review.json",
+          "bytes": 1542,
+          "raw_sha256": "85d20f914020162602ec6e531407b9212b4dce160e95ba82f2c0e2afd4024bdd"
+        },
+        "distinct": {
+          "path": ".local/word_store_final194_peer0001/independent_audit.json",
+          "bytes": 9401,
+          "raw_sha256": "ca7a582c931a3cc1bd69b8ba46779e05f44ca87d23556fe00a0da3cd2724fa7a"
+        }
+      }
+    },
+    {
+      "source": "src/game/array_records.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "size": 8,
+      "original_sha256": "17365a94360a101e7c277a42057d7b5bb4355903177cff5e6108b0a5722bac2f",
+      "source_dependencies": [
+        {
+          "path": "src/game/array_records.c",
+          "bytes": 3651,
+          "raw_sha256": "3302a993c2d636cdc99865b6833d2f56c49597b5842505b99fdcc29cfe2f07ca",
+          "sha256": "3302a993c2d636cdc99865b6833d2f56c49597b5842505b99fdcc29cfe2f07ca"
+        },
+        {
+          "path": "include/george/array_records.h",
+          "bytes": 1371,
+          "raw_sha256": "f60e0672789142b7f7b70d84c2877cac494230cac2f02b1ff9409e9d8a22ae96",
+          "sha256": "f60e0672789142b7f7b70d84c2877cac494230cac2f02b1ff9409e9d8a22ae96"
+        },
+        {
+          "path": "include/george/types.h",
+          "bytes": 4196,
+          "raw_sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "bytes": 12695,
+          "raw_sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "bytes": 1587,
+          "raw_sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/heap.h",
+          "bytes": 2049,
+          "raw_sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        }
+      ],
+      "source_sha256": "3302a993c2d636cdc99865b6833d2f56c49597b5842505b99fdcc29cfe2f07ca",
+      "name": "func_002D4E70",
+      "address": "0x002D4E70",
+      "file_offset": "0x001D5E70",
+      "compiled_symbol": "func_002AAFD8",
+      "reuse_compiled_symbol": "func_002AAFD8",
+      "link_symbols": {
+        "func_002D4E70": "0x002D4E70"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "17365a94360a101e7c277a42057d7b5bb4355903177cff5e6108b0a5722bac2f",
+        "compiled_sha256": "17365a94360a101e7c277a42057d7b5bb4355903177cff5e6108b0a5722bac2f"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct complete matching-only final194 reviews passed.",
+      "boundary_evidence": {
+        "name": "func_002D4E70",
+        "address": "0x002D4E70",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x001D5E70",
+        "original_sha256": "17365a94360a101e7c277a42057d7b5bb4355903177cff5e6108b0a5722bac2f",
+        "original_assembly": "build/functions/func_002D4E70.s",
+        "original_assembly_raw_sha256": "ca556b25b71306490c0c375853247da45b99ff65ca0581f2131b005d17ff3b7e",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x002D4E78",
+        "terminal_instruction": "0x002D4E70",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x002D4E74",
+        "delay_word": "0xAC800008",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "encoded_refs": [
+          {
+            "pc": "0x002DB140",
+            "word": "0x0C0B539C",
+            "target": "0x002D4E70",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x0240202D",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_002DB100",
+              "address": "0x002DB100",
+              "size": 204,
+              "scanner_extent": 208,
+              "section": ".text",
+              "file_offset": "0x001DC100",
+              "original_sha256": "25adc278d0205a417358c8893233eaf5a7219ce6f9c0c317e9e8c9827355ffaa",
+              "original_assembly": "build/functions/func_002DB100.s",
+              "original_assembly_raw_sha256": "6b6faf1b0112381e9a13daab62622bbc025df72f0ff715af7a47998733ab56b7",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 4,
+              "following_scanner_entry": "0x002DB1D0",
+              "terminal_instruction": "0x002DB1C4",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x002DB1C8",
+              "delay_word": "0x27BD0060",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            },
+            "qualification": "Complete mechanical caller geometry only; argument/result context not yet manually interpreted. VU overlay hits do not establish CPU roots."
+          }
+        ],
+        "allocated_pointer_words": [],
+        "computed": [],
+        "FDE": []
+      },
+      "evidence": "Zero32 stored to a0+8",
+      "return_contract": "Only JR31 and store delay; v0/FPR untouched. Numeric void effects convention only; incidental caller return propagation separately qualified.",
+      "owner_domain": "Valid aligned writable four-byte field at owner+8; only consumed prefix through byte11 established. No original array class/capacity claim.",
+      "existing_seed_and_interface_evidence": "Whole unchanged reviewed primary source and genuine cached whole object. Source definition/typed counterpart and inherited actual dependencies are pinned in identity_packet.json.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_object_RAW_unchanged": true,
+        "no_new_primary_ABI_M_or_model": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002D4E70/link-xxfuwpuq/function.o",
+            "bytes": 4656,
+            "raw_sha256": "a794c2f33bdee03e8655f7c753501043fcb5cb9605ef79dd50820da3a56b2e93"
+          },
+          "linked_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002D4E70/link-xxfuwpuq/function.elf",
+            "bytes": 4056,
+            "raw_sha256": "a98aaf9cf0b3e4d90e83faed11ae631b64dc55af845ebe9ef774b9b29617ff25"
+          },
+          "script_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002D4E70/link-xxfuwpuq/function.ld",
+            "bytes": 178,
+            "raw_sha256": "0a2b73c2739f5d7b8a4e4e0c03a70824957bcd5b8b7a6f4caea7c348f33f5d0d"
+          }
+        },
+        "final_immutable_inputs": 194,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Complete8B original JR31/store-delay identity transfers only memory effects and preserved register lanes. Numeric void is an effects convention; original clone declarations/classes/object sizes/capacities/ownership/pointer-validity are unproved.",
+        "The chosen camera signed mode0 and array unsigned used8 are typed source counterparts. Owner0 receives low32 GPR5; owner8 receives zero. No original signed-mode or array class is inferred.",
+        "Original v0 and FPRs remain untouched. Complete23F8A8 caller propagates incidental v0=0x38000, not a newly invented setter return value.",
+        "16EE60 has five allocated readonly pointer words. They establish entry-pointer evidence, not complete vtables or an actual dispatcher/invocation ancestry.",
+        "Four other entries have real encoded JALs. Full small caller semantics and bounded large argument paths are distinguished from whole mechanical caller hashes/geometry.",
+        "Unrooted27AFE0 and all getters/noops/camera72 entries remain deferred. Tree source alternative stays unchanged and unawarded.",
+        "No original source identity, new source implementation, ABI compiler, M scan, CPU/native model, helper/data or previous native-count award. Five complete cached target links provide only matching-only acceptance evidence.",
+        "Strict symbol_bindings reuse gate removes only the defined selected source symbol for original-VMA placement. The complete real historical-at-link canonical map is retained, with only each private numeric clone name added. Current mappings are checked; later unrelated additive mappings are not relabeled historical."
+      ],
+      "matching_credit_pending_parent_and_distinct_review": false,
+      "independent_review": "Root and distinct complete matching-only original/source/whole-object/source-symbol-reuse reviews and isolated FINAL194 cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/word_store_duplicates_final/frozen_inputs.json",
+          "bytes": 37261,
+          "raw_sha256": "07eadf91b1fa4890a84249663075aa57b3b8bcd9c5ca6cd7587750c5f00aec68"
+        },
+        "parent": {
+          "path": ".local/word_store_final194_root_review.json",
+          "bytes": 1542,
+          "raw_sha256": "85d20f914020162602ec6e531407b9212b4dce160e95ba82f2c0e2afd4024bdd"
+        },
+        "distinct": {
+          "path": ".local/word_store_final194_peer0001/independent_audit.json",
+          "bytes": 9401,
+          "raw_sha256": "ca7a582c931a3cc1bd69b8ba46779e05f44ca87d23556fe00a0da3cd2724fa7a"
+        }
+      }
+    },
+    {
+      "source": "src/game/camera_motion.c",
+      "source_kind": "c",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "size": 8,
+      "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+      "source_dependencies": [
+        {
+          "path": "src/game/camera_motion.c",
+          "sha256": "87e55dd7586734179a3c5312f3c7aaf2ce3d8f8dfa7807b74f1d668c5d447943"
+        },
+        {
+          "path": "include/george/camera_motion.h",
+          "sha256": "e31e01a4b1719f74dfc34cac16312c91fb963df10540ceb5dda32a4903f6ee67"
+        },
+        {
+          "path": "include/george/input_state.h",
+          "sha256": "fc56448cbd0aca71aeb74e4c047313b7e6c09bac7c1ac7e86aed6f15ad029307"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/duplicate_helpers.h",
+          "sha256": "1f6b50c59ddc1395acee583bf106e8cc66b639c64c7cf8d53ba085526e5a3cda"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "include/george/heap.h",
+          "sha256": "b11ac7c601e57dd63081d43e490b75f79def8c0653e44ec9a46faf936e13cd0b"
+        },
+        {
+          "path": "include/george/matrix_scalar.h",
+          "sha256": "885a48c08001f8dbb6617ce52def5638ea90397a704c5993e20766e4b674fa2b"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        }
+      ],
+      "name": "func_002DD788",
+      "address": "0x002DD788",
+      "file_offset": "0x001DE788",
+      "compiled_symbol": "func_002B5F10",
+      "reuse_compiled_symbol": "func_002B5F10",
+      "link_symbols": {
+        "func_002DD788": "0x002DD788"
+      },
+      "status": "matched",
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 8,
+        "compiled_size": 8,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "compiled_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Parent and distinct complete matching-only final194 reviews passed.",
+      "boundary_evidence": {
+        "name": "func_002DD788",
+        "address": "0x002DD788",
+        "size": 8,
+        "scanner_extent": 8,
+        "section": ".text",
+        "file_offset": "0x001DE788",
+        "original_sha256": "eb145aa2915f561839a1eff7c9da12adc93c631a1d0f8f08f1581bd859231e5f",
+        "original_assembly": "build/functions/func_002DD788.s",
+        "original_assembly_raw_sha256": "0efaebac3ddd224e3bdf39f8d5d3e8793e96f911120c7381b8c8673d31f479db",
+        "explicit_nonmatching_size": true,
+        "excluded_zero_padding": 0,
+        "following_scanner_entry": "0x002DD790",
+        "terminal_instruction": "0x002DD788",
+        "terminal_word": "0x03E00008",
+        "delay_instruction": "0x002DD78C",
+        "delay_word": "0xAC850000",
+        "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+      },
+      "entry_evidence": {
+        "encoded_refs": [
+          {
+            "pc": "0x002D58C0",
+            "word": "0x0C0B75E2",
+            "target": "0x002DD788",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x24841838",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_002D4F68",
+              "address": "0x002D4F68",
+              "size": 7860,
+              "scanner_extent": 7864,
+              "section": ".text",
+              "file_offset": "0x001D5F68",
+              "original_sha256": "8cd146e361b0122c857407f862655f7a79e1f8445cbcae0f55de42ce88a4dc55",
+              "original_assembly": "build/functions/func_002D4F68.s",
+              "original_assembly_raw_sha256": "9b4fc13c7e363a597c0f27898106cfe59f578715f5cc155114f2b4e7cdb8cdfd",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 4,
+              "following_scanner_entry": "0x002D6E20",
+              "terminal_instruction": "0x002D6E14",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x002D6E18",
+              "delay_word": "0x03ACE821",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            },
+            "qualification": "Complete mechanical caller geometry only; argument/result context not yet manually interpreted. VU overlay hits do not establish CPU roots."
+          }
+        ],
+        "allocated_pointer_words": [],
+        "computed": [],
+        "FDE": []
+      },
+      "evidence": "Low32GPRa1 stored to a0+0",
+      "return_contract": "Only JR31 and store delay; v0/FPR untouched. Numeric void effects convention only; incidental caller return propagation separately qualified.",
+      "owner_domain": "Valid aligned writable four-byte field at owner+0",
+      "existing_seed_and_interface_evidence": "Whole unchanged reviewed primary source and genuine cached whole object. Source definition/typed counterpart and inherited actual dependencies are pinned in identity_packet.json.",
+      "validation": {
+        "matching_only": true,
+        "complete_original_and_linked_symbol_8B_exact": true,
+        "no_output_relocations": true,
+        "cached_object_RAW_unchanged": true,
+        "no_new_primary_ABI_M_or_model": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002DD788/link-ti8ekr_g/function.o",
+            "bytes": 3984,
+            "raw_sha256": "b4fa5e8feff78c5d5f3d7a1abf5be2d31f7d175b159c0f1bc30175571084e20b"
+          },
+          "linked_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002DD788/link-ti8ekr_g/function.elf",
+            "bytes": 2288,
+            "raw_sha256": "1eb30aa8006cfd81200a961fbd61a2adb72c409eac9aec509ae8a1239aafaab6"
+          },
+          "script_path": {
+            "path": "build/word_store_duplicates_final/linked/func_002DD788/link-ti8ekr_g/function.ld",
+            "bytes": 178,
+            "raw_sha256": "56a657ca7af8dc239208c4c061cf708864ed49a9c0d805456d18fbf68010dc56"
+          }
+        },
+        "final_immutable_inputs": 194,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Complete8B original JR31/store-delay identity transfers only memory effects and preserved register lanes. Numeric void is an effects convention; original clone declarations/classes/object sizes/capacities/ownership/pointer-validity are unproved.",
+        "The chosen camera signed mode0 and array unsigned used8 are typed source counterparts. Owner0 receives low32 GPR5; owner8 receives zero. No original signed-mode or array class is inferred.",
+        "Original v0 and FPRs remain untouched. Complete23F8A8 caller propagates incidental v0=0x38000, not a newly invented setter return value.",
+        "16EE60 has five allocated readonly pointer words. They establish entry-pointer evidence, not complete vtables or an actual dispatcher/invocation ancestry.",
+        "Four other entries have real encoded JALs. Full small caller semantics and bounded large argument paths are distinguished from whole mechanical caller hashes/geometry.",
+        "Unrooted27AFE0 and all getters/noops/camera72 entries remain deferred. Tree source alternative stays unchanged and unawarded.",
+        "No original source identity, new source implementation, ABI compiler, M scan, CPU/native model, helper/data or previous native-count award. Five complete cached target links provide only matching-only acceptance evidence.",
+        "Strict symbol_bindings reuse gate removes only the defined selected source symbol for original-VMA placement. The complete real historical-at-link canonical map is retained, with only each private numeric clone name added. Current mappings are checked; later unrelated additive mappings are not relabeled historical."
+      ],
+      "matching_credit_pending_parent_and_distinct_review": false,
+      "independent_review": "Root and distinct complete matching-only original/source/whole-object/source-symbol-reuse reviews and isolated FINAL194 cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": "build/word_store_duplicates_final/frozen_inputs.json",
+          "bytes": 37261,
+          "raw_sha256": "07eadf91b1fa4890a84249663075aa57b3b8bcd9c5ca6cd7587750c5f00aec68"
+        },
+        "parent": {
+          "path": ".local/word_store_final194_root_review.json",
+          "bytes": 1542,
+          "raw_sha256": "85d20f914020162602ec6e531407b9212b4dce160e95ba82f2c0e2afd4024bdd"
+        },
+        "distinct": {
+          "path": ".local/word_store_final194_peer0001/independent_audit.json",
+          "bytes": 9401,
+          "raw_sha256": "ca7a582c931a3cc1bd69b8ba46779e05f44ca87d23556fe00a0da3cd2724fa7a"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "functions": [
+    {
+      "source": "src/runtime/libio/floatconv.c",
+      "source_kind": "c",
+      "upstream_source_sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d",
+      "source_provenance_manifest": "src/runtime/libio/provenance.json",
+      "upstream_revision": "b595ded606227e93b8c4a447446c1d2ac093827d",
+      "upstream_url": "https://github.com/SSXModding/ps2-ee-toolchain/blob/b595ded606227e93b8c4a447446c1d2ac093827d/ee/libio/floatconv.c",
+      "upstream_license": "Unchanged FSF1993/1994 GPL2-or-later with exact GNU-compiler linking exception, plus complete David M. Gay/AT&T1991 permissive notice; both retained in source and docs/libio_bigint.md.",
+      "source_dependencies": [
+        {
+          "path": "src/runtime/libio/floatconv.c",
+          "sha256": "e7eaabdc4a6c64ce1d30421f371c4546c6eb3f12b95f5f1eaf80af9eb45f771d"
+        },
+        {
+          "path": "src/runtime/libio/libioP.h",
+          "sha256": "18303437fdadb70088223e702f73a1203c79415989d27223fd5499cec7eca93a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/errno.h",
+          "sha256": "9e59a1690bc10eb1ecef743bc1ee5aa99e428a53a19700f9737655c00e9b73c9"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/errno.h",
+          "sha256": "032842426331e756eb02fd8e3aca187790a0f5ec08854315aca9ac8609b0d94e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/reent.h",
+          "sha256": "684daf1dc2f4493ec0762f1ee5c6450700e771bf2924840689e0c99c648b6e0f"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/_ansi.h",
+          "sha256": "28e788875d4230a2d6fc0e89a0c3f6bd68e30053394701d73a45e5cb7d290946"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/config.h",
+          "sha256": "ef87d21ce75b61f4f75c84aecd47fc292bea55a83038dcb2da3b788d3655f71d"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/sys/_types.h",
+          "sha256": "71a2a78b9af882aee475b25bc5761f1680d40342097922dd55414513ad8074ca"
+        },
+        {
+          "path": "src/runtime/libio/iolibio.h",
+          "sha256": "b1c379c7722a4cbda1e3ecd08c7264a43e24545d357ab5576144acf6b12af327"
+        },
+        {
+          "path": "src/runtime/sgi/libio/libio.h",
+          "sha256": "5bb63a8c96d1fb4acfac61737d4ca111db3b3507fe0a0529513a672c7aed1a04"
+        },
+        {
+          "path": "src/runtime/sgi/config/_G_config.h",
+          "sha256": "dff3e5a68d6258a2324010e6deec4af460616690594054cc28125de1581ba72a"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/stdlib.h",
+          "sha256": "36fcb63b18adbdb66c8b6a776a659ff3def7df472ed93cc3e308d5003e3a5af0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/alloca.h",
+          "sha256": "2d967c8d4adcd11885e47e2c9c046e52d30670672dc10ed9d1e329d9dae902b0"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/string.h",
+          "sha256": "e9a4540a290f8ef178a00bf9e19c86dcf47f2f4386dd42056126580358117f8a"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/float.h",
+          "sha256": "fe51e6df0bbbfbc4a249ac0697cdcaaefd275f38db1b28a47eb2953e0c65faf3"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/math.h",
+          "sha256": "8f14e31ca4b840dfcd4bcda01cec386e9ad392978052157b15624a0a9a4243f7"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/ee/include/machine/ieeefp.h",
+          "sha256": "dfe7431100ac6b66e77249bfb31d47770ec0209565ce2eec01b191788ad00006"
+        }
+      ],
+      "name": "func_0035F018",
+      "compiled_symbol": "pow5mult",
+      "upstream_symbol": "pow5mult",
+      "address": "0x0035F018",
+      "file_offset": "0x00260018",
+      "size": 120,
+      "original_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2",
+      "status": "matched",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I",
+        "src/runtime/libio",
+        "-I",
+        "src/runtime/sgi/libio",
+        "-I",
+        "src/runtime/sgi/config",
+        "-idirafter",
+        "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include",
+        "-msplit-addresses"
+      ],
+      "reviewed": true,
+      "author_reviewed": true,
+      "link": true,
+      "link_writable_data": {
+        ".data.p05": {
+          "file_offset": "0x00301688",
+          "size": 24,
+          "address": "0x00400688",
+          "original_sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca",
+          "original_section": ".data",
+          "original_section_sha256": "f6cb095c4b7206dd9a49d57f521d12d3ac40fd2c68bae5af1d01fcece951f922",
+          "compiled_symbol": "p05.36",
+          "code_bindings": [
+            {
+              "hi_offset": 76,
+              "lo_offset": 80,
+              "relative_offset": 0
+            }
+          ],
+          "evidence": "Complete source-owned p05 six signed32 integers, compiler-local whole writable object, original adjacent LUI/ADDIU base-preserving pair35F064/68, indexed LW35F07C; no data award."
+        }
+      },
+      "candidate_exact_primary": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 120,
+        "compiled_size": 120,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2",
+        "compiled_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2"
+      },
+      "boundary_evidence": "Complete30 original words/JR31/delay/no padding, predecessor and actual six incoming JALs/full containing geometry; bounded caller interpretation only.",
+      "validation": {
+        "matching_only": true,
+        "complete_target_code_and_writable_initializer_equal": true,
+        "actual_source_M_files": 18,
+        "inherited_i2b_named_ABI": true,
+        "no_new_CPU_native_or_model": true,
+        "whole_final_comparison": {
+          "declaration": {
+            "name": "func_0035F018",
+            "compiled_symbol": "pow5mult",
+            "address": "0x0035F018",
+            "file_offset": "0x00260018",
+            "size": 120,
+            "link_writable_data": {
+              ".data.p05": {
+                "file_offset": "0x00301688",
+                "size": 24,
+                "address": "0x00400688",
+                "original_sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca",
+                "original_section": ".data",
+                "original_section_sha256": "f6cb095c4b7206dd9a49d57f521d12d3ac40fd2c68bae5af1d01fcece951f922",
+                "compiled_symbol": "p05.36",
+                "code_bindings": [
+                  {
+                    "hi_offset": 76,
+                    "lo_offset": 80,
+                    "relative_offset": 0
+                  }
+                ],
+                "evidence": "Complete source-owned p05 six signed32 integers, compiler-local whole writable object, original adjacent LUI/ADDIU base-preserving pair35F064/68, indexed LW35F07C; no data award."
+              }
+            }
+          },
+          "complete_compiled_input": {
+            "path": "build/libio_pow5_trial/gcc29_split.o",
+            "bytes": 23828,
+            "raw_sha256": "05012b5d786b1cb1ad95f2fe0136b811f681005b1a8e112085d87bee6973baf5"
+          },
+          "comparison": {
+            "identical": true,
+            "expected_size": 120,
+            "compiled_size": 120,
+            "different_bytes": 0,
+            "first_different_offsets": [],
+            "unresolved_relocations": [],
+            "expected_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2",
+            "compiled_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2"
+          },
+          "actual_JALs": [
+            {
+              "offset": 32,
+              "target": 3533400
+            },
+            {
+              "offset": 96,
+              "target": 3533400
+            }
+          ],
+          "input_relocations": [
+            {
+              "offset": 32,
+              "type": 4,
+              "symbol": "",
+              "symbol_index": 9
+            },
+            {
+              "offset": 76,
+              "type": 5,
+              "symbol": "",
+              "symbol_index": 15
+            },
+            {
+              "offset": 80,
+              "type": 6,
+              "symbol": "",
+              "symbol_index": 15
+            },
+            {
+              "offset": 96,
+              "type": 4,
+              "symbol": "",
+              "symbol_index": 9
+            }
+          ],
+          "resolved_bindings": {
+            "multadd": 3533400
+          },
+          "mapped_writable_data": [
+            {
+              "name": ".data.p05",
+              "output_section": ".george_writable_data_0",
+              "address": 4195976,
+              "size": 24,
+              "sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca",
+              "input_sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca",
+              "alignment": 8,
+              "compiled_symbol": "p05.36",
+              "flags": 3,
+              "file_offset": 3151496,
+              "original_sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca",
+              "original_section": {
+                "name": ".data",
+                "offset": 3092864,
+                "address": 4137344,
+                "size": 98240,
+                "type": "SHT_PROGBITS",
+                "flags": 3,
+                "alignment": 128,
+                "entsize": 0,
+                "sha256": "f6cb095c4b7206dd9a49d57f521d12d3ac40fd2c68bae5af1d01fcece951f922"
+              },
+              "initializer_relocation_count": 0,
+              "code_bindings": [
+                {
+                  "hi_offset": 76,
+                  "lo_offset": 80,
+                  "relative_offset": 0
+                }
+              ]
+            }
+          ],
+          "whole_artifacts": {
+            "object_path": {
+              "path": "build/libio_pow5_final/linked/link-al2kg2fo/function.o",
+              "bytes": 23828,
+              "raw_sha256": "ee2fabb80b2199845e7c83fa19d6c10c2e923ff03f1f68dd195f09ed15d928a7"
+            },
+            "linked_path": {
+              "path": "build/libio_pow5_final/linked/link-al2kg2fo/function.elf",
+              "bytes": 6288,
+              "raw_sha256": "cc2e1ba08806f24eeeb49461360c99c8e5233375f13f0aa3ec3d6466885c248d"
+            },
+            "script_path": {
+              "path": "build/libio_pow5_final/linked/link-al2kg2fo/function.ld",
+              "bytes": 238,
+              "raw_sha256": "03d53c66284cd931ba4db35491910846fcd44cf7bb86b66806619c93cc6f5f37"
+            }
+          },
+          "all_allocated_sections": [
+            {
+              "name": ".text",
+              "address": 3534872,
+              "size": 120,
+              "flags": 6,
+              "type": "SHT_PROGBITS",
+              "alignment": 8,
+              "raw_sha256": "2897607230ea5a9038d57eceb7c27964c94258c7362788bbf54b48cfd43f8cc2"
+            },
+            {
+              "name": ".george_writable_data_0",
+              "address": 4195976,
+              "size": 24,
+              "flags": 3,
+              "type": "SHT_PROGBITS",
+              "alignment": 8,
+              "raw_sha256": "ed1ded9e1dcd6d79ae8976bbe1094f81698644e72fd58d38f170aec9ae6434ca"
+            }
+          ],
+          "whole_data_and_code_identity": true,
+          "proof_gates": "Unchanged verify.mapped_initialized_data/link_match.link_function/writable_mapping_report executed; flags3 and full source/original object/container checked.",
+          "no_source_recompile_ABI_compile_native_CPU_model_or_global_data_alias": true
+        },
+        "final_immutable_inputs": 2384,
+        "parent_and_distinct_matching_only_approved": true
+      },
+      "implementation_limits": [
+        "Five local positive-count gates plus361574 locally nonzero-only difference. Nonnegative k is explicit defined-source domain, never inferred for every caller or complete strtod/dtoa control graph. Initialized Bigint wds>=1, valid words/capacity, successful allocation and defined shifts/overflow ranges inherited, no guard invention.",
+        "Initialized well-formed Bigint storage and nonnegative signed32 k. After the >6 loop, nonzero k is1..6 and p05[k-1] indexes the complete initialized24B. Negative k uses an out-of-bounds source index, so no invented guard or defined behavior. Existing allocation/count/overflow constraints remain unchanged.",
+        "Typed ABI is inherited i2b-named source-counterpart only. Actual i2b ABI ELF at100100 versus old fixed-PC100000 transport remains explicitly qualified; no new pow5 caller observations.",
+        "Short original on_stack/sign14 and genuine counterpart fields/wds16/x20 do not prove full original class/capacity/ownership/arbitrary alias identity.",
+        "No numerical/native/CPU coverage, original compiler identification, source method spelling identity, heap/OOM/lifetime/portable-C/hardware claim. Strict matching-only full selected code plus whole initialized data is the acceptance proof.",
+        "The genuine writable initializer is a complete24B item inside actual whole98240B .data, never a fabricated original24B section; hybrid keeps retail data bytes unchanged.",
+        "Larger mixed readonly remains304B with52relocations. This same single trial object may serve read-only deferred lead inspection, no large conversion award."
+      ],
+      "review_status": "complete_original_genuine_source_qualified_ABI_whole_code_and_initialized_data_parent_and_distinct_matching_only_passed",
+      "independent_review": "Root and distinct complete matching-only original/source/wholeobject/typedABI/code+data final2384 reviews and isolated cached-link/proof replays passed.",
+      "final_review": {
+        "index": {
+          "path": ".local/libio_pow5_final_handoff/frozen_inputs.json",
+          "bytes": 429834,
+          "raw_sha256": "a082ecfab153b3d54a19722648e55c31a94da3a25c76e123e1a5f0144a9e63f5"
+        },
+        "parent": {
+          "path": ".local/libio_pow5_final_root_review.json",
+          "bytes": 1721,
+          "raw_sha256": "f060063f453dd5e6e52bfbf2affa77aadb20ec59f66e36796f343008483bcf5f"
+        },
+        "distinct": {
+          "path": ".local/libio_pow5_final_peer0001/independent_audit.json",
+          "bytes": 7179,
+          "raw_sha256": "1141ffcbad6dc6546b0c0d05ff2f273f2d7d140e1c031ab540dd7244a0b453d9"
+        }
+      }
+    }
+  ]
+}
