@@ -1,0 +1,2656 @@
+{
+  "functions": [
+    {
+      "name": "func_001DA5C8",
+      "address": "0x001DA5C8",
+      "size": 28,
+      "file_offset": "0x000DB5C8",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DA5C8": "0x001DA5C8"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DA5C8.s",
+        "original_assembly_raw_sha256": "077993c6294a5b0d9563af1605535f103f450896c91112c0033fe1161196d762"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DA5C8/link-jzv1fonc/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DA5C8/link-jzv1fonc/function.ld",
+            "bytes": 229,
+            "raw_sha256": "325d1b2acc018509aa27d463f71c1942d0d2194ea8bccb9eee03580cb09c66ef"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DA5C8/link-jzv1fonc/function.elf",
+            "bytes": 1916,
+            "raw_sha256": "885234c6a8e8d310a843b9e289280abc026d3eb5027cd0ed7136136617fb6fe7"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DB910",
+      "address": "0x001DB910",
+      "size": 28,
+      "file_offset": "0x000DC910",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DB910": "0x001DB910"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DB910.s",
+        "original_assembly_raw_sha256": "5110f16c4bcbd2a047fd70ba3dc3d684135dea29be43ab18e4728c8632a89714"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DB910/link-lmjizp28/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DB910/link-lmjizp28/function.ld",
+            "bytes": 229,
+            "raw_sha256": "988301e8eef316fdb8115e1a70ee3859f900ae5bcaea03a1dc1662e9bd07091a"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DB910/link-lmjizp28/function.elf",
+            "bytes": 2756,
+            "raw_sha256": "9967fe524e0a732be9820e58e28bfd4e8d15ce67ee3903154c592633553f92fc"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DC580",
+      "address": "0x001DC580",
+      "size": 28,
+      "file_offset": "0x000DD580",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DC580": "0x001DC580"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DC580.s",
+        "original_assembly_raw_sha256": "954a23d5ff9eb0890cb58d31468afcbf7c0eb694ac7951f40562f4ac1b8e725f"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC580/link-e5zz9g4h/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC580/link-e5zz9g4h/function.ld",
+            "bytes": 229,
+            "raw_sha256": "e865d89c585f1e0346ef4db30ca0441e6bbf51a47bd1c1b7af95e395f2d50380"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC580/link-e5zz9g4h/function.elf",
+            "bytes": 1844,
+            "raw_sha256": "58d4acc8e9472a2bba8c773a538584469226bdf142a440ee6dd73ffc1e875cc6"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DC630",
+      "address": "0x001DC630",
+      "size": 28,
+      "file_offset": "0x000DD630",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DC630": "0x001DC630"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DC630.s",
+        "original_assembly_raw_sha256": "cce8d35755e9b165de2485f968e5ae2ac94e0b4d9059f794d525b9956eba0115"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC630/link-prfb50yc/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC630/link-prfb50yc/function.ld",
+            "bytes": 229,
+            "raw_sha256": "84e8177773f268aa82d04d96516e757cd07b0791085ab7bc3d7929872f134bc0"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC630/link-prfb50yc/function.elf",
+            "bytes": 2020,
+            "raw_sha256": "2b50c22746ce52022b19e3a43f49910db57e5f8b408e5efa658c484c31793ba8"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DC6D8",
+      "address": "0x001DC6D8",
+      "size": 28,
+      "file_offset": "0x000DD6D8",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DC6D8": "0x001DC6D8"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DC6D8.s",
+        "original_assembly_raw_sha256": "306952390608c87708648a05daeb8ebcb6a35363cf4b1a2108fa72cf76c0840d"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC6D8/link-eypgss6o/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC6D8/link-eypgss6o/function.ld",
+            "bytes": 229,
+            "raw_sha256": "d40a60cc44b98b3755e020be6c294372598f2bf701ff54c0accf29799d8d40f3"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC6D8/link-eypgss6o/function.elf",
+            "bytes": 2188,
+            "raw_sha256": "e009d453137748a66de9c5b92d99ac76b6f36428139300f3f463f04da26c38cd"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DC788",
+      "address": "0x001DC788",
+      "size": 28,
+      "file_offset": "0x000DD788",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DC788": "0x001DC788"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DC788.s",
+        "original_assembly_raw_sha256": "dbe9839334c227af2f4ca3dd4ea1cc61529b033028a7f6b190a02607d71fcfe8"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC788/link-f97ifd79/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC788/link-f97ifd79/function.ld",
+            "bytes": 229,
+            "raw_sha256": "87b386d257c5a810d6a6638714e057d1f9787583761e094c677016e1b07ce5a8"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DC788/link-f97ifd79/function.elf",
+            "bytes": 2364,
+            "raw_sha256": "4e81168e8ba4293380003fb988647bedae8817b54560b5dc102de46cdf2839c9"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001DFD18",
+      "address": "0x001DFD18",
+      "size": 28,
+      "file_offset": "0x000E0D18",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001DFD18": "0x001DFD18"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001DFD18.s",
+        "original_assembly_raw_sha256": "5f98d114ccc97afedc9518f02805a6a9cefa53f6ca6682368049f938849a2dc1"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DFD18/link-pksyze_r/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DFD18/link-pksyze_r/function.ld",
+            "bytes": 229,
+            "raw_sha256": "54615093c6fe950b458ee8f4ffc1c572b501eeb4a663fb1180389f0b5e65fd45"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001DFD18/link-pksyze_r/function.elf",
+            "bytes": 3788,
+            "raw_sha256": "cc49a4e813b9f7a79fc7c5401b40a2869994b9e93115491bffcf5dae68a35c88"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E04A8",
+      "address": "0x001E04A8",
+      "size": 28,
+      "file_offset": "0x000E14A8",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E04A8": "0x001E04A8"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E04A8.s",
+        "original_assembly_raw_sha256": "01fb3995aba0e5db537c02121fb989a5370fd51a1feaeac4c91051d63bccd411"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E04A8/link-rfk1ham2/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E04A8/link-rfk1ham2/function.ld",
+            "bytes": 229,
+            "raw_sha256": "a79b734d52ed7bb2279ac2fb0a784faf14f48e65ebbfde047884417df132824e"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E04A8/link-rfk1ham2/function.elf",
+            "bytes": 1628,
+            "raw_sha256": "12d215ad2fbf41871303d20295db6a65cdbdead875763032ecdfe24de9f20bca"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E1DD0",
+      "address": "0x001E1DD0",
+      "size": 28,
+      "file_offset": "0x000E2DD0",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E1DD0": "0x001E1DD0"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E1DD0.s",
+        "original_assembly_raw_sha256": "e04059c20e7042e4379dae155d13782660b89ba8965a89bdf4743fa740dfc9ac"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1DD0/link-smb0ek0z/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1DD0/link-smb0ek0z/function.ld",
+            "bytes": 229,
+            "raw_sha256": "0f18f89fcf871a81337db988231985f0db4fd8d702c26af68e60976926e94a5d"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1DD0/link-smb0ek0z/function.elf",
+            "bytes": 3972,
+            "raw_sha256": "6a6bec2fcc76c715b548367bf473076dea327346b47cdfcb52f61551e5c64444"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E1E58",
+      "address": "0x001E1E58",
+      "size": 28,
+      "file_offset": "0x000E2E58",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E1E58": "0x001E1E58"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E1E58.s",
+        "original_assembly_raw_sha256": "8023a9233c40e73607e9f54127a29ba18ef0315923535932303bda40ee4a2d22"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1E58/link-73t7y14j/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1E58/link-73t7y14j/function.ld",
+            "bytes": 229,
+            "raw_sha256": "177f85eb6abab26e58a6247ddc4b9c8961caf412b4a8a2be30b190bf8bee7a18"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E1E58/link-73t7y14j/function.elf",
+            "bytes": 4108,
+            "raw_sha256": "04bb92ba17ef568e1172f9b63f14a7201f719bf73a6603758949aae749aa2c35"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E5968",
+      "address": "0x001E5968",
+      "size": 28,
+      "file_offset": "0x000E6968",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E5968": "0x001E5968"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E5968.s",
+        "original_assembly_raw_sha256": "b498ae5a272db4e1ac77949ebae0aec5ae6bd2a58b84f9b24e264f71d7e2ea8f"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E5968/link-q767wtwu/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E5968/link-q767wtwu/function.ld",
+            "bytes": 229,
+            "raw_sha256": "a40f1dfa325ed1c0a9b3218e7860ab5c064ce71d66f32c4f57e3a98cca683584"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E5968/link-q767wtwu/function.elf",
+            "bytes": 2844,
+            "raw_sha256": "96fa7b315eeb52a92ea1aabac12c23a84f16d6b480ba4348873a63d8a27606f2"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E6808",
+      "address": "0x001E6808",
+      "size": 28,
+      "file_offset": "0x000E7808",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E6808": "0x001E6808"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E6808.s",
+        "original_assembly_raw_sha256": "c2ec9504ad308f4f211125dcafd86d82f307a73e5a1fac7c7b7dc9ab77ad5ddf"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E6808/link-fhf1f1j0/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E6808/link-fhf1f1j0/function.ld",
+            "bytes": 229,
+            "raw_sha256": "76b8bdd9c8339e5fed5327906a19ed6d70e6192ff7f147d299c4013fa48446d7"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E6808/link-fhf1f1j0/function.elf",
+            "bytes": 2492,
+            "raw_sha256": "ebb37b4d854a2c6208c9b9b12bb224a29775738b5189fea8d3f27e85c2deb0c9"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E7500",
+      "address": "0x001E7500",
+      "size": 28,
+      "file_offset": "0x000E8500",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E7500": "0x001E7500"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E7500.s",
+        "original_assembly_raw_sha256": "4d32d7124c5d3020cc85f36d70c7933e76f7e6589177d73d17e153575ed6a610"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E7500/link-u7vksvq8/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E7500/link-u7vksvq8/function.ld",
+            "bytes": 229,
+            "raw_sha256": "c856efb31993d4248b3e781a362a7dca9c6352f72a37570461e82e2c64cee6e7"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E7500/link-u7vksvq8/function.elf",
+            "bytes": 1716,
+            "raw_sha256": "6b82f1a8cfc5a50fa71e4c5d2b87c53b555dcfda6bd898520160e3f2b54ec57f"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E87A0",
+      "address": "0x001E87A0",
+      "size": 28,
+      "file_offset": "0x000E97A0",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E87A0": "0x001E87A0"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E87A0.s",
+        "original_assembly_raw_sha256": "88375d64b2ff6629f80bf65c59d7effd5c95b4c13243724a46b9d8d098b92aba"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E87A0/link-ygsg7zfw/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E87A0/link-ygsg7zfw/function.ld",
+            "bytes": 229,
+            "raw_sha256": "ecbc33c447e9c68fd59e0c633a6ba66d96fde60c684244d76e62f9c35bbc3cc1"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E87A0/link-ygsg7zfw/function.elf",
+            "bytes": 2388,
+            "raw_sha256": "3ac3d04be954af4ba256bc4b37ed1dbb4e56cd44bac314533f9d54acdfc65540"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E8930",
+      "address": "0x001E8930",
+      "size": 28,
+      "file_offset": "0x000E9930",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E8930": "0x001E8930"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E8930.s",
+        "original_assembly_raw_sha256": "4d64d09d458b67f31397cac69a67d569fd22a8dd4606a579b7c777aa165cb9b4"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8930/link-wstftlh6/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8930/link-wstftlh6/function.ld",
+            "bytes": 229,
+            "raw_sha256": "c1e9ceca0f5258cd9c383722778668f4e9637254e0904951a8e6ddf687b4fb82"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8930/link-wstftlh6/function.elf",
+            "bytes": 2788,
+            "raw_sha256": "40bfb4f39183e646d44d9265965582fda96e4cfda0bdb99c7e5adf37325ff0b2"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E8D78",
+      "address": "0x001E8D78",
+      "size": 28,
+      "file_offset": "0x000E9D78",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E8D78": "0x001E8D78"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E8D78.s",
+        "original_assembly_raw_sha256": "20eb0d4e6c4eb53baf060c59a2659e79f15624f06e7fd6a9d1bb9a8144767c67"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8D78/link-vrxw7ceo/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8D78/link-vrxw7ceo/function.ld",
+            "bytes": 229,
+            "raw_sha256": "90ca7c549504b8e4bec2dba136dcbac20d3f857f0c4da5c7b80c0d9be041828e"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8D78/link-vrxw7ceo/function.elf",
+            "bytes": 3884,
+            "raw_sha256": "bdec04226107d1354762cd4ee80488440de5213d3a16ee56147ab30a71254f16"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    },
+    {
+      "name": "func_001E8E20",
+      "address": "0x001E8E20",
+      "size": 28,
+      "file_offset": "0x000E9E20",
+      "original_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+      "source": "src/game/goal_destructor_wrappers.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_goal_base_destructor_forward",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-fno-reorder-blocks",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "link_symbols": {
+        "func_001E8E20": "0x001E8E20"
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/goal_destructor_wrappers.c",
+          "sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682"
+        },
+        {
+          "path": "include/george/goal_destructor_wrappers.h",
+          "sha256": "885cf9e709f04a41b908141895724b98893aacc2bc8eb5726ae111ea2135dc0e"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/goals.h",
+          "sha256": "c0d87d48fab49b42e5c60190db74d3b2501f5e9dfcf2219707ca9f27cd648083"
+        },
+        {
+          "path": "include/george/script_gameplay.h",
+          "sha256": "5e230f085e50f2fd80f63882e8c8c9692306e39a9b09cdbb10dc4a2f093ae97e"
+        },
+        {
+          "path": "include/george/deimos.h",
+          "sha256": "9b26f50dc9c481bb7e1c1da7f71689a75317ad2b9fb417a43a01a7f8a83059f4"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        }
+      ],
+      "upstream_source_sha256": "098c724dbbf3f0c2d57e332880c2ec29882cbf244be22446b5abbf1b6554f682",
+      "status": "matched",
+      "author_reviewed": true,
+      "candidate_comparison": {
+        "identical": true,
+        "expected_size": 28,
+        "compiled_size": 28,
+        "different_bytes": 0,
+        "first_different_offsets": [],
+        "unresolved_relocations": [],
+        "expected_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "compiled_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73"
+      },
+      "candidate_exact_primary": true,
+      "review_status": "Complete author evidence; canonical final acceptance and credit are recorded separately in final manifest and review receipts.",
+      "boundary_evidence": {
+        "original_bytes": 28,
+        "scanner_extent": 32,
+        "excluded_zero_padding": 4,
+        "whole_body_sha256": "2fa583e293ca5e514a8703ed00e8b810c3ad087237dd5f4a580f3275624eca73",
+        "original_assembly": "build/functions/func_001E8E20.s",
+        "original_assembly_raw_sha256": "ecfc0e431babea610b902ea315bafd8e7746d7d88ecdfb92f77b856f2d541722"
+      },
+      "entry_evidence": {
+        "full_private_scope": "build/goal_destructor_wrappers_scope/scope.json",
+        "concrete_constructor_and_signed_adjustment_dispatch": true,
+        "actual_encoded_incoming_calls": 0,
+        "original_runtime_class_prototype_and_invocation_unproved": true
+      },
+      "validation": {
+        "full_selected_symbol_28B_exact": true,
+        "no_unresolved_relocations": true,
+        "whole_artifacts": {
+          "object_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8E20/link-t5rwzpxw/function.o",
+            "bytes": 1484,
+            "raw_sha256": "d0d038e4271df6847f495700c53874d6b1c4c0c37b9f919da2e15242e5e94603"
+          },
+          "script_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8E20/link-t5rwzpxw/function.ld",
+            "bytes": 229,
+            "raw_sha256": "6689b58dd71422bdd6dc42dd1ec4a5e367f7479a1089fe863c5a895312d97a80"
+          },
+          "linked_path": {
+            "path": "build/goal_destructor_wrappers/linked/gcc323/func_001E8E20/link-t5rwzpxw/function.elf",
+            "bytes": 4052,
+            "raw_sha256": "fc168721a4572439ee745b1ebc841b18d715c39955eddb06ba612f668ab58781"
+          }
+        },
+        "author_original_actual_PC_cases": 32,
+        "native_unique_shared_source_cases": 32,
+        "controlled_helper_unawarded": true,
+        "parent_and_distinct_final_approved": true
+      },
+      "implementation_limits": [
+        "One unique ordinary C effects-only forwarding function serves17 identical originals; no old exact compiled seed or17 duplicated source functions.",
+        "void*(storage),u32(flags) is a bounded independently compiled convention. Observed GPR4/5 and lower64 stack/return transport do not prove original prototypes, class layouts, upper128 or portable cross-TU source identity.",
+        "The initialized native harness defines a correctly typed controlled helper. It validates exact forwarding/call count and modeled table publication before optional free; it does not execute or award the whole original/published helper, allocator, class, ownership or null destruction.",
+        "Actual17 originalPCs\u00d732 parameter sets=544 executions and119 unique PCs;32 parameter sets are native once each,1056 checks. Inherited scope/context is not counted as new native cases.",
+        "Original incidental helper GPR2 is retained in original observer records; native void convention deliberately has no return-value comparison. Genuine caller results are discarded, without a universal original ABI claim.",
+        "Four zero alignment bytes are excluded from every28B original. GCC323 full selected28B matches while whole allocated text32B retains its zero tail; GCC29 complete8B tail-call alternative remains a nonmatch.",
+        "Concrete constructor/table/dispatcher roots are static paths only. No main ancestry, runtime invocation, original virtual-class/prototype or table extent identity follows.",
+        "Actual four target compiles and M9 each plus four native compiles/M9,15,9,9 are author commands; final replay reuses all frozen objects/images/dependency outputs and never compiles or repeats M."
+      ],
+      "reviewed": true,
+      "independent_review": "Root and distinct full original/source/object/dependency/actual-VMA/ABI/bounded memory/native review and one unchanged contained final replay each passed.",
+      "final_acceptance": {
+        "root": {
+          "path": ".local/goal_destructor_wrappers_final_root_review.json",
+          "bytes": 29393,
+          "raw_sha256": "c843bfee2d5ddd2ab38e501c01f8431fac3d627ef68f188bdb8c8d61b8868873"
+        },
+        "distinct": {
+          "path": ".local/goal_destructor_wrappers_final_peer0001/independent_audit.json",
+          "bytes": 33017,
+          "raw_sha256": "580abf02ab15e2652f0cca9ae4f70912dbded6615f137c56fc4d219ee509f6cd"
+        },
+        "final2708": {
+          "path": "build/goal_destructor_wrappers/frozen_inputs.json",
+          "bytes": 538827,
+          "raw_sha256": "0f5d62faa58998713e92ed3fb974db6f8841561a87253e30e9c26beb4d64adb2"
+        },
+        "public_bridge24": {
+          "path": "build/goal_destructor_wrappers_public_bridge/frozen_inputs.json",
+          "bytes": 5311,
+          "raw_sha256": "ce4b3455e2c5ae12638c837eaadbac58c6e602221cba3041a21582831a869f55"
+        },
+        "public_bridge_root": {
+          "path": ".local/goal_destructor_wrappers_public_bridge_root_review.json",
+          "bytes": 797,
+          "raw_sha256": "33cfe5b168b5c029d33721469487a5008dd86ef2c75b1e3dde083b0c9c12a54e"
+        },
+        "public_native_spelling_not_freshly_built": true
+      }
+    }
+  ]
+}
