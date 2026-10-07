@@ -1,0 +1,341 @@
+{
+  "functions": [
+    {
+      "name": "func_002A0B00",
+      "address": "0x002A0B00",
+      "size": 480,
+      "file_offset": "0x001A1B00",
+      "original_sha256": "29d6a7a27ac1eebed2e3ec24c306809e21709b397a5aef5e30bd4d5cf4f04b81",
+      "status": "reconstructed",
+      "source": "src/game/matrix_to_quaternion.c",
+      "source_kind": "c",
+      "source_sha256": "97427d7f0d278183dc3d7c396af0900512367bab93dd7b8f937eb9982fa806c8",
+      "compiled_symbol": "george_matrix_to_quaternion",
+      "compiler_profile": "gcc323",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections",
+        "-fno-reorder-blocks"
+      ],
+      "link": true,
+      "reviewed": true,
+      "link_symbols": {
+        "george_matrix_to_quaternion": 2755328,
+        "D_003FC940": 4180288
+      },
+      "source_dependencies": [
+        {
+          "path": "src/game/matrix_to_quaternion.c",
+          "sha256": "97427d7f0d278183dc3d7c396af0900512367bab93dd7b8f937eb9982fa806c8"
+        },
+        {
+          "path": "include/george/matrix_to_quaternion.h",
+          "sha256": "053771699881e710f64e99487d0fb512e47ec9dc3a10d7049915db4cd400f781"
+        },
+        {
+          "path": "include/george/rotation.h",
+          "sha256": "1e9aefed17e7a9a3a60c06125fce647ee4fb6eab56ceedc853f03cbbb135cfd1"
+        },
+        {
+          "path": "include/george/vector_math.h",
+          "sha256": "47f9a6e0c6abcb1a591dbd2ec903245cc664fc1290497ab175373376bc914c57"
+        },
+        {
+          "path": "include/george/math_helpers.h",
+          "sha256": "e02b5223f9e226ca5dd37f4b12186c0bddc3a39858bb089d8d77acf3e366d621"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/ps2dev-20181019/MinGW/msys/1.0/local/ps2dev/ee/lib/gcc-lib/ee/3.2.3/include/stddef.h",
+          "sha256": "d46c55c3760cc6120042b58d8ae006d63efc710cd355751f2b130e27208a56c7"
+        },
+        {
+          "path": "include/george/compiler.h",
+          "sha256": "31069850cb5ec9ae65c3679151a3315083261640e8c717e26c18cfb49de2f7f3"
+        },
+        {
+          "path": "include/george/ee_math.h",
+          "sha256": "4b589098cdf8f24a5ec1332d9542d6bec3f19ecc7f3509c2bd93e475ee883a6e"
+        }
+      ],
+      "implementation_limits": [
+        "Bounded initialized GNU scalar arena/struct-prefix views and shifted aliases; complete-source ISO-C numeric declaration unification remains open.",
+        "Normal/zero nominal host binary32 agreement, with mathematical exact88 and nested primary-zero48 only; no general EE low-bit rounding/FCR/traps/subnormals/timing/hardware identity.",
+        "Actual writable table prefix is numerically bound, undefined in production; valid synthetic index triples are fixtures, no runtime invariant or retail mutation claim.",
+        "Effects-only semantic convention and two pointer transport, original prototypes/classes/return declaration and main ancestry unresolved.",
+        "Two original selected API links used decoded text capture without separately retained RAW pipes; exact images/scripts/objects retained and not author-relinked. Private review pipe capture is separate history."
+      ],
+      "evidence": {
+        "private_proof": "build/matrix_to_quaternion/identity_packet.json",
+        "proof_sha256": "65a7bb04b3bf907c2107badf689b441ed7f5e0f17d2e9550cfece378400a7c5d",
+        "scope": "build/matrix_to_quaternion_scope/scope.json",
+        "initial_source_unchanged": true,
+        "genuine_complete_BSD_algorithm_adaptation": true,
+        "whole_comparisons": 2,
+        "exact_comparisons": 0,
+        "original_entry_JALs": 24,
+        "unique_fixtures": 168,
+        "complete_arena_words": 64,
+        "rational_mathematical_exact": 88,
+        "primary_zero_qualified_subset": 48,
+        "nominal_cases": 120,
+        "native_checks": 12504,
+        "real_controls": 5,
+        "public_guard_methods": 8,
+        "private_caller_COMMON_storage_only": true,
+        "no_original_opcode_table_or_primary_PDF_arrays": true,
+        "final_nonzero_control_qualification": "Frozen proof prose mislabels the final k-component as W/skew. In fixture8, q_i aliases matrix[2]; W=+1/4 is stored at matrix[4], then the fresh final ADD at0x002A0CD0 and MUL at0x002A0CD4 produce q[k=0]=+1/16, stored at arena word17 by0x002A0CDC. Reversing the earlier W skew predicts -1/16 (0xBD800000). Native capture records the first failure at fixture8 word17; its wrong bits are an independent prediction, not captured output. Both parent and distinct additive reviews preserve the immutable original proof.",
+        "rational_subset_qualification": "48 primary-zero-qualified cases are a subset of88 mathematically exact cases; 120 nominal cases comprise80 mathematically inexact cases and40 zero-sign gaps.",
+        "source_ancestry_qualification": "Complete licensed Coin3D method adaptation; no unchanged source or original library ancestry claim."
+      },
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc29",
+          "identical": false,
+          "expected_size": 480,
+          "compiled_size": 476,
+          "different_bytes": 332,
+          "first_different_offsets": [
+            14,
+            18,
+            22,
+            24,
+            25,
+            26,
+            30,
+            36
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "29d6a7a27ac1eebed2e3ec24c306809e21709b397a5aef5e30bd4d5cf4f04b81",
+          "compiled_sha256": "7c5993c8c9de7f9d34ad041c95b3ce32ffb82772cd21471fbd8b1df44b1e6d58",
+          "whole_input": {
+            "path": "build/matrix_to_quaternion/gcc29_production.o",
+            "bytes": 1940,
+            "raw_sha256": "9792e975bf5fcb05ff3ac51ae81964e7198ea78ae163ef2aabe80e6ce75b4765"
+          },
+          "whole_artifacts": {
+            "object_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc29/link-evvyac71/function.o",
+              "bytes": 1940,
+              "raw_sha256": "9792e975bf5fcb05ff3ac51ae81964e7198ea78ae163ef2aabe80e6ce75b4765"
+            },
+            "linked_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc29/link-evvyac71/function.elf",
+              "bytes": 3692,
+              "raw_sha256": "75fe3ca9b0ab1225a6eb834b8d72fe7e4ee3f7bca077585d135db5f8aabcb6d0"
+            },
+            "script_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc29/link-evvyac71/function.ld",
+              "bytes": 218,
+              "raw_sha256": "238d9276dc17f5b63fc5d363fde3b2f00f9b9c3c77e1bd61b07fd98c498fcd91"
+            }
+          },
+          "complete_section": {
+            "bytes": 480,
+            "raw_sha256": "b7880920de033cce52d4a3b760ad23992e5661e2cf85188cea1da52ae11194dd",
+            "unawarded_alignment_bytes": 4
+          },
+          "actual_input_relocations": [
+            {
+              "offset": 204,
+              "type": 5,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            },
+            {
+              "offset": 212,
+              "type": 6,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            },
+            {
+              "offset": 244,
+              "type": 5,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            },
+            {
+              "offset": 252,
+              "type": 6,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            }
+          ],
+          "actual_resolved_bindings": {
+            "D_003FC940": 4180288
+          }
+        },
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 480,
+          "compiled_size": 480,
+          "different_bytes": 342,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "29d6a7a27ac1eebed2e3ec24c306809e21709b397a5aef5e30bd4d5cf4f04b81",
+          "compiled_sha256": "184b6876fc182880e1263a7ec4385c93a3a253610189395ac77f7cd328ea9666",
+          "whole_input": {
+            "path": "build/matrix_to_quaternion/gcc323_production.o",
+            "bytes": 1896,
+            "raw_sha256": "2956bad27a086a707896e30e42e931c20b73196f4c8c27c830e441b8212f8717"
+          },
+          "whole_artifacts": {
+            "object_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc323/link-sxl924c0/function.o",
+              "bytes": 1896,
+              "raw_sha256": "2956bad27a086a707896e30e42e931c20b73196f4c8c27c830e441b8212f8717"
+            },
+            "linked_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc323/link-sxl924c0/function.elf",
+              "bytes": 3692,
+              "raw_sha256": "9efd3f45d88e3bc2f2deb6531b0dd063238a5b02f6de74ac897c7fad5efa8913"
+            },
+            "script_path": {
+              "path": "build/matrix_to_quaternion/selected_linked/gcc323/link-sxl924c0/function.ld",
+              "bytes": 218,
+              "raw_sha256": "238d9276dc17f5b63fc5d363fde3b2f00f9b9c3c77e1bd61b07fd98c498fcd91"
+            }
+          },
+          "complete_section": {
+            "bytes": 480,
+            "raw_sha256": "184b6876fc182880e1263a7ec4385c93a3a253610189395ac77f7cd328ea9666",
+            "unawarded_alignment_bytes": 0
+          },
+          "actual_input_relocations": [
+            {
+              "offset": 192,
+              "type": 5,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            },
+            {
+              "offset": 208,
+              "type": 6,
+              "symbol": "D_003FC940",
+              "symbol_index": 10
+            }
+          ],
+          "actual_resolved_bindings": {
+            "D_003FC940": 4180288
+          }
+        }
+      ],
+      "final_review": {
+        "final548": {
+          "path": "build/matrix_to_quaternion/frozen_inputs.json",
+          "bytes": 107704,
+          "raw_sha256": "7da080654fa0da09f0dfd90cdeb66e961d96947933ff2647d1d0733de027ecb3"
+        },
+        "root_review": {
+          "path": ".local/matrix_to_quaternion_final_root_review.json",
+          "bytes": 46533,
+          "raw_sha256": "77b3f66238d0e0542287fe54fdbfd62157972bdd9180c9dd73bc9ea62433c08e"
+        },
+        "root_exact_additive_qualification": {
+          "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+          "bytes": 18544,
+          "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+        },
+        "root_real_linked_GPR_transport": {
+          "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+          "bytes": 2391,
+          "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+        },
+        "distinct_final_review": {
+          "path": ".local/matrix_to_quaternion_final_peer0001/independent_audit.json",
+          "bytes": 44505,
+          "raw_sha256": "b2d76a201584a707e473edc2af4af14f451b53e8ec648877fb42a02be2851d60"
+        },
+        "root_closed_replay": {
+          "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+          "bytes": 40777,
+          "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+        }
+      },
+      "review_status": "Parent and distinct full final reviews accepted a bounded reconstruction. Both natural whole compiled functions are nonmatching; zero matching byte credit.",
+      "independent_review": "Parent and distinct complete original/source/object/dependency/original-address links/actual ABI/bounded scalar-native evidence passed; one unchanged contained final replay per reviewer.",
+      "final_acceptance": {
+        "index": {
+          "path": "build/matrix_to_quaternion/frozen_inputs.json",
+          "bytes": 107704,
+          "raw_sha256": "7da080654fa0da09f0dfd90cdeb66e961d96947933ff2647d1d0733de027ecb3"
+        },
+        "parent": {
+          "path": ".local/matrix_to_quaternion_final_root_review.json",
+          "bytes": 46533,
+          "raw_sha256": "77b3f66238d0e0542287fe54fdbfd62157972bdd9180c9dd73bc9ea62433c08e"
+        },
+        "distinct": {
+          "path": ".local/matrix_to_quaternion_final_peer0001/independent_audit.json",
+          "bytes": 44505,
+          "raw_sha256": "b2d76a201584a707e473edc2af4af14f451b53e8ec648877fb42a02be2851d60"
+        },
+        "additive_qualifications": [
+          {
+            "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+            "bytes": 18544,
+            "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+            "bytes": 2391,
+            "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+            "bytes": 40777,
+            "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+          },
+          {
+            "path": ".local/resource_pointer_root_final0001/audit.json",
+            "bytes": 189751,
+            "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0001/history.json",
+            "bytes": 813,
+            "raw_sha256": "c32d2edceab8959fb5a14273e53aa4e483b4c0888fa33fd17e496c06a13b7325"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0002/history.json",
+            "bytes": 806,
+            "raw_sha256": "2acb02e7aae687195891ae3e16e479c3c68e2a0f83c419b4919317ed85f2afc8"
+          }
+        ]
+      },
+      "validation": {
+        "parent_and_distinct_bounded_final_approved": true
+      }
+    }
+  ],
+  "public_projection": {
+    "complete_author_proposal": {
+      "path": "build/matrix_to_quaternion/functions.json",
+      "bytes": 4310,
+      "raw_sha256": "116315fcb8bcb5a0c37cb4581140c4f6e53f5d0f9d9737a83664dd8f67ec3144"
+    },
+    "private_original_code_table_and_PDF_arrays_omitted": true,
+    "unchanged_source_recipe_and_dependency_order": true,
+    "exact_additive_qualifications_retained": true,
+    "canonical_registration": false
+  },
+  "canonical_registration": true,
+  "review_contract": "Parent and distinct final acceptance passed. Whole canonical strict build/report/tests required; frozen family descriptions remain historical and checkpoint75 notes carry final results."
+}

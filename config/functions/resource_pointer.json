@@ -1,0 +1,1468 @@
+{
+  "schema_version": 1,
+  "binary": "SLUS_216.68",
+  "functions": [
+    {
+      "name": "func_002B6228",
+      "address": "0x002B6228",
+      "file_offset": "0x001B7228",
+      "size": 48,
+      "original_sha256": "0571a3557c66a1e226b9fa213cb51541e0ba1c309e09aab6e9425b81bea3da3e",
+      "source": "src/game/resource_pointer.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_resource_payload_is_kind2_or3",
+      "source_name": "george_resource_payload_is_kind2_or3",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "matched",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/resource_pointer.c",
+          "sha256": "130c7bc8274f713575d3161d3d03f407a702718f65078ef5606a8efcc30388f6"
+        },
+        {
+          "path": "include/george/resource_pointer.h",
+          "sha256": "360d1113d3f98ce2ea7a588cb822bb93b8dbebfcc13e50a0e57be62025f3c444"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 48,
+          "compiled_size": 48,
+          "different_bytes": 13,
+          "first_different_offsets": [
+            2,
+            6,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "0571a3557c66a1e226b9fa213cb51541e0ba1c309e09aab6e9425b81bea3da3e",
+          "compiled_sha256": "cb7da18cd0521b60d8c7a2ad8f59a459b5de1a8c6d38385adcbf893a2b2c8811"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": true,
+          "expected_size": 48,
+          "compiled_size": 48,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "0571a3557c66a1e226b9fa213cb51541e0ba1c309e09aab6e9425b81bea3da3e",
+          "compiled_sha256": "0571a3557c66a1e226b9fa213cb51541e0ba1c309e09aab6e9425b81bea3da3e"
+        }
+      ],
+      "entry_evidence": {
+        "whole_geometry": {
+          "name": "func_002B6228",
+          "address": "0x002B6228",
+          "size": 48,
+          "scanner_extent": 48,
+          "section": ".text",
+          "file_offset": "0x001B7228",
+          "original_sha256": "0571a3557c66a1e226b9fa213cb51541e0ba1c309e09aab6e9425b81bea3da3e",
+          "original_assembly": "build/functions/func_002B6228.s",
+          "original_assembly_raw_sha256": "512fa94a800b60937926a162f7b75565f36fba1a62e00ac5596926e2a9fda450",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6258",
+          "terminal_instruction": "0x002B6250",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6254",
+          "delay_word": "0x00C0102D",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "preceding_whole_scanner_geometry": {
+          "name": "func_002B6218",
+          "address": "0x002B6218",
+          "size": 12,
+          "scanner_extent": 16,
+          "section": ".text",
+          "file_offset": "0x001B7218",
+          "original_sha256": "0f50ffc7e2cbb53f8bc30e2762d5fbfdb4c1ad26c9b54ab56de09b95e3f23a2e",
+          "original_assembly": "build/functions/func_002B6218.s",
+          "original_assembly_raw_sha256": "df1eacd8ca81985e88d0d4514910ce45afa17d0958464154dbb99f63d16c361c",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 4,
+          "following_scanner_entry": "0x002B6228",
+          "terminal_instruction": "0x002B621C",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6220",
+          "delay_word": "0x9462001C",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "following_whole_scanner_geometry": {
+          "name": "func_002B6258",
+          "address": "0x002B6258",
+          "size": 36,
+          "scanner_extent": 40,
+          "section": ".text",
+          "file_offset": "0x001B7258",
+          "original_sha256": "249c503f96e22a88a74ed6de2687365ac1b2b3b26804df55a78bd47b0a8b3046",
+          "original_assembly": "build/functions/func_002B6258.s",
+          "original_assembly_raw_sha256": "0d22c6d4c7a6f567a59d8102bda8ada2d0c01e884975aaa77faa67a76864e55d",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 4,
+          "following_scanner_entry": "0x002B6280",
+          "terminal_instruction": "0x002B6274",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6278",
+          "delay_word": "0x00000000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "boundary_context": {
+          "address": "0x002B6218",
+          "bytes": 80,
+          "raw_sha256": "8f58945679f00302d4452f46fae4722a32bb5a23b6d4f7e36870b0cd531ccd71",
+          "following_first_word": "0x30840001"
+        },
+        "actual_refs": [
+          {
+            "pc": "0x001272C4",
+            "word": "0x0C0AD88A",
+            "target": "0x002B6228",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x00000000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_00127280",
+              "address": "0x00127280",
+              "size": 320,
+              "scanner_extent": 320,
+              "section": ".text",
+              "file_offset": "0x00028280",
+              "original_sha256": "b6d0ad9677bd18d56e109c640f528c211811e3de1e8f6e7183b58cc1b6d5ae20",
+              "original_assembly": "build/functions/func_00127280.s",
+              "original_assembly_raw_sha256": "98a6f916682ed5de5bd4c0d8035a45e23f337767026e6782d1612dd064c3c7bc",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x001273C0",
+              "terminal_instruction": "0x001273B8",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x001273BC",
+              "delay_word": "0x27BD0030",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          }
+        ],
+        "allocated_pointer_words": [],
+        "raw_next100_candidates": [],
+        "FDE_geometry": [],
+        "full_private_sourcefree_scope": "build/resource_pointer_scope/scope.json",
+        "complete_original_code_arrays_omitted": true
+      },
+      "target_abi": {
+        "layout20": [
+          4,
+          4,
+          4,
+          2,
+          1,
+          8,
+          8,
+          8,
+          16,
+          0,
+          2,
+          3,
+          4,
+          8,
+          12,
+          32,
+          0,
+          28,
+          30,
+          4
+        ],
+        "owner_GPR": 4,
+        "index_GPR": null,
+        "full_mode_GPR": null,
+        "result_GPR": 2,
+        "declared_return": "u32",
+        "actual_whole_caller_profiles": [
+          "gcc323",
+          "gcc29"
+        ],
+        "whole_private_callers": "build/resource_pointer/caller_links.json",
+        "whole_private_caller_SHA": "fb2b7e50f2205d9b9ebb47eb5352f4b391278c3205137a1b4da905625322e458"
+      },
+      "validation": {
+        "original_fixtures": 320,
+        "original_instructions": 11880,
+        "covered_words": 95,
+        "native_checks": 1622660,
+        "meaningful_controls": 6,
+        "guards_present": 9,
+        "absent_original_pass": 7,
+        "absent_original_skip": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Initialized aligned consumed owner16/payload32 scalar prefixes only; no original class, allocation capacity, original C spelling, runtime invocation or ancestry identity.",
+        "Lower64 raw mode/result, low32 owner/index/pointer arithmetic and unsigned32 wrapping are observed. GNU out-of-range s32 narrowing is implementation-defined two-complement behavior, not portable ISO-C conversion. Four executed native boundary witnesses cover0/7fffffff/80000000/ffffffff.",
+        "Native actual pointer32/result64 assertions are emitted; no native sizeof(long) array was emitted. The genuine MinGW limits header and complete I386 COFF/PE qualify the observed unsigned-long counter domain, not a new layout measurement.",
+        "Declaration-only callers measure sole compiled mode1<<32, GPR4/5 low32 and GPR6/result2 lower64. Other mode values belong original/native fixtures, not new compiled caller constants. Void incidental return bits are controlled, not an original return contract.",
+        "Synthetic original numerical arenas and actual native pointer arenas are separately initialized and compared in their own address roles. No raw address masking/equality, portable effective-type/object/class identity, arbitrary null/overflow/malformed/concurrent storage or original capacity claim.",
+        "All original95 words execute at actual original PCs through the exact wrapper around whole unchanged RegistryTrace/Trace. Budget and reserved/definedness/memory/control checks precede mutation. No new opcode semantics/upper128/FPU/VU/timing/exception/hardware claim.",
+        "Native compares every owned word/result with independently initialized actual-address integer effects. Original full arenas and ordered load/store ledgers are separately checked. Native intermediate machine access order is not traced or asserted RAW identical to original.",
+        "The32 relocation count-alias cases use a real u32[18432] interior owner with low16fffc. Complete bounded tail and ordinary typed storage are justified by the approved16384 aligned-base arithmetic proof.",
+        "Sourcefree56 early62E0 owner-prefix overlap/deferred-byte2 control prose is superseded only by immutable erratum2. Slot offsets16..1036 are disjoint from prefix0..15; six genuine wrong-source controls use the separately proved effects instead.",
+        "Natural complete symbol sizes/physical zero tails, whole objects/scripts/ELFs and all real input relocations remain strict. Private approved missing bindings are merged into full historical canonical map; no aliases/canonical status/helper/data awards or source/flags tuning.",
+        "Initial carrier926 had only309 subtree docs/1411 rows. Separate complete catalog supplement preserves312 whole docs/1655 rows before fixed commands. The original partial index and all its bytes remain immutable.",
+        "Four target compiles/four actual-M and one native harness plus seven complete production TUs/eight actual-M were performed once. Final replay links cached objects and copies/executes accepted RAW native images; no compiler/M/native linking reruns or PE field normalization."
+      ],
+      "final_review": {
+        "final1213": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "closed_parent_replay": {
+          "path": ".local/resource_pointer_root_final0001/audit.json",
+          "bytes": 189751,
+          "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+        },
+        "private_author_manifest": {
+          "path": "build/resource_pointer/manifest.json",
+          "bytes": 99919,
+          "raw_sha256": "9851df6ff73d048a4aef09e4997c73125ae1ced35f14bfc3fa36da16d30b47ec"
+        },
+        "private_proof": {
+          "path": "build/resource_pointer/identity_packet.json",
+          "bytes": 272012,
+          "raw_sha256": "a90e91ec3851d954ebfddd249ebd7c50c0f724514b782a441cfb50ef3704644c"
+        }
+      },
+      "review_status": "Parent and distinct whole final reviews passed; primary GCC29 complete comparison matches predicate/initializer only. Relocation and selector remain bounded reconstructions.",
+      "independent_review": "Parent and distinct complete original/source/object/dependency/original-address links/actual ABI/bounded scalar-native evidence passed; one unchanged contained final replay per reviewer.",
+      "final_acceptance": {
+        "index": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "additive_qualifications": [
+          {
+            "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+            "bytes": 18544,
+            "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+            "bytes": 2391,
+            "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+            "bytes": 40777,
+            "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+          },
+          {
+            "path": ".local/resource_pointer_root_final0001/audit.json",
+            "bytes": 189751,
+            "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0001/history.json",
+            "bytes": 813,
+            "raw_sha256": "c32d2edceab8959fb5a14273e53aa4e483b4c0888fa33fd17e496c06a13b7325"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0002/history.json",
+            "bytes": 806,
+            "raw_sha256": "2acb02e7aae687195891ae3e16e479c3c68e2a0f83c419b4919317ed85f2afc8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "func_002B62E0",
+      "address": "0x002B62E0",
+      "file_offset": "0x001B72E0",
+      "size": 40,
+      "original_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727",
+      "source": "src/game/resource_pointer.c",
+      "source_kind": "c",
+      "compiled_symbol": "func_002B62E0",
+      "source_name": "func_002B62E0",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "matched",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/resource_pointer.c",
+          "sha256": "130c7bc8274f713575d3161d3d03f407a702718f65078ef5606a8efcc30388f6"
+        },
+        {
+          "path": "include/george/resource_pointer.h",
+          "sha256": "360d1113d3f98ce2ea7a588cb822bb93b8dbebfcc13e50a0e57be62025f3c444"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": true,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727",
+          "compiled_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": true,
+          "expected_size": 40,
+          "compiled_size": 40,
+          "different_bytes": 0,
+          "first_different_offsets": [],
+          "unresolved_relocations": [],
+          "expected_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727",
+          "compiled_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727"
+        }
+      ],
+      "entry_evidence": {
+        "whole_geometry": {
+          "name": "func_002B62E0",
+          "address": "0x002B62E0",
+          "size": 40,
+          "scanner_extent": 40,
+          "section": ".text",
+          "file_offset": "0x001B72E0",
+          "original_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727",
+          "original_assembly": "build/functions/func_002B62E0.s",
+          "original_assembly_raw_sha256": "a7ab5f1e6c88930443b9b834f895f1bc1c3898a8c9484660a27405270c4d72fb",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6308",
+          "terminal_instruction": "0x002B6300",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6304",
+          "delay_word": "0xAC640000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "preceding_whole_scanner_geometry": {
+          "name": "func_002B6280",
+          "address": "0x002B6280",
+          "size": 96,
+          "scanner_extent": 96,
+          "section": ".text",
+          "file_offset": "0x001B7280",
+          "original_sha256": "7dddecf35e2d7ddf0e4c0eee5888088847fedc4a75ca2aeb6938bd50b840429e",
+          "original_assembly": "build/functions/func_002B6280.s",
+          "original_assembly_raw_sha256": "06f65172c6bd5e41e4eaa89856a92eab64e098d90f67f7e3f265c6dbbf14f657",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B62E0",
+          "terminal_instruction": "0x002B62D8",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B62DC",
+          "delay_word": "0x24C20010",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "following_whole_scanner_geometry": {
+          "name": "func_002B6308",
+          "address": "0x002B6308",
+          "size": 144,
+          "scanner_extent": 144,
+          "section": ".text",
+          "file_offset": "0x001B7308",
+          "original_sha256": "ab03896d35602ead2ad481aa67a23fbfa659a5f75e90f154fb834fa9fa26b542",
+          "original_assembly": "build/functions/func_002B6308.s",
+          "original_assembly_raw_sha256": "9c23f4025ac75e84ea1ccb7fc35db9badcdb2631be310394359274dd6d116917",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6398",
+          "terminal_instruction": "0x002B6390",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6394",
+          "delay_word": "0x00000000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "boundary_context": {
+          "address": "0x002B62D0",
+          "bytes": 72,
+          "raw_sha256": "51c7a0d97f4138766b50cb0d6ea37336a9bb675debbcc7eeed3658fea230619f",
+          "following_first_word": "0x0080302D"
+        },
+        "actual_refs": [
+          {
+            "pc": "0x00155F24",
+            "word": "0x0C0AD8B8",
+            "target": "0x002B62E0",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x00E0802D",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_00155F10",
+              "address": "0x00155F10",
+              "size": 120,
+              "scanner_extent": 120,
+              "section": ".text",
+              "file_offset": "0x00056F10",
+              "original_sha256": "244d79c88204117332de02b5a5b03811c1c940ecd7c118d56ac691a30b2f1a51",
+              "original_assembly": "build/functions/func_00155F10.s",
+              "original_assembly_raw_sha256": "21123e62eb166f47eb901cd16d8d2d965d0e1d29e6c5a1e0eee6e9c7fca2bfe8",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x00155F88",
+              "terminal_instruction": "0x00155F80",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x00155F84",
+              "delay_word": "0x27BD0030",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0020E970",
+            "word": "0x0C0AD8B8",
+            "target": "0x002B62E0",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x0220202D",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0020E920",
+              "address": "0x0020E920",
+              "size": 384,
+              "scanner_extent": 384,
+              "section": ".text",
+              "file_offset": "0x0010F920",
+              "original_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349",
+              "original_assembly": "build/functions/func_0020E920.s",
+              "original_assembly_raw_sha256": "c336009f4c02bf91789dea6684bf3482553ace6152c97cd8731f40b8e34e48d5",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0020EAA0",
+              "terminal_instruction": "0x0020EA98",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0020EA9C",
+              "delay_word": "0x27BD0040",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0020E9D4",
+            "word": "0x0C0AD8B8",
+            "target": "0x002B62E0",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x0220202D",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0020E920",
+              "address": "0x0020E920",
+              "size": 384,
+              "scanner_extent": 384,
+              "section": ".text",
+              "file_offset": "0x0010F920",
+              "original_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349",
+              "original_assembly": "build/functions/func_0020E920.s",
+              "original_assembly_raw_sha256": "c336009f4c02bf91789dea6684bf3482553ace6152c97cd8731f40b8e34e48d5",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0020EAA0",
+              "terminal_instruction": "0x0020EA98",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0020EA9C",
+              "delay_word": "0x27BD0040",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          }
+        ],
+        "allocated_pointer_words": [],
+        "raw_next100_candidates": [],
+        "FDE_geometry": [],
+        "full_private_sourcefree_scope": "build/resource_pointer_scope/scope.json",
+        "complete_original_code_arrays_omitted": true
+      },
+      "target_abi": {
+        "layout20": [
+          4,
+          4,
+          4,
+          2,
+          1,
+          8,
+          8,
+          8,
+          16,
+          0,
+          2,
+          3,
+          4,
+          8,
+          12,
+          32,
+          0,
+          28,
+          30,
+          4
+        ],
+        "owner_GPR": 4,
+        "index_GPR": null,
+        "full_mode_GPR": null,
+        "result_GPR": 2,
+        "declared_return": "void",
+        "actual_whole_caller_profiles": [
+          "gcc323",
+          "gcc29"
+        ],
+        "whole_private_callers": "build/resource_pointer/caller_links.json",
+        "whole_private_caller_SHA": "fb2b7e50f2205d9b9ebb47eb5352f4b391278c3205137a1b4da905625322e458"
+      },
+      "validation": {
+        "original_fixtures": 320,
+        "original_instructions": 11880,
+        "covered_words": 95,
+        "native_checks": 1622660,
+        "meaningful_controls": 6,
+        "guards_present": 9,
+        "absent_original_pass": 7,
+        "absent_original_skip": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Initialized aligned consumed owner16/payload32 scalar prefixes only; no original class, allocation capacity, original C spelling, runtime invocation or ancestry identity.",
+        "Lower64 raw mode/result, low32 owner/index/pointer arithmetic and unsigned32 wrapping are observed. GNU out-of-range s32 narrowing is implementation-defined two-complement behavior, not portable ISO-C conversion. Four executed native boundary witnesses cover0/7fffffff/80000000/ffffffff.",
+        "Native actual pointer32/result64 assertions are emitted; no native sizeof(long) array was emitted. The genuine MinGW limits header and complete I386 COFF/PE qualify the observed unsigned-long counter domain, not a new layout measurement.",
+        "Declaration-only callers measure sole compiled mode1<<32, GPR4/5 low32 and GPR6/result2 lower64. Other mode values belong original/native fixtures, not new compiled caller constants. Void incidental return bits are controlled, not an original return contract.",
+        "Synthetic original numerical arenas and actual native pointer arenas are separately initialized and compared in their own address roles. No raw address masking/equality, portable effective-type/object/class identity, arbitrary null/overflow/malformed/concurrent storage or original capacity claim.",
+        "All original95 words execute at actual original PCs through the exact wrapper around whole unchanged RegistryTrace/Trace. Budget and reserved/definedness/memory/control checks precede mutation. No new opcode semantics/upper128/FPU/VU/timing/exception/hardware claim.",
+        "Native compares every owned word/result with independently initialized actual-address integer effects. Original full arenas and ordered load/store ledgers are separately checked. Native intermediate machine access order is not traced or asserted RAW identical to original.",
+        "The32 relocation count-alias cases use a real u32[18432] interior owner with low16fffc. Complete bounded tail and ordinary typed storage are justified by the approved16384 aligned-base arithmetic proof.",
+        "Sourcefree56 early62E0 owner-prefix overlap/deferred-byte2 control prose is superseded only by immutable erratum2. Slot offsets16..1036 are disjoint from prefix0..15; six genuine wrong-source controls use the separately proved effects instead.",
+        "Natural complete symbol sizes/physical zero tails, whole objects/scripts/ELFs and all real input relocations remain strict. Private approved missing bindings are merged into full historical canonical map; no aliases/canonical status/helper/data awards or source/flags tuning.",
+        "Initial carrier926 had only309 subtree docs/1411 rows. Separate complete catalog supplement preserves312 whole docs/1655 rows before fixed commands. The original partial index and all its bytes remain immutable.",
+        "Four target compiles/four actual-M and one native harness plus seven complete production TUs/eight actual-M were performed once. Final replay links cached objects and copies/executes accepted RAW native images; no compiler/M/native linking reruns or PE field normalization."
+      ],
+      "final_review": {
+        "final1213": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "closed_parent_replay": {
+          "path": ".local/resource_pointer_root_final0001/audit.json",
+          "bytes": 189751,
+          "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+        },
+        "private_author_manifest": {
+          "path": "build/resource_pointer/manifest.json",
+          "bytes": 99919,
+          "raw_sha256": "9851df6ff73d048a4aef09e4997c73125ae1ced35f14bfc3fa36da16d30b47ec"
+        },
+        "private_proof": {
+          "path": "build/resource_pointer/identity_packet.json",
+          "bytes": 272012,
+          "raw_sha256": "a90e91ec3851d954ebfddd249ebd7c50c0f724514b782a441cfb50ef3704644c"
+        }
+      },
+      "review_status": "Parent and distinct whole final reviews passed; primary GCC29 complete comparison matches predicate/initializer only. Relocation and selector remain bounded reconstructions.",
+      "independent_review": "Parent and distinct complete original/source/object/dependency/original-address links/actual ABI/bounded scalar-native evidence passed; one unchanged contained final replay per reviewer.",
+      "final_acceptance": {
+        "index": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "additive_qualifications": [
+          {
+            "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+            "bytes": 18544,
+            "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+            "bytes": 2391,
+            "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+            "bytes": 40777,
+            "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+          },
+          {
+            "path": ".local/resource_pointer_root_final0001/audit.json",
+            "bytes": 189751,
+            "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0001/history.json",
+            "bytes": 813,
+            "raw_sha256": "c32d2edceab8959fb5a14273e53aa4e483b4c0888fa33fd17e496c06a13b7325"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0002/history.json",
+            "bytes": 806,
+            "raw_sha256": "2acb02e7aae687195891ae3e16e479c3c68e2a0f83c419b4919317ed85f2afc8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "func_002B6308",
+      "address": "0x002B6308",
+      "file_offset": "0x001B7308",
+      "size": 144,
+      "original_sha256": "ab03896d35602ead2ad481aa67a23fbfa659a5f75e90f154fb834fa9fa26b542",
+      "source": "src/game/resource_pointer.c",
+      "source_kind": "c",
+      "compiled_symbol": "func_002B6308",
+      "source_name": "func_002B6308",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/resource_pointer.c",
+          "sha256": "130c7bc8274f713575d3161d3d03f407a702718f65078ef5606a8efcc30388f6"
+        },
+        {
+          "path": "include/george/resource_pointer.h",
+          "sha256": "360d1113d3f98ce2ea7a588cb822bb93b8dbebfcc13e50a0e57be62025f3c444"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 144,
+          "compiled_size": 156,
+          "different_bytes": 130,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            8,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ab03896d35602ead2ad481aa67a23fbfa659a5f75e90f154fb834fa9fa26b542",
+          "compiled_sha256": "18fee91eb647ccbc060a8f7c23d542c1899c33915629877db6c954165337c199"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": false,
+          "expected_size": 144,
+          "compiled_size": 144,
+          "different_bytes": 68,
+          "first_different_offsets": [
+            4,
+            5,
+            6,
+            7,
+            12,
+            13,
+            14,
+            15
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "ab03896d35602ead2ad481aa67a23fbfa659a5f75e90f154fb834fa9fa26b542",
+          "compiled_sha256": "d9ded8c73cad8bbc9296be0313b5e80d042011bfeb699aecf18c6ba4be428ed8"
+        }
+      ],
+      "entry_evidence": {
+        "whole_geometry": {
+          "name": "func_002B6308",
+          "address": "0x002B6308",
+          "size": 144,
+          "scanner_extent": 144,
+          "section": ".text",
+          "file_offset": "0x001B7308",
+          "original_sha256": "ab03896d35602ead2ad481aa67a23fbfa659a5f75e90f154fb834fa9fa26b542",
+          "original_assembly": "build/functions/func_002B6308.s",
+          "original_assembly_raw_sha256": "9c23f4025ac75e84ea1ccb7fc35db9badcdb2631be310394359274dd6d116917",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6398",
+          "terminal_instruction": "0x002B6390",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6394",
+          "delay_word": "0x00000000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "preceding_whole_scanner_geometry": {
+          "name": "func_002B62E0",
+          "address": "0x002B62E0",
+          "size": 40,
+          "scanner_extent": 40,
+          "section": ".text",
+          "file_offset": "0x001B72E0",
+          "original_sha256": "a1095e87db85d2d9f5f65ad72323c57fc5070c7bf69c88d74efcae6202ad5727",
+          "original_assembly": "build/functions/func_002B62E0.s",
+          "original_assembly_raw_sha256": "a7ab5f1e6c88930443b9b834f895f1bc1c3898a8c9484660a27405270c4d72fb",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6308",
+          "terminal_instruction": "0x002B6300",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6304",
+          "delay_word": "0xAC640000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "following_whole_scanner_geometry": {
+          "name": "func_002B6398",
+          "address": "0x002B6398",
+          "size": 56,
+          "scanner_extent": 56,
+          "section": ".text",
+          "file_offset": "0x001B7398",
+          "original_sha256": "cec5794408573a1eea935a67df5115b93fd0435fee07bcd7d206983b10e45c33",
+          "original_assembly": "build/functions/func_002B6398.s",
+          "original_assembly_raw_sha256": "5cbcc0342d43f4084cee64d027d43697dca8a0de5d29e3deebb2ceb9cc179e7d",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B63D0",
+          "terminal_instruction": "0x002B63C8",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B63CC",
+          "delay_word": "0xAC440000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "boundary_context": {
+          "address": "0x002B62F8",
+          "bytes": 176,
+          "raw_sha256": "af8fda15a3707fd4f4f77d06c90f3718f71876853bd7af7dc2a3ed187dc88b91",
+          "following_first_word": "0xA0870002"
+        },
+        "actual_refs": [
+          {
+            "pc": "0x00155F44",
+            "word": "0x0C0AD8C2",
+            "target": "0x002B6308",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x0220202D",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_00155F10",
+              "address": "0x00155F10",
+              "size": 120,
+              "scanner_extent": 120,
+              "section": ".text",
+              "file_offset": "0x00056F10",
+              "original_sha256": "244d79c88204117332de02b5a5b03811c1c940ecd7c118d56ac691a30b2f1a51",
+              "original_assembly": "build/functions/func_00155F10.s",
+              "original_assembly_raw_sha256": "21123e62eb166f47eb901cd16d8d2d965d0e1d29e6c5a1e0eee6e9c7fca2bfe8",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x00155F88",
+              "terminal_instruction": "0x00155F80",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x00155F84",
+              "delay_word": "0x27BD0030",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0020E99C",
+            "word": "0x0C0AD8C2",
+            "target": "0x002B6308",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x00000000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0020E920",
+              "address": "0x0020E920",
+              "size": 384,
+              "scanner_extent": 384,
+              "section": ".text",
+              "file_offset": "0x0010F920",
+              "original_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349",
+              "original_assembly": "build/functions/func_0020E920.s",
+              "original_assembly_raw_sha256": "c336009f4c02bf91789dea6684bf3482553ace6152c97cd8731f40b8e34e48d5",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0020EAA0",
+              "terminal_instruction": "0x0020EA98",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0020EA9C",
+              "delay_word": "0x27BD0040",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0020EA3C",
+            "word": "0x0C0AD8C2",
+            "target": "0x002B6308",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x00000000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0020E920",
+              "address": "0x0020E920",
+              "size": 384,
+              "scanner_extent": 384,
+              "section": ".text",
+              "file_offset": "0x0010F920",
+              "original_sha256": "8a9aa98ee637e58d518adf5ab4ca5f62f276eb59cd3ddaef44d0fcddb56b3349",
+              "original_assembly": "build/functions/func_0020E920.s",
+              "original_assembly_raw_sha256": "c336009f4c02bf91789dea6684bf3482553ace6152c97cd8731f40b8e34e48d5",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0020EAA0",
+              "terminal_instruction": "0x0020EA98",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0020EA9C",
+              "delay_word": "0x27BD0040",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0020EEFC",
+            "word": "0x0C0AD8C2",
+            "target": "0x002B6308",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x00000000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0020EEC8",
+              "address": "0x0020EEC8",
+              "size": 152,
+              "scanner_extent": 152,
+              "section": ".text",
+              "file_offset": "0x0010FEC8",
+              "original_sha256": "c928d7ea611f7200fee75610fb4322d31fbc28ebf8c98ae5c9646c9babf790c8",
+              "original_assembly": "build/functions/func_0020EEC8.s",
+              "original_assembly_raw_sha256": "abf2f2846c6b9e1b2c0efdc38c44eb5b80793daa801cfaa07c82354455c827ab",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0020EF60",
+              "terminal_instruction": "0x0020EF58",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0020EF5C",
+              "delay_word": "0x27BD0030",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          }
+        ],
+        "allocated_pointer_words": [],
+        "raw_next100_candidates": [],
+        "FDE_geometry": [],
+        "full_private_sourcefree_scope": "build/resource_pointer_scope/scope.json",
+        "complete_original_code_arrays_omitted": true
+      },
+      "target_abi": {
+        "layout20": [
+          4,
+          4,
+          4,
+          2,
+          1,
+          8,
+          8,
+          8,
+          16,
+          0,
+          2,
+          3,
+          4,
+          8,
+          12,
+          32,
+          0,
+          28,
+          30,
+          4
+        ],
+        "owner_GPR": 4,
+        "index_GPR": null,
+        "full_mode_GPR": null,
+        "result_GPR": 2,
+        "declared_return": "void",
+        "actual_whole_caller_profiles": [
+          "gcc323",
+          "gcc29"
+        ],
+        "whole_private_callers": "build/resource_pointer/caller_links.json",
+        "whole_private_caller_SHA": "fb2b7e50f2205d9b9ebb47eb5352f4b391278c3205137a1b4da905625322e458"
+      },
+      "validation": {
+        "original_fixtures": 320,
+        "original_instructions": 11880,
+        "covered_words": 95,
+        "native_checks": 1622660,
+        "meaningful_controls": 6,
+        "guards_present": 9,
+        "absent_original_pass": 7,
+        "absent_original_skip": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Initialized aligned consumed owner16/payload32 scalar prefixes only; no original class, allocation capacity, original C spelling, runtime invocation or ancestry identity.",
+        "Lower64 raw mode/result, low32 owner/index/pointer arithmetic and unsigned32 wrapping are observed. GNU out-of-range s32 narrowing is implementation-defined two-complement behavior, not portable ISO-C conversion. Four executed native boundary witnesses cover0/7fffffff/80000000/ffffffff.",
+        "Native actual pointer32/result64 assertions are emitted; no native sizeof(long) array was emitted. The genuine MinGW limits header and complete I386 COFF/PE qualify the observed unsigned-long counter domain, not a new layout measurement.",
+        "Declaration-only callers measure sole compiled mode1<<32, GPR4/5 low32 and GPR6/result2 lower64. Other mode values belong original/native fixtures, not new compiled caller constants. Void incidental return bits are controlled, not an original return contract.",
+        "Synthetic original numerical arenas and actual native pointer arenas are separately initialized and compared in their own address roles. No raw address masking/equality, portable effective-type/object/class identity, arbitrary null/overflow/malformed/concurrent storage or original capacity claim.",
+        "All original95 words execute at actual original PCs through the exact wrapper around whole unchanged RegistryTrace/Trace. Budget and reserved/definedness/memory/control checks precede mutation. No new opcode semantics/upper128/FPU/VU/timing/exception/hardware claim.",
+        "Native compares every owned word/result with independently initialized actual-address integer effects. Original full arenas and ordered load/store ledgers are separately checked. Native intermediate machine access order is not traced or asserted RAW identical to original.",
+        "The32 relocation count-alias cases use a real u32[18432] interior owner with low16fffc. Complete bounded tail and ordinary typed storage are justified by the approved16384 aligned-base arithmetic proof.",
+        "Sourcefree56 early62E0 owner-prefix overlap/deferred-byte2 control prose is superseded only by immutable erratum2. Slot offsets16..1036 are disjoint from prefix0..15; six genuine wrong-source controls use the separately proved effects instead.",
+        "Natural complete symbol sizes/physical zero tails, whole objects/scripts/ELFs and all real input relocations remain strict. Private approved missing bindings are merged into full historical canonical map; no aliases/canonical status/helper/data awards or source/flags tuning.",
+        "Initial carrier926 had only309 subtree docs/1411 rows. Separate complete catalog supplement preserves312 whole docs/1655 rows before fixed commands. The original partial index and all its bytes remain immutable.",
+        "Four target compiles/four actual-M and one native harness plus seven complete production TUs/eight actual-M were performed once. Final replay links cached objects and copies/executes accepted RAW native images; no compiler/M/native linking reruns or PE field normalization."
+      ],
+      "final_review": {
+        "final1213": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "closed_parent_replay": {
+          "path": ".local/resource_pointer_root_final0001/audit.json",
+          "bytes": 189751,
+          "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+        },
+        "private_author_manifest": {
+          "path": "build/resource_pointer/manifest.json",
+          "bytes": 99919,
+          "raw_sha256": "9851df6ff73d048a4aef09e4997c73125ae1ced35f14bfc3fa36da16d30b47ec"
+        },
+        "private_proof": {
+          "path": "build/resource_pointer/identity_packet.json",
+          "bytes": 272012,
+          "raw_sha256": "a90e91ec3851d954ebfddd249ebd7c50c0f724514b782a441cfb50ef3704644c"
+        }
+      },
+      "review_status": "Parent and distinct whole final reviews passed; primary GCC29 complete comparison matches predicate/initializer only. Relocation and selector remain bounded reconstructions.",
+      "independent_review": "Parent and distinct complete original/source/object/dependency/original-address links/actual ABI/bounded scalar-native evidence passed; one unchanged contained final replay per reviewer.",
+      "final_acceptance": {
+        "index": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "additive_qualifications": [
+          {
+            "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+            "bytes": 18544,
+            "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+            "bytes": 2391,
+            "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+            "bytes": 40777,
+            "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+          },
+          {
+            "path": ".local/resource_pointer_root_final0001/audit.json",
+            "bytes": 189751,
+            "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0001/history.json",
+            "bytes": 813,
+            "raw_sha256": "c32d2edceab8959fb5a14273e53aa4e483b4c0888fa33fd17e496c06a13b7325"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0002/history.json",
+            "bytes": 806,
+            "raw_sha256": "2acb02e7aae687195891ae3e16e479c3c68e2a0f83c419b4919317ed85f2afc8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "func_002B64E0",
+      "address": "0x002B64E0",
+      "file_offset": "0x001B74E0",
+      "size": 148,
+      "original_sha256": "871b82c1409d0db5c1056e301193f655764cce133fba9fcb1cd1790883077336",
+      "source": "src/game/resource_pointer.c",
+      "source_kind": "c",
+      "compiled_symbol": "george_resource_selector",
+      "source_name": "george_resource_selector",
+      "compiler_profile": "gcc29",
+      "compile_flags": [
+        "-O2",
+        "-G0",
+        "-mfp64",
+        "-fno-builtin",
+        "-fno-strict-aliasing",
+        "-ffunction-sections"
+      ],
+      "link": true,
+      "status": "reconstructed",
+      "reviewed": true,
+      "source_dependencies": [
+        {
+          "path": "src/game/resource_pointer.c",
+          "sha256": "130c7bc8274f713575d3161d3d03f407a702718f65078ef5606a8efcc30388f6"
+        },
+        {
+          "path": "include/george/resource_pointer.h",
+          "sha256": "360d1113d3f98ce2ea7a588cb822bb93b8dbebfcc13e50a0e57be62025f3c444"
+        },
+        {
+          "path": "include/george/types.h",
+          "sha256": "231f0ed5435bb2f26d648f40b72f7c6da4b7693c8841addc6a868823f37bc54e"
+        },
+        {
+          "path": "tools/vendor/gcc29-local/include/stddef.h",
+          "sha256": "4394a8b622301a788a02fafdf731658c31492631bf2d15b2008728f4e0fed24b"
+        }
+      ],
+      "candidate_comparisons": [
+        {
+          "compiler_profile": "gcc323",
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 132,
+          "different_bytes": 125,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8,
+            10,
+            11
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "871b82c1409d0db5c1056e301193f655764cce133fba9fcb1cd1790883077336",
+          "compiled_sha256": "165cb03107b136a5825c39145e51bc744a0c13e02d94f6543b3348563dba89b8"
+        },
+        {
+          "compiler_profile": "gcc29",
+          "identical": false,
+          "expected_size": 148,
+          "compiled_size": 132,
+          "different_bytes": 129,
+          "first_different_offsets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "unresolved_relocations": [],
+          "expected_sha256": "871b82c1409d0db5c1056e301193f655764cce133fba9fcb1cd1790883077336",
+          "compiled_sha256": "b607cc7e8188856ab38f269399512e26209feec3f807388e3b1a2ee67610f034"
+        }
+      ],
+      "entry_evidence": {
+        "whole_geometry": {
+          "name": "func_002B64E0",
+          "address": "0x002B64E0",
+          "size": 148,
+          "scanner_extent": 152,
+          "section": ".text",
+          "file_offset": "0x001B74E0",
+          "original_sha256": "871b82c1409d0db5c1056e301193f655764cce133fba9fcb1cd1790883077336",
+          "original_assembly": "build/functions/func_002B64E0.s",
+          "original_assembly_raw_sha256": "ce5d0e6b2d15d87b48624bf5d13678dbbf876123327203697bdf33cd6c1cc204",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 4,
+          "following_scanner_entry": "0x002B6578",
+          "terminal_instruction": "0x002B656C",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B6570",
+          "delay_word": "0x00000000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "preceding_whole_scanner_geometry": {
+          "name": "func_002B6490",
+          "address": "0x002B6490",
+          "size": 80,
+          "scanner_extent": 80,
+          "section": ".text",
+          "file_offset": "0x001B7490",
+          "original_sha256": "a02c203b667f306e14816014201c46560fc7fff17b6d749f3328ecb497de25aa",
+          "original_assembly": "build/functions/func_002B6490.s",
+          "original_assembly_raw_sha256": "b609ff109ca2c1980e3a78c9990cd617c1fc4a20752fb911507e55851c63ae68",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B64E0",
+          "terminal_instruction": "0x002B64D8",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B64DC",
+          "delay_word": "0xACC20000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "following_whole_scanner_geometry": {
+          "name": "func_002B6578",
+          "address": "0x002B6578",
+          "size": 8,
+          "scanner_extent": 8,
+          "section": ".text",
+          "file_offset": "0x001B7578",
+          "original_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+          "original_assembly": "build/functions/func_002B6578.s",
+          "original_assembly_raw_sha256": "327cf1a7501f3dc5b8cb4e484c637673ae1d0275cc7e116cd5fe3870c7b9bc79",
+          "explicit_nonmatching_size": true,
+          "excluded_zero_padding": 0,
+          "following_scanner_entry": "0x002B6580",
+          "terminal_instruction": "0x002B6578",
+          "terminal_word": "0x03E00008",
+          "delay_instruction": "0x002B657C",
+          "delay_word": "0x00000000",
+          "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+        },
+        "boundary_context": {
+          "address": "0x002B64D0",
+          "bytes": 180,
+          "raw_sha256": "f2d4702edbf94bbaa3763a90bea213402a2b40ed10b4fe558e5ccd20e70c15ac",
+          "following_first_word": "0x00000000"
+        },
+        "actual_refs": [
+          {
+            "pc": "0x0021C8A4",
+            "word": "0x0C0AD938",
+            "target": "0x002B64E0",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x8C440000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0021C890",
+              "address": "0x0021C890",
+              "size": 40,
+              "scanner_extent": 40,
+              "section": ".text",
+              "file_offset": "0x0011D890",
+              "original_sha256": "6438f50e3f5c9f078bd37ad1dfdb660d09fb7d53db4091ff7b2a75f8e2dd3fbb",
+              "original_assembly": "build/functions/func_0021C890.s",
+              "original_assembly_raw_sha256": "b79f13dbd36446693056a8d3f7c70ba49e990bff0cadf49955c3d245445e7aa6",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0021C8B8",
+              "terminal_instruction": "0x0021C8B0",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0021C8B4",
+              "delay_word": "0x27BD0010",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          },
+          {
+            "pc": "0x0021C95C",
+            "word": "0x0C0AD938",
+            "target": "0x002B64E0",
+            "kind": "JAL",
+            "section": ".text",
+            "delay_word": "0x8E640000",
+            "actual_cpu_section": true,
+            "caller": {
+              "name": "func_0021C900",
+              "address": "0x0021C900",
+              "size": 128,
+              "scanner_extent": 128,
+              "section": ".text",
+              "file_offset": "0x0011D900",
+              "original_sha256": "ac0a235d10f923bc3955d8e2fe3b1d956eece3a94bf20bde3ca25b5470a8542d",
+              "original_assembly": "build/functions/func_0021C900.s",
+              "original_assembly_raw_sha256": "4296e04b2f85192b13f90bd037a2ae6b95719899f6f16a8962b1bf884378df69",
+              "explicit_nonmatching_size": true,
+              "excluded_zero_padding": 0,
+              "following_scanner_entry": "0x0021C980",
+              "terminal_instruction": "0x0021C978",
+              "terminal_word": "0x03E00008",
+              "delay_instruction": "0x0021C97C",
+              "delay_word": "0x27BD0050",
+              "qualification": "Whole raw/assembly geometry only; no automatic complete caller semantics or compiler/source identity."
+            }
+          }
+        ],
+        "allocated_pointer_words": [],
+        "raw_next100_candidates": [],
+        "FDE_geometry": [],
+        "full_private_sourcefree_scope": "build/resource_pointer_scope/scope.json",
+        "complete_original_code_arrays_omitted": true
+      },
+      "target_abi": {
+        "layout20": [
+          4,
+          4,
+          4,
+          2,
+          1,
+          8,
+          8,
+          8,
+          16,
+          0,
+          2,
+          3,
+          4,
+          8,
+          12,
+          32,
+          0,
+          28,
+          30,
+          4
+        ],
+        "owner_GPR": 4,
+        "index_GPR": 5,
+        "full_mode_GPR": 6,
+        "result_GPR": 2,
+        "declared_return": "unsigned long long",
+        "actual_whole_caller_profiles": [
+          "gcc323",
+          "gcc29"
+        ],
+        "whole_private_callers": "build/resource_pointer/caller_links.json",
+        "whole_private_caller_SHA": "fb2b7e50f2205d9b9ebb47eb5352f4b391278c3205137a1b4da905625322e458"
+      },
+      "validation": {
+        "original_fixtures": 320,
+        "original_instructions": 11880,
+        "covered_words": 95,
+        "native_checks": 1622660,
+        "meaningful_controls": 6,
+        "guards_present": 9,
+        "absent_original_pass": 7,
+        "absent_original_skip": 2,
+        "parent_and_distinct_bounded_final_approved": true
+      },
+      "implementation_limits": [
+        "Initialized aligned consumed owner16/payload32 scalar prefixes only; no original class, allocation capacity, original C spelling, runtime invocation or ancestry identity.",
+        "Lower64 raw mode/result, low32 owner/index/pointer arithmetic and unsigned32 wrapping are observed. GNU out-of-range s32 narrowing is implementation-defined two-complement behavior, not portable ISO-C conversion. Four executed native boundary witnesses cover0/7fffffff/80000000/ffffffff.",
+        "Native actual pointer32/result64 assertions are emitted; no native sizeof(long) array was emitted. The genuine MinGW limits header and complete I386 COFF/PE qualify the observed unsigned-long counter domain, not a new layout measurement.",
+        "Declaration-only callers measure sole compiled mode1<<32, GPR4/5 low32 and GPR6/result2 lower64. Other mode values belong original/native fixtures, not new compiled caller constants. Void incidental return bits are controlled, not an original return contract.",
+        "Synthetic original numerical arenas and actual native pointer arenas are separately initialized and compared in their own address roles. No raw address masking/equality, portable effective-type/object/class identity, arbitrary null/overflow/malformed/concurrent storage or original capacity claim.",
+        "All original95 words execute at actual original PCs through the exact wrapper around whole unchanged RegistryTrace/Trace. Budget and reserved/definedness/memory/control checks precede mutation. No new opcode semantics/upper128/FPU/VU/timing/exception/hardware claim.",
+        "Native compares every owned word/result with independently initialized actual-address integer effects. Original full arenas and ordered load/store ledgers are separately checked. Native intermediate machine access order is not traced or asserted RAW identical to original.",
+        "The32 relocation count-alias cases use a real u32[18432] interior owner with low16fffc. Complete bounded tail and ordinary typed storage are justified by the approved16384 aligned-base arithmetic proof.",
+        "Sourcefree56 early62E0 owner-prefix overlap/deferred-byte2 control prose is superseded only by immutable erratum2. Slot offsets16..1036 are disjoint from prefix0..15; six genuine wrong-source controls use the separately proved effects instead.",
+        "Natural complete symbol sizes/physical zero tails, whole objects/scripts/ELFs and all real input relocations remain strict. Private approved missing bindings are merged into full historical canonical map; no aliases/canonical status/helper/data awards or source/flags tuning.",
+        "Initial carrier926 had only309 subtree docs/1411 rows. Separate complete catalog supplement preserves312 whole docs/1655 rows before fixed commands. The original partial index and all its bytes remain immutable.",
+        "Four target compiles/four actual-M and one native harness plus seven complete production TUs/eight actual-M were performed once. Final replay links cached objects and copies/executes accepted RAW native images; no compiler/M/native linking reruns or PE field normalization."
+      ],
+      "final_review": {
+        "final1213": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "closed_parent_replay": {
+          "path": ".local/resource_pointer_root_final0001/audit.json",
+          "bytes": 189751,
+          "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+        },
+        "private_author_manifest": {
+          "path": "build/resource_pointer/manifest.json",
+          "bytes": 99919,
+          "raw_sha256": "9851df6ff73d048a4aef09e4997c73125ae1ced35f14bfc3fa36da16d30b47ec"
+        },
+        "private_proof": {
+          "path": "build/resource_pointer/identity_packet.json",
+          "bytes": 272012,
+          "raw_sha256": "a90e91ec3851d954ebfddd249ebd7c50c0f724514b782a441cfb50ef3704644c"
+        }
+      },
+      "review_status": "Parent and distinct whole final reviews passed; primary GCC29 complete comparison matches predicate/initializer only. Relocation and selector remain bounded reconstructions.",
+      "independent_review": "Parent and distinct complete original/source/object/dependency/original-address links/actual ABI/bounded scalar-native evidence passed; one unchanged contained final replay per reviewer.",
+      "final_acceptance": {
+        "index": {
+          "path": "build/resource_pointer/frozen_inputs.json",
+          "bytes": 247450,
+          "raw_sha256": "e0d2a79490e66bf4239aeedacc28cea862acf237d393fcbb67238f96d74200f9"
+        },
+        "parent": {
+          "path": ".local/resource_pointer_final_root_review.json",
+          "bytes": 101626,
+          "raw_sha256": "a0513ccf4bf512cf680665703d27f5d6e3a529b7bcabdcb3dc09b7d2a77ba4c5"
+        },
+        "distinct": {
+          "path": ".local/resource_pointer_final_peer0001/independent_audit.json",
+          "bytes": 47018,
+          "raw_sha256": "1cf47b59eff723fed19ac3d879245b518d35251858bd9d359f2f34ec3ba00af2"
+        },
+        "additive_qualifications": [
+          {
+            "path": ".local/matrix_to_quaternion_final_root_qualification.json",
+            "bytes": 18544,
+            "raw_sha256": "f9b595ad2b5754725a70f5974475f409ca56498c08151442e701f1883312ee01"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_linked_callers_root_review.json",
+            "bytes": 2391,
+            "raw_sha256": "dc966278738c7a468b9a10b9364d8e1a38d1994b7bf63c6a4cbfcde8e26cc011"
+          },
+          {
+            "path": ".local/matrix_to_quaternion_root_final0001/audit.json",
+            "bytes": 40777,
+            "raw_sha256": "bb371d4a2a2150a192b33d2272ac150f2c03ba29cf9b5c3bee44f4a1d44f8ef5"
+          },
+          {
+            "path": ".local/resource_pointer_root_final0001/audit.json",
+            "bytes": 189751,
+            "raw_sha256": "4feca48b6fdc5db4f1adb2015dc8c043b41be1da2e155b45f5409bf20340e351"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0001/history.json",
+            "bytes": 813,
+            "raw_sha256": "c32d2edceab8959fb5a14273e53aa4e483b4c0888fa33fd17e496c06a13b7325"
+          },
+          {
+            "path": ".local/resource_pointer_final_root_reader_history0002/history.json",
+            "bytes": 806,
+            "raw_sha256": "2acb02e7aae687195891ae3e16e479c3c68e2a0f83c419b4919317ed85f2afc8"
+          }
+        ]
+      }
+    }
+  ],
+  "total_original_bytes": 380,
+  "exact_candidates": 2,
+  "exact_candidate_bytes": 88,
+  "canonical_registration": true,
+  "review_contract": "Parent and distinct final acceptance passed. Whole canonical strict build/report/tests required; frozen family descriptions remain historical and checkpoint75 notes carry final results.",
+  "public_projection": {
+    "immutable_whole_author_manifest": {
+      "path": "build/resource_pointer/manifest.json",
+      "bytes": 99919,
+      "raw_sha256": "9851df6ff73d048a4aef09e4997c73125ae1ced35f14bfc3fa36da16d30b47ec"
+    },
+    "private_original_and_compiled_code_arrays_omitted": true,
+    "source_H_flags_order_and_dependency_order_unchanged": true,
+    "canonical_registration": false,
+    "original_and_native_addresses_remain_separate": true,
+    "native_long_sizeof_export_absent_explicit": true
+  }
+}
