@@ -1,5 +1,7 @@
 # George of the Jungle decompilation
 
+[![Progress](https://decomp.dev/2gifts/george-decomp.svg?mode=shield&label=Code)](https://decomp.dev/2gifts/george-decomp)
+
 A matching decompilation project for **George of the Jungle and the Search for
 the Secret**, USA PlayStation 2 release **SLUS_216.68**.
 
